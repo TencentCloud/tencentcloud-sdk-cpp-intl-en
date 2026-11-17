@@ -63,6 +63,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizeBrazilRNMOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeDetectCardCoordsRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeDetectCardCoordsResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeGeneralCardVerificationRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeGeneralCardVerificationResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizeMacaoIDCardOCRRequest.h>
@@ -165,6 +167,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizeDetectCardCoordsResponse> RecognizeDetectCardCoordsOutcome;
                 typedef std::future<RecognizeDetectCardCoordsOutcome> RecognizeDetectCardCoordsOutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeDetectCardCoordsRequest&, RecognizeDetectCardCoordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeDetectCardCoordsAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeGeneralCardVerificationResponse> RecognizeGeneralCardVerificationOutcome;
+                typedef std::future<RecognizeGeneralCardVerificationOutcome> RecognizeGeneralCardVerificationOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeGeneralCardVerificationRequest&, RecognizeGeneralCardVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeGeneralCardVerificationAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizeIndonesiaIDCardOCRResponse> RecognizeIndonesiaIDCardOCROutcome;
                 typedef std::future<RecognizeIndonesiaIDCardOCROutcome> RecognizeIndonesiaIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizeIndonesiaIDCardOCRRequest&, RecognizeIndonesiaIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeIndonesiaIDCardOCRAsyncHandler;
@@ -415,6 +420,16 @@ This API is used to set the default request rate limit to 5 requests/second.
                 RecognizeDetectCardCoordsOutcome RecognizeDetectCardCoords(const Model::RecognizeDetectCardCoordsRequest &request);
                 void RecognizeDetectCardCoordsAsync(const Model::RecognizeDetectCardCoordsRequest& request, const RecognizeDetectCardCoordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizeDetectCardCoordsOutcomeCallable RecognizeDetectCardCoordsCallable(const Model::RecognizeDetectCardCoordsRequest& request);
+
+                /**
+                 *This API performs unified verification on images of various card types worldwide. It supports automatic card type classification, field recognition, quality check, tampering (PS) detection, copy detection, recapture detection, format validation, and information consistency check. Candidate card types and check items can be flexibly combined.
+The following 20 document types are currently supported: Mainland China ID Card, Passport, Thai ID Card, Malaysian ID Card, Indonesian ID Card, Singapore ID Card, Philippine Driver's License, Philippine SSS ID, Philippine PRC ID, Philippine Postal ID Card, Philippine UMID, Philippine Voter ID, Philippine TIN Card, Philippine National ID, Philippine Health Card, Taiwan (China) ID Card, Vietnamese ID Card, Myanmar Driver's License, Brazilian ID Card, and Brazilian Driver's License.
+                 * @param req RecognizeGeneralCardVerificationRequest
+                 * @return RecognizeGeneralCardVerificationOutcome
+                 */
+                RecognizeGeneralCardVerificationOutcome RecognizeGeneralCardVerification(const Model::RecognizeGeneralCardVerificationRequest &request);
+                void RecognizeGeneralCardVerificationAsync(const Model::RecognizeGeneralCardVerificationRequest& request, const RecognizeGeneralCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeGeneralCardVerificationOutcomeCallable RecognizeGeneralCardVerificationCallable(const Model::RecognizeGeneralCardVerificationRequest& request);
 
                 /**
                  *Indonesian identity card recognition

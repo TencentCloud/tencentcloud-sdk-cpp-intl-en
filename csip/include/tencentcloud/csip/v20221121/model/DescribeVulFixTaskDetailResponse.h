@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Task details</p>
-                     * @return Data <p>Task details</p>
+                     * 获取<p>Task details list</p>
+                     * @return Data <p>Task details list</p>
                      * 
                      */
                     std::vector<VulFixTaskDetailItem> GetData() const;
@@ -90,7 +90,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Task details</p>
+                     * <p>Task details list</p>
                      */
                     std::vector<VulFixTaskDetailItem> m_data;
                     bool m_dataHasBeenSet;

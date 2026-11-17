@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
-                     * @return FixItems <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+                     * 获取<p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
+                     * @return FixItems <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
                      * 
                      */
                     std::vector<VulFixItem> GetFixItems() const;
 
                     /**
-                     * 设置<p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
-                     * @param _fixItems <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+                     * 设置<p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
+                     * @param _fixItems <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
                      * 
                      */
                     void SetFixItems(const std::vector<VulFixItem>& _fixItems);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FixItemsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
-                     * @return Timeout <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+                     * 获取<p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
+                     * @return Timeout <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
                      * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
-                     * 设置<p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
-                     * @param _timeout <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+                     * 设置<p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
+                     * @param _timeout <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
                      * 
                      */
                     void SetTimeout(const int64_t& _timeout);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to create a disk snapshot before repair<br>Default value: false</p>
-                     * @return CreateSnapshot <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+                     * 获取<p>Create a disk snapshot before repair<br>Default value: false</p>
+                     * @return CreateSnapshot <p>Create a disk snapshot before repair<br>Default value: false</p>
                      * 
                      */
                     bool GetCreateSnapshot() const;
 
                     /**
-                     * 设置<p>Whether to create a disk snapshot before repair<br>Default value: false</p>
-                     * @param _createSnapshot <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+                     * 设置<p>Create a disk snapshot before repair<br>Default value: false</p>
+                     * @param _createSnapshot <p>Create a disk snapshot before repair<br>Default value: false</p>
                      * 
                      */
                     void SetCreateSnapshot(const bool& _createSnapshot);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool CreateSnapshotHasBeenSet() const;
 
                     /**
-                     * 获取<p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
-                     * @return SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+                     * 获取<p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
+                     * @return SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
                      * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
-                     * 设置<p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
-                     * @param _snapshotName <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+                     * 设置<p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
+                     * @param _snapshotName <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
                      * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
-                     * @return SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+                     * 获取<p>Snapshot retention days. Valid when CreateSnapshot is true</p>
+                     * @return SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
                      * 
                      */
                     int64_t GetSaveDays() const;
 
                     /**
-                     * 设置<p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
-                     * @param _saveDays <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+                     * 设置<p>Snapshot retention days. Valid when CreateSnapshot is true</p>
+                     * @param _saveDays <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
                      * 
                      */
                     void SetSaveDays(const int64_t& _saveDays);
@@ -172,31 +172,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+                     * <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
                      */
                     std::vector<VulFixItem> m_fixItems;
                     bool m_fixItemsHasBeenSet;
 
                     /**
-                     * <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+                     * <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
                      */
                     int64_t m_timeout;
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+                     * <p>Create a disk snapshot before repair<br>Default value: false</p>
                      */
                     bool m_createSnapshot;
                     bool m_createSnapshotHasBeenSet;
 
                     /**
-                     * <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+                     * <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;
 
                     /**
-                     * <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+                     * <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
                      */
                     int64_t m_saveDays;
                     bool m_saveDaysHasBeenSet;

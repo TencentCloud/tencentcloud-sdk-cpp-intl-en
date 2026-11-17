@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The top-ranked data details
+                * Detailed information of Top data
                 */
                 class TopDetailData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The field name.
-                     * @return Key The field name.
+                     * 获取Field name.
+                     * @return Key Field name.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置The field name.
-                     * @param _key The field name.
+                     * 设置Field name.
+                     * @param _key Field name.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取The field value.
-                     * @return Value The field value.
+                     * 获取Field value.
+                     * @return Value Field value.
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置The field value.
-                     * @param _value The field value.
+                     * 设置Field value.
+                     * @param _value Field value.
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The field name.
+                     * Field name.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * The field value.
+                     * Field value.
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;

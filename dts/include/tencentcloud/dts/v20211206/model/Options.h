@@ -51,19 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InitType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
+                     * @return InitType <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
                      * 
                      */
                     std::string GetInitType() const;
 
                     /**
-                     * 设置Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _initType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
+                     * @param _initType <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
                      * 
                      */
                     void SetInitType(const std::string& _initType);
@@ -76,19 +72,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InitTypeHasBeenSet() const;
 
                     /**
-                     * 获取Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DealOfExistSameTable Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
+                     * @return DealOfExistSameTable <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
                      * 
                      */
                     std::string GetDealOfExistSameTable() const;
 
                     /**
-                     * 设置Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dealOfExistSameTable Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
+                     * @param _dealOfExistSameTable <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
                      * 
                      */
                     void SetDealOfExistSameTable(const std::string& _dealOfExistSameTable);
@@ -101,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DealOfExistSameTableHasBeenSet() const;
 
                     /**
-                     * 获取Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConflictHandleType Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
+                     * @return ConflictHandleType <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
                      * 
                      */
                     std::string GetConflictHandleType() const;
 
                     /**
-                     * 设置Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conflictHandleType Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
+                     * @param _conflictHandleType <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
                      * 
                      */
                     void SetConflictHandleType(const std::string& _conflictHandleType);
@@ -126,19 +114,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConflictHandleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AddAdditionalColumn Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether to add an additional column</p>
+                     * @return AddAdditionalColumn <p>Whether to add an additional column</p>
                      * 
                      */
                     bool GetAddAdditionalColumn() const;
 
                     /**
-                     * 设置Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _addAdditionalColumn Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Whether to add an additional column</p>
+                     * @param _addAdditionalColumn <p>Whether to add an additional column</p>
                      * 
                      */
                     void SetAddAdditionalColumn(const bool& _addAdditionalColumn);
@@ -151,19 +135,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddAdditionalColumnHasBeenSet() const;
 
                     /**
-                     * 获取DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OpTypes DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
+                     * @return OpTypes <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
                      * 
                      */
                     std::vector<std::string> GetOpTypes() const;
 
                     /**
-                     * 设置DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _opTypes DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
+                     * @param _opTypes <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
                      * 
                      */
                     void SetOpTypes(const std::vector<std::string>& _opTypes);
@@ -176,19 +156,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OpTypesHasBeenSet() const;
 
                     /**
-                     * 获取Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConflictHandleOption Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
+                     * @return ConflictHandleOption <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
                      * 
                      */
                     ConflictHandleOption GetConflictHandleOption() const;
 
                     /**
-                     * 设置Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conflictHandleOption Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
+                     * @param _conflictHandleOption <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
                      * 
                      */
                     void SetConflictHandleOption(const ConflictHandleOption& _conflictHandleOption);
@@ -201,19 +177,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConflictHandleOptionHasBeenSet() const;
 
                     /**
-                     * 获取DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DdlOptions DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>DDL synchronization option. Description of which DDLs to synchronize.</p>
+                     * @return DdlOptions <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
                      * 
                      */
                     std::vector<DdlOption> GetDdlOptions() const;
 
                     /**
-                     * 设置DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ddlOptions DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>DDL synchronization option. Description of which DDLs to synchronize.</p>
+                     * @param _ddlOptions <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
                      * 
                      */
                     void SetDdlOptions(const std::vector<DdlOption>& _ddlOptions);
@@ -226,19 +198,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DdlOptionsHasBeenSet() const;
 
                     /**
-                     * 获取Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KafkaOption Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>kafka sync options</p>
+                     * @return KafkaOption <p>kafka sync options</p>
                      * 
                      */
                     KafkaOption GetKafkaOption() const;
 
                     /**
-                     * 设置Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _kafkaOption Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>kafka sync options</p>
+                     * @param _kafkaOption <p>kafka sync options</p>
                      * 
                      */
                     void SetKafkaOption(const KafkaOption& _kafkaOption);
@@ -251,19 +219,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KafkaOptionHasBeenSet() const;
 
                     /**
-                     * 获取Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RateLimitOption Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Task speed limit information</p>
+                     * @return RateLimitOption <p>Task speed limit information</p>
                      * 
                      */
                     RateLimitOption GetRateLimitOption() const;
 
                     /**
-                     * 设置Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rateLimitOption Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Task speed limit information</p>
+                     * @param _rateLimitOption <p>Task speed limit information</p>
                      * 
                      */
                     void SetRateLimitOption(const RateLimitOption& _rateLimitOption);
@@ -276,19 +240,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RateLimitOptionHasBeenSet() const;
 
                     /**
-                     * 获取Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AutoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Time window for automatic retry settings</p>
+                     * @return AutoRetryTimeRangeMinutes <p>Time window for automatic retry settings</p>
                      * 
                      */
                     int64_t GetAutoRetryTimeRangeMinutes() const;
 
                     /**
-                     * 设置Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _autoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Time window for automatic retry settings</p>
+                     * @param _autoRetryTimeRangeMinutes <p>Time window for automatic retry settings</p>
                      * 
                      */
                     void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
@@ -301,15 +261,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AutoRetryTimeRangeMinutesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartPosition 
+                     * 获取<p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
+                     * @return StartPosition <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
                      * 
                      */
                     std::string GetStartPosition() const;
 
                     /**
-                     * 设置
-                     * @param _startPosition 
+                     * 设置<p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
+                     * @param _startPosition <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
                      * 
                      */
                     void SetStartPosition(const std::string& _startPosition);
@@ -322,15 +282,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartPositionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterBeginCommit 
+                     * 获取<p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
+                     * @return FilterBeginCommit <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
                      * 
                      */
                     bool GetFilterBeginCommit() const;
 
                     /**
-                     * 设置
-                     * @param _filterBeginCommit 
+                     * 设置<p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
+                     * @param _filterBeginCommit <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
                      * 
                      */
                     void SetFilterBeginCommit(const bool& _filterBeginCommit);
@@ -343,15 +303,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilterBeginCommitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterCheckpoint 
+                     * 获取<p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
+                     * @return FilterCheckpoint <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
                      * 
                      */
                     bool GetFilterCheckpoint() const;
 
                     /**
-                     * 设置
-                     * @param _filterCheckpoint 
+                     * 设置<p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
+                     * @param _filterCheckpoint <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
                      * 
                      */
                     void SetFilterCheckpoint(const bool& _filterCheckpoint);
@@ -366,89 +326,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
                      */
                     std::string m_initType;
                     bool m_initTypeHasBeenSet;
 
                     /**
-                     * Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
                      */
                     std::string m_dealOfExistSameTable;
                     bool m_dealOfExistSameTableHasBeenSet;
 
                     /**
-                     * Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
                      */
                     std::string m_conflictHandleType;
                     bool m_conflictHandleTypeHasBeenSet;
 
                     /**
-                     * Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether to add an additional column</p>
                      */
                     bool m_addAdditionalColumn;
                     bool m_addAdditionalColumnHasBeenSet;
 
                     /**
-                     * DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
                      */
                     std::vector<std::string> m_opTypes;
                     bool m_opTypesHasBeenSet;
 
                     /**
-                     * Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
                      */
                     ConflictHandleOption m_conflictHandleOption;
                     bool m_conflictHandleOptionHasBeenSet;
 
                     /**
-                     * DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
                      */
                     std::vector<DdlOption> m_ddlOptions;
                     bool m_ddlOptionsHasBeenSet;
 
                     /**
-                     * Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>kafka sync options</p>
                      */
                     KafkaOption m_kafkaOption;
                     bool m_kafkaOptionHasBeenSet;
 
                     /**
-                     * Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Task speed limit information</p>
                      */
                     RateLimitOption m_rateLimitOption;
                     bool m_rateLimitOptionHasBeenSet;
 
                     /**
-                     * Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Time window for automatic retry settings</p>
                      */
                     int64_t m_autoRetryTimeRangeMinutes;
                     bool m_autoRetryTimeRangeMinutesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
                      */
                     std::string m_startPosition;
                     bool m_startPositionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
                      */
                     bool m_filterBeginCommit;
                     bool m_filterBeginCommitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
                      */
                     bool m_filterCheckpoint;
                     bool m_filterCheckpointHasBeenSet;

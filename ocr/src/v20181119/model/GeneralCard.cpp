@@ -57,7 +57,8 @@ GeneralCard::GeneralCard() :
     m_passportCodeSecondHasBeenSet(false),
     m_dueDateHasBeenSet(false),
     m_ageHasBeenSet(false),
-    m_registrationNumberHasBeenSet(false)
+    m_registrationNumberHasBeenSet(false),
+    m_detectedCardTypeHasBeenSet(false)
 {
 }
 
@@ -443,6 +444,16 @@ CoreInternalOutcome GeneralCard::Deserialize(const rapidjson::Value &value)
         m_registrationNumberHasBeenSet = true;
     }
 
+    if (value.HasMember("DetectedCardType") && !value["DetectedCardType"].IsNull())
+    {
+        if (!value["DetectedCardType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GeneralCard.DetectedCardType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_detectedCardType = string(value["DetectedCardType"].GetString());
+        m_detectedCardTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -745,6 +756,14 @@ void GeneralCard::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "RegistrationNumber";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_registrationNumber.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_detectedCardTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DetectedCardType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_detectedCardType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1340,5 +1359,21 @@ void GeneralCard::SetRegistrationNumber(const string& _registrationNumber)
 bool GeneralCard::RegistrationNumberHasBeenSet() const
 {
     return m_registrationNumberHasBeenSet;
+}
+
+string GeneralCard::GetDetectedCardType() const
+{
+    return m_detectedCardType;
+}
+
+void GeneralCard::SetDetectedCardType(const string& _detectedCardType)
+{
+    m_detectedCardType = _detectedCardType;
+    m_detectedCardTypeHasBeenSet = true;
+}
+
+bool GeneralCard::DetectedCardTypeHasBeenSet() const
+{
+    return m_detectedCardTypeHasBeenSet;
 }
 

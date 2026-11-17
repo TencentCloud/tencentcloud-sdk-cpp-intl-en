@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Fixable host information
+                * Repairable host information
                 */
                 class VulFixableMachineItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
-                     * @return VulIds <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+                     * 获取<p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
+                     * @return VulIds <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
                      * 
                      */
                     std::vector<int64_t> GetVulIds() const;
 
                     /**
-                     * 设置<p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
-                     * @param _vulIds <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+                     * 设置<p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
+                     * @param _vulIds <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
                      * 
                      */
                     void SetVulIds(const std::vector<int64_t>& _vulIds);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MachineIpHasBeenSet() const;
 
                     /**
-                     * 获取<p>public IP address</p>
-                     * @return PublicIp <p>public IP address</p>
+                     * 获取<p>Public IP Address</p>
+                     * @return PublicIp <p>Public IP Address</p>
                      * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
-                     * 设置<p>public IP address</p>
-                     * @param _publicIp <p>public IP address</p>
+                     * 设置<p>Public IP Address</p>
+                     * @param _publicIp <p>Public IP Address</p>
                      * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取<p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
-                     * @return OsType <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+                     * 获取<p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+                     * @return OsType <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
                      * 
                      */
                     std::string GetOsType() const;
 
                     /**
-                     * 设置<p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
-                     * @param _osType <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+                     * 设置<p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+                     * @param _osType <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
                      * 
                      */
                     void SetOsType(const std::string& _osType);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool OsTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Operating system name.</p>
-                     * @return OsName <p>Operating system name.</p>
+                     * 获取<p>OS name</p>
+                     * @return OsName <p>OS name</p>
                      * 
                      */
                     std::string GetOsName() const;
 
                     /**
-                     * 设置<p>Operating system name.</p>
-                     * @param _osName <p>Operating system name.</p>
+                     * 设置<p>OS name</p>
+                     * @param _osName <p>OS name</p>
                      * 
                      */
                     void SetOsName(const std::string& _osName);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool MachineStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
-                     * @return SupportAutoFix <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+                     * 获取<p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
+                     * @return SupportAutoFix <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
                      * 
                      */
                     int64_t GetSupportAutoFix() const;
 
                     /**
-                     * 设置<p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
-                     * @param _supportAutoFix <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+                     * 设置<p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
+                     * @param _supportAutoFix <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
                      * 
                      */
                     void SetSupportAutoFix(const int64_t& _supportAutoFix);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool SupportAutoFixHasBeenSet() const;
 
                     /**
-                     * 获取<p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
-                     * @return FixStatus <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+                     * 获取<p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
+                     * @return FixStatus <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
                      * 
                      */
                     int64_t GetFixStatus() const;
 
                     /**
-                     * 设置<p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
-                     * @param _fixStatus <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+                     * 设置<p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
+                     * @param _fixStatus <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
                      * 
                      */
                     void SetFixStatus(const int64_t& _fixStatus);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool NotFixableReasonHasBeenSet() const;
 
                     /**
-                     * 获取<p>Fix command list, returned when SupportAutoFix is 1</p>
-                     * @return FixCommands <p>Fix command list, returned when SupportAutoFix is 1</p>
+                     * 获取<p>List of fix commands. Returned when SupportAutoFix is 1</p>
+                     * @return FixCommands <p>List of fix commands. Returned when SupportAutoFix is 1</p>
                      * 
                      */
                     std::vector<std::string> GetFixCommands() const;
 
                     /**
-                     * 设置<p>Fix command list, returned when SupportAutoFix is 1</p>
-                     * @param _fixCommands <p>Fix command list, returned when SupportAutoFix is 1</p>
+                     * 设置<p>List of fix commands. Returned when SupportAutoFix is 1</p>
+                     * @param _fixCommands <p>List of fix commands. Returned when SupportAutoFix is 1</p>
                      * 
                      */
                     void SetFixCommands(const std::vector<std::string>& _fixCommands);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool TagItemsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Account AppId</p>
-                     * @return AppId <p>Account AppId</p>
+                     * 获取<p>Associated account AppId</p>
+                     * @return AppId <p>Associated account AppId</p>
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置<p>Account AppId</p>
-                     * @param _appId <p>Account AppId</p>
+                     * 设置<p>Associated account AppId</p>
+                     * @param _appId <p>Associated account AppId</p>
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
-                     * @return PayVersion <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+                     * 获取<p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+                     * @return PayVersion <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
                      * 
                      */
                     std::string GetPayVersion() const;
 
                     /**
-                     * 设置<p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
-                     * @param _payVersion <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+                     * 设置<p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+                     * @param _payVersion <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
                      * 
                      */
                     void SetPayVersion(const std::string& _payVersion);
@@ -407,7 +407,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+                     * <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
                      */
                     std::vector<int64_t> m_vulIds;
                     bool m_vulIdsHasBeenSet;
@@ -431,19 +431,19 @@ namespace TencentCloud
                     bool m_machineIpHasBeenSet;
 
                     /**
-                     * <p>public IP address</p>
+                     * <p>Public IP Address</p>
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+                     * <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
                      */
                     std::string m_osType;
                     bool m_osTypeHasBeenSet;
 
                     /**
-                     * <p>Operating system name.</p>
+                     * <p>OS name</p>
                      */
                     std::string m_osName;
                     bool m_osNameHasBeenSet;
@@ -455,13 +455,13 @@ namespace TencentCloud
                     bool m_machineStatusHasBeenSet;
 
                     /**
-                     * <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+                     * <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
                      */
                     int64_t m_supportAutoFix;
                     bool m_supportAutoFixHasBeenSet;
 
                     /**
-                     * <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+                     * <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
                      */
                     int64_t m_fixStatus;
                     bool m_fixStatusHasBeenSet;
@@ -479,7 +479,7 @@ namespace TencentCloud
                     bool m_notFixableReasonHasBeenSet;
 
                     /**
-                     * <p>Fix command list, returned when SupportAutoFix is 1</p>
+                     * <p>List of fix commands. Returned when SupportAutoFix is 1</p>
                      */
                     std::vector<std::string> m_fixCommands;
                     bool m_fixCommandsHasBeenSet;
@@ -497,13 +497,13 @@ namespace TencentCloud
                     bool m_tagItemsHasBeenSet;
 
                     /**
-                     * <p>Account AppId</p>
+                     * <p>Associated account AppId</p>
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+                     * <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
                      */
                     std::string m_payVersion;
                     bool m_payVersionHasBeenSet;

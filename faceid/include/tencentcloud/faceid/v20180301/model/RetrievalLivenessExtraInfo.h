@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Template retrieve detailed information
+                * Template retrieval details
                 */
                 class RetrievalLivenessExtraInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
-                     * @return HitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+                     * 获取<p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
+                     * @return HitGroup <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
                      * 
                      */
                     std::string GetHitGroup() const;
 
                     /**
-                     * 设置<p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
-                     * @param _hitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+                     * 设置<p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
+                     * @param _hitGroup <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
                      * 
                      */
                     void SetHitGroup(const std::string& _hitGroup);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool HitGroupHasBeenSet() const;
 
                     /**
-                     * 获取<p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
-                     * @return SimilarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+                     * 获取<p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
+                     * @return SimilarityScore <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
                      * 
                      */
                     double GetSimilarityScore() const;
 
                     /**
-                     * 设置<p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
-                     * @param _similarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+                     * 设置<p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
+                     * @param _similarityScore <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
                      * 
                      */
                     void SetSimilarityScore(const double& _similarityScore);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SimilarityScoreHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template id of the cache hit</p>
-                     * @return HitTemplate <p>Template id of the cache hit</p>
+                     * 获取<p>id of the matched template</p>
+                     * @return HitTemplate <p>id of the matched template</p>
                      * 
                      */
                     std::string GetHitTemplate() const;
 
                     /**
-                     * 设置<p>Template id of the cache hit</p>
-                     * @param _hitTemplate <p>Template id of the cache hit</p>
+                     * 设置<p>id of the matched template</p>
+                     * @param _hitTemplate <p>id of the matched template</p>
                      * 
                      */
                     void SetHitTemplate(const std::string& _hitTemplate);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+                     * <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
                      */
                     std::string m_hitGroup;
                     bool m_hitGroupHasBeenSet;
 
                     /**
-                     * <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+                     * <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
                      */
                     double m_similarityScore;
                     bool m_similarityScoreHasBeenSet;
 
                     /**
-                     * <p>Template id of the cache hit</p>
+                     * <p>id of the matched template</p>
                      */
                     std::string m_hitTemplate;
                     bool m_hitTemplateHasBeenSet;

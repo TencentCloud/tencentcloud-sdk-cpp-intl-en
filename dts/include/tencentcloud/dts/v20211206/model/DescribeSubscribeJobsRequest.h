@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SubscribeIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubscribeIds 
+                     * 获取Filter by subscription ID, exact match
+                     * @return SubscribeIds Filter by subscription ID, exact match
                      * 
                      */
                     std::vector<std::string> GetSubscribeIds() const;
 
                     /**
-                     * 设置
-                     * @param _subscribeIds 
+                     * 设置Filter by subscription ID, exact match
+                     * @param _subscribeIds Filter by subscription ID, exact match
                      * 
                      */
                     void SetSubscribeIds(const std::vector<std::string>& _subscribeIds);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Topic 
+                     * 获取Subscribed topicName
+                     * @return Topic Subscribed topicName
                      * 
                      */
                     std::string GetTopic() const;
 
                     /**
-                     * 设置
-                     * @param _topic 
+                     * 设置Subscribed topicName
+                     * @param _topic Subscribed topicName
                      * 
                      */
                     void SetTopic(const std::string& _topic);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool TopicHasBeenSet() const;
 
                     /**
-                     * 获取Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-                     * @return PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * 获取Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+                     * @return PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      * 
                      */
                     int64_t GetPayType() const;
 
                     /**
-                     * 设置Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-                     * @param _payType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * 设置Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+                     * @param _payType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      * 
                      */
                     void SetPayType(const int64_t& _payType);
@@ -325,7 +325,7 @@ namespace TencentCloud
                     bool m_subscribeIdHasBeenSet;
 
                     /**
-                     * 
+                     * Filter by subscription ID, exact match
                      */
                     std::vector<std::string> m_subscribeIds;
                     bool m_subscribeIdsHasBeenSet;
@@ -343,13 +343,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Subscribed topicName
                      */
                     std::string m_topic;
                     bool m_topicHasBeenSet;
 
                     /**
-                     * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      */
                     int64_t m_payType;
                     bool m_payTypeHasBeenSet;

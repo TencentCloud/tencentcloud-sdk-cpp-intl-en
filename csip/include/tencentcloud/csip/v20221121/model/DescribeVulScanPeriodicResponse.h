@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Period scanning switch (0-off, 1-on)</p>
-                     * @return Status <p>Period scanning switch (0-off, 1-on)</p>
+                     * 获取<p>Periodic scan switch (0-Disable, 1-Enable)</p>
+                     * @return Status <p>Periodic scan switch (0-Disable, 1-Enable)</p>
                      * 
                      */
                     int64_t GetStatus() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Vulnerability type</p><p>Enumeration value:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
-                     * @return VulCategory <p>Vulnerability type</p><p>Enumeration value:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
+                     * 获取<p>Vulnerability type</p><p>Enumeration values:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
+                     * @return VulCategory <p>Vulnerability type</p><p>Enumeration values:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
                      * 
                      */
                     std::vector<std::string> GetVulCategory() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool VulCategoryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Vulnerability level (INVALID: Invalid, INFO: Notification, LOW: Low risk, MEDIUM: Medium risk, HIGH: High risk, CRITICAL: Critical)</p>
-                     * @return Level <p>Vulnerability level (INVALID: Invalid, INFO: Notification, LOW: Low risk, MEDIUM: Medium risk, HIGH: High risk, CRITICAL: Critical)</p>
+                     * 获取<p>Vulnerability level (INVALID: invalid, INFO: notification, LOW: low risk, MEDIUM: medium risk, HIGH: high risk, CRITICAL: critical)</p>
+                     * @return Level <p>Vulnerability level (INVALID: invalid, INFO: notification, LOW: low risk, MEDIUM: medium risk, HIGH: high risk, CRITICAL: critical)</p>
                      * 
                      */
                     std::vector<std::string> GetLevel() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scanning method (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version p comparison+POC detection)</p>
-                     * @return Method <p>Scanning method (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version p comparison+POC detection)</p>
+                     * 获取<p>Scan mode (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version comparison + POC detection)</p>
+                     * @return Method <p>Scan mode (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version comparison + POC detection)</p>
                      * 
                      */
                     std::string GetMethod() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取<p>Period scanning type</p><p>Enumeration value:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
-                     * @return CycleType <p>Period scanning type</p><p>Enumeration value:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
+                     * 获取<p>Periodic scan type</p><p>Enumeration values:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
+                     * @return CycleType <p>Periodic scan type</p><p>Enumeration values:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
                      * 
                      */
                     uint64_t GetCycleType() const;
@@ -143,8 +143,8 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Asset scope (0-All assets, 1-Custom assets, 2-Remove asset)</p>
-                     * @return AssetRange <p>Asset scope (0-All assets, 1-Custom assets, 2-Remove asset)</p>
+                     * 获取<p>Asset scope (0 - all assets, 1 - custom asset, 2 - remove asset)</p>
+                     * @return AssetRange <p>Asset scope (0 - all assets, 1 - custom asset, 2 - remove asset)</p>
                      * 
                      */
                     int64_t GetAssetRange() const;
@@ -171,8 +171,8 @@ namespace TencentCloud
                     bool AssetListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Period value</p><p>Unit: Day of the week or day of the month</p>
-                     * @return CycleValue <p>Period value</p><p>Unit: Day of the week or day of the month</p>
+                     * 获取<p>Cycle value</p><p>Unit: day of the week or day per month</p>
+                     * @return CycleValue <p>Cycle value</p><p>Unit: day of the week or day per month</p>
                      * 
                      */
                     std::vector<uint64_t> GetCycleValue() const;
@@ -185,8 +185,8 @@ namespace TencentCloud
                     bool CycleValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Timeout duration</p><p>Unit: second</p>
-                     * @return Timeout <p>Timeout duration</p><p>Unit: second</p>
+                     * 获取<p>Timeout duration</p><p>Unit: seconds</p>
+                     * @return Timeout <p>Timeout duration</p><p>Unit: seconds</p>
                      * 
                      */
                     uint64_t GetTimeout() const;
@@ -199,8 +199,8 @@ namespace TencentCloud
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to synchronize configuration 0-cannot, 1-permission</p>
-                     * @return AllowSync <p>Whether to synchronize configuration 0-cannot, 1-permission</p>
+                     * 获取<p>Whether to run the synchronized configuration. 0: not allowed, 1: allowed</p>
+                     * @return AllowSync <p>Whether to run the synchronized configuration. 0: not allowed, 1: allowed</p>
                      * 
                      */
                     uint64_t GetAllowSync() const;
@@ -213,8 +213,8 @@ namespace TencentCloud
                     bool AllowSyncHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether the admin account has the automated configuration synchronization switch enabled 0-Off, 1-On</p>
-                     * @return EnableSync <p>Whether the admin account has the automated configuration synchronization switch enabled 0-Off, 1-On</p>
+                     * 获取<p>Whether automatic synchronization is enabled for the admin account. 0: disabled, 1: enabled</p>
+                     * @return EnableSync <p>Whether automatic synchronization is enabled for the admin account. 0: disabled, 1: enabled</p>
                      * 
                      */
                     uint64_t GetEnableSync() const;
@@ -227,8 +227,8 @@ namespace TencentCloud
                     bool EnableSyncHasBeenSet() const;
 
                     /**
-                     * 获取<p>Which account the configuration message comes from. Being empty indicates set by oneself.</p>
-                     * @return AdminInfo <p>Which account the configuration message comes from. Being empty indicates set by oneself.</p>
+                     * 获取<p>Which account the configuration message comes from. Being empty indicates it is set by oneself.</p>
+                     * @return AdminInfo <p>Which account the configuration message comes from. Being empty indicates it is set by oneself.</p>
                      * 
                      */
                     AccountBriefInfo GetAdminInfo() const;
@@ -241,8 +241,8 @@ namespace TencentCloud
                     bool AdminInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>tag id</p>
-                     * @return TagIds <p>tag id</p>
+                     * 获取<p>Tag id</p>
+                     * @return TagIds <p>Tag id</p>
                      * 
                      */
                     std::vector<uint64_t> GetTagIds() const;
@@ -254,34 +254,48 @@ namespace TencentCloud
                      */
                     bool TagIdsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to prefer Tencent Cloud software sources</p>
+                     * @return PreferCloudSource <p>Whether to prefer Tencent Cloud software sources</p>
+                     * 
+                     */
+                    bool GetPreferCloudSource() const;
+
+                    /**
+                     * 判断参数 PreferCloudSource 是否已赋值
+                     * @return PreferCloudSource 是否已赋值
+                     * 
+                     */
+                    bool PreferCloudSourceHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Period scanning switch (0-off, 1-on)</p>
+                     * <p>Periodic scan switch (0-Disable, 1-Enable)</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Vulnerability type</p><p>Enumeration value:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
+                     * <p>Vulnerability type</p><p>Enumeration values:</p><ul><li>LINUX: Linux software vulnerability</li><li>WINDOWS: Windows system patch</li><li>WEB_CMS: Web-CMS vulnerability</li><li>APPLICATION: Application vulnerability</li><li>EMERGENCY: Emergency vulnerability</li></ul>
                      */
                     std::vector<std::string> m_vulCategory;
                     bool m_vulCategoryHasBeenSet;
 
                     /**
-                     * <p>Vulnerability level (INVALID: Invalid, INFO: Notification, LOW: Low risk, MEDIUM: Medium risk, HIGH: High risk, CRITICAL: Critical)</p>
+                     * <p>Vulnerability level (INVALID: invalid, INFO: notification, LOW: low risk, MEDIUM: medium risk, HIGH: high risk, CRITICAL: critical)</p>
                      */
                     std::vector<std::string> m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * <p>Scanning method (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version p comparison+POC detection)</p>
+                     * <p>Scan mode (VersionCompare: version comparison, POC: POC detection, VersionComparePOC: version comparison + POC detection)</p>
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * <p>Period scanning type</p><p>Enumeration value:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
+                     * <p>Periodic scan type</p><p>Enumeration values:</p><ul><li>1: Daily</li><li>2: Weekly</li><li>3: Per month</li></ul>
                      */
                     uint64_t m_cycleType;
                     bool m_cycleTypeHasBeenSet;
@@ -299,7 +313,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>Asset scope (0-All assets, 1-Custom assets, 2-Remove asset)</p>
+                     * <p>Asset scope (0 - all assets, 1 - custom asset, 2 - remove asset)</p>
                      */
                     int64_t m_assetRange;
                     bool m_assetRangeHasBeenSet;
@@ -311,40 +325,46 @@ namespace TencentCloud
                     bool m_assetListHasBeenSet;
 
                     /**
-                     * <p>Period value</p><p>Unit: Day of the week or day of the month</p>
+                     * <p>Cycle value</p><p>Unit: day of the week or day per month</p>
                      */
                     std::vector<uint64_t> m_cycleValue;
                     bool m_cycleValueHasBeenSet;
 
                     /**
-                     * <p>Timeout duration</p><p>Unit: second</p>
+                     * <p>Timeout duration</p><p>Unit: seconds</p>
                      */
                     uint64_t m_timeout;
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * <p>Whether to synchronize configuration 0-cannot, 1-permission</p>
+                     * <p>Whether to run the synchronized configuration. 0: not allowed, 1: allowed</p>
                      */
                     uint64_t m_allowSync;
                     bool m_allowSyncHasBeenSet;
 
                     /**
-                     * <p>Whether the admin account has the automated configuration synchronization switch enabled 0-Off, 1-On</p>
+                     * <p>Whether automatic synchronization is enabled for the admin account. 0: disabled, 1: enabled</p>
                      */
                     uint64_t m_enableSync;
                     bool m_enableSyncHasBeenSet;
 
                     /**
-                     * <p>Which account the configuration message comes from. Being empty indicates set by oneself.</p>
+                     * <p>Which account the configuration message comes from. Being empty indicates it is set by oneself.</p>
                      */
                     AccountBriefInfo m_adminInfo;
                     bool m_adminInfoHasBeenSet;
 
                     /**
-                     * <p>tag id</p>
+                     * <p>Tag id</p>
                      */
                     std::vector<uint64_t> m_tagIds;
                     bool m_tagIdsHasBeenSet;
+
+                    /**
+                     * <p>Whether to prefer Tencent Cloud software sources</p>
+                     */
+                    bool m_preferCloudSource;
+                    bool m_preferCloudSourceHasBeenSet;
 
                 };
             }

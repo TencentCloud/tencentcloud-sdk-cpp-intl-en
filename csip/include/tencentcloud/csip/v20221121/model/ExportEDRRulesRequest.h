@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/csip/v20221121/model/EDRFilter.h>
+#include <tencentcloud/csip/v20221121/model/RuleContentFileOperation.h>
 
 
 namespace TencentCloud
@@ -127,6 +128,27 @@ namespace TencentCloud
                      */
                     bool ByHasBeenSet() const;
 
+                    /**
+                     * 获取<p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * @return FileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * 
+                     */
+                    RuleContentFileOperation GetFileOperationRules() const;
+
+                    /**
+                     * 设置<p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * @param _fileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * 
+                     */
+                    void SetFileOperationRules(const RuleContentFileOperation& _fileOperationRules);
+
+                    /**
+                     * 判断参数 FileOperationRules 是否已赋值
+                     * @return FileOperationRules 是否已赋值
+                     * 
+                     */
+                    bool FileOperationRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +174,12 @@ namespace TencentCloud
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;
+
+                    /**
+                     * <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     */
+                    RuleContentFileOperation m_fileOperationRules;
+                    bool m_fileOperationRulesHasBeenSet;
 
                 };
             }

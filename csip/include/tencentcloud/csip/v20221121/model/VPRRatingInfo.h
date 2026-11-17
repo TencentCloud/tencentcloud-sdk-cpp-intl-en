@@ -50,13 +50,13 @@ namespace TencentCloud
                     /**
                      * 获取VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
                      * @return Result VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
                      * 
                      */
@@ -65,13 +65,13 @@ DEFERRABLE: Deferrable repair
                     /**
                      * 设置VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
                      * @param _result VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
                      * 
                      */
@@ -106,15 +106,15 @@ DEFERRABLE: Deferrable repair
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取List of stage rating details
-                     * @return Stage List of stage rating details
+                     * 获取List of phased rating details
+                     * @return Stage List of phased rating details
                      * 
                      */
                     std::vector<VPRRatingStage> GetStage() const;
 
                     /**
-                     * 设置List of stage rating details
-                     * @param _stage List of stage rating details
+                     * 设置List of phased rating details
+                     * @param _stage List of phased rating details
                      * 
                      */
                     void SetStage(const std::vector<VPRRatingStage>& _stage);
@@ -131,8 +131,8 @@ DEFERRABLE: Deferrable repair
                     /**
                      * VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
                      */
                     std::string m_result;
@@ -145,7 +145,7 @@ DEFERRABLE: Deferrable repair
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * List of stage rating details
+                     * List of phased rating details
                      */
                     std::vector<VPRRatingStage> m_stage;
                     bool m_stageHasBeenSet;

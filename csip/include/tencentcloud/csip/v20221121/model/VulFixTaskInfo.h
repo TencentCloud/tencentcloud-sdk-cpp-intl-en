@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task summary of vulnerability repair
+                * Vulnerability repair task summary information
                 */
                 class VulFixTaskInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary key ID of the fix task
-                     * @return Id Primary key ID of the fix task
+                     * 获取Repair task primary key ID
+                     * @return Id Repair task primary key ID
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置Primary key ID of the fix task
-                     * @param _id Primary key ID of the fix task
+                     * 设置Repair task primary key ID
+                     * @param _id Repair task primary key ID
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -95,7 +95,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
                      * @return FixStatus Remediation status
@@ -103,7 +103,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
                      * 
@@ -116,7 +116,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
                      * @param _fixStatus Remediation status
@@ -124,7 +124,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
                      * 
@@ -139,15 +139,15 @@ Enumeration values:
                     bool FixStatusHasBeenSet() const;
 
                     /**
-                     * 获取Repair total number of assets
-                     * @return AssetCount Repair total number of assets
+                     * 获取Total number of repaired assets
+                     * @return AssetCount Total number of repaired assets
                      * 
                      */
                     int64_t GetAssetCount() const;
 
                     /**
-                     * 设置Repair total number of assets
-                     * @param _assetCount Repair total number of assets
+                     * 设置Total number of repaired assets
+                     * @param _assetCount Total number of repaired assets
                      * 
                      */
                     void SetAssetCount(const int64_t& _assetCount);
@@ -181,15 +181,15 @@ Enumeration values:
                     bool SuccessCountHasBeenSet() const;
 
                     /**
-                     * 获取FIX_FAILURE count
-                     * @return FailCount FIX_FAILURE count
+                     * 获取Number of failed fixes
+                     * @return FailCount Number of failed fixes
                      * 
                      */
                     int64_t GetFailCount() const;
 
                     /**
-                     * 设置FIX_FAILURE count
-                     * @param _failCount FIX_FAILURE count
+                     * 设置Number of failed fixes
+                     * @param _failCount Number of failed fixes
                      * 
                      */
                     void SetFailCount(const int64_t& _failCount);
@@ -244,23 +244,23 @@ Enumeration values:
                     bool QueueCountHasBeenSet() const;
 
                     /**
-                     * 获取Progress percentage of the repair
+                     * 获取Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-                     * @return Progress Progress percentage of the repair
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+                     * @return Progress Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress percentage of the repair
+                     * 设置Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-                     * @param _progress Progress percentage of the repair
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+                     * @param _progress Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -273,15 +273,15 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Number of successfully fixed vulnerabilities
-                     * @return SuccessVulCount Number of successfully fixed vulnerabilities
+                     * 获取Number of vulnerabilities with successful fixes
+                     * @return SuccessVulCount Number of vulnerabilities with successful fixes
                      * 
                      */
                     int64_t GetSuccessVulCount() const;
 
                     /**
-                     * 设置Number of successfully fixed vulnerabilities
-                     * @param _successVulCount Number of successfully fixed vulnerabilities
+                     * 设置Number of vulnerabilities with successful fixes
+                     * @param _successVulCount Number of vulnerabilities with successful fixes
                      * 
                      */
                     void SetSuccessVulCount(const int64_t& _successVulCount);
@@ -315,15 +315,15 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
                     bool FailVulCountHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerability names to be fixed
-                     * @return VulNames List of vulnerability names to be fixed
+                     * 获取List of fixed vulnerability names
+                     * @return VulNames List of fixed vulnerability names
                      * 
                      */
                     std::vector<std::string> GetVulNames() const;
 
                     /**
-                     * 设置List of vulnerability names to be fixed
-                     * @param _vulNames List of vulnerability names to be fixed
+                     * 设置List of fixed vulnerability names
+                     * @param _vulNames List of fixed vulnerability names
                      * 
                      */
                     void SetVulNames(const std::vector<std::string>& _vulNames);
@@ -336,19 +336,19 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
                     bool VulNamesHasBeenSet() const;
 
                     /**
-                     * 获取Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @return StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 获取Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @return StartTime Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @param _startTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 设置Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @param _startTime Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -361,19 +361,19 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @return EndTime Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 获取Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @return EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @param _endTime Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 设置Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @param _endTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -386,15 +386,15 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerability dimensional remediation status, status details of each vulnerability
-                     * @return VulFixStatusList List of vulnerability dimensional remediation status, status details of each vulnerability
+                     * 获取List of vulnerability dimensional remediation statuses, with status details for each vulnerability
+                     * @return VulFixStatusList List of vulnerability dimensional remediation statuses, with status details for each vulnerability
                      * 
                      */
                     std::vector<VulFixStatusItem> GetVulFixStatusList() const;
 
                     /**
-                     * 设置List of vulnerability dimensional remediation status, status details of each vulnerability
-                     * @param _vulFixStatusList List of vulnerability dimensional remediation status, status details of each vulnerability
+                     * 设置List of vulnerability dimensional remediation statuses, with status details for each vulnerability
+                     * @param _vulFixStatusList List of vulnerability dimensional remediation statuses, with status details for each vulnerability
                      * 
                      */
                     void SetVulFixStatusList(const std::vector<VulFixStatusItem>& _vulFixStatusList);
@@ -409,7 +409,7 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                 private:
 
                     /**
-                     * Primary key ID of the fix task
+                     * Repair task primary key ID
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
@@ -426,7 +426,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
                      */
@@ -434,7 +434,7 @@ Enumeration values:
                     bool m_fixStatusHasBeenSet;
 
                     /**
-                     * Repair total number of assets
+                     * Total number of repaired assets
                      */
                     int64_t m_assetCount;
                     bool m_assetCountHasBeenSet;
@@ -446,7 +446,7 @@ Enumeration values:
                     bool m_successCountHasBeenSet;
 
                     /**
-                     * FIX_FAILURE count
+                     * Number of failed fixes
                      */
                     int64_t m_failCount;
                     bool m_failCountHasBeenSet;
@@ -464,15 +464,15 @@ Enumeration values:
                     bool m_queueCountHasBeenSet;
 
                     /**
-                     * Progress percentage of the repair
+                     * Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Number of successfully fixed vulnerabilities
+                     * Number of vulnerabilities with successful fixes
                      */
                     int64_t m_successVulCount;
                     bool m_successVulCountHasBeenSet;
@@ -484,27 +484,27 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
                     bool m_failVulCountHasBeenSet;
 
                     /**
-                     * List of vulnerability names to be fixed
+                     * List of fixed vulnerability names
                      */
                     std::vector<std::string> m_vulNames;
                     bool m_vulNamesHasBeenSet;
 
                     /**
-                     * Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * List of vulnerability dimensional remediation status, status details of each vulnerability
+                     * List of vulnerability dimensional remediation statuses, with status details for each vulnerability
                      */
                     std::vector<VulFixStatusItem> m_vulFixStatusList;
                     bool m_vulFixStatusListHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>List of affected hosts for the vulnerability</p>
-                     * @return List <p>List of affected hosts for the vulnerability</p>
+                     * 获取<p>List of affected hosts</p>
+                     * @return List <p>List of affected hosts</p>
                      * 
                      */
                     std::vector<VulHostBriefInfo> GetList() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Total number of qualified instances</p>
-                     * @return TotalCount <p>Total number of qualified instances</p>
+                     * 获取<p>Total number of eligible items</p>
+                     * @return TotalCount <p>Total number of eligible items</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>List of affected hosts for the vulnerability</p>
+                     * <p>List of affected hosts</p>
                      */
                     std::vector<VulHostBriefInfo> m_list;
                     bool m_listHasBeenSet;
 
                     /**
-                     * <p>Total number of qualified instances</p>
+                     * <p>Total number of eligible items</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

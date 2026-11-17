@@ -56,6 +56,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/Label.h
   include/tencentcloud/tke/v20180525/model/PodLimitsByType.h
   include/tencentcloud/tke/v20180525/model/CreateEdgeLogConfigRequest.h
+  include/tencentcloud/tke/v20180525/model/RotateClusterTokenRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterStatusResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterStatusRequest.h
   include/tencentcloud/tke/v20180525/model/CreateBackupStorageLocationRequest.h
@@ -178,6 +179,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/CreateClusterInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeLogSwitchesResponse.h
   include/tencentcloud/tke/v20180525/model/ModifyClusterVirtualNodePoolResponse.h
+  include/tencentcloud/tke/v20180525/model/RotateClusterTokenResponse.h
   include/tencentcloud/tke/v20180525/model/InstanceUpgradeClusterStatus.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterRoutesRequest.h
   include/tencentcloud/tke/v20180525/model/DeleteECMInstancesRequest.h
@@ -490,6 +492,7 @@ set(tke_src
   src/v20180525/model/Label.cpp
   src/v20180525/model/PodLimitsByType.cpp
   src/v20180525/model/CreateEdgeLogConfigRequest.cpp
+  src/v20180525/model/RotateClusterTokenRequest.cpp
   src/v20180525/model/DescribeTKEEdgeClusterStatusResponse.cpp
   src/v20180525/model/DescribeClusterStatusRequest.cpp
   src/v20180525/model/CreateBackupStorageLocationRequest.cpp
@@ -612,6 +615,7 @@ set(tke_src
   src/v20180525/model/CreateClusterInstancesResponse.cpp
   src/v20180525/model/DescribeLogSwitchesResponse.cpp
   src/v20180525/model/ModifyClusterVirtualNodePoolResponse.cpp
+  src/v20180525/model/RotateClusterTokenResponse.cpp
   src/v20180525/model/InstanceUpgradeClusterStatus.cpp
   src/v20180525/model/DescribeClusterRoutesRequest.cpp
   src/v20180525/model/DeleteECMInstancesRequest.cpp

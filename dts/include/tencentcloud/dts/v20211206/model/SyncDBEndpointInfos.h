@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database region
+                     * @return Region Database region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Database region
+                     * @param _region Database region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
+                     * @return AccessType Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
                      * 
                      */
                     std::string GetAccessType() const;
 
                     /**
-                     * 设置Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
+                     * @param _accessType Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
                      * 
                      */
                     void SetAccessType(const std::string& _accessType);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
+                     * @return DatabaseType Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
                      * 
                      */
                     std::string GetDatabaseType() const;
 
                     /**
-                     * 设置Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _databaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
+                     * @param _databaseType Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
                      * 
                      */
                     void SetDatabaseType(const std::string& _databaseType);
@@ -123,15 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
+                     * @return Info Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
                      * 
                      */
                     std::vector<Endpoint> GetInfo() const;
 
                     /**
-                     * 设置Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
+                     * @param _info Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
                      * 
                      */
                     void SetInfo(const std::vector<Endpoint>& _info);
@@ -146,28 +134,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
                      */
                     std::string m_accessType;
                     bool m_accessTypeHasBeenSet;
 
                     /**
-                     * Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
                      */
                     std::string m_databaseType;
                     bool m_databaseTypeHasBeenSet;
 
                     /**
-                     * Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
                      */
                     std::vector<Endpoint> m_info;
                     bool m_infoHasBeenSet;

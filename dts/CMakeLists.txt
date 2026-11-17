@@ -31,6 +31,7 @@ set(dts_public_header_model
   include/tencentcloud/dts/v20211206/model/ModifyConsumerGroupPasswordRequest.h
   include/tencentcloud/dts/v20211206/model/StepTip.h
   include/tencentcloud/dts/v20211206/model/ModifySyncRateLimitResponse.h
+  include/tencentcloud/dts/v20211206/model/TableFilter.h
   include/tencentcloud/dts/v20211206/model/DestroyMigrateJobRequest.h
   include/tencentcloud/dts/v20211206/model/ModifySubscribeNameRequest.h
   include/tencentcloud/dts/v20211206/model/OffsetTimeMap.h
@@ -38,6 +39,7 @@ set(dts_public_header_model
   include/tencentcloud/dts/v20211206/model/ResumeSyncJobRequest.h
   include/tencentcloud/dts/v20211206/model/PartitionAssignment.h
   include/tencentcloud/dts/v20211206/model/ResizeSyncJobResponse.h
+  include/tencentcloud/dts/v20211206/model/StopMigrateJobResponse.h
   include/tencentcloud/dts/v20211206/model/CreateSubscribeCheckJobRequest.h
   include/tencentcloud/dts/v20211206/model/ResumeMigrateJobResponse.h
   include/tencentcloud/dts/v20211206/model/DifferenceItem.h
@@ -52,7 +54,7 @@ set(dts_public_header_model
   include/tencentcloud/dts/v20211206/model/DestroySyncJobResponse.h
   include/tencentcloud/dts/v20211206/model/ErrorInfoItem.h
   include/tencentcloud/dts/v20211206/model/IsolateMigrateJobRequest.h
-  include/tencentcloud/dts/v20211206/model/StopMigrateJobResponse.h
+  include/tencentcloud/dts/v20211206/model/DBOpFilter.h
   include/tencentcloud/dts/v20211206/model/TableItem.h
   include/tencentcloud/dts/v20211206/model/SubscribeInfo.h
   include/tencentcloud/dts/v20211206/model/ModifyCompareTaskNameRequest.h
@@ -155,6 +157,7 @@ set(dts_public_header_model
   include/tencentcloud/dts/v20211206/model/CheckStepInfo.h
   include/tencentcloud/dts/v20211206/model/ProcessStepTip.h
   include/tencentcloud/dts/v20211206/model/ModifyCompareTaskRequest.h
+  include/tencentcloud/dts/v20211206/model/OpFilter.h
   include/tencentcloud/dts/v20211206/model/RecoverSyncJobRequest.h
   include/tencentcloud/dts/v20211206/model/Database.h
   include/tencentcloud/dts/v20211206/model/Column.h
@@ -185,6 +188,7 @@ set(dts_public_header_model
   include/tencentcloud/dts/v20211206/model/RateLimitOption.h
   include/tencentcloud/dts/v20211206/model/SkipCheckItemRequest.h
   include/tencentcloud/dts/v20211206/model/CompareAbstractInfo.h
+  include/tencentcloud/dts/v20211206/model/ViewFilter.h
   include/tencentcloud/dts/v20211206/model/CheckStep.h
   include/tencentcloud/dts/v20211206/model/CompareTaskItem.h
   include/tencentcloud/dts/v20211206/model/ModifyMigrateJobSpecResponse.h
@@ -305,6 +309,7 @@ set(dts_src
   src/v20211206/model/ModifyConsumerGroupPasswordRequest.cpp
   src/v20211206/model/StepTip.cpp
   src/v20211206/model/ModifySyncRateLimitResponse.cpp
+  src/v20211206/model/TableFilter.cpp
   src/v20211206/model/DestroyMigrateJobRequest.cpp
   src/v20211206/model/ModifySubscribeNameRequest.cpp
   src/v20211206/model/OffsetTimeMap.cpp
@@ -312,6 +317,7 @@ set(dts_src
   src/v20211206/model/ResumeSyncJobRequest.cpp
   src/v20211206/model/PartitionAssignment.cpp
   src/v20211206/model/ResizeSyncJobResponse.cpp
+  src/v20211206/model/StopMigrateJobResponse.cpp
   src/v20211206/model/CreateSubscribeCheckJobRequest.cpp
   src/v20211206/model/ResumeMigrateJobResponse.cpp
   src/v20211206/model/DifferenceItem.cpp
@@ -326,7 +332,7 @@ set(dts_src
   src/v20211206/model/DestroySyncJobResponse.cpp
   src/v20211206/model/ErrorInfoItem.cpp
   src/v20211206/model/IsolateMigrateJobRequest.cpp
-  src/v20211206/model/StopMigrateJobResponse.cpp
+  src/v20211206/model/DBOpFilter.cpp
   src/v20211206/model/TableItem.cpp
   src/v20211206/model/SubscribeInfo.cpp
   src/v20211206/model/ModifyCompareTaskNameRequest.cpp
@@ -429,6 +435,7 @@ set(dts_src
   src/v20211206/model/CheckStepInfo.cpp
   src/v20211206/model/ProcessStepTip.cpp
   src/v20211206/model/ModifyCompareTaskRequest.cpp
+  src/v20211206/model/OpFilter.cpp
   src/v20211206/model/RecoverSyncJobRequest.cpp
   src/v20211206/model/Database.cpp
   src/v20211206/model/Column.cpp
@@ -459,6 +466,7 @@ set(dts_src
   src/v20211206/model/RateLimitOption.cpp
   src/v20211206/model/SkipCheckItemRequest.cpp
   src/v20211206/model/CompareAbstractInfo.cpp
+  src/v20211206/model/ViewFilter.cpp
   src/v20211206/model/CheckStep.cpp
   src/v20211206/model/CompareTaskItem.cpp
   src/v20211206/model/ModifyMigrateJobSpecResponse.cpp

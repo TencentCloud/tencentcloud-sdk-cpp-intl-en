@@ -103,18 +103,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobNameHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+                     * 获取Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+                     * @return PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+                     * 设置Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _payMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+                     * @param _payMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -878,15 +878,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OfflineTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OptObjStatus 
+                     * 获取Dynamically modify objects, such as changing the status of a task.
+                     * @return OptObjStatus Dynamically modify objects, such as changing the status of a task.
                      * 
                      */
                     std::string GetOptObjStatus() const;
 
                     /**
-                     * 设置
-                     * @param _optObjStatus 
+                     * 设置Dynamically modify objects, such as changing the status of a task.
+                     * @param _optObjStatus Dynamically modify objects, such as changing the status of a task.
                      * 
                      */
                     void SetOptObjStatus(const std::string& _optObjStatus);
@@ -965,7 +965,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_jobNameHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+                     * Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_payMode;
@@ -1182,7 +1182,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_offlineTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Dynamically modify objects, such as changing the status of a task.
                      */
                     std::string m_optObjStatus;
                     bool m_optObjStatusHasBeenSet;

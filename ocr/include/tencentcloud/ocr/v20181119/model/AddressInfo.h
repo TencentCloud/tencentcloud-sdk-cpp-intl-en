@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool LineThreeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Fourth line of the address bar</p>
-                     * @return LineFour <p>Fourth line of the address bar</p>
+                     * 获取<p>Line 4 of the address bar</p>
+                     * @return LineFour <p>Line 4 of the address bar</p>
                      * 
                      */
                     std::string GetLineFour() const;
 
                     /**
-                     * 设置<p>Fourth line of the address bar</p>
-                     * @param _lineFour <p>Fourth line of the address bar</p>
+                     * 设置<p>Line 4 of the address bar</p>
+                     * @param _lineFour <p>Line 4 of the address bar</p>
                      * 
                      */
                     void SetLineFour(const std::string& _lineFour);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool LineFourHasBeenSet() const;
 
                     /**
-                     * 获取<p>Fifth line of the address bar</p>
-                     * @return LineFive <p>Fifth line of the address bar</p>
+                     * 获取<p>Line 5 of the address bar</p>
+                     * @return LineFive <p>Line 5 of the address bar</p>
                      * 
                      */
                     std::string GetLineFive() const;
 
                     /**
-                     * 设置<p>Fifth line of the address bar</p>
-                     * @param _lineFive <p>Fifth line of the address bar</p>
+                     * 设置<p>Line 5 of the address bar</p>
+                     * @param _lineFive <p>Line 5 of the address bar</p>
                      * 
                      */
                     void SetLineFive(const std::string& _lineFive);
@@ -361,13 +361,13 @@ namespace TencentCloud
                     bool m_lineThreeHasBeenSet;
 
                     /**
-                     * <p>Fourth line of the address bar</p>
+                     * <p>Line 4 of the address bar</p>
                      */
                     std::string m_lineFour;
                     bool m_lineFourHasBeenSet;
 
                     /**
-                     * <p>Fifth line of the address bar</p>
+                     * <p>Line 5 of the address bar</p>
                      */
                     std::string m_lineFive;
                     bool m_lineFiveHasBeenSet;

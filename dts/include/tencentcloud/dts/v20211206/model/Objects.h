@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/Database.h>
 #include <tencentcloud/dts/v20211206/model/OnlineDDL.h>
+#include <tencentcloud/dts/v20211206/model/DBOpFilter.h>
 
 
 namespace TencentCloud
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Sync object type Partial (partial objects)</p>
+                     * @return Mode <p>Sync object type Partial (partial objects)</p>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sync object type Partial (partial objects)</p>
+                     * @param _mode <p>Sync object type Partial (partial objects)</p>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -70,19 +71,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Databases Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Sync object, not empty when Mode is Partial</p>
+                     * @return Databases <p>Sync object, not empty when Mode is Partial</p>
                      * 
                      */
                     std::vector<Database> GetDatabases() const;
 
                     /**
-                     * 设置Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _databases Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Sync object, not empty when Mode is Partial</p>
+                     * @param _databases <p>Sync object, not empty when Mode is Partial</p>
                      * 
                      */
                     void SetDatabases(const std::vector<Database>& _databases);
@@ -95,15 +92,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabasesHasBeenSet() const;
 
                     /**
-                     * 获取Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AdvancedObjects Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
+                     * @return AdvancedObjects <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
                      * 
                      */
                     std::vector<std::string> GetAdvancedObjects() const;
 
                     /**
-                     * 设置Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _advancedObjects Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
+                     * @param _advancedObjects <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
                      * 
                      */
                     void SetAdvancedObjects(const std::vector<std::string>& _advancedObjects);
@@ -116,19 +113,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AdvancedObjectsHasBeenSet() const;
 
                     /**
-                     * 获取A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OnlineDDL A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
+                     * @return OnlineDDL <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
                      * 
                      */
                     OnlineDDL GetOnlineDDL() const;
 
                     /**
-                     * 设置A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _onlineDDL A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
+                     * @param _onlineDDL <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
                      * 
                      */
                     void SetOnlineDDL(const OnlineDDL& _onlineDDL);
@@ -140,33 +133,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OnlineDDLHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Database/Table/View-level DML/DDL allowlist</p>
+                     * @return DatabasesOpFilter <p>Database/Table/View-level DML/DDL allowlist</p>
+                     * 
+                     */
+                    std::vector<DBOpFilter> GetDatabasesOpFilter() const;
+
+                    /**
+                     * 设置<p>Database/Table/View-level DML/DDL allowlist</p>
+                     * @param _databasesOpFilter <p>Database/Table/View-level DML/DDL allowlist</p>
+                     * 
+                     */
+                    void SetDatabasesOpFilter(const std::vector<DBOpFilter>& _databasesOpFilter);
+
+                    /**
+                     * 判断参数 DatabasesOpFilter 是否已赋值
+                     * @return DatabasesOpFilter 是否已赋值
+                     * 
+                     */
+                    bool DatabasesOpFilterHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Sync object type Partial (partial objects)</p>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Sync object, not empty when Mode is Partial</p>
                      */
                     std::vector<Database> m_databases;
                     bool m_databasesHasBeenSet;
 
                     /**
-                     * Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
                      */
                     std::vector<std::string> m_advancedObjects;
                     bool m_advancedObjectsHasBeenSet;
 
                     /**
-                     * A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
                      */
                     OnlineDDL m_onlineDDL;
                     bool m_onlineDDLHasBeenSet;
+
+                    /**
+                     * <p>Database/Table/View-level DML/DDL allowlist</p>
+                     */
+                    std::vector<DBOpFilter> m_databasesOpFilter;
+                    bool m_databasesOpFilterHasBeenSet;
 
                 };
             }

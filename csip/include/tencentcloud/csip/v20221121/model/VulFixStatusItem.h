@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability/KB patch dimensional remediation status
+                * Remediation status in vulnerability/KB patch dimension
                 */
                 class VulFixStatusItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vulnerability ID (empty for KB patch fix tasks)
-                     * @return VulId Vulnerability ID (empty for KB patch fix tasks)
+                     * 获取Vulnerability ID (empty for KB patch repair tasks)
+                     * @return VulId Vulnerability ID (empty for KB patch repair tasks)
                      * 
                      */
                     int64_t GetVulId() const;
 
                     /**
-                     * 设置Vulnerability ID (empty for KB patch fix tasks)
-                     * @param _vulId Vulnerability ID (empty for KB patch fix tasks)
+                     * 设置Vulnerability ID (empty for KB patch repair tasks)
+                     * @param _vulId Vulnerability ID (empty for KB patch repair tasks)
                      * 
                      */
                     void SetVulId(const int64_t& _vulId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VulIdHasBeenSet() const;
 
                     /**
-                     * 获取Patch ID (empty for vulnerability repair tasks)
-                     * @return KBId Patch ID (empty for vulnerability repair tasks)
+                     * 获取KB patch ID (empty for vulnerability repair tasks)
+                     * @return KBId KB patch ID (empty for vulnerability repair tasks)
                      * 
                      */
                     int64_t GetKBId() const;
 
                     /**
-                     * 设置Patch ID (empty for vulnerability repair tasks)
-                     * @param _kBId Patch ID (empty for vulnerability repair tasks)
+                     * 设置KB patch ID (empty for vulnerability repair tasks)
+                     * @param _kBId KB patch ID (empty for vulnerability repair tasks)
                      * 
                      */
                     void SetKBId(const int64_t& _kBId);
@@ -114,13 +114,13 @@ namespace TencentCloud
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
                      * @return FixStatus Remediation status of the vulnerability
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
                      * 
                      */
@@ -131,13 +131,13 @@ Enumeration value:
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
                      * @param _fixStatus Remediation status of the vulnerability
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
                      * 
                      */
@@ -151,15 +151,15 @@ Enumeration value:
                     bool FixStatusHasBeenSet() const;
 
                     /**
-                     * 获取Total hosts associated with the vulnerability/KB patch
-                     * @return HostCount Total hosts associated with the vulnerability/KB patch
+                     * 获取Total number of hosts associated with this vulnerability/KB patch
+                     * @return HostCount Total number of hosts associated with this vulnerability/KB patch
                      * 
                      */
                     int64_t GetHostCount() const;
 
                     /**
-                     * 设置Total hosts associated with the vulnerability/KB patch
-                     * @param _hostCount Total hosts associated with the vulnerability/KB patch
+                     * 设置Total number of hosts associated with this vulnerability/KB patch
+                     * @param _hostCount Total number of hosts associated with this vulnerability/KB patch
                      * 
                      */
                     void SetHostCount(const int64_t& _hostCount);
@@ -172,15 +172,15 @@ Enumeration value:
                     bool HostCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of hosts successfully fixed by the vulnerability/KB patch
-                     * @return SuccessHostCount Number of hosts successfully fixed by the vulnerability/KB patch
+                     * 获取Number of hosts successfully fixed by this vulnerability/KB patch
+                     * @return SuccessHostCount Number of hosts successfully fixed by this vulnerability/KB patch
                      * 
                      */
                     int64_t GetSuccessHostCount() const;
 
                     /**
-                     * 设置Number of hosts successfully fixed by the vulnerability/KB patch
-                     * @param _successHostCount Number of hosts successfully fixed by the vulnerability/KB patch
+                     * 设置Number of hosts successfully fixed by this vulnerability/KB patch
+                     * @param _successHostCount Number of hosts successfully fixed by this vulnerability/KB patch
                      * 
                      */
                     void SetSuccessHostCount(const int64_t& _successHostCount);
@@ -193,15 +193,15 @@ Enumeration value:
                     bool SuccessHostCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of hosts failed to be fixed for the vulnerability/KB patch
-                     * @return FailHostCount Number of hosts failed to be fixed for the vulnerability/KB patch
+                     * 获取Number of hosts failed to be fixed by this vulnerability/KB patch
+                     * @return FailHostCount Number of hosts failed to be fixed by this vulnerability/KB patch
                      * 
                      */
                     int64_t GetFailHostCount() const;
 
                     /**
-                     * 设置Number of hosts failed to be fixed for the vulnerability/KB patch
-                     * @param _failHostCount Number of hosts failed to be fixed for the vulnerability/KB patch
+                     * 设置Number of hosts failed to be fixed by this vulnerability/KB patch
+                     * @param _failHostCount Number of hosts failed to be fixed by this vulnerability/KB patch
                      * 
                      */
                     void SetFailHostCount(const int64_t& _failHostCount);
@@ -216,13 +216,13 @@ Enumeration value:
                 private:
 
                     /**
-                     * Vulnerability ID (empty for KB patch fix tasks)
+                     * Vulnerability ID (empty for KB patch repair tasks)
                      */
                     int64_t m_vulId;
                     bool m_vulIdHasBeenSet;
 
                     /**
-                     * Patch ID (empty for vulnerability repair tasks)
+                     * KB patch ID (empty for vulnerability repair tasks)
                      */
                     int64_t m_kBId;
                     bool m_kBIdHasBeenSet;
@@ -238,26 +238,26 @@ Enumeration value:
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
                      */
                     int64_t m_fixStatus;
                     bool m_fixStatusHasBeenSet;
 
                     /**
-                     * Total hosts associated with the vulnerability/KB patch
+                     * Total number of hosts associated with this vulnerability/KB patch
                      */
                     int64_t m_hostCount;
                     bool m_hostCountHasBeenSet;
 
                     /**
-                     * Number of hosts successfully fixed by the vulnerability/KB patch
+                     * Number of hosts successfully fixed by this vulnerability/KB patch
                      */
                     int64_t m_successHostCount;
                     bool m_successHostCountHasBeenSet;
 
                     /**
-                     * Number of hosts failed to be fixed for the vulnerability/KB patch
+                     * Number of hosts failed to be fixed by this vulnerability/KB patch
                      */
                     int64_t m_failHostCount;
                     bool m_failHostCountHasBeenSet;

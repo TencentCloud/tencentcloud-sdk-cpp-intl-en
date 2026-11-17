@@ -1970,7 +1970,7 @@ Note:
                 DescribeIndexOutcomeCallable DescribeIndexCallable(const Model::DescribeIndexRequest& request);
 
                 /**
-                 *This API is used to access Kafka protocol consumption information.
+                 *Accesses Kafka protocol consumption information
                  * @param req DescribeKafkaConsumerRequest
                  * @return DescribeKafkaConsumerOutcome
                  */

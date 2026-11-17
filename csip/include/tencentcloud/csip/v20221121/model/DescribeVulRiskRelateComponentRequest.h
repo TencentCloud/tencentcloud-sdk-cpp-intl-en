@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
-                     * @return Filters <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+                     * 获取<p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
+                     * @return Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置<p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
-                     * @param _filters <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+                     * 设置<p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
+                     * @param _filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+                     * <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;

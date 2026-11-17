@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/csip/v20221121/model/HostAutoScaleConfig.h>
+#include <tencentcloud/csip/v20221121/model/ContainerAutoScaleConfig.h>
 
 
 namespace TencentCloud
@@ -68,6 +69,27 @@ Supplemental description: if not passed, host configuration will not be modified
                      */
                     bool HostConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+                     * @return ContainerConfig <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+                     * 
+                     */
+                    ContainerAutoScaleConfig GetContainerConfig() const;
+
+                    /**
+                     * 设置<p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+                     * @param _containerConfig <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+                     * 
+                     */
+                    void SetContainerConfig(const ContainerAutoScaleConfig& _containerConfig);
+
+                    /**
+                     * 判断参数 ContainerConfig 是否已赋值
+                     * @return ContainerConfig 是否已赋值
+                     * 
+                     */
+                    bool ContainerConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -76,6 +98,12 @@ Supplemental description: if not passed, host configuration will not be modified
                      */
                     HostAutoScaleConfig m_hostConfig;
                     bool m_hostConfigHasBeenSet;
+
+                    /**
+                     * <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+                     */
+                    ContainerAutoScaleConfig m_containerConfig;
+                    bool m_containerConfigHasBeenSet;
 
                 };
             }

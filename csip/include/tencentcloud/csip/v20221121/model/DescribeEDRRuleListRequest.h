@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/csip/v20221121/model/EDRFilter.h>
+#include <tencentcloud/csip/v20221121/model/RuleContentFileOperation.h>
 
 
 namespace TencentCloud
@@ -169,6 +170,27 @@ namespace TencentCloud
                      */
                     bool ByHasBeenSet() const;
 
+                    /**
+                     * 获取File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+                     * @return FileOperationRules File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+                     * 
+                     */
+                    RuleContentFileOperation GetFileOperationRules() const;
+
+                    /**
+                     * 设置File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+                     * @param _fileOperationRules File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+                     * 
+                     */
+                    void SetFileOperationRules(const RuleContentFileOperation& _fileOperationRules);
+
+                    /**
+                     * 判断参数 FileOperationRules 是否已赋值
+                     * @return FileOperationRules 是否已赋值
+                     * 
+                     */
+                    bool FileOperationRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,6 +228,12 @@ namespace TencentCloud
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;
+
+                    /**
+                     * File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+                     */
+                    RuleContentFileOperation m_fileOperationRules;
+                    bool m_fileOperationRulesHasBeenSet;
 
                 };
             }

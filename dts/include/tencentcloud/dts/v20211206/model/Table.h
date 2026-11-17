@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TableName Table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tableName Table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTableName(const std::string& _tableName);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取New table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NewTableName New table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNewTableName() const;
 
                     /**
                      * 设置New table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _newTableName New table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNewTableName(const std::string& _newTableName);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NewTableNameHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FilterCondition Filter condition
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Filter criteria.
+                     * @return FilterCondition Filter criteria.
                      * 
                      */
                     std::string GetFilterCondition() const;
 
                     /**
-                     * 设置Filter condition
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _filterCondition Filter condition
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Filter criteria.
+                     * @param _filterCondition Filter criteria.
                      * 
                      */
                     void SetFilterCondition(const std::string& _filterCondition);
@@ -123,15 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilterConditionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in ModifySyncJobConfig interface does not support Partial at the moment): some columns under the current table, detailed table information is provided by filling the Columns field.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ColumnMode Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in ModifySyncJobConfig interface does not support Partial at the moment): some columns under the current table, detailed table information is provided by filling the Columns field.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in the ModifySyncJobConfig API does not currently support Partial): To synchronize some specific columns of the current table, Columns field is required.
+                     * @return ColumnMode Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in the ModifySyncJobConfig API does not currently support Partial): To synchronize some specific columns of the current table, Columns field is required.
                      * 
                      */
                     std::string GetColumnMode() const;
 
                     /**
-                     * 设置Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in ModifySyncJobConfig interface does not support Partial at the moment): some columns under the current table, detailed table information is provided by filling the Columns field.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _columnMode Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in ModifySyncJobConfig interface does not support Partial at the moment): some columns under the current table, detailed table information is provided by filling the Columns field.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in the ModifySyncJobConfig API does not currently support Partial): To synchronize some specific columns of the current table, Columns field is required.
+                     * @param _columnMode Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in the ModifySyncJobConfig API does not currently support Partial): To synchronize some specific columns of the current table, Columns field is required.
                      * 
                      */
                     void SetColumnMode(const std::string& _columnMode);
@@ -144,15 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ColumnModeHasBeenSet() const;
 
                     /**
-                     * 获取Column information in data sync. This field is required when ColumnMode is set to Partial.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Columns Column information in data sync. This field is required when ColumnMode is set to Partial.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Synchronized column information. It is required when ColumnMode is Partial.
+                     * @return Columns Synchronized column information. It is required when ColumnMode is Partial.
                      * 
                      */
                     std::vector<Column> GetColumns() const;
 
                     /**
-                     * 设置Column information in data sync. This field is required when ColumnMode is set to Partial.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _columns Column information in data sync. This field is required when ColumnMode is set to Partial.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Synchronized column information. It is required when ColumnMode is Partial.
+                     * @param _columns Synchronized column information. It is required when ColumnMode is Partial.
                      * 
                      */
                     void SetColumns(const std::vector<Column>& _columns);
@@ -165,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ColumnsHasBeenSet() const;
 
                     /**
-                     * 获取The temp tables to be synced. This parameter is mutually exclusive with `NewTableName`. It is valid only when the configured sync objects are table-level ones and `TableEditMode` is `pt`. To sync temp tables generated when pt-osc or other tools are used during the sync process, you must configure this parameter first. For example, if you want to perform the pt-osc operation on a table named "t1", configure this parameter as ["\_t1\_new","\_t1\_old"]; to perform the gh-ost operation on t1, configure it as ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temp tables generated by pt-osc and gh-ost operations can be configured at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpTables The temp tables to be synced. This parameter is mutually exclusive with `NewTableName`. It is valid only when the configured sync objects are table-level ones and `TableEditMode` is `pt`. To sync temp tables generated when pt-osc or other tools are used during the sync process, you must configure this parameter first. For example, if you want to perform the pt-osc operation on a table named "t1", configure this parameter as ["\_t1\_new","\_t1\_old"]; to perform the gh-ost operation on t1, configure it as ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temp tables generated by pt-osc and gh-ost operations can be configured at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Synchronize temporary tables. Note that this configuration is mutually exclusive with NewTableName, and only one of them can be used. When the configured synchronization object is at the table level and TableEditMode is pt, this parameter is meaningful. It is used to synchronize the temporary tables generated by tools such as pt-osc during the synchronization process. The possible temporary tables need to be configured here in advance, otherwise no temporary tables will be synchronized. For example, if you want to perform a pt-osc operation on t1, this configuration should be ["\_t1\_new","\_t1\_old"]; if you want to perform a gh-ost operation on t1, this configuration should be ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temporary tables generated by pt-osc and gh-ost can be configured simultaneously.
+                     * @return TmpTables Synchronize temporary tables. Note that this configuration is mutually exclusive with NewTableName, and only one of them can be used. When the configured synchronization object is at the table level and TableEditMode is pt, this parameter is meaningful. It is used to synchronize the temporary tables generated by tools such as pt-osc during the synchronization process. The possible temporary tables need to be configured here in advance, otherwise no temporary tables will be synchronized. For example, if you want to perform a pt-osc operation on t1, this configuration should be ["\_t1\_new","\_t1\_old"]; if you want to perform a gh-ost operation on t1, this configuration should be ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temporary tables generated by pt-osc and gh-ost can be configured simultaneously.
                      * 
                      */
                     std::vector<std::string> GetTmpTables() const;
 
                     /**
-                     * 设置The temp tables to be synced. This parameter is mutually exclusive with `NewTableName`. It is valid only when the configured sync objects are table-level ones and `TableEditMode` is `pt`. To sync temp tables generated when pt-osc or other tools are used during the sync process, you must configure this parameter first. For example, if you want to perform the pt-osc operation on a table named "t1", configure this parameter as ["\_t1\_new","\_t1\_old"]; to perform the gh-ost operation on t1, configure it as ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temp tables generated by pt-osc and gh-ost operations can be configured at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpTables The temp tables to be synced. This parameter is mutually exclusive with `NewTableName`. It is valid only when the configured sync objects are table-level ones and `TableEditMode` is `pt`. To sync temp tables generated when pt-osc or other tools are used during the sync process, you must configure this parameter first. For example, if you want to perform the pt-osc operation on a table named "t1", configure this parameter as ["\_t1\_new","\_t1\_old"]; to perform the gh-ost operation on t1, configure it as ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temp tables generated by pt-osc and gh-ost operations can be configured at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Synchronize temporary tables. Note that this configuration is mutually exclusive with NewTableName, and only one of them can be used. When the configured synchronization object is at the table level and TableEditMode is pt, this parameter is meaningful. It is used to synchronize the temporary tables generated by tools such as pt-osc during the synchronization process. The possible temporary tables need to be configured here in advance, otherwise no temporary tables will be synchronized. For example, if you want to perform a pt-osc operation on t1, this configuration should be ["\_t1\_new","\_t1\_old"]; if you want to perform a gh-ost operation on t1, this configuration should be ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temporary tables generated by pt-osc and gh-ost can be configured simultaneously.
+                     * @param _tmpTables Synchronize temporary tables. Note that this configuration is mutually exclusive with NewTableName, and only one of them can be used. When the configured synchronization object is at the table level and TableEditMode is pt, this parameter is meaningful. It is used to synchronize the temporary tables generated by tools such as pt-osc during the synchronization process. The possible temporary tables need to be configured here in advance, otherwise no temporary tables will be synchronized. For example, if you want to perform a pt-osc operation on t1, this configuration should be ["\_t1\_new","\_t1\_old"]; if you want to perform a gh-ost operation on t1, this configuration should be ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temporary tables generated by pt-osc and gh-ost can be configured simultaneously.
                      * 
                      */
                     void SetTmpTables(const std::vector<std::string>& _tmpTables);
@@ -190,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpTablesHasBeenSet() const;
 
                     /**
-                     * 获取Table editing type. Valid values: `rename` (table mapping); `pt` (additional table sync).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TableEditMode Table editing type. Valid values: `rename` (table mapping); `pt` (additional table sync).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Edit table type. Valid values: rename (table mapping); pt (synchronize additional table).
+                     * @return TableEditMode Edit table type. Valid values: rename (table mapping); pt (synchronize additional table).
                      * 
                      */
                     std::string GetTableEditMode() const;
 
                     /**
-                     * 设置Table editing type. Valid values: `rename` (table mapping); `pt` (additional table sync).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tableEditMode Table editing type. Valid values: `rename` (table mapping); `pt` (additional table sync).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Edit table type. Valid values: rename (table mapping); pt (synchronize additional table).
+                     * @param _tableEditMode Edit table type. Valid values: rename (table mapping); pt (synchronize additional table).
                      * 
                      */
                     void SetTableEditMode(const std::string& _tableEditMode);
@@ -218,47 +198,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tableName;
                     bool m_tableNameHasBeenSet;
 
                     /**
                      * New table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_newTableName;
                     bool m_newTableNameHasBeenSet;
 
                     /**
-                     * Filter condition
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Filter criteria.
                      */
                     std::string m_filterCondition;
                     bool m_filterConditionHasBeenSet;
 
                     /**
-                     * Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in ModifySyncJobConfig interface does not support Partial at the moment): some columns under the current table, detailed table information is provided by filling the Columns field.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to synchronize all columns in the table. All: all columns under the current table; Partial (the corresponding field ColumnMode in the ModifySyncJobConfig API does not currently support Partial): To synchronize some specific columns of the current table, Columns field is required.
                      */
                     std::string m_columnMode;
                     bool m_columnModeHasBeenSet;
 
                     /**
-                     * Column information in data sync. This field is required when ColumnMode is set to Partial.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Synchronized column information. It is required when ColumnMode is Partial.
                      */
                     std::vector<Column> m_columns;
                     bool m_columnsHasBeenSet;
 
                     /**
-                     * The temp tables to be synced. This parameter is mutually exclusive with `NewTableName`. It is valid only when the configured sync objects are table-level ones and `TableEditMode` is `pt`. To sync temp tables generated when pt-osc or other tools are used during the sync process, you must configure this parameter first. For example, if you want to perform the pt-osc operation on a table named "t1", configure this parameter as ["\_t1\_new","\_t1\_old"]; to perform the gh-ost operation on t1, configure it as ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temp tables generated by pt-osc and gh-ost operations can be configured at the same time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Synchronize temporary tables. Note that this configuration is mutually exclusive with NewTableName, and only one of them can be used. When the configured synchronization object is at the table level and TableEditMode is pt, this parameter is meaningful. It is used to synchronize the temporary tables generated by tools such as pt-osc during the synchronization process. The possible temporary tables need to be configured here in advance, otherwise no temporary tables will be synchronized. For example, if you want to perform a pt-osc operation on t1, this configuration should be ["\_t1\_new","\_t1\_old"]; if you want to perform a gh-ost operation on t1, this configuration should be ["\_t1\_ghc","\_t1\_gho","\_t1\_del"]. Temporary tables generated by pt-osc and gh-ost can be configured simultaneously.
                      */
                     std::vector<std::string> m_tmpTables;
                     bool m_tmpTablesHasBeenSet;
 
                     /**
-                     * Table editing type. Valid values: `rename` (table mapping); `pt` (additional table sync).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Edit table type. Valid values: rename (table mapping); pt (synchronize additional table).
                      */
                     std::string m_tableEditMode;
                     bool m_tableEditModeHasBeenSet;

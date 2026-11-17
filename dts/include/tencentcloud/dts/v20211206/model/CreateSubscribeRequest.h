@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-                     * @return PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * 获取Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+                     * @return PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      * 
                      */
                     int64_t GetPayType() const;
 
                     /**
-                     * 设置Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-                     * @param _payType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * 设置Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+                     * @param _payType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      * 
                      */
                     void SetPayType(const int64_t& _payType);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool PayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
-                     * @return Duration Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+                     * 获取Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+                     * @return Duration Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
                      * 
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
-                     * @param _duration Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+                     * 设置Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+                     * @param _duration Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
                      * 
                      */
                     void SetDuration(const int64_t& _duration);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
-                     * @return AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+                     * 获取Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+                     * @return AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
                      * 
                      */
                     int64_t GetAutoRenew() const;
 
                     /**
-                     * 设置Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
-                     * @param _autoRenew Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+                     * 设置Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+                     * @param _autoRenew Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
                      * 
                      */
                     void SetAutoRenew(const int64_t& _autoRenew);
@@ -191,15 +191,36 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceClass 
+                     * 获取For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+                     * @return SubscribeVersion For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+                     * 
+                     */
+                    std::string GetSubscribeVersion() const;
+
+                    /**
+                     * 设置For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+                     * @param _subscribeVersion For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+                     * 
+                     */
+                    void SetSubscribeVersion(const std::string& _subscribeVersion);
+
+                    /**
+                     * 判断参数 SubscribeVersion 是否已赋值
+                     * @return SubscribeVersion 是否已赋值
+                     * 
+                     */
+                    bool SubscribeVersionHasBeenSet() const;
+
+                    /**
+                     * 获取For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
+                     * @return InstanceClass For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
                      * 
                      */
                     std::string GetInstanceClass() const;
 
                     /**
-                     * 设置
-                     * @param _instanceClass 
+                     * 设置For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
+                     * @param _instanceClass For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
                      * 
                      */
                     void SetInstanceClass(const std::string& _instanceClass);
@@ -220,19 +241,19 @@ namespace TencentCloud
                     bool m_productHasBeenSet;
 
                     /**
-                     * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      */
                     int64_t m_payType;
                     bool m_payTypeHasBeenSet;
 
                     /**
-                     * Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+                     * Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+                     * Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
                      */
                     int64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
@@ -256,7 +277,13 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+                     */
+                    std::string m_subscribeVersion;
+                    bool m_subscribeVersionHasBeenSet;
+
+                    /**
+                     * For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
                      */
                     std::string m_instanceClass;
                     bool m_instanceClassHasBeenSet;

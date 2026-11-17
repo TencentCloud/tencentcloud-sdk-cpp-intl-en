@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Topic description
+                * Description of single and custom topics. During shipping to a single topic, the last item in this array will be treated as the default partition strategy. All unmatched data will be shipped according to this strategy. The default strategy only supports three options: shipping to partition 0, by table name, or by table name+primary key.
                 */
                 class TopicRule : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic name
-                     * @return TopicName Topic name
+                     * 获取Topic name. For single-topic scenarios, all TopicNames should be the same.
+                     * @return TopicName Topic name. For single-topic scenarios, all TopicNames should be the same.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置Topic name
-                     * @param _topicName Topic name
+                     * 设置Topic name. For single-topic scenarios, all TopicNames should be the same.
+                     * @param _topicName Topic name. For single-topic scenarios, all TopicNames should be the same.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
-                     * @return PartitionType Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
+                     * 获取Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
+                     * @return PartitionType Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
                      * 
                      */
                     std::string GetPartitionType() const;
 
                     /**
-                     * 设置Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
-                     * @param _partitionType Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
+                     * 设置Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
+                     * @param _partitionType Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
                      * 
                      */
                     void SetPartitionType(const std::string& _partitionType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PartitionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-                     * @return DbMatchMode Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+                     * 获取Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
+                     * @return DbMatchMode Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
                      * 
                      */
                     std::string GetDbMatchMode() const;
 
                     /**
-                     * 设置Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-                     * @param _dbMatchMode Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+                     * 设置Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
+                     * @param _dbMatchMode Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
                      * 
                      */
                     void SetDbMatchMode(const std::string& _dbMatchMode);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DbMatchModeHasBeenSet() const;
 
                     /**
-                     * 获取Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
-                     * @return DbName Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+                     * 获取Database name. It is valid when DbMatchMode=Regular.
+                     * @return DbName Database name. It is valid when DbMatchMode=Regular.
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
-                     * @param _dbName Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+                     * 设置Database name. It is valid when DbMatchMode=Regular.
+                     * @param _dbName Database name. It is valid when DbMatchMode=Regular.
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DbNameHasBeenSet() const;
 
                     /**
-                     * 获取Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-                     * @return TableMatchMode Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+                     * 获取Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
+                     * @return TableMatchMode Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
                      * 
                      */
                     std::string GetTableMatchMode() const;
 
                     /**
-                     * 设置Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-                     * @param _tableMatchMode Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+                     * 设置Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
+                     * @param _tableMatchMode Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
                      * 
                      */
                     void SetTableMatchMode(const std::string& _tableMatchMode);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TableMatchModeHasBeenSet() const;
 
                     /**
-                     * 获取Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
-                     * @return TableName Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+                     * 获取Table name. It is valid when TableMatchMode is Regular.
+                     * @return TableName Table name. It is valid when TableMatchMode is Regular.
                      * 
                      */
                     std::string GetTableName() const;
 
                     /**
-                     * 设置Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
-                     * @param _tableName Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+                     * 设置Table name. It is valid when TableMatchMode is Regular.
+                     * @param _tableName Table name. It is valid when TableMatchMode is Regular.
                      * 
                      */
                     void SetTableName(const std::string& _tableName);
@@ -172,43 +172,70 @@ namespace TencentCloud
                      */
                     bool TableNameHasBeenSet() const;
 
+                    /**
+                     * 获取When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+                     * @return Columns When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+                     * 
+                     */
+                    std::vector<std::string> GetColumns() const;
+
+                    /**
+                     * 设置When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+                     * @param _columns When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+                     * 
+                     */
+                    void SetColumns(const std::vector<std::string>& _columns);
+
+                    /**
+                     * 判断参数 Columns 是否已赋值
+                     * @return Columns 是否已赋值
+                     * 
+                     */
+                    bool ColumnsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Topic name
+                     * Topic name. For single-topic scenarios, all TopicNames should be the same.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
+                     * Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
                      */
                     std::string m_partitionType;
                     bool m_partitionTypeHasBeenSet;
 
                     /**
-                     * Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+                     * Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
                      */
                     std::string m_dbMatchMode;
                     bool m_dbMatchModeHasBeenSet;
 
                     /**
-                     * Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+                     * Database name. It is valid when DbMatchMode=Regular.
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
 
                     /**
-                     * Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+                     * Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
                      */
                     std::string m_tableMatchMode;
                     bool m_tableMatchModeHasBeenSet;
 
                     /**
-                     * Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+                     * Table name. It is valid when TableMatchMode is Regular.
                      */
                     std::string m_tableName;
                     bool m_tableNameHasBeenSet;
+
+                    /**
+                     * When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+                     */
+                    std::vector<std::string> m_columns;
+                    bool m_columnsHasBeenSet;
 
                 };
             }

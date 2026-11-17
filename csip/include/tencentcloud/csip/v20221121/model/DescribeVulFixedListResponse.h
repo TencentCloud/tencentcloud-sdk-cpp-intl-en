@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>List of fixed vulnerabilities</p>
-                     * @return Data <p>List of fixed vulnerabilities</p>
+                     * 获取<p>Fixed vulnerability list</p>
+                     * @return Data <p>Fixed vulnerability list</p>
                      * 
                      */
                     std::vector<VulFixedItem> GetData() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>List of fixed vulnerabilities</p>
+                     * <p>Fixed vulnerability list</p>
                      */
                     std::vector<VulFixedItem> m_data;
                     bool m_dataHasBeenSet;

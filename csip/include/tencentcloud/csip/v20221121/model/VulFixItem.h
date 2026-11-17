@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability repair item, specify a vulnerability/KB patch and its target host that needs to be repaired.
+                * Vulnerability repair item. Specify a vulnerability/KB patch and its target host for repair.
                 */
                 class VulFixItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
-                     * @return InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+                     * 获取<p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
+                     * @return InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置<p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
-                     * @param _instanceIds <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+                     * 设置<p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
+                     * @param _instanceIds <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Vulnerability ID. Choose either VulId or KBId.</p>
-                     * @return VulId <p>Vulnerability ID. Choose either VulId or KBId.</p>
+                     * 获取<p>Vulnerability ID. Choose either VulId or KBId</p>
+                     * @return VulId <p>Vulnerability ID. Choose either VulId or KBId</p>
                      * 
                      */
                     int64_t GetVulId() const;
 
                     /**
-                     * 设置<p>Vulnerability ID. Choose either VulId or KBId.</p>
-                     * @param _vulId <p>Vulnerability ID. Choose either VulId or KBId.</p>
+                     * 设置<p>Vulnerability ID. Choose either VulId or KBId</p>
+                     * @param _vulId <p>Vulnerability ID. Choose either VulId or KBId</p>
                      * 
                      */
                     void SetVulId(const int64_t& _vulId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VulIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Patch ID. Choose either VulId or KBId.</p>
-                     * @return KBId <p>Patch ID. Choose either VulId or KBId.</p>
+                     * 获取<p>KB patch ID. Either VulId or KBId is required.</p>
+                     * @return KBId <p>KB patch ID. Either VulId or KBId is required.</p>
                      * 
                      */
                     int64_t GetKBId() const;
 
                     /**
-                     * 设置<p>Patch ID. Choose either VulId or KBId.</p>
-                     * @param _kBId <p>Patch ID. Choose either VulId or KBId.</p>
+                     * 设置<p>KB patch ID. Either VulId or KBId is required.</p>
+                     * @param _kBId <p>KB patch ID. Either VulId or KBId is required.</p>
                      * 
                      */
                     void SetKBId(const int64_t& _kBId);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+                     * <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * <p>Vulnerability ID. Choose either VulId or KBId.</p>
+                     * <p>Vulnerability ID. Choose either VulId or KBId</p>
                      */
                     int64_t m_vulId;
                     bool m_vulIdHasBeenSet;
 
                     /**
-                     * <p>Patch ID. Choose either VulId or KBId.</p>
+                     * <p>KB patch ID. Either VulId or KBId is required.</p>
                      */
                     int64_t m_kBId;
                     bool m_kBIdHasBeenSet;

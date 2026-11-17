@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Field name, used for filtering
+                     * 获取Field name; Filter
 Filter the sub-order number (value) by DealName.
-                     * @return Name Field name, used for filtering
+                     * @return Name Field name; Filter
 Filter the sub-order number (value) by DealName.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Field name, used for filtering
+                     * 设置Field name; Filter
 Filter the sub-order number (value) by DealName.
-                     * @param _name Field name, used for filtering
+                     * @param _name Field name; Filter
 Filter the sub-order number (value) by DealName.
                      * 
                      */
@@ -116,7 +116,7 @@ Filter the sub-order number (value) by DealName.
                 private:
 
                     /**
-                     * Field name, used for filtering
+                     * Field name; Filter
 Filter the sub-order number (value) by DealName.
                      */
                     std::string m_name;

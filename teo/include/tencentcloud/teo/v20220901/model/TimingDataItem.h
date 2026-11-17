@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Data items of the statistical curve
+                * Statistical curve data item
                 */
                 class TimingDataItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取The value.
-                     * @return Value The value.
+                     * 获取Specific values.
+                     * @return Value Specific values.
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置The value.
-                     * @param _value The value.
+                     * 设置Specific values.
+                     * @param _value Specific values.
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * The value.
+                     * Specific values.
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;

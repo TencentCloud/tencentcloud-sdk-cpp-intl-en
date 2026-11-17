@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sensitive Data Encryption
+                * Sensitive data encryption
                 */
                 class Encryption : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
-                     * @return EncryptList <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+                     * 获取<p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
+                     * @return EncryptList <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
                      * 
                      */
                     std::vector<std::string> GetEncryptList() const;
 
                     /**
-                     * 设置<p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
-                     * @param _encryptList <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+                     * 设置<p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
+                     * @param _encryptList <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
                      * 
                      */
                     void SetEncryptList(const std::vector<std::string>& _encryptList);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EncryptListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
-                     * @return CiphertextBlob <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+                     * 获取<p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
+                     * @return CiphertextBlob <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
                      * 
                      */
                     std::string GetCiphertextBlob() const;
 
                     /**
-                     * 设置<p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
-                     * @param _ciphertextBlob <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+                     * 设置<p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
+                     * @param _ciphertextBlob <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
                      * 
                      */
                     void SetCiphertextBlob(const std::string& _ciphertextBlob);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CiphertextBlobHasBeenSet() const;
 
                     /**
-                     * 获取<p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
-                     * @return Iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+                     * 获取<p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
+                     * @return Iv <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
                      * 
                      */
                     std::string GetIv() const;
 
                     /**
-                     * 设置<p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
-                     * @param _iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+                     * 设置<p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
+                     * @param _iv <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
                      * 
                      */
                     void SetIv(const std::string& _iv);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool IvHasBeenSet() const;
 
                     /**
-                     * 获取<p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
-                     * @return Algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+                     * 获取<p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
+                     * @return Algorithm <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
                      * 
                      */
                     std::string GetAlgorithm() const;
 
                     /**
-                     * 设置<p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
-                     * @param _algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+                     * 设置<p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
+                     * @param _algorithm <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
                      * 
                      */
                     void SetAlgorithm(const std::string& _algorithm);
@@ -154,25 +154,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+                     * <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
                      */
                     std::vector<std::string> m_encryptList;
                     bool m_encryptListHasBeenSet;
 
                     /**
-                     * <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+                     * <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
                      */
                     std::string m_ciphertextBlob;
                     bool m_ciphertextBlobHasBeenSet;
 
                     /**
-                     * <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+                     * <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
                      */
                     std::string m_iv;
                     bool m_ivHasBeenSet;
 
                     /**
-                     * <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+                     * <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
                      */
                     std::string m_algorithm;
                     bool m_algorithmHasBeenSet;

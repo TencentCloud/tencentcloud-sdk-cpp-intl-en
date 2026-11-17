@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Region English name, for example: ap-guangzhou</p>
+                     * @return Region <p>Region English name, for example: ap-guangzhou</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Region English name, for example: ap-guangzhou</p>
+                     * @param _region <p>Region English name, for example: ap-guangzhou</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
+                     * @return Role <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
                      * 
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
+                     * @param _role <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
                      * 
                      */
                     void SetRole(const std::string& _role);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
+                     * @return DbKernel <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
                      * 
                      */
                     std::string GetDbKernel() const;
 
                     /**
-                     * 设置Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
+                     * @param _dbKernel <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
                      * 
                      */
                     void SetDbKernel(const std::string& _dbKernel);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DbKernelHasBeenSet() const;
 
                     /**
-                     * 获取Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database instance ID, in the format of: cdb-powiqx8q</p>
+                     * @return InstanceId <p>Database instance ID, in the format of: cdb-powiqx8q</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Database instance ID, in the format of: cdb-powiqx8q</p>
+                     * @param _instanceId <p>Database instance ID, in the format of: cdb-powiqx8q</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Ip Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>IP address of the instance. This item is required when the access type is not cdb.</p>
+                     * @return Ip <p>IP address of the instance. This item is required when the access type is not cdb.</p>
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ip Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>IP address of the instance. This item is required when the access type is not cdb.</p>
+                     * @param _ip <p>IP address of the instance. This item is required when the access type is not cdb.</p>
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Port Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Instance port. This item is required when the access type is not cdb.</p>
+                     * @return Port <p>Instance port. This item is required when the access type is not cdb.</p>
                      * 
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _port Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Instance port. This item is required when the access type is not cdb.</p>
+                     * @param _port <p>Instance port. This item is required when the access type is not cdb.</p>
                      * 
                      */
                     void SetPort(const uint64_t& _port);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return User Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>User name, required for accessing instances that need username and password authentication.</p>
+                     * @return User <p>User name, required for accessing instances that need username and password authentication.</p>
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _user Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>User name, required for accessing instances that need username and password authentication.</p>
+                     * @param _user <p>User name, required for accessing instances that need username and password authentication.</p>
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserHasBeenSet() const;
 
                     /**
-                     * 获取Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Password Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Password is required for accessing instances that need username and password authentication.</p>
+                     * @return Password <p>Password is required for accessing instances that need username and password authentication.</p>
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _password Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Password is required for accessing instances that need username and password authentication.</p>
+                     * @param _password <p>Password is required for accessing instances that need username and password authentication.</p>
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbName Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database name, required when the database is cdwpg</p>
+                     * @return DbName <p>Database name, required when the database is cdwpg</p>
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dbName Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Database name, required when the database is cdwpg</p>
+                     * @param _dbName <p>Database name, required when the database is cdwpg</p>
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DbNameHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VpcId VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
+                     * @return VpcId <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _vpcId VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
+                     * @param _vpcId <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubnetId ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
+                     * @return SubnetId <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
                      * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subnetId ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
+                     * @param _subnetId <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
                      * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
+                     * @return CvmInstanceId <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
                      * 
                      */
                     std::string GetCvmInstanceId() const;
 
                     /**
-                     * 设置Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
+                     * @param _cvmInstanceId <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
                      * 
                      */
                     void SetCvmInstanceId(const std::string& _cvmInstanceId);
@@ -347,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CvmInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UniqDcgId Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
+                     * @return UniqDcgId <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
                      * 
                      */
                     std::string GetUniqDcgId() const;
 
                     /**
-                     * 设置Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uniqDcgId Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
+                     * @param _uniqDcgId <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
                      * 
                      */
                     void SetUniqDcgId(const std::string& _uniqDcgId);
@@ -372,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UniqDcgIdHasBeenSet() const;
 
                     /**
-                     * 获取VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UniqVpnGwId VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
+                     * @return UniqVpnGwId <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
                      * 
                      */
                     std::string GetUniqVpnGwId() const;
 
                     /**
-                     * 设置VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uniqVpnGwId VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
+                     * @param _uniqVpnGwId <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
                      * 
                      */
                     void SetUniqVpnGwId(const std::string& _uniqVpnGwId);
@@ -397,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UniqVpnGwIdHasBeenSet() const;
 
                     /**
-                     * 获取CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CcnId CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
+                     * @return CcnId <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
                      * 
                      */
                     std::string GetCcnId() const;
 
                     /**
-                     * 设置CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ccnId CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
+                     * @param _ccnId <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
                      * 
                      */
                     void SetCcnId(const std::string& _ccnId);
@@ -422,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CcnIdHasBeenSet() const;
 
                     /**
-                     * 获取Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Supplier Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
+                     * @return Supplier <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
                      * 
                      */
                     std::string GetSupplier() const;
 
                     /**
-                     * 设置Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _supplier Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
+                     * @param _supplier <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
                      * 
                      */
                     void SetSupplier(const std::string& _supplier);
@@ -447,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SupplierHasBeenSet() const;
 
                     /**
-                     * 获取Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EngineVersion Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
+                     * @return EngineVersion <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
                      * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _engineVersion Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
+                     * @param _engineVersion <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
                      * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
@@ -472,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Account Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Account of the instance. This item is required if it is a cross-account instance.</p>
+                     * @return Account <p>Account of the instance. This item is required if it is a cross-account instance.</p>
                      * 
                      */
                     std::string GetAccount() const;
 
                     /**
-                     * 设置Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _account Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Account of the instance. This item is required if it is a cross-account instance.</p>
+                     * @param _account <p>Account of the instance. This item is required if it is a cross-account instance.</p>
                      * 
                      */
                     void SetAccount(const std::string& _account);
@@ -497,19 +425,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountHasBeenSet() const;
 
                     /**
-                     * 获取The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
+                     * @return AccountMode <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
                      * 
                      */
                     std::string GetAccountMode() const;
 
                     /**
-                     * 设置The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
+                     * @param _accountMode <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
                      * 
                      */
                     void SetAccountMode(const std::string& _accountMode);
@@ -522,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountModeHasBeenSet() const;
 
                     /**
-                     * 获取The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
+                     * @return AccountRole <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
                      * 
                      */
                     std::string GetAccountRole() const;
 
                     /**
-                     * 设置The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
+                     * @param _accountRole <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
                      * 
                      */
                     void SetAccountRole(const std::string& _accountRole);
@@ -547,19 +467,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountRoleHasBeenSet() const;
 
                     /**
-                     * 获取External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoleExternalId External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>External role id</p>
+                     * @return RoleExternalId <p>External role id</p>
                      * 
                      */
                     std::string GetRoleExternalId() const;
 
                     /**
-                     * 设置External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _roleExternalId External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>External role id</p>
+                     * @param _roleExternalId <p>External role id</p>
                      * 
                      */
                     void SetRoleExternalId(const std::string& _roleExternalId);
@@ -572,15 +488,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RoleExternalIdHasBeenSet() const;
 
                     /**
-                     * 获取Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+                     * @return TmpSecretId <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
                      * 
                      */
                     std::string GetTmpSecretId() const;
 
                     /**
-                     * 设置Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+                     * @param _tmpSecretId <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
                      * 
                      */
                     void SetTmpSecretId(const std::string& _tmpSecretId);
@@ -593,15 +509,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
+                     * @return TmpSecretKey <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
                      * 
                      */
                     std::string GetTmpSecretKey() const;
 
                     /**
-                     * 设置Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
+                     * @param _tmpSecretKey <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
                      * 
                      */
                     void SetTmpSecretKey(const std::string& _tmpSecretKey);
@@ -614,15 +530,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+                     * @return TmpToken <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
                      * 
                      */
                     std::string GetTmpToken() const;
 
                     /**
-                     * 设置Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+                     * @param _tmpToken <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
                      * 
                      */
                     void SetTmpToken(const std::string& _tmpToken);
@@ -635,19 +551,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpTokenHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
+                     * @return EncryptConn <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
                      * 
                      */
                     std::string GetEncryptConn() const;
 
                     /**
-                     * 设置Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _encryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
+                     * @param _encryptConn <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
                      * 
                      */
                     void SetEncryptConn(const std::string& _encryptConn);
@@ -660,19 +572,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncryptConnHasBeenSet() const;
 
                     /**
-                     * 获取Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
+                     * @return DatabaseNetEnv <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
                      * 
                      */
                     std::string GetDatabaseNetEnv() const;
 
                     /**
-                     * 设置Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _databaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
+                     * @param _databaseNetEnv <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
                      * 
                      */
                     void SetDatabaseNetEnv(const std::string& _databaseNetEnv);
@@ -685,19 +593,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DatabaseNetEnvHasBeenSet() const;
 
                     /**
-                     * 获取The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取<p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
+                     * @return CcnOwnerUin <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
                      * 
                      */
                     std::string GetCcnOwnerUin() const;
 
                     /**
-                     * 设置The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _ccnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置<p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
+                     * @param _ccnOwnerUin <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
                      * 
                      */
                     void SetCcnOwnerUin(const std::string& _ccnOwnerUin);
@@ -710,15 +614,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CcnOwnerUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChildInstanceId 
+                     * 获取<p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
+                     * @return ChildInstanceId <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
                      * 
                      */
                     std::string GetChildInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param _childInstanceId 
+                     * 设置<p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
+                     * @param _childInstanceId <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
                      * 
                      */
                     void SetChildInstanceId(const std::string& _childInstanceId);
@@ -731,15 +635,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ChildInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChildInstanceType 
+                     * 获取<p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
+                     * @return ChildInstanceType <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
                      * 
                      */
                     std::string GetChildInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param _childInstanceType 
+                     * 设置<p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
+                     * @param _childInstanceType <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
                      * 
                      */
                     void SetChildInstanceType(const std::string& _childInstanceType);
@@ -752,15 +656,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ChildInstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SetId 
+                     * 获取<p>Shard id of tdsql. Required if the node type is set.</p>
+                     * @return SetId <p>Shard id of tdsql. Required if the node type is set.</p>
                      * 
                      */
                     std::string GetSetId() const;
 
                     /**
-                     * 设置
-                     * @param _setId 
+                     * 设置<p>Shard id of tdsql. Required if the node type is set.</p>
+                     * @param _setId <p>Shard id of tdsql. Required if the node type is set.</p>
                      * 
                      */
                     void SetSetId(const std::string& _setId);
@@ -775,205 +679,181 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Region English name, for example: ap-guangzhou</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;
 
                     /**
-                     * Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
                      */
                     std::string m_dbKernel;
                     bool m_dbKernelHasBeenSet;
 
                     /**
-                     * Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Database instance ID, in the format of: cdb-powiqx8q</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>IP address of the instance. This item is required when the access type is not cdb.</p>
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Instance port. This item is required when the access type is not cdb.</p>
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>User name, required for accessing instances that need username and password authentication.</p>
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
 
                     /**
-                     * Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Password is required for accessing instances that need username and password authentication.</p>
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Database name, required when the database is cdwpg</p>
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
 
                     /**
-                     * VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
                      */
                     std::string m_cvmInstanceId;
                     bool m_cvmInstanceIdHasBeenSet;
 
                     /**
-                     * Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
                      */
                     std::string m_uniqDcgId;
                     bool m_uniqDcgIdHasBeenSet;
 
                     /**
-                     * VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
                      */
                     std::string m_uniqVpnGwId;
                     bool m_uniqVpnGwIdHasBeenSet;
 
                     /**
-                     * CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
                      */
                     std::string m_ccnId;
                     bool m_ccnIdHasBeenSet;
 
                     /**
-                     * Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
                      */
                     std::string m_supplier;
                     bool m_supplierHasBeenSet;
 
                     /**
-                     * Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Account of the instance. This item is required if it is a cross-account instance.</p>
                      */
                     std::string m_account;
                     bool m_accountHasBeenSet;
 
                     /**
-                     * The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
                      */
                     std::string m_accountMode;
                     bool m_accountModeHasBeenSet;
 
                     /**
-                     * The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
                      */
                     std::string m_accountRole;
                     bool m_accountRoleHasBeenSet;
 
                     /**
-                     * External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>External role id</p>
                      */
                     std::string m_roleExternalId;
                     bool m_roleExternalIdHasBeenSet;
 
                     /**
-                     * Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
                      */
                     std::string m_tmpSecretId;
                     bool m_tmpSecretIdHasBeenSet;
 
                     /**
-                     * Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
                      */
                     std::string m_tmpSecretKey;
                     bool m_tmpSecretKeyHasBeenSet;
 
                     /**
-                     * Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
                      */
                     std::string m_tmpToken;
                     bool m_tmpTokenHasBeenSet;
 
                     /**
-                     * Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
                      */
                     std::string m_encryptConn;
                     bool m_encryptConnHasBeenSet;
 
                     /**
-                     * Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
                      */
                     std::string m_databaseNetEnv;
                     bool m_databaseNetEnvHasBeenSet;
 
                     /**
-                     * The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
                      */
                     std::string m_ccnOwnerUin;
                     bool m_ccnOwnerUinHasBeenSet;
 
                     /**
-                     * 
+                     * <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
                      */
                     std::string m_childInstanceId;
                     bool m_childInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
                      */
                     std::string m_childInstanceType;
                     bool m_childInstanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shard id of tdsql. Required if the node type is set.</p>
                      */
                     std::string m_setId;
                     bool m_setIdHasBeenSet;

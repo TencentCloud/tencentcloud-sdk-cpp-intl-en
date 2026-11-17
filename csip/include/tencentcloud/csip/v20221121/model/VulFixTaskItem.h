@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary key ID of the fix task
-                     * @return Id Primary key ID of the fix task
+                     * 获取Primary key ID of the repair task
+                     * @return Id Primary key ID of the repair task
                      * 
                      */
                     int64_t GetId() const;
 
                     /**
-                     * 设置Primary key ID of the fix task
-                     * @param _id Primary key ID of the fix task
+                     * 设置Primary key ID of the repair task
+                     * @param _id Primary key ID of the repair task
                      * 
                      */
                     void SetId(const int64_t& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Task ID, hash flag for interactive
-                     * @return TaskId Task ID, hash flag for interactive
+                     * 获取Task ID, a hash flag for interaction.
+                     * @return TaskId Task ID, a hash flag for interaction.
                      * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
-                     * 设置Task ID, hash flag for interactive
-                     * @param _taskId Task ID, hash flag for interactive
+                     * 设置Task ID, a hash flag for interaction.
+                     * @param _taskId Task ID, a hash flag for interaction.
                      * 
                      */
                     void SetTaskId(const int64_t& _taskId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取JobId, corresponding to the Task ID of the task system.
-                     * @return JobId JobId, corresponding to the Task ID of the task system.
+                     * 获取Task JobId, corresponding to the task ID in the task system.
+                     * @return JobId Task JobId, corresponding to the task ID in the task system.
                      * 
                      */
                     std::string GetJobId() const;
 
                     /**
-                     * 设置JobId, corresponding to the Task ID of the task system.
-                     * @param _jobId JobId, corresponding to the Task ID of the task system.
+                     * 设置Task JobId, corresponding to the task ID in the task system.
+                     * @param _jobId Task JobId, corresponding to the task ID in the task system.
                      * 
                      */
                     void SetJobId(const std::string& _jobId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool JobIdHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerability IDs to be fixed
-                     * @return VulIds List of vulnerability IDs to be fixed
+                     * 获取List of fixed vulnerability IDs
+                     * @return VulIds List of fixed vulnerability IDs
                      * 
                      */
                     std::vector<int64_t> GetVulIds() const;
 
                     /**
-                     * 设置List of vulnerability IDs to be fixed
-                     * @param _vulIds List of vulnerability IDs to be fixed
+                     * 设置List of fixed vulnerability IDs
+                     * @param _vulIds List of fixed vulnerability IDs
                      * 
                      */
                     void SetVulIds(const std::vector<int64_t>& _vulIds);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool VulIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of fixed KB patch IDs
-                     * @return KBIds List of fixed KB patch IDs
+                     * 获取List of repaired KB patch IDs
+                     * @return KBIds List of repaired KB patch IDs
                      * 
                      */
                     std::vector<int64_t> GetKBIds() const;
 
                     /**
-                     * 设置List of fixed KB patch IDs
-                     * @param _kBIds List of fixed KB patch IDs
+                     * 设置List of repaired KB patch IDs
+                     * @param _kBIds List of repaired KB patch IDs
                      * 
                      */
                     void SetKBIds(const std::vector<int64_t>& _kBIds);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool KBIdsHasBeenSet() const;
 
                     /**
-                     * 获取Repair the total number of assets
-                     * @return AssetCount Repair the total number of assets
+                     * 获取Total number of repaired assets
+                     * @return AssetCount Total number of repaired assets
                      * 
                      */
                     int64_t GetAssetCount() const;
 
                     /**
-                     * 设置Repair the total number of assets
-                     * @param _assetCount Repair the total number of assets
+                     * 设置Total number of repaired assets
+                     * @param _assetCount Total number of repaired assets
                      * 
                      */
                     void SetAssetCount(const int64_t& _assetCount);
@@ -215,23 +215,23 @@ namespace TencentCloud
                     bool FailCountHasBeenSet() const;
 
                     /**
-                     * 获取Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-                     * @return Progress Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+                     * 获取Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+                     * @return Progress Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-                     * @param _progress Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+                     * 设置Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+                     * @param _progress Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -244,15 +244,15 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Number of users in the fix task
-                     * @return TargetAppIdsCount Number of users in the fix task
+                     * 获取Number of users for fix tasks
+                     * @return TargetAppIdsCount Number of users for fix tasks
                      * 
                      */
                     int64_t GetTargetAppIdsCount() const;
 
                     /**
-                     * 设置Number of users in the fix task
-                     * @param _targetAppIdsCount Number of users in the fix task
+                     * 设置Number of users for fix tasks
+                     * @param _targetAppIdsCount Number of users for fix tasks
                      * 
                      */
                     void SetTargetAppIdsCount(const int64_t& _targetAppIdsCount);
@@ -266,19 +266,19 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
 
                     /**
                      * 获取Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
                      * @return FixStatus Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
                      * 
@@ -287,19 +287,19 @@ Enumeration value:
 
                     /**
                      * 设置Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
                      * @param _fixStatus Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
                      * 
@@ -339,19 +339,19 @@ Unit: seconds.
                     bool TimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @return StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 获取Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @return StartTime Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @param _startTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 设置Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @param _startTime Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -364,19 +364,19 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @return EndTime Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 获取Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @return EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @param _endTime Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 设置Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+                     * @param _endTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -390,18 +390,18 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
                     /**
                      * 获取Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @return CreateTime Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @param _createTime Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -414,15 +414,15 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerability names to be fixed, making it easy to show directly on the list page
-                     * @return VulNames List of vulnerability names to be fixed, making it easy to show directly on the list page
+                     * 获取List of names of repaired vulnerabilities, making it easy to show directly on the list page
+                     * @return VulNames List of names of repaired vulnerabilities, making it easy to show directly on the list page
                      * 
                      */
                     std::vector<std::string> GetVulNames() const;
 
                     /**
-                     * 设置List of vulnerability names to be fixed, making it easy to show directly on the list page
-                     * @param _vulNames List of vulnerability names to be fixed, making it easy to show directly on the list page
+                     * 设置List of names of repaired vulnerabilities, making it easy to show directly on the list page
+                     * @param _vulNames List of names of repaired vulnerabilities, making it easy to show directly on the list page
                      * 
                      */
                     void SetVulNames(const std::vector<std::string>& _vulNames);
@@ -436,17 +436,17 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
                     /**
                      * 获取Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
                      * @return VulCategory Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
                      * 
@@ -455,17 +455,17 @@ EMERGENCY: Urgent vulnerability
 
                     /**
                      * 设置Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
                      * @param _vulCategory Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
                      * 
@@ -480,15 +480,15 @@ EMERGENCY: Urgent vulnerability
                     bool VulCategoryHasBeenSet() const;
 
                     /**
-                     * 获取Creator AppId
-                     * @return AppId Creator AppId
+                     * 获取Creator `AppId`
+                     * @return AppId Creator `AppId`
                      * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
-                     * 设置Creator AppId
-                     * @param _appId Creator AppId
+                     * 设置Creator `AppId`
+                     * @param _appId Creator `AppId`
                      * 
                      */
                     void SetAppId(const uint64_t& _appId);
@@ -503,37 +503,37 @@ EMERGENCY: Urgent vulnerability
                 private:
 
                     /**
-                     * Primary key ID of the fix task
+                     * Primary key ID of the repair task
                      */
                     int64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Task ID, hash flag for interactive
+                     * Task ID, a hash flag for interaction.
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * JobId, corresponding to the Task ID of the task system.
+                     * Task JobId, corresponding to the task ID in the task system.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;
 
                     /**
-                     * List of vulnerability IDs to be fixed
+                     * List of fixed vulnerability IDs
                      */
                     std::vector<int64_t> m_vulIds;
                     bool m_vulIdsHasBeenSet;
 
                     /**
-                     * List of fixed KB patch IDs
+                     * List of repaired KB patch IDs
                      */
                     std::vector<int64_t> m_kBIds;
                     bool m_kBIdsHasBeenSet;
 
                     /**
-                     * Repair the total number of assets
+                     * Total number of repaired assets
                      */
                     int64_t m_assetCount;
                     bool m_assetCountHasBeenSet;
@@ -551,26 +551,26 @@ EMERGENCY: Urgent vulnerability
                     bool m_failCountHasBeenSet;
 
                     /**
-                     * Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+                     * Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Number of users in the fix task
+                     * Number of users for fix tasks
                      */
                     int64_t m_targetAppIdsCount;
                     bool m_targetAppIdsCountHasBeenSet;
 
                     /**
                      * Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
                      */
@@ -585,38 +585,38 @@ Unit: seconds.
                     bool m_timeoutHasBeenSet;
 
                     /**
-                     * Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
                      * Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * List of vulnerability names to be fixed, making it easy to show directly on the list page
+                     * List of names of repaired vulnerabilities, making it easy to show directly on the list page
                      */
                     std::vector<std::string> m_vulNames;
                     bool m_vulNamesHasBeenSet;
 
                     /**
                      * Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
                      */
@@ -624,7 +624,7 @@ EMERGENCY: Urgent vulnerability
                     bool m_vulCategoryHasBeenSet;
 
                     /**
-                     * Creator AppId
+                     * Creator `AppId`
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;

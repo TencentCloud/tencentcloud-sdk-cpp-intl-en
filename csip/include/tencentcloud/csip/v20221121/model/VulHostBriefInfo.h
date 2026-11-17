@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Public network IP address</p>
-                     * @return PublicIP <p>Public network IP address</p>
+                     * 获取<p>Public IP address</p>
+                     * @return PublicIP <p>Public IP address</p>
                      * 
                      */
                     std::string GetPublicIP() const;
 
                     /**
-                     * 设置<p>Public network IP address</p>
-                     * @param _publicIP <p>Public network IP address</p>
+                     * 设置<p>Public IP address</p>
+                     * @param _publicIP <p>Public IP address</p>
                      * 
                      */
                     void SetPublicIP(const std::string& _publicIP);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool PrivateIPHasBeenSet() const;
 
                     /**
-                     * 获取<p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
-                     * @return DefendVersion <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+                     * 获取<p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
+                     * @return DefendVersion <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
                      * 
                      */
                     std::string GetDefendVersion() const;
 
                     /**
-                     * 设置<p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
-                     * @param _defendVersion <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+                     * 设置<p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
+                     * @param _defendVersion <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
                      * 
                      */
                     void SetDefendVersion(const std::string& _defendVersion);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool DefendVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
-                     * @return DefendStatus <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+                     * 获取<p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
+                     * @return DefendStatus <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
                      * 
                      */
                     std::string GetDefendStatus() const;
 
                     /**
-                     * 设置<p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
-                     * @param _defendStatus <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+                     * 设置<p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
+                     * @param _defendStatus <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
                      * 
                      */
                     void SetDefendStatus(const std::string& _defendStatus);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool DefendStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Associated account information</p>
-                     * @return Account <p>Associated account information</p>
+                     * 获取<p>Account information belonging to</p>
+                     * @return Account <p>Account information belonging to</p>
                      * 
                      */
                     AccountBriefInfo GetAccount() const;
 
                     /**
-                     * 设置<p>Associated account information</p>
-                     * @param _account <p>Associated account information</p>
+                     * 设置<p>Account information belonging to</p>
+                     * @param _account <p>Account information belonging to</p>
                      * 
                      */
                     void SetAccount(const AccountBriefInfo& _account);
@@ -198,15 +198,15 @@ namespace TencentCloud
                     bool AccountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
-                     * @return InstanceStatus <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+                     * 获取<p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+                     * @return InstanceStatus <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
                      * 
                      */
                     std::string GetInstanceStatus() const;
 
                     /**
-                     * 设置<p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
-                     * @param _instanceStatus <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+                     * 设置<p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+                     * @param _instanceStatus <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
                      * 
                      */
                     void SetInstanceStatus(const std::string& _instanceStatus);
@@ -219,15 +219,15 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
-                     * @return RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+                     * 获取<p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+                     * @return RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
                      * 
                      */
                     std::string GetRiskStatus() const;
 
                     /**
-                     * 设置<p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
-                     * @param _riskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+                     * 设置<p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+                     * @param _riskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
                      * 
                      */
                     void SetRiskStatus(const std::string& _riskStatus);
@@ -261,15 +261,15 @@ namespace TencentCloud
                     bool VPRRatingHasBeenSet() const;
 
                     /**
-                     * 获取<p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
-                     * @return AgentStatus <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+                     * 获取<p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
+                     * @return AgentStatus <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
                      * 
                      */
                     std::string GetAgentStatus() const;
 
                     /**
-                     * 设置<p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
-                     * @param _agentStatus <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+                     * 设置<p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
+                     * @param _agentStatus <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
                      * 
                      */
                     void SetAgentStatus(const std::string& _agentStatus);
@@ -282,15 +282,15 @@ namespace TencentCloud
                     bool AgentStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Asset tag list (CSIP internal asset tag)</p>
-                     * @return TagItem <p>Asset tag list (CSIP internal asset tag)</p>
+                     * 获取<p>Asset tag list (CSIP internal asset tags)</p>
+                     * @return TagItem <p>Asset tag list (CSIP internal asset tags)</p>
                      * 
                      */
                     std::vector<MiniTagItem> GetTagItem() const;
 
                     /**
-                     * 设置<p>Asset tag list (CSIP internal asset tag)</p>
-                     * @param _tagItem <p>Asset tag list (CSIP internal asset tag)</p>
+                     * 设置<p>Asset tag list (CSIP internal asset tags)</p>
+                     * @param _tagItem <p>Asset tag list (CSIP internal asset tags)</p>
                      * 
                      */
                     void SetTagItem(const std::vector<MiniTagItem>& _tagItem);
@@ -338,7 +338,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Public network IP address</p>
+                     * <p>Public IP address</p>
                      */
                     std::string m_publicIP;
                     bool m_publicIPHasBeenSet;
@@ -350,31 +350,31 @@ namespace TencentCloud
                     bool m_privateIPHasBeenSet;
 
                     /**
-                     * <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+                     * <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
                      */
                     std::string m_defendVersion;
                     bool m_defendVersionHasBeenSet;
 
                     /**
-                     * <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+                     * <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
                      */
                     std::string m_defendStatus;
                     bool m_defendStatusHasBeenSet;
 
                     /**
-                     * <p>Associated account information</p>
+                     * <p>Account information belonging to</p>
                      */
                     AccountBriefInfo m_account;
                     bool m_accountHasBeenSet;
 
                     /**
-                     * <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+                     * <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
                      */
                     std::string m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+                     * <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
                      */
                     std::string m_riskStatus;
                     bool m_riskStatusHasBeenSet;
@@ -386,13 +386,13 @@ namespace TencentCloud
                     bool m_vPRRatingHasBeenSet;
 
                     /**
-                     * <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+                     * <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
                      */
                     std::string m_agentStatus;
                     bool m_agentStatusHasBeenSet;
 
                     /**
-                     * <p>Asset tag list (CSIP internal asset tag)</p>
+                     * <p>Asset tag list (CSIP internal asset tags)</p>
                      */
                     std::vector<MiniTagItem> m_tagItem;
                     bool m_tagItemHasBeenSet;

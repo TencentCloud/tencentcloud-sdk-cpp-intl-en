@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Repair task ID that needs to be retried</p>
-                     * @return TaskId <p>Repair task ID that needs to be retried</p>
+                     * 获取<p>Repair task ID that needs to retry</p>
+                     * @return TaskId <p>Repair task ID that needs to retry</p>
                      * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
-                     * 设置<p>Repair task ID that needs to be retried</p>
-                     * @param _taskId <p>Repair task ID that needs to be retried</p>
+                     * 设置<p>Repair task ID that needs to retry</p>
+                     * @param _taskId <p>Repair task ID that needs to retry</p>
                      * 
                      */
                     void SetTaskId(const int64_t& _taskId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
-                     * @return InstanceIds <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+                     * 获取<p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
+                     * @return InstanceIds <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置<p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
-                     * @param _instanceIds <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+                     * 设置<p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
+                     * @param _instanceIds <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Repair task ID that needs to be retried</p>
+                     * <p>Repair task ID that needs to retry</p>
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+                     * <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

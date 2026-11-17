@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Whether Kafka Protocol Consumption is enabled</p>
-                     * @return Status <p>Whether Kafka Protocol Consumption is enabled</p>
+                     * 获取<p>Whether Kafka consumption is enabled</p>
+                     * @return Status <p>Whether Kafka consumption is enabled</p>
                      * 
                      */
                     bool GetStatus() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Topic parameter used by KafkaConsumer during consumption</p>
-                     * @return TopicID <p>Topic parameter used by KafkaConsumer during consumption</p>
+                     * 获取<p>Topic parameter used by KafkaConsumer for consumption</p>
+                     * @return TopicID <p>Topic parameter used by KafkaConsumer for consumption</p>
                      * 
                      */
                     std::string GetTopicID() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TopicIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p>
-                     * @return Compression <p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p>
+                     * 获取<p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p>
+                     * @return Compression <p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p>
                      * 
                      */
                     int64_t GetCompression() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool CompressionHasBeenSet() const;
 
                     /**
-                     * 获取<p>kafka protocol consumption data format</p>
-                     * @return ConsumerContent <p>kafka protocol consumption data format</p>
+                     * 获取<p>kafka consumption data format</p>
+                     * @return ConsumerContent <p>kafka consumption data format</p>
                      * 
                      */
                     KafkaConsumerContent GetConsumerContent() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool ConsumerContentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
-                     * @return HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+                     * 获取<p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
+                     * @return HasServicesLog <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
                      * 
                      */
                     uint64_t GetHasServicesLog() const;
@@ -115,8 +115,36 @@ namespace TencentCloud
                     bool HasServicesLogHasBeenSet() const;
 
                     /**
-                     * 获取<p>Range type of consumption, 0: latest, 1: history + latest</p>
-                     * @return ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+                     * 获取<p>Public network consumption switch.</p>
+                     * @return EnableInternetConsume <p>Public network consumption switch.</p>
+                     * 
+                     */
+                    bool GetEnableInternetConsume() const;
+
+                    /**
+                     * 判断参数 EnableInternetConsume 是否已赋值
+                     * @return EnableInternetConsume 是否已赋值
+                     * 
+                     */
+                    bool EnableInternetConsumeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Private network consumption switch.</p>
+                     * @return EnableIntranetConsume <p>Private network consumption switch.</p>
+                     * 
+                     */
+                    bool GetEnableIntranetConsume() const;
+
+                    /**
+                     * 判断参数 EnableIntranetConsume 是否已赋值
+                     * @return EnableIntranetConsume 是否已赋值
+                     * 
+                     */
+                    bool EnableIntranetConsumeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
+                     * @return ScopeType <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
                      * 
                      */
                     uint64_t GetScopeType() const;
@@ -131,37 +159,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Whether Kafka Protocol Consumption is enabled</p>
+                     * <p>Whether Kafka consumption is enabled</p>
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Topic parameter used by KafkaConsumer during consumption</p>
+                     * <p>Topic parameter used by KafkaConsumer for consumption</p>
                      */
                     std::string m_topicID;
                     bool m_topicIDHasBeenSet;
 
                     /**
-                     * <p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p>
+                     * <p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p>
                      */
                     int64_t m_compression;
                     bool m_compressionHasBeenSet;
 
                     /**
-                     * <p>kafka protocol consumption data format</p>
+                     * <p>kafka consumption data format</p>
                      */
                     KafkaConsumerContent m_consumerContent;
                     bool m_consumerContentHasBeenSet;
 
                     /**
-                     * <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+                     * <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
                      */
                     uint64_t m_hasServicesLog;
                     bool m_hasServicesLogHasBeenSet;
 
                     /**
-                     * <p>Range type of consumption, 0: latest, 1: history + latest</p>
+                     * <p>Public network consumption switch.</p>
+                     */
+                    bool m_enableInternetConsume;
+                    bool m_enableInternetConsumeHasBeenSet;
+
+                    /**
+                     * <p>Private network consumption switch.</p>
+                     */
+                    bool m_enableIntranetConsume;
+                    bool m_enableIntranetConsumeHasBeenSet;
+
+                    /**
+                     * <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
                      */
                     uint64_t m_scopeType;
                     bool m_scopeTypeHasBeenSet;

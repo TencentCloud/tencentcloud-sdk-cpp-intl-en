@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/csip/v20221121/model/VPRRatingInfo.h>
+#include <tencentcloud/csip/v20221121/model/VPRExplainInfo.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Fixed vulnerability information
+                * Information of fixed vulnerabilities
                 */
                 class VulFixedItem : public AbstractModel
                 {
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vulnerability ID
-                     * @return VulId Vulnerability ID
+                     * 获取<p>Vulnerability ID</p>
+                     * @return VulId <p>Vulnerability ID</p>
                      * 
                      */
                     int64_t GetVulId() const;
 
                     /**
-                     * 设置Vulnerability ID
-                     * @param _vulId Vulnerability ID
+                     * 设置<p>Vulnerability ID</p>
+                     * @param _vulId <p>Vulnerability ID</p>
                      * 
                      */
                     void SetVulId(const int64_t& _vulId);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool VulIdHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability name
-                     * @return VulName Vulnerability name
+                     * 获取<p>Vulnerability name</p>
+                     * @return VulName <p>Vulnerability name</p>
                      * 
                      */
                     std::string GetVulName() const;
 
                     /**
-                     * 设置Vulnerability name
-                     * @param _vulName Vulnerability name
+                     * 设置<p>Vulnerability name</p>
+                     * @param _vulName <p>Vulnerability name</p>
                      * 
                      */
                     void SetVulName(const std::string& _vulName);
@@ -90,35 +91,15 @@ namespace TencentCloud
                     bool VulNameHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
-                     * @return Level Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
+                     * 获取<p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
+                     * @return Level <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
-                     * @param _level Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
+                     * 设置<p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
+                     * @param _level <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -131,15 +112,15 @@ CRITICAL
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
-                     * @return VRPRatingInfo VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+                     * 获取<p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
+                     * @return VRPRatingInfo <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
                      * 
                      */
                     VPRRatingInfo GetVRPRatingInfo() const;
 
                     /**
-                     * 设置VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
-                     * @param _vRPRatingInfo VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+                     * 设置<p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
+                     * @param _vRPRatingInfo <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
                      * 
                      */
                     void SetVRPRatingInfo(const VPRRatingInfo& _vRPRatingInfo);
@@ -152,39 +133,15 @@ CRITICAL
                     bool VRPRatingInfoHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
-                     * @return VulCategory Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
+                     * 获取<p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
+                     * @return VulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
                      * 
                      */
                     std::string GetVulCategory() const;
 
                     /**
-                     * 设置Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
-                     * @param _vulCategory Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
+                     * 设置<p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
+                     * @param _vulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
                      * 
                      */
                     void SetVulCategory(const std::string& _vulCategory);
@@ -197,15 +154,15 @@ EMERGENCY: Urgent vulnerability
                     bool VulCategoryHasBeenSet() const;
 
                     /**
-                     * 获取CVE id
-                     * @return CveId CVE id
+                     * 获取<p>CVE id</p>
+                     * @return CveId <p>CVE id</p>
                      * 
                      */
                     std::string GetCveId() const;
 
                     /**
-                     * 设置CVE id
-                     * @param _cveId CVE id
+                     * 设置<p>CVE id</p>
+                     * @param _cveId <p>CVE id</p>
                      * 
                      */
                     void SetCveId(const std::string& _cveId);
@@ -218,15 +175,15 @@ EMERGENCY: Urgent vulnerability
                     bool CveIdHasBeenSet() const;
 
                     /**
-                     * 获取Repair the host name
-                     * @return MachineName Repair the host name
+                     * 获取<p>Repair host name</p>
+                     * @return MachineName <p>Repair host name</p>
                      * 
                      */
                     std::string GetMachineName() const;
 
                     /**
-                     * 设置Repair the host name
-                     * @param _machineName Repair the host name
+                     * 设置<p>Repair host name</p>
+                     * @param _machineName <p>Repair host name</p>
                      * 
                      */
                     void SetMachineName(const std::string& _machineName);
@@ -239,15 +196,15 @@ EMERGENCY: Urgent vulnerability
                     bool MachineNameHasBeenSet() const;
 
                     /**
-                     * 获取Repair the host instance ID
-                     * @return InstanceId Repair the host instance ID
+                     * 获取<p>Repair host instance ID</p>
+                     * @return InstanceId <p>Repair host instance ID</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Repair the host instance ID
-                     * @param _instanceId Repair the host instance ID
+                     * 设置<p>Repair host instance ID</p>
+                     * @param _instanceId <p>Repair host instance ID</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -260,15 +217,15 @@ EMERGENCY: Urgent vulnerability
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Associated component & number of paths
-                     * @return ComponentCount Associated component & number of paths
+                     * 获取<p>Associated component &amp; number of paths</p>
+                     * @return ComponentCount <p>Associated component &amp; number of paths</p>
                      * 
                      */
                     int64_t GetComponentCount() const;
 
                     /**
-                     * 设置Associated component & number of paths
-                     * @param _componentCount Associated component & number of paths
+                     * 设置<p>Associated component &amp; number of paths</p>
+                     * @param _componentCount <p>Associated component &amp; number of paths</p>
                      * 
                      */
                     void SetComponentCount(const int64_t& _componentCount);
@@ -281,15 +238,15 @@ EMERGENCY: Urgent vulnerability
                     bool ComponentCountHasBeenSet() const;
 
                     /**
-                     * 获取Associated component & path list
-                     * @return Components Associated component & path list
+                     * 获取<p>Associated component &amp; path list</p>
+                     * @return Components <p>Associated component &amp; path list</p>
                      * 
                      */
                     std::vector<std::string> GetComponents() const;
 
                     /**
-                     * 设置Associated component & path list
-                     * @param _components Associated component & path list
+                     * 设置<p>Associated component &amp; path list</p>
+                     * @param _components <p>Associated component &amp; path list</p>
                      * 
                      */
                     void SetComponents(const std::vector<std::string>& _components);
@@ -302,19 +259,15 @@ EMERGENCY: Urgent vulnerability
                     bool ComponentsHasBeenSet() const;
 
                     /**
-                     * 获取Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @return LatestFixTime Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 获取<p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @return LatestFixTime <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      * 
                      */
                     std::string GetLatestFixTime() const;
 
                     /**
-                     * 设置Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-                     * @param _latestFixTime Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * 设置<p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @param _latestFixTime <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      * 
                      */
                     void SetLatestFixTime(const std::string& _latestFixTime);
@@ -326,85 +279,100 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                      */
                     bool LatestFixTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>VPR rating basis</p>
+                     * @return VPRExplainInfo <p>VPR rating basis</p>
+                     * 
+                     */
+                    VPRExplainInfo GetVPRExplainInfo() const;
+
+                    /**
+                     * 设置<p>VPR rating basis</p>
+                     * @param _vPRExplainInfo <p>VPR rating basis</p>
+                     * 
+                     */
+                    void SetVPRExplainInfo(const VPRExplainInfo& _vPRExplainInfo);
+
+                    /**
+                     * 判断参数 VPRExplainInfo 是否已赋值
+                     * @return VPRExplainInfo 是否已赋值
+                     * 
+                     */
+                    bool VPRExplainInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Vulnerability ID
+                     * <p>Vulnerability ID</p>
                      */
                     int64_t m_vulId;
                     bool m_vulIdHasBeenSet;
 
                     /**
-                     * Vulnerability name
+                     * <p>Vulnerability name</p>
                      */
                     std::string m_vulName;
                     bool m_vulNameHasBeenSet;
 
                     /**
-                     * Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
+                     * <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+                     * <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
                      */
                     VPRRatingInfo m_vRPRatingInfo;
                     bool m_vRPRatingInfoHasBeenSet;
 
                     /**
-                     * Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
+                     * <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
                      */
                     std::string m_vulCategory;
                     bool m_vulCategoryHasBeenSet;
 
                     /**
-                     * CVE id
+                     * <p>CVE id</p>
                      */
                     std::string m_cveId;
                     bool m_cveIdHasBeenSet;
 
                     /**
-                     * Repair the host name
+                     * <p>Repair host name</p>
                      */
                     std::string m_machineName;
                     bool m_machineNameHasBeenSet;
 
                     /**
-                     * Repair the host instance ID
+                     * <p>Repair host instance ID</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Associated component & number of paths
+                     * <p>Associated component &amp; number of paths</p>
                      */
                     int64_t m_componentCount;
                     bool m_componentCountHasBeenSet;
 
                     /**
-                     * Associated component & path list
+                     * <p>Associated component &amp; path list</p>
                      */
                     std::vector<std::string> m_components;
                     bool m_componentsHasBeenSet;
 
                     /**
-                     * Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+                     * <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      */
                     std::string m_latestFixTime;
                     bool m_latestFixTimeHasBeenSet;
+
+                    /**
+                     * <p>VPR rating basis</p>
+                     */
+                    VPRExplainInfo m_vPRExplainInfo;
+                    bool m_vPRExplainInfoHasBeenSet;
 
                 };
             }

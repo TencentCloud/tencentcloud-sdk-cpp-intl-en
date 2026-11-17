@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Time series type details.
+                * Detailed data of time series type
                 */
                 class FloatTimingTypeValue : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Average.
-                     * @return Avg Average.
+                     * 获取Mean.
+                     * @return Avg Mean.
                      * 
                      */
                     double GetAvg() const;
 
                     /**
-                     * 设置Average.
-                     * @param _avg Average.
+                     * 设置Mean.
+                     * @param _avg Mean.
                      * 
                      */
                     void SetAvg(const double& _avg);
@@ -167,7 +167,7 @@ namespace TencentCloud
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Average.
+                     * Mean.
                      */
                     double m_avg;
                     bool m_avgHasBeenSet;

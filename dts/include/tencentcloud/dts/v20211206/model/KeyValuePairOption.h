@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Option key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Key Option key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Option key.
+                     * @return Key Option key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Option key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _key Option key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Option key.
+                     * @param _key Option key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Option value
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Value Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Option value.
+                     * @return Value Option value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Option value
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _value Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Option value.
+                     * @param _value Option value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Option key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Option key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Option value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

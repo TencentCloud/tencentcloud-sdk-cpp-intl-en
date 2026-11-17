@@ -42,7 +42,61 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return MemberId 
+                     * 
+                     */
+                    std::vector<std::string> GetMemberId() const;
+
+                    /**
+                     * 设置
+                     * @param _memberId 
+                     * 
+                     */
+                    void SetMemberId(const std::vector<std::string>& _memberId);
+
+                    /**
+                     * 判断参数 MemberId 是否已赋值
+                     * @return MemberId 是否已赋值
+                     * 
+                     */
+                    bool MemberIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return NeedQuotaUsed 
+                     * 
+                     */
+                    bool GetNeedQuotaUsed() const;
+
+                    /**
+                     * 设置
+                     * @param _needQuotaUsed 
+                     * 
+                     */
+                    void SetNeedQuotaUsed(const bool& _needQuotaUsed);
+
+                    /**
+                     * 判断参数 NeedQuotaUsed 是否已赋值
+                     * @return NeedQuotaUsed 是否已赋值
+                     * 
+                     */
+                    bool NeedQuotaUsedHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_memberId;
+                    bool m_memberIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_needQuotaUsed;
+                    bool m_needQuotaUsedHasBeenSet;
 
                 };
             }

@@ -271,6 +271,8 @@
 #include <tencentcloud/tke/v20180525/model/ModifyPrometheusAlertRuleResponse.h>
 #include <tencentcloud/tke/v20180525/model/RemoveNodeFromNodePoolRequest.h>
 #include <tencentcloud/tke/v20180525/model/RemoveNodeFromNodePoolResponse.h>
+#include <tencentcloud/tke/v20180525/model/RotateClusterTokenRequest.h>
+#include <tencentcloud/tke/v20180525/model/RotateClusterTokenResponse.h>
 #include <tencentcloud/tke/v20180525/model/SetNodePoolNodeProtectionRequest.h>
 #include <tencentcloud/tke/v20180525/model/SetNodePoolNodeProtectionResponse.h>
 #include <tencentcloud/tke/v20180525/model/UninstallEdgeLogAgentRequest.h>
@@ -671,6 +673,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveNodeFromNodePoolResponse> RemoveNodeFromNodePoolOutcome;
                 typedef std::future<RemoveNodeFromNodePoolOutcome> RemoveNodeFromNodePoolOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::RemoveNodeFromNodePoolRequest&, RemoveNodeFromNodePoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveNodeFromNodePoolAsyncHandler;
+                typedef Outcome<Core::Error, Model::RotateClusterTokenResponse> RotateClusterTokenOutcome;
+                typedef std::future<RotateClusterTokenOutcome> RotateClusterTokenOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::RotateClusterTokenRequest&, RotateClusterTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RotateClusterTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetNodePoolNodeProtectionResponse> SetNodePoolNodeProtectionOutcome;
                 typedef std::future<SetNodePoolNodeProtectionOutcome> SetNodePoolNodeProtectionOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::SetNodePoolNodeProtectionRequest&, SetNodePoolNodeProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetNodePoolNodeProtectionAsyncHandler;
@@ -1810,6 +1815,15 @@ namespace TencentCloud
                 RemoveNodeFromNodePoolOutcome RemoveNodeFromNodePool(const Model::RemoveNodeFromNodePoolRequest &request);
                 void RemoveNodeFromNodePoolAsync(const Model::RemoveNodeFromNodePoolRequest& request, const RemoveNodeFromNodePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RemoveNodeFromNodePoolOutcomeCallable RemoveNodeFromNodePoolCallable(const Model::RemoveNodeFromNodePoolRequest& request);
+
+                /**
+                 *This API is used to rotate a cluster token.
+                 * @param req RotateClusterTokenRequest
+                 * @return RotateClusterTokenOutcome
+                 */
+                RotateClusterTokenOutcome RotateClusterToken(const Model::RotateClusterTokenRequest &request);
+                void RotateClusterTokenAsync(const Model::RotateClusterTokenRequest& request, const RotateClusterTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RotateClusterTokenOutcomeCallable RotateClusterTokenCallable(const Model::RotateClusterTokenRequest& request);
 
                 /**
                  *This API is used to enable removal protection for the nodes automatically created by the scaling group in a node pool.

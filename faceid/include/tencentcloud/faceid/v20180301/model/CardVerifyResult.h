@@ -615,15 +615,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
                      * @return WarnCardInfos Card warning information
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
                      * 
                      */
@@ -634,15 +640,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
                      * @param _warnCardInfos Card warning information
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
                      * 
                      */
@@ -675,6 +687,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool EditDetailsHasBeenSet() const;
+
+                    /**
+                     * 获取Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+                     * @return DetectedCardType Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+                     * 
+                     */
+                    std::string GetDetectedCardType() const;
+
+                    /**
+                     * 设置Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+                     * @param _detectedCardType Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+                     * 
+                     */
+                    void SetDetectedCardType(const std::string& _detectedCardType);
+
+                    /**
+                     * 判断参数 DetectedCardType 是否已赋值
+                     * @return DetectedCardType 是否已赋值
+                     * 
+                     */
+                    bool DetectedCardTypeHasBeenSet() const;
 
                 private:
 
@@ -829,8 +862,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
                      */
                     std::vector<int64_t> m_warnCardInfos;
@@ -841,6 +877,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<EditDetail> m_editDetails;
                     bool m_editDetailsHasBeenSet;
+
+                    /**
+                     * Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+                     */
+                    std::string m_detectedCardType;
+                    bool m_detectedCardTypeHasBeenSet;
 
                 };
             }

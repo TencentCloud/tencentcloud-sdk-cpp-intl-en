@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sum.
-                     * @return Sum Sum.
+                     * 获取Data and.
+                     * @return Sum Data and.
                      * 
                      */
                     int64_t GetSum() const;
 
                     /**
-                     * 设置Sum.
-                     * @param _sum Sum.
+                     * 设置Data and.
+                     * @param _sum Data and.
                      * 
                      */
                     void SetSum(const int64_t& _sum);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SumHasBeenSet() const;
 
                     /**
-                     * 获取The maximum value.
-                     * @return Max The maximum value.
+                     * 获取Maximum value.
+                     * @return Max Maximum value.
                      * 
                      */
                     int64_t GetMax() const;
 
                     /**
-                     * 设置The maximum value.
-                     * @param _max The maximum value.
+                     * 设置Maximum value.
+                     * @param _max Maximum value.
                      * 
                      */
                     void SetMax(const int64_t& _max);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取The average value.
-                     * @return Avg The average value.
+                     * 获取Mean.
+                     * @return Avg Mean.
                      * 
                      */
                     int64_t GetAvg() const;
 
                     /**
-                     * 设置The average value.
-                     * @param _avg The average value.
+                     * 设置Mean.
+                     * @param _avg Mean.
                      * 
                      */
                     void SetAvg(const int64_t& _avg);
@@ -133,18 +133,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Detail Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TimingDataItem> GetDetail() const;
 
                     /**
                      * 设置Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _detail Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDetail(const std::vector<TimingDataItem>& _detail);
@@ -159,19 +155,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Sum.
+                     * Data and.
                      */
                     int64_t m_sum;
                     bool m_sumHasBeenSet;
 
                     /**
-                     * The maximum value.
+                     * Maximum value.
                      */
                     int64_t m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * The average value.
+                     * Mean.
                      */
                     int64_t m_avg;
                     bool m_avgHasBeenSet;
@@ -184,7 +180,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Details.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TimingDataItem> m_detail;
                     bool m_detailHasBeenSet;

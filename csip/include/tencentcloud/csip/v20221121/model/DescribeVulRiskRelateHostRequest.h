@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>p>KB patch internal ID (kb_info.id)</p>
-                     * @return KBID <p>p>KB patch internal ID (kb_info.id)</p>
+                     * 获取<p>KB patch internal ID (kb_info.id)</p>
+                     * @return KBID <p>KB patch internal ID (kb_info.id)</p>
                      * 
                      */
                     uint64_t GetKBID() const;
 
                     /**
-                     * 设置<p>p>KB patch internal ID (kb_info.id)</p>
-                     * @param _kBID <p>p>KB patch internal ID (kb_info.id)</p>
+                     * 设置<p>KB patch internal ID (kb_info.id)</p>
+                     * @param _kBID <p>KB patch internal ID (kb_info.id)</p>
                      * 
                      */
                     void SetKBID(const uint64_t& _kBID);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
-                     * @return Filters <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+                     * 获取<p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+                     * @return Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置<p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
-                     * @param _filters <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+                     * 设置<p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+                     * @param _filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
-                     * @return Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+                     * 获取<p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+                     * @return Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
-                     * @param _limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+                     * 设置<p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+                     * @param _limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
-                     * @return Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+                     * 获取<p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
+                     * @return Offset <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
-                     * @param _offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+                     * 设置<p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
+                     * @param _offset <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
-                     * @return Order <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
+                     * 获取<p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
+                     * @return Order <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置<p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
-                     * @param _order <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
+                     * 设置<p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
+                     * @param _order <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
-                     * @return By <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+                     * 获取<p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+                     * @return By <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置<p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
-                     * @param _by <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+                     * 设置<p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+                     * @param _by <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -214,7 +214,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>p>KB patch internal ID (kb_info.id)</p>
+                     * <p>KB patch internal ID (kb_info.id)</p>
                      */
                     uint64_t m_kBID;
                     bool m_kBIDHasBeenSet;
@@ -232,31 +232,31 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+                     * <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+                     * <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+                     * <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
+                     * <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+                     * <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;

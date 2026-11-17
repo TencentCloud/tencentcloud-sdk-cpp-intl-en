@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability repair summary
+                * Vulnerability repair summary information
                 */
                 class VulFixSummaryItem : public AbstractModel
                 {
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AffectedCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether restart is required after repair</p>
-                     * @return NeedReboot <p>Whether restart is required after repair</p>
+                     * 获取<p>Whether the system needs to be restarted after repair</p>
+                     * @return NeedReboot <p>Whether the system needs to be restarted after repair</p>
                      * 
                      */
                     bool GetNeedReboot() const;
 
                     /**
-                     * 设置<p>Whether restart is required after repair</p>
-                     * @param _needReboot <p>Whether restart is required after repair</p>
+                     * 设置<p>Whether the system needs to be restarted after repair</p>
+                     * @param _needReboot <p>Whether the system needs to be restarted after repair</p>
                      * 
                      */
                     void SetNeedReboot(const bool& _needReboot);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool NeedRebootHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether one-click repair is supported true-supported false-unsupported</p>
-                     * @return FixSwitch <p>Whether one-click repair is supported true-supported false-unsupported</p>
+                     * 获取<p>Whether one-click repair is supported. true - support; false - not support</p>
+                     * @return FixSwitch <p>Whether one-click repair is supported. true - support; false - not support</p>
                      * 
                      */
                     bool GetFixSwitch() const;
 
                     /**
-                     * 设置<p>Whether one-click repair is supported true-supported false-unsupported</p>
-                     * @param _fixSwitch <p>Whether one-click repair is supported true-supported false-unsupported</p>
+                     * 设置<p>Whether one-click repair is supported. true - support; false - not support</p>
+                     * @param _fixSwitch <p>Whether one-click repair is supported. true - support; false - not support</p>
                      * 
                      */
                     void SetFixSwitch(const bool& _fixSwitch);
@@ -199,13 +199,13 @@ namespace TencentCloud
                     bool m_affectedCountHasBeenSet;
 
                     /**
-                     * <p>Whether restart is required after repair</p>
+                     * <p>Whether the system needs to be restarted after repair</p>
                      */
                     bool m_needReboot;
                     bool m_needRebootHasBeenSet;
 
                     /**
-                     * <p>Whether one-click repair is supported true-supported false-unsupported</p>
+                     * <p>Whether one-click repair is supported. true - support; false - not support</p>
                      */
                     bool m_fixSwitch;
                     bool m_fixSwitchHasBeenSet;

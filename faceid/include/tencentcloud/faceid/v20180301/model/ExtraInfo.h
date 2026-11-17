@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Additional details
+                * Additional detailed information
                 */
                 class ExtraInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Detailed information of the hit template, return only the template information with the highest similarity.
-                     * @return RetrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
+                     * 获取Detailed information of the matched template. Only the template with the highest similarity is returned.
+                     * @return RetrievalLivenessExtraInfo Detailed information of the matched template. Only the template with the highest similarity is returned.
                      * 
                      */
                     std::vector<RetrievalLivenessExtraInfo> GetRetrievalLivenessExtraInfo() const;
 
                     /**
-                     * 设置Detailed information of the hit template, return only the template information with the highest similarity.
-                     * @param _retrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
+                     * 设置Detailed information of the matched template. Only the template with the highest similarity is returned.
+                     * @param _retrievalLivenessExtraInfo Detailed information of the matched template. Only the template with the highest similarity is returned.
                      * 
                      */
                     void SetRetrievalLivenessExtraInfo(const std::vector<RetrievalLivenessExtraInfo>& _retrievalLivenessExtraInfo);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Detailed information of the hit template, return only the template information with the highest similarity.
+                     * Detailed information of the matched template. Only the template with the highest similarity is returned.
                      */
                     std::vector<RetrievalLivenessExtraInfo> m_retrievalLivenessExtraInfo;
                     bool m_retrievalLivenessExtraInfoHasBeenSet;

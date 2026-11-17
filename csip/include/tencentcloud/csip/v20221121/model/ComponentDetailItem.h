@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Associated component & path description
+                * Associated component & path details
                 */
                 class ComponentDetailItem : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取cache hit version
-                     * @return Version cache hit version
+                     * 获取Hit version
+                     * @return Version Hit version
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置cache hit version
-                     * @param _version cache hit version
+                     * 设置Hit version
+                     * @param _version Hit version
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -139,7 +139,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * cache hit version
+                     * Hit version
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The top-ranked data record
+                * Top data record
                 */
                 class TopDataRecord : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The query dimension value.
-                     * @return TypeKey The query dimension value.
+                     * 获取Dimension value to query.
+                     * @return TypeKey Dimension value to query.
                      * 
                      */
                     std::string GetTypeKey() const;
 
                     /**
-                     * 设置The query dimension value.
-                     * @param _typeKey The query dimension value.
+                     * 设置Dimension value to query.
+                     * @param _typeKey Dimension value to query.
                      * 
                      */
                     void SetTypeKey(const std::string& _typeKey);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TypeKeyHasBeenSet() const;
 
                     /**
-                     * 获取Top data rankings
-                     * @return DetailData Top data rankings
+                     * 获取top data ranking.
+                     * @return DetailData top data ranking.
                      * 
                      */
                     std::vector<TopDetailData> GetDetailData() const;
 
                     /**
-                     * 设置Top data rankings
-                     * @param _detailData Top data rankings
+                     * 设置top data ranking.
+                     * @param _detailData top data ranking.
                      * 
                      */
                     void SetDetailData(const std::vector<TopDetailData>& _detailData);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The query dimension value.
+                     * Dimension value to query.
                      */
                     std::string m_typeKey;
                     bool m_typeKeyHasBeenSet;
 
                     /**
-                     * Top data rankings
+                     * top data ranking.
                      */
                     std::vector<TopDetailData> m_detailData;
                     bool m_detailDataHasBeenSet;

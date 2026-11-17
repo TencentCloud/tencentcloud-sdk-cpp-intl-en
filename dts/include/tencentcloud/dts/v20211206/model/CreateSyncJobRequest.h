@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
-                     * @return PayMode Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+                     * 获取Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+                     * @return PayMode Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
-                     * @param _payMode Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+                     * 设置Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+                     * @param _payMode Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool SpecificationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeSpan 
+                     * 获取Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
+                     * @return TimeSpan Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
                      * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
-                     * 设置
-                     * @param _timeSpan 
+                     * 设置Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
+                     * @param _timeSpan Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
                      * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
@@ -319,7 +319,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+                     * Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
@@ -355,7 +355,7 @@ namespace TencentCloud
                     bool m_specificationHasBeenSet;
 
                     /**
-                     * 
+                     * Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;

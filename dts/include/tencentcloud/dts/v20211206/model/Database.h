@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbName Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
+                     * @return DbName <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dbName Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
+                     * @param _dbName <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -74,19 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DbNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewDbName Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
+                     * @return NewDbName <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
                      * 
                      */
                     std::string GetNewDbName() const;
 
                     /**
-                     * 设置Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _newDbName Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
+                     * @param _newDbName <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
                      * 
                      */
                     void SetNewDbName(const std::string& _newDbName);
@@ -99,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NewDbNameHasBeenSet() const;
 
                     /**
-                     * 获取Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
+                     * @return DbMode <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
                      * 
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
+                     * @param _dbMode <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
                      * 
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -124,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SchemaName The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>schema for migration or synchronization</p>
+                     * @return SchemaName <p>schema for migration or synchronization</p>
                      * 
                      */
                     std::string GetSchemaName() const;
 
                     /**
-                     * 设置The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _schemaName The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>schema for migration or synchronization</p>
+                     * @param _schemaName <p>schema for migration or synchronization</p>
                      * 
                      */
                     void SetSchemaName(const std::string& _schemaName);
@@ -149,19 +133,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SchemaNameHasBeenSet() const;
 
                     /**
-                     * 获取Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewSchemaName Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>schema name after migration or synchronization</p>
+                     * @return NewSchemaName <p>schema name after migration or synchronization</p>
                      * 
                      */
                     std::string GetNewSchemaName() const;
 
                     /**
-                     * 设置Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _newSchemaName Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>schema name after migration or synchronization</p>
+                     * @param _newSchemaName <p>schema name after migration or synchronization</p>
                      * 
                      */
                     void SetNewSchemaName(const std::string& _newSchemaName);
@@ -174,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NewSchemaNameHasBeenSet() const;
 
                     /**
-                     * 获取Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SchemaMode Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
+                     * @return SchemaMode <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
                      * 
                      */
                     std::string GetSchemaMode() const;
 
                     /**
-                     * 设置Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _schemaMode Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
+                     * @param _schemaMode <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
                      * 
                      */
                     void SetSchemaMode(const std::string& _schemaMode);
@@ -199,19 +175,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SchemaModeHasBeenSet() const;
 
                     /**
-                     * 获取Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
+                     * @return TableMode <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
                      * 
                      */
                     std::string GetTableMode() const;
 
                     /**
-                     * 设置Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
+                     * @param _tableMode <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
                      * 
                      */
                     void SetTableMode(const std::string& _tableMode);
@@ -224,19 +196,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TableModeHasBeenSet() const;
 
                     /**
-                     * 获取The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Tables The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
+                     * @return Tables <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
                      * 
                      */
                     std::vector<Table> GetTables() const;
 
                     /**
-                     * 设置The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tables The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
+                     * @param _tables <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
                      * 
                      */
                     void SetTables(const std::vector<Table>& _tables);
@@ -249,19 +217,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TablesHasBeenSet() const;
 
                     /**
-                     * 获取View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ViewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
+                     * @return ViewMode <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
                      * 
                      */
                     std::string GetViewMode() const;
 
                     /**
-                     * 设置View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _viewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
+                     * @param _viewMode <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
                      * 
                      */
                     void SetViewMode(const std::string& _viewMode);
@@ -274,19 +238,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewModeHasBeenSet() const;
 
                     /**
-                     * 获取The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Views The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>View object set. When ViewMode is Partial, this item requires filling in.</p>
+                     * @return Views <p>View object set. When ViewMode is Partial, this item requires filling in.</p>
                      * 
                      */
                     std::vector<View> GetViews() const;
 
                     /**
-                     * 设置The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _views The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>View object set. When ViewMode is Partial, this item requires filling in.</p>
+                     * @param _views <p>View object set. When ViewMode is Partial, this item requires filling in.</p>
                      * 
                      */
                     void SetViews(const std::vector<View>& _views);
@@ -299,19 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewsHasBeenSet() const;
 
                     /**
-                     * 获取Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FunctionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
+                     * @return FunctionMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
                      * 
                      */
                     std::string GetFunctionMode() const;
 
                     /**
-                     * 设置Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _functionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
+                     * @param _functionMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
                      * 
                      */
                     void SetFunctionMode(const std::string& _functionMode);
@@ -324,19 +280,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FunctionModeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Functions This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>This item needs to be filled in when FunctionMode value is Partial.</p>
+                     * @return Functions <p>This item needs to be filled in when FunctionMode value is Partial.</p>
                      * 
                      */
                     std::vector<std::string> GetFunctions() const;
 
                     /**
-                     * 设置This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _functions This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>This item needs to be filled in when FunctionMode value is Partial.</p>
+                     * @param _functions <p>This item needs to be filled in when FunctionMode value is Partial.</p>
                      * 
                      */
                     void SetFunctions(const std::vector<std::string>& _functions);
@@ -349,19 +301,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FunctionsHasBeenSet() const;
 
                     /**
-                     * 获取Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
+                     * @return ProcedureMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
                      * 
                      */
                     std::string GetProcedureMode() const;
 
                     /**
-                     * 设置Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _procedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
+                     * @param _procedureMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
                      * 
                      */
                     void SetProcedureMode(const std::string& _procedureMode);
@@ -374,19 +322,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProcedureModeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Procedures This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
+                     * @return Procedures <p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
                      * 
                      */
                     std::vector<std::string> GetProcedures() const;
 
                     /**
-                     * 设置This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _procedures This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
+                     * @param _procedures <p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
                      * 
                      */
                     void SetProcedures(const std::vector<std::string>& _procedures);
@@ -399,19 +343,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProceduresHasBeenSet() const;
 
                     /**
-                     * 获取Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
+                     * @return TriggerMode <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
                      * 
                      */
                     std::string GetTriggerMode() const;
 
                     /**
-                     * 设置Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _triggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
+                     * @param _triggerMode <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
                      * 
                      */
                     void SetTriggerMode(const std::string& _triggerMode);
@@ -424,19 +364,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TriggerModeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>When TriggerMode is partial, specify the trigger name to migrate.</p>
+                     * @return Triggers <p>When TriggerMode is partial, specify the trigger name to migrate.</p>
                      * 
                      */
                     std::vector<std::string> GetTriggers() const;
 
                     /**
-                     * 设置This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>When TriggerMode is partial, specify the trigger name to migrate.</p>
+                     * @param _triggers <p>When TriggerMode is partial, specify the trigger name to migrate.</p>
                      * 
                      */
                     void SetTriggers(const std::vector<std::string>& _triggers);
@@ -449,19 +385,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TriggersHasBeenSet() const;
 
                     /**
-                     * 获取Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
+                     * @return EventMode <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
                      * 
                      */
                     std::string GetEventMode() const;
 
                     /**
-                     * 设置Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
+                     * @param _eventMode <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
                      * 
                      */
                     void SetEventMode(const std::string& _eventMode);
@@ -474,19 +406,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EventModeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>When EventMode is partial, specify the event name to migrate.</p>
+                     * @return Events <p>When EventMode is partial, specify the event name to migrate.</p>
                      * 
                      */
                     std::vector<std::string> GetEvents() const;
 
                     /**
-                     * 设置This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>When EventMode is partial, specify the event name to migrate.</p>
+                     * @param _events <p>When EventMode is partial, specify the event name to migrate.</p>
                      * 
                      */
                     void SetEvents(const std::vector<std::string>& _events);
@@ -501,127 +429,109 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
 
                     /**
-                     * Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
                      */
                     std::string m_newDbName;
                     bool m_newDbNameHasBeenSet;
 
                     /**
-                     * Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>schema for migration or synchronization</p>
                      */
                     std::string m_schemaName;
                     bool m_schemaNameHasBeenSet;
 
                     /**
-                     * Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>schema name after migration or synchronization</p>
                      */
                     std::string m_newSchemaName;
                     bool m_newSchemaNameHasBeenSet;
 
                     /**
-                     * Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
                      */
                     std::string m_schemaMode;
                     bool m_schemaModeHasBeenSet;
 
                     /**
-                     * Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
                      */
                     std::string m_tableMode;
                     bool m_tableModeHasBeenSet;
 
                     /**
-                     * The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
                      */
                     std::vector<Table> m_tables;
                     bool m_tablesHasBeenSet;
 
                     /**
-                     * View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
                      */
                     std::string m_viewMode;
                     bool m_viewModeHasBeenSet;
 
                     /**
-                     * The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>View object set. When ViewMode is Partial, this item requires filling in.</p>
                      */
                     std::vector<View> m_views;
                     bool m_viewsHasBeenSet;
 
                     /**
-                     * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
                      */
                     std::string m_functionMode;
                     bool m_functionModeHasBeenSet;
 
                     /**
-                     * This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>This item needs to be filled in when FunctionMode value is Partial.</p>
                      */
                     std::vector<std::string> m_functions;
                     bool m_functionsHasBeenSet;
 
                     /**
-                     * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
                      */
                     std::string m_procedureMode;
                     bool m_procedureModeHasBeenSet;
 
                     /**
-                     * This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
                      */
                     std::vector<std::string> m_procedures;
                     bool m_proceduresHasBeenSet;
 
                     /**
-                     * Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
                      */
                     std::string m_triggerMode;
                     bool m_triggerModeHasBeenSet;
 
                     /**
-                     * This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>When TriggerMode is partial, specify the trigger name to migrate.</p>
                      */
                     std::vector<std::string> m_triggers;
                     bool m_triggersHasBeenSet;
 
                     /**
-                     * Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
                      */
                     std::string m_eventMode;
                     bool m_eventModeHasBeenSet;
 
                     /**
-                     * This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>When EventMode is partial, specify the event name to migrate.</p>
                      */
                     std::vector<std::string> m_events;
                     bool m_eventsHasBeenSet;

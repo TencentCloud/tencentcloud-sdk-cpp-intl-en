@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Stage name (for example: threat activity level, exploitability, vulnerability severity)
-                     * @return Stage Stage name (for example: threat activity level, exploitability, vulnerability severity)
+                     * 获取Stage name (for example, threat activity, exploitability, vulnerability severity)
+                     * @return Stage Stage name (for example, threat activity, exploitability, vulnerability severity)
                      * 
                      */
                     std::string GetStage() const;
 
                     /**
-                     * 设置Stage name (for example: threat activity level, exploitability, vulnerability severity)
-                     * @param _stage Stage name (for example: threat activity level, exploitability, vulnerability severity)
+                     * 设置Stage name (for example, threat activity, exploitability, vulnerability severity)
+                     * @param _stage Stage name (for example, threat activity, exploitability, vulnerability severity)
                      * 
                      */
                     void SetStage(const std::string& _stage);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StageHasBeenSet() const;
 
                     /**
-                     * 获取Rating result of this stage
-                     * @return Result Rating result of this stage
+                     * 获取Rating result of this stage.
+                     * @return Result Rating result of this stage.
                      * 
                      */
                     std::string GetResult() const;
 
                     /**
-                     * 设置Rating result of this stage
-                     * @param _result Rating result of this stage
+                     * 设置Rating result of this stage.
+                     * @param _result Rating result of this stage.
                      * 
                      */
                     void SetResult(const std::string& _result);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Stage name (for example: threat activity level, exploitability, vulnerability severity)
+                     * Stage name (for example, threat activity, exploitability, vulnerability severity)
                      */
                     std::string m_stage;
                     bool m_stageHasBeenSet;
 
                     /**
-                     * Rating result of this stage
+                     * Rating result of this stage.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;

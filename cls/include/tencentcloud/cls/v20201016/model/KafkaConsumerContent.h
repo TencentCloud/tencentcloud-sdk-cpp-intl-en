@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Kafka consumer content
+                * Kafka consumption content
                 */
                 class KafkaConsumerContent : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Consumption data format. Valid values: 0 (original content) and 1 (JSON).
-                     * @return Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+                     * 获取<p>Consumption data format. 0: Raw content; 1: JSON.</p>
+                     * @return Format <p>Consumption data format. 0: Raw content; 1: JSON.</p>
                      * 
                      */
                     int64_t GetFormat() const;
 
                     /**
-                     * 设置Consumption data format. Valid values: 0 (original content) and 1 (JSON).
-                     * @param _format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+                     * 设置<p>Consumption data format. 0: Raw content; 1: JSON.</p>
+                     * @param _format <p>Consumption data format. 0: Raw content; 1: JSON.</p>
                      * 
                      */
                     void SetFormat(const int64_t& _format);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
-                     * @return EnableTag Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
+                     * 获取<p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
+                     * @return EnableTag <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
                      * 
                      */
                     bool GetEnableTag() const;
 
                     /**
-                     * 设置Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
-                     * @param _enableTag Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
+                     * 设置<p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
+                     * @param _enableTag <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
                      * 
                      */
                     void SetEnableTag(const bool& _enableTag);
@@ -93,23 +89,15 @@ This parameter does not need to be set when `Format` is set to `0`.
                     bool EnableTagHasBeenSet() const;
 
                     /**
-                     * 获取Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
-                     * @return MetaFields Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
+                     * 获取<p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
+                     * @return MetaFields <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
                      * 
                      */
                     std::vector<std::string> GetMetaFields() const;
 
                     /**
-                     * 设置Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
-                     * @param _metaFields Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
+                     * 设置<p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
+                     * @param _metaFields <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
                      * 
                      */
                     void SetMetaFields(const std::vector<std::string>& _metaFields);
@@ -122,47 +110,15 @@ This parameter does not need to be set when `Format` is set to `0`.
                     bool MetaFieldsHasBeenSet() const;
 
                     /**
-                     * 获取tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-                     * @return TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+                     * 获取<p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
+                     * @return TagTransaction <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
                      * 
                      */
                     int64_t GetTagTransaction() const;
 
                     /**
-                     * 设置tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-                     * @param _tagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+                     * 设置<p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
+                     * @param _tagTransaction <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
                      * 
                      */
                     void SetTagTransaction(const int64_t& _tagTransaction);
@@ -175,43 +131,15 @@ Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
                     bool TagTransactionHasBeenSet() const;
 
                     /**
-                     * 获取JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-                     * @return JsonType JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+                     * 获取<p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
+                     * @return JsonType <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
                      * 
                      */
                     int64_t GetJsonType() const;
 
                     /**
-                     * 设置JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-                     * @param _jsonType JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+                     * 设置<p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
+                     * @param _jsonType <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
                      * 
                      */
                     void SetJsonType(const int64_t& _jsonType);
@@ -223,55 +151,64 @@ Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
                      */
                     bool JsonTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+                     * @return AutoConvertNumber <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    bool GetAutoConvertNumber() const;
+
+                    /**
+                     * 设置<p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+                     * @param _autoConvertNumber <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+                     * 
+                     */
+                    void SetAutoConvertNumber(const bool& _autoConvertNumber);
+
+                    /**
+                     * 判断参数 AutoConvertNumber 是否已赋值
+                     * @return AutoConvertNumber 是否已赋值
+                     * 
+                     */
+                    bool AutoConvertNumberHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+                     * <p>Consumption data format. 0: Raw content; 1: JSON.</p>
                      */
                     int64_t m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
+                     * <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
                      */
                     bool m_enableTag;
                     bool m_enableTagHasBeenSet;
 
                     /**
-                     * Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
+                     * <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
                      */
                     std::vector<std::string> m_metaFields;
                     bool m_metaFieldsHasBeenSet;
 
                     /**
-                     * tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+                     * <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
                      */
                     int64_t m_tagTransaction;
                     bool m_tagTransactionHasBeenSet;
 
                     /**
-                     * JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+                     * <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
                      */
                     int64_t m_jsonType;
                     bool m_jsonTypeHasBeenSet;
+
+                    /**
+                     * <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+                     */
+                    bool m_autoConvertNumber;
+                    bool m_autoConvertNumberHasBeenSet;
 
                 };
             }

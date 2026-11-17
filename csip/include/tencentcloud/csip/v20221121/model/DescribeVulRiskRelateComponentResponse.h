@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>List of affected components for the vulnerability</p>
-                     * @return List <p>List of affected components for the vulnerability</p>
+                     * 获取<p>List of affected components</p>
+                     * @return List <p>List of affected components</p>
                      * 
                      */
                     std::vector<VulComponentSummary> GetList() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>List of affected components for the vulnerability</p>
+                     * <p>List of affected components</p>
                      */
                     std::vector<VulComponentSummary> m_list;
                     bool m_listHasBeenSet;

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/TopicRule.h>
+#include <tencentcloud/dts/v20211206/model/KeyValuePairOption.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sync options configured when the target database is Kafka
+                * Synchronization option fields added when the destination is Kafka.
                 */
                 class KafkaOption : public AbstractModel
                 {
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
-                     * @return DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+                     * 获取<p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
+                     * @return DataType <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
                      * 
                      */
                     std::string GetDataType() const;
 
                     /**
-                     * 设置Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
-                     * @param _dataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+                     * 设置<p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
+                     * @param _dataType <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
                      * 
                      */
                     void SetDataType(const std::string& _dataType);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool DataTypeHasBeenSet() const;
 
                     /**
-                     * 获取Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
-                     * @return TopicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+                     * 获取<p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
+                     * @return TopicType <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
                      * 
                      */
                     std::string GetTopicType() const;
 
                     /**
-                     * 设置Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
-                     * @param _topicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+                     * 设置<p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
+                     * @param _topicType <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
                      * 
                      */
                     void SetTopicType(const std::string& _topicType);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool TopicTypeHasBeenSet() const;
 
                     /**
-                     * 获取Topic for DDL storage
-                     * @return DDLTopicName Topic for DDL storage
+                     * 获取<p>topic used to store ddl</p>
+                     * @return DDLTopicName <p>topic used to store ddl</p>
                      * 
                      */
                     std::string GetDDLTopicName() const;
 
                     /**
-                     * 设置Topic for DDL storage
-                     * @param _dDLTopicName Topic for DDL storage
+                     * 设置<p>topic used to store ddl</p>
+                     * @param _dDLTopicName <p>topic used to store ddl</p>
                      * 
                      */
                     void SetDDLTopicName(const std::string& _dDLTopicName);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool DDLTopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Topic description
-                     * @return TopicRules Topic description
+                     * 获取<p>Description of single topic and custom topic</p>
+                     * @return TopicRules <p>Description of single topic and custom topic</p>
                      * 
                      */
                     std::vector<TopicRule> GetTopicRules() const;
 
                     /**
-                     * 设置Topic description
-                     * @param _topicRules Topic description
+                     * 设置<p>Description of single topic and custom topic</p>
+                     * @param _topicRules <p>Description of single topic and custom topic</p>
                      * 
                      */
                     void SetTopicRules(const std::vector<TopicRule>& _topicRules);
@@ -131,31 +132,58 @@ namespace TencentCloud
                      */
                     bool TopicRulesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+                     * @return DataOption <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+                     * 
+                     */
+                    std::vector<KeyValuePairOption> GetDataOption() const;
+
+                    /**
+                     * 设置<p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+                     * @param _dataOption <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+                     * 
+                     */
+                    void SetDataOption(const std::vector<KeyValuePairOption>& _dataOption);
+
+                    /**
+                     * 判断参数 DataOption 是否已赋值
+                     * @return DataOption 是否已赋值
+                     * 
+                     */
+                    bool DataOptionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+                     * <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
                      */
                     std::string m_dataType;
                     bool m_dataTypeHasBeenSet;
 
                     /**
-                     * Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+                     * <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
                      */
                     std::string m_topicType;
                     bool m_topicTypeHasBeenSet;
 
                     /**
-                     * Topic for DDL storage
+                     * <p>topic used to store ddl</p>
                      */
                     std::string m_dDLTopicName;
                     bool m_dDLTopicNameHasBeenSet;
 
                     /**
-                     * Topic description
+                     * <p>Description of single topic and custom topic</p>
                      */
                     std::vector<TopicRule> m_topicRules;
                     bool m_topicRulesHasBeenSet;
+
+                    /**
+                     * <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+                     */
+                    std::vector<KeyValuePairOption> m_dataOption;
+                    bool m_dataOptionHasBeenSet;
 
                 };
             }

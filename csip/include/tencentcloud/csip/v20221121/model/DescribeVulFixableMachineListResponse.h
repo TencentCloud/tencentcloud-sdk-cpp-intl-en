@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Repair host list</p>
-                     * @return Data <p>Repair host list</p>
+                     * 获取<p>Repairable host list</p>
+                     * @return Data <p>Repairable host list</p>
                      * 
                      */
                     std::vector<VulFixableMachineItem> GetData() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool FixableCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of hosts that cannot be one-click repaired</p>
-                     * @return NotFixableCount <p>Number of hosts that cannot be one-click repaired</p>
+                     * 获取<p>Number of hosts that cannot be repaired with one click</p>
+                     * @return NotFixableCount <p>Number of hosts that cannot be repaired with one click</p>
                      * 
                      */
                     int64_t GetNotFixableCount() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool NotFixableCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
-                     * @return VulSummary <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
+                     * 获取<p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
+                     * @return VulSummary <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
                      * 
                      */
                     std::vector<VulFixSummaryItem> GetVulSummary() const;
@@ -118,7 +118,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Repair host list</p>
+                     * <p>Repairable host list</p>
                      */
                     std::vector<VulFixableMachineItem> m_data;
                     bool m_dataHasBeenSet;
@@ -136,13 +136,13 @@ namespace TencentCloud
                     bool m_fixableCountHasBeenSet;
 
                     /**
-                     * <p>Number of hosts that cannot be one-click repaired</p>
+                     * <p>Number of hosts that cannot be repaired with one click</p>
                      */
                     int64_t m_notFixableCount;
                     bool m_notFixableCountHasBeenSet;
 
                     /**
-                     * <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
+                     * <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
                      */
                     std::vector<VulFixSummaryItem> m_vulSummary;
                     bool m_vulSummaryHasBeenSet;

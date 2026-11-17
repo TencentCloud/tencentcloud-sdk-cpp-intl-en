@@ -191,8 +191,8 @@ namespace TencentCloud
                     bool IsolateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpireTime() const;
@@ -219,8 +219,8 @@ namespace TencentCloud
                     bool OfflineTimeHasBeenSet() const;
 
                     /**
-                     * 获取Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-                     * @return PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * 获取Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+                     * @return PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      * 
                      */
                     int64_t GetPayType() const;
@@ -349,8 +349,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KafkaConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KafkaVersion 
+                     * 获取Subscribe to version information for the built-in Kafka
+                     * @return KafkaVersion Subscribe to version information for the built-in Kafka
                      * 
                      */
                     std::string GetKafkaVersion() const;
@@ -453,8 +453,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExtraAttrHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubscribeVersion 
+                     * 获取Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
+                     * @return SubscribeVersion Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
                      * 
                      */
                     std::string GetSubscribeVersion() const;
@@ -467,8 +467,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubscribeVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConsumerVpcId 
+                     * 获取VPC where the consumer-side address is located
+                     * @return ConsumerVpcId VPC where the consumer-side address is located
                      * 
                      */
                     std::string GetConsumerVpcId() const;
@@ -481,8 +481,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConsumerVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConsumerSubnetId 
+                     * 获取Subnet where the consumer-side address is located
+                     * @return ConsumerSubnetId Subnet where the consumer-side address is located
                      * 
                      */
                     std::string GetConsumerSubnetId() const;
@@ -495,8 +495,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConsumerSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceClass 
+                     * 获取Subscribe to instance specifications
+                     * @return InstanceClass Subscribe to instance specifications
                      * 
                      */
                     std::string GetInstanceClass() const;
@@ -571,7 +571,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isolateTimeHasBeenSet;
 
                     /**
-                     * Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
@@ -583,7 +583,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_offlineTimeHasBeenSet;
 
                     /**
-                     * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+                     * Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
                      */
                     int64_t m_payType;
                     bool m_payTypeHasBeenSet;
@@ -639,7 +639,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_kafkaConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Subscribe to version information for the built-in Kafka
                      */
                     std::string m_kafkaVersion;
                     bool m_kafkaVersionHasBeenSet;
@@ -684,25 +684,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_extraAttrHasBeenSet;
 
                     /**
-                     * 
+                     * Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
                      */
                     std::string m_subscribeVersion;
                     bool m_subscribeVersionHasBeenSet;
 
                     /**
-                     * 
+                     * VPC where the consumer-side address is located
                      */
                     std::string m_consumerVpcId;
                     bool m_consumerVpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * Subnet where the consumer-side address is located
                      */
                     std::string m_consumerSubnetId;
                     bool m_consumerSubnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Subscribe to instance specifications
                      */
                     std::string m_instanceClass;
                     bool m_instanceClassHasBeenSet;

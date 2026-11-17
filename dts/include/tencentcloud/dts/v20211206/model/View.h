@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取View name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ViewName View name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取View name.
+                     * @return ViewName View name.
                      * 
                      */
                     std::string GetViewName() const;
 
                     /**
-                     * 设置View name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _viewName View name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置View name.
+                     * @param _viewName View name.
                      * 
                      */
                     void SetViewName(const std::string& _viewName);
@@ -72,15 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewNameHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Reserved field. Currently, view renaming is not supported.
+                     * @return NewViewName Reserved field. Currently, view renaming is not supported.
                      * 
                      */
                     std::string GetNewViewName() const;
 
                     /**
-                     * 设置Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _newViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Reserved field. Currently, view renaming is not supported.
+                     * @param _newViewName Reserved field. Currently, view renaming is not supported.
                      * 
                      */
                     void SetNewViewName(const std::string& _newViewName);
@@ -95,14 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * View name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * View name.
                      */
                     std::string m_viewName;
                     bool m_viewNameHasBeenSet;
 
                     /**
-                     * Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Reserved field. Currently, view renaming is not supported.
                      */
                     std::string m_newViewName;
                     bool m_newViewNameHasBeenSet;

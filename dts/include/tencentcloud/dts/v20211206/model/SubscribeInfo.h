@@ -180,15 +180,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
-                     * @return Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+                     * 获取Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
+                     * @return Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
-                     * @param _status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+                     * 设置Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
+                     * @param _status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -285,15 +285,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsolateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _expireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -498,6 +498,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ErrorsHasBeenSet() const;
 
+                    /**
+                     * 获取Subscribe to instance specifications
+                     * @return InstanceClass Subscribe to instance specifications
+                     * 
+                     */
+                    std::string GetInstanceClass() const;
+
+                    /**
+                     * 设置Subscribe to instance specifications
+                     * @param _instanceClass Subscribe to instance specifications
+                     * 
+                     */
+                    void SetInstanceClass(const std::string& _instanceClass);
+
+                    /**
+                     * 判断参数 InstanceClass 是否已赋值
+                     * @return InstanceClass 是否已赋值
+                     * 
+                     */
+                    bool InstanceClassHasBeenSet() const;
+
+                    /**
+                     * 获取Routing Phase for the New Version of Subscription Consumption
+                     * @return ConsumerRoutePhase Routing Phase for the New Version of Subscription Consumption
+                     * 
+                     */
+                    std::string GetConsumerRoutePhase() const;
+
+                    /**
+                     * 设置Routing Phase for the New Version of Subscription Consumption
+                     * @param _consumerRoutePhase Routing Phase for the New Version of Subscription Consumption
+                     * 
+                     */
+                    void SetConsumerRoutePhase(const std::string& _consumerRoutePhase);
+
+                    /**
+                     * 判断参数 ConsumerRoutePhase 是否已赋值
+                     * @return ConsumerRoutePhase 是否已赋值
+                     * 
+                     */
+                    bool ConsumerRoutePhaseHasBeenSet() const;
+
                 private:
 
                     /**
@@ -538,7 +580,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+                     * Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -568,7 +610,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_isolateTimeHasBeenSet;
 
                     /**
-                     * Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
@@ -627,6 +669,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<SubsErr> m_errors;
                     bool m_errorsHasBeenSet;
+
+                    /**
+                     * Subscribe to instance specifications
+                     */
+                    std::string m_instanceClass;
+                    bool m_instanceClassHasBeenSet;
+
+                    /**
+                     * Routing Phase for the New Version of Subscription Consumption
+                     */
+                    std::string m_consumerRoutePhase;
+                    bool m_consumerRoutePhaseHasBeenSet;
 
                 };
             }

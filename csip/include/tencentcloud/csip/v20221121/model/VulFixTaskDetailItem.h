@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability repair task details
+                * Vulnerability repair task details item
                 */
                 class VulFixTaskDetailItem : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Vulnerability ID to be repaired</p>
-                     * @return VulId <p>Vulnerability ID to be repaired</p>
+                     * 获取<p>ID of the repaired vulnerability</p>
+                     * @return VulId <p>ID of the repaired vulnerability</p>
                      * 
                      */
                     int64_t GetVulId() const;
 
                     /**
-                     * 设置<p>Vulnerability ID to be repaired</p>
-                     * @param _vulId <p>Vulnerability ID to be repaired</p>
+                     * 设置<p>ID of the repaired vulnerability</p>
+                     * @param _vulId <p>ID of the repaired vulnerability</p>
                      * 
                      */
                     void SetVulId(const int64_t& _vulId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VulIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Patch ID of the fixed KB</p>
-                     * @return KBId <p>Patch ID of the fixed KB</p>
+                     * 获取<p>KB patch ID repaired</p>
+                     * @return KBId <p>KB patch ID repaired</p>
                      * 
                      */
                     int64_t GetKBId() const;
 
                     /**
-                     * 设置<p>Patch ID of the fixed KB</p>
-                     * @param _kBId <p>Patch ID of the fixed KB</p>
+                     * 设置<p>KB patch ID repaired</p>
+                     * @param _kBId <p>KB patch ID repaired</p>
                      * 
                      */
                     void SetKBId(const int64_t& _kBId);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool VulNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
-                     * @return Status <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+                     * 获取<p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+                     * @return Status <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
-                     * @param _status <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+                     * 设置<p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+                     * @param _status <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
-                     * @return FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+                     * 获取<p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
+                     * @return FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
                      * 
                      */
                     int64_t GetFixStatus() const;
 
                     /**
-                     * 设置<p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
-                     * @param _fixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+                     * 设置<p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
+                     * @param _fixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
                      * 
                      */
                     void SetFixStatus(const int64_t& _fixStatus);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool FixStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
-                     * @return SnapshotStatus <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+                     * 获取<p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+                     * @return SnapshotStatus <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
                      * 
                      */
                     int64_t GetSnapshotStatus() const;
 
                     /**
-                     * 设置<p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
-                     * @param _snapshotStatus <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+                     * 设置<p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+                     * @param _snapshotStatus <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
                      * 
                      */
                     void SetSnapshotStatus(const int64_t& _snapshotStatus);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool ExceptionMessageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
-                     * @return StartTime <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * 获取<p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @return StartTime <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置<p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
-                     * @param _startTime <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * 设置<p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @param _startTime <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool SnapshotExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
-                     * @return SnapshotFailReason <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+                     * 获取<p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
+                     * @return SnapshotFailReason <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
                      * 
                      */
                     std::string GetSnapshotFailReason() const;
 
                     /**
-                     * 设置<p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
-                     * @param _snapshotFailReason <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+                     * 设置<p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
+                     * @param _snapshotFailReason <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
                      * 
                      */
                     void SetSnapshotFailReason(const std::string& _snapshotFailReason);
@@ -418,13 +418,13 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Vulnerability ID to be repaired</p>
+                     * <p>ID of the repaired vulnerability</p>
                      */
                     int64_t m_vulId;
                     bool m_vulIdHasBeenSet;
 
                     /**
-                     * <p>Patch ID of the fixed KB</p>
+                     * <p>KB patch ID repaired</p>
                      */
                     int64_t m_kBId;
                     bool m_kBIdHasBeenSet;
@@ -454,19 +454,19 @@ namespace TencentCloud
                     bool m_vulNameHasBeenSet;
 
                     /**
-                     * <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+                     * <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+                     * <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
                      */
                     int64_t m_fixStatus;
                     bool m_fixStatusHasBeenSet;
 
                     /**
-                     * <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+                     * <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
                      */
                     int64_t m_snapshotStatus;
                     bool m_snapshotStatusHasBeenSet;
@@ -478,7 +478,7 @@ namespace TencentCloud
                     bool m_exceptionMessageHasBeenSet;
 
                     /**
-                     * <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -502,7 +502,7 @@ namespace TencentCloud
                     bool m_snapshotExpireTimeHasBeenSet;
 
                     /**
-                     * <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+                     * <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
                      */
                     std::string m_snapshotFailReason;
                     bool m_snapshotFailReasonHasBeenSet;

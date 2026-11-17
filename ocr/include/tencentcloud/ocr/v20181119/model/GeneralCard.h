@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool MiddleNameLocalHasBeenSet() const;
 
                     /**
-                     * 获取<p>Last name</p>
-                     * @return LastName <p>Last name</p>
+                     * 获取<p>Surname</p>
+                     * @return LastName <p>Surname</p>
                      * 
                      */
                     std::string GetLastName() const;
 
                     /**
-                     * 设置<p>Last name</p>
-                     * @param _lastName <p>Last name</p>
+                     * 设置<p>Surname</p>
+                     * @param _lastName <p>Surname</p>
                      * 
                      */
                     void SetLastName(const std::string& _lastName);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool LastNameLocalHasBeenSet() const;
 
                     /**
-                     * 获取<p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
-                     * @return Sex <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+                     * 获取<p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
+                     * @return Sex <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置<p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
-                     * @param _sex <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+                     * 设置<p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
+                     * @param _sex <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool IssuedAuthorityHasBeenSet() const;
 
                     /**
-                     * 获取<p>Place where the specified file is issued</p>
-                     * @return IssuedPlace <p>Place where the specified file is issued</p>
+                     * 获取<p>Place where the file is issued.</p>
+                     * @return IssuedPlace <p>Place where the file is issued.</p>
                      * 
                      */
                     std::string GetIssuedPlace() const;
 
                     /**
-                     * 设置<p>Place where the specified file is issued</p>
-                     * @param _issuedPlace <p>Place where the specified file is issued</p>
+                     * 设置<p>Place where the file is issued.</p>
+                     * @param _issuedPlace <p>Place where the file is issued.</p>
                      * 
                      */
                     void SetIssuedPlace(const std::string& _issuedPlace);
@@ -447,15 +447,15 @@ namespace TencentCloud
                     bool ExpirationDateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
-                     * @return MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+                     * 获取<p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
+                     * @return MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
                      * 
                      */
                     std::string GetMRZLine1() const;
 
                     /**
-                     * 设置<p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
-                     * @param _mRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+                     * 设置<p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
+                     * @param _mRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
                      * 
                      */
                     void SetMRZLine1(const std::string& _mRZLine1);
@@ -510,15 +510,15 @@ namespace TencentCloud
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取<p>Address information on the document</p>
-                     * @return Address <p>Address information on the document</p>
+                     * 获取<p>Document address information</p>
+                     * @return Address <p>Document address information</p>
                      * 
                      */
                     AddressInfo GetAddress() const;
 
                     /**
-                     * 设置<p>Address information on the document</p>
-                     * @param _address <p>Address information on the document</p>
+                     * 设置<p>Document address information</p>
+                     * @param _address <p>Document address information</p>
                      * 
                      */
                     void SetAddress(const AddressInfo& _address);
@@ -615,15 +615,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取<p>Weight</p>
-                     * @return Weight <p>Weight</p>
+                     * 获取<p>Weight.</p>
+                     * @return Weight <p>Weight.</p>
                      * 
                      */
                     std::string GetWeight() const;
 
                     /**
-                     * 设置<p>Weight</p>
-                     * @param _weight <p>Weight</p>
+                     * 设置<p>Weight.</p>
+                     * @param _weight <p>Weight.</p>
                      * 
                      */
                     void SetWeight(const std::string& _weight);
@@ -657,15 +657,15 @@ namespace TencentCloud
                     bool VehicleClassHasBeenSet() const;
 
                     /**
-                     * 获取<p>Driver's license restriction condition</p>
-                     * @return Restrictions <p>Driver's license restriction condition</p>
+                     * 获取<p>Driver's license restrictions</p>
+                     * @return Restrictions <p>Driver's license restrictions</p>
                      * 
                      */
                     std::string GetRestrictions() const;
 
                     /**
-                     * 设置<p>Driver's license restriction condition</p>
-                     * @param _restrictions <p>Driver's license restriction condition</p>
+                     * 设置<p>Driver's license restrictions</p>
+                     * @param _restrictions <p>Driver's license restrictions</p>
                      * 
                      */
                     void SetRestrictions(const std::string& _restrictions);
@@ -678,15 +678,15 @@ namespace TencentCloud
                     bool RestrictionsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Driver's license extra records</p>
-                     * @return Endorsement <p>Driver's license extra records</p>
+                     * 获取<p>Additional driver's license records</p>
+                     * @return Endorsement <p>Additional driver's license records</p>
                      * 
                      */
                     std::string GetEndorsement() const;
 
                     /**
-                     * 设置<p>Driver's license extra records</p>
-                     * @param _endorsement <p>Driver's license extra records</p>
+                     * 设置<p>Additional driver's license records</p>
+                     * @param _endorsement <p>Additional driver's license records</p>
                      * 
                      */
                     void SetEndorsement(const std::string& _endorsement);
@@ -762,15 +762,15 @@ namespace TencentCloud
                     bool PassportCodeSecondHasBeenSet() const;
 
                     /**
-                     * 获取<p>Validity date, in YYYY-MM-DD format</p>
-                     * @return DueDate <p>Validity date, in YYYY-MM-DD format</p>
+                     * 获取<p>Validity period, in YYYY-MM-DD format</p>
+                     * @return DueDate <p>Validity period, in YYYY-MM-DD format</p>
                      * @deprecated
                      */
                     std::string GetDueDate() const;
 
                     /**
-                     * 设置<p>Validity date, in YYYY-MM-DD format</p>
-                     * @param _dueDate <p>Validity date, in YYYY-MM-DD format</p>
+                     * 设置<p>Validity period, in YYYY-MM-DD format</p>
+                     * @param _dueDate <p>Validity period, in YYYY-MM-DD format</p>
                      * @deprecated
                      */
                     void SetDueDate(const std::string& _dueDate);
@@ -824,6 +824,27 @@ namespace TencentCloud
                      */
                     bool RegistrationNumberHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+                     * @return DetectedCardType <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+                     * 
+                     */
+                    std::string GetDetectedCardType() const;
+
+                    /**
+                     * 设置<p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+                     * @param _detectedCardType <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+                     * 
+                     */
+                    void SetDetectedCardType(const std::string& _detectedCardType);
+
+                    /**
+                     * 判断参数 DetectedCardType 是否已赋值
+                     * @return DetectedCardType 是否已赋值
+                     * 
+                     */
+                    bool DetectedCardTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -875,7 +896,7 @@ namespace TencentCloud
                     bool m_middleNameLocalHasBeenSet;
 
                     /**
-                     * <p>Last name</p>
+                     * <p>Surname</p>
                      */
                     std::string m_lastName;
                     bool m_lastNameHasBeenSet;
@@ -887,7 +908,7 @@ namespace TencentCloud
                     bool m_lastNameLocalHasBeenSet;
 
                     /**
-                     * <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+                     * <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
@@ -917,7 +938,7 @@ namespace TencentCloud
                     bool m_issuedAuthorityHasBeenSet;
 
                     /**
-                     * <p>Place where the specified file is issued</p>
+                     * <p>Place where the file is issued.</p>
                      */
                     std::string m_issuedPlace;
                     bool m_issuedPlaceHasBeenSet;
@@ -941,7 +962,7 @@ namespace TencentCloud
                     bool m_expirationDateHasBeenSet;
 
                     /**
-                     * <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+                     * <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
                      */
                     std::string m_mRZLine1;
                     bool m_mRZLine1HasBeenSet;
@@ -959,7 +980,7 @@ namespace TencentCloud
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * <p>Address information on the document</p>
+                     * <p>Document address information</p>
                      */
                     AddressInfo m_address;
                     bool m_addressHasBeenSet;
@@ -989,7 +1010,7 @@ namespace TencentCloud
                     bool m_heightHasBeenSet;
 
                     /**
-                     * <p>Weight</p>
+                     * <p>Weight.</p>
                      */
                     std::string m_weight;
                     bool m_weightHasBeenSet;
@@ -1001,13 +1022,13 @@ namespace TencentCloud
                     bool m_vehicleClassHasBeenSet;
 
                     /**
-                     * <p>Driver's license restriction condition</p>
+                     * <p>Driver's license restrictions</p>
                      */
                     std::string m_restrictions;
                     bool m_restrictionsHasBeenSet;
 
                     /**
-                     * <p>Driver's license extra records</p>
+                     * <p>Additional driver's license records</p>
                      */
                     std::string m_endorsement;
                     bool m_endorsementHasBeenSet;
@@ -1031,7 +1052,7 @@ namespace TencentCloud
                     bool m_passportCodeSecondHasBeenSet;
 
                     /**
-                     * <p>Validity date, in YYYY-MM-DD format</p>
+                     * <p>Validity period, in YYYY-MM-DD format</p>
                      */
                     std::string m_dueDate;
                     bool m_dueDateHasBeenSet;
@@ -1047,6 +1068,12 @@ namespace TencentCloud
                      */
                     std::string m_registrationNumber;
                     bool m_registrationNumberHasBeenSet;
+
+                    /**
+                     * <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+                     */
+                    std::string m_detectedCardType;
+                    bool m_detectedCardTypeHasBeenSet;
 
                 };
             }

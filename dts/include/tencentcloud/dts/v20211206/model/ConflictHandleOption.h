@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConditionColumn Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Columns for conditional overwrite.
+                     * @return ConditionColumn Columns for conditional overwrite.
                      * 
                      */
                     std::string GetConditionColumn() const;
 
                     /**
-                     * 设置Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conditionColumn Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Columns for conditional overwrite.
+                     * @param _conditionColumn Columns for conditional overwrite.
                      * 
                      */
                     void SetConditionColumn(const std::string& _conditionColumn);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConditionColumnHasBeenSet() const;
 
                     /**
-                     * 获取Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConditionOperator Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Condition coverage operation. Currently, only > is supported.
+                     * @return ConditionOperator Condition coverage operation. Currently, only > is supported.
                      * 
                      */
                     std::string GetConditionOperator() const;
 
                     /**
-                     * 设置Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conditionOperator Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Condition coverage operation. Currently, only > is supported.
+                     * @param _conditionOperator Condition coverage operation. Currently, only > is supported.
                      * 
                      */
                     void SetConditionOperator(const std::string& _conditionOperator);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConditionOperatorHasBeenSet() const;
 
                     /**
-                     * 获取Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConditionOrderInSrcAndDst Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Condition coverage priority processing. Supported types are >, <, and =.
+                     * @return ConditionOrderInSrcAndDst Condition coverage priority processing. Supported types are >, <, and =.
                      * 
                      */
                     std::string GetConditionOrderInSrcAndDst() const;
 
                     /**
-                     * 设置Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _conditionOrderInSrcAndDst Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Condition coverage priority processing. Supported types are >, <, and =.
+                     * @param _conditionOrderInSrcAndDst Condition coverage priority processing. Supported types are >, <, and =.
                      * 
                      */
                     void SetConditionOrderInSrcAndDst(const std::string& _conditionOrderInSrcAndDst);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Columns for conditional overwrite.
                      */
                     std::string m_conditionColumn;
                     bool m_conditionColumnHasBeenSet;
 
                     /**
-                     * Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Condition coverage operation. Currently, only > is supported.
                      */
                     std::string m_conditionOperator;
                     bool m_conditionOperatorHasBeenSet;
 
                     /**
-                     * Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Condition coverage priority processing. Supported types are >, <, and =.
                      */
                     std::string m_conditionOrderInSrcAndDst;
                     bool m_conditionOrderInSrcAndDstHasBeenSet;

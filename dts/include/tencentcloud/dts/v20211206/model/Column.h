@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Column nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return ColumnName Column nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Column name
+                     * @return ColumnName Column name
                      * 
                      */
                     std::string GetColumnName() const;
 
                     /**
-                     * 设置Column nameNote: This field may return null, indicating that no valid values can be obtained.
-                     * @param _columnName Column nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Column name
+                     * @param _columnName Column name
                      * 
                      */
                     void SetColumnName(const std::string& _columnName);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool ColumnNameHasBeenSet() const;
 
                     /**
-                     * 获取New column name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NewColumnName New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取New column name.
+                     * @return NewColumnName New column name.
                      * 
                      */
                     std::string GetNewColumnName() const;
 
                     /**
-                     * 设置New column name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _newColumnName New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置New column name.
+                     * @param _newColumnName New column name.
                      * 
                      */
                     void SetNewColumnName(const std::string& _newColumnName);
@@ -95,14 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Column nameNote: This field may return null, indicating that no valid values can be obtained.
+                     * Column name
                      */
                     std::string m_columnName;
                     bool m_columnNameHasBeenSet;
 
                     /**
-                     * New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * New column name.
                      */
                     std::string m_newColumnName;
                     bool m_newColumnNameHasBeenSet;

@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool CveIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
-                     * @return VulCategory <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+                     * 获取<p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+                     * @return VulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
                      * 
                      */
                     std::string GetVulCategory() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool VulCategoryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
-                     * @return FixTime <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * 获取<p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @return FixTime <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      * 
                      */
                     std::string GetFixTime() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool MachineNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Public IP of the server</p>
-                     * @return PublicIp <p>Public IP of the server</p>
+                     * 获取<p>Public IP of the Server</p>
+                     * @return PublicIp <p>Public IP of the Server</p>
                      * 
                      */
                     std::string GetPublicIp() const;
@@ -157,8 +157,8 @@ namespace TencentCloud
                     bool PrivateIpHasBeenSet() const;
 
                     /**
-                     * 获取<p>Associated component & path detail list</p>
-                     * @return ComponentDetails <p>Associated component & path detail list</p>
+                     * 获取<p>Associated component &amp; path detail list</p>
+                     * @return ComponentDetails <p>Associated component &amp; path detail list</p>
                      * 
                      */
                     std::vector<ComponentDetailItem> GetComponentDetails() const;
@@ -171,8 +171,8 @@ namespace TencentCloud
                     bool ComponentDetailsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Total number of associated components & paths</p>
-                     * @return TotalCount <p>Total number of associated components & paths</p>
+                     * 获取<p>Total number of associated components &amp; paths</p>
+                     * @return TotalCount <p>Total number of associated components &amp; paths</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -199,13 +199,13 @@ namespace TencentCloud
                     bool m_cveIdHasBeenSet;
 
                     /**
-                     * <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+                     * <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
                      */
                     std::string m_vulCategory;
                     bool m_vulCategoryHasBeenSet;
 
                     /**
-                     * <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
                      */
                     std::string m_fixTime;
                     bool m_fixTimeHasBeenSet;
@@ -223,7 +223,7 @@ namespace TencentCloud
                     bool m_machineNameHasBeenSet;
 
                     /**
-                     * <p>Public IP of the server</p>
+                     * <p>Public IP of the Server</p>
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
@@ -235,13 +235,13 @@ namespace TencentCloud
                     bool m_privateIpHasBeenSet;
 
                     /**
-                     * <p>Associated component & path detail list</p>
+                     * <p>Associated component &amp; path detail list</p>
                      */
                     std::vector<ComponentDetailItem> m_componentDetails;
                     bool m_componentDetailsHasBeenSet;
 
                     /**
-                     * <p>Total number of associated components & paths</p>
+                     * <p>Total number of associated components &amp; paths</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Repair task ID, used for subsequent query task status</p>
-                     * @return TaskId <p>Repair task ID, used for subsequent query task status</p>
+                     * 获取<p>Repair task ID, used for subsequent query of task status</p>
+                     * @return TaskId <p>Repair task ID, used for subsequent query of task status</p>
                      * 
                      */
                     int64_t GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Repair task ID, used for subsequent query task status</p>
+                     * <p>Repair task ID, used for subsequent query of task status</p>
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

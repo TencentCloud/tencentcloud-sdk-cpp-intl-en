@@ -41,7 +41,9 @@ SubscribeInfo::SubscribeInfo() :
     m_endpointsHasBeenSet(false),
     m_subscribeVersionHasBeenSet(false),
     m_tagsHasBeenSet(false),
-    m_errorsHasBeenSet(false)
+    m_errorsHasBeenSet(false),
+    m_instanceClassHasBeenSet(false),
+    m_consumerRoutePhaseHasBeenSet(false)
 {
 }
 
@@ -290,6 +292,26 @@ CoreInternalOutcome SubscribeInfo::Deserialize(const rapidjson::Value &value)
         m_errorsHasBeenSet = true;
     }
 
+    if (value.HasMember("InstanceClass") && !value["InstanceClass"].IsNull())
+    {
+        if (!value["InstanceClass"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubscribeInfo.InstanceClass` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceClass = string(value["InstanceClass"].GetString());
+        m_instanceClassHasBeenSet = true;
+    }
+
+    if (value.HasMember("ConsumerRoutePhase") && !value["ConsumerRoutePhase"].IsNull())
+    {
+        if (!value["ConsumerRoutePhase"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SubscribeInfo.ConsumerRoutePhase` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_consumerRoutePhase = string(value["ConsumerRoutePhase"].GetString());
+        m_consumerRoutePhaseHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -484,6 +506,22 @@ void SubscribeInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_instanceClassHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceClass";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceClass.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_consumerRoutePhaseHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConsumerRoutePhase";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_consumerRoutePhase.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -823,5 +861,37 @@ void SubscribeInfo::SetErrors(const vector<SubsErr>& _errors)
 bool SubscribeInfo::ErrorsHasBeenSet() const
 {
     return m_errorsHasBeenSet;
+}
+
+string SubscribeInfo::GetInstanceClass() const
+{
+    return m_instanceClass;
+}
+
+void SubscribeInfo::SetInstanceClass(const string& _instanceClass)
+{
+    m_instanceClass = _instanceClass;
+    m_instanceClassHasBeenSet = true;
+}
+
+bool SubscribeInfo::InstanceClassHasBeenSet() const
+{
+    return m_instanceClassHasBeenSet;
+}
+
+string SubscribeInfo::GetConsumerRoutePhase() const
+{
+    return m_consumerRoutePhase;
+}
+
+void SubscribeInfo::SetConsumerRoutePhase(const string& _consumerRoutePhase)
+{
+    m_consumerRoutePhase = _consumerRoutePhase;
+    m_consumerRoutePhaseHasBeenSet = true;
+}
+
+bool SubscribeInfo::ConsumerRoutePhaseHasBeenSet() const
+{
+    return m_consumerRoutePhaseHasBeenSet;
 }
 

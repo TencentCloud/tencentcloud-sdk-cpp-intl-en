@@ -28,6 +28,8 @@
 #include <tencentcloud/csip/v20221121/model/ClusterIDWithAppIdItem.h>
 #include <tencentcloud/csip/v20221121/model/ImageIDWithAppIdItem.h>
 #include <tencentcloud/csip/v20221121/model/ConditionMatch.h>
+#include <tencentcloud/csip/v20221121/model/RuleContentFileOperation.h>
+#include <tencentcloud/csip/v20221121/model/RuleContentK8sAPI.h>
 
 
 namespace TencentCloud
@@ -721,6 +723,48 @@ namespace TencentCloud
                      */
                     bool ConditionMatchesHasBeenSet() const;
 
+                    /**
+                     * 获取<p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * @return FileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * 
+                     */
+                    RuleContentFileOperation GetFileOperationRules() const;
+
+                    /**
+                     * 设置<p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * @param _fileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     * 
+                     */
+                    void SetFileOperationRules(const RuleContentFileOperation& _fileOperationRules);
+
+                    /**
+                     * 判断参数 FileOperationRules 是否已赋值
+                     * @return FileOperationRules 是否已赋值
+                     * 
+                     */
+                    bool FileOperationRulesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+                     * @return K8sApiRule <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+                     * 
+                     */
+                    RuleContentK8sAPI GetK8sApiRule() const;
+
+                    /**
+                     * 设置<p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+                     * @param _k8sApiRule <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+                     * 
+                     */
+                    void SetK8sApiRule(const RuleContentK8sAPI& _k8sApiRule);
+
+                    /**
+                     * 判断参数 K8sApiRule 是否已赋值
+                     * @return K8sApiRule 是否已赋值
+                     * 
+                     */
+                    bool K8sApiRuleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -914,6 +958,18 @@ namespace TencentCloud
                      */
                     std::vector<ConditionMatch> m_conditionMatches;
                     bool m_conditionMatchesHasBeenSet;
+
+                    /**
+                     * <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+                     */
+                    RuleContentFileOperation m_fileOperationRules;
+                    bool m_fileOperationRulesHasBeenSet;
+
+                    /**
+                     * <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+                     */
+                    RuleContentK8sAPI m_k8sApiRule;
+                    bool m_k8sApiRuleHasBeenSet;
 
                 };
             }

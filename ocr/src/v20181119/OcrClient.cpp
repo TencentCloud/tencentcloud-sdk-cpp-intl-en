@@ -1040,6 +1040,56 @@ OcrClient::RecognizeDetectCardCoordsOutcomeCallable OcrClient::RecognizeDetectCa
     return prom->get_future();
 }
 
+OcrClient::RecognizeGeneralCardVerificationOutcome OcrClient::RecognizeGeneralCardVerification(const RecognizeGeneralCardVerificationRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeGeneralCardVerification");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeGeneralCardVerificationResponse rsp = RecognizeGeneralCardVerificationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeGeneralCardVerificationOutcome(rsp);
+        else
+            return RecognizeGeneralCardVerificationOutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeGeneralCardVerificationOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeGeneralCardVerificationAsync(const RecognizeGeneralCardVerificationRequest& request, const RecognizeGeneralCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RecognizeGeneralCardVerificationRequest&;
+    using Resp = RecognizeGeneralCardVerificationResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RecognizeGeneralCardVerification", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OcrClient::RecognizeGeneralCardVerificationOutcomeCallable OcrClient::RecognizeGeneralCardVerificationCallable(const RecognizeGeneralCardVerificationRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RecognizeGeneralCardVerificationOutcome>>();
+    RecognizeGeneralCardVerificationAsync(
+    request,
+    [prom](
+        const OcrClient*,
+        const RecognizeGeneralCardVerificationRequest&,
+        RecognizeGeneralCardVerificationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OcrClient::RecognizeIndonesiaIDCardOCROutcome OcrClient::RecognizeIndonesiaIDCardOCR(const RecognizeIndonesiaIDCardOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "RecognizeIndonesiaIDCardOCR");

@@ -74,6 +74,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/MLIDCard.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h
+  include/tencentcloud/faceid/v20180301/model/ExtraRiskResult.h
   include/tencentcloud/faceid/v20180301/model/CheckBankCardInformationRequest.h
   include/tencentcloud/faceid/v20180301/model/ListEKYCWebhooksRequest.h
   include/tencentcloud/faceid/v20180301/model/BankCardVerificationRequest.h
@@ -102,6 +103,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/FileInfo.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesDrivingLicense.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h
+  include/tencentcloud/faceid/v20180301/model/ExtraRiskInfo.h
   include/tencentcloud/faceid/v20180301/model/IdCardVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/WebVerificationConfigIntl.h
   include/tencentcloud/faceid/v20180301/model/CompareResult.h
@@ -121,6 +123,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/UpdateAMLCustomerProfileResponse.h
   include/tencentcloud/faceid/v20180301/model/BankCard2EVerificationRequest.h
   include/tencentcloud/faceid/v20180301/model/Address.h
+  include/tencentcloud/faceid/v20180301/model/BlackListItem.h
   include/tencentcloud/faceid/v20180301/model/RetrievalLivenessExtraInfo.h
   include/tencentcloud/faceid/v20180301/model/ImageRecognitionV2Request.h
   include/tencentcloud/faceid/v20180301/model/MainlandIDCard.h
@@ -133,6 +136,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/GetSdkVerificationResultRequest.h
   include/tencentcloud/faceid/v20180301/model/RunAMLNameScreeningRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplyLivenessTokenRequest.h
+  include/tencentcloud/faceid/v20180301/model/RiskDetailItem.h
   include/tencentcloud/faceid/v20180301/model/GetNFCTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/UpdateAMLOngoingScreeningStatusRequest.h
   include/tencentcloud/faceid/v20180301/model/TaiWanIDCard.h
@@ -196,6 +200,7 @@ set(faceid_src
   src/v20180301/model/LivenessCompareRequest.cpp
   src/v20180301/model/MLIDCard.cpp
   src/v20180301/model/GetFaceIdResultIntlResponse.cpp
+  src/v20180301/model/ExtraRiskResult.cpp
   src/v20180301/model/CheckBankCardInformationRequest.cpp
   src/v20180301/model/ListEKYCWebhooksRequest.cpp
   src/v20180301/model/BankCardVerificationRequest.cpp
@@ -224,6 +229,7 @@ set(faceid_src
   src/v20180301/model/FileInfo.cpp
   src/v20180301/model/PhilippinesDrivingLicense.cpp
   src/v20180301/model/GenerateReflectSequenceResponse.cpp
+  src/v20180301/model/ExtraRiskInfo.cpp
   src/v20180301/model/IdCardVerificationResponse.cpp
   src/v20180301/model/WebVerificationConfigIntl.cpp
   src/v20180301/model/CompareResult.cpp
@@ -243,6 +249,7 @@ set(faceid_src
   src/v20180301/model/UpdateAMLCustomerProfileResponse.cpp
   src/v20180301/model/BankCard2EVerificationRequest.cpp
   src/v20180301/model/Address.cpp
+  src/v20180301/model/BlackListItem.cpp
   src/v20180301/model/RetrievalLivenessExtraInfo.cpp
   src/v20180301/model/ImageRecognitionV2Request.cpp
   src/v20180301/model/MainlandIDCard.cpp
@@ -255,6 +262,7 @@ set(faceid_src
   src/v20180301/model/GetSdkVerificationResultRequest.cpp
   src/v20180301/model/RunAMLNameScreeningRequest.cpp
   src/v20180301/model/ApplyLivenessTokenRequest.cpp
+  src/v20180301/model/RiskDetailItem.cpp
   src/v20180301/model/GetNFCTokenRequest.cpp
   src/v20180301/model/UpdateAMLOngoingScreeningStatusRequest.cpp
   src/v20180301/model/TaiWanIDCard.cpp

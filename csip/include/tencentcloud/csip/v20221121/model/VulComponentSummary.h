@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Host Vulnerability Component Overview
+                * Host vulnerability component overview
                 */
                 class VulComponentSummary : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Component name.</p>
-                     * @return Name <p>Component name.</p>
+                     * 获取<p>Component name</p>
+                     * @return Name <p>Component name</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Component name.</p>
-                     * @param _name <p>Component name.</p>
+                     * 设置<p>Component name</p>
+                     * @param _name <p>Component name</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Associated hosts.</p>
-                     * @return RelateHostCount <p>Associated hosts.</p>
+                     * 获取<p>Number of associated hosts</p>
+                     * @return RelateHostCount <p>Number of associated hosts</p>
                      * 
                      */
                     uint64_t GetRelateHostCount() const;
 
                     /**
-                     * 设置<p>Associated hosts.</p>
-                     * @param _relateHostCount <p>Associated hosts.</p>
+                     * 设置<p>Number of associated hosts</p>
+                     * @param _relateHostCount <p>Number of associated hosts</p>
                      * 
                      */
                     void SetRelateHostCount(const uint64_t& _relateHostCount);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Component name.</p>
+                     * <p>Component name</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Associated hosts.</p>
+                     * <p>Number of associated hosts</p>
                      */
                     uint64_t m_relateHostCount;
                     bool m_relateHostCountHasBeenSet;

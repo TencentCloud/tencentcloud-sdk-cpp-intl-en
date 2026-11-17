@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
-                     * @return JobID <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
+                     * 获取<p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
+                     * @return JobID <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
                      * 
                      */
                     std::string GetJobID() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
+                     * <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
                      */
                     std::string m_jobID;
                     bool m_jobIDHasBeenSet;

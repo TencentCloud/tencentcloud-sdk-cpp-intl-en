@@ -19,582 +19,728 @@ set(waf_public_header
   )
 
 set(waf_public_header_model
-  include/tencentcloud/waf/v20180125/model/CreateOwaspWhiteRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/PiechartItem.h
-  include/tencentcloud/waf/v20180125/model/DeleteOwaspWhiteRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMWafDLPRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/AddLLMSdkAccessResponse.h
   include/tencentcloud/waf/v20180125/model/ModifyUserLevelResponse.h
-  include/tencentcloud/waf/v20180125/model/SearchAttackLogResponse.h
-  include/tencentcloud/waf/v20180125/model/KVInt.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceNameResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeCustomRulesRspRuleListItem.h
-  include/tencentcloud/waf/v20180125/model/ModifyAntiInfoLeakRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeSkillSecScanResultResponse.h
   include/tencentcloud/waf/v20180125/model/ModifyWebshellStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeCertificateVerifyResultRequest.h
+  include/tencentcloud/waf/v20180125/model/WafRuleLimit.h
   include/tencentcloud/waf/v20180125/model/DescribeUserClbWafRegionsResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceRenewFlagResponse.h
-  include/tencentcloud/waf/v20180125/model/CreateIpAccessControlRequest.h
-  include/tencentcloud/waf/v20180125/model/TLSCiphers.h
   include/tencentcloud/waf/v20180125/model/AddAntiFakeUrlRequest.h
-  include/tencentcloud/waf/v20180125/model/WebshellStatus.h
-  include/tencentcloud/waf/v20180125/model/AddCustomWhiteRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/SearchAttackLogRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyHostFlowModeResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeOwaspWhiteRulesResponse.h
-  include/tencentcloud/waf/v20180125/model/SwitchElasticModeRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceNameRequest.h
-  include/tencentcloud/waf/v20180125/model/HostDel.h
-  include/tencentcloud/waf/v20180125/model/DeleteCustomWhiteRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeIpAccessControlResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteOwaspWhiteRuleRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeAntiLeakageItem.h
   include/tencentcloud/waf/v20180125/model/LoadBalancerPackageNew.h
   include/tencentcloud/waf/v20180125/model/DescribeOwaspWhiteRulesRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyDomainIpv6StatusResponse.h
-  include/tencentcloud/waf/v20180125/model/CCRuleData.h
-  include/tencentcloud/waf/v20180125/model/DescribeCustomRuleListRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeUserClbWafRegionsRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeHostsResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribePeakPointsRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceQpsLimitRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMWafProtectRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyHostRequest.h
+  include/tencentcloud/waf/v20180125/model/LLMDetectResult.h
   include/tencentcloud/waf/v20180125/model/DeleteHostRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyDomainPostActionResponse.h
   include/tencentcloud/waf/v20180125/model/DescribeCertificateVerifyResultResponse.h
   include/tencentcloud/waf/v20180125/model/ModifyUserSignatureRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakRulesStrategyItem.h
-  include/tencentcloud/waf/v20180125/model/ModifyApiAnalyzeStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/TLSVersion.h
-  include/tencentcloud/waf/v20180125/model/UpsertSessionResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainsResponse.h
-  include/tencentcloud/waf/v20180125/model/DeleteSessionRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceNameResponse.h
   include/tencentcloud/waf/v20180125/model/GenerateDealsAndPayNewRequest.h
-  include/tencentcloud/waf/v20180125/model/RefreshAccessCheckResultRequest.h
-  include/tencentcloud/waf/v20180125/model/AddAntiFakeUrlResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyHostResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeCiphersDetailRequest.h
-  include/tencentcloud/waf/v20180125/model/AddCustomRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/CCRuleItems.h
-  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionModeResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyDomainIpv6StatusRequest.h
-  include/tencentcloud/waf/v20180125/model/CreateIpAccessControlResponse.h
-  include/tencentcloud/waf/v20180125/model/RefreshAccessCheckResultResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakageRulesResponse.h
-  include/tencentcloud/waf/v20180125/model/SessionItem.h
+  include/tencentcloud/waf/v20180125/model/DeleteCustomWhiteRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteLLMSdkAccessRequest.h
   include/tencentcloud/waf/v20180125/model/MajorEventsPkg.h
-  include/tencentcloud/waf/v20180125/model/ModifyObjectRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyHostFlowModeRequest.h
-  include/tencentcloud/waf/v20180125/model/OwaspRule.h
-  include/tencentcloud/waf/v20180125/model/GetAttackHistogramRequest.h
-  include/tencentcloud/waf/v20180125/model/UserDomainInfo.h
-  include/tencentcloud/waf/v20180125/model/ModifyAntiInfoLeakRulesRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyProtectionStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/CCRuleLists.h
-  include/tencentcloud/waf/v20180125/model/ModifyApiAnalyzeStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeCustomWhiteRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/DeleteAntiFakeUrlResponse.h
-  include/tencentcloud/waf/v20180125/model/SearchItem.h
-  include/tencentcloud/waf/v20180125/model/UpsertCCRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeAttackTypeRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DeleteCustomWhiteRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyHostModeResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeOwaspRulesRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeCCRuleListRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyProtectionStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/ResponseCode.h
-  include/tencentcloud/waf/v20180125/model/DescribeCustomRuleListResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyDomainsCLSStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/ImportIpAccessControlResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeVipInfoRequest.h
-  include/tencentcloud/waf/v20180125/model/DeleteIpAccessControlV2Request.h
-  include/tencentcloud/waf/v20180125/model/CronJob.h
-  include/tencentcloud/waf/v20180125/model/IpAccessControlData.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMContentRuleListResponse.h
+  include/tencentcloud/waf/v20180125/model/LLMSensitiveValueLevel.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMWafProtectRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeModuleStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/LLMOptionsItem.h
+  include/tencentcloud/waf/v20180125/model/KVInt.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMWafProtectRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeWebshellStatusRequest.h
   include/tencentcloud/waf/v20180125/model/GetAttackHistogramResponse.h
-  include/tencentcloud/waf/v20180125/model/GetInstanceQpsLimitRequest.h
+  include/tencentcloud/waf/v20180125/model/KeyWordInfo.h
   include/tencentcloud/waf/v20180125/model/FiltersItemNew.h
   include/tencentcloud/waf/v20180125/model/DeleteSpartaProtectionResponse.h
-  include/tencentcloud/waf/v20180125/model/SessionData.h
-  include/tencentcloud/waf/v20180125/model/ModifyUserLevelRequest.h
-  include/tencentcloud/waf/v20180125/model/QpsData.h
-  include/tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakageRulesRequest.h
-  include/tencentcloud/waf/v20180125/model/CreateHostResponse.h
-  include/tencentcloud/waf/v20180125/model/DeleteOwaspWhiteRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/UpsertCCRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/IpAccessControlItem.h
+  include/tencentcloud/waf/v20180125/model/PiechartItem.h
   include/tencentcloud/waf/v20180125/model/DeleteHostResponse.h
-  include/tencentcloud/waf/v20180125/model/SwitchElasticModeResponse.h
-  include/tencentcloud/waf/v20180125/model/FreshAntiFakeUrlResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyBotStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DeleteSpartaProtectionRequest.h
-  include/tencentcloud/waf/v20180125/model/DomainsPartInfo.h
-  include/tencentcloud/waf/v20180125/model/DescribeAntiFakeRulesResponse.h
-  include/tencentcloud/waf/v20180125/model/AddAntiInfoLeakRulesRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyObjectResponse.h
-  include/tencentcloud/waf/v20180125/model/HostRecord.h
-  include/tencentcloud/waf/v20180125/model/CreateHostRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeSpartaProtectionInfoResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyApiAnalyzeStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/LLMHourBillTrendItem.h
+  include/tencentcloud/waf/v20180125/model/SessionData.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleResponse.h
   include/tencentcloud/waf/v20180125/model/FreshAntiFakeUrlRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeFindDomainListResponse.h
   include/tencentcloud/waf/v20180125/model/SpartaProtectionPort.h
-  include/tencentcloud/waf/v20180125/model/AddSpartaProtectionRequest.h
   include/tencentcloud/waf/v20180125/model/ModifyOwaspWhiteRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/GetInstanceQpsLimitResponse.h
-  include/tencentcloud/waf/v20180125/model/CreateDealsRequest.h
-  include/tencentcloud/waf/v20180125/model/JobDateTime.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/ClbObject.h
   include/tencentcloud/waf/v20180125/model/DescribeSessionRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyModuleStatusResponse.h
   include/tencentcloud/waf/v20180125/model/DescribePolicyStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribePortsResponse.h
   include/tencentcloud/waf/v20180125/model/ModifyIpAccessControlRequest.h
-  include/tencentcloud/waf/v20180125/model/ApiPkg.h
-  include/tencentcloud/waf/v20180125/model/AttackLogInfo.h
-  include/tencentcloud/waf/v20180125/model/DescribeModuleStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeAttackOverviewResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeCCRuleListResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyApiAnalyzeStatusRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeDomainCountInfoResponse.h
-  include/tencentcloud/waf/v20180125/model/PeakPointsItem.h
-  include/tencentcloud/waf/v20180125/model/DescribePortsRequest.h
   include/tencentcloud/waf/v20180125/model/ModifyHostModeRequest.h
-  include/tencentcloud/waf/v20180125/model/QPSPackageNew.h
-  include/tencentcloud/waf/v20180125/model/DescribeOwaspRuleTypesResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainDetailsClbRequest.h
   include/tencentcloud/waf/v20180125/model/ModifyAntiInfoLeakRuleStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainVerifyResultRequest.h
-  include/tencentcloud/waf/v20180125/model/CreateDealsGoods.h
-  include/tencentcloud/waf/v20180125/model/TimedJob.h
-  include/tencentcloud/waf/v20180125/model/DescribeTlsVersionRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeCiphersDetailResponse.h
-  include/tencentcloud/waf/v20180125/model/DealData.h
+  include/tencentcloud/waf/v20180125/model/DescribeCustomRuleListRequest.h
   include/tencentcloud/waf/v20180125/model/DeleteIpAccessControlV2Response.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspWhiteRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyBotStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainDetailsSaasRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeOwaspRulesResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleStatusResponse.h
   include/tencentcloud/waf/v20180125/model/StrategyForAntiInfoLeak.h
   include/tencentcloud/waf/v20180125/model/AddSpartaProtectionResponse.h
   include/tencentcloud/waf/v20180125/model/DescribeUserDomainInfoRequest.h
-  include/tencentcloud/waf/v20180125/model/DomainRuleId.h
-  include/tencentcloud/waf/v20180125/model/DescribeModuleStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/PortItem.h
-  include/tencentcloud/waf/v20180125/model/CreateDealsGoodsDetail.h
-  include/tencentcloud/waf/v20180125/model/DescribeOwaspRuleTypesRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyHostStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/BatchIpAccessControlData.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribePeakPointsResponse.h
-  include/tencentcloud/waf/v20180125/model/OwaspRuleType.h
-  include/tencentcloud/waf/v20180125/model/GoodNews.h
-  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionModeRequest.h
+  include/tencentcloud/waf/v20180125/model/HybridPkg.h
+  include/tencentcloud/waf/v20180125/model/IpAccessControlData.h
+  include/tencentcloud/waf/v20180125/model/DescribeHostResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMKeywordLibraryResponse.h
+  include/tencentcloud/waf/v20180125/model/UpsertCCRuleResponse.h
   include/tencentcloud/waf/v20180125/model/DescribeHostRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DeleteCustomRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/JobDateTime.h
+  include/tencentcloud/waf/v20180125/model/DescribeHostsRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/ClbWafRegionItem.h
+  include/tencentcloud/waf/v20180125/model/DescribeFindDomainListRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceElasticModeResponse.h
+  include/tencentcloud/waf/v20180125/model/TargetEntity.h
+  include/tencentcloud/waf/v20180125/model/CCRuleItem.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainCountInfoRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeCustomWhiteRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeAntiFakeRulesRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeVipInfoRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMContentRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeFindDomainListResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteSessionResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyUserSignatureRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyWebshellStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeUserDomainInfoResponse.h
+  include/tencentcloud/waf/v20180125/model/TLSVersion.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeActionResponse.h
+  include/tencentcloud/waf/v20180125/model/LoadBalancer.h
+  include/tencentcloud/waf/v20180125/model/DescribeCustomRulesRspRuleListItem.h
+  include/tencentcloud/waf/v20180125/model/ModifyAntiInfoLeakRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/QpsData.h
+  include/tencentcloud/waf/v20180125/model/AddCustomWhiteRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMWafProtectRulesRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMContentRuleListRequest.h
+  include/tencentcloud/waf/v20180125/model/SwitchElasticModeRequest.h
+  include/tencentcloud/waf/v20180125/model/HostDel.h
+  include/tencentcloud/waf/v20180125/model/DescribeModuleStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyHostModeResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteLLMContentRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeHostsResponse.h
+  include/tencentcloud/waf/v20180125/model/DomainInfo.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainsResponse.h
+  include/tencentcloud/waf/v20180125/model/UploadSkillSecScanRequest.h
+  include/tencentcloud/waf/v20180125/model/AddAntiFakeUrlResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspWhiteRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/UrlDetectResult.h
+  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionResponse.h
+  include/tencentcloud/waf/v20180125/model/SwitchElasticModeResponse.h
+  include/tencentcloud/waf/v20180125/model/CCRuleLists.h
+  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/UploadSkillSecScanResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteLLMKeywordLibraryResponse.h
+  include/tencentcloud/waf/v20180125/model/TLSCiphers.h
+  include/tencentcloud/waf/v20180125/model/ResponseCode.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMContentRuleStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakageRulesRequest.h
+  include/tencentcloud/waf/v20180125/model/CreateHostResponse.h
+  include/tencentcloud/waf/v20180125/model/LLMHourBillDetailItem.h
+  include/tencentcloud/waf/v20180125/model/ModifyBotStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyHostFlowModeRequest.h
+  include/tencentcloud/waf/v20180125/model/CreateHostRequest.h
+  include/tencentcloud/waf/v20180125/model/GetInstanceQpsLimitResponse.h
+  include/tencentcloud/waf/v20180125/model/CreateDealsRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/SearchItem.h
+  include/tencentcloud/waf/v20180125/model/ApiPkg.h
+  include/tencentcloud/waf/v20180125/model/DescribePortsRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMWafDLPRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeTlsVersionRequest.h
+  include/tencentcloud/waf/v20180125/model/RuleItem.h
+  include/tencentcloud/waf/v20180125/model/DealData.h
+  include/tencentcloud/waf/v20180125/model/LLMBillItemFee.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainDetailsSaasRequest.h
+  include/tencentcloud/waf/v20180125/model/ValueLevel.h
+  include/tencentcloud/waf/v20180125/model/CreateDealsGoodsDetail.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMWafToolCallRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribePeakPointsResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceRenewFlagRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMSdkAccessRequest.h
+  include/tencentcloud/waf/v20180125/model/GoodsDetailNew.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMKeywordLibraryRequest.h
+  include/tencentcloud/waf/v20180125/model/ToolCallResult.h
+  include/tencentcloud/waf/v20180125/model/BatchIpAccessControlItem.h
+  include/tencentcloud/waf/v20180125/model/PortInfo.h
+  include/tencentcloud/waf/v20180125/model/FraudPkg.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainDetailsClbResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeIpAccessControlRequest.h
+  include/tencentcloud/waf/v20180125/model/PromptDetectResult.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeActionRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceQpsLimitResponse.h
+  include/tencentcloud/waf/v20180125/model/ReqUserRule.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMHourBillDetailResponse.h
+  include/tencentcloud/waf/v20180125/model/GoodNews.h
+  include/tencentcloud/waf/v20180125/model/DeleteLLMSdkAccessResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteOwaspRuleStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainsRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeUserClbWafRegionsRequest.h
+  include/tencentcloud/waf/v20180125/model/AddLLMSdkAccessRequest.h
+  include/tencentcloud/waf/v20180125/model/AddAntiInfoLeakRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/QPSPackageNew.h
+  include/tencentcloud/waf/v20180125/model/DeleteAntiInfoLeakRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeRuleLimitResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeLevelRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMKeywordLibraryRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMWafToolCallRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeHistogramResponse.h
+  include/tencentcloud/waf/v20180125/model/RefreshAccessCheckResultResponse.h
+  include/tencentcloud/waf/v20180125/model/CreateOwaspWhiteRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/SkillScanRuleHit.h
+  include/tencentcloud/waf/v20180125/model/ModifyHostResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMWafDLPRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeCertificateVerifyResultRequest.h
+  include/tencentcloud/waf/v20180125/model/CreateIpAccessControlRequest.h
+  include/tencentcloud/waf/v20180125/model/MiniPkg.h
+  include/tencentcloud/waf/v20180125/model/DescribeIpAccessControlResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyProtectionStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/CCRuleData.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMSdkAccessResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeInstancesResponse.h
+  include/tencentcloud/waf/v20180125/model/IpAccessControlItem.h
+  include/tencentcloud/waf/v20180125/model/SkillScanUploadData.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/UpsertSessionResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteSessionRequest.h
+  include/tencentcloud/waf/v20180125/model/LLMKeywordLibrary.h
+  include/tencentcloud/waf/v20180125/model/SearchAttackLogRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMSdkAccessRequest.h
+  include/tencentcloud/waf/v20180125/model/CreateIpAccessControlResponse.h
+  include/tencentcloud/waf/v20180125/model/SessionItem.h
+  include/tencentcloud/waf/v20180125/model/ModifyObjectRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeCustomWhiteRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DeleteAntiFakeUrlResponse.h
+  include/tencentcloud/waf/v20180125/model/Area.h
+  include/tencentcloud/waf/v20180125/model/DescribeUserLevelResponse.h
+  include/tencentcloud/waf/v20180125/model/IpAccessControlParam.h
+  include/tencentcloud/waf/v20180125/model/IntentContent.h
+  include/tencentcloud/waf/v20180125/model/DescribeCustomRuleListResponse.h
+  include/tencentcloud/waf/v20180125/model/GetInstanceQpsLimitRequest.h
+  include/tencentcloud/waf/v20180125/model/HostRecord.h
+  include/tencentcloud/waf/v20180125/model/ModifyUserLevelRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMWafToolCallRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceQpsLimitRequest.h
+  include/tencentcloud/waf/v20180125/model/FreshAntiFakeUrlResponse.h
+  include/tencentcloud/waf/v20180125/model/DeleteSpartaProtectionRequest.h
+  include/tencentcloud/waf/v20180125/model/UserDomainInfo.h
+  include/tencentcloud/waf/v20180125/model/DescribeAntiFakeRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/ImportIpAccessControlRequest.h
+  include/tencentcloud/waf/v20180125/model/GetAttackTotalCountRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeAttackOverviewResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeCCRuleListResponse.h
+  include/tencentcloud/waf/v20180125/model/PeakPointsItem.h
+  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainDetailsClbRequest.h
+  include/tencentcloud/waf/v20180125/model/TimedJob.h
+  include/tencentcloud/waf/v20180125/model/DomainPackageNew.h
+  include/tencentcloud/waf/v20180125/model/ModifyDomainsCLSStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyBotStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/DomainRuleId.h
+  include/tencentcloud/waf/v20180125/model/PortItem.h
+  include/tencentcloud/waf/v20180125/model/DescribeOwaspRuleTypesRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyHostStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/AddCustomRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/OwaspRuleType.h
+  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionModeRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeAttackOverviewRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeUserLevelRequest.h
-  include/tencentcloud/waf/v20180125/model/BotQPS.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeActionResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainDetailsClbResponse.h
-  include/tencentcloud/waf/v20180125/model/HostStatus.h
-  include/tencentcloud/waf/v20180125/model/GoodsDetailNew.h
-  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlResponse.h
-  include/tencentcloud/waf/v20180125/model/GetAttackTotalCountRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionResponse.h
-  include/tencentcloud/waf/v20180125/model/DomainInfo.h
-  include/tencentcloud/waf/v20180125/model/DescribeBatchIpAccessControlRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribePolicyStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeInstancesRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/GetAttackTotalCountResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeObjectsResponse.h
-  include/tencentcloud/waf/v20180125/model/BatchIpAccessControlItem.h
   include/tencentcloud/waf/v20180125/model/InstanceInfo.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeLevelRequest.h
+  include/tencentcloud/waf/v20180125/model/HostStatus.h
+  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeBatchIpAccessControlRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeInstancesRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyAntiInfoLeakRulesRequest.h
   include/tencentcloud/waf/v20180125/model/OwaspWhiteRule.h
-  include/tencentcloud/waf/v20180125/model/IpAccessControlParam.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceRenewFlagRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeBatchIpAccessControlResponse.h
   include/tencentcloud/waf/v20180125/model/DescribeDomainDetailsSaasResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainVerifyResultResponse.h
-  include/tencentcloud/waf/v20180125/model/DomainPackageNew.h
-  include/tencentcloud/waf/v20180125/model/AddCustomRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/ExportLLMKeywordLibRequest.h
   include/tencentcloud/waf/v20180125/model/ModifyAntiInfoLeakRuleStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/FraudPkg.h
-  include/tencentcloud/waf/v20180125/model/DeleteCCRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeAttackTypeResponse.h
-  include/tencentcloud/waf/v20180125/model/GenerateDealsAndPayNewResponse.h
-  include/tencentcloud/waf/v20180125/model/DeleteCustomRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeInstancesResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeCCRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/MiniExtendPkg.h
-  include/tencentcloud/waf/v20180125/model/Strategy.h
+  include/tencentcloud/waf/v20180125/model/DeleteIpAccessControlV2Request.h
   include/tencentcloud/waf/v20180125/model/DescribeTopAttackDomainRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeIpAccessControlRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeFindDomainListRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeHostsRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceElasticModeRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyDomainIpv6StatusResponse.h
   include/tencentcloud/waf/v20180125/model/DescribeHostLimitResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeActionRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeWebshellStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleStatusRequest.h
   include/tencentcloud/waf/v20180125/model/DeleteAntiFakeUrlRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeSpartaProtectionInfoRequest.h
   include/tencentcloud/waf/v20180125/model/CacheUrlItems.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceQpsLimitResponse.h
-  include/tencentcloud/waf/v20180125/model/ReqUserRule.h
-  include/tencentcloud/waf/v20180125/model/ModifyWebshellStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/ClbWafRegionItem.h
-  include/tencentcloud/waf/v20180125/model/FindAllDomainDetail.h
-  include/tencentcloud/waf/v20180125/model/DeleteAntiInfoLeakRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyInstanceElasticModeResponse.h
-  include/tencentcloud/waf/v20180125/model/WafRuleLimit.h
-  include/tencentcloud/waf/v20180125/model/DescribeUserLevelResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeVipInfoResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyIpAccessControlResponse.h
+  include/tencentcloud/waf/v20180125/model/Strategy.h
+  include/tencentcloud/waf/v20180125/model/GenerateDealsAndPayNewResponse.h
   include/tencentcloud/waf/v20180125/model/DescribeCCRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyModuleStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/MiniPkg.h
-  include/tencentcloud/waf/v20180125/model/DescribeRuleLimitRequest.h
-  include/tencentcloud/waf/v20180125/model/TargetEntity.h
-  include/tencentcloud/waf/v20180125/model/DeleteOwaspRuleStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/CCRuleItem.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainCountInfoRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyDomainsCLSStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeCustomWhiteRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeTlsVersionResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyDomainPostActionRequest.h
+  include/tencentcloud/waf/v20180125/model/IntentDetectResult.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMKeywordLibraryResponse.h
   include/tencentcloud/waf/v20180125/model/VipInfo.h
   include/tencentcloud/waf/v20180125/model/DeleteOwaspRuleStatusRequest.h
   include/tencentcloud/waf/v20180125/model/DescribeTopAttackDomainResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeSessionResponse.h
-  include/tencentcloud/waf/v20180125/model/AddAntiInfoLeakRulesResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeAntiFakeRulesRequest.h
-  include/tencentcloud/waf/v20180125/model/AddCustomWhiteRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/PortInfo.h
-  include/tencentcloud/waf/v20180125/model/DescribeWebshellStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/ImportIpAccessControlRequest.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleStatusResponse.h
-  include/tencentcloud/waf/v20180125/model/DeleteAntiInfoLeakRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/DeleteSessionResponse.h
-  include/tencentcloud/waf/v20180125/model/UpsertSessionRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeRuleLimitResponse.h
-  include/tencentcloud/waf/v20180125/model/DescribeHostLimitRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMSdkAccessResponse.h
   include/tencentcloud/waf/v20180125/model/DeleteCustomRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeLevelResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyUserSignatureRuleRequest.h
-  include/tencentcloud/waf/v20180125/model/ClbDomainsInfo.h
-  include/tencentcloud/waf/v20180125/model/CreateDealsResponse.h
+  include/tencentcloud/waf/v20180125/model/SkillScanCapabilityTag.h
   include/tencentcloud/waf/v20180125/model/DescribeHistogramRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeHostResponse.h
   include/tencentcloud/waf/v20180125/model/DeleteCCRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/UpsertCCRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyProtectionStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyDomainPostActionRequest.h
+  include/tencentcloud/waf/v20180125/model/BotPkg.h
+  include/tencentcloud/waf/v20180125/model/SearchAttackLogResponse.h
+  include/tencentcloud/waf/v20180125/model/RefreshAccessCheckResultRequest.h
+  include/tencentcloud/waf/v20180125/model/WebshellStatus.h
+  include/tencentcloud/waf/v20180125/model/DescribeSpartaProtectionInfoResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyModuleStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/DeleteLLMContentRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceNameRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribePortsResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeLevelResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMContentSecCheckResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribePeakPointsRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyHostFlowModeResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakRulesStrategyItem.h
+  include/tencentcloud/waf/v20180125/model/DescribeCiphersDetailRequest.h
+  include/tencentcloud/waf/v20180125/model/CCRuleItems.h
+  include/tencentcloud/waf/v20180125/model/ModifyDomainIpv6StatusRequest.h
+  include/tencentcloud/waf/v20180125/model/SkillScanQueryData.h
+  include/tencentcloud/waf/v20180125/model/LLMSdkAccessItem.h
+  include/tencentcloud/waf/v20180125/model/DescribeAntiInfoLeakageRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeSkillSecScanResultRequest.h
+  include/tencentcloud/waf/v20180125/model/OwaspRule.h
+  include/tencentcloud/waf/v20180125/model/GetAttackHistogramRequest.h
+  include/tencentcloud/waf/v20180125/model/ImageResult.h
+  include/tencentcloud/waf/v20180125/model/DescribeAttackTypeRequest.h
+  include/tencentcloud/waf/v20180125/model/CategoryGroup.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DeleteCustomWhiteRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceRenewFlagResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/ImportIpAccessControlResponse.h
+  include/tencentcloud/waf/v20180125/model/AddCustomWhiteRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/CronJob.h
+  include/tencentcloud/waf/v20180125/model/DeleteOwaspWhiteRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/DomainsPartInfo.h
+  include/tencentcloud/waf/v20180125/model/AddAntiInfoLeakRulesRequest.h
+  include/tencentcloud/waf/v20180125/model/AddSpartaProtectionRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyModuleStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/RuleDetail.h
+  include/tencentcloud/waf/v20180125/model/AttackLogInfo.h
+  include/tencentcloud/waf/v20180125/model/ModifyOwaspRuleTypeStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/SkillScanItem.h
   include/tencentcloud/waf/v20180125/model/LogHistogramInfo.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainVerifyResultRequest.h
+  include/tencentcloud/waf/v20180125/model/CreateDealsGoods.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMWafToolCallRulesRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifySpartaProtectionModeResponse.h
+  include/tencentcloud/waf/v20180125/model/SkillRuleCatalogItem.h
+  include/tencentcloud/waf/v20180125/model/ModifyCustomWhiteRuleStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/BatchIpAccessControlData.h
+  include/tencentcloud/waf/v20180125/model/DeleteLLMKeywordLibraryRequest.h
+  include/tencentcloud/waf/v20180125/model/BotQPS.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMHourBillDetailRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribePolicyStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/GetAttackTotalCountResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMWafDLPRulesRequest.h
+  include/tencentcloud/waf/v20180125/model/CreateDealsResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeOwaspRulesRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeCCRuleListRequest.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMContentRuleStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeDomainVerifyResultResponse.h
+  include/tencentcloud/waf/v20180125/model/AddCustomRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DeleteCCRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeAttackTypeResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeCCRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyObjectResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyAntiFakeUrlStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeOwaspRuleTypesResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyInstanceElasticModeRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeWebshellStatusResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyLLMContentRuleResponse.h
+  include/tencentcloud/waf/v20180125/model/FindAllDomainDetail.h
+  include/tencentcloud/waf/v20180125/model/DeleteAntiInfoLeakRuleRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeVipInfoResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyIpAccessControlResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeRuleLimitRequest.h
+  include/tencentcloud/waf/v20180125/model/UrlHitInfo.h
+  include/tencentcloud/waf/v20180125/model/ModifyDomainPostActionResponse.h
+  include/tencentcloud/waf/v20180125/model/ModifyDomainsCLSStatusRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeTlsVersionResponse.h
+  include/tencentcloud/waf/v20180125/model/DescribeLLMContentSecCheckRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeSessionResponse.h
+  include/tencentcloud/waf/v20180125/model/UpsertSessionRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeHostLimitRequest.h
+  include/tencentcloud/waf/v20180125/model/DescribeOwaspWhiteRulesResponse.h
+  include/tencentcloud/waf/v20180125/model/ClbDomainsInfo.h
+  include/tencentcloud/waf/v20180125/model/DescribeObjectsResponse.h
+  include/tencentcloud/waf/v20180125/model/ExportLLMKeywordLibResponse.h
+  include/tencentcloud/waf/v20180125/model/MiniExtendPkg.h
   include/tencentcloud/waf/v20180125/model/CreateOwaspWhiteRuleResponse.h
   include/tencentcloud/waf/v20180125/model/DomainURI.h
-  include/tencentcloud/waf/v20180125/model/ModifyHostRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeDomainsRequest.h
-  include/tencentcloud/waf/v20180125/model/HybridPkg.h
-  include/tencentcloud/waf/v20180125/model/BotPkg.h
   include/tencentcloud/waf/v20180125/model/DescribeObjectsRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeUserDomainInfoResponse.h
   include/tencentcloud/waf/v20180125/model/ModifyHostStatusRequest.h
-  include/tencentcloud/waf/v20180125/model/DescribeHistogramResponse.h
-  include/tencentcloud/waf/v20180125/model/ModifyCustomRuleResponse.h
-  include/tencentcloud/waf/v20180125/model/LoadBalancer.h
-  include/tencentcloud/waf/v20180125/model/ClbObject.h
   )
 
 set(waf_src
   src/v20180125/WafClient.cpp
-  src/v20180125/model/CreateOwaspWhiteRuleRequest.cpp
-  src/v20180125/model/PiechartItem.cpp
-  src/v20180125/model/DeleteOwaspWhiteRuleRequest.cpp
+  src/v20180125/model/DescribeLLMWafDLPRulesResponse.cpp
+  src/v20180125/model/AddLLMSdkAccessResponse.cpp
   src/v20180125/model/ModifyUserLevelResponse.cpp
-  src/v20180125/model/SearchAttackLogResponse.cpp
-  src/v20180125/model/KVInt.cpp
-  src/v20180125/model/ModifyInstanceNameResponse.cpp
-  src/v20180125/model/DescribeCustomRulesRspRuleListItem.cpp
-  src/v20180125/model/ModifyAntiInfoLeakRulesResponse.cpp
+  src/v20180125/model/DescribeSkillSecScanResultResponse.cpp
   src/v20180125/model/ModifyWebshellStatusRequest.cpp
-  src/v20180125/model/DescribeCertificateVerifyResultRequest.cpp
+  src/v20180125/model/WafRuleLimit.cpp
   src/v20180125/model/DescribeUserClbWafRegionsResponse.cpp
-  src/v20180125/model/ModifyInstanceRenewFlagResponse.cpp
-  src/v20180125/model/CreateIpAccessControlRequest.cpp
-  src/v20180125/model/TLSCiphers.cpp
   src/v20180125/model/AddAntiFakeUrlRequest.cpp
-  src/v20180125/model/WebshellStatus.cpp
-  src/v20180125/model/AddCustomWhiteRuleResponse.cpp
-  src/v20180125/model/SearchAttackLogRequest.cpp
-  src/v20180125/model/ModifyHostFlowModeResponse.cpp
-  src/v20180125/model/DescribeOwaspWhiteRulesResponse.cpp
-  src/v20180125/model/SwitchElasticModeRequest.cpp
-  src/v20180125/model/ModifyInstanceNameRequest.cpp
-  src/v20180125/model/HostDel.cpp
-  src/v20180125/model/DeleteCustomWhiteRuleResponse.cpp
-  src/v20180125/model/DescribeIpAccessControlResponse.cpp
+  src/v20180125/model/DeleteOwaspWhiteRuleRequest.cpp
   src/v20180125/model/DescribeAntiLeakageItem.cpp
   src/v20180125/model/LoadBalancerPackageNew.cpp
   src/v20180125/model/DescribeOwaspWhiteRulesRequest.cpp
-  src/v20180125/model/ModifyDomainIpv6StatusResponse.cpp
-  src/v20180125/model/CCRuleData.cpp
-  src/v20180125/model/DescribeCustomRuleListRequest.cpp
-  src/v20180125/model/DescribeUserClbWafRegionsRequest.cpp
-  src/v20180125/model/DescribeHostsResponse.cpp
-  src/v20180125/model/DescribePeakPointsRequest.cpp
-  src/v20180125/model/ModifyInstanceQpsLimitRequest.cpp
+  src/v20180125/model/DescribeLLMWafProtectRulesResponse.cpp
+  src/v20180125/model/ModifyHostRequest.cpp
+  src/v20180125/model/LLMDetectResult.cpp
   src/v20180125/model/DeleteHostRequest.cpp
-  src/v20180125/model/ModifyDomainPostActionResponse.cpp
   src/v20180125/model/DescribeCertificateVerifyResultResponse.cpp
   src/v20180125/model/ModifyUserSignatureRuleResponse.cpp
-  src/v20180125/model/DescribeAntiInfoLeakRulesStrategyItem.cpp
-  src/v20180125/model/ModifyApiAnalyzeStatusRequest.cpp
-  src/v20180125/model/TLSVersion.cpp
-  src/v20180125/model/UpsertSessionResponse.cpp
-  src/v20180125/model/DescribeDomainsResponse.cpp
-  src/v20180125/model/DeleteSessionRequest.cpp
+  src/v20180125/model/ModifyInstanceNameResponse.cpp
   src/v20180125/model/GenerateDealsAndPayNewRequest.cpp
-  src/v20180125/model/RefreshAccessCheckResultRequest.cpp
-  src/v20180125/model/AddAntiFakeUrlResponse.cpp
-  src/v20180125/model/ModifyHostResponse.cpp
-  src/v20180125/model/DescribeCiphersDetailRequest.cpp
-  src/v20180125/model/AddCustomRuleResponse.cpp
-  src/v20180125/model/CCRuleItems.cpp
-  src/v20180125/model/ModifySpartaProtectionModeResponse.cpp
-  src/v20180125/model/ModifyDomainIpv6StatusRequest.cpp
-  src/v20180125/model/CreateIpAccessControlResponse.cpp
-  src/v20180125/model/RefreshAccessCheckResultResponse.cpp
-  src/v20180125/model/DescribeAntiInfoLeakageRulesResponse.cpp
-  src/v20180125/model/SessionItem.cpp
+  src/v20180125/model/DeleteCustomWhiteRuleResponse.cpp
+  src/v20180125/model/DeleteLLMSdkAccessRequest.cpp
   src/v20180125/model/MajorEventsPkg.cpp
-  src/v20180125/model/ModifyObjectRequest.cpp
-  src/v20180125/model/ModifyHostFlowModeRequest.cpp
-  src/v20180125/model/OwaspRule.cpp
-  src/v20180125/model/GetAttackHistogramRequest.cpp
-  src/v20180125/model/UserDomainInfo.cpp
-  src/v20180125/model/ModifyAntiInfoLeakRulesRequest.cpp
-  src/v20180125/model/ModifyProtectionStatusRequest.cpp
-  src/v20180125/model/CCRuleLists.cpp
-  src/v20180125/model/ModifyApiAnalyzeStatusResponse.cpp
-  src/v20180125/model/DescribeCustomWhiteRuleRequest.cpp
-  src/v20180125/model/DeleteAntiFakeUrlResponse.cpp
-  src/v20180125/model/SearchItem.cpp
-  src/v20180125/model/UpsertCCRuleResponse.cpp
-  src/v20180125/model/DescribeAttackTypeRequest.cpp
-  src/v20180125/model/ModifyAntiFakeUrlStatusRequest.cpp
-  src/v20180125/model/DeleteCustomWhiteRuleRequest.cpp
-  src/v20180125/model/ModifyHostModeResponse.cpp
-  src/v20180125/model/DescribeOwaspRulesRequest.cpp
-  src/v20180125/model/DescribeCCRuleListRequest.cpp
-  src/v20180125/model/ModifyOwaspRuleTypeStatusResponse.cpp
-  src/v20180125/model/ModifyProtectionStatusResponse.cpp
-  src/v20180125/model/ResponseCode.cpp
-  src/v20180125/model/DescribeCustomRuleListResponse.cpp
-  src/v20180125/model/ModifyDomainsCLSStatusResponse.cpp
-  src/v20180125/model/ImportIpAccessControlResponse.cpp
-  src/v20180125/model/DescribeVipInfoRequest.cpp
-  src/v20180125/model/DeleteIpAccessControlV2Request.cpp
-  src/v20180125/model/CronJob.cpp
-  src/v20180125/model/IpAccessControlData.cpp
+  src/v20180125/model/DescribeLLMContentRuleListResponse.cpp
+  src/v20180125/model/LLMSensitiveValueLevel.cpp
+  src/v20180125/model/ModifyLLMWafProtectRuleResponse.cpp
+  src/v20180125/model/DescribeModuleStatusResponse.cpp
+  src/v20180125/model/LLMOptionsItem.cpp
+  src/v20180125/model/KVInt.cpp
+  src/v20180125/model/ModifyLLMWafProtectRuleRequest.cpp
+  src/v20180125/model/DescribeWebshellStatusRequest.cpp
   src/v20180125/model/GetAttackHistogramResponse.cpp
-  src/v20180125/model/GetInstanceQpsLimitRequest.cpp
+  src/v20180125/model/KeyWordInfo.cpp
   src/v20180125/model/FiltersItemNew.cpp
   src/v20180125/model/DeleteSpartaProtectionResponse.cpp
-  src/v20180125/model/SessionData.cpp
-  src/v20180125/model/ModifyUserLevelRequest.cpp
-  src/v20180125/model/QpsData.cpp
-  src/v20180125/model/DescribeAntiInfoLeakageRulesRequest.cpp
-  src/v20180125/model/CreateHostResponse.cpp
-  src/v20180125/model/DeleteOwaspWhiteRuleResponse.cpp
-  src/v20180125/model/UpsertCCRuleRequest.cpp
-  src/v20180125/model/IpAccessControlItem.cpp
+  src/v20180125/model/PiechartItem.cpp
   src/v20180125/model/DeleteHostResponse.cpp
-  src/v20180125/model/SwitchElasticModeResponse.cpp
-  src/v20180125/model/FreshAntiFakeUrlResponse.cpp
-  src/v20180125/model/ModifyBotStatusRequest.cpp
-  src/v20180125/model/DeleteSpartaProtectionRequest.cpp
-  src/v20180125/model/DomainsPartInfo.cpp
-  src/v20180125/model/DescribeAntiFakeRulesResponse.cpp
-  src/v20180125/model/AddAntiInfoLeakRulesRequest.cpp
-  src/v20180125/model/ModifyObjectResponse.cpp
-  src/v20180125/model/HostRecord.cpp
-  src/v20180125/model/CreateHostRequest.cpp
-  src/v20180125/model/DescribeSpartaProtectionInfoResponse.cpp
+  src/v20180125/model/ModifyApiAnalyzeStatusResponse.cpp
+  src/v20180125/model/LLMHourBillTrendItem.cpp
+  src/v20180125/model/SessionData.cpp
+  src/v20180125/model/ModifyCustomRuleResponse.cpp
   src/v20180125/model/FreshAntiFakeUrlRequest.cpp
-  src/v20180125/model/DescribeFindDomainListResponse.cpp
   src/v20180125/model/SpartaProtectionPort.cpp
-  src/v20180125/model/AddSpartaProtectionRequest.cpp
   src/v20180125/model/ModifyOwaspWhiteRuleRequest.cpp
-  src/v20180125/model/GetInstanceQpsLimitResponse.cpp
-  src/v20180125/model/CreateDealsRequest.cpp
-  src/v20180125/model/JobDateTime.cpp
-  src/v20180125/model/ModifyCustomWhiteRuleResponse.cpp
+  src/v20180125/model/ClbObject.cpp
   src/v20180125/model/DescribeSessionRequest.cpp
-  src/v20180125/model/ModifyModuleStatusResponse.cpp
   src/v20180125/model/DescribePolicyStatusRequest.cpp
-  src/v20180125/model/DescribePortsResponse.cpp
   src/v20180125/model/ModifyIpAccessControlRequest.cpp
-  src/v20180125/model/ApiPkg.cpp
-  src/v20180125/model/AttackLogInfo.cpp
-  src/v20180125/model/DescribeModuleStatusResponse.cpp
-  src/v20180125/model/DescribeAttackOverviewResponse.cpp
-  src/v20180125/model/ModifyOwaspRuleTypeStatusRequest.cpp
-  src/v20180125/model/DescribeCCRuleListResponse.cpp
+  src/v20180125/model/ModifyApiAnalyzeStatusRequest.cpp
   src/v20180125/model/DescribeDomainCountInfoResponse.cpp
-  src/v20180125/model/PeakPointsItem.cpp
-  src/v20180125/model/DescribePortsRequest.cpp
   src/v20180125/model/ModifyHostModeRequest.cpp
-  src/v20180125/model/QPSPackageNew.cpp
-  src/v20180125/model/DescribeOwaspRuleTypesResponse.cpp
-  src/v20180125/model/DescribeDomainDetailsClbRequest.cpp
   src/v20180125/model/ModifyAntiInfoLeakRuleStatusRequest.cpp
-  src/v20180125/model/DescribeDomainVerifyResultRequest.cpp
-  src/v20180125/model/CreateDealsGoods.cpp
-  src/v20180125/model/TimedJob.cpp
-  src/v20180125/model/DescribeTlsVersionRequest.cpp
   src/v20180125/model/DescribeCiphersDetailResponse.cpp
-  src/v20180125/model/DealData.cpp
+  src/v20180125/model/DescribeCustomRuleListRequest.cpp
   src/v20180125/model/DeleteIpAccessControlV2Response.cpp
-  src/v20180125/model/ModifyOwaspWhiteRuleResponse.cpp
-  src/v20180125/model/ModifyBotStatusResponse.cpp
-  src/v20180125/model/DescribeDomainDetailsSaasRequest.cpp
   src/v20180125/model/DescribeOwaspRulesResponse.cpp
-  src/v20180125/model/ModifyCustomRuleStatusResponse.cpp
   src/v20180125/model/StrategyForAntiInfoLeak.cpp
   src/v20180125/model/AddSpartaProtectionResponse.cpp
   src/v20180125/model/DescribeUserDomainInfoRequest.cpp
-  src/v20180125/model/DomainRuleId.cpp
-  src/v20180125/model/DescribeModuleStatusRequest.cpp
-  src/v20180125/model/PortItem.cpp
-  src/v20180125/model/CreateDealsGoodsDetail.cpp
-  src/v20180125/model/DescribeOwaspRuleTypesRequest.cpp
-  src/v20180125/model/ModifyAntiFakeUrlRequest.cpp
-  src/v20180125/model/ModifyCustomWhiteRuleStatusResponse.cpp
-  src/v20180125/model/ModifyHostStatusResponse.cpp
-  src/v20180125/model/BatchIpAccessControlData.cpp
-  src/v20180125/model/ModifyCustomRuleStatusRequest.cpp
-  src/v20180125/model/DescribePeakPointsResponse.cpp
-  src/v20180125/model/OwaspRuleType.cpp
-  src/v20180125/model/GoodNews.cpp
-  src/v20180125/model/ModifySpartaProtectionModeRequest.cpp
+  src/v20180125/model/HybridPkg.cpp
+  src/v20180125/model/IpAccessControlData.cpp
+  src/v20180125/model/DescribeHostResponse.cpp
+  src/v20180125/model/ModifyLLMKeywordLibraryResponse.cpp
+  src/v20180125/model/UpsertCCRuleResponse.cpp
   src/v20180125/model/DescribeHostRequest.cpp
-  src/v20180125/model/ModifyCustomRuleRequest.cpp
+  src/v20180125/model/DeleteCustomRuleRequest.cpp
+  src/v20180125/model/JobDateTime.cpp
+  src/v20180125/model/DescribeHostsRequest.cpp
+  src/v20180125/model/ModifyCustomWhiteRuleStatusRequest.cpp
+  src/v20180125/model/ModifyLLMStatusRequest.cpp
+  src/v20180125/model/ClbWafRegionItem.cpp
+  src/v20180125/model/DescribeFindDomainListRequest.cpp
+  src/v20180125/model/ModifyInstanceElasticModeResponse.cpp
+  src/v20180125/model/TargetEntity.cpp
+  src/v20180125/model/CCRuleItem.cpp
+  src/v20180125/model/DescribeDomainCountInfoRequest.cpp
+  src/v20180125/model/DescribeCustomWhiteRuleResponse.cpp
+  src/v20180125/model/ModifySpartaProtectionRequest.cpp
+  src/v20180125/model/DescribeAntiFakeRulesRequest.cpp
+  src/v20180125/model/DescribeVipInfoRequest.cpp
+  src/v20180125/model/ModifyLLMContentRuleRequest.cpp
+  src/v20180125/model/DescribeFindDomainListResponse.cpp
+  src/v20180125/model/DeleteSessionResponse.cpp
+  src/v20180125/model/ModifyUserSignatureRuleRequest.cpp
+  src/v20180125/model/ModifyWebshellStatusResponse.cpp
+  src/v20180125/model/DescribeUserDomainInfoResponse.cpp
+  src/v20180125/model/TLSVersion.cpp
+  src/v20180125/model/ModifyOwaspRuleTypeActionResponse.cpp
+  src/v20180125/model/LoadBalancer.cpp
+  src/v20180125/model/DescribeCustomRulesRspRuleListItem.cpp
+  src/v20180125/model/ModifyAntiInfoLeakRulesResponse.cpp
+  src/v20180125/model/QpsData.cpp
+  src/v20180125/model/AddCustomWhiteRuleResponse.cpp
+  src/v20180125/model/DescribeLLMWafProtectRulesRequest.cpp
+  src/v20180125/model/DescribeLLMContentRuleListRequest.cpp
+  src/v20180125/model/SwitchElasticModeRequest.cpp
+  src/v20180125/model/HostDel.cpp
+  src/v20180125/model/DescribeModuleStatusRequest.cpp
+  src/v20180125/model/ModifyHostModeResponse.cpp
+  src/v20180125/model/DeleteLLMContentRuleRequest.cpp
+  src/v20180125/model/DescribeHostsResponse.cpp
+  src/v20180125/model/DomainInfo.cpp
+  src/v20180125/model/DescribeDomainsResponse.cpp
+  src/v20180125/model/UploadSkillSecScanRequest.cpp
+  src/v20180125/model/AddAntiFakeUrlResponse.cpp
+  src/v20180125/model/ModifyOwaspWhiteRuleResponse.cpp
+  src/v20180125/model/UrlDetectResult.cpp
+  src/v20180125/model/ModifySpartaProtectionResponse.cpp
+  src/v20180125/model/SwitchElasticModeResponse.cpp
+  src/v20180125/model/CCRuleLists.cpp
+  src/v20180125/model/ModifyAntiFakeUrlStatusRequest.cpp
+  src/v20180125/model/UploadSkillSecScanResponse.cpp
+  src/v20180125/model/DeleteLLMKeywordLibraryResponse.cpp
+  src/v20180125/model/TLSCiphers.cpp
+  src/v20180125/model/ResponseCode.cpp
+  src/v20180125/model/ModifyLLMContentRuleStatusResponse.cpp
+  src/v20180125/model/DescribeAntiInfoLeakageRulesRequest.cpp
+  src/v20180125/model/CreateHostResponse.cpp
+  src/v20180125/model/LLMHourBillDetailItem.cpp
+  src/v20180125/model/ModifyBotStatusRequest.cpp
+  src/v20180125/model/ModifyHostFlowModeRequest.cpp
+  src/v20180125/model/CreateHostRequest.cpp
+  src/v20180125/model/GetInstanceQpsLimitResponse.cpp
+  src/v20180125/model/CreateDealsRequest.cpp
+  src/v20180125/model/ModifyCustomWhiteRuleResponse.cpp
+  src/v20180125/model/SearchItem.cpp
+  src/v20180125/model/ApiPkg.cpp
+  src/v20180125/model/DescribePortsRequest.cpp
+  src/v20180125/model/ModifyLLMWafDLPRuleResponse.cpp
+  src/v20180125/model/DescribeTlsVersionRequest.cpp
+  src/v20180125/model/RuleItem.cpp
+  src/v20180125/model/DealData.cpp
+  src/v20180125/model/LLMBillItemFee.cpp
+  src/v20180125/model/DescribeDomainDetailsSaasRequest.cpp
+  src/v20180125/model/ValueLevel.cpp
+  src/v20180125/model/CreateDealsGoodsDetail.cpp
+  src/v20180125/model/ModifyLLMWafToolCallRuleResponse.cpp
+  src/v20180125/model/DescribePeakPointsResponse.cpp
+  src/v20180125/model/ModifyInstanceRenewFlagRequest.cpp
+  src/v20180125/model/ModifyLLMSdkAccessRequest.cpp
+  src/v20180125/model/GoodsDetailNew.cpp
+  src/v20180125/model/DescribeLLMKeywordLibraryRequest.cpp
+  src/v20180125/model/ToolCallResult.cpp
+  src/v20180125/model/BatchIpAccessControlItem.cpp
+  src/v20180125/model/PortInfo.cpp
+  src/v20180125/model/FraudPkg.cpp
+  src/v20180125/model/DescribeDomainDetailsClbResponse.cpp
+  src/v20180125/model/DescribeIpAccessControlRequest.cpp
+  src/v20180125/model/PromptDetectResult.cpp
+  src/v20180125/model/ModifyOwaspRuleTypeActionRequest.cpp
+  src/v20180125/model/ModifyInstanceQpsLimitResponse.cpp
+  src/v20180125/model/ReqUserRule.cpp
+  src/v20180125/model/DescribeLLMHourBillDetailResponse.cpp
+  src/v20180125/model/GoodNews.cpp
+  src/v20180125/model/DeleteLLMSdkAccessResponse.cpp
+  src/v20180125/model/DeleteOwaspRuleStatusResponse.cpp
+  src/v20180125/model/DescribeDomainsRequest.cpp
+  src/v20180125/model/DescribeUserClbWafRegionsRequest.cpp
+  src/v20180125/model/AddLLMSdkAccessRequest.cpp
+  src/v20180125/model/AddAntiInfoLeakRulesResponse.cpp
+  src/v20180125/model/QPSPackageNew.cpp
+  src/v20180125/model/DeleteAntiInfoLeakRuleResponse.cpp
+  src/v20180125/model/DescribeRuleLimitResponse.cpp
+  src/v20180125/model/ModifyOwaspRuleTypeLevelRequest.cpp
+  src/v20180125/model/ModifyLLMKeywordLibraryRequest.cpp
+  src/v20180125/model/DescribeLLMWafToolCallRulesResponse.cpp
+  src/v20180125/model/DescribeHistogramResponse.cpp
+  src/v20180125/model/RefreshAccessCheckResultResponse.cpp
+  src/v20180125/model/CreateOwaspWhiteRuleRequest.cpp
+  src/v20180125/model/SkillScanRuleHit.cpp
+  src/v20180125/model/ModifyHostResponse.cpp
+  src/v20180125/model/ModifyLLMWafDLPRuleRequest.cpp
+  src/v20180125/model/DescribeCertificateVerifyResultRequest.cpp
+  src/v20180125/model/CreateIpAccessControlRequest.cpp
+  src/v20180125/model/MiniPkg.cpp
+  src/v20180125/model/DescribeIpAccessControlResponse.cpp
+  src/v20180125/model/ModifyProtectionStatusRequest.cpp
+  src/v20180125/model/CCRuleData.cpp
+  src/v20180125/model/DescribeLLMSdkAccessResponse.cpp
+  src/v20180125/model/DescribeInstancesResponse.cpp
+  src/v20180125/model/IpAccessControlItem.cpp
+  src/v20180125/model/SkillScanUploadData.cpp
+  src/v20180125/model/ModifyOwaspRuleStatusResponse.cpp
+  src/v20180125/model/UpsertSessionResponse.cpp
+  src/v20180125/model/DeleteSessionRequest.cpp
+  src/v20180125/model/LLMKeywordLibrary.cpp
+  src/v20180125/model/SearchAttackLogRequest.cpp
+  src/v20180125/model/DescribeLLMSdkAccessRequest.cpp
+  src/v20180125/model/CreateIpAccessControlResponse.cpp
+  src/v20180125/model/SessionItem.cpp
+  src/v20180125/model/ModifyObjectRequest.cpp
+  src/v20180125/model/DescribeCustomWhiteRuleRequest.cpp
+  src/v20180125/model/DeleteAntiFakeUrlResponse.cpp
+  src/v20180125/model/Area.cpp
+  src/v20180125/model/DescribeUserLevelResponse.cpp
+  src/v20180125/model/IpAccessControlParam.cpp
+  src/v20180125/model/IntentContent.cpp
+  src/v20180125/model/DescribeCustomRuleListResponse.cpp
+  src/v20180125/model/GetInstanceQpsLimitRequest.cpp
+  src/v20180125/model/HostRecord.cpp
+  src/v20180125/model/ModifyUserLevelRequest.cpp
+  src/v20180125/model/ModifyLLMWafToolCallRuleRequest.cpp
+  src/v20180125/model/ModifyInstanceQpsLimitRequest.cpp
+  src/v20180125/model/FreshAntiFakeUrlResponse.cpp
+  src/v20180125/model/DeleteSpartaProtectionRequest.cpp
+  src/v20180125/model/UserDomainInfo.cpp
+  src/v20180125/model/DescribeAntiFakeRulesResponse.cpp
+  src/v20180125/model/ImportIpAccessControlRequest.cpp
+  src/v20180125/model/GetAttackTotalCountRequest.cpp
+  src/v20180125/model/DescribeAttackOverviewResponse.cpp
+  src/v20180125/model/DescribeCCRuleListResponse.cpp
+  src/v20180125/model/PeakPointsItem.cpp
+  src/v20180125/model/ModifyAntiFakeUrlRequest.cpp
+  src/v20180125/model/DescribeDomainDetailsClbRequest.cpp
+  src/v20180125/model/TimedJob.cpp
+  src/v20180125/model/DomainPackageNew.cpp
+  src/v20180125/model/ModifyDomainsCLSStatusResponse.cpp
+  src/v20180125/model/ModifyBotStatusResponse.cpp
+  src/v20180125/model/ModifyCustomRuleStatusResponse.cpp
+  src/v20180125/model/DomainRuleId.cpp
+  src/v20180125/model/PortItem.cpp
+  src/v20180125/model/DescribeOwaspRuleTypesRequest.cpp
+  src/v20180125/model/ModifyHostStatusResponse.cpp
+  src/v20180125/model/ModifyCustomRuleStatusRequest.cpp
+  src/v20180125/model/AddCustomRuleResponse.cpp
+  src/v20180125/model/OwaspRuleType.cpp
+  src/v20180125/model/ModifySpartaProtectionModeRequest.cpp
   src/v20180125/model/DescribeAttackOverviewRequest.cpp
   src/v20180125/model/DescribeUserLevelRequest.cpp
-  src/v20180125/model/BotQPS.cpp
-  src/v20180125/model/ModifyOwaspRuleTypeActionResponse.cpp
-  src/v20180125/model/DescribeDomainDetailsClbResponse.cpp
-  src/v20180125/model/HostStatus.cpp
-  src/v20180125/model/GoodsDetailNew.cpp
-  src/v20180125/model/ModifyAntiFakeUrlResponse.cpp
-  src/v20180125/model/GetAttackTotalCountRequest.cpp
-  src/v20180125/model/ModifySpartaProtectionResponse.cpp
-  src/v20180125/model/DomainInfo.cpp
-  src/v20180125/model/DescribeBatchIpAccessControlRequest.cpp
-  src/v20180125/model/DescribePolicyStatusResponse.cpp
-  src/v20180125/model/DescribeInstancesRequest.cpp
-  src/v20180125/model/ModifyCustomWhiteRuleRequest.cpp
-  src/v20180125/model/GetAttackTotalCountResponse.cpp
-  src/v20180125/model/DescribeObjectsResponse.cpp
-  src/v20180125/model/BatchIpAccessControlItem.cpp
   src/v20180125/model/InstanceInfo.cpp
-  src/v20180125/model/ModifyOwaspRuleTypeLevelRequest.cpp
+  src/v20180125/model/HostStatus.cpp
+  src/v20180125/model/ModifyAntiFakeUrlResponse.cpp
+  src/v20180125/model/DescribeBatchIpAccessControlRequest.cpp
+  src/v20180125/model/DescribeInstancesRequest.cpp
+  src/v20180125/model/ModifyAntiInfoLeakRulesRequest.cpp
   src/v20180125/model/OwaspWhiteRule.cpp
-  src/v20180125/model/IpAccessControlParam.cpp
-  src/v20180125/model/ModifyInstanceRenewFlagRequest.cpp
   src/v20180125/model/DescribeBatchIpAccessControlResponse.cpp
   src/v20180125/model/DescribeDomainDetailsSaasResponse.cpp
-  src/v20180125/model/DescribeDomainVerifyResultResponse.cpp
-  src/v20180125/model/DomainPackageNew.cpp
-  src/v20180125/model/AddCustomRuleRequest.cpp
+  src/v20180125/model/ExportLLMKeywordLibRequest.cpp
   src/v20180125/model/ModifyAntiInfoLeakRuleStatusResponse.cpp
-  src/v20180125/model/FraudPkg.cpp
-  src/v20180125/model/DeleteCCRuleRequest.cpp
-  src/v20180125/model/DescribeAttackTypeResponse.cpp
-  src/v20180125/model/GenerateDealsAndPayNewResponse.cpp
-  src/v20180125/model/DeleteCustomRuleRequest.cpp
-  src/v20180125/model/DescribeInstancesResponse.cpp
-  src/v20180125/model/DescribeCCRuleResponse.cpp
-  src/v20180125/model/MiniExtendPkg.cpp
-  src/v20180125/model/Strategy.cpp
+  src/v20180125/model/DeleteIpAccessControlV2Request.cpp
   src/v20180125/model/DescribeTopAttackDomainRequest.cpp
-  src/v20180125/model/DescribeIpAccessControlRequest.cpp
-  src/v20180125/model/DescribeFindDomainListRequest.cpp
-  src/v20180125/model/ModifyAntiFakeUrlStatusResponse.cpp
-  src/v20180125/model/DescribeHostsRequest.cpp
-  src/v20180125/model/ModifyInstanceElasticModeRequest.cpp
+  src/v20180125/model/ModifyDomainIpv6StatusResponse.cpp
   src/v20180125/model/DescribeHostLimitResponse.cpp
-  src/v20180125/model/ModifyOwaspRuleTypeActionRequest.cpp
-  src/v20180125/model/DescribeWebshellStatusResponse.cpp
-  src/v20180125/model/ModifyCustomWhiteRuleStatusRequest.cpp
   src/v20180125/model/DeleteAntiFakeUrlRequest.cpp
   src/v20180125/model/DescribeSpartaProtectionInfoRequest.cpp
   src/v20180125/model/CacheUrlItems.cpp
-  src/v20180125/model/ModifyInstanceQpsLimitResponse.cpp
-  src/v20180125/model/ReqUserRule.cpp
-  src/v20180125/model/ModifyWebshellStatusResponse.cpp
-  src/v20180125/model/ClbWafRegionItem.cpp
-  src/v20180125/model/FindAllDomainDetail.cpp
-  src/v20180125/model/DeleteAntiInfoLeakRuleRequest.cpp
-  src/v20180125/model/ModifyInstanceElasticModeResponse.cpp
-  src/v20180125/model/WafRuleLimit.cpp
-  src/v20180125/model/DescribeUserLevelResponse.cpp
-  src/v20180125/model/DescribeVipInfoResponse.cpp
-  src/v20180125/model/ModifyIpAccessControlResponse.cpp
+  src/v20180125/model/Strategy.cpp
+  src/v20180125/model/GenerateDealsAndPayNewResponse.cpp
   src/v20180125/model/DescribeCCRuleRequest.cpp
-  src/v20180125/model/ModifyModuleStatusRequest.cpp
-  src/v20180125/model/MiniPkg.cpp
-  src/v20180125/model/DescribeRuleLimitRequest.cpp
-  src/v20180125/model/TargetEntity.cpp
-  src/v20180125/model/DeleteOwaspRuleStatusResponse.cpp
-  src/v20180125/model/CCRuleItem.cpp
-  src/v20180125/model/DescribeDomainCountInfoRequest.cpp
-  src/v20180125/model/ModifyDomainsCLSStatusRequest.cpp
-  src/v20180125/model/DescribeCustomWhiteRuleResponse.cpp
-  src/v20180125/model/ModifyOwaspRuleStatusRequest.cpp
-  src/v20180125/model/ModifySpartaProtectionRequest.cpp
-  src/v20180125/model/DescribeTlsVersionResponse.cpp
-  src/v20180125/model/ModifyDomainPostActionRequest.cpp
+  src/v20180125/model/IntentDetectResult.cpp
+  src/v20180125/model/DescribeLLMKeywordLibraryResponse.cpp
   src/v20180125/model/VipInfo.cpp
   src/v20180125/model/DeleteOwaspRuleStatusRequest.cpp
   src/v20180125/model/DescribeTopAttackDomainResponse.cpp
-  src/v20180125/model/DescribeSessionResponse.cpp
-  src/v20180125/model/AddAntiInfoLeakRulesResponse.cpp
-  src/v20180125/model/DescribeAntiFakeRulesRequest.cpp
-  src/v20180125/model/AddCustomWhiteRuleRequest.cpp
-  src/v20180125/model/PortInfo.cpp
-  src/v20180125/model/DescribeWebshellStatusRequest.cpp
-  src/v20180125/model/ImportIpAccessControlRequest.cpp
-  src/v20180125/model/ModifyOwaspRuleStatusResponse.cpp
-  src/v20180125/model/DeleteAntiInfoLeakRuleResponse.cpp
-  src/v20180125/model/DeleteSessionResponse.cpp
-  src/v20180125/model/UpsertSessionRequest.cpp
-  src/v20180125/model/DescribeRuleLimitResponse.cpp
-  src/v20180125/model/DescribeHostLimitRequest.cpp
+  src/v20180125/model/ModifyLLMSdkAccessResponse.cpp
   src/v20180125/model/DeleteCustomRuleResponse.cpp
-  src/v20180125/model/ModifyOwaspRuleTypeLevelResponse.cpp
-  src/v20180125/model/ModifyUserSignatureRuleRequest.cpp
-  src/v20180125/model/ClbDomainsInfo.cpp
-  src/v20180125/model/CreateDealsResponse.cpp
+  src/v20180125/model/SkillScanCapabilityTag.cpp
   src/v20180125/model/DescribeHistogramRequest.cpp
-  src/v20180125/model/DescribeHostResponse.cpp
   src/v20180125/model/DeleteCCRuleResponse.cpp
+  src/v20180125/model/UpsertCCRuleRequest.cpp
+  src/v20180125/model/ModifyLLMStatusResponse.cpp
+  src/v20180125/model/ModifyProtectionStatusResponse.cpp
+  src/v20180125/model/ModifyOwaspRuleStatusRequest.cpp
+  src/v20180125/model/ModifyDomainPostActionRequest.cpp
+  src/v20180125/model/BotPkg.cpp
+  src/v20180125/model/SearchAttackLogResponse.cpp
+  src/v20180125/model/RefreshAccessCheckResultRequest.cpp
+  src/v20180125/model/WebshellStatus.cpp
+  src/v20180125/model/DescribeSpartaProtectionInfoResponse.cpp
+  src/v20180125/model/ModifyModuleStatusRequest.cpp
+  src/v20180125/model/DeleteLLMContentRuleResponse.cpp
+  src/v20180125/model/ModifyInstanceNameRequest.cpp
+  src/v20180125/model/DescribePortsResponse.cpp
+  src/v20180125/model/ModifyCustomRuleRequest.cpp
+  src/v20180125/model/ModifyOwaspRuleTypeLevelResponse.cpp
+  src/v20180125/model/DescribeLLMContentSecCheckResponse.cpp
+  src/v20180125/model/DescribePeakPointsRequest.cpp
+  src/v20180125/model/ModifyHostFlowModeResponse.cpp
+  src/v20180125/model/DescribeAntiInfoLeakRulesStrategyItem.cpp
+  src/v20180125/model/DescribeCiphersDetailRequest.cpp
+  src/v20180125/model/CCRuleItems.cpp
+  src/v20180125/model/ModifyDomainIpv6StatusRequest.cpp
+  src/v20180125/model/SkillScanQueryData.cpp
+  src/v20180125/model/LLMSdkAccessItem.cpp
+  src/v20180125/model/DescribeAntiInfoLeakageRulesResponse.cpp
+  src/v20180125/model/DescribeSkillSecScanResultRequest.cpp
+  src/v20180125/model/OwaspRule.cpp
+  src/v20180125/model/GetAttackHistogramRequest.cpp
+  src/v20180125/model/ImageResult.cpp
+  src/v20180125/model/DescribeAttackTypeRequest.cpp
+  src/v20180125/model/CategoryGroup.cpp
+  src/v20180125/model/ModifyCustomWhiteRuleRequest.cpp
+  src/v20180125/model/DeleteCustomWhiteRuleRequest.cpp
+  src/v20180125/model/ModifyInstanceRenewFlagResponse.cpp
+  src/v20180125/model/ModifyOwaspRuleTypeStatusResponse.cpp
+  src/v20180125/model/ImportIpAccessControlResponse.cpp
+  src/v20180125/model/AddCustomWhiteRuleRequest.cpp
+  src/v20180125/model/CronJob.cpp
+  src/v20180125/model/DeleteOwaspWhiteRuleResponse.cpp
+  src/v20180125/model/DomainsPartInfo.cpp
+  src/v20180125/model/AddAntiInfoLeakRulesRequest.cpp
+  src/v20180125/model/AddSpartaProtectionRequest.cpp
+  src/v20180125/model/ModifyModuleStatusResponse.cpp
+  src/v20180125/model/RuleDetail.cpp
+  src/v20180125/model/AttackLogInfo.cpp
+  src/v20180125/model/ModifyOwaspRuleTypeStatusRequest.cpp
+  src/v20180125/model/SkillScanItem.cpp
   src/v20180125/model/LogHistogramInfo.cpp
+  src/v20180125/model/DescribeDomainVerifyResultRequest.cpp
+  src/v20180125/model/CreateDealsGoods.cpp
+  src/v20180125/model/DescribeLLMWafToolCallRulesRequest.cpp
+  src/v20180125/model/ModifySpartaProtectionModeResponse.cpp
+  src/v20180125/model/SkillRuleCatalogItem.cpp
+  src/v20180125/model/ModifyCustomWhiteRuleStatusResponse.cpp
+  src/v20180125/model/BatchIpAccessControlData.cpp
+  src/v20180125/model/DeleteLLMKeywordLibraryRequest.cpp
+  src/v20180125/model/BotQPS.cpp
+  src/v20180125/model/DescribeLLMHourBillDetailRequest.cpp
+  src/v20180125/model/DescribePolicyStatusResponse.cpp
+  src/v20180125/model/GetAttackTotalCountResponse.cpp
+  src/v20180125/model/DescribeLLMWafDLPRulesRequest.cpp
+  src/v20180125/model/CreateDealsResponse.cpp
+  src/v20180125/model/DescribeOwaspRulesRequest.cpp
+  src/v20180125/model/DescribeCCRuleListRequest.cpp
+  src/v20180125/model/ModifyLLMContentRuleStatusRequest.cpp
+  src/v20180125/model/DescribeDomainVerifyResultResponse.cpp
+  src/v20180125/model/AddCustomRuleRequest.cpp
+  src/v20180125/model/DeleteCCRuleRequest.cpp
+  src/v20180125/model/DescribeAttackTypeResponse.cpp
+  src/v20180125/model/DescribeCCRuleResponse.cpp
+  src/v20180125/model/ModifyObjectResponse.cpp
+  src/v20180125/model/ModifyAntiFakeUrlStatusResponse.cpp
+  src/v20180125/model/DescribeOwaspRuleTypesResponse.cpp
+  src/v20180125/model/ModifyInstanceElasticModeRequest.cpp
+  src/v20180125/model/DescribeWebshellStatusResponse.cpp
+  src/v20180125/model/ModifyLLMContentRuleResponse.cpp
+  src/v20180125/model/FindAllDomainDetail.cpp
+  src/v20180125/model/DeleteAntiInfoLeakRuleRequest.cpp
+  src/v20180125/model/DescribeVipInfoResponse.cpp
+  src/v20180125/model/ModifyIpAccessControlResponse.cpp
+  src/v20180125/model/DescribeRuleLimitRequest.cpp
+  src/v20180125/model/UrlHitInfo.cpp
+  src/v20180125/model/ModifyDomainPostActionResponse.cpp
+  src/v20180125/model/ModifyDomainsCLSStatusRequest.cpp
+  src/v20180125/model/DescribeTlsVersionResponse.cpp
+  src/v20180125/model/DescribeLLMContentSecCheckRequest.cpp
+  src/v20180125/model/DescribeSessionResponse.cpp
+  src/v20180125/model/UpsertSessionRequest.cpp
+  src/v20180125/model/DescribeHostLimitRequest.cpp
+  src/v20180125/model/DescribeOwaspWhiteRulesResponse.cpp
+  src/v20180125/model/ClbDomainsInfo.cpp
+  src/v20180125/model/DescribeObjectsResponse.cpp
+  src/v20180125/model/ExportLLMKeywordLibResponse.cpp
+  src/v20180125/model/MiniExtendPkg.cpp
   src/v20180125/model/CreateOwaspWhiteRuleResponse.cpp
   src/v20180125/model/DomainURI.cpp
-  src/v20180125/model/ModifyHostRequest.cpp
-  src/v20180125/model/DescribeDomainsRequest.cpp
-  src/v20180125/model/HybridPkg.cpp
-  src/v20180125/model/BotPkg.cpp
   src/v20180125/model/DescribeObjectsRequest.cpp
-  src/v20180125/model/DescribeUserDomainInfoResponse.cpp
   src/v20180125/model/ModifyHostStatusRequest.cpp
-  src/v20180125/model/DescribeHistogramResponse.cpp
-  src/v20180125/model/ModifyCustomRuleResponse.cpp
-  src/v20180125/model/LoadBalancer.cpp
-  src/v20180125/model/ClbObject.cpp
   )
 
 set(waf_include

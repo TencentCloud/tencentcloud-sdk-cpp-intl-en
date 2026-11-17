@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Statistical curve data item.
+                * Statistics curve data item
                 */
                 class FloatTimingDataItem : public AbstractModel
                 {

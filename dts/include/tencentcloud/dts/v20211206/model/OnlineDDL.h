@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status. Valid values: ON (enable) and OFF (disable).
+                     * @return Status Status. Valid values: ON (enable) and OFF (disable).
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status. Valid values: ON (enable) and OFF (disable).
+                     * @param _status Status. Valid values: ON (enable) and OFF (disable).
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status. Valid values: ON (enable) and OFF (disable).
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
