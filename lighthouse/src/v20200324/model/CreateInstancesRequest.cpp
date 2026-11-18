@@ -33,7 +33,12 @@ CreateInstancesRequest::CreateInstancesRequest() :
     m_clientTokenHasBeenSet(false),
     m_loginConfigurationHasBeenSet(false),
     m_containersHasBeenSet(false),
-    m_autoVoucherHasBeenSet(false)
+    m_autoVoucherHasBeenSet(false),
+    m_firewallTemplateIdHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_initCommandHasBeenSet(false),
+    m_domainNameHasBeenSet(false),
+    m_subdomainHasBeenSet(false)
 {
 }
 
@@ -144,6 +149,54 @@ string CreateInstancesRequest::ToJsonString() const
         string key = "AutoVoucher";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_autoVoucher, allocator);
+    }
+
+    if (m_firewallTemplateIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FirewallTemplateId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_firewallTemplateId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_initCommandHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InitCommand";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_initCommand.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_domainNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DomainName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_domainName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subdomainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Subdomain";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_subdomain.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -328,6 +381,86 @@ void CreateInstancesRequest::SetAutoVoucher(const bool& _autoVoucher)
 bool CreateInstancesRequest::AutoVoucherHasBeenSet() const
 {
     return m_autoVoucherHasBeenSet;
+}
+
+string CreateInstancesRequest::GetFirewallTemplateId() const
+{
+    return m_firewallTemplateId;
+}
+
+void CreateInstancesRequest::SetFirewallTemplateId(const string& _firewallTemplateId)
+{
+    m_firewallTemplateId = _firewallTemplateId;
+    m_firewallTemplateIdHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::FirewallTemplateIdHasBeenSet() const
+{
+    return m_firewallTemplateIdHasBeenSet;
+}
+
+vector<Tag> CreateInstancesRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateInstancesRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+Command CreateInstancesRequest::GetInitCommand() const
+{
+    return m_initCommand;
+}
+
+void CreateInstancesRequest::SetInitCommand(const Command& _initCommand)
+{
+    m_initCommand = _initCommand;
+    m_initCommandHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::InitCommandHasBeenSet() const
+{
+    return m_initCommandHasBeenSet;
+}
+
+string CreateInstancesRequest::GetDomainName() const
+{
+    return m_domainName;
+}
+
+void CreateInstancesRequest::SetDomainName(const string& _domainName)
+{
+    m_domainName = _domainName;
+    m_domainNameHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::DomainNameHasBeenSet() const
+{
+    return m_domainNameHasBeenSet;
+}
+
+string CreateInstancesRequest::GetSubdomain() const
+{
+    return m_subdomain;
+}
+
+void CreateInstancesRequest::SetSubdomain(const string& _subdomain)
+{
+    m_subdomain = _subdomain;
+    m_subdomainHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::SubdomainHasBeenSet() const
+{
+    return m_subdomainHasBeenSet;
 }
 
 

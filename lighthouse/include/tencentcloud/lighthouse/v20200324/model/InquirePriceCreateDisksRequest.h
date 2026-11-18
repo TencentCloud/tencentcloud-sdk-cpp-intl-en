@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameter settings for purchasing the monthly subscribed cloud disk.
-                     * @return DiskChargePrepaid Parameter settings for purchasing the monthly subscribed cloud disk.
+                     * 获取Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
+                     * @return DiskChargePrepaid Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
                      * 
                      */
                     DiskChargePrepaid GetDiskChargePrepaid() const;
 
                     /**
-                     * 设置Parameter settings for purchasing the monthly subscribed cloud disk.
-                     * @param _diskChargePrepaid Parameter settings for purchasing the monthly subscribed cloud disk.
+                     * 设置Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
+                     * @param _diskChargePrepaid Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
                      * 
                      */
                     void SetDiskChargePrepaid(const DiskChargePrepaid& _diskChargePrepaid);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool DiskCountHasBeenSet() const;
 
                     /**
-                     * 获取Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-                     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 获取Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
+                     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
                      * 
                      */
                     int64_t GetDiskBackupQuota() const;
 
                     /**
-                     * 设置Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-                     * @param _diskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 设置Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
+                     * @param _diskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
                      * 
                      */
                     void SetDiskBackupQuota(const int64_t& _diskBackupQuota);
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Parameter settings for purchasing the monthly subscribed cloud disk.
+                     * Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
                      */
                     DiskChargePrepaid m_diskChargePrepaid;
                     bool m_diskChargePrepaidHasBeenSet;
@@ -175,7 +175,7 @@ namespace TencentCloud
                     bool m_diskCountHasBeenSet;
 
                     /**
-                     * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
                      */
                     int64_t m_diskBackupQuota;
                     bool m_diskBackupQuotaHasBeenSet;

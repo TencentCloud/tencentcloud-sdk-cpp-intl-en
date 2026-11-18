@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DiskIdsHasBeenSet() const;
 
                     /**
-                     * 获取Parameter settings for renewing the monthly subscribed cloud disk.
-                     * @return RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+                     * 获取Parameter settings for renewing the yearly/monthly subscribed cloud disk.
+                     * @return RenewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
                      * 
                      */
                     RenewDiskChargePrepaid GetRenewDiskChargePrepaid() const;
 
                     /**
-                     * 设置Parameter settings for renewing the monthly subscribed cloud disk.
-                     * @param _renewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+                     * 设置Parameter settings for renewing the yearly/monthly subscribed cloud disk.
+                     * @param _renewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
                      * 
                      */
                     void SetRenewDiskChargePrepaid(const RenewDiskChargePrepaid& _renewDiskChargePrepaid);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_diskIdsHasBeenSet;
 
                     /**
-                     * Parameter settings for renewing the monthly subscribed cloud disk.
+                     * Parameter settings for renewing the yearly/monthly subscribed cloud disk.
                      */
                     RenewDiskChargePrepaid m_renewDiskChargePrepaid;
                     bool m_renewDiskChargePrepaidHasBeenSet;

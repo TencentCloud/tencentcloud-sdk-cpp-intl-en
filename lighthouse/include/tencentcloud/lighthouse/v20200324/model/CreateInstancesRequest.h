@@ -24,6 +24,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/InstanceChargePrepaid.h>
 #include <tencentcloud/lighthouse/v20200324/model/LoginConfiguration.h>
 #include <tencentcloud/lighthouse/v20200324/model/DockerContainerConfiguration.h>
+#include <tencentcloud/lighthouse/v20200324/model/Tag.h>
+#include <tencentcloud/lighthouse/v20200324/model/Command.h>
 
 
 namespace TencentCloud
@@ -88,15 +90,15 @@ namespace TencentCloud
                     bool BlueprintIdHasBeenSet() const;
 
                     /**
-                     * 获取Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
-                     * @return InstanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * 获取Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * @return InstanceChargePrepaid Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
                      * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
-                     * @param _instanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * 设置Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * @param _instanceChargePrepaid Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
                      * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
@@ -130,15 +132,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
-                     * @return InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * 获取Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * @return InstanceCount Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
                      * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
-                     * 设置Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
-                     * @param _instanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * 设置Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * @param _instanceCount Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
                      * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
@@ -230,15 +232,15 @@ If the dry run succeeds, the RequestId will be returned.
                     bool ClientTokenHasBeenSet() const;
 
                     /**
-                     * 获取Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
-                     * @return LoginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+                     * 获取Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
+                     * @return LoginConfiguration Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
                      * 
                      */
                     LoginConfiguration GetLoginConfiguration() const;
 
                     /**
-                     * 设置Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
-                     * @param _loginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+                     * 设置Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
+                     * @param _loginConfiguration Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
                      * 
                      */
                     void SetLoginConfiguration(const LoginConfiguration& _loginConfiguration);
@@ -292,6 +294,111 @@ If the dry run succeeds, the RequestId will be returned.
                      */
                     bool AutoVoucherHasBeenSet() const;
 
+                    /**
+                     * 获取Firewall template ID. If not specified, the default firewall policy is used.
+                     * @return FirewallTemplateId Firewall template ID. If not specified, the default firewall policy is used.
+                     * 
+                     */
+                    std::string GetFirewallTemplateId() const;
+
+                    /**
+                     * 设置Firewall template ID. If not specified, the default firewall policy is used.
+                     * @param _firewallTemplateId Firewall template ID. If not specified, the default firewall policy is used.
+                     * 
+                     */
+                    void SetFirewallTemplateId(const std::string& _firewallTemplateId);
+
+                    /**
+                     * 判断参数 FirewallTemplateId 是否已赋值
+                     * @return FirewallTemplateId 是否已赋值
+                     * 
+                     */
+                    bool FirewallTemplateIdHasBeenSet() const;
+
+                    /**
+                     * 获取Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * @return Tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * @param _tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取The command to be automatically executed after the instance is created.
+                     * @return InitCommand The command to be automatically executed after the instance is created.
+                     * 
+                     */
+                    Command GetInitCommand() const;
+
+                    /**
+                     * 设置The command to be automatically executed after the instance is created.
+                     * @param _initCommand The command to be automatically executed after the instance is created.
+                     * 
+                     */
+                    void SetInitCommand(const Command& _initCommand);
+
+                    /**
+                     * 判断参数 InitCommand 是否已赋值
+                     * @return InitCommand 是否已赋值
+                     * 
+                     */
+                    bool InitCommandHasBeenSet() const;
+
+                    /**
+                     * 获取The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * @return DomainName The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * 
+                     */
+                    std::string GetDomainName() const;
+
+                    /**
+                     * 设置The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * @param _domainName The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * 
+                     */
+                    void SetDomainName(const std::string& _domainName);
+
+                    /**
+                     * 判断参数 DomainName 是否已赋值
+                     * @return DomainName 是否已赋值
+                     * 
+                     */
+                    bool DomainNameHasBeenSet() const;
+
+                    /**
+                     * 获取The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * @return Subdomain The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * 
+                     */
+                    std::string GetSubdomain() const;
+
+                    /**
+                     * 设置The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * @param _subdomain The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     * 
+                     */
+                    void SetSubdomain(const std::string& _subdomain);
+
+                    /**
+                     * 判断参数 Subdomain 是否已赋值
+                     * @return Subdomain 是否已赋值
+                     * 
+                     */
+                    bool SubdomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -307,7 +414,7 @@ If the dry run succeeds, the RequestId will be returned.
                     bool m_blueprintIdHasBeenSet;
 
                     /**
-                     * Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;
@@ -319,7 +426,7 @@ If the dry run succeeds, the RequestId will be returned.
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
                      */
                     uint64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
@@ -347,7 +454,7 @@ If the dry run succeeds, the RequestId will be returned.
                     bool m_clientTokenHasBeenSet;
 
                     /**
-                     * Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+                     * Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
                      */
                     LoginConfiguration m_loginConfiguration;
                     bool m_loginConfigurationHasBeenSet;
@@ -363,6 +470,36 @@ If the dry run succeeds, the RequestId will be returned.
                      */
                     bool m_autoVoucher;
                     bool m_autoVoucherHasBeenSet;
+
+                    /**
+                     * Firewall template ID. If not specified, the default firewall policy is used.
+                     */
+                    std::string m_firewallTemplateId;
+                    bool m_firewallTemplateIdHasBeenSet;
+
+                    /**
+                     * Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * The command to be automatically executed after the instance is created.
+                     */
+                    Command m_initCommand;
+                    bool m_initCommandHasBeenSet;
+
+                    /**
+                     * The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     */
+                    std::string m_domainName;
+                    bool m_domainNameHasBeenSet;
+
+                    /**
+                     * The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+                     */
+                    std::string m_subdomain;
+                    bool m_subdomainHasBeenSet;
 
                 };
             }

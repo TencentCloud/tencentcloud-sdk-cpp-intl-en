@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/lighthouse/v20200324/model/DiskChargePrepaid.h>
 #include <tencentcloud/lighthouse/v20200324/model/AutoMountConfiguration.h>
+#include <tencentcloud/lighthouse/v20200324/model/Tag.h>
 
 
 namespace TencentCloud
@@ -108,15 +109,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Parameters of monthly subscribed cloud disks
-                     * @return DiskChargePrepaid Parameters of monthly subscribed cloud disks
+                     * 获取Parameters of yearly/monthly subscribed cloud disks
+                     * @return DiskChargePrepaid Parameters of yearly/monthly subscribed cloud disks
                      * 
                      */
                     DiskChargePrepaid GetDiskChargePrepaid() const;
 
                     /**
-                     * 设置Parameters of monthly subscribed cloud disks
-                     * @param _diskChargePrepaid Parameters of monthly subscribed cloud disks
+                     * 设置Parameters of yearly/monthly subscribed cloud disks
+                     * @param _diskChargePrepaid Parameters of yearly/monthly subscribed cloud disks
                      * 
                      */
                     void SetDiskChargePrepaid(const DiskChargePrepaid& _diskChargePrepaid);
@@ -171,15 +172,15 @@ namespace TencentCloud
                     bool DiskCountHasBeenSet() const;
 
                     /**
-                     * 获取Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-                     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 获取Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
+                     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
                      * 
                      */
                     int64_t GetDiskBackupQuota() const;
 
                     /**
-                     * 设置Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-                     * @param _diskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 设置Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
+                     * @param _diskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
                      * 
                      */
                     void SetDiskBackupQuota(const int64_t& _diskBackupQuota);
@@ -233,6 +234,27 @@ namespace TencentCloud
                      */
                     bool AutoMountConfigurationHasBeenSet() const;
 
+                    /**
+                     * 获取Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * @return Tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * @param _tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     * 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     * 
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -254,7 +276,7 @@ namespace TencentCloud
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Parameters of monthly subscribed cloud disks
+                     * Parameters of yearly/monthly subscribed cloud disks
                      */
                     DiskChargePrepaid m_diskChargePrepaid;
                     bool m_diskChargePrepaidHasBeenSet;
@@ -272,7 +294,7 @@ namespace TencentCloud
                     bool m_diskCountHasBeenSet;
 
                     /**
-                     * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
                      */
                     int64_t m_diskBackupQuota;
                     bool m_diskBackupQuotaHasBeenSet;
@@ -288,6 +310,12 @@ namespace TencentCloud
                      */
                     AutoMountConfiguration m_autoMountConfiguration;
                     bool m_autoMountConfigurationHasBeenSet;
+
+                    /**
+                     * Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter settings for the monthly subscribed cloud disk
+                * Parameter settings for the yearly/monthly subscribed cloud disk
                 */
                 class DiskChargePrepaid : public AbstractModel
                 {
