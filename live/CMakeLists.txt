@@ -186,6 +186,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/ResumeLiveStreamResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveStreamOnlineListResponse.h
   include/tencentcloud/live/v20180801/model/DescribeTimeShiftStreamListResponse.h
+  include/tencentcloud/live/v20180801/model/StopScreenshotTaskRequest.h
   include/tencentcloud/live/v20180801/model/ModifyLiveTimeShiftTemplateResponse.h
   include/tencentcloud/live/v20180801/model/DescribeStreamPushInfoListResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveStreamPushInfoListRequest.h
@@ -312,6 +313,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribeTranscodeTaskNumRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveCallbackRulesResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveTranscodeTotalInfoRequest.h
+  include/tencentcloud/live/v20180801/model/StopScreenshotTaskResponse.h
   include/tencentcloud/live/v20180801/model/CreateRecordTaskResponse.h
   include/tencentcloud/live/v20180801/model/RecordTask.h
   include/tencentcloud/live/v20180801/model/DescribeTimeShiftRecordDetailResponse.h
@@ -492,6 +494,7 @@ set(live_src
   src/v20180801/model/ResumeLiveStreamResponse.cpp
   src/v20180801/model/DescribeLiveStreamOnlineListResponse.cpp
   src/v20180801/model/DescribeTimeShiftStreamListResponse.cpp
+  src/v20180801/model/StopScreenshotTaskRequest.cpp
   src/v20180801/model/ModifyLiveTimeShiftTemplateResponse.cpp
   src/v20180801/model/DescribeStreamPushInfoListResponse.cpp
   src/v20180801/model/DescribeLiveStreamPushInfoListRequest.cpp
@@ -618,6 +621,7 @@ set(live_src
   src/v20180801/model/DescribeTranscodeTaskNumRequest.cpp
   src/v20180801/model/DescribeLiveCallbackRulesResponse.cpp
   src/v20180801/model/DescribeLiveTranscodeTotalInfoRequest.cpp
+  src/v20180801/model/StopScreenshotTaskResponse.cpp
   src/v20180801/model/CreateRecordTaskResponse.cpp
   src/v20180801/model/RecordTask.cpp
   src/v20180801/model/DescribeTimeShiftRecordDetailResponse.cpp

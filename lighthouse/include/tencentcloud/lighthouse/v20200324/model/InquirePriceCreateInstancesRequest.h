@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool BundleIdHasBeenSet() const;
 
                     /**
-                     * 获取Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
-                     * @return InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * 获取Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
+                     * @return InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
                      * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
-                     * @param _instanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * 设置Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
+                     * @param _instanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
                      * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_bundleIdHasBeenSet;
 
                     /**
-                     * Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the yearly/monthly subscribed instances.
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;

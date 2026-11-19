@@ -5990,6 +5990,56 @@ LiveClient::StopRecordTaskOutcomeCallable LiveClient::StopRecordTaskCallable(con
     return prom->get_future();
 }
 
+LiveClient::StopScreenshotTaskOutcome LiveClient::StopScreenshotTask(const StopScreenshotTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopScreenshotTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopScreenshotTaskResponse rsp = StopScreenshotTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopScreenshotTaskOutcome(rsp);
+        else
+            return StopScreenshotTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return StopScreenshotTaskOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::StopScreenshotTaskAsync(const StopScreenshotTaskRequest& request, const StopScreenshotTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const StopScreenshotTaskRequest&;
+    using Resp = StopScreenshotTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "StopScreenshotTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+LiveClient::StopScreenshotTaskOutcomeCallable LiveClient::StopScreenshotTaskCallable(const StopScreenshotTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<StopScreenshotTaskOutcome>>();
+    StopScreenshotTaskAsync(
+    request,
+    [prom](
+        const LiveClient*,
+        const StopScreenshotTaskRequest&,
+        StopScreenshotTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 LiveClient::UnBindLiveDomainCertOutcome LiveClient::UnBindLiveDomainCert(const UnBindLiveDomainCertRequest &request)
 {
     auto outcome = MakeRequest(request, "UnBindLiveDomainCert");

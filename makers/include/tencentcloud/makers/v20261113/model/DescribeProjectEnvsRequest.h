@@ -1,0 +1,134 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_MAKERS_V20261113_MODEL_DESCRIBEPROJECTENVSREQUEST_H_
+#define TENCENTCLOUD_MAKERS_V20261113_MODEL_DESCRIBEPROJECTENVSREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Makers
+    {
+        namespace V20261113
+        {
+            namespace Model
+            {
+                /**
+                * DescribeProjectEnvs request structure.
+                */
+                class DescribeProjectEnvsRequest : public AbstractModel
+                {
+                public:
+                    DescribeProjectEnvsRequest();
+                    ~DescribeProjectEnvsRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取<p>Makers site ID</p>
+                     * @return ZoneId <p>Makers site ID</p>
+                     * 
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置<p>Makers site ID</p>
+                     * @param _zoneId <p>Makers site ID</p>
+                     * 
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Project ID</p>
+                     * @return ProjectId <p>Project ID</p>
+                     * 
+                     */
+                    std::string GetProjectId() const;
+
+                    /**
+                     * 设置<p>Project ID</p>
+                     * @param _projectId <p>Project ID</p>
+                     * 
+                     */
+                    void SetProjectId(const std::string& _projectId);
+
+                    /**
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
+                     * 
+                     */
+                    bool ProjectIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Only return the variables of the environment slug</p>
+                     * @return Env <p>Only return the variables of the environment slug</p>
+                     * 
+                     */
+                    std::string GetEnv() const;
+
+                    /**
+                     * 设置<p>Only return the variables of the environment slug</p>
+                     * @param _env <p>Only return the variables of the environment slug</p>
+                     * 
+                     */
+                    void SetEnv(const std::string& _env);
+
+                    /**
+                     * 判断参数 Env 是否已赋值
+                     * @return Env 是否已赋值
+                     * 
+                     */
+                    bool EnvHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>Makers site ID</p>
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * <p>Project ID</p>
+                     */
+                    std::string m_projectId;
+                    bool m_projectIdHasBeenSet;
+
+                    /**
+                     * <p>Only return the variables of the environment slug</p>
+                     */
+                    std::string m_env;
+                    bool m_envHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_MAKERS_V20261113_MODEL_DESCRIBEPROJECTENVSREQUEST_H_

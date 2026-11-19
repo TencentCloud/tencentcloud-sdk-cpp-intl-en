@@ -261,6 +261,8 @@
 #include <tencentcloud/live/v20180801/model/StopLiveRecordResponse.h>
 #include <tencentcloud/live/v20180801/model/StopRecordTaskRequest.h>
 #include <tencentcloud/live/v20180801/model/StopRecordTaskResponse.h>
+#include <tencentcloud/live/v20180801/model/StopScreenshotTaskRequest.h>
+#include <tencentcloud/live/v20180801/model/StopScreenshotTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/UnBindLiveDomainCertRequest.h>
 #include <tencentcloud/live/v20180801/model/UnBindLiveDomainCertResponse.h>
 #include <tencentcloud/live/v20180801/model/UpdateLiveWatermarkRequest.h>
@@ -636,6 +638,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StopRecordTaskResponse> StopRecordTaskOutcome;
                 typedef std::future<StopRecordTaskOutcome> StopRecordTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::StopRecordTaskRequest&, StopRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopRecordTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopScreenshotTaskResponse> StopScreenshotTaskOutcome;
+                typedef std::future<StopScreenshotTaskOutcome> StopScreenshotTaskOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::StopScreenshotTaskRequest&, StopScreenshotTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopScreenshotTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::UnBindLiveDomainCertResponse> UnBindLiveDomainCertOutcome;
                 typedef std::future<UnBindLiveDomainCertOutcome> UnBindLiveDomainCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::UnBindLiveDomainCertRequest&, UnBindLiveDomainCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnBindLiveDomainCertAsyncHandler;
@@ -1810,6 +1815,15 @@ Referer information is included in HTTP requests. After you enable referer confi
                 StopRecordTaskOutcome StopRecordTask(const Model::StopRecordTaskRequest &request);
                 void StopRecordTaskAsync(const Model::StopRecordTaskRequest& request, const StopRecordTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopRecordTaskOutcomeCallable StopRecordTaskCallable(const Model::StopRecordTaskRequest& request);
+
+                /**
+                 *This API is used to terminate a screenshot task in advance. After the task is successfully terminated, it will not be started again.
+                 * @param req StopScreenshotTaskRequest
+                 * @return StopScreenshotTaskOutcome
+                 */
+                StopScreenshotTaskOutcome StopScreenshotTask(const Model::StopScreenshotTaskRequest &request);
+                void StopScreenshotTaskAsync(const Model::StopScreenshotTaskRequest& request, const StopScreenshotTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopScreenshotTaskOutcomeCallable StopScreenshotTaskCallable(const Model::StopScreenshotTaskRequest& request);
 
                 /**
                  *This API is used to unbind a domain name certificate.
