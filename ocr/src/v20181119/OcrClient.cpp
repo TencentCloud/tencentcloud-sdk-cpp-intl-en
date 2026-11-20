@@ -1740,6 +1740,56 @@ OcrClient::SmartStructuralOCRV2OutcomeCallable OcrClient::SmartStructuralOCRV2Ca
     return prom->get_future();
 }
 
+OcrClient::VerifyPdfOcrOutcome OcrClient::VerifyPdfOcr(const VerifyPdfOcrRequest &request)
+{
+    auto outcome = MakeRequest(request, "VerifyPdfOcr");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        VerifyPdfOcrResponse rsp = VerifyPdfOcrResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return VerifyPdfOcrOutcome(rsp);
+        else
+            return VerifyPdfOcrOutcome(o.GetError());
+    }
+    else
+    {
+        return VerifyPdfOcrOutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::VerifyPdfOcrAsync(const VerifyPdfOcrRequest& request, const VerifyPdfOcrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const VerifyPdfOcrRequest&;
+    using Resp = VerifyPdfOcrResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "VerifyPdfOcr", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+OcrClient::VerifyPdfOcrOutcomeCallable OcrClient::VerifyPdfOcrCallable(const VerifyPdfOcrRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<VerifyPdfOcrOutcome>>();
+    VerifyPdfOcrAsync(
+    request,
+    [prom](
+        const OcrClient*,
+        const VerifyPdfOcrRequest&,
+        VerifyPdfOcrOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 OcrClient::VinOCROutcome OcrClient::VinOCR(const VinOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "VinOCR");

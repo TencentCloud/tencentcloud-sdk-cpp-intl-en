@@ -91,6 +91,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizeThaiPinkCardResponse.h>
 #include <tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Request.h>
 #include <tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Response.h>
+#include <tencentcloud/ocr/v20181119/model/VerifyPdfOcrRequest.h>
+#include <tencentcloud/ocr/v20181119/model/VerifyPdfOcrResponse.h>
 #include <tencentcloud/ocr/v20181119/model/VinOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/VinOCRResponse.h>
 
@@ -209,6 +211,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SmartStructuralOCRV2Response> SmartStructuralOCRV2Outcome;
                 typedef std::future<SmartStructuralOCRV2Outcome> SmartStructuralOCRV2OutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::SmartStructuralOCRV2Request&, SmartStructuralOCRV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> SmartStructuralOCRV2AsyncHandler;
+                typedef Outcome<Core::Error, Model::VerifyPdfOcrResponse> VerifyPdfOcrOutcome;
+                typedef std::future<VerifyPdfOcrOutcome> VerifyPdfOcrOutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::VerifyPdfOcrRequest&, VerifyPdfOcrOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyPdfOcrAsyncHandler;
                 typedef Outcome<Core::Error, Model::VinOCRResponse> VinOCROutcome;
                 typedef std::future<VinOCROutcome> VinOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::VinOCRRequest&, VinOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> VinOCRAsyncHandler;
@@ -563,6 +568,15 @@ A maximum of 10 requests can be initiated per second for this API.
                 SmartStructuralOCRV2Outcome SmartStructuralOCRV2(const Model::SmartStructuralOCRV2Request &request);
                 void SmartStructuralOCRV2Async(const Model::SmartStructuralOCRV2Request& request, const SmartStructuralOCRV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SmartStructuralOCRV2OutcomeCallable SmartStructuralOCRV2Callable(const Model::SmartStructuralOCRV2Request& request);
+
+                /**
+                 *This API is used to recognize entry and exit record PDFs and verify electronic signatures, returning structured entry and exit records and signature verification conclusions.
+                 * @param req VerifyPdfOcrRequest
+                 * @return VerifyPdfOcrOutcome
+                 */
+                VerifyPdfOcrOutcome VerifyPdfOcr(const Model::VerifyPdfOcrRequest &request);
+                void VerifyPdfOcrAsync(const Model::VerifyPdfOcrRequest& request, const VerifyPdfOcrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                VerifyPdfOcrOutcomeCallable VerifyPdfOcrCallable(const Model::VerifyPdfOcrRequest& request);
 
                 /**
                  *This API is used to recognize the vehicle identification number (VIN) in an image.
