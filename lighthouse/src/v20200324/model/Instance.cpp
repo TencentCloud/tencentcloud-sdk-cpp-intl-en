@@ -39,6 +39,7 @@ Instance::Instance() :
     m_latestOperationHasBeenSet(false),
     m_latestOperationStateHasBeenSet(false),
     m_latestOperationRequestIdHasBeenSet(false),
+    m_latestOperationStartedTimeHasBeenSet(false),
     m_isolatedTimeHasBeenSet(false),
     m_createdTimeHasBeenSet(false),
     m_expiredTimeHasBeenSet(false),
@@ -47,7 +48,9 @@ Instance::Instance() :
     m_osNameHasBeenSet(false),
     m_zoneHasBeenSet(false),
     m_tagsHasBeenSet(false),
-    m_instanceRestrictStateHasBeenSet(false)
+    m_instanceRestrictStateHasBeenSet(false),
+    m_initInvocationIdHasBeenSet(false),
+    m_instanceViolationDetailHasBeenSet(false)
 {
 }
 
@@ -263,6 +266,16 @@ CoreInternalOutcome Instance::Deserialize(const rapidjson::Value &value)
         m_latestOperationRequestIdHasBeenSet = true;
     }
 
+    if (value.HasMember("LatestOperationStartedTime") && !value["LatestOperationStartedTime"].IsNull())
+    {
+        if (!value["LatestOperationStartedTime"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.LatestOperationStartedTime` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_latestOperationStartedTime = string(value["LatestOperationStartedTime"].GetString());
+        m_latestOperationStartedTimeHasBeenSet = true;
+    }
+
     if (value.HasMember("IsolatedTime") && !value["IsolatedTime"].IsNull())
     {
         if (!value["IsolatedTime"].IsString())
@@ -361,6 +374,33 @@ CoreInternalOutcome Instance::Deserialize(const rapidjson::Value &value)
         }
         m_instanceRestrictState = string(value["InstanceRestrictState"].GetString());
         m_instanceRestrictStateHasBeenSet = true;
+    }
+
+    if (value.HasMember("InitInvocationId") && !value["InitInvocationId"].IsNull())
+    {
+        if (!value["InitInvocationId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.InitInvocationId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_initInvocationId = string(value["InitInvocationId"].GetString());
+        m_initInvocationIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceViolationDetail") && !value["InstanceViolationDetail"].IsNull())
+    {
+        if (!value["InstanceViolationDetail"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.InstanceViolationDetail` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_instanceViolationDetail.Deserialize(value["InstanceViolationDetail"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_instanceViolationDetailHasBeenSet = true;
     }
 
 
@@ -527,6 +567,14 @@ void Instance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         value.AddMember(iKey, rapidjson::Value(m_latestOperationRequestId.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_latestOperationStartedTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LatestOperationStartedTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_latestOperationStartedTime.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_isolatedTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -604,6 +652,23 @@ void Instance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         string key = "InstanceRestrictState";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_instanceRestrictState.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_initInvocationIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InitInvocationId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_initInvocationId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceViolationDetailHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceViolationDetail";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_instanceViolationDetail.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -897,6 +962,22 @@ bool Instance::LatestOperationRequestIdHasBeenSet() const
     return m_latestOperationRequestIdHasBeenSet;
 }
 
+string Instance::GetLatestOperationStartedTime() const
+{
+    return m_latestOperationStartedTime;
+}
+
+void Instance::SetLatestOperationStartedTime(const string& _latestOperationStartedTime)
+{
+    m_latestOperationStartedTime = _latestOperationStartedTime;
+    m_latestOperationStartedTimeHasBeenSet = true;
+}
+
+bool Instance::LatestOperationStartedTimeHasBeenSet() const
+{
+    return m_latestOperationStartedTimeHasBeenSet;
+}
+
 string Instance::GetIsolatedTime() const
 {
     return m_isolatedTime;
@@ -1039,5 +1120,37 @@ void Instance::SetInstanceRestrictState(const string& _instanceRestrictState)
 bool Instance::InstanceRestrictStateHasBeenSet() const
 {
     return m_instanceRestrictStateHasBeenSet;
+}
+
+string Instance::GetInitInvocationId() const
+{
+    return m_initInvocationId;
+}
+
+void Instance::SetInitInvocationId(const string& _initInvocationId)
+{
+    m_initInvocationId = _initInvocationId;
+    m_initInvocationIdHasBeenSet = true;
+}
+
+bool Instance::InitInvocationIdHasBeenSet() const
+{
+    return m_initInvocationIdHasBeenSet;
+}
+
+InstanceViolationDetail Instance::GetInstanceViolationDetail() const
+{
+    return m_instanceViolationDetail;
+}
+
+void Instance::SetInstanceViolationDetail(const InstanceViolationDetail& _instanceViolationDetail)
+{
+    m_instanceViolationDetail = _instanceViolationDetail;
+    m_instanceViolationDetailHasBeenSet = true;
+}
+
+bool Instance::InstanceViolationDetailHasBeenSet() const
+{
+    return m_instanceViolationDetailHasBeenSet;
 }
 

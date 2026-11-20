@@ -35,11 +35,11 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * >Key-Value pair filter for conditional filtering queries, such as filtering name
-> * If there are multiple `Filter` parameters, the relationship among them is the logical `AND`.
-> * If there are multiple `Values` for the same `Filter`, the relationship among the `Values` is the logical `OR`.
+                * >Describes key-value pair filters used for conditional filtering queries. For example, filter by name.
+> * If there are multiple `Filter` parameters, the relationship between them is logical AND (`AND`).
+> * If the same `Filter` has multiple `Values`, the relationship between the `Values` under the same `Filter` is logical OR (`OR`).
 >
-> Taking the `Filter` in the `DescribeInstances` API as an example, you can use the following filters to query the instance whose name (`instance-name`) is `test` ***and*** private IP (`private-ip-address`) is 10.10.10.10:
+> Take the `Filter` of the DescribeInstances API as an example. If you need to query instances whose instance name (`instance-name`) is test ***and*** private IP (`private-ip-address`) is 10.10.10.10, you can implement it as follows:
 ```
 Filters.0.Name=instance-name
 &Filters.0.Values.0=test
@@ -57,15 +57,15 @@ Filters.0.Name=instance-name
 
 
                     /**
-                     * 获取Field to be filtered.
-                     * @return Name Field to be filtered.
+                     * 获取Fields to be filtered.
+                     * @return Name Fields to be filtered.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Field to be filtered.
-                     * @param _name Field to be filtered.
+                     * 设置Fields to be filtered.
+                     * @param _name Fields to be filtered.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -78,15 +78,15 @@ Filters.0.Name=instance-name
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Filter value of field.
-                     * @return Values Filter value of field.
+                     * 获取Filter value of the field.
+                     * @return Values Filter value of the field.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Filter value of field.
-                     * @param _values Filter value of field.
+                     * 设置Filter value of the field.
+                     * @param _values Filter value of the field.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -101,13 +101,13 @@ Filters.0.Name=instance-name
                 private:
 
                     /**
-                     * Field to be filtered.
+                     * Fields to be filtered.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Filter value of field.
+                     * Filter value of the field.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

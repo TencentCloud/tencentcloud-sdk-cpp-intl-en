@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This describes the internet accessibility of the instance created by a launch configuration and declares the internet usage billing method of the instance and the maximum bandwidth
+                * Describes the public network accessibility of instances created with the launch configuration, and declares the public network billing mode and maximum bandwidth of the instance.
                 */
                 class InternetAccessible : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
-                     * @return InternetChargeType Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+                     * 获取Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+                     * @return InternetChargeType Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
                      * 
                      */
                     std::string GetInternetChargeType() const;
 
                     /**
-                     * 设置Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
-                     * @param _internetChargeType Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+                     * 设置Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+                     * @param _internetChargeType Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
                      * 
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Public network outbound bandwidth cap in Mbps.
-                     * @return InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+                     * 获取Maximum outbound public bandwidth, in the unit of Mbps.
+                     * @return InternetMaxBandwidthOut Maximum outbound public bandwidth, in the unit of Mbps.
                      * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
-                     * 设置Public network outbound bandwidth cap in Mbps.
-                     * @param _internetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+                     * 设置Maximum outbound public bandwidth, in the unit of Mbps.
+                     * @param _internetMaxBandwidthOut Maximum outbound public bandwidth, in the unit of Mbps.
                      * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取Whether to assign a public IP.
-                     * @return PublicIpAssigned Whether to assign a public IP.
+                     * 获取Indicates whether a public IP is assigned.
+                     * @return PublicIpAssigned Indicates whether a public IP is assigned.
                      * 
                      */
                     bool GetPublicIpAssigned() const;
 
                     /**
-                     * 设置Whether to assign a public IP.
-                     * @param _publicIpAssigned Whether to assign a public IP.
+                     * 设置Indicates whether a public IP is assigned.
+                     * @param _publicIpAssigned Indicates whether a public IP is assigned.
                      * 
                      */
                     void SetPublicIpAssigned(const bool& _publicIpAssigned);
@@ -120,21 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+                     * Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
                      */
                     std::string m_internetChargeType;
                     bool m_internetChargeTypeHasBeenSet;
 
                     /**
-                     * Public network outbound bandwidth cap in Mbps.
+                     * Maximum outbound public bandwidth, in the unit of Mbps.
                      */
                     int64_t m_internetMaxBandwidthOut;
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * Whether to assign a public IP.
+                     * Indicates whether a public IP is assigned.
                      */
                     bool m_publicIpAssigned;
                     bool m_publicIpAssignedHasBeenSet;

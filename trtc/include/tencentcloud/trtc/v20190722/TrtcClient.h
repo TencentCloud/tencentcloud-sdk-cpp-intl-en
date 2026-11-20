@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/trtc/v20190722/model/ControlAIConversationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/ControlAIConversationResponse.h>
+#include <tencentcloud/trtc/v20190722/model/ControlVoiceConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/ControlVoiceConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudModerationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudModerationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudRecordingRequest.h>
@@ -33,6 +35,8 @@
 #include <tencentcloud/trtc/v20190722/model/CreateCloudSliceTaskResponse.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudTranscriptionRequest.h>
 #include <tencentcloud/trtc/v20190722/model/CreateCloudTranscriptionResponse.h>
+#include <tencentcloud/trtc/v20190722/model/CreateVoiceConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/CreateVoiceConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudModerationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudModerationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingRequest.h>
@@ -41,6 +45,8 @@
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudSliceTaskResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudTranscriptionRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudTranscriptionResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DeleteVoiceConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DeleteVoiceConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeAIConversationRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeAIConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeAITranscriptionRequest.h>
@@ -85,6 +91,8 @@
 #include <tencentcloud/trtc/v20190722/model/DescribeUserEventResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeUserInfoRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeUserInfoResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeVoiceConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeVoiceConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeWebRecordRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeWebRecordResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomRequest.h>
@@ -97,6 +105,8 @@
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudSliceTaskRequest.h>
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudSliceTaskResponse.h>
+#include <tencentcloud/trtc/v20190722/model/ModifyVoiceConversationRequest.h>
+#include <tencentcloud/trtc/v20190722/model/ModifyVoiceConversationResponse.h>
 #include <tencentcloud/trtc/v20190722/model/QueryAIMessageListRequest.h>
 #include <tencentcloud/trtc/v20190722/model/QueryAIMessageListResponse.h>
 #include <tencentcloud/trtc/v20190722/model/RemoveUserRequest.h>
@@ -156,6 +166,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ControlAIConversationResponse> ControlAIConversationOutcome;
                 typedef std::future<ControlAIConversationOutcome> ControlAIConversationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::ControlAIConversationRequest&, ControlAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlAIConversationAsyncHandler;
+                typedef Outcome<Core::Error, Model::ControlVoiceConversationResponse> ControlVoiceConversationOutcome;
+                typedef std::future<ControlVoiceConversationOutcome> ControlVoiceConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::ControlVoiceConversationRequest&, ControlVoiceConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ControlVoiceConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCloudModerationResponse> CreateCloudModerationOutcome;
                 typedef std::future<CreateCloudModerationOutcome> CreateCloudModerationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::CreateCloudModerationRequest&, CreateCloudModerationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudModerationAsyncHandler;
@@ -168,6 +181,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCloudTranscriptionResponse> CreateCloudTranscriptionOutcome;
                 typedef std::future<CreateCloudTranscriptionOutcome> CreateCloudTranscriptionOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::CreateCloudTranscriptionRequest&, CreateCloudTranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCloudTranscriptionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVoiceConversationResponse> CreateVoiceConversationOutcome;
+                typedef std::future<CreateVoiceConversationOutcome> CreateVoiceConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::CreateVoiceConversationRequest&, CreateVoiceConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVoiceConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCloudModerationResponse> DeleteCloudModerationOutcome;
                 typedef std::future<DeleteCloudModerationOutcome> DeleteCloudModerationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DeleteCloudModerationRequest&, DeleteCloudModerationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudModerationAsyncHandler;
@@ -180,6 +196,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCloudTranscriptionResponse> DeleteCloudTranscriptionOutcome;
                 typedef std::future<DeleteCloudTranscriptionOutcome> DeleteCloudTranscriptionOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DeleteCloudTranscriptionRequest&, DeleteCloudTranscriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCloudTranscriptionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVoiceConversationResponse> DeleteVoiceConversationOutcome;
+                typedef std::future<DeleteVoiceConversationOutcome> DeleteVoiceConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DeleteVoiceConversationRequest&, DeleteVoiceConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVoiceConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAIConversationResponse> DescribeAIConversationOutcome;
                 typedef std::future<DescribeAIConversationOutcome> DescribeAIConversationOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeAIConversationRequest&, DescribeAIConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAIConversationAsyncHandler;
@@ -246,6 +265,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUserInfoResponse> DescribeUserInfoOutcome;
                 typedef std::future<DescribeUserInfoOutcome> DescribeUserInfoOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeUserInfoRequest&, DescribeUserInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVoiceConversationResponse> DescribeVoiceConversationOutcome;
+                typedef std::future<DescribeVoiceConversationOutcome> DescribeVoiceConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeVoiceConversationRequest&, DescribeVoiceConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoiceConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeWebRecordResponse> DescribeWebRecordOutcome;
                 typedef std::future<DescribeWebRecordOutcome> DescribeWebRecordOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeWebRecordRequest&, DescribeWebRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebRecordAsyncHandler;
@@ -264,6 +286,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyCloudSliceTaskResponse> ModifyCloudSliceTaskOutcome;
                 typedef std::future<ModifyCloudSliceTaskOutcome> ModifyCloudSliceTaskOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::ModifyCloudSliceTaskRequest&, ModifyCloudSliceTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudSliceTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyVoiceConversationResponse> ModifyVoiceConversationOutcome;
+                typedef std::future<ModifyVoiceConversationOutcome> ModifyVoiceConversationOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::ModifyVoiceConversationRequest&, ModifyVoiceConversationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVoiceConversationAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryAIMessageListResponse> QueryAIMessageListOutcome;
                 typedef std::future<QueryAIMessageListOutcome> QueryAIMessageListOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::QueryAIMessageListRequest&, QueryAIMessageListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryAIMessageListAsyncHandler;
@@ -340,6 +365,15 @@ namespace TencentCloud
                 ControlAIConversationOutcomeCallable ControlAIConversationCallable(const Model::ControlAIConversationRequest& request);
 
                 /**
+                 *After a conversation task starts successfully, use this API to control it.
+                 * @param req ControlVoiceConversationRequest
+                 * @return ControlVoiceConversationOutcome
+                 */
+                ControlVoiceConversationOutcome ControlVoiceConversation(const Model::ControlVoiceConversationRequest &request);
+                void ControlVoiceConversationAsync(const Model::ControlVoiceConversationRequest& request, const ControlVoiceConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ControlVoiceConversationOutcomeCallable ControlVoiceConversationCallable(const Model::ControlVoiceConversationRequest& request);
+
+                /**
                  *API description:
 This API is used to enable the cloud moderation feature to complete audio and video slicing, video frame extraction, and audio stream recording in the room, and submit them to the specified moderation supplier for completing the moderation.
 
@@ -397,6 +431,15 @@ This API is used to achieve the following goals:
                 CreateCloudTranscriptionOutcomeCallable CreateCloudTranscriptionCallable(const Model::CreateCloudTranscriptionRequest& request);
 
                 /**
+                 *This API is used to create an AI conversation task.
+                 * @param req CreateVoiceConversationRequest
+                 * @return CreateVoiceConversationOutcome
+                 */
+                CreateVoiceConversationOutcome CreateVoiceConversation(const Model::CreateVoiceConversationRequest &request);
+                void CreateVoiceConversationAsync(const Model::CreateVoiceConversationRequest& request, const CreateVoiceConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVoiceConversationOutcomeCallable CreateVoiceConversationCallable(const Model::CreateVoiceConversationRequest& request);
+
+                /**
                  *This API is used to stop submission for moderation after the cloud moderation task is successfully started.
                  * @param req DeleteCloudModerationRequest
                  * @return DeleteCloudModerationOutcome
@@ -431,6 +474,15 @@ This API is used to achieve the following goals:
                 DeleteCloudTranscriptionOutcome DeleteCloudTranscription(const Model::DeleteCloudTranscriptionRequest &request);
                 void DeleteCloudTranscriptionAsync(const Model::DeleteCloudTranscriptionRequest& request, const DeleteCloudTranscriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteCloudTranscriptionOutcomeCallable DeleteCloudTranscriptionCallable(const Model::DeleteCloudTranscriptionRequest& request);
+
+                /**
+                 *After a conversation task starts successfully, use this API to stop it.
+                 * @param req DeleteVoiceConversationRequest
+                 * @return DeleteVoiceConversationOutcome
+                 */
+                DeleteVoiceConversationOutcome DeleteVoiceConversation(const Model::DeleteVoiceConversationRequest &request);
+                void DeleteVoiceConversationAsync(const Model::DeleteVoiceConversationRequest& request, const DeleteVoiceConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVoiceConversationOutcomeCallable DeleteVoiceConversationCallable(const Model::DeleteVoiceConversationRequest& request);
 
                 /**
                  *Describe the AI conversation task status
@@ -691,6 +743,15 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
                 DescribeUserInfoOutcomeCallable DescribeUserInfoCallable(const Model::DescribeUserInfoRequest& request);
 
                 /**
+                 *After a conversation task starts successfully, use this API to query the conversation status. It can be used only while the conversation task is in progress. Querying after the conversation task exits returns an error.
+                 * @param req DescribeVoiceConversationRequest
+                 * @return DescribeVoiceConversationOutcome
+                 */
+                DescribeVoiceConversationOutcome DescribeVoiceConversation(const Model::DescribeVoiceConversationRequest &request);
+                void DescribeVoiceConversationAsync(const Model::DescribeVoiceConversationRequest& request, const DescribeVoiceConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVoiceConversationOutcomeCallable DescribeVoiceConversationCallable(const Model::DescribeVoiceConversationRequest& request);
+
+                /**
                  *Queries the status of a web-page recording task
                  * @param req DescribeWebRecordRequest
                  * @return DescribeWebRecordOutcome
@@ -743,6 +804,15 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
                 ModifyCloudSliceTaskOutcome ModifyCloudSliceTask(const Model::ModifyCloudSliceTaskRequest &request);
                 void ModifyCloudSliceTaskAsync(const Model::ModifyCloudSliceTaskRequest& request, const ModifyCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyCloudSliceTaskOutcomeCallable ModifyCloudSliceTaskCallable(const Model::ModifyCloudSliceTaskRequest& request);
+
+                /**
+                 *After a conversation task starts successfully, use this API to modify its configuration.
+                 * @param req ModifyVoiceConversationRequest
+                 * @return ModifyVoiceConversationOutcome
+                 */
+                ModifyVoiceConversationOutcome ModifyVoiceConversation(const Model::ModifyVoiceConversationRequest &request);
+                void ModifyVoiceConversationAsync(const Model::ModifyVoiceConversationRequest& request, const ModifyVoiceConversationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVoiceConversationOutcomeCallable ModifyVoiceConversationCallable(const Model::ModifyVoiceConversationRequest& request);
 
                 /**
                  *input a task ID to query the list of AI conversation context information.

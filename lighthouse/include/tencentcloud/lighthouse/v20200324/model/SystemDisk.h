@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information on the block device where the operating system is installed, namely the system disk.
+                * Describes the information of the block device where the operating system resides, i.e., the system disk.
                 */
                 class SystemDisk : public AbstractModel
                 {
@@ -49,10 +49,10 @@ namespace TencentCloud
                     /**
                      * 获取System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
                      * @return DiskType System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
                      * 
                      */
                     std::string GetDiskType() const;
@@ -60,10 +60,10 @@ Valid values:
                     /**
                      * 设置System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
                      * @param _diskType System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -76,15 +76,15 @@ Valid values:
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取System disk size in GB.
-                     * @return DiskSize System disk size in GB.
+                     * 获取System disk size, in the unit of GB.
+                     * @return DiskSize System disk size, in the unit of GB.
                      * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置System disk size in GB.
-                     * @param _diskSize System disk size in GB.
+                     * 设置System disk size, in the unit of GB.
+                     * @param _diskSize System disk size, in the unit of GB.
                      * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
@@ -98,18 +98,14 @@ Valid values:
 
                     /**
                      * 获取System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiskId System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * @param _diskId System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDiskId(const std::string& _diskId);
@@ -126,20 +122,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * System disk size in GB.
+                     * System disk size, in the unit of GB.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
                      * System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;

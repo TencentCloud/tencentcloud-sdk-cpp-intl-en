@@ -130,6 +130,7 @@ set(lighthouse_public_header_model
   include/tencentcloud/lighthouse/v20200324/model/DockerContainerVolume.h
   include/tencentcloud/lighthouse/v20200324/model/IsolateInstancesResponse.h
   include/tencentcloud/lighthouse/v20200324/model/CreateKeyPairResponse.h
+  include/tencentcloud/lighthouse/v20200324/model/InstanceViolationDetail.h
   include/tencentcloud/lighthouse/v20200324/model/DescribeInstanceVncUrlResponse.h
   include/tencentcloud/lighthouse/v20200324/model/ModifyFirewallRulesResponse.h
   include/tencentcloud/lighthouse/v20200324/model/DiskPrice.h
@@ -346,6 +347,7 @@ set(lighthouse_src
   src/v20200324/model/DockerContainerVolume.cpp
   src/v20200324/model/IsolateInstancesResponse.cpp
   src/v20200324/model/CreateKeyPairResponse.cpp
+  src/v20200324/model/InstanceViolationDetail.cpp
   src/v20200324/model/DescribeInstanceVncUrlResponse.cpp
   src/v20200324/model/ModifyFirewallRulesResponse.cpp
   src/v20200324/model/DiskPrice.cpp

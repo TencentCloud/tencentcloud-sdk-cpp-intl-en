@@ -28,6 +28,7 @@
 #include <tencentcloud/lighthouse/v20200324/model/InternetAccessible.h>
 #include <tencentcloud/lighthouse/v20200324/model/LoginSettings.h>
 #include <tencentcloud/lighthouse/v20200324/model/Tag.h>
+#include <tencentcloud/lighthouse/v20200324/model/InstanceViolationDetail.h>
 
 
 namespace TencentCloud
@@ -39,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance information.
+                * Describes the instance information.
                 */
                 class Instance : public AbstractModel
                 {
@@ -72,15 +73,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Package ID.
-                     * @return BundleId Package ID.
+                     * 获取Bundle ID.
+                     * @return BundleId Bundle ID.
                      * 
                      */
                     std::string GetBundleId() const;
 
                     /**
-                     * 设置Package ID.
-                     * @param _bundleId Package ID.
+                     * 设置Bundle ID.
+                     * @param _bundleId Bundle ID.
                      * 
                      */
                     void SetBundleId(const std::string& _bundleId);
@@ -114,15 +115,15 @@ namespace TencentCloud
                     bool BlueprintIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of instance CPU cores.
-                     * @return CPU Number of instance CPU cores.
+                     * 获取Number of CPU cores for the instance, in cores.
+                     * @return CPU Number of CPU cores for the instance, in cores.
                      * 
                      */
                     int64_t GetCPU() const;
 
                     /**
-                     * 设置Number of instance CPU cores.
-                     * @param _cPU Number of instance CPU cores.
+                     * 设置Number of CPU cores for the instance, in cores.
+                     * @param _cPU Number of CPU cores for the instance, in cores.
                      * 
                      */
                     void SetCPU(const int64_t& _cPU);
@@ -135,15 +136,15 @@ namespace TencentCloud
                     bool CPUHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory capacity in GB.
-                     * @return Memory Instance memory capacity in GB.
+                     * 获取Instance memory capacity, in GB.
+                     * @return Memory Instance memory capacity, in GB.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Instance memory capacity in GB.
-                     * @param _memory Instance memory capacity in GB.
+                     * 设置Instance memory capacity, in GB.
+                     * @param _memory Instance memory capacity, in GB.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -178,18 +179,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
                      * @return InstanceChargeType Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
                      * @param _instanceChargeType Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -223,19 +224,19 @@ PREPAID: prepaid (i.e., monthly subscription).
                     bool SystemDiskHasBeenSet() const;
 
                     /**
-                     * 获取Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateAddresses Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return PrivateAddresses Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<std::string> GetPrivateAddresses() const;
 
                     /**
-                     * 设置Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _privateAddresses Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _privateAddresses Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetPrivateAddresses(const std::vector<std::string>& _privateAddresses);
@@ -248,19 +249,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PrivateAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PublicAddresses Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return PublicAddresses Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::vector<std::string> GetPublicAddresses() const;
 
                     /**
-                     * 设置Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _publicAddresses Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _publicAddresses Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetPublicAddresses(const std::vector<std::string>& _publicAddresses);
@@ -294,23 +295,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InternetAccessibleHasBeenSet() const;
 
                     /**
-                     * 获取Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
-                     * @return RenewFlag Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+                     * 获取Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
+                     * @return RenewFlag Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
                      * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
-                     * @param _renewFlag Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+                     * 设置Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
+                     * @param _renewFlag Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
                      * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
@@ -323,15 +324,15 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Instance login settings.
-                     * @return LoginSettings Instance login settings.
+                     * 获取Instance login setting.
+                     * @return LoginSettings Instance login setting.
                      * 
                      */
                     LoginSettings GetLoginSettings() const;
 
                     /**
-                     * 设置Instance login settings.
-                     * @param _loginSettings Instance login settings.
+                     * 设置Instance login setting.
+                     * @param _loginSettings Instance login setting.
                      * 
                      */
                     void SetLoginSettings(const LoginSettings& _loginSettings);
@@ -345,18 +346,18 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
 
                     /**
                      * 获取Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
                      * @return InstanceState Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
                      * 
                      */
                     std::string GetInstanceState() const;
 
                     /**
                      * 设置Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
                      * @param _instanceState Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
                      * 
                      */
                     void SetInstanceState(const std::string& _instanceState);
@@ -369,15 +370,15 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
                     bool InstanceStateHasBeenSet() const;
 
                     /**
-                     * 获取Globally unique ID of instance.
-                     * @return Uuid Globally unique ID of instance.
+                     * 获取Globally unique ID of the instance.
+                     * @return Uuid Globally unique ID of the instance.
                      * 
                      */
                     std::string GetUuid() const;
 
                     /**
-                     * 设置Globally unique ID of instance.
-                     * @param _uuid Globally unique ID of instance.
+                     * 设置Globally unique ID of the instance.
+                     * @param _uuid Globally unique ID of the instance.
                      * 
                      */
                     void SetUuid(const std::string& _uuid);
@@ -390,15 +391,15 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
                     bool UuidHasBeenSet() const;
 
                     /**
-                     * 获取Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LatestOperation Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LatestOperation Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLatestOperation() const;
 
                     /**
-                     * 设置Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _latestOperation Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _latestOperation Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLatestOperation(const std::string& _latestOperation);
@@ -411,31 +412,31 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
                     bool LatestOperationHasBeenSet() const;
 
                     /**
-                     * 获取Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LatestOperationState Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LatestOperationState Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLatestOperationState() const;
 
                     /**
-                     * 设置Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _latestOperationState Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _latestOperationState Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLatestOperationState(const std::string& _latestOperationState);
@@ -448,19 +449,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LatestOperationStateHasBeenSet() const;
 
                     /**
-                     * 获取Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LatestOperationRequestId Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LatestOperationRequestId Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLatestOperationRequestId() const;
 
                     /**
-                     * 设置Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _latestOperationRequestId Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _latestOperationRequestId Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLatestOperationRequestId(const std::string& _latestOperationRequestId);
@@ -473,23 +474,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LatestOperationRequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Isolation time according to ISO 8601 standard. UTC time is used. 
+                     * 获取Start time of the latest operation on the instance.
+                     * @return LatestOperationStartedTime Start time of the latest operation on the instance.
+                     * 
+                     */
+                    std::string GetLatestOperationStartedTime() const;
+
+                    /**
+                     * 设置Start time of the latest operation on the instance.
+                     * @param _latestOperationStartedTime Start time of the latest operation on the instance.
+                     * 
+                     */
+                    void SetLatestOperationStartedTime(const std::string& _latestOperationStartedTime);
+
+                    /**
+                     * 判断参数 LatestOperationStartedTime 是否已赋值
+                     * @return LatestOperationStartedTime 是否已赋值
+                     * 
+                     */
+                    bool LatestOperationStartedTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+                     * @return IsolatedTime Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsolatedTime() const;
 
                     /**
-                     * 设置Isolation time according to ISO 8601 standard. UTC time is used. 
+                     * 设置Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _isolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+                     * @param _isolatedTime Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsolatedTime(const std::string& _isolatedTime);
@@ -502,23 +520,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IsolatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time according to ISO 8601 standard. UTC time is used. 
+                     * 获取Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+                     * @return CreatedTime Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time according to ISO 8601 standard. UTC time is used. 
+                     * 设置Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _createdTime Creation time according to ISO 8601 standard. UTC time is used. 
+                     * @param _createdTime Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -531,23 +545,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time according to ISO 8601 standard. UTC time is used. 
+                     * 获取Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+                     * @return ExpiredTime Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
-                     * 设置Expiration time according to ISO 8601 standard. UTC time is used. 
+                     * 设置Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _expiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+                     * @param _expiredTime Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
@@ -560,15 +570,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取OS type, such as LINUX_UNIX and WINDOWS.
-                     * @return PlatformType OS type, such as LINUX_UNIX and WINDOWS.
+                     * 获取Operating system platform type, such as LINUX_UNIX and WINDOWS.
+                     * @return PlatformType Operating system platform type, such as LINUX_UNIX and WINDOWS.
                      * 
                      */
                     std::string GetPlatformType() const;
 
                     /**
-                     * 设置OS type, such as LINUX_UNIX and WINDOWS.
-                     * @param _platformType OS type, such as LINUX_UNIX and WINDOWS.
+                     * 设置Operating system platform type, such as LINUX_UNIX and WINDOWS.
+                     * @param _platformType Operating system platform type, such as LINUX_UNIX and WINDOWS.
                      * 
                      */
                     void SetPlatformType(const std::string& _platformType);
@@ -581,15 +591,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PlatformTypeHasBeenSet() const;
 
                     /**
-                     * 获取OS type.
-                     * @return Platform OS type.
+                     * 获取Operating system platform.
+                     * @return Platform Operating system platform.
                      * 
                      */
                     std::string GetPlatform() const;
 
                     /**
-                     * 设置OS type.
-                     * @param _platform OS type.
+                     * 设置Operating system platform.
+                     * @param _platform Operating system platform.
                      * 
                      */
                     void SetPlatform(const std::string& _platform);
@@ -602,15 +612,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PlatformHasBeenSet() const;
 
                     /**
-                     * 获取OS name.
-                     * @return OsName OS name.
+                     * 获取Operating system name.
+                     * @return OsName Operating system name.
                      * 
                      */
                     std::string GetOsName() const;
 
                     /**
-                     * 设置OS name.
-                     * @param _osName OS name.
+                     * 设置Operating system name.
+                     * @param _osName Operating system name.
                      * 
                      */
                     void SetOsName(const std::string& _osName);
@@ -644,15 +654,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取The list of tags associated with the instance
-                     * @return Tags The list of tags associated with the instance
+                     * 获取List of tags bound to the instance.
+                     * @return Tags List of tags bound to the instance.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置The list of tags associated with the instance
-                     * @param _tags The list of tags associated with the instance
+                     * 设置List of tags bound to the instance.
+                     * @param _tags List of tags bound to the instance.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -665,19 +675,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
-                     * @return InstanceRestrictState Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+                     * 获取Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
+                     * @return InstanceRestrictState Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
                      * 
                      */
                     std::string GetInstanceRestrictState() const;
 
                     /**
-                     * 设置Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
-                     * @param _instanceRestrictState Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+                     * 设置Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
+                     * @param _instanceRestrictState Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
                      * 
                      */
                     void SetInstanceRestrictState(const std::string& _instanceRestrictState);
@@ -689,6 +699,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool InstanceRestrictStateHasBeenSet() const;
 
+                    /**
+                     * 获取Invocation ID of the TAT command to be automatically executed after the instance is created.
+                     * @return InitInvocationId Invocation ID of the TAT command to be automatically executed after the instance is created.
+                     * 
+                     */
+                    std::string GetInitInvocationId() const;
+
+                    /**
+                     * 设置Invocation ID of the TAT command to be automatically executed after the instance is created.
+                     * @param _initInvocationId Invocation ID of the TAT command to be automatically executed after the instance is created.
+                     * 
+                     */
+                    void SetInitInvocationId(const std::string& _initInvocationId);
+
+                    /**
+                     * 判断参数 InitInvocationId 是否已赋值
+                     * @return InitInvocationId 是否已赋值
+                     * 
+                     */
+                    bool InitInvocationIdHasBeenSet() const;
+
+                    /**
+                     * 获取Instance violation details.
+                     * @return InstanceViolationDetail Instance violation details.
+                     * 
+                     */
+                    InstanceViolationDetail GetInstanceViolationDetail() const;
+
+                    /**
+                     * 设置Instance violation details.
+                     * @param _instanceViolationDetail Instance violation details.
+                     * 
+                     */
+                    void SetInstanceViolationDetail(const InstanceViolationDetail& _instanceViolationDetail);
+
+                    /**
+                     * 判断参数 InstanceViolationDetail 是否已赋值
+                     * @return InstanceViolationDetail 是否已赋值
+                     * 
+                     */
+                    bool InstanceViolationDetailHasBeenSet() const;
+
                 private:
 
                     /**
@@ -698,7 +750,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Package ID.
+                     * Bundle ID.
                      */
                     std::string m_bundleId;
                     bool m_bundleIdHasBeenSet;
@@ -710,13 +762,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_blueprintIdHasBeenSet;
 
                     /**
-                     * Number of instance CPU cores.
+                     * Number of CPU cores for the instance, in cores.
                      */
                     int64_t m_cPU;
                     bool m_cPUHasBeenSet;
 
                     /**
-                     * Instance memory capacity in GB.
+                     * Instance memory capacity, in GB.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
@@ -729,7 +781,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
@@ -741,15 +793,15 @@ PREPAID: prepaid (i.e., monthly subscription).
                     bool m_systemDiskHasBeenSet;
 
                     /**
-                     * Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_privateAddresses;
                     bool m_privateAddressesHasBeenSet;
 
                     /**
-                     * Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_publicAddresses;
                     bool m_publicAddressesHasBeenSet;
@@ -761,93 +813,96 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_internetAccessibleHasBeenSet;
 
                     /**
-                     * Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+                     * Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Instance login settings.
+                     * Instance login setting.
                      */
                     LoginSettings m_loginSettings;
                     bool m_loginSettingsHasBeenSet;
 
                     /**
                      * Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
                      */
                     std::string m_instanceState;
                     bool m_instanceStateHasBeenSet;
 
                     /**
-                     * Globally unique ID of instance.
+                     * Globally unique ID of the instance.
                      */
                     std::string m_uuid;
                     bool m_uuidHasBeenSet;
 
                     /**
-                     * Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+                     * Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_latestOperation;
                     bool m_latestOperationHasBeenSet;
 
                     /**
-                     * Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_latestOperationState;
                     bool m_latestOperationStateHasBeenSet;
 
                     /**
-                     * Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_latestOperationRequestId;
                     bool m_latestOperationRequestIdHasBeenSet;
 
                     /**
-                     * Isolation time according to ISO 8601 standard. UTC time is used. 
+                     * Start time of the latest operation on the instance.
+                     */
+                    std::string m_latestOperationStartedTime;
+                    bool m_latestOperationStartedTimeHasBeenSet;
+
+                    /**
+                     * Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolatedTime;
                     bool m_isolatedTimeHasBeenSet;
 
                     /**
-                     * Creation time according to ISO 8601 standard. UTC time is used. 
+                     * Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Expiration time according to ISO 8601 standard. UTC time is used. 
+                     * Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * OS type, such as LINUX_UNIX and WINDOWS.
+                     * Operating system platform type, such as LINUX_UNIX and WINDOWS.
                      */
                     std::string m_platformType;
                     bool m_platformTypeHasBeenSet;
 
                     /**
-                     * OS type.
+                     * Operating system platform.
                      */
                     std::string m_platform;
                     bool m_platformHasBeenSet;
 
                     /**
-                     * OS name.
+                     * Operating system name.
                      */
                     std::string m_osName;
                     bool m_osNameHasBeenSet;
@@ -859,17 +914,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * The list of tags associated with the instance
+                     * List of tags bound to the instance.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+                     * Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
                      */
                     std::string m_instanceRestrictState;
                     bool m_instanceRestrictStateHasBeenSet;
+
+                    /**
+                     * Invocation ID of the TAT command to be automatically executed after the instance is created.
+                     */
+                    std::string m_initInvocationId;
+                    bool m_initInvocationIdHasBeenSet;
+
+                    /**
+                     * Instance violation details.
+                     */
+                    InstanceViolationDetail m_instanceViolationDetail;
+                    bool m_instanceViolationDetailHasBeenSet;
 
                 };
             }
