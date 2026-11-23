@@ -53,6 +53,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateConfigGroupVersionResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateContentIdentifierRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateContentIdentifierResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateCustomGroupRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateCustomGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomizeErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomizeErrorPageResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateDnsRecordRequest.h>
@@ -129,6 +131,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteContentIdentifierResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteCustomErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteCustomErrorPageResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteCustomGroupRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteCustomGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteDnsRecordsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteDnsRecordsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteEdgeKVNamespaceRequest.h>
@@ -203,6 +207,12 @@
 #include <tencentcloud/teo/v20220901/model/DescribeContentQuotaResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeCustomErrorPagesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeCustomErrorPagesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeCustomGroupRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeCustomGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeCustomGroupReferencesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeCustomGroupReferencesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeCustomGroupsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeCustomGroupsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackEventRequest.h>
@@ -399,6 +409,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyContentIdentifierResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyCustomErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyCustomErrorPageResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyCustomGroupRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyCustomGroupResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDDoSProtectionRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDDoSProtectionResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDnsRecordsRequest.h>
@@ -552,6 +564,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateContentIdentifierResponse> CreateContentIdentifierOutcome;
                 typedef std::future<CreateContentIdentifierOutcome> CreateContentIdentifierOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateContentIdentifierRequest&, CreateContentIdentifierOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateContentIdentifierAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCustomGroupResponse> CreateCustomGroupOutcome;
+                typedef std::future<CreateCustomGroupOutcome> CreateCustomGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateCustomGroupRequest&, CreateCustomGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCustomizeErrorPageResponse> CreateCustomizeErrorPageOutcome;
                 typedef std::future<CreateCustomizeErrorPageOutcome> CreateCustomizeErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateCustomizeErrorPageRequest&, CreateCustomizeErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomizeErrorPageAsyncHandler;
@@ -666,6 +681,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteCustomErrorPageResponse> DeleteCustomErrorPageOutcome;
                 typedef std::future<DeleteCustomErrorPageOutcome> DeleteCustomErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteCustomErrorPageRequest&, DeleteCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomErrorPageAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteCustomGroupResponse> DeleteCustomGroupOutcome;
+                typedef std::future<DeleteCustomGroupOutcome> DeleteCustomGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteCustomGroupRequest&, DeleteCustomGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCustomGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteDnsRecordsResponse> DeleteDnsRecordsOutcome;
                 typedef std::future<DeleteDnsRecordsOutcome> DeleteDnsRecordsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteDnsRecordsRequest&, DeleteDnsRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDnsRecordsAsyncHandler;
@@ -777,6 +795,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomErrorPagesResponse> DescribeCustomErrorPagesOutcome;
                 typedef std::future<DescribeCustomErrorPagesOutcome> DescribeCustomErrorPagesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeCustomErrorPagesRequest&, DescribeCustomErrorPagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomErrorPagesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomGroupResponse> DescribeCustomGroupOutcome;
+                typedef std::future<DescribeCustomGroupOutcome> DescribeCustomGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeCustomGroupRequest&, DescribeCustomGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomGroupReferencesResponse> DescribeCustomGroupReferencesOutcome;
+                typedef std::future<DescribeCustomGroupReferencesOutcome> DescribeCustomGroupReferencesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeCustomGroupReferencesRequest&, DescribeCustomGroupReferencesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomGroupReferencesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCustomGroupsResponse> DescribeCustomGroupsOutcome;
+                typedef std::future<DescribeCustomGroupsOutcome> DescribeCustomGroupsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeCustomGroupsRequest&, DescribeCustomGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomGroupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDDoSAttackDataResponse> DescribeDDoSAttackDataOutcome;
                 typedef std::future<DescribeDDoSAttackDataOutcome> DescribeDDoSAttackDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeDDoSAttackDataRequest&, DescribeDDoSAttackDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDoSAttackDataAsyncHandler;
@@ -1071,6 +1098,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyCustomErrorPageResponse> ModifyCustomErrorPageOutcome;
                 typedef std::future<ModifyCustomErrorPageOutcome> ModifyCustomErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyCustomErrorPageRequest&, ModifyCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomErrorPageAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCustomGroupResponse> ModifyCustomGroupOutcome;
+                typedef std::future<ModifyCustomGroupOutcome> ModifyCustomGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyCustomGroupRequest&, ModifyCustomGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCustomGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDDoSProtectionResponse> ModifyDDoSProtectionOutcome;
                 typedef std::future<ModifyDDoSProtectionOutcome> ModifyDDoSProtectionOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyDDoSProtectionRequest&, ModifyDDoSProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDDoSProtectionAsyncHandler;
@@ -1364,6 +1394,15 @@ The feature is only supported by the enterprise plan and is currently in closed 
                 CreateContentIdentifierOutcome CreateContentIdentifier(const Model::CreateContentIdentifierRequest &request);
                 void CreateContentIdentifierAsync(const Model::CreateContentIdentifierRequest& request, const CreateContentIdentifierAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateContentIdentifierOutcomeCallable CreateContentIdentifierCallable(const Model::CreateContentIdentifierRequest& request);
+
+                /**
+                 *This API is used to create a custom group. A custom group is used to centrally manage a set of reusable matching entries. For example, you can save multiple JA3/JA4 TLS fingerprints as a TLS fingerprint group and directly reference the group in security rules, avoiding the need to maintain the same fingerprint list in multiple rules.
+                 * @param req CreateCustomGroupRequest
+                 * @return CreateCustomGroupOutcome
+                 */
+                CreateCustomGroupOutcome CreateCustomGroup(const Model::CreateCustomGroupRequest &request);
+                void CreateCustomGroupAsync(const Model::CreateCustomGroupRequest& request, const CreateCustomGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCustomGroupOutcomeCallable CreateCustomGroupCallable(const Model::CreateCustomGroupRequest& request);
 
                 /**
                  *This API is used to create a custom response page.
@@ -1737,6 +1776,15 @@ The feature is only supported by the enterprise plan and is currently in closed 
                 DeleteCustomErrorPageOutcomeCallable DeleteCustomErrorPageCallable(const Model::DeleteCustomErrorPageRequest& request);
 
                 /**
+                 *This API is used to delete a specified custom group. If the group is referenced by a rule, deletion is not allowed. Remove the reference first.
+                 * @param req DeleteCustomGroupRequest
+                 * @return DeleteCustomGroupOutcome
+                 */
+                DeleteCustomGroupOutcome DeleteCustomGroup(const Model::DeleteCustomGroupRequest &request);
+                void DeleteCustomGroupAsync(const Model::DeleteCustomGroupRequest& request, const DeleteCustomGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteCustomGroupOutcomeCallable DeleteCustomGroupCallable(const Model::DeleteCustomGroupRequest& request);
+
+                /**
                  *You can use this API to batch delete DNS records.
                  * @param req DeleteDnsRecordsRequest
                  * @return DeleteDnsRecordsOutcome
@@ -2085,6 +2133,33 @@ Abbreviation description:
                 DescribeCustomErrorPagesOutcome DescribeCustomErrorPages(const Model::DescribeCustomErrorPagesRequest &request);
                 void DescribeCustomErrorPagesAsync(const Model::DescribeCustomErrorPagesRequest& request, const DescribeCustomErrorPagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomErrorPagesOutcomeCallable DescribeCustomErrorPagesCallable(const Model::DescribeCustomErrorPagesRequest& request);
+
+                /**
+                 *This API is used to query the detailed information of a custom group, including all entries in the group (returned with pagination via Limit/Offset). The DescribeCustomGroups list API returns up to the first 500 entries for each group. To obtain all entries, use this API. The GroupId can be obtained from the response of CreateCustomGroup or by querying DescribeCustomGroups.
+                 * @param req DescribeCustomGroupRequest
+                 * @return DescribeCustomGroupOutcome
+                 */
+                DescribeCustomGroupOutcome DescribeCustomGroup(const Model::DescribeCustomGroupRequest &request);
+                void DescribeCustomGroupAsync(const Model::DescribeCustomGroupRequest& request, const DescribeCustomGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomGroupOutcomeCallable DescribeCustomGroupCallable(const Model::DescribeCustomGroupRequest& request);
+
+                /**
+                 *This API is used to obtain the security policy configuration that uses a custom group.
+                 * @param req DescribeCustomGroupReferencesRequest
+                 * @return DescribeCustomGroupReferencesOutcome
+                 */
+                DescribeCustomGroupReferencesOutcome DescribeCustomGroupReferences(const Model::DescribeCustomGroupReferencesRequest &request);
+                void DescribeCustomGroupReferencesAsync(const Model::DescribeCustomGroupReferencesRequest& request, const DescribeCustomGroupReferencesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomGroupReferencesOutcomeCallable DescribeCustomGroupReferencesCallable(const Model::DescribeCustomGroupReferencesRequest& request);
+
+                /**
+                 *This API is used to query the list of custom groups under a specified site. This API returns only the first 500 entries of each custom group. To query all entries in a group, use the DescribeSecurityCustomGroup API.
+                 * @param req DescribeCustomGroupsRequest
+                 * @return DescribeCustomGroupsOutcome
+                 */
+                DescribeCustomGroupsOutcome DescribeCustomGroups(const Model::DescribeCustomGroupsRequest &request);
+                void DescribeCustomGroupsAsync(const Model::DescribeCustomGroupsRequest& request, const DescribeCustomGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCustomGroupsOutcomeCallable DescribeCustomGroupsCallable(const Model::DescribeCustomGroupsRequest& request);
 
                 /**
                  *This API is used to query the time-series data of DDoS attacks.
@@ -2999,6 +3074,15 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 ModifyCustomErrorPageOutcome ModifyCustomErrorPage(const Model::ModifyCustomErrorPageRequest &request);
                 void ModifyCustomErrorPageAsync(const Model::ModifyCustomErrorPageRequest& request, const ModifyCustomErrorPageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyCustomErrorPageOutcomeCallable ModifyCustomErrorPageCallable(const Model::ModifyCustomErrorPageRequest& request);
+
+                /**
+                 *This API is used to modify the content of a custom group. GroupType cannot be modified after creation. When modifying entries in the group, you can specify replacement, append, or removal operations through GroupItemOperation.
+                 * @param req ModifyCustomGroupRequest
+                 * @return ModifyCustomGroupOutcome
+                 */
+                ModifyCustomGroupOutcome ModifyCustomGroup(const Model::ModifyCustomGroupRequest &request);
+                void ModifyCustomGroupAsync(const Model::ModifyCustomGroupRequest& request, const ModifyCustomGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCustomGroupOutcomeCallable ModifyCustomGroupCallable(const Model::ModifyCustomGroupRequest& request);
 
                 /**
                  *This API is used to modify site exclusive Anti-DDoS protection.
