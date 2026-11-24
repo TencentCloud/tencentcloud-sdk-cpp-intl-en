@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/dnspod/v20210323/model/LineItem.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class LineItem;
                 /**
                 * Describes the line information of dns records.
                 */
@@ -146,7 +147,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    std::vector<LineItem> GetSubGroup() const;
+                    std::vector<std::shared_ptr<LineItem>> GetSubGroup() const;
 
                     /**
                      * 设置Describes the sub-line list under the current line category.
@@ -155,7 +156,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
-                    void SetSubGroup(const std::vector<LineItem>& _subGroup);
+                    void SetSubGroup(const std::vector<std::shared_ptr<LineItem>>& _subGroup);
 
                     /**
                      * 判断参数 SubGroup 是否已赋值
@@ -221,7 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * Describes the sub-line list under the current line category.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<LineItem> m_subGroup;
+                    std::vector<std::shared_ptr<LineItem>> m_subGroup;
                     bool m_subGroupHasBeenSet;
 
                     /**

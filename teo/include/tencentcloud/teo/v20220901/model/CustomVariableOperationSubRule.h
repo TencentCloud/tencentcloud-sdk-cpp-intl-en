@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/teo/v20220901/model/CustomVariableOperationRuleBranch.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class CustomVariableOperationRuleBranch;
                 /**
                 * Custom Variable operation sub-rule.
                 */
@@ -52,14 +53,14 @@ namespace TencentCloud
                      * @return Branches <p>Sub-rule branch</p>
                      * 
                      */
-                    std::vector<CustomVariableOperationRuleBranch> GetBranches() const;
+                    std::vector<std::shared_ptr<CustomVariableOperationRuleBranch>> GetBranches() const;
 
                     /**
                      * 设置<p>Sub-rule branch</p>
                      * @param _branches <p>Sub-rule branch</p>
                      * 
                      */
-                    void SetBranches(const std::vector<CustomVariableOperationRuleBranch>& _branches);
+                    void SetBranches(const std::vector<std::shared_ptr<CustomVariableOperationRuleBranch>>& _branches);
 
                     /**
                      * 判断参数 Branches 是否已赋值
@@ -94,7 +95,7 @@ namespace TencentCloud
                     /**
                      * <p>Sub-rule branch</p>
                      */
-                    std::vector<CustomVariableOperationRuleBranch> m_branches;
+                    std::vector<std::shared_ptr<CustomVariableOperationRuleBranch>> m_branches;
                     bool m_branchesHasBeenSet;
 
                     /**

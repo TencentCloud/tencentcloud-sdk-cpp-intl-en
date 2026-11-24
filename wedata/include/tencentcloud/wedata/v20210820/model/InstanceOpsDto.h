@@ -20,12 +20,12 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/wedata/v20210820/model/TaskTypeOpsDto.h>
-#include <tencentcloud/wedata/v20210820/model/InstanceOpsDto.h>
 #include <tencentcloud/wedata/v20210820/model/InstanceLifeCycleOpsDto.h>
 
 
@@ -37,6 +37,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class InstanceOpsDto;
                 /**
                 * Instance Operation Details
                 */
@@ -1378,7 +1379,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    std::vector<InstanceOpsDto> GetRelatedInstanceList() const;
+                    std::vector<std::shared_ptr<InstanceOpsDto>> GetRelatedInstanceList() const;
 
                     /**
                      * 设置Associated Instance Information.
@@ -1387,7 +1388,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    void SetRelatedInstanceList(const std::vector<InstanceOpsDto>& _relatedInstanceList);
+                    void SetRelatedInstanceList(const std::vector<std::shared_ptr<InstanceOpsDto>>& _relatedInstanceList);
 
                     /**
                      * 判断参数 RelatedInstanceList 是否已赋值
@@ -1549,7 +1550,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    std::vector<InstanceOpsDto> GetCirculateInstanceList() const;
+                    std::vector<std::shared_ptr<InstanceOpsDto>> GetCirculateInstanceList() const;
 
                     /**
                      * 设置Cyclic Dependency Associated Instances
@@ -1558,7 +1559,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    void SetCirculateInstanceList(const std::vector<InstanceOpsDto>& _circulateInstanceList);
+                    void SetCirculateInstanceList(const std::vector<std::shared_ptr<InstanceOpsDto>>& _circulateInstanceList);
 
                     /**
                      * 判断参数 CirculateInstanceList 是否已赋值
@@ -1944,7 +1945,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * Associated Instance Information.
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
-                    std::vector<InstanceOpsDto> m_relatedInstanceList;
+                    std::vector<std::shared_ptr<InstanceOpsDto>> m_relatedInstanceList;
                     bool m_relatedInstanceListHasBeenSet;
 
                     /**
@@ -1992,7 +1993,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * Cyclic Dependency Associated Instances
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
-                    std::vector<InstanceOpsDto> m_circulateInstanceList;
+                    std::vector<std::shared_ptr<InstanceOpsDto>> m_circulateInstanceList;
                     bool m_circulateInstanceListHasBeenSet;
 
                 };

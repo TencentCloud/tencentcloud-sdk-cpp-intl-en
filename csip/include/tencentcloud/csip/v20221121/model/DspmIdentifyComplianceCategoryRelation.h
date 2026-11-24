@@ -20,12 +20,12 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/csip/v20221121/model/DspmIdentifyComplianceRuleRelation.h>
-#include <tencentcloud/csip/v20221121/model/DspmIdentifyComplianceCategoryRelation.h>
 
 
 namespace TencentCloud
@@ -36,6 +36,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class DspmIdentifyComplianceCategoryRelation;
                 /**
                 * dspm data identification template classification association
                 */
@@ -200,14 +201,14 @@ namespace TencentCloud
                      * @return Children <p>Sub-node information</p>
                      * 
                      */
-                    std::vector<DspmIdentifyComplianceCategoryRelation> GetChildren() const;
+                    std::vector<std::shared_ptr<DspmIdentifyComplianceCategoryRelation>> GetChildren() const;
 
                     /**
                      * 设置<p>Sub-node information</p>
                      * @param _children <p>Sub-node information</p>
                      * 
                      */
-                    void SetChildren(const std::vector<DspmIdentifyComplianceCategoryRelation>& _children);
+                    void SetChildren(const std::vector<std::shared_ptr<DspmIdentifyComplianceCategoryRelation>>& _children);
 
                     /**
                      * 判断参数 Children 是否已赋值
@@ -263,7 +264,7 @@ namespace TencentCloud
                     /**
                      * <p>Sub-node information</p>
                      */
-                    std::vector<DspmIdentifyComplianceCategoryRelation> m_children;
+                    std::vector<std::shared_ptr<DspmIdentifyComplianceCategoryRelation>> m_children;
                     bool m_childrenHasBeenSet;
 
                 };

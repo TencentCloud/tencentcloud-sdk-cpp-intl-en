@@ -20,13 +20,13 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/NoticeReceiver.h>
 #include <tencentcloud/cls/v20201016/model/WebCallback.h>
-#include <tencentcloud/cls/v20201016/model/EscalateNoticeInfo.h>
 
 
 namespace TencentCloud
@@ -37,6 +37,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class EscalateNoticeInfo;
                 /**
                 * Upgrade notification.
                 */
@@ -171,14 +172,14 @@ namespace TencentCloud
                      * @return EscalateNotice Notification channel configuration for the next step after alarm severity escalation. A maximum of five steps can be configured.
                      * 
                      */
-                    EscalateNoticeInfo GetEscalateNotice() const;
+                    std::shared_ptr<EscalateNoticeInfo> GetEscalateNotice() const;
 
                     /**
                      * 设置Notification channel configuration for the next step after alarm severity escalation. A maximum of five steps can be configured.
                      * @param _escalateNotice Notification channel configuration for the next step after alarm severity escalation. A maximum of five steps can be configured.
                      * 
                      */
-                    void SetEscalateNotice(const EscalateNoticeInfo& _escalateNotice);
+                    void SetEscalateNotice(const std::shared_ptr<EscalateNoticeInfo>& _escalateNotice);
 
                     /**
                      * 判断参数 EscalateNotice 是否已赋值
@@ -225,7 +226,7 @@ namespace TencentCloud
                     /**
                      * Notification channel configuration for the next step after alarm severity escalation. A maximum of five steps can be configured.
                      */
-                    EscalateNoticeInfo m_escalateNotice;
+                    std::shared_ptr<EscalateNoticeInfo> m_escalateNotice;
                     bool m_escalateNoticeHasBeenSet;
 
                 };

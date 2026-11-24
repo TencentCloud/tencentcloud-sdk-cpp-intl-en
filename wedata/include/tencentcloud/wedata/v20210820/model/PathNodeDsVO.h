@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/wedata/v20210820/model/PathNodeDsVO.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class PathNodeDsVO;
                 /**
                 * Data Development - Unified Tree Structure Return Attributes
                 */
@@ -179,7 +180,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    std::vector<PathNodeDsVO> GetChildren() const;
+                    std::vector<std::shared_ptr<PathNodeDsVO>> GetChildren() const;
 
                     /**
                      * 设置Child Node List
@@ -188,7 +189,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
-                    void SetChildren(const std::vector<PathNodeDsVO>& _children);
+                    void SetChildren(const std::vector<std::shared_ptr<PathNodeDsVO>>& _children);
 
                     /**
                      * 判断参数 Children 是否已赋值
@@ -263,7 +264,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                      * Child Node List
 Note: This field may return null, indicating that no valid value can be obtained.
                      */
-                    std::vector<PathNodeDsVO> m_children;
+                    std::vector<std::shared_ptr<PathNodeDsVO>> m_children;
                     bool m_childrenHasBeenSet;
 
                     /**

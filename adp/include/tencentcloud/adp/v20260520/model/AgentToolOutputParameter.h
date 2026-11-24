@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/adp/v20260520/model/AgentToolOutputParameter.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class AgentToolOutputParameter;
                 /**
                 * Agent tool output parameter
                 */
@@ -115,14 +116,14 @@ namespace TencentCloud
                      * @return SubParameterList <p>Sub-parameter, used only when the data type is OBJECT or ARRAY_OBJECT</p>
                      * 
                      */
-                    std::vector<AgentToolOutputParameter> GetSubParameterList() const;
+                    std::vector<std::shared_ptr<AgentToolOutputParameter>> GetSubParameterList() const;
 
                     /**
                      * 设置<p>Sub-parameter, used only when the data type is OBJECT or ARRAY_OBJECT</p>
                      * @param _subParameterList <p>Sub-parameter, used only when the data type is OBJECT or ARRAY_OBJECT</p>
                      * 
                      */
-                    void SetSubParameterList(const std::vector<AgentToolOutputParameter>& _subParameterList);
+                    void SetSubParameterList(const std::vector<std::shared_ptr<AgentToolOutputParameter>>& _subParameterList);
 
                     /**
                      * 判断参数 SubParameterList 是否已赋值
@@ -175,7 +176,7 @@ namespace TencentCloud
                     /**
                      * <p>Sub-parameter, used only when the data type is OBJECT or ARRAY_OBJECT</p>
                      */
-                    std::vector<AgentToolOutputParameter> m_subParameterList;
+                    std::vector<std::shared_ptr<AgentToolOutputParameter>> m_subParameterList;
                     bool m_subParameterListHasBeenSet;
 
                     /**

@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/cls/v20201016/model/ValueInfo.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class ValueInfo;
                 /**
                 * Field information of key value or metafield index
                 */
@@ -97,14 +98,14 @@ For a metadata field, set its `Key` to be consistent with the one for log upload
                      * @return Value Field index description information
                      * 
                      */
-                    ValueInfo GetValue() const;
+                    std::shared_ptr<ValueInfo> GetValue() const;
 
                     /**
                      * 设置Field index description information
                      * @param _value Field index description information
                      * 
                      */
-                    void SetValue(const ValueInfo& _value);
+                    void SetValue(const std::shared_ptr<ValueInfo>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
@@ -130,7 +131,7 @@ For a metadata field, set its `Key` to be consistent with the one for log upload
                     /**
                      * Field index description information
                      */
-                    ValueInfo m_value;
+                    std::shared_ptr<ValueInfo> m_value;
                     bool m_valueHasBeenSet;
 
                 };

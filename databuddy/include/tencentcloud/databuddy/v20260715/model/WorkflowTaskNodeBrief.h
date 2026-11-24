@@ -20,6 +20,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -27,7 +28,6 @@
 #include <tencentcloud/databuddy/v20260715/model/DependOnBrief.h>
 #include <tencentcloud/databuddy/v20260715/model/TaskRetryStrategy.h>
 #include <tencentcloud/databuddy/v20260715/model/AdvancedDependencyConfig.h>
-#include <tencentcloud/databuddy/v20260715/model/WorkflowTaskNodeBrief.h>
 
 
 namespace TencentCloud
@@ -38,6 +38,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class WorkflowTaskNodeBrief;
                 /**
                 * Brief information of workflow task nodes in a workflow list item
                 */
@@ -307,14 +308,14 @@ namespace TencentCloud
                      * @return InnerTask <p>Built-in workflow task node</p>
                      * 
                      */
-                    WorkflowTaskNodeBrief GetInnerTask() const;
+                    std::shared_ptr<WorkflowTaskNodeBrief> GetInnerTask() const;
 
                     /**
                      * 设置<p>Built-in workflow task node</p>
                      * @param _innerTask <p>Built-in workflow task node</p>
                      * 
                      */
-                    void SetInnerTask(const WorkflowTaskNodeBrief& _innerTask);
+                    void SetInnerTask(const std::shared_ptr<WorkflowTaskNodeBrief>& _innerTask);
 
                     /**
                      * 判断参数 InnerTask 是否已赋值
@@ -400,7 +401,7 @@ namespace TencentCloud
                     /**
                      * <p>Built-in workflow task node</p>
                      */
-                    WorkflowTaskNodeBrief m_innerTask;
+                    std::shared_ptr<WorkflowTaskNodeBrief> m_innerTask;
                     bool m_innerTaskHasBeenSet;
 
                 };

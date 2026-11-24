@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/csip/v20221121/model/AssetTagTreeNode.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class AssetTagTreeNode;
                 /**
                 * Asset tag tree node
                 */
@@ -94,14 +95,14 @@ namespace TencentCloud
                      * @return Children Child node.
                      * 
                      */
-                    std::vector<AssetTagTreeNode> GetChildren() const;
+                    std::vector<std::shared_ptr<AssetTagTreeNode>> GetChildren() const;
 
                     /**
                      * 设置Child node.
                      * @param _children Child node.
                      * 
                      */
-                    void SetChildren(const std::vector<AssetTagTreeNode>& _children);
+                    void SetChildren(const std::vector<std::shared_ptr<AssetTagTreeNode>>& _children);
 
                     /**
                      * 判断参数 Children 是否已赋值
@@ -148,7 +149,7 @@ namespace TencentCloud
                     /**
                      * Child node.
                      */
-                    std::vector<AssetTagTreeNode> m_children;
+                    std::vector<std::shared_ptr<AssetTagTreeNode>> m_children;
                     bool m_childrenHasBeenSet;
 
                     /**

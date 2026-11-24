@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/adp/v20260520/model/KBCategory.h>
 #include <tencentcloud/adp/v20260520/model/MetaValue.h>
 
 
@@ -36,6 +36,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class KBCategory;
                 /**
                 * Knowledge base classification info (including metadata configuration)
                 */
@@ -137,14 +138,14 @@ namespace TencentCloud
                      * @return ChildList <p>Subcategory list.</p>
                      * 
                      */
-                    std::vector<KBCategory> GetChildList() const;
+                    std::vector<std::shared_ptr<KBCategory>> GetChildList() const;
 
                     /**
                      * 设置<p>Subcategory list.</p>
                      * @param _childList <p>Subcategory list.</p>
                      * 
                      */
-                    void SetChildList(const std::vector<KBCategory>& _childList);
+                    void SetChildList(const std::vector<std::shared_ptr<KBCategory>>& _childList);
 
                     /**
                      * 判断参数 ChildList 是否已赋值
@@ -266,7 +267,7 @@ namespace TencentCloud
                     /**
                      * <p>Subcategory list.</p>
                      */
-                    std::vector<KBCategory> m_childList;
+                    std::vector<std::shared_ptr<KBCategory>> m_childList;
                     bool m_childListHasBeenSet;
 
                     /**

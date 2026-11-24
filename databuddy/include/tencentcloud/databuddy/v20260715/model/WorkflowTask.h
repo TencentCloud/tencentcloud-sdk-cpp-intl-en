@@ -20,6 +20,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -31,7 +32,6 @@
 #include <tencentcloud/databuddy/v20260715/model/MonitorMetricBrief.h>
 #include <tencentcloud/databuddy/v20260715/model/TaskRetryStrategy.h>
 #include <tencentcloud/databuddy/v20260715/model/AdvancedDependencyConfig.h>
-#include <tencentcloud/databuddy/v20260715/model/WorkflowTask.h>
 
 
 namespace TencentCloud
@@ -42,6 +42,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class WorkflowTask;
                 /**
                 * Workflow task information. Note: This structure is used for both input parameters (CreateWorkflow / UpdateWorkflow) and output parameters (GetWorkflow). CreateTime / UpdateTime / CreateUserUin are system-generated fields that only have values in output parameters. Values passed in input parameters do not take effect (ignored by the server with no error reported).
                 */
@@ -353,14 +354,14 @@ namespace TencentCloud
                      * @return InnerTask <p>Built-in tasks (subtasks of FOR_EACH tasks)</p>
                      * 
                      */
-                    WorkflowTask GetInnerTask() const;
+                    std::shared_ptr<WorkflowTask> GetInnerTask() const;
 
                     /**
                      * 设置<p>Built-in tasks (subtasks of FOR_EACH tasks)</p>
                      * @param _innerTask <p>Built-in tasks (subtasks of FOR_EACH tasks)</p>
                      * 
                      */
-                    void SetInnerTask(const WorkflowTask& _innerTask);
+                    void SetInnerTask(const std::shared_ptr<WorkflowTask>& _innerTask);
 
                     /**
                      * 判断参数 InnerTask 是否已赋值
@@ -521,7 +522,7 @@ namespace TencentCloud
                     /**
                      * <p>Built-in tasks (subtasks of FOR_EACH tasks)</p>
                      */
-                    WorkflowTask m_innerTask;
+                    std::shared_ptr<WorkflowTask> m_innerTask;
                     bool m_innerTaskHasBeenSet;
 
                     /**

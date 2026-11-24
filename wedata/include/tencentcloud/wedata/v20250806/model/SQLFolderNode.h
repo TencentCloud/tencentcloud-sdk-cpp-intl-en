@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/wedata/v20250806/model/SQLFolderNode.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class SQLFolderNode;
                 /**
                 * SQL script file tree node.
                 */
@@ -312,7 +313,7 @@ namespace TencentCloud
 
                      * 
                      */
-                    std::vector<SQLFolderNode> GetChildren() const;
+                    std::vector<std::shared_ptr<SQLFolderNode>> GetChildren() const;
 
                     /**
                      * 设置Sub-node list
@@ -321,7 +322,7 @@ namespace TencentCloud
 
                      * 
                      */
-                    void SetChildren(const std::vector<SQLFolderNode>& _children);
+                    void SetChildren(const std::vector<std::shared_ptr<SQLFolderNode>>& _children);
 
                     /**
                      * 判断参数 Children 是否已赋值
@@ -433,7 +434,7 @@ namespace TencentCloud
                      * Sub-node list
 
                      */
-                    std::vector<SQLFolderNode> m_children;
+                    std::vector<std::shared_ptr<SQLFolderNode>> m_children;
                     bool m_childrenHasBeenSet;
 
                     /**

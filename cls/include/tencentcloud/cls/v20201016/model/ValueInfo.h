@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/cls/v20201016/model/KeyValueInfo.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class KeyValueInfo;
                 /**
                 * Index description information of the field for which key-value index needs to be enabled
                 */
@@ -200,7 +201,7 @@ Note: Only json type fields can configure this parameter.
 Note: Only json type fields can configure this parameter.
                      * 
                      */
-                    std::vector<KeyValueInfo> GetChildNode() const;
+                    std::vector<std::shared_ptr<KeyValueInfo>> GetChildNode() const;
 
                     /**
                      * 设置subnode list
@@ -209,7 +210,7 @@ Note: Only json type fields can configure this parameter.
 Note: Only json type fields can configure this parameter.
                      * 
                      */
-                    void SetChildNode(const std::vector<KeyValueInfo>& _childNode);
+                    void SetChildNode(const std::vector<std::shared_ptr<KeyValueInfo>>& _childNode);
 
                     /**
                      * 判断参数 ChildNode 是否已赋值
@@ -265,7 +266,7 @@ Note: Only json type fields can configure this parameter.
                      * subnode list
 Note: Only json type fields can configure this parameter.
                      */
-                    std::vector<KeyValueInfo> m_childNode;
+                    std::vector<std::shared_ptr<KeyValueInfo>> m_childNode;
                     bool m_childNodeHasBeenSet;
 
                 };

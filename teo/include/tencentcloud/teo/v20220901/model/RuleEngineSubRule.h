@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/teo/v20220901/model/RuleBranch.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class RuleBranch;
                 /**
                 * Sub-rule
                 */
@@ -54,7 +55,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
-                    std::vector<RuleBranch> GetBranches() const;
+                    std::vector<std::shared_ptr<RuleBranch>> GetBranches() const;
 
                     /**
                      * 设置Sub-Rule branch.
@@ -63,7 +64,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
-                    void SetBranches(const std::vector<RuleBranch>& _branches);
+                    void SetBranches(const std::vector<std::shared_ptr<RuleBranch>>& _branches);
 
                     /**
                      * 判断参数 Branches 是否已赋值
@@ -99,7 +100,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                      * Sub-Rule branch.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
-                    std::vector<RuleBranch> m_branches;
+                    std::vector<std::shared_ptr<RuleBranch>> m_branches;
                     bool m_branchesHasBeenSet;
 
                     /**

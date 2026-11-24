@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/lke/v20231130/model/CateInfo.h>
 
 
 namespace TencentCloud
@@ -35,6 +35,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class CateInfo;
                 /**
                 * Category information.
                 */
@@ -178,14 +179,14 @@ namespace TencentCloud
                      * @return Children Subcategory.
                      * 
                      */
-                    std::vector<CateInfo> GetChildren() const;
+                    std::vector<std::shared_ptr<CateInfo>> GetChildren() const;
 
                     /**
                      * 设置Subcategory.
                      * @param _children Subcategory.
                      * 
                      */
-                    void SetChildren(const std::vector<CateInfo>& _children);
+                    void SetChildren(const std::vector<std::shared_ptr<CateInfo>>& _children);
 
                     /**
                      * 判断参数 Children 是否已赋值
@@ -235,7 +236,7 @@ namespace TencentCloud
                     /**
                      * Subcategory.
                      */
-                    std::vector<CateInfo> m_children;
+                    std::vector<std::shared_ptr<CateInfo>> m_children;
                     bool m_childrenHasBeenSet;
 
                 };

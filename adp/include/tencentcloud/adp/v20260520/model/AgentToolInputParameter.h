@@ -20,11 +20,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/adp/v20260520/model/AgentToolInputParameter.h>
 #include <tencentcloud/adp/v20260520/model/AgentInput.h>
 
 
@@ -36,6 +36,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class AgentToolInputParameter;
                 /**
                 * Agent tool input parameter definition
                 */
@@ -137,14 +138,14 @@ namespace TencentCloud
                      * @return SubParameterList <p>Sub-parameter, used only when the data type is OBJECT or ARRAY&lt;&gt;</p>
                      * 
                      */
-                    std::vector<AgentToolInputParameter> GetSubParameterList() const;
+                    std::vector<std::shared_ptr<AgentToolInputParameter>> GetSubParameterList() const;
 
                     /**
                      * 设置<p>Sub-parameter, used only when the data type is OBJECT or ARRAY&lt;&gt;</p>
                      * @param _subParameterList <p>Sub-parameter, used only when the data type is OBJECT or ARRAY&lt;&gt;</p>
                      * 
                      */
-                    void SetSubParameterList(const std::vector<AgentToolInputParameter>& _subParameterList);
+                    void SetSubParameterList(const std::vector<std::shared_ptr<AgentToolInputParameter>>& _subParameterList);
 
                     /**
                      * 判断参数 SubParameterList 是否已赋值
@@ -179,14 +180,14 @@ namespace TencentCloud
                      * @return OneOfList <p>Parameters in types of OneOf</p>
                      * 
                      */
-                    std::vector<AgentToolInputParameter> GetOneOfList() const;
+                    std::vector<std::shared_ptr<AgentToolInputParameter>> GetOneOfList() const;
 
                     /**
                      * 设置<p>Parameters in types of OneOf</p>
                      * @param _oneOfList <p>Parameters in types of OneOf</p>
                      * 
                      */
-                    void SetOneOfList(const std::vector<AgentToolInputParameter>& _oneOfList);
+                    void SetOneOfList(const std::vector<std::shared_ptr<AgentToolInputParameter>>& _oneOfList);
 
                     /**
                      * 判断参数 OneOfList 是否已赋值
@@ -200,14 +201,14 @@ namespace TencentCloud
                      * @return AnyOfList <p>Parameters in types of AnyOf</p>
                      * 
                      */
-                    std::vector<AgentToolInputParameter> GetAnyOfList() const;
+                    std::vector<std::shared_ptr<AgentToolInputParameter>> GetAnyOfList() const;
 
                     /**
                      * 设置<p>Parameters in types of AnyOf</p>
                      * @param _anyOfList <p>Parameters in types of AnyOf</p>
                      * 
                      */
-                    void SetAnyOfList(const std::vector<AgentToolInputParameter>& _anyOfList);
+                    void SetAnyOfList(const std::vector<std::shared_ptr<AgentToolInputParameter>>& _anyOfList);
 
                     /**
                      * 判断参数 AnyOfList 是否已赋值
@@ -266,7 +267,7 @@ namespace TencentCloud
                     /**
                      * <p>Sub-parameter, used only when the data type is OBJECT or ARRAY&lt;&gt;</p>
                      */
-                    std::vector<AgentToolInputParameter> m_subParameterList;
+                    std::vector<std::shared_ptr<AgentToolInputParameter>> m_subParameterList;
                     bool m_subParameterListHasBeenSet;
 
                     /**
@@ -278,13 +279,13 @@ namespace TencentCloud
                     /**
                      * <p>Parameters in types of OneOf</p>
                      */
-                    std::vector<AgentToolInputParameter> m_oneOfList;
+                    std::vector<std::shared_ptr<AgentToolInputParameter>> m_oneOfList;
                     bool m_oneOfListHasBeenSet;
 
                     /**
                      * <p>Parameters in types of AnyOf</p>
                      */
-                    std::vector<AgentToolInputParameter> m_anyOfList;
+                    std::vector<std::shared_ptr<AgentToolInputParameter>> m_anyOfList;
                     bool m_anyOfListHasBeenSet;
 
                     /**

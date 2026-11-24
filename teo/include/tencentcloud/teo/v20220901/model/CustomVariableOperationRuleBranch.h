@@ -20,12 +20,12 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/CustomVariableOperationRuleAction.h>
-#include <tencentcloud/teo/v20220901/model/CustomVariableOperationSubRule.h>
 
 
 namespace TencentCloud
@@ -36,6 +36,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class CustomVariableOperationSubRule;
                 /**
                 * Custom Variable operation sub-rule branch.
                 */
@@ -95,14 +96,14 @@ namespace TencentCloud
                      * @return SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
                      * 
                      */
-                    std::vector<CustomVariableOperationSubRule> GetSubRules() const;
+                    std::vector<std::shared_ptr<CustomVariableOperationSubRule>> GetSubRules() const;
 
                     /**
                      * 设置<p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
                      * @param _subRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
                      * 
                      */
-                    void SetSubRules(const std::vector<CustomVariableOperationSubRule>& _subRules);
+                    void SetSubRules(const std::vector<std::shared_ptr<CustomVariableOperationSubRule>>& _subRules);
 
                     /**
                      * 判断参数 SubRules 是否已赋值
@@ -128,7 +129,7 @@ namespace TencentCloud
                     /**
                      * <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
                      */
-                    std::vector<CustomVariableOperationSubRule> m_subRules;
+                    std::vector<std::shared_ptr<CustomVariableOperationSubRule>> m_subRules;
                     bool m_subRulesHasBeenSet;
 
                 };

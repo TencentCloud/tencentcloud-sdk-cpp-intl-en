@@ -35,6 +35,8 @@
 #include <tencentcloud/car/v20220110/model/CreateApplicationSnapshotResponse.h>
 #include <tencentcloud/car/v20220110/model/CreateApplicationVersionRequest.h>
 #include <tencentcloud/car/v20220110/model/CreateApplicationVersionResponse.h>
+#include <tencentcloud/car/v20220110/model/CreateMCPTokenRequest.h>
+#include <tencentcloud/car/v20220110/model/CreateMCPTokenResponse.h>
 #include <tencentcloud/car/v20220110/model/CreateSessionRequest.h>
 #include <tencentcloud/car/v20220110/model/CreateSessionResponse.h>
 #include <tencentcloud/car/v20220110/model/DeleteApplicationRequest.h>
@@ -65,6 +67,8 @@
 #include <tencentcloud/car/v20220110/model/DescribeConcurrentSummaryResponse.h>
 #include <tencentcloud/car/v20220110/model/DescribeCosCredentialRequest.h>
 #include <tencentcloud/car/v20220110/model/DescribeCosCredentialResponse.h>
+#include <tencentcloud/car/v20220110/model/DescribeMCPTokensRequest.h>
+#include <tencentcloud/car/v20220110/model/DescribeMCPTokensResponse.h>
 #include <tencentcloud/car/v20220110/model/DestroySessionRequest.h>
 #include <tencentcloud/car/v20220110/model/DestroySessionResponse.h>
 #include <tencentcloud/car/v20220110/model/ModifyApplicationBaseInfoRequest.h>
@@ -77,6 +81,8 @@
 #include <tencentcloud/car/v20220110/model/ModifyConcurrentPackageResponse.h>
 #include <tencentcloud/car/v20220110/model/ModifyMobileApplicationInfoRequest.h>
 #include <tencentcloud/car/v20220110/model/ModifyMobileApplicationInfoResponse.h>
+#include <tencentcloud/car/v20220110/model/RenewMCPTokenRequest.h>
+#include <tencentcloud/car/v20220110/model/RenewMCPTokenResponse.h>
 #include <tencentcloud/car/v20220110/model/ResetConcurrentPackagesRequest.h>
 #include <tencentcloud/car/v20220110/model/ResetConcurrentPackagesResponse.h>
 #include <tencentcloud/car/v20220110/model/SetApplicationVersionOnlineRequest.h>
@@ -121,6 +127,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateApplicationVersionResponse> CreateApplicationVersionOutcome;
                 typedef std::future<CreateApplicationVersionOutcome> CreateApplicationVersionOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::CreateApplicationVersionRequest&, CreateApplicationVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateMCPTokenResponse> CreateMCPTokenOutcome;
+                typedef std::future<CreateMCPTokenOutcome> CreateMCPTokenOutcomeCallable;
+                typedef std::function<void(const CarClient*, const Model::CreateMCPTokenRequest&, CreateMCPTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMCPTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSessionResponse> CreateSessionOutcome;
                 typedef std::future<CreateSessionOutcome> CreateSessionOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::CreateSessionRequest&, CreateSessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSessionAsyncHandler;
@@ -166,6 +175,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCosCredentialResponse> DescribeCosCredentialOutcome;
                 typedef std::future<DescribeCosCredentialOutcome> DescribeCosCredentialOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::DescribeCosCredentialRequest&, DescribeCosCredentialOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCosCredentialAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMCPTokensResponse> DescribeMCPTokensOutcome;
+                typedef std::future<DescribeMCPTokensOutcome> DescribeMCPTokensOutcomeCallable;
+                typedef std::function<void(const CarClient*, const Model::DescribeMCPTokensRequest&, DescribeMCPTokensOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMCPTokensAsyncHandler;
                 typedef Outcome<Core::Error, Model::DestroySessionResponse> DestroySessionOutcome;
                 typedef std::future<DestroySessionOutcome> DestroySessionOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::DestroySessionRequest&, DestroySessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroySessionAsyncHandler;
@@ -184,6 +196,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMobileApplicationInfoResponse> ModifyMobileApplicationInfoOutcome;
                 typedef std::future<ModifyMobileApplicationInfoOutcome> ModifyMobileApplicationInfoOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::ModifyMobileApplicationInfoRequest&, ModifyMobileApplicationInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMobileApplicationInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenewMCPTokenResponse> RenewMCPTokenOutcome;
+                typedef std::future<RenewMCPTokenOutcome> RenewMCPTokenOutcomeCallable;
+                typedef std::function<void(const CarClient*, const Model::RenewMCPTokenRequest&, RenewMCPTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewMCPTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetConcurrentPackagesResponse> ResetConcurrentPackagesOutcome;
                 typedef std::future<ResetConcurrentPackagesOutcome> ResetConcurrentPackagesOutcomeCallable;
                 typedef std::function<void(const CarClient*, const Model::ResetConcurrentPackagesRequest&, ResetConcurrentPackagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetConcurrentPackagesAsyncHandler;
@@ -258,6 +273,15 @@ namespace TencentCloud
                 CreateApplicationVersionOutcome CreateApplicationVersion(const Model::CreateApplicationVersionRequest &request);
                 void CreateApplicationVersionAsync(const Model::CreateApplicationVersionRequest& request, const CreateApplicationVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateApplicationVersionOutcomeCallable CreateApplicationVersionCallable(const Model::CreateApplicationVersionRequest& request);
+
+                /**
+                 *This API is used to create an MCP token (issue a token).
+                 * @param req CreateMCPTokenRequest
+                 * @return CreateMCPTokenOutcome
+                 */
+                CreateMCPTokenOutcome CreateMCPToken(const Model::CreateMCPTokenRequest &request);
+                void CreateMCPTokenAsync(const Model::CreateMCPTokenRequest& request, const CreateMCPTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateMCPTokenOutcomeCallable CreateMCPTokenCallable(const Model::CreateMCPTokenRequest& request);
 
                 /**
                  *This API is used to create a session. The timeout period of the API is 5 seconds.
@@ -395,6 +419,15 @@ namespace TencentCloud
                 DescribeCosCredentialOutcomeCallable DescribeCosCredentialCallable(const Model::DescribeCosCredentialRequest& request);
 
                 /**
+                 *This API is used to query the MCP Token list.
+                 * @param req DescribeMCPTokensRequest
+                 * @return DescribeMCPTokensOutcome
+                 */
+                DescribeMCPTokensOutcome DescribeMCPTokens(const Model::DescribeMCPTokensRequest &request);
+                void DescribeMCPTokensAsync(const Model::DescribeMCPTokensRequest& request, const DescribeMCPTokensAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMCPTokensOutcomeCallable DescribeMCPTokensCallable(const Model::DescribeMCPTokensRequest& request);
+
+                /**
                  *This API is used to terminate a session. If cloud-based streaming has been enabled for this session, the cloud-based streaming will end upon session termination.
                  * @param req DestroySessionRequest
                  * @return DestroySessionOutcome
@@ -447,6 +480,15 @@ namespace TencentCloud
                 ModifyMobileApplicationInfoOutcome ModifyMobileApplicationInfo(const Model::ModifyMobileApplicationInfoRequest &request);
                 void ModifyMobileApplicationInfoAsync(const Model::ModifyMobileApplicationInfoRequest& request, const ModifyMobileApplicationInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyMobileApplicationInfoOutcomeCallable ModifyMobileApplicationInfoCallable(const Model::ModifyMobileApplicationInfoRequest& request);
+
+                /**
+                 *This API is used to renew an MCP Token.
+                 * @param req RenewMCPTokenRequest
+                 * @return RenewMCPTokenOutcome
+                 */
+                RenewMCPTokenOutcome RenewMCPToken(const Model::RenewMCPTokenRequest &request);
+                void RenewMCPTokenAsync(const Model::RenewMCPTokenRequest& request, const RenewMCPTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenewMCPTokenOutcomeCallable RenewMCPTokenCallable(const Model::RenewMCPTokenRequest& request);
 
                 /**
                  *This API is used to reset a concurrency pack and disconnect all user connections.

@@ -25,11 +25,12 @@ set(car_public_header_model
   include/tencentcloud/car/v20220110/model/BindConcurrentPackagesToProjectRequest.h
   include/tencentcloud/car/v20220110/model/DescribeApplicationListResponse.h
   include/tencentcloud/car/v20220110/model/ModifyConcurrentPackageRequest.h
+  include/tencentcloud/car/v20220110/model/CreateMCPTokenRequest.h
   include/tencentcloud/car/v20220110/model/ApplicationBaseInfo.h
   include/tencentcloud/car/v20220110/model/CreateSessionRequest.h
   include/tencentcloud/car/v20220110/model/DescribeApplicationPathListResponse.h
   include/tencentcloud/car/v20220110/model/BindConcurrentPackagesToProjectResponse.h
-  include/tencentcloud/car/v20220110/model/StartPublishStreamWithURLResponse.h
+  include/tencentcloud/car/v20220110/model/CreateMCPTokenResponse.h
   include/tencentcloud/car/v20220110/model/UnbindConcurrentPackagesFromProjectResponse.h
   include/tencentcloud/car/v20220110/model/DeleteApplicationVersionRequest.h
   include/tencentcloud/car/v20220110/model/CreateApplicationProjectResponse.h
@@ -57,9 +58,10 @@ set(car_public_header_model
   include/tencentcloud/car/v20220110/model/DescribeConcurrentSummaryRequest.h
   include/tencentcloud/car/v20220110/model/ModifyApplicationVersionResponse.h
   include/tencentcloud/car/v20220110/model/DescribeCosCredentialRequest.h
+  include/tencentcloud/car/v20220110/model/RenewMCPTokenResponse.h
   include/tencentcloud/car/v20220110/model/StopPublishStreamResponse.h
   include/tencentcloud/car/v20220110/model/CreateApplicationProjectRequest.h
-  include/tencentcloud/car/v20220110/model/StopPublishStreamRequest.h
+  include/tencentcloud/car/v20220110/model/DescribeMCPTokensRequest.h
   include/tencentcloud/car/v20220110/model/CreateApplicationVersionRequest.h
   include/tencentcloud/car/v20220110/model/DescribeApplicationStatusResponse.h
   include/tencentcloud/car/v20220110/model/DestroySessionResponse.h
@@ -67,7 +69,9 @@ set(car_public_header_model
   include/tencentcloud/car/v20220110/model/DescribeApplicationPathListRequest.h
   include/tencentcloud/car/v20220110/model/ResetConcurrentPackagesRequest.h
   include/tencentcloud/car/v20220110/model/StartPublishStreamResponse.h
+  include/tencentcloud/car/v20220110/model/MCPTokenInfo.h
   include/tencentcloud/car/v20220110/model/CreateSessionResponse.h
+  include/tencentcloud/car/v20220110/model/StopPublishStreamRequest.h
   include/tencentcloud/car/v20220110/model/BackgroundImage.h
   include/tencentcloud/car/v20220110/model/ModifyApplicationProjectResponse.h
   include/tencentcloud/car/v20220110/model/DescribeApplicationListRequest.h
@@ -95,8 +99,11 @@ set(car_public_header_model
   include/tencentcloud/car/v20220110/model/DescribeApplicationFileInfoRequest.h
   include/tencentcloud/car/v20220110/model/ApplicationConcurrentPackage.h
   include/tencentcloud/car/v20220110/model/UserApplicationStore.h
+  include/tencentcloud/car/v20220110/model/StartPublishStreamWithURLResponse.h
+  include/tencentcloud/car/v20220110/model/DescribeMCPTokensResponse.h
   include/tencentcloud/car/v20220110/model/ModifyApplicationVersionRequest.h
   include/tencentcloud/car/v20220110/model/DescribeApplicationProjectsRequest.h
+  include/tencentcloud/car/v20220110/model/RenewMCPTokenRequest.h
   )
 
 set(car_src
@@ -107,11 +114,12 @@ set(car_src
   src/v20220110/model/BindConcurrentPackagesToProjectRequest.cpp
   src/v20220110/model/DescribeApplicationListResponse.cpp
   src/v20220110/model/ModifyConcurrentPackageRequest.cpp
+  src/v20220110/model/CreateMCPTokenRequest.cpp
   src/v20220110/model/ApplicationBaseInfo.cpp
   src/v20220110/model/CreateSessionRequest.cpp
   src/v20220110/model/DescribeApplicationPathListResponse.cpp
   src/v20220110/model/BindConcurrentPackagesToProjectResponse.cpp
-  src/v20220110/model/StartPublishStreamWithURLResponse.cpp
+  src/v20220110/model/CreateMCPTokenResponse.cpp
   src/v20220110/model/UnbindConcurrentPackagesFromProjectResponse.cpp
   src/v20220110/model/DeleteApplicationVersionRequest.cpp
   src/v20220110/model/CreateApplicationProjectResponse.cpp
@@ -139,9 +147,10 @@ set(car_src
   src/v20220110/model/DescribeConcurrentSummaryRequest.cpp
   src/v20220110/model/ModifyApplicationVersionResponse.cpp
   src/v20220110/model/DescribeCosCredentialRequest.cpp
+  src/v20220110/model/RenewMCPTokenResponse.cpp
   src/v20220110/model/StopPublishStreamResponse.cpp
   src/v20220110/model/CreateApplicationProjectRequest.cpp
-  src/v20220110/model/StopPublishStreamRequest.cpp
+  src/v20220110/model/DescribeMCPTokensRequest.cpp
   src/v20220110/model/CreateApplicationVersionRequest.cpp
   src/v20220110/model/DescribeApplicationStatusResponse.cpp
   src/v20220110/model/DestroySessionResponse.cpp
@@ -149,7 +158,9 @@ set(car_src
   src/v20220110/model/DescribeApplicationPathListRequest.cpp
   src/v20220110/model/ResetConcurrentPackagesRequest.cpp
   src/v20220110/model/StartPublishStreamResponse.cpp
+  src/v20220110/model/MCPTokenInfo.cpp
   src/v20220110/model/CreateSessionResponse.cpp
+  src/v20220110/model/StopPublishStreamRequest.cpp
   src/v20220110/model/BackgroundImage.cpp
   src/v20220110/model/ModifyApplicationProjectResponse.cpp
   src/v20220110/model/DescribeApplicationListRequest.cpp
@@ -177,8 +188,11 @@ set(car_src
   src/v20220110/model/DescribeApplicationFileInfoRequest.cpp
   src/v20220110/model/ApplicationConcurrentPackage.cpp
   src/v20220110/model/UserApplicationStore.cpp
+  src/v20220110/model/StartPublishStreamWithURLResponse.cpp
+  src/v20220110/model/DescribeMCPTokensResponse.cpp
   src/v20220110/model/ModifyApplicationVersionRequest.cpp
   src/v20220110/model/DescribeApplicationProjectsRequest.cpp
+  src/v20220110/model/RenewMCPTokenRequest.cpp
   )
 
 set(car_include

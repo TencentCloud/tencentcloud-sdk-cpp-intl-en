@@ -646,8 +646,8 @@ CoreInternalOutcome InstanceOpsDto::Deserialize(const rapidjson::Value &value)
         const rapidjson::Value &tmpValue = value["RelatedInstanceList"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            InstanceOpsDto item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            auto item = std::make_shared<InstanceOpsDto>();
+            CoreInternalOutcome outcome = item->Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
@@ -736,8 +736,8 @@ CoreInternalOutcome InstanceOpsDto::Deserialize(const rapidjson::Value &value)
         const rapidjson::Value &tmpValue = value["CirculateInstanceList"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            InstanceOpsDto item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            auto item = std::make_shared<InstanceOpsDto>();
+            CoreInternalOutcome outcome = item->Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
@@ -1199,7 +1199,10 @@ void InstanceOpsDto::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         for (auto itr = m_relatedInstanceList.begin(); itr != m_relatedInstanceList.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+            if (*itr)
+            {
+                (*itr)->ToJsonObject(value[key.c_str()][i], allocator);
+            }
         }
     }
 
@@ -1268,7 +1271,10 @@ void InstanceOpsDto::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         for (auto itr = m_circulateInstanceList.begin(); itr != m_circulateInstanceList.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+            if (*itr)
+            {
+                (*itr)->ToJsonObject(value[key.c_str()][i], allocator);
+            }
         }
     }
 
@@ -2139,12 +2145,12 @@ bool InstanceOpsDto::ExecutorGroupNameHasBeenSet() const
     return m_executorGroupNameHasBeenSet;
 }
 
-vector<InstanceOpsDto> InstanceOpsDto::GetRelatedInstanceList() const
+vector<shared_ptr<InstanceOpsDto>> InstanceOpsDto::GetRelatedInstanceList() const
 {
     return m_relatedInstanceList;
 }
 
-void InstanceOpsDto::SetRelatedInstanceList(const vector<InstanceOpsDto>& _relatedInstanceList)
+void InstanceOpsDto::SetRelatedInstanceList(const vector<shared_ptr<InstanceOpsDto>>& _relatedInstanceList)
 {
     m_relatedInstanceList = _relatedInstanceList;
     m_relatedInstanceListHasBeenSet = true;
@@ -2251,12 +2257,12 @@ bool InstanceOpsDto::DeletedFatherListHasBeenSet() const
     return m_deletedFatherListHasBeenSet;
 }
 
-vector<InstanceOpsDto> InstanceOpsDto::GetCirculateInstanceList() const
+vector<shared_ptr<InstanceOpsDto>> InstanceOpsDto::GetCirculateInstanceList() const
 {
     return m_circulateInstanceList;
 }
 
-void InstanceOpsDto::SetCirculateInstanceList(const vector<InstanceOpsDto>& _circulateInstanceList)
+void InstanceOpsDto::SetCirculateInstanceList(const vector<shared_ptr<InstanceOpsDto>>& _circulateInstanceList)
 {
     m_circulateInstanceList = _circulateInstanceList;
     m_circulateInstanceListHasBeenSet = true;

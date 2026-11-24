@@ -20,12 +20,12 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/RuleEngineAction.h>
-#include <tencentcloud/teo/v20220901/model/RuleEngineSubRule.h>
 
 
 namespace TencentCloud
@@ -36,6 +36,7 @@ namespace TencentCloud
         {
             namespace Model
             {
+                class RuleEngineSubRule;
                 /**
                 * Sub-rule branch.
                 */
@@ -101,7 +102,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
-                    std::vector<RuleEngineSubRule> GetSubRules() const;
+                    std::vector<std::shared_ptr<RuleEngineSubRule>> GetSubRules() const;
 
                     /**
                      * 设置List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
@@ -110,7 +111,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
-                    void SetSubRules(const std::vector<RuleEngineSubRule>& _subRules);
+                    void SetSubRules(const std::vector<std::shared_ptr<RuleEngineSubRule>>& _subRules);
 
                     /**
                      * 判断参数 SubRules 是否已赋值
@@ -138,7 +139,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                      * List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
 Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
-                    std::vector<RuleEngineSubRule> m_subRules;
+                    std::vector<std::shared_ptr<RuleEngineSubRule>> m_subRules;
                     bool m_subRulesHasBeenSet;
 
                 };
