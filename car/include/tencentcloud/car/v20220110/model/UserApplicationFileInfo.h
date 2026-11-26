@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FilePath Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFilePath() const;
 
                     /**
                      * 设置Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _filePath Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFilePath(const std::string& _filePath);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilePathHasBeenSet() const;
 
                     /**
-                     * 获取File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileState File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取File status. NO_EXIST: not EXIST; EXIST: exist.
+                     * @return FileState File status. NO_EXIST: not EXIST; EXIST: exist.
                      * 
                      */
                     std::string GetFileState() const;
 
                     /**
-                     * 设置File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileState File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置File status. NO_EXIST: not EXIST; EXIST: exist.
+                     * @param _fileState File status. NO_EXIST: not EXIST; EXIST: exist.
                      * 
                      */
                     void SetFileState(const std::string& _fileState);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_filePath;
                     bool m_filePathHasBeenSet;
 
                     /**
-                     * File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * File status. NO_EXIST: not EXIST; EXIST: exist.
                      */
                     std::string m_fileState;
                     bool m_fileStateHasBeenSet;

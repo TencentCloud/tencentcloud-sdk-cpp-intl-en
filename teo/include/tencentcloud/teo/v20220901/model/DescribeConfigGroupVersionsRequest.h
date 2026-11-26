@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Configuraration group ID.
-                     * @return GroupId Configuraration group ID.
+                     * 获取Configuration group ID.
+                     * @return GroupId Configuration group ID.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Configuraration group ID.
-                     * @param _groupId Configuraration group ID.
+                     * 设置Configuration group ID.
+                     * @param _groupId Configuration group ID.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -86,19 +86,19 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
-                     * @return Filters Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
+                     * 获取Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
+                     * @return Filters Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
-                     * @param _filters Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
+                     * 设置Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
+                     * @param _filters Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Paging query offset. The default value is 0.
-                     * @return Offset Paging query offset. The default value is 0.
+                     * 获取The offset of paginated query. Default value: 0.
+                     * @return Offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Paging query offset. The default value is 0.
-                     * @param _offset Paging query offset. The default value is 0.
+                     * 设置The offset of paginated query. Default value: 0.
+                     * @param _offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
-                     * @return Limit Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+                     * 获取Paginated query limit. Default value: 20, maximum value: 100.
+                     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
-                     * @param _limit Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+                     * 设置Paginated query limit. Default value: 20, maximum value: 100.
+                     * @param _limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -161,26 +161,26 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Configuraration group ID.
+                     * Configuration group ID.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
+                     * Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Paging query offset. The default value is 0.
+                     * The offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+                     * Paginated query limit. Default value: 20, maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

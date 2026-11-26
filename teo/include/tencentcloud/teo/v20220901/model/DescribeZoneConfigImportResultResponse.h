@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
-                     * @return Status The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+                     * 获取The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
+                     * @return Status The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
                      * 
                      */
                     std::string GetStatus() const;
@@ -116,7 +116,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+                     * The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

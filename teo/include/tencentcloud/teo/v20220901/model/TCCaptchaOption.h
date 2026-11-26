@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CAPTCHA authentication instance information.
+                * Authenticate the instance information with a verification code.
                 */
                 class TCCaptchaOption : public AbstractModel
                 {

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of dns record ids to be deleted, upper limit: 1000.
-                     * @return RecordIds List of dns record ids to be deleted, upper limit: 1000.
+                     * 获取List of DNS record IDs to be deleted. Upper limit: 1000.
+                     * @return RecordIds List of DNS record IDs to be deleted. Upper limit: 1000.
                      * 
                      */
                     std::vector<std::string> GetRecordIds() const;
 
                     /**
-                     * 设置List of dns record ids to be deleted, upper limit: 1000.
-                     * @param _recordIds List of dns record ids to be deleted, upper limit: 1000.
+                     * 设置List of DNS record IDs to be deleted. Upper limit: 1000.
+                     * @param _recordIds List of DNS record IDs to be deleted. Upper limit: 1000.
                      * 
                      */
                     void SetRecordIds(const std::vector<std::string>& _recordIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of dns record ids to be deleted, upper limit: 1000.
+                     * List of DNS record IDs to be deleted. Upper limit: 1000.
                      */
                     std::vector<std::string> m_recordIds;
                     bool m_recordIdsHasBeenSet;

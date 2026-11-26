@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Version information about the configuration group.
+                * Configuration group version information.
                 */
                 class ConfigGroupVersionInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
-                     * @return VersionId <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * 获取<p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * @return VersionId <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
                      * 
                      */
                     std::string GetVersionId() const;
 
                     /**
-                     * 设置<p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
-                     * @param _versionId <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * 设置<p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * @param _versionId <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
                      * 
                      */
                     void SetVersionId(const std::string& _versionId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VersionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
-                     * @return VersionNumber <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+                     * 获取<p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+                     * @return VersionNumber <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
                      * 
                      */
                     std::string GetVersionNumber() const;
 
                     /**
-                     * 设置<p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
-                     * @param _versionNumber <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+                     * 设置<p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+                     * @param _versionNumber <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
                      * 
                      */
                     void SetVersionNumber(const std::string& _versionNumber);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VersionNumberHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
-                     * @return SourceVersion <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * 获取<p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * @return SourceVersion <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
                      * 
                      */
                     std::string GetSourceVersion() const;
 
                     /**
-                     * 设置<p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
-                     * @param _sourceVersion <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * 设置<p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * @param _sourceVersion <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
                      * 
                      */
                     void SetSourceVersion(const std::string& _sourceVersion);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SourceVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
-                     * @return GroupType <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+                     * 获取<p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
+                     * @return GroupType <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
                      * 
                      */
                     std::string GetGroupType() const;
 
                     /**
-                     * 设置<p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
-                     * @param _groupType <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+                     * 设置<p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
+                     * @param _groupType <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
                      * 
                      */
                     void SetGroupType(const std::string& _groupType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool GroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
-                     * @return GroupId <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+                     * 获取<p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
+                     * @return GroupId <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置<p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
-                     * @param _groupId <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+                     * 设置<p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
+                     * @param _groupId <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
-                     * @return Status <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+                     * 获取<p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
+                     * @return Status <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
-                     * @param _status <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+                     * 设置<p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
+                     * @param _status <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -217,31 +217,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
                      */
                     std::string m_versionId;
                     bool m_versionIdHasBeenSet;
 
                     /**
-                     * <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+                     * <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
                      */
                     std::string m_versionNumber;
                     bool m_versionNumberHasBeenSet;
 
                     /**
-                     * <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+                     * <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
                      */
                     std::string m_sourceVersion;
                     bool m_sourceVersionHasBeenSet;
 
                     /**
-                     * <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+                     * <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
                      */
                     std::string m_groupType;
                     bool m_groupTypeHasBeenSet;
 
                     /**
-                     * <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+                     * <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
@@ -253,7 +253,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+                     * <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

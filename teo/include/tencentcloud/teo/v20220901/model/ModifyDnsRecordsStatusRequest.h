@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
-                     * @return RecordsToEnable List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+                     * 获取List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
+                     * @return RecordsToEnable List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
                      * 
                      */
                     std::vector<std::string> GetRecordsToEnable() const;
 
                     /**
-                     * 设置List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
-                     * @param _recordsToEnable List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+                     * 设置List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
+                     * @param _recordsToEnable List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
                      * 
                      */
                     void SetRecordsToEnable(const std::vector<std::string>& _recordsToEnable);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RecordsToEnableHasBeenSet() const;
 
                     /**
-                     * 获取List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
-                     * @return RecordsToDisable List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+                     * 获取List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
+                     * @return RecordsToDisable List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
                      * 
                      */
                     std::vector<std::string> GetRecordsToDisable() const;
 
                     /**
-                     * 设置List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
-                     * @param _recordsToDisable List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+                     * 设置List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
+                     * @param _recordsToDisable List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
                      * 
                      */
                     void SetRecordsToDisable(const std::vector<std::string>& _recordsToDisable);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+                     * List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
                      */
                     std::vector<std::string> m_recordsToEnable;
                     bool m_recordsToEnableHasBeenSet;
 
                     /**
-                     * List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+                     * List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
                      */
                     std::vector<std::string> m_recordsToDisable;
                     bool m_recordsToDisableHasBeenSet;

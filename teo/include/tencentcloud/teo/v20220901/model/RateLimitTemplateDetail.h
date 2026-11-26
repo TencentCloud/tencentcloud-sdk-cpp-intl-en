@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The settings of the rate limiting template
+                * Current detailed configuration of the template
                 */
                 class RateLimitTemplateDetail : public AbstractModel
                 {
@@ -47,39 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
-                     * @return Mode Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+                     * 获取Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+                     * @return Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
-                     * @param _mode Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+                     * 设置Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+                     * @param _mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -113,23 +113,23 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
-                     * @return Action Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
+                     * 获取Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+                     * @return Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
-                     * @param _action Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
+                     * 设置Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+                     * @param _action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Penalty time, value range 0-2 days, unit second.
-                     * @return PunishTime Penalty time, value range 0-2 days, unit second.
+                     * 获取Penalty duration, in seconds. Value range: 0-2 days.
+                     * @return PunishTime Penalty duration, in seconds. Value range: 0-2 days.
                      * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
-                     * 设置Penalty time, value range 0-2 days, unit second.
-                     * @param _punishTime Penalty time, value range 0-2 days, unit second.
+                     * 设置Penalty duration, in seconds. Value range: 0-2 days.
+                     * @param _punishTime Penalty duration, in seconds. Value range: 0-2 days.
                      * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
@@ -207,13 +207,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+                     * Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
@@ -225,15 +225,15 @@ namespace TencentCloud
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
+                     * Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Penalty time, value range 0-2 days, unit second.
+                     * Penalty duration, in seconds. Value range: 0-2 days.
                      */
                     int64_t m_punishTime;
                     bool m_punishTimeHasBeenSet;

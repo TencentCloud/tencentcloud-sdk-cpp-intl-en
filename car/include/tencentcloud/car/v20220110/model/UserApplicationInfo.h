@@ -27,6 +27,7 @@
 #include <tencentcloud/car/v20220110/model/UserApplicationVersion.h>
 #include <tencentcloud/car/v20220110/model/ApplicationBaseInfo.h>
 #include <tencentcloud/car/v20220110/model/UserApplicationStore.h>
+#include <tencentcloud/car/v20220110/model/Tag.h>
 
 
 namespace TencentCloud
@@ -50,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID.
-                     * @return ApplicationId Application ID.
+                     * 获取<p>Application Id</p>
+                     * @return ApplicationId <p>Application Id</p>
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Application ID.
-                     * @param _applicationId Application ID.
+                     * 设置<p>Application Id</p>
+                     * @param _applicationId <p>Application Id</p>
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -71,15 +72,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Application name.
-                     * @return ApplicationName Application name.
+                     * 获取<p>Application name</p>
+                     * @return ApplicationName <p>Application name</p>
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name.
-                     * @param _applicationName Application name.
+                     * 设置<p>Application name</p>
+                     * @param _applicationName <p>Application name</p>
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -92,15 +93,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
-                     * @return ApplicationType Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+                     * 获取<p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
+                     * @return ApplicationType <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
                      * 
                      */
                     std::string GetApplicationType() const;
 
                     /**
-                     * 设置Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
-                     * @param _applicationType Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+                     * 设置<p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
+                     * @param _applicationType <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
                      * 
                      */
                     void SetApplicationType(const std::string& _applicationType);
@@ -113,15 +114,15 @@ namespace TencentCloud
                     bool ApplicationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Application program execution path.
-                     * @return ApplicationExePath Application program execution path.
+                     * 获取<p>Program execution path</p>
+                     * @return ApplicationExePath <p>Program execution path</p>
                      * 
                      */
                     std::string GetApplicationExePath() const;
 
                     /**
-                     * 设置Application program execution path.
-                     * @param _applicationExePath Application program execution path.
+                     * 设置<p>Program execution path</p>
+                     * @param _applicationExePath <p>Program execution path</p>
                      * 
                      */
                     void SetApplicationExePath(const std::string& _applicationExePath);
@@ -134,15 +135,15 @@ namespace TencentCloud
                     bool ApplicationExePathHasBeenSet() const;
 
                     /**
-                     * 获取Application process list.
-                     * @return ApplicationInterList Application process list.
+                     * 获取<p>Application process list</p>
+                     * @return ApplicationInterList <p>Application process list</p>
                      * 
                      */
                     std::string GetApplicationInterList() const;
 
                     /**
-                     * 设置Application process list.
-                     * @param _applicationInterList Application process list.
+                     * 设置<p>Application process list</p>
+                     * @param _applicationInterList <p>Application process list</p>
                      * 
                      */
                     void SetApplicationInterList(const std::string& _applicationInterList);
@@ -155,15 +156,15 @@ namespace TencentCloud
                     bool ApplicationInterListHasBeenSet() const;
 
                     /**
-                     * 获取Application startup parameters.
-                     * @return ApplicationParams Application startup parameters.
+                     * 获取<p>Application startup parameter</p>
+                     * @return ApplicationParams <p>Application startup parameter</p>
                      * 
                      */
                     std::string GetApplicationParams() const;
 
                     /**
-                     * 设置Application startup parameters.
-                     * @param _applicationParams Application startup parameters.
+                     * 设置<p>Application startup parameter</p>
+                     * @param _applicationParams <p>Application startup parameter</p>
                      * 
                      */
                     void SetApplicationParams(const std::string& _applicationParams);
@@ -176,15 +177,15 @@ namespace TencentCloud
                     bool ApplicationParamsHasBeenSet() const;
 
                     /**
-                     * 获取Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
-                     * @return ApplicationRunStatus Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+                     * 获取<p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
+                     * @return ApplicationRunStatus <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
                      * 
                      */
                     std::string GetApplicationRunStatus() const;
 
                     /**
-                     * 设置Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
-                     * @param _applicationRunStatus Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+                     * 设置<p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
+                     * @param _applicationRunStatus <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
                      * 
                      */
                     void SetApplicationRunStatus(const std::string& _applicationRunStatus);
@@ -197,15 +198,15 @@ namespace TencentCloud
                     bool ApplicationRunStatusHasBeenSet() const;
 
                     /**
-                     * 获取Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
-                     * @return ApplicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+                     * 获取<p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+                     * @return ApplicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
                      * 
                      */
                     std::string GetApplicationUpdateStatus() const;
 
                     /**
-                     * 设置Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
-                     * @param _applicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+                     * 设置<p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+                     * @param _applicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
                      * 
                      */
                     void SetApplicationUpdateStatus(const std::string& _applicationUpdateStatus);
@@ -218,15 +219,15 @@ namespace TencentCloud
                     bool ApplicationUpdateStatusHasBeenSet() const;
 
                     /**
-                     * 获取Application creation time.
-                     * @return ApplicationCreateTime Application creation time.
+                     * 获取<p>Application creation time</p>
+                     * @return ApplicationCreateTime <p>Application creation time</p>
                      * 
                      */
                     std::string GetApplicationCreateTime() const;
 
                     /**
-                     * 设置Application creation time.
-                     * @param _applicationCreateTime Application creation time.
+                     * 设置<p>Application creation time</p>
+                     * @param _applicationCreateTime <p>Application creation time</p>
                      * 
                      */
                     void SetApplicationCreateTime(const std::string& _applicationCreateTime);
@@ -239,15 +240,15 @@ namespace TencentCloud
                     bool ApplicationCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of application versions.
-                     * @return ApplicationVersions List of application versions.
+                     * 获取<p>Application version list</p>
+                     * @return ApplicationVersions <p>Application version list</p>
                      * 
                      */
                     std::vector<UserApplicationVersion> GetApplicationVersions() const;
 
                     /**
-                     * 设置List of application versions.
-                     * @param _applicationVersions List of application versions.
+                     * 设置<p>Application version list</p>
+                     * @param _applicationVersions <p>Application version list</p>
                      * 
                      */
                     void SetApplicationVersions(const std::vector<UserApplicationVersion>& _applicationVersions);
@@ -260,15 +261,15 @@ namespace TencentCloud
                     bool ApplicationVersionsHasBeenSet() const;
 
                     /**
-                     * 获取Application basic data.
-                     * @return ApplicationBaseInfo Application basic data.
+                     * 获取<p>Application basic data</p>
+                     * @return ApplicationBaseInfo <p>Application basic data</p>
                      * 
                      */
                     ApplicationBaseInfo GetApplicationBaseInfo() const;
 
                     /**
-                     * 设置Application basic data.
-                     * @param _applicationBaseInfo Application basic data.
+                     * 设置<p>Application basic data</p>
+                     * @param _applicationBaseInfo <p>Application basic data</p>
                      * 
                      */
                     void SetApplicationBaseInfo(const ApplicationBaseInfo& _applicationBaseInfo);
@@ -281,15 +282,15 @@ namespace TencentCloud
                     bool ApplicationBaseInfoHasBeenSet() const;
 
                     /**
-                     * 获取Application update progress.
-                     * @return ApplicationUpdateProgress Application update progress.
+                     * 获取<p>Application update progress</p>
+                     * @return ApplicationUpdateProgress <p>Application update progress</p>
                      * 
                      */
                     int64_t GetApplicationUpdateProgress() const;
 
                     /**
-                     * 设置Application update progress.
-                     * @param _applicationUpdateProgress Application update progress.
+                     * 设置<p>Application update progress</p>
+                     * @param _applicationUpdateProgress <p>Application update progress</p>
                      * 
                      */
                     void SetApplicationUpdateProgress(const int64_t& _applicationUpdateProgress);
@@ -302,15 +303,15 @@ namespace TencentCloud
                     bool ApplicationUpdateProgressHasBeenSet() const;
 
                     /**
-                     * 获取Application nature (PUBLIC: public application; PRIVATE: user application).
-                     * @return ApplicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
+                     * 获取<p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+                     * @return ApplicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
                      * 
                      */
                     std::string GetApplicationNature() const;
 
                     /**
-                     * 设置Application nature (PUBLIC: public application; PRIVATE: user application).
-                     * @param _applicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
+                     * 设置<p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+                     * @param _applicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
                      * 
                      */
                     void SetApplicationNature(const std::string& _applicationNature);
@@ -323,15 +324,15 @@ namespace TencentCloud
                     bool ApplicationNatureHasBeenSet() const;
 
                     /**
-                     * 获取Application repository list.
-                     * @return ApplicationStores Application repository list.
+                     * 获取<p>Application repository list</p>
+                     * @return ApplicationStores <p>Application repository list</p>
                      * 
                      */
                     std::vector<UserApplicationStore> GetApplicationStores() const;
 
                     /**
-                     * 设置Application repository list.
-                     * @param _applicationStores Application repository list.
+                     * 设置<p>Application repository list</p>
+                     * @param _applicationStores <p>Application repository list</p>
                      * 
                      */
                     void SetApplicationStores(const std::vector<UserApplicationStore>& _applicationStores);
@@ -343,91 +344,118 @@ namespace TencentCloud
                      */
                     bool ApplicationStoresHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Application tag</p>
+                     * @return ApplicationTags <p>Application tag</p>
+                     * 
+                     */
+                    std::vector<Tag> GetApplicationTags() const;
+
+                    /**
+                     * 设置<p>Application tag</p>
+                     * @param _applicationTags <p>Application tag</p>
+                     * 
+                     */
+                    void SetApplicationTags(const std::vector<Tag>& _applicationTags);
+
+                    /**
+                     * 判断参数 ApplicationTags 是否已赋值
+                     * @return ApplicationTags 是否已赋值
+                     * 
+                     */
+                    bool ApplicationTagsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Application ID.
+                     * <p>Application Id</p>
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Application name.
+                     * <p>Application name</p>
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+                     * <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
                      */
                     std::string m_applicationType;
                     bool m_applicationTypeHasBeenSet;
 
                     /**
-                     * Application program execution path.
+                     * <p>Program execution path</p>
                      */
                     std::string m_applicationExePath;
                     bool m_applicationExePathHasBeenSet;
 
                     /**
-                     * Application process list.
+                     * <p>Application process list</p>
                      */
                     std::string m_applicationInterList;
                     bool m_applicationInterListHasBeenSet;
 
                     /**
-                     * Application startup parameters.
+                     * <p>Application startup parameter</p>
                      */
                     std::string m_applicationParams;
                     bool m_applicationParamsHasBeenSet;
 
                     /**
-                     * Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+                     * <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
                      */
                     std::string m_applicationRunStatus;
                     bool m_applicationRunStatusHasBeenSet;
 
                     /**
-                     * Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+                     * <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
                      */
                     std::string m_applicationUpdateStatus;
                     bool m_applicationUpdateStatusHasBeenSet;
 
                     /**
-                     * Application creation time.
+                     * <p>Application creation time</p>
                      */
                     std::string m_applicationCreateTime;
                     bool m_applicationCreateTimeHasBeenSet;
 
                     /**
-                     * List of application versions.
+                     * <p>Application version list</p>
                      */
                     std::vector<UserApplicationVersion> m_applicationVersions;
                     bool m_applicationVersionsHasBeenSet;
 
                     /**
-                     * Application basic data.
+                     * <p>Application basic data</p>
                      */
                     ApplicationBaseInfo m_applicationBaseInfo;
                     bool m_applicationBaseInfoHasBeenSet;
 
                     /**
-                     * Application update progress.
+                     * <p>Application update progress</p>
                      */
                     int64_t m_applicationUpdateProgress;
                     bool m_applicationUpdateProgressHasBeenSet;
 
                     /**
-                     * Application nature (PUBLIC: public application; PRIVATE: user application).
+                     * <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
                      */
                     std::string m_applicationNature;
                     bool m_applicationNatureHasBeenSet;
 
                     /**
-                     * Application repository list.
+                     * <p>Application repository list</p>
                      */
                     std::vector<UserApplicationStore> m_applicationStores;
                     bool m_applicationStoresHasBeenSet;
+
+                    /**
+                     * <p>Application tag</p>
+                     */
+                    std::vector<Tag> m_applicationTags;
+                    bool m_applicationTagsHasBeenSet;
 
                 };
             }

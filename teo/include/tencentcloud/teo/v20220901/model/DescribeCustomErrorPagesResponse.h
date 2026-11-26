@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of custom error pages.
-                     * @return TotalCount Total number of custom error pages.
+                     * 获取<p>Total number of custom response pages.</p>
+                     * @return TotalCount <p>Total number of custom response pages.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Custom error page data list.
-                     * @return ErrorPages Custom error page data list.
+                     * 获取<p>Custom response page data list.</p>
+                     * @return ErrorPages <p>Custom response page data list.</p>
                      * 
                      */
                     std::vector<CustomErrorPage> GetErrorPages() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of custom error pages.
+                     * <p>Total number of custom response pages.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Custom error page data list.
+                     * <p>Custom response page data list.</p>
                      */
                     std::vector<CustomErrorPage> m_errorPages;
                     bool m_errorPagesHasBeenSet;

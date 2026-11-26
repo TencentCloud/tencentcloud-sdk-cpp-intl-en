@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Offline cache feature status switch.
+                * Whether offline cache is enabled.
                 */
                 class OfflineCacheParameters : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -82,10 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

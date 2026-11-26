@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content identifier configuration parameters
+                * Content identification configuration parameter.
                 */
                 class SetContentIdentifierParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content identifier id.
-                     * @return ContentIdentifier Content identifier id.
+                     * 获取Content identifier ID
+                     * @return ContentIdentifier Content identifier ID
                      * 
                      */
                     std::string GetContentIdentifier() const;
 
                     /**
-                     * 设置Content identifier id.
-                     * @param _contentIdentifier Content identifier id.
+                     * 设置Content identifier ID
+                     * @param _contentIdentifier Content identifier ID
                      * 
                      */
                     void SetContentIdentifier(const std::string& _contentIdentifier);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Content identifier id.
+                     * Content identifier ID
                      */
                     std::string m_contentIdentifier;
                     bool m_contentIdentifierHasBeenSet;

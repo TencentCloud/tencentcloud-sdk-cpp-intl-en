@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance information referenced by the component, used to show the binding relationship between the component and resources such as edge functions. When an edge function needs to access a component (for example KV namespace), a reference relationship is created. This struct can be used to view the instance detail of the referenced resource and its associated site information.
+                * Instance information referenced by the component, used to show the binding relationship between the component and resources such as edge functions. When an edge function needs to access a component (such as a KV namespace), a reference relationship is created. This struct allows you to view the specific instance details and associated site information.
                 */
                 class ComponentReference : public AbstractModel
                 {
@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
-                     * @return ReferenceType Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
+                     * 获取Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
+                     * @return ReferenceType Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
                      * 
                      */
                     std::string GetReferenceType() const;
 
                     /**
-                     * 设置Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
-                     * @param _referenceType Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
+                     * 设置Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
+                     * @param _referenceType Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
                      * 
                      */
                     void SetReferenceType(const std::string& _referenceType);
@@ -72,22 +72,22 @@ namespace TencentCloud
                     bool ReferenceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+                     * 获取ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
-                     * @return ReferenceId Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+                     * @return ReferenceId ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
                      * 
                      */
                     std::string GetReferenceId() const;
 
                     /**
-                     * 设置Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+                     * 设置ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
-                     * @param _referenceId Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+                     * @param _referenceId ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
                      * 
                      */
@@ -101,22 +101,22 @@ namespace TencentCloud
                     bool ReferenceIdHasBeenSet() const;
 
                     /**
-                     * 获取Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+                     * 获取Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
-                     * @return ReferenceName Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+                     * @return ReferenceName Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
                      * 
                      */
                     std::string GetReferenceName() const;
 
                     /**
-                     * 设置Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+                     * 设置Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
-                     * @param _referenceName Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+                     * @param _referenceName Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
                      * 
                      */
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool ReferenceNameHasBeenSet() const;
 
                     /**
-                     * 获取Site ID. Site identifier of the instance ownership that refers to the namespace.
-                     * @return ZoneId Site ID. Site identifier of the instance ownership that refers to the namespace.
+                     * 获取Zone ID. Site identifier of the instance that references the namespace.
+                     * @return ZoneId Zone ID. Site identifier of the instance that references the namespace.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID. Site identifier of the instance ownership that refers to the namespace.
-                     * @param _zoneId Site ID. Site identifier of the instance ownership that refers to the namespace.
+                     * 设置Zone ID. Site identifier of the instance that references the namespace.
+                     * @param _zoneId Zone ID. Site identifier of the instance that references the namespace.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Site name. Refer to the site name of the instance ownership in namespace.
-                     * @return ZoneName Site name. Refer to the site name of the instance ownership in namespace.
+                     * 获取Site name. The name of the site to which the instances in this namespace belong.
+                     * @return ZoneName Site name. The name of the site to which the instances in this namespace belong.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Site name. Refer to the site name of the instance ownership in namespace.
-                     * @param _zoneName Site name. Refer to the site name of the instance ownership in namespace.
+                     * 设置Site name. The name of the site to which the instances in this namespace belong.
+                     * @param _zoneName Site name. The name of the site to which the instances in this namespace belong.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
-                     * @return AliasZoneName Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+                     * 获取Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
+                     * @return AliasZoneName Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
                      * 
                      */
                     std::string GetAliasZoneName() const;
 
                     /**
-                     * 设置Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
-                     * @param _aliasZoneName Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+                     * 设置Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
+                     * @param _aliasZoneName Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
                      * 
                      */
                     void SetAliasZoneName(const std::string& _aliasZoneName);
@@ -195,42 +195,42 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
+                     * Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
                      */
                     std::string m_referenceType;
                     bool m_referenceTypeHasBeenSet;
 
                     /**
-                     * Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+                     * ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
                      */
                     std::string m_referenceId;
                     bool m_referenceIdHasBeenSet;
 
                     /**
-                     * Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+                     * Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
                      */
                     std::string m_referenceName;
                     bool m_referenceNameHasBeenSet;
 
                     /**
-                     * Site ID. Site identifier of the instance ownership that refers to the namespace.
+                     * Zone ID. Site identifier of the instance that references the namespace.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Site name. Refer to the site name of the instance ownership in namespace.
+                     * Site name. The name of the site to which the instances in this namespace belong.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+                     * Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;

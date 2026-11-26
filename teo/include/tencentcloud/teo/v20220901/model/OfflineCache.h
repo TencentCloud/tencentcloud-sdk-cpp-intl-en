@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Offline cache feature status switch.
+                * Whether offline cache is enabled
                 */
                 class OfflineCache : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * @return Switch Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * @param _switch Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -79,8 +79,8 @@ namespace TencentCloud
 
                     /**
                      * Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

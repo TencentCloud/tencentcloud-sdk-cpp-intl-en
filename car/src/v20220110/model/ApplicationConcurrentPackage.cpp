@@ -20,7 +20,8 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Car::V20220110::Model;
 using namespace std;
 
-ApplicationConcurrentPackage::ApplicationConcurrentPackage()
+ApplicationConcurrentPackage::ApplicationConcurrentPackage() :
+    m_concurrentIdHasBeenSet(false)
 {
 }
 
@@ -29,6 +30,16 @@ CoreInternalOutcome ApplicationConcurrentPackage::Deserialize(const rapidjson::V
     string requestId = "";
 
 
+    if (value.HasMember("ConcurrentId") && !value["ConcurrentId"].IsNull())
+    {
+        if (!value["ConcurrentId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ApplicationConcurrentPackage.ConcurrentId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_concurrentId = string(value["ConcurrentId"].GetString());
+        m_concurrentIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -36,6 +47,30 @@ CoreInternalOutcome ApplicationConcurrentPackage::Deserialize(const rapidjson::V
 void ApplicationConcurrentPackage::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
+    if (m_concurrentIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConcurrentId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_concurrentId.c_str(), allocator).Move(), allocator);
+    }
+
 }
 
+
+string ApplicationConcurrentPackage::GetConcurrentId() const
+{
+    return m_concurrentId;
+}
+
+void ApplicationConcurrentPackage::SetConcurrentId(const string& _concurrentId)
+{
+    m_concurrentId = _concurrentId;
+    m_concurrentIdHasBeenSet = true;
+}
+
+bool ApplicationConcurrentPackage::ConcurrentIdHasBeenSet() const
+{
+    return m_concurrentIdHasBeenSet;
+}
 

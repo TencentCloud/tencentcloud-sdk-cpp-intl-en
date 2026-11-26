@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time.
-                     * @return StartTime The start time.
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time.
-                     * @param _startTime The start time.
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time.
-                     * @return EndTime The end time.
+                     * 获取End time.
+                     * @return EndTime End time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time.
-                     * @param _endTime The end time.
+                     * 设置End time.
+                     * @param _endTime End time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
-                     * @return ZoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+                     * 获取Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+                     * @return ZoneIds Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
-                     * @param _zoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+                     * 设置Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+                     * @param _zoneIds Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of L4 proxy instance IDs.
-                     * @return ProxyIds List of L4 proxy instance IDs.
+                     * 获取Layer 4 instance ID collection.
+                     * @return ProxyIds Layer 4 instance ID collection.
                      * 
                      */
                     std::vector<std::string> GetProxyIds() const;
 
                     /**
-                     * 设置List of L4 proxy instance IDs.
-                     * @param _proxyIds List of L4 proxy instance IDs.
+                     * 设置Layer 4 instance ID collection.
+                     * @param _proxyIds Layer 4 instance ID collection.
                      * 
                      */
                     void SetProxyIds(const std::vector<std::string>& _proxyIds);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ProxyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Default value: 20. Maximum value: 300.
-                     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
+                     * 获取Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
+                     * @return Limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Default value: 20. Maximum value: 300.
-                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 300.
+                     * 设置Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
+                     * @param _limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The page offset. Default value: 0.
-                     * @return Offset The page offset. Default value: 0.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The page offset. Default value: 0.
-                     * @param _offset The page offset. Default value: 0.
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start time.
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time.
+                     * End time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+                     * Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * List of L4 proxy instance IDs.
+                     * Layer 4 instance ID collection.
                      */
                     std::vector<std::string> m_proxyIds;
                     bool m_proxyIdsHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Default value: 20. Maximum value: 300.
+                     * Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The page offset. Default value: 0.
+                     * Pagination offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

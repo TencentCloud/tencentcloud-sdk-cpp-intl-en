@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom Cache Key Cookie configuration parameters
+                * Configuration parameters for custom Cache Key Cookie.
                 */
                 class CacheKeyCookie : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,31 +76,31 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @return Action Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 获取Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
+                     * @return Action Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @param _action Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 设置Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
+                     * @param _action Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -117,15 +113,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
-                     * @return Values Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
+                     * 获取List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
+                     * @return Values List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
-                     * @param _values Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
+                     * 设置List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
+                     * @param _values List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -140,26 +136,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Cache action. values:.
-<Li>`Full`: retain all</li>.
-<Li> `ignore`: ignore all;</li>.
-<Li> `includecustom`: retain specified parameters;</li>.
-<Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
+                     * Cache action, with values:
+<li>full: retain all;</li>
+<li> ignore: ignore all;</li>
+<li> includeCustom: retain specified parameters;</li>
+<li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
+                     * List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

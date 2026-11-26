@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,23 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
-                     * @return RedirectStatusCode Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
+                     * 获取Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
+                     * @return RedirectStatusCode Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
                      * 
                      */
                     int64_t GetRedirectStatusCode() const;
 
                     /**
-                     * 设置Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
-                     * @param _redirectStatusCode Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
+                     * 设置Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
+                     * @param _redirectStatusCode Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
                      * 
                      */
                     void SetRedirectStatusCode(const int64_t& _redirectStatusCode);
@@ -111,18 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable forced redirect configuration switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-<Li>`301`: 301 redirect;</li>.
-<Li>`302`: 302 redirect.</li>.
+                     * Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
                      */
                     int64_t m_redirectStatusCode;
                     bool m_redirectStatusCodeHasBeenSet;

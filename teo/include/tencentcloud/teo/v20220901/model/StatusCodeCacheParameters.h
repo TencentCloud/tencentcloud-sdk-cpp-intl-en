@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Status Code Cache TTL configuration parameters.
+                * Status code cache TTL configuration parameter.
                 */
                 class StatusCodeCacheParameters : public AbstractModel
                 {

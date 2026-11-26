@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Stores the scheduled expiration time and corresponding IP.
+                * Store the scheduled expiration time and corresponding IP.
                 */
                 class IPExpireInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
-                     * @return ExpireTime Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+                     * 获取Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
+                     * @return ExpireTime Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
-                     * @param _expireTime Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+                     * 设置Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
+                     * @param _expireTime Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取IP list. supports ip and ip range.
-                     * @return IPList IP list. supports ip and ip range.
+                     * 获取IP list. Only IPs and IP ranges are supported.
+                     * @return IPList IP list. Only IPs and IP ranges are supported.
                      * 
                      */
                     std::vector<std::string> GetIPList() const;
 
                     /**
-                     * 设置IP list. supports ip and ip range.
-                     * @param _iPList IP list. supports ip and ip range.
+                     * 设置IP list. Only IPs and IP ranges are supported.
+                     * @param _iPList IP list. Only IPs and IP ranges are supported.
                      * 
                      */
                     void SetIPList(const std::vector<std::string>& _iPList);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+                     * Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * IP list. supports ip and ip range.
+                     * IP list. Only IPs and IP ranges are supported.
                      */
                     std::vector<std::string> m_iPList;
                     bool m_iPListHasBeenSet;

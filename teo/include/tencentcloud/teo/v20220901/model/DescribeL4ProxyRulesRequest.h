@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance ID.
-                     * @return ProxyId Layer 4 proxy instance ID.
+                     * 获取Layer 4 Proxy Instance ID.
+                     * @return ProxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer 4 proxy instance ID.
-                     * @param _proxyId Layer 4 proxy instance ID.
+                     * 设置Layer 4 Proxy Instance ID.
+                     * @param _proxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Paginated query offset. Defaults to 0 when not specified.
-                     * @return Offset Paginated query offset. Defaults to 0 when not specified.
+                     * 获取Offset of paginated query. If left empty, the default value is 0.	
+                     * @return Offset Offset of paginated query. If left empty, the default value is 0.	
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Paginated query offset. Defaults to 0 when not specified.
-                     * @param _offset Paginated query offset. Defaults to 0 when not specified.
+                     * 设置Offset of paginated query. If left empty, the default value is 0.	
+                     * @param _offset Offset of paginated query. If left empty, the default value is 0.	
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Paginated query limit. Default value: 20. Maximum value: 1000.
-                     * @return Limit Paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 获取The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+                     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Paginated query limit. Default value: 20. Maximum value: 1000.
-                     * @param _limit Paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 设置The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+                     * @param _limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -157,19 +157,19 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance ID.
+                     * Layer 4 Proxy Instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Paginated query offset. Defaults to 0 when not specified.
+                     * Offset of paginated query. If left empty, the default value is 0.	
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Paginated query limit. Default value: 20. Maximum value: 1000.
+                     * The limit of paginated query. Default value: 20. Maximum value: 1,000.	
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

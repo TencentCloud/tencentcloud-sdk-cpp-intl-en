@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart acceleration configuration
+                * Intelligent acceleration configuration.
                 */
                 class SmartRouting : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable smart acceleration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable smart acceleration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable smart acceleration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable smart acceleration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable smart acceleration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Smart acceleration configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin-pull request parameters configuration.
+                * Origin-pull request configuration parameters.
                 */
                 class UpstreamRequestParameters : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query string configuration. Optional configuration, leave blank for no configuration.
-                     * @return QueryString Query string configuration. Optional configuration, leave blank for no configuration.
+                     * 获取String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
+                     * @return QueryString String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
                      * 
                      */
                     UpstreamRequestQueryString GetQueryString() const;
 
                     /**
-                     * 设置Query string configuration. Optional configuration, leave blank for no configuration.
-                     * @param _queryString Query string configuration. Optional configuration, leave blank for no configuration.
+                     * 设置String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
+                     * @param _queryString String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
                      * 
                      */
                     void SetQueryString(const UpstreamRequestQueryString& _queryString);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool QueryStringHasBeenSet() const;
 
                     /**
-                     * 获取Cookie configuration. Optional configuration. Leave it blank for no configuration.
-                     * @return Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
+                     * 获取Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
+                     * @return Cookie Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
                      * 
                      */
                     UpstreamRequestCookie GetCookie() const;
 
                     /**
-                     * 设置Cookie configuration. Optional configuration. Leave it blank for no configuration.
-                     * @param _cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
+                     * 设置Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
+                     * @param _cookie Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
                      * 
                      */
                     void SetCookie(const UpstreamRequestCookie& _cookie);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query string configuration. Optional configuration, leave blank for no configuration.
+                     * String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
                      */
                     UpstreamRequestQueryString m_queryString;
                     bool m_queryStringHasBeenSet;
 
                     /**
-                     * Cookie configuration. Optional configuration. Leave it blank for no configuration.
+                     * Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
                      */
                     UpstreamRequestCookie m_cookie;
                     bool m_cookieHasBeenSet;

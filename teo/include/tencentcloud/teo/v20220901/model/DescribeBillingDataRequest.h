@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time. Data will be returned according to the timezone of the input timestamp.
-                     * @return StartTime The start time. Data will be returned according to the timezone of the input timestamp.
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time. Data will be returned according to the timezone of the input timestamp.
-                     * @param _startTime The start time. Data will be returned according to the timezone of the input timestamp.
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. The timezone of the end timestamp must be consistent with the start timestamp, and data will be returned according to the timezone of the input timestamps.
-                     * @return EndTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. The timezone of the end timestamp must be consistent with the start timestamp, and data will be returned according to the timezone of the input timestamps.
+                     * 获取End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * @return EndTime End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. The timezone of the end timestamp must be consistent with the start timestamp, and data will be returned according to the timezone of the input timestamps.
-                     * @param _endTime The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. The timezone of the end timestamp must be consistent with the start timestamp, and data will be returned according to the timezone of the input timestamps.
+                     * 设置End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * @param _endTime End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Site ID set. This parameter is required. A maximum of 100 site ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
-                     * @return ZoneIds Site ID set. This parameter is required. A maximum of 100 site ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
+                     * 获取Site ID set. This parameter is required. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
+                     * @return ZoneIds Site ID set. This parameter is required. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置Site ID set. This parameter is required. A maximum of 100 site ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
-                     * @param _zoneIds Site ID set. This parameter is required. A maximum of 100 site ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
+                     * 设置Site ID set. This parameter is required. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
+                     * @param _zoneIds Site ID set. This parameter is required. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -107,23 +107,23 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取Metric list. Values as follows:.
-<b>L4/L7 acceleration traffic:</b><li>acc_flux: specifies content acceleration traffic in bytes.</li><li>smt_flux: specifies smart acceleration traffic in bytes.</li><li>l4_flux: specifies layer 4 acceleration traffic in bytes.</li><li>sec_flux: specifies independent protection traffic in bytes.</li><li>zxctg_flux: specifies network optimization traffic in the chinese mainland in bytes.</li><br><b>L4/L7 acceleration bandwidth:</b><li>acc_bandwidth: specifies content acceleration bandwidth in bps.</li><li>smt_bandwidth: specifies intelligent acceleration bandwidth in bps.</li><li>l4_bandwidth: specifies layer 4 acceleration bandwidth in bps.</li><li>sec_bandwidth: specifies exclusive protection bandwidth in bps.</li><li>zxctg_bandwidth: specifies network optimization bandwidth in the chinese mainland in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: specifies HTTP/HTTPS requests by count.</li><br><b>Value-added service usage:</b><li>smt_request_clean: specifies intelligent acceleration requests by count.</li><li>quic_request: specifies quic requests by count.</li><li>bot_request_clean: specifies bot requests by count.</li><li>cls_count: specifies the number of real-time log pushes by count.</li><li>ddos_bandwidth: specifies elastic ddos protection bandwidth in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: specifies the number of edge function requests by count.</li><li>edgefunction_cpu_time: specifies edge function cpu processing time in milliseconds.</li>
-<b>Media processing usage:</b> <li>total_transcode: all specification audio, video jit transcoding, repackaging duration, in seconds;</li> <li>remux: repackaging duration, in seconds;</li> <li>transcode_audio: audio transcoding duration, in seconds;</li> <li>transcode_H264_SD: H.264 encoded standard-definition video (short side less than or equal to 480 px) duration, in seconds;</li> <li>transcode_H264_HD: H.264 encoded high-definition video (short side less than or equal to 720 px) duration, in seconds;</li> <li>transcode_H264_FHD: H.264 encoded full HD video (short side less than or equal to 1080 px) duration, in seconds;</li> <li>transcode_H264_2K: H.264 encoded 2K video (short side less than or equal to 1440 px) duration, in seconds.</li>
-                     * @return MetricName Metric list. Values as follows:.
-<b>L4/L7 acceleration traffic:</b><li>acc_flux: specifies content acceleration traffic in bytes.</li><li>smt_flux: specifies smart acceleration traffic in bytes.</li><li>l4_flux: specifies layer 4 acceleration traffic in bytes.</li><li>sec_flux: specifies independent protection traffic in bytes.</li><li>zxctg_flux: specifies network optimization traffic in the chinese mainland in bytes.</li><br><b>L4/L7 acceleration bandwidth:</b><li>acc_bandwidth: specifies content acceleration bandwidth in bps.</li><li>smt_bandwidth: specifies intelligent acceleration bandwidth in bps.</li><li>l4_bandwidth: specifies layer 4 acceleration bandwidth in bps.</li><li>sec_bandwidth: specifies exclusive protection bandwidth in bps.</li><li>zxctg_bandwidth: specifies network optimization bandwidth in the chinese mainland in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: specifies HTTP/HTTPS requests by count.</li><br><b>Value-added service usage:</b><li>smt_request_clean: specifies intelligent acceleration requests by count.</li><li>quic_request: specifies quic requests by count.</li><li>bot_request_clean: specifies bot requests by count.</li><li>cls_count: specifies the number of real-time log pushes by count.</li><li>ddos_bandwidth: specifies elastic ddos protection bandwidth in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: specifies the number of edge function requests by count.</li><li>edgefunction_cpu_time: specifies edge function cpu processing time in milliseconds.</li>
-<b>Media processing usage:</b> <li>total_transcode: all specification audio, video jit transcoding, repackaging duration, in seconds;</li> <li>remux: repackaging duration, in seconds;</li> <li>transcode_audio: audio transcoding duration, in seconds;</li> <li>transcode_H264_SD: H.264 encoded standard-definition video (short side less than or equal to 480 px) duration, in seconds;</li> <li>transcode_H264_HD: H.264 encoded high-definition video (short side less than or equal to 720 px) duration, in seconds;</li> <li>transcode_H264_FHD: H.264 encoded full HD video (short side less than or equal to 1080 px) duration, in seconds;</li> <li>transcode_H264_2K: H.264 encoded 2K video (short side less than or equal to 1440 px) duration, in seconds.</li>
+                     * 获取Metric list. Valid values:
+<b>l4/l7 acceleration traffic:</b><li>acc_flux: content acceleration traffic, in bytes;</li><li>smt_flux: smart acceleration traffic, in bytes;</li><li>l4_flux: Layer 4 acceleration traffic, in bytes;</li><li>sec_flux: independent protection traffic, in bytes;</li><li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes.</li><br><b>l4/l7 acceleration bandwidth:</b><li>acc_bandwidth: content acceleration bandwidth, in bps;</li><li>smt_bandwidth: intelligent acceleration bandwidth, in bps;</li><li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li><li>sec_bandwidth: exclusive protection bandwidth, in bps;</li><li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: HTTP/HTTPS requests, count.</li><b><br>VAS usage:</b><li>smt_request_clean: smart acceleration requests, count;</li><li>quic_request: quic requests, count;</li><li>bot_request_clean: bot requests, count;</li><li>cls_count: number of real-time log pushes, count;</li><li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: number of edge function requests, count;</li><li>edgefunction_cpu_time: edge function cpu processing time, in milliseconds.</li>
+<b>Media processing usage:</b><li>total_transcode: duration of audio, video JIT transcoding, and remuxing for all specifications, in seconds;</li><li>remux: remuxing duration, in seconds;</li><li>transcode_audio: audio transcoding duration, in seconds;</li><li>transcode_H264_SD: duration of standard definition video (short side <= 480 px) in H.264, in seconds;</li><li>transcode_H264_HD: duration of high-definition video (short side <= 720 px) in H.264, in seconds;</li><li>transcode_H264_FHD: duration of Full HD video (short side <= 1080 px) in H.264, in seconds;</li><li>transcode_H264_2K: duration of 2K video (short side <= 1440 px) in H.264, in seconds.</li>
+                     * @return MetricName Metric list. Valid values:
+<b>l4/l7 acceleration traffic:</b><li>acc_flux: content acceleration traffic, in bytes;</li><li>smt_flux: smart acceleration traffic, in bytes;</li><li>l4_flux: Layer 4 acceleration traffic, in bytes;</li><li>sec_flux: independent protection traffic, in bytes;</li><li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes.</li><br><b>l4/l7 acceleration bandwidth:</b><li>acc_bandwidth: content acceleration bandwidth, in bps;</li><li>smt_bandwidth: intelligent acceleration bandwidth, in bps;</li><li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li><li>sec_bandwidth: exclusive protection bandwidth, in bps;</li><li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: HTTP/HTTPS requests, count.</li><b><br>VAS usage:</b><li>smt_request_clean: smart acceleration requests, count;</li><li>quic_request: quic requests, count;</li><li>bot_request_clean: bot requests, count;</li><li>cls_count: number of real-time log pushes, count;</li><li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: number of edge function requests, count;</li><li>edgefunction_cpu_time: edge function cpu processing time, in milliseconds.</li>
+<b>Media processing usage:</b><li>total_transcode: duration of audio, video JIT transcoding, and remuxing for all specifications, in seconds;</li><li>remux: remuxing duration, in seconds;</li><li>transcode_audio: audio transcoding duration, in seconds;</li><li>transcode_H264_SD: duration of standard definition video (short side <= 480 px) in H.264, in seconds;</li><li>transcode_H264_HD: duration of high-definition video (short side <= 720 px) in H.264, in seconds;</li><li>transcode_H264_FHD: duration of Full HD video (short side <= 1080 px) in H.264, in seconds;</li><li>transcode_H264_2K: duration of 2K video (short side <= 1440 px) in H.264, in seconds.</li>
                      * 
                      */
                     std::string GetMetricName() const;
 
                     /**
-                     * 设置Metric list. Values as follows:.
-<b>L4/L7 acceleration traffic:</b><li>acc_flux: specifies content acceleration traffic in bytes.</li><li>smt_flux: specifies smart acceleration traffic in bytes.</li><li>l4_flux: specifies layer 4 acceleration traffic in bytes.</li><li>sec_flux: specifies independent protection traffic in bytes.</li><li>zxctg_flux: specifies network optimization traffic in the chinese mainland in bytes.</li><br><b>L4/L7 acceleration bandwidth:</b><li>acc_bandwidth: specifies content acceleration bandwidth in bps.</li><li>smt_bandwidth: specifies intelligent acceleration bandwidth in bps.</li><li>l4_bandwidth: specifies layer 4 acceleration bandwidth in bps.</li><li>sec_bandwidth: specifies exclusive protection bandwidth in bps.</li><li>zxctg_bandwidth: specifies network optimization bandwidth in the chinese mainland in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: specifies HTTP/HTTPS requests by count.</li><br><b>Value-added service usage:</b><li>smt_request_clean: specifies intelligent acceleration requests by count.</li><li>quic_request: specifies quic requests by count.</li><li>bot_request_clean: specifies bot requests by count.</li><li>cls_count: specifies the number of real-time log pushes by count.</li><li>ddos_bandwidth: specifies elastic ddos protection bandwidth in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: specifies the number of edge function requests by count.</li><li>edgefunction_cpu_time: specifies edge function cpu processing time in milliseconds.</li>
-<b>Media processing usage:</b> <li>total_transcode: all specification audio, video jit transcoding, repackaging duration, in seconds;</li> <li>remux: repackaging duration, in seconds;</li> <li>transcode_audio: audio transcoding duration, in seconds;</li> <li>transcode_H264_SD: H.264 encoded standard-definition video (short side less than or equal to 480 px) duration, in seconds;</li> <li>transcode_H264_HD: H.264 encoded high-definition video (short side less than or equal to 720 px) duration, in seconds;</li> <li>transcode_H264_FHD: H.264 encoded full HD video (short side less than or equal to 1080 px) duration, in seconds;</li> <li>transcode_H264_2K: H.264 encoded 2K video (short side less than or equal to 1440 px) duration, in seconds.</li>
-                     * @param _metricName Metric list. Values as follows:.
-<b>L4/L7 acceleration traffic:</b><li>acc_flux: specifies content acceleration traffic in bytes.</li><li>smt_flux: specifies smart acceleration traffic in bytes.</li><li>l4_flux: specifies layer 4 acceleration traffic in bytes.</li><li>sec_flux: specifies independent protection traffic in bytes.</li><li>zxctg_flux: specifies network optimization traffic in the chinese mainland in bytes.</li><br><b>L4/L7 acceleration bandwidth:</b><li>acc_bandwidth: specifies content acceleration bandwidth in bps.</li><li>smt_bandwidth: specifies intelligent acceleration bandwidth in bps.</li><li>l4_bandwidth: specifies layer 4 acceleration bandwidth in bps.</li><li>sec_bandwidth: specifies exclusive protection bandwidth in bps.</li><li>zxctg_bandwidth: specifies network optimization bandwidth in the chinese mainland in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: specifies HTTP/HTTPS requests by count.</li><br><b>Value-added service usage:</b><li>smt_request_clean: specifies intelligent acceleration requests by count.</li><li>quic_request: specifies quic requests by count.</li><li>bot_request_clean: specifies bot requests by count.</li><li>cls_count: specifies the number of real-time log pushes by count.</li><li>ddos_bandwidth: specifies elastic ddos protection bandwidth in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: specifies the number of edge function requests by count.</li><li>edgefunction_cpu_time: specifies edge function cpu processing time in milliseconds.</li>
-<b>Media processing usage:</b> <li>total_transcode: all specification audio, video jit transcoding, repackaging duration, in seconds;</li> <li>remux: repackaging duration, in seconds;</li> <li>transcode_audio: audio transcoding duration, in seconds;</li> <li>transcode_H264_SD: H.264 encoded standard-definition video (short side less than or equal to 480 px) duration, in seconds;</li> <li>transcode_H264_HD: H.264 encoded high-definition video (short side less than or equal to 720 px) duration, in seconds;</li> <li>transcode_H264_FHD: H.264 encoded full HD video (short side less than or equal to 1080 px) duration, in seconds;</li> <li>transcode_H264_2K: H.264 encoded 2K video (short side less than or equal to 1440 px) duration, in seconds.</li>
+                     * 设置Metric list. Valid values:
+<b>l4/l7 acceleration traffic:</b><li>acc_flux: content acceleration traffic, in bytes;</li><li>smt_flux: smart acceleration traffic, in bytes;</li><li>l4_flux: Layer 4 acceleration traffic, in bytes;</li><li>sec_flux: independent protection traffic, in bytes;</li><li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes.</li><br><b>l4/l7 acceleration bandwidth:</b><li>acc_bandwidth: content acceleration bandwidth, in bps;</li><li>smt_bandwidth: intelligent acceleration bandwidth, in bps;</li><li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li><li>sec_bandwidth: exclusive protection bandwidth, in bps;</li><li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: HTTP/HTTPS requests, count.</li><b><br>VAS usage:</b><li>smt_request_clean: smart acceleration requests, count;</li><li>quic_request: quic requests, count;</li><li>bot_request_clean: bot requests, count;</li><li>cls_count: number of real-time log pushes, count;</li><li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: number of edge function requests, count;</li><li>edgefunction_cpu_time: edge function cpu processing time, in milliseconds.</li>
+<b>Media processing usage:</b><li>total_transcode: duration of audio, video JIT transcoding, and remuxing for all specifications, in seconds;</li><li>remux: remuxing duration, in seconds;</li><li>transcode_audio: audio transcoding duration, in seconds;</li><li>transcode_H264_SD: duration of standard definition video (short side <= 480 px) in H.264, in seconds;</li><li>transcode_H264_HD: duration of high-definition video (short side <= 720 px) in H.264, in seconds;</li><li>transcode_H264_FHD: duration of Full HD video (short side <= 1080 px) in H.264, in seconds;</li><li>transcode_H264_2K: duration of 2K video (short side <= 1440 px) in H.264, in seconds.</li>
+                     * @param _metricName Metric list. Valid values:
+<b>l4/l7 acceleration traffic:</b><li>acc_flux: content acceleration traffic, in bytes;</li><li>smt_flux: smart acceleration traffic, in bytes;</li><li>l4_flux: Layer 4 acceleration traffic, in bytes;</li><li>sec_flux: independent protection traffic, in bytes;</li><li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes.</li><br><b>l4/l7 acceleration bandwidth:</b><li>acc_bandwidth: content acceleration bandwidth, in bps;</li><li>smt_bandwidth: intelligent acceleration bandwidth, in bps;</li><li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li><li>sec_bandwidth: exclusive protection bandwidth, in bps;</li><li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: HTTP/HTTPS requests, count.</li><b><br>VAS usage:</b><li>smt_request_clean: smart acceleration requests, count;</li><li>quic_request: quic requests, count;</li><li>bot_request_clean: bot requests, count;</li><li>cls_count: number of real-time log pushes, count;</li><li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: number of edge function requests, count;</li><li>edgefunction_cpu_time: edge function cpu processing time, in milliseconds.</li>
+<b>Media processing usage:</b><li>total_transcode: duration of audio, video JIT transcoding, and remuxing for all specifications, in seconds;</li><li>remux: remuxing duration, in seconds;</li><li>transcode_audio: audio transcoding duration, in seconds;</li><li>transcode_H264_SD: duration of standard definition video (short side <= 480 px) in H.264, in seconds;</li><li>transcode_H264_HD: duration of high-definition video (short side <= 720 px) in H.264, in seconds;</li><li>transcode_H264_FHD: duration of Full HD video (short side <= 1080 px) in H.264, in seconds;</li><li>transcode_H264_2K: duration of 2K video (short side <= 1440 px) in H.264, in seconds.</li>
                      * 
                      */
                     void SetMetricName(const std::string& _metricName);
@@ -138,11 +138,11 @@ namespace TencentCloud
                     /**
                      * 获取Time granularity of the query. Valid values:
 <li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
+<li>hour: 1-hour granularity;</li>
 <li>day: 1 day.</li>
                      * @return Interval Time granularity of the query. Valid values:
 <li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
+<li>hour: 1-hour granularity;</li>
 <li>day: 1 day.</li>
                      * 
                      */
@@ -151,11 +151,11 @@ namespace TencentCloud
                     /**
                      * 设置Time granularity of the query. Valid values:
 <li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
+<li>hour: 1-hour granularity;</li>
 <li>day: 1 day.</li>
                      * @param _interval Time granularity of the query. Valid values:
 <li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
+<li>hour: 1-hour granularity;</li>
 <li>day: 1 day.</li>
                      * 
                      */
@@ -170,34 +170,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Specifies the domain name to filter by. Example value: test.example.com<br></li>
-<li>proxy-id: Specifies the L4 proxy instance ID for filtering. Example value: sid-2rugn89bkla9.</li>
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: filter by L4 proxy instance ID. Example value: sid-2rugn89bkla9.<br></li>
 <li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
-
-Note: `BillingDataFilter` with the same `Type` have an "or" relationship with each other, while those with different `Type` have an "and" relationship between them.
+Description: `BillingDataFilter` with the same `Type` has an "OR" relationship with each other, while those with different `Type` have an "AND" relationship with each other.
                      * @return Filters Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Specifies the domain name to filter by. Example value: test.example.com<br></li>
-<li>proxy-id: Specifies the L4 proxy instance ID for filtering. Example value: sid-2rugn89bkla9.</li>
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: filter by L4 proxy instance ID. Example value: sid-2rugn89bkla9.<br></li>
 <li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
-
-Note: `BillingDataFilter` with the same `Type` have an "or" relationship with each other, while those with different `Type` have an "and" relationship between them.
+Description: `BillingDataFilter` with the same `Type` has an "OR" relationship with each other, while those with different `Type` have an "AND" relationship with each other.
                      * 
                      */
                     std::vector<BillingDataFilter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Specifies the domain name to filter by. Example value: test.example.com<br></li>
-<li>proxy-id: Specifies the L4 proxy instance ID for filtering. Example value: sid-2rugn89bkla9.</li>
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: filter by L4 proxy instance ID. Example value: sid-2rugn89bkla9.<br></li>
 <li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
-
-Note: `BillingDataFilter` with the same `Type` have an "or" relationship with each other, while those with different `Type` have an "and" relationship between them.
+Description: `BillingDataFilter` with the same `Type` has an "OR" relationship with each other, while those with different `Type` have an "AND" relationship with each other.
                      * @param _filters Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Specifies the domain name to filter by. Example value: test.example.com<br></li>
-<li>proxy-id: Specifies the L4 proxy instance ID for filtering. Example value: sid-2rugn89bkla9.</li>
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: filter by L4 proxy instance ID. Example value: sid-2rugn89bkla9.<br></li>
 <li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
-
-Note: `BillingDataFilter` with the same `Type` have an "or" relationship with each other, while those with different `Type` have an "and" relationship between them.
+Description: `BillingDataFilter` with the same `Type` has an "OR" relationship with each other, while those with different `Type` have an "AND" relationship with each other.
                      * 
                      */
                     void SetFilters(const std::vector<BillingDataFilter>& _filters);
@@ -210,19 +206,15 @@ Note: `BillingDataFilter` with the same `Type` have an "or" relationship with ea
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Aggregation dimensions for grouping. You are allowed to group by up to two dimensions at the same time. Valid values are as follows:<li>zone-id: Group by zone ID. If the content identifier feature is used, it will take precedence and group by content identifier first;<br></li> <li>host: Group by domain name;<br></li> <li>proxy-id: Group by L4 proxy instance ID;<br></li> <li>region-id: Group by billing region.</li>
-Note: The output parameter's default maximum value for the number of groups is 200. If you encounter an error related to this limit, you should reduce the number of groups in the final output by narrowing down the query scope using `ZoneIds.N` or `Filters.N` parameters, or by decreasing the number of dimensions specified in the `GroupBy.N` parameter.
-                     * @return GroupBy Aggregation dimensions for grouping. You are allowed to group by up to two dimensions at the same time. Valid values are as follows:<li>zone-id: Group by zone ID. If the content identifier feature is used, it will take precedence and group by content identifier first;<br></li> <li>host: Group by domain name;<br></li> <li>proxy-id: Group by L4 proxy instance ID;<br></li> <li>region-id: Group by billing region.</li>
-Note: The output parameter's default maximum value for the number of groups is 200. If you encounter an error related to this limit, you should reduce the number of groups in the final output by narrowing down the query scope using `ZoneIds.N` or `Filters.N` parameters, or by decreasing the number of dimensions specified in the `GroupBy.N` parameter.
+                     * 获取Aggregate dimension for grouping. Allows up to two dimensions for grouping at the same time. Values are as follows: <li>zone-id: Group by site ID. If the content identifier feature is used, priority is given to grouping by content identifier.<br></li><li>host: Group by domain name.<br></li><li>proxy-id: Group by Layer 4 Proxy Instance ID.<br></li><li>region-id: Group by billing region.</li>
+                     * @return GroupBy Aggregate dimension for grouping. Allows up to two dimensions for grouping at the same time. Values are as follows: <li>zone-id: Group by site ID. If the content identifier feature is used, priority is given to grouping by content identifier.<br></li><li>host: Group by domain name.<br></li><li>proxy-id: Group by Layer 4 Proxy Instance ID.<br></li><li>region-id: Group by billing region.</li>
                      * 
                      */
                     std::vector<std::string> GetGroupBy() const;
 
                     /**
-                     * 设置Aggregation dimensions for grouping. You are allowed to group by up to two dimensions at the same time. Valid values are as follows:<li>zone-id: Group by zone ID. If the content identifier feature is used, it will take precedence and group by content identifier first;<br></li> <li>host: Group by domain name;<br></li> <li>proxy-id: Group by L4 proxy instance ID;<br></li> <li>region-id: Group by billing region.</li>
-Note: The output parameter's default maximum value for the number of groups is 200. If you encounter an error related to this limit, you should reduce the number of groups in the final output by narrowing down the query scope using `ZoneIds.N` or `Filters.N` parameters, or by decreasing the number of dimensions specified in the `GroupBy.N` parameter.
-                     * @param _groupBy Aggregation dimensions for grouping. You are allowed to group by up to two dimensions at the same time. Valid values are as follows:<li>zone-id: Group by zone ID. If the content identifier feature is used, it will take precedence and group by content identifier first;<br></li> <li>host: Group by domain name;<br></li> <li>proxy-id: Group by L4 proxy instance ID;<br></li> <li>region-id: Group by billing region.</li>
-Note: The output parameter's default maximum value for the number of groups is 200. If you encounter an error related to this limit, you should reduce the number of groups in the final output by narrowing down the query scope using `ZoneIds.N` or `Filters.N` parameters, or by decreasing the number of dimensions specified in the `GroupBy.N` parameter.
+                     * 设置Aggregate dimension for grouping. Allows up to two dimensions for grouping at the same time. Values are as follows: <li>zone-id: Group by site ID. If the content identifier feature is used, priority is given to grouping by content identifier.<br></li><li>host: Group by domain name.<br></li><li>proxy-id: Group by Layer 4 Proxy Instance ID.<br></li><li>region-id: Group by billing region.</li>
+                     * @param _groupBy Aggregate dimension for grouping. Allows up to two dimensions for grouping at the same time. Values are as follows: <li>zone-id: Group by site ID. If the content identifier feature is used, priority is given to grouping by content identifier.<br></li><li>host: Group by domain name.<br></li><li>proxy-id: Group by Layer 4 Proxy Instance ID.<br></li><li>region-id: Group by billing region.</li>
                      * 
                      */
                     void SetGroupBy(const std::vector<std::string>& _groupBy);
@@ -237,27 +229,27 @@ Note: The output parameter's default maximum value for the number of groups is 2
                 private:
 
                     /**
-                     * The start time. Data will be returned according to the timezone of the input timestamp.
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. The timezone of the end timestamp must be consistent with the start timestamp, and data will be returned according to the timezone of the input timestamps.
+                     * End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Site ID set. This parameter is required. A maximum of 100 site ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
+                     * Site ID set. This parameter is required. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * Metric list. Values as follows:.
-<b>L4/L7 acceleration traffic:</b><li>acc_flux: specifies content acceleration traffic in bytes.</li><li>smt_flux: specifies smart acceleration traffic in bytes.</li><li>l4_flux: specifies layer 4 acceleration traffic in bytes.</li><li>sec_flux: specifies independent protection traffic in bytes.</li><li>zxctg_flux: specifies network optimization traffic in the chinese mainland in bytes.</li><br><b>L4/L7 acceleration bandwidth:</b><li>acc_bandwidth: specifies content acceleration bandwidth in bps.</li><li>smt_bandwidth: specifies intelligent acceleration bandwidth in bps.</li><li>l4_bandwidth: specifies layer 4 acceleration bandwidth in bps.</li><li>sec_bandwidth: specifies exclusive protection bandwidth in bps.</li><li>zxctg_bandwidth: specifies network optimization bandwidth in the chinese mainland in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: specifies HTTP/HTTPS requests by count.</li><br><b>Value-added service usage:</b><li>smt_request_clean: specifies intelligent acceleration requests by count.</li><li>quic_request: specifies quic requests by count.</li><li>bot_request_clean: specifies bot requests by count.</li><li>cls_count: specifies the number of real-time log pushes by count.</li><li>ddos_bandwidth: specifies elastic ddos protection bandwidth in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: specifies the number of edge function requests by count.</li><li>edgefunction_cpu_time: specifies edge function cpu processing time in milliseconds.</li>
-<b>Media processing usage:</b> <li>total_transcode: all specification audio, video jit transcoding, repackaging duration, in seconds;</li> <li>remux: repackaging duration, in seconds;</li> <li>transcode_audio: audio transcoding duration, in seconds;</li> <li>transcode_H264_SD: H.264 encoded standard-definition video (short side less than or equal to 480 px) duration, in seconds;</li> <li>transcode_H264_HD: H.264 encoded high-definition video (short side less than or equal to 720 px) duration, in seconds;</li> <li>transcode_H264_FHD: H.264 encoded full HD video (short side less than or equal to 1080 px) duration, in seconds;</li> <li>transcode_H264_2K: H.264 encoded 2K video (short side less than or equal to 1440 px) duration, in seconds.</li>
+                     * Metric list. Valid values:
+<b>l4/l7 acceleration traffic:</b><li>acc_flux: content acceleration traffic, in bytes;</li><li>smt_flux: smart acceleration traffic, in bytes;</li><li>l4_flux: Layer 4 acceleration traffic, in bytes;</li><li>sec_flux: independent protection traffic, in bytes;</li><li>zxctg_flux: network optimization traffic in the Chinese mainland, in bytes.</li><br><b>l4/l7 acceleration bandwidth:</b><li>acc_bandwidth: content acceleration bandwidth, in bps;</li><li>smt_bandwidth: intelligent acceleration bandwidth, in bps;</li><li>l4_bandwidth: Layer 4 acceleration bandwidth, in bps;</li><li>sec_bandwidth: exclusive protection bandwidth, in bps;</li><li>zxctg_bandwidth: network optimization bandwidth in the Chinese mainland, in bps.</li><br><b>HTTP/HTTPS security requests:</b><li>sec_request_clean: HTTP/HTTPS requests, count.</li><b><br>VAS usage:</b><li>smt_request_clean: smart acceleration requests, count;</li><li>quic_request: quic requests, count;</li><li>bot_request_clean: bot requests, count;</li><li>cls_count: number of real-time log pushes, count;</li><li>ddos_bandwidth: elastic ddos protection bandwidth, in bps.</li><br><b>Edge computing usage:</b><li>edgefunction_request: number of edge function requests, count;</li><li>edgefunction_cpu_time: edge function cpu processing time, in milliseconds.</li>
+<b>Media processing usage:</b><li>total_transcode: duration of audio, video JIT transcoding, and remuxing for all specifications, in seconds;</li><li>remux: remuxing duration, in seconds;</li><li>transcode_audio: audio transcoding duration, in seconds;</li><li>transcode_H264_SD: duration of standard definition video (short side <= 480 px) in H.264, in seconds;</li><li>transcode_H264_HD: duration of high-definition video (short side <= 720 px) in H.264, in seconds;</li><li>transcode_H264_FHD: duration of Full HD video (short side <= 1080 px) in H.264, in seconds;</li><li>transcode_H264_2K: duration of 2K video (short side <= 1440 px) in H.264, in seconds.</li>
                      */
                     std::string m_metricName;
                     bool m_metricNameHasBeenSet;
@@ -265,7 +257,7 @@ Note: The output parameter's default maximum value for the number of groups is 2
                     /**
                      * Time granularity of the query. Valid values:
 <li>5min: 5 minutes;</li>
-<li>hour: 1 hour;</li>
+<li>hour: 1-hour granularity;</li>
 <li>day: 1 day.</li>
                      */
                     std::string m_interval;
@@ -273,18 +265,16 @@ Note: The output parameter's default maximum value for the number of groups is 2
 
                     /**
                      * Filter criteria. The detailed values of filter criteria are as follows:
-<li>host: Specifies the domain name to filter by. Example value: test.example.com<br></li>
-<li>proxy-id: Specifies the L4 proxy instance ID for filtering. Example value: sid-2rugn89bkla9.</li>
+<li>host: Filter by domain name, such as test.example.com.<br></li>
+<li>proxy-id: filter by L4 proxy instance ID. Example value: sid-2rugn89bkla9.<br></li>
 <li>region-id: Filter by billing region. Options:<br>  CH: Chinese mainland<br>  AF: Africa<br>  AS1: Asia-Pacific Region 1<br>  AS2: Asia-Pacific Region 2<br>  AS3: Asia-Pacific Region 3<br>  EU: Europe<br>  MidEast: Middle East<br>  NA: North America<br>  SA: South America</li>
-
-Note: `BillingDataFilter` with the same `Type` have an "or" relationship with each other, while those with different `Type` have an "and" relationship between them.
+Description: `BillingDataFilter` with the same `Type` has an "OR" relationship with each other, while those with different `Type` have an "AND" relationship with each other.
                      */
                     std::vector<BillingDataFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Aggregation dimensions for grouping. You are allowed to group by up to two dimensions at the same time. Valid values are as follows:<li>zone-id: Group by zone ID. If the content identifier feature is used, it will take precedence and group by content identifier first;<br></li> <li>host: Group by domain name;<br></li> <li>proxy-id: Group by L4 proxy instance ID;<br></li> <li>region-id: Group by billing region.</li>
-Note: The output parameter's default maximum value for the number of groups is 200. If you encounter an error related to this limit, you should reduce the number of groups in the final output by narrowing down the query scope using `ZoneIds.N` or `Filters.N` parameters, or by decreasing the number of dimensions specified in the `GroupBy.N` parameter.
+                     * Aggregate dimension for grouping. Allows up to two dimensions for grouping at the same time. Values are as follows: <li>zone-id: Group by site ID. If the content identifier feature is used, priority is given to grouping by content identifier.<br></li><li>host: Group by domain name.<br></li><li>proxy-id: Group by Layer 4 Proxy Instance ID.<br></li><li>region-id: Group by billing region.</li>
                      */
                     std::vector<std::string> m_groupBy;
                     bool m_groupByHasBeenSet;

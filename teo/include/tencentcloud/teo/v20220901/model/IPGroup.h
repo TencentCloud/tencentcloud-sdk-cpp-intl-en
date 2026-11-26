@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>IP group Id. Enter 0 when created.</p>
-                     * @return GroupId <p>IP group Id. Enter 0 when created.</p>
+                     * 获取<p>IP group Id. Enter 0 upon creation.</p>
+                     * @return GroupId <p>IP group Id. Enter 0 upon creation.</p>
                      * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
-                     * 设置<p>IP group Id. Enter 0 when created.</p>
-                     * @param _groupId <p>IP group Id. Enter 0 when created.</p>
+                     * 设置<p>IP group Id. Enter 0 upon creation.</p>
+                     * @param _groupId <p>IP group Id. Enter 0 upon creation.</p>
                      * 
                      */
                     void SetGroupId(const int64_t& _groupId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>IP group content supports only IP and IP range.</p>
-                     * @return Content <p>IP group content supports only IP and IP range.</p>
+                     * 获取<p>IP group content. Only IP and IP range are supported.</p>
+                     * @return Content <p>IP group content. Only IP and IP range are supported.</p>
                      * 
                      */
                     std::vector<std::string> GetContent() const;
 
                     /**
-                     * 设置<p>IP group content supports only IP and IP range.</p>
-                     * @param _content <p>IP group content supports only IP and IP range.</p>
+                     * 设置<p>IP group content. Only IP and IP range are supported.</p>
+                     * @param _content <p>IP group content. Only IP and IP range are supported.</p>
                      * 
                      */
                     void SetContent(const std::vector<std::string>& _content);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
-                     * @return IPTotalCount <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
+                     * 获取<p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
+                     * @return IPTotalCount <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
                      * 
                      */
                     int64_t GetIPTotalCount() const;
 
                     /**
-                     * 设置<p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
-                     * @param _iPTotalCount <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
+                     * 设置<p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
+                     * @param _iPTotalCount <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
                      * 
                      */
                     void SetIPTotalCount(const int64_t& _iPTotalCount);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool IPTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
-                     * @return IPExpireInfo <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
+                     * 获取<p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
+                     * @return IPExpireInfo <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
                      * 
                      */
                     std::vector<IPExpireInfo> GetIPExpireInfo() const;
 
                     /**
-                     * 设置<p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
-                     * @param _iPExpireInfo <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
+                     * 设置<p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
+                     * @param _iPExpireInfo <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
                      * 
                      */
                     void SetIPExpireInfo(const std::vector<IPExpireInfo>& _iPExpireInfo);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool IPExpireInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>The number of IP groups referenced.</p>
-                     * @return RefCount <p>The number of IP groups referenced.</p>
+                     * 获取<p>The number of times the IP group is referenced.</p>
+                     * @return RefCount <p>The number of times the IP group is referenced.</p>
                      * 
                      */
                     int64_t GetRefCount() const;
 
                     /**
-                     * 设置<p>The number of IP groups referenced.</p>
-                     * @param _refCount <p>The number of IP groups referenced.</p>
+                     * 设置<p>The number of times the IP group is referenced.</p>
+                     * @param _refCount <p>The number of times the IP group is referenced.</p>
                      * 
                      */
                     void SetRefCount(const int64_t& _refCount);
@@ -176,7 +176,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>IP group Id. Enter 0 when created.</p>
+                     * <p>IP group Id. Enter 0 upon creation.</p>
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;
@@ -188,25 +188,25 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>IP group content supports only IP and IP range.</p>
+                     * <p>IP group content. Only IP and IP range are supported.</p>
                      */
                     std::vector<std::string> m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
+                     * <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
                      */
                     int64_t m_iPTotalCount;
                     bool m_iPTotalCountHasBeenSet;
 
                     /**
-                     * <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
+                     * <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
                      */
                     std::vector<IPExpireInfo> m_iPExpireInfo;
                     bool m_iPExpireInfoHasBeenSet;
 
                     /**
-                     * <p>The number of IP groups referenced.</p>
+                     * <p>The number of times the IP group is referenced.</p>
                      */
                     int64_t m_refCount;
                     bool m_refCountHasBeenSet;

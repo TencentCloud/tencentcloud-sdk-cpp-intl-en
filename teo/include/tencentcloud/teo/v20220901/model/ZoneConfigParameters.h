@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Site configuration information.
+                * Site configuration-related information.
                 */
                 class ZoneConfigParameters : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site name.
-                     * @return ZoneName The site name.
+                     * 获取Site name.
+                     * @return ZoneName Site name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置The site name.
-                     * @param _zoneName The site name.
+                     * 设置Site name.
+                     * @param _zoneName Site name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ZoneConfig Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Site configuration message.
+                     * @return ZoneConfig Site configuration message.
                      * 
                      */
                     ZoneConfig GetZoneConfig() const;
 
                     /**
-                     * 设置Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _zoneConfig Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Site configuration message.
+                     * @param _zoneConfig Site configuration message.
                      * 
                      */
                     void SetZoneConfig(const ZoneConfig& _zoneConfig);
@@ -96,14 +92,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * The site name.
+                     * Site name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Site configuration message.
                      */
                     ZoneConfig m_zoneConfig;
                     bool m_zoneConfigHasBeenSet;

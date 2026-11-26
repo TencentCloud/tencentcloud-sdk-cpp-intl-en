@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Total number of eligible services.</p>
-                     * @return TotalCount <p>Total number of eligible services.</p>
+                     * 获取<p>Total services that meet the criteria.</p>
+                     * @return TotalCount <p>Total services that meet the criteria.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Total number of eligible services.</p>
+                     * <p>Total services that meet the criteria.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

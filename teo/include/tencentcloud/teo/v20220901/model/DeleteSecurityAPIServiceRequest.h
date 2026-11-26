@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.		
-                     * @return ZoneId Zone ID.		
+                     * 获取Zone ID.	
+                     * @return ZoneId Zone ID.	
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.		
-                     * @param _zoneId Zone ID.		
+                     * 设置Zone ID.	
+                     * @param _zoneId Zone ID.	
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取API service ID list.
-                     * @return APIServiceIds API service ID list.
+                     * 获取List of API service IDs.
+                     * @return APIServiceIds List of API service IDs.
                      * 
                      */
                     std::vector<std::string> GetAPIServiceIds() const;
 
                     /**
-                     * 设置API service ID list.
-                     * @param _aPIServiceIds API service ID list.
+                     * 设置List of API service IDs.
+                     * @param _aPIServiceIds List of API service IDs.
                      * 
                      */
                     void SetAPIServiceIds(const std::vector<std::string>& _aPIServiceIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.		
+                     * Zone ID.	
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * API service ID list.
+                     * List of API service IDs.
                      */
                     std::vector<std::string> m_aPIServiceIds;
                     bool m_aPIServiceIdsHasBeenSet;

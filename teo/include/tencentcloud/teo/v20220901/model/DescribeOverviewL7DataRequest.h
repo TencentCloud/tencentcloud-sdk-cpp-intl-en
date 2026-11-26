@@ -88,20 +88,20 @@ namespace TencentCloud
                     /**
                      * 获取Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      * @return MetricNames Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      * 
@@ -111,20 +111,20 @@ namespace TencentCloud
                     /**
                      * 设置Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      * @param _metricNames Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      * 
@@ -256,12 +256,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
                      * @return Filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
@@ -271,12 +271,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
                      * @param _filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
@@ -292,11 +292,11 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Data ownership area. Valid values:
+                     * 获取Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
-                     * @return Area Data ownership area. Valid values:
+                     * @return Area Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
@@ -305,11 +305,11 @@ namespace TencentCloud
                     std::string GetArea() const;
 
                     /**
-                     * 设置Data ownership area. Valid values:
+                     * 设置Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
-                     * @param _area Data ownership area. Valid values:
+                     * @param _area Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
@@ -341,11 +341,11 @@ namespace TencentCloud
                     /**
                      * Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
                      */
@@ -386,7 +386,7 @@ namespace TencentCloud
 
                     /**
                      * Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
@@ -395,7 +395,7 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Data ownership area. Valid values:
+                     * Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.

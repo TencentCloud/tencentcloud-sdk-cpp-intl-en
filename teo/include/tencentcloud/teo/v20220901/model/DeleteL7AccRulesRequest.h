@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
-                     * @return RuleIds List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+                     * 获取List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
+                     * @return RuleIds List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
                      * 
                      */
                     std::vector<std::string> GetRuleIds() const;
 
                     /**
-                     * 设置List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
-                     * @param _ruleIds List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+                     * 设置List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
+                     * @param _ruleIds List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
                      * 
                      */
                     void SetRuleIds(const std::vector<std::string>& _ruleIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+                     * List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
                      */
                     std::vector<std::string> m_ruleIds;
                     bool m_ruleIdsHasBeenSet;

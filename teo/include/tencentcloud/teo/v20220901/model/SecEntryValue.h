@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The security data queried by metric
+                * Security data dimension value information
                 */
                 class SecEntryValue : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The metric name.
-                     * @return Metric The metric name.
+                     * 获取Metric name.
+                     * @return Metric Metric name.
                      * 
                      */
                     std::string GetMetric() const;
 
                     /**
-                     * 设置The metric name.
-                     * @param _metric The metric name.
+                     * 设置Metric name.
+                     * @param _metric Metric name.
                      * 
                      */
                     void SetMetric(const std::string& _metric);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool MetricHasBeenSet() const;
 
                     /**
-                     * 获取The time-series data details.
-                     * @return Detail The time-series data details.
+                     * 获取Details of time series data.
+                     * @return Detail Details of time series data.
                      * 
                      */
                     std::vector<TimingDataItem> GetDetail() const;
 
                     /**
-                     * 设置The time-series data details.
-                     * @param _detail The time-series data details.
+                     * 设置Details of time series data.
+                     * @param _detail Details of time series data.
                      * 
                      */
                     void SetDetail(const std::vector<TimingDataItem>& _detail);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool DetailHasBeenSet() const;
 
                     /**
-                     * 获取The maximum value.
-                     * @return Max The maximum value.
+                     * 获取Maximum value.
+                     * @return Max Maximum value.
                      * 
                      */
                     int64_t GetMax() const;
 
                     /**
-                     * 设置The maximum value.
-                     * @param _max The maximum value.
+                     * 设置Maximum value.
+                     * @param _max Maximum value.
                      * 
                      */
                     void SetMax(const int64_t& _max);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取The average value.
-                     * @return Avg The average value.
+                     * 获取Mean.
+                     * @return Avg Mean.
                      * 
                      */
                     double GetAvg() const;
 
                     /**
-                     * 设置The average value.
-                     * @param _avg The average value.
+                     * 设置Mean.
+                     * @param _avg Mean.
                      * 
                      */
                     void SetAvg(const double& _avg);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AvgHasBeenSet() const;
 
                     /**
-                     * 获取Sum
-                     * @return Sum Sum
+                     * 获取Total data.
+                     * @return Sum Total data.
                      * 
                      */
                     double GetSum() const;
 
                     /**
-                     * 设置Sum
-                     * @param _sum Sum
+                     * 设置Total data.
+                     * @param _sum Total data.
                      * 
                      */
                     void SetSum(const double& _sum);
@@ -155,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The metric name.
+                     * Metric name.
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;
 
                     /**
-                     * The time-series data details.
+                     * Details of time series data.
                      */
                     std::vector<TimingDataItem> m_detail;
                     bool m_detailHasBeenSet;
 
                     /**
-                     * The maximum value.
+                     * Maximum value.
                      */
                     int64_t m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * The average value.
+                     * Mean.
                      */
                     double m_avg;
                     bool m_avgHasBeenSet;
 
                     /**
-                     * Sum
+                     * Total data.
                      */
                     double m_sum;
                     bool m_sumHasBeenSet;

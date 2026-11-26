@@ -28,7 +28,8 @@ UserMobileApplicationInfo::UserMobileApplicationInfo() :
     m_applicationUpdateStatusHasBeenSet(false),
     m_applicationCreateTimeHasBeenSet(false),
     m_applicationVersionsHasBeenSet(false),
-    m_applicationNatureHasBeenSet(false)
+    m_applicationNatureHasBeenSet(false),
+    m_applicationTagsHasBeenSet(false)
 {
 }
 
@@ -127,6 +128,26 @@ CoreInternalOutcome UserMobileApplicationInfo::Deserialize(const rapidjson::Valu
         m_applicationNatureHasBeenSet = true;
     }
 
+    if (value.HasMember("ApplicationTags") && !value["ApplicationTags"].IsNull())
+    {
+        if (!value["ApplicationTags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `UserMobileApplicationInfo.ApplicationTags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["ApplicationTags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_applicationTags.push_back(item);
+        }
+        m_applicationTagsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -203,6 +224,21 @@ void UserMobileApplicationInfo::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "ApplicationNature";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_applicationNature.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_applicationTagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ApplicationTags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_applicationTags.begin(); itr != m_applicationTags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -334,5 +370,21 @@ void UserMobileApplicationInfo::SetApplicationNature(const string& _applicationN
 bool UserMobileApplicationInfo::ApplicationNatureHasBeenSet() const
 {
     return m_applicationNatureHasBeenSet;
+}
+
+vector<Tag> UserMobileApplicationInfo::GetApplicationTags() const
+{
+    return m_applicationTags;
+}
+
+void UserMobileApplicationInfo::SetApplicationTags(const vector<Tag>& _applicationTags)
+{
+    m_applicationTags = _applicationTags;
+    m_applicationTagsHasBeenSet = true;
+}
+
+bool UserMobileApplicationInfo::ApplicationTagsHasBeenSet() const
+{
+    return m_applicationTagsHasBeenSet;
 }
 

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
-                     * @return OriginACLInfo Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
+                     * 获取Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
+                     * @return OriginACLInfo Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
                      * 
                      */
                     OriginACLInfo GetOriginACLInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
+                     * Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
                      */
                     OriginACLInfo m_originACLInfo;
                     bool m_originACLInfoHasBeenSet;

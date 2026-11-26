@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
+                     * 获取Total number of entries in the query result.
+                     * @return TotalCount Total number of entries in the query result.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of time-series traffic data for Layer-7 cache analysis.
+                     * @return Data List of time-series traffic data for Layer-7 cache analysis.
                      * 
                      */
                     std::vector<TimingDataRecord> GetData() const;
@@ -77,14 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of query results.
+                     * Total number of entries in the query result.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of time-series traffic data for Layer-7 cache analysis.
                      */
                     std::vector<TimingDataRecord> m_data;
                     bool m_dataHasBeenSet;

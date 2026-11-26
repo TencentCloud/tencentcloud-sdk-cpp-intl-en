@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Detailed settings of the rule engine that can be used for request match, which are optional parameter configuration items.
+                * Detailed settings of the rule engine applicable to match requests, with selectable parameter configuration items.
                 */
                 class RuleChoicePropertiesItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The parameter name.
-                     * @return Name The parameter name.
+                     * 获取Parameter name.
+                     * @return Name Parameter name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The parameter name.
-                     * @param _name The parameter name.
+                     * 设置Parameter name.
+                     * @param _name Parameter name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -69,31 +69,31 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
-                     * @return Type The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
+                     * 获取Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
+                     * @return Type Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
-                     * @param _type The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
+                     * 设置Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
+                     * @param _type Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,19 +106,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
-                     * @return ChoicesValue Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+                     * 获取Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
+                     * @return ChoicesValue Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
                      * 
                      */
                     std::vector<std::string> GetChoicesValue() const;
 
                     /**
-                     * 设置Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
-                     * @param _choicesValue Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+                     * 设置Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
+                     * @param _choicesValue Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
                      * 
                      */
                     void SetChoicesValue(const std::vector<std::string>& _choicesValue);
@@ -131,15 +131,15 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
                     bool ChoicesValueHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-                     * @return Min Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 获取Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
+                     * @return Min Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
                      * 
                      */
                     int64_t GetMin() const;
 
                     /**
-                     * 设置Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-                     * @param _min Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 设置Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
+                     * @param _min Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
                      * 
                      */
                     void SetMin(const int64_t& _min);
@@ -152,15 +152,15 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-                     * @return Max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 获取Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
+                     * @return Max Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
                      * 
                      */
                     int64_t GetMax() const;
 
                     /**
-                     * 设置Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-                     * @param _max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 设置Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
+                     * @param _max Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
                      * 
                      */
                     void SetMax(const int64_t& _max);
@@ -173,15 +173,15 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
                     bool MaxHasBeenSet() const;
 
                     /**
-                     * 获取Whether multiple values can be selected or entered.
-                     * @return IsMultiple Whether multiple values can be selected or entered.
+                     * 获取Whether the parameter value supports multi-select or filling in multiple values.
+                     * @return IsMultiple Whether the parameter value supports multi-select or filling in multiple values.
                      * 
                      */
                     bool GetIsMultiple() const;
 
                     /**
-                     * 设置Whether multiple values can be selected or entered.
-                     * @param _isMultiple Whether multiple values can be selected or entered.
+                     * 设置Whether the parameter value supports multi-select or filling in multiple values.
+                     * @param _isMultiple Whether the parameter value supports multi-select or filling in multiple values.
                      * 
                      */
                     void SetIsMultiple(const bool& _isMultiple);
@@ -194,15 +194,15 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
                     bool IsMultipleHasBeenSet() const;
 
                     /**
-                     * 获取Whether the parameter can be left empty.
-                     * @return IsAllowEmpty Whether the parameter can be left empty.
+                     * 获取Allow Empty.
+                     * @return IsAllowEmpty Allow Empty.
                      * 
                      */
                     bool GetIsAllowEmpty() const;
 
                     /**
-                     * 设置Whether the parameter can be left empty.
-                     * @param _isAllowEmpty Whether the parameter can be left empty.
+                     * 设置Allow Empty.
+                     * @param _isAllowEmpty Allow Empty.
                      * 
                      */
                     void SetIsAllowEmpty(const bool& _isAllowEmpty);
@@ -216,26 +216,26 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 
                     /**
                      * 获取Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
                      * @return ExtraParameter Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
                      * 
                      */
                     RuleExtraParameter GetExtraParameter() const;
 
                     /**
                      * 设置Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
                      * @param _extraParameter Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
                      * 
                      */
                     void SetExtraParameter(const RuleExtraParameter& _extraParameter);
@@ -250,57 +250,57 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
                 private:
 
                     /**
-                     * The parameter name.
+                     * Parameter name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
+                     * Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+                     * Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
                      */
                     std::vector<std::string> m_choicesValue;
                     bool m_choicesValueHasBeenSet;
 
                     /**
-                     * Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
                      */
                     int64_t m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
                      */
                     int64_t m_max;
                     bool m_maxHasBeenSet;
 
                     /**
-                     * Whether multiple values can be selected or entered.
+                     * Whether the parameter value supports multi-select or filling in multiple values.
                      */
                     bool m_isMultiple;
                     bool m_isMultipleHasBeenSet;
 
                     /**
-                     * Whether the parameter can be left empty.
+                     * Allow Empty.
                      */
                     bool m_isAllowEmpty;
                     bool m_isAllowEmptyHasBeenSet;
 
                     /**
                      * Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
                      */
                     RuleExtraParameter m_extraParameter;
                     bool m_extraParameterHasBeenSet;

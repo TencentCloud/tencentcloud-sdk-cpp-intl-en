@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of the origin.
+                * Origin server information of the acceleration domain name.
                 */
                 class OriginDetail : public AbstractModel
                 {
@@ -49,20 +49,20 @@ namespace TencentCloud
 
                     /**
                      * 获取Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      * @return OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      * 
                      */
@@ -70,20 +70,20 @@ namespace TencentCloud
 
                     /**
                      * 设置Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      * @param _originType Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      * 
                      */
@@ -97,35 +97,43 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+                     * 获取Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
-                     * @return Origin Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+                     * @return Origin Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
                      * 
                      */
                     std::string GetOrigin() const;
 
                     /**
-                     * 设置Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+                     * 设置Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
-                     * @param _origin Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+                     * @param _origin Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
                      * 
                      */
                     void SetOrigin(const std::string& _origin);
@@ -138,15 +146,15 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
-                     * @return BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * 获取Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
+                     * @return BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     std::string GetBackupOrigin() const;
 
                     /**
-                     * 设置Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
-                     * @param _backupOrigin Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * 设置Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
+                     * @param _backupOrigin Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     void SetBackupOrigin(const std::string& _backupOrigin);
@@ -159,15 +167,15 @@ namespace TencentCloud
                     bool BackupOriginHasBeenSet() const;
 
                     /**
-                     * 获取Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
-                     * @return OriginGroupName Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+                     * 获取Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
+                     * @return OriginGroupName Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
                      * 
                      */
                     std::string GetOriginGroupName() const;
 
                     /**
-                     * 设置Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
-                     * @param _originGroupName Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+                     * 设置Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
+                     * @param _originGroupName Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
                      * 
                      */
                     void SetOriginGroupName(const std::string& _originGroupName);
@@ -180,15 +188,15 @@ namespace TencentCloud
                     bool OriginGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
-                     * @return BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * 获取Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
+                     * @return BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     std::string GetBackOriginGroupName() const;
 
                     /**
-                     * 设置Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
-                     * @param _backOriginGroupName Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * 设置Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
+                     * @param _backOriginGroupName Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
                      * 
                      */
                     void SetBackOriginGroupName(const std::string& _backOriginGroupName);
@@ -234,19 +242,15 @@ If this field is not specified, the default value 'off' will be used.
                     bool PrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
+                     * @return PrivateParameters Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
                      * 
                      */
                     std::vector<PrivateParameter> GetPrivateParameters() const;
 
                     /**
-                     * 设置Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _privateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
+                     * @param _privateParameters Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
                      * 
                      */
                     void SetPrivateParameters(const std::vector<PrivateParameter>& _privateParameters);
@@ -259,15 +263,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PrivateParametersHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the current configuration of the origin-pull HOST header.
-                     * @return HostHeader Specifies the current configuration of the origin-pull HOST header.
+                     * 获取Origin-pull HOST header of the current configuration.
+                     * @return HostHeader Origin-pull HOST header of the current configuration.
                      * 
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置Specifies the current configuration of the origin-pull HOST header.
-                     * @param _hostHeader Specifies the current configuration of the origin-pull HOST header.
+                     * 设置Origin-pull HOST header of the current configuration.
+                     * @param _hostHeader Origin-pull HOST header of the current configuration.
                      * 
                      */
                     void SetHostHeader(const std::string& _hostHeader);
@@ -322,15 +326,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VodeoDistributionRangeHasBeenSet() const;
 
                     /**
-                     * 获取MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
-                     * @return VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     * 获取MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
+                     * @return VodeoBucketId MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
                      * @deprecated
                      */
                     std::string GetVodeoBucketId() const;
 
                     /**
-                     * 设置MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
-                     * @param _vodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     * 设置MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
+                     * @param _vodeoBucketId MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
                      * @deprecated
                      */
                     void SetVodeoBucketId(const std::string& _vodeoBucketId);
@@ -343,18 +347,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VodeoBucketIdHasBeenSet() const;
 
                     /**
-                     * 获取VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+                     * 获取VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
-                     * @return VodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+                     * @return VodOriginScope VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
                      * 
                      */
                     std::string GetVodOriginScope() const;
 
                     /**
-                     * 设置VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+                     * 设置VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
-                     * @param _vodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+                     * @param _vodOriginScope VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
                      * 
                      */
@@ -368,15 +372,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VodOriginScopeHasBeenSet() const;
 
                     /**
-                     * 获取VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
-                     * @return VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     * 获取VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
+                     * @return VodBucketId VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
                      * 
                      */
                     std::string GetVodBucketId() const;
 
                     /**
-                     * 设置VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
-                     * @param _vodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     * 设置VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
+                     * @param _vodBucketId VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
                      * 
                      */
                     void SetVodBucketId(const std::string& _vodBucketId);
@@ -392,42 +396,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+                     * Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
                      */
                     std::string m_backupOrigin;
                     bool m_backupOriginHasBeenSet;
 
                     /**
-                     * Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+                     * Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
                      */
                     std::string m_originGroupName;
                     bool m_originGroupNameHasBeenSet;
 
                     /**
-                     * Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+                     * Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
                      */
                     std::string m_backOriginGroupName;
                     bool m_backOriginGroupNameHasBeenSet;
@@ -442,14 +448,13 @@ If this field is not specified, the default value 'off' will be used.
                     bool m_privateAccessHasBeenSet;
 
                     /**
-                     * Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
                      */
                     std::vector<PrivateParameter> m_privateParameters;
                     bool m_privateParametersHasBeenSet;
 
                     /**
-                     * Specifies the current configuration of the origin-pull HOST header.
+                     * Origin-pull HOST header of the current configuration.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;
@@ -467,20 +472,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vodeoDistributionRangeHasBeenSet;
 
                     /**
-                     * MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+                     * MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
                      */
                     std::string m_vodeoBucketId;
                     bool m_vodeoBucketIdHasBeenSet;
 
                     /**
-                     * VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+                     * VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
                      */
                     std::string m_vodOriginScope;
                     bool m_vodOriginScopeHasBeenSet;
 
                     /**
-                     * VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+                     * VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
                      */
                     std::string m_vodBucketId;
                     bool m_vodBucketIdHasBeenSet;

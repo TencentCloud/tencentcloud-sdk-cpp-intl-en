@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Zone ID.</p>
-                     * @return ZoneId <p>Zone ID.</p>
+                     * 获取<p>Site ID.</p>
+                     * @return ZoneId <p>Site ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置<p>Zone ID.</p>
-                     * @param _zoneId <p>Zone ID.</p>
+                     * 设置<p>Site ID.</p>
+                     * @param _zoneId <p>Site ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
-                     * @return Filters <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
+                     * 获取<p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
+                     * @return Filters <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置<p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
-                     * @param _filters <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
+                     * 设置<p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
+                     * @param _filters <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
-                     * @return Limit <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
+                     * 获取<p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
+                     * @return Limit <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
-                     * @param _limit <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
+                     * 设置<p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
+                     * @param _limit <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paging offset.</p><p>Default value: 0.</p>
-                     * @return Offset <p>Paging offset.</p><p>Default value: 0.</p>
+                     * 获取<p>Paging offset.</p><p>Default value: 0</p>
+                     * @return Offset <p>Paging offset.</p><p>Default value: 0</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Paging offset.</p><p>Default value: 0.</p>
-                     * @param _offset <p>Paging offset.</p><p>Default value: 0.</p>
+                     * 设置<p>Paging offset.</p><p>Default value: 0</p>
+                     * @param _offset <p>Paging offset.</p><p>Default value: 0</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
-                     * @return SortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+                     * 获取<p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+                     * @return SortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
                      * 
                      */
                     std::string GetSortBy() const;
 
                     /**
-                     * 设置<p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
-                     * @param _sortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+                     * 设置<p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+                     * @param _sortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool SortByHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
-                     * @return SortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
+                     * 获取<p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
+                     * @return SortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置<p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
-                     * @param _sortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
+                     * 设置<p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
+                     * @param _sortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -172,37 +172,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Zone ID.</p>
+                     * <p>Site ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
+                     * <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
+                     * <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * <p>Paging offset.</p><p>Default value: 0.</p>
+                     * <p>Paging offset.</p><p>Default value: 0</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+                     * <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
 
                     /**
-                     * <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
+                     * <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Custom configuration list that needs to be configured.</p>
-                     * @return CustomActions <p>Custom configuration list that needs to be configured.</p>
+                     * 获取<p>List of custom configurations that need to be configured.</p>
+                     * @return CustomActions <p>List of custom configurations that need to be configured.</p>
                      * 
                      */
                     std::vector<CustomAction> GetCustomActions() const;
 
                     /**
-                     * 设置<p>Custom configuration list that needs to be configured.</p>
-                     * @param _customActions <p>Custom configuration list that needs to be configured.</p>
+                     * 设置<p>List of custom configurations that need to be configured.</p>
+                     * @param _customActions <p>List of custom configurations that need to be configured.</p>
                      * 
                      */
                     void SetCustomActions(const std::vector<CustomAction>& _customActions);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Custom configuration list that needs to be configured.</p>
+                     * <p>List of custom configurations that need to be configured.</p>
                      */
                     std::vector<CustomAction> m_customActions;
                     bool m_customActionsHasBeenSet;

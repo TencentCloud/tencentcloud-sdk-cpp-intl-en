@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Domain names bound with the template. 
+                * Security template domain binding status
                 */
                 class TemplateScope : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return ZoneId ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _zoneId ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -73,19 +69,15 @@ Note: This field may return·null, indicating that no valid values can be obtain
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return EntityStatus List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Instance status list.
+                     * @return EntityStatus Instance status list.
                      * 
                      */
                     std::vector<EntityStatus> GetEntityStatus() const;
 
                     /**
-                     * 设置List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _entityStatus List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Instance status list.
+                     * @param _entityStatus Instance status list.
                      * 
                      */
                     void SetEntityStatus(const std::vector<EntityStatus>& _entityStatus);
@@ -100,15 +92,13 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Instance status list.
                      */
                     std::vector<EntityStatus> m_entityStatus;
                     bool m_entityStatusHasBeenSet;

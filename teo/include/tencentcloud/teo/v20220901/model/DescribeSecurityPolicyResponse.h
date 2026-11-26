@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * @return SecurityPolicy Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     SecurityPolicy GetSecurityPolicy() const;
@@ -64,7 +62,6 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     SecurityPolicy m_securityPolicy;
                     bool m_securityPolicyHasBeenSet;

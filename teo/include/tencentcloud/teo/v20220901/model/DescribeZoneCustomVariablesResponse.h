@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>List of site-level custom variables.</p>
-                     * @return CustomVariables <p>List of site-level custom variables.</p>
+                     * 获取<p>Site-level custom variable list.</p>
+                     * @return CustomVariables <p>Site-level custom variable list.</p>
                      * 
                      */
                     std::vector<CustomVariable> GetCustomVariables() const;
@@ -76,7 +76,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>List of site-level custom variables.</p>
+                     * <p>Site-level custom variable list.</p>
                      */
                     std::vector<CustomVariable> m_customVariables;
                     bool m_customVariablesHasBeenSet;

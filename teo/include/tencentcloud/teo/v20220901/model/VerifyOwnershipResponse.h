@@ -44,12 +44,12 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li>
-                     * @return Status Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li>
+                     * 获取Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li>
+                     * @return Status Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li>
                      * 
                      */
                     std::string GetStatus() const;
@@ -62,8 +62,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取When the ownership verification result is `fail`, this field returns the reason of failure.
-                     * @return Result When the ownership verification result is `fail`, this field returns the reason of failure.
+                     * 获取When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
+                     * @return Result When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
                      * 
                      */
                     std::string GetResult() const;
@@ -78,15 +78,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li>
+                     * Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * When the ownership verification result is `fail`, this field returns the reason of failure.
+                     * When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;

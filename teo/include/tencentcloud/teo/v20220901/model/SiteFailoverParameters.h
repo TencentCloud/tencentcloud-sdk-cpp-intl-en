@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin server failure failover config.
+                * Origin server failover configuration parameters.
                 */
                 class SiteFailoverParameters : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
-                     * @return SiteFailoverStatusCodes Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+                     * 获取Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
+                     * @return SiteFailoverStatusCodes Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
                      * 
                      */
                     std::vector<int64_t> GetSiteFailoverStatusCodes() const;
 
                     /**
-                     * 设置Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
-                     * @param _siteFailoverStatusCodes Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+                     * 设置Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
+                     * @param _siteFailoverStatusCodes Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
                      * 
                      */
                     void SetSiteFailoverStatusCodes(const std::vector<int64_t>& _siteFailoverStatusCodes);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SiteFailoverStatusCodesHasBeenSet() const;
 
                     /**
-                     * 获取Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
-                     * @return SiteFailoverParams Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+                     * 获取List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
+                     * @return SiteFailoverParams List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
                      * 
                      */
                     std::vector<SiteFailover> GetSiteFailoverParams() const;
 
                     /**
-                     * 设置Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
-                     * @param _siteFailoverParams Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+                     * 设置List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
+                     * @param _siteFailoverParams List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
                      * 
                      */
                     void SetSiteFailoverParams(const std::vector<SiteFailover>& _siteFailoverParams);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+                     * Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
                      */
                     std::vector<int64_t> m_siteFailoverStatusCodes;
                     bool m_siteFailoverStatusCodesHasBeenSet;
 
                     /**
-                     * Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+                     * List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
                      */
                     std::vector<SiteFailover> m_siteFailoverParams;
                     bool m_siteFailoverParamsHasBeenSet;

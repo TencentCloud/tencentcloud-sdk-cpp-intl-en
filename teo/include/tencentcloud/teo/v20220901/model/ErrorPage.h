@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
-                     * @return StatusCode Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+                     * 获取Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+                     * @return StatusCode Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
-                     * @param _statusCode Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+                     * 设置Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+                     * @param _statusCode Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
-                     * @return RedirectURL Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+                     * 获取Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
+                     * @return RedirectURL Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
                      * 
                      */
                     std::string GetRedirectURL() const;
 
                     /**
-                     * 设置Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
-                     * @param _redirectURL Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+                     * 设置Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
+                     * @param _redirectURL Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
                      * 
                      */
                     void SetRedirectURL(const std::string& _redirectURL);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+                     * Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+                     * Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
                      */
                     std::string m_redirectURL;
                     bool m_redirectURLHasBeenSet;

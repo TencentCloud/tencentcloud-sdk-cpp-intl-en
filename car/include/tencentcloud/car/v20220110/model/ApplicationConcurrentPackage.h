@@ -46,7 +46,34 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取<p>Concurrency pack ID</p>
+                     * @return ConcurrentId <p>Concurrency pack ID</p>
+                     * 
+                     */
+                    std::string GetConcurrentId() const;
+
+                    /**
+                     * 设置<p>Concurrency pack ID</p>
+                     * @param _concurrentId <p>Concurrency pack ID</p>
+                     * 
+                     */
+                    void SetConcurrentId(const std::string& _concurrentId);
+
+                    /**
+                     * 判断参数 ConcurrentId 是否已赋值
+                     * @return ConcurrentId 是否已赋值
+                     * 
+                     */
+                    bool ConcurrentIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * <p>Concurrency pack ID</p>
+                     */
+                    std::string m_concurrentId;
+                    bool m_concurrentIdHasBeenSet;
 
                 };
             }

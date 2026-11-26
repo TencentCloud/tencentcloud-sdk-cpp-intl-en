@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exclusive Anti-DDoS protection of the domain.
+                * Exclusive DDoS protection info of the domain.
                 */
                 class DomainDDoSProtection : public AbstractModel
                 {
@@ -68,23 +68,23 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
-                     * @return Switch Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+                     * 获取Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
+                     * @return Switch Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
-                     * @param _switch Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+                     * 设置Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
+                     * @param _switch Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -105,9 +105,9 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+                     * Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

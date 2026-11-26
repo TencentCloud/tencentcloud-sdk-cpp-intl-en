@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule item of the rule engine. The items in the `Conditions` array are in `OR` relationship, and the items in the inner `Conditions` list are in `AND` relationship.
+                * Rule item of the rule engine. The relationship between multiple items in the Conditions array is OR, and the relationship between multiple items in the inner-layer Conditions list is AND.
                 */
                 class Rule : public AbstractModel
                 {

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Deploy the log list.
-                     * @return DeploymentLogInfoSet Deploy the log list.
+                     * 获取List of deployment logs.
+                     * @return DeploymentLogInfoSet List of deployment logs.
                      * 
                      */
                     std::vector<InferenceServiceDeploymentLogInfo> GetDeploymentLogInfoSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Deploy the log list.
+                     * List of deployment logs.
                      */
                     std::vector<InferenceServiceDeploymentLogInfo> m_deploymentLogInfoSet;
                     bool m_deploymentLogInfoSetHasBeenSet;

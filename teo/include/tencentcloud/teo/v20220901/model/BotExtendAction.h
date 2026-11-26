@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bot extended actions
+                * Bot extension handling method, a composite of multiple disposal actions.
                 */
                 class BotExtendAction : public AbstractModel
                 {
@@ -47,43 +47,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
-                     * @return Action Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+                     * 获取Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+                     * @return Action Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
-                     * @param _action Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+                     * 设置Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+                     * @param _action Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -96,15 +96,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The probability for triggering the action. value range: 0-100.
-                     * @return Percent The probability for triggering the action. value range: 0-100.
+                     * 获取Probability for triggering the handling method. Value range: 0-100.
+                     * @return Percent Probability for triggering the handling method. Value range: 0-100.
                      * 
                      */
                     uint64_t GetPercent() const;
 
                     /**
-                     * 设置The probability for triggering the action. value range: 0-100.
-                     * @param _percent The probability for triggering the action. value range: 0-100.
+                     * 设置Probability for triggering the handling method. Value range: 0-100.
+                     * @param _percent Probability for triggering the handling method. Value range: 0-100.
                      * 
                      */
                     void SetPercent(const uint64_t& _percent);
@@ -119,20 +119,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+                     * Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The probability for triggering the action. value range: 0-100.
+                     * Probability for triggering the handling method. Value range: 0-100.
                      */
                     uint64_t m_percent;
                     bool m_percentHasBeenSet;

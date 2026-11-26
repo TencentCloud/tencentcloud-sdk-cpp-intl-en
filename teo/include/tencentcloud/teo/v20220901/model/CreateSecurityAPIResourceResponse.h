@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the API resource ID list.
-                     * @return APIResourceIds Specifies the API resource ID list.
+                     * 获取API resource ID list.
+                     * @return APIResourceIds API resource ID list.
                      * 
                      */
                     std::vector<std::string> GetAPIResourceIds() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the API resource ID list.
+                     * API resource ID list.
                      */
                     std::vector<std::string> m_aPIResourceIds;
                     bool m_aPIResourceIdsHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Differences between the newest and existing intermediate IPs
+                * Difference between the latest IP whitelist list and the current IP whitelist list
                 */
                 class DiffIPWhitelist : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The latest intermediate IPs.
-                     * @return LatestIPWhitelist The latest intermediate IPs.
+                     * 获取Latest IP whitelist list.
+                     * @return LatestIPWhitelist Latest IP whitelist list.
                      * 
                      */
                     IPWhitelist GetLatestIPWhitelist() const;
 
                     /**
-                     * 设置The latest intermediate IPs.
-                     * @param _latestIPWhitelist The latest intermediate IPs.
+                     * 设置Latest IP whitelist list.
+                     * @param _latestIPWhitelist Latest IP whitelist list.
                      * 
                      */
                     void SetLatestIPWhitelist(const IPWhitelist& _latestIPWhitelist);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LatestIPWhitelistHasBeenSet() const;
 
                     /**
-                     * 获取The intermediate IPs added to the existing list.
-                     * @return AddedIPWhitelist The intermediate IPs added to the existing list.
+                     * 获取Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
+                     * @return AddedIPWhitelist Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
                      * 
                      */
                     IPWhitelist GetAddedIPWhitelist() const;
 
                     /**
-                     * 设置The intermediate IPs added to the existing list.
-                     * @param _addedIPWhitelist The intermediate IPs added to the existing list.
+                     * 设置Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
+                     * @param _addedIPWhitelist Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
                      * 
                      */
                     void SetAddedIPWhitelist(const IPWhitelist& _addedIPWhitelist);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool AddedIPWhitelistHasBeenSet() const;
 
                     /**
-                     * 获取The intermediate IPs removed from the existing list.
-                     * @return RemovedIPWhitelist The intermediate IPs removed from the existing list.
+                     * 获取The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
+                     * @return RemovedIPWhitelist The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
                      * 
                      */
                     IPWhitelist GetRemovedIPWhitelist() const;
 
                     /**
-                     * 设置The intermediate IPs removed from the existing list.
-                     * @param _removedIPWhitelist The intermediate IPs removed from the existing list.
+                     * 设置The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
+                     * @param _removedIPWhitelist The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
                      * 
                      */
                     void SetRemovedIPWhitelist(const IPWhitelist& _removedIPWhitelist);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RemovedIPWhitelistHasBeenSet() const;
 
                     /**
-                     * 获取The intermediate IPs that remain unchanged.
-                     * @return NoChangeIPWhitelist The intermediate IPs that remain unchanged.
+                     * 获取Unchanged part of the latest IP allowlist compared with the current IP allowlist.
+                     * @return NoChangeIPWhitelist Unchanged part of the latest IP allowlist compared with the current IP allowlist.
                      * 
                      */
                     IPWhitelist GetNoChangeIPWhitelist() const;
 
                     /**
-                     * 设置The intermediate IPs that remain unchanged.
-                     * @param _noChangeIPWhitelist The intermediate IPs that remain unchanged.
+                     * 设置Unchanged part of the latest IP allowlist compared with the current IP allowlist.
+                     * @param _noChangeIPWhitelist Unchanged part of the latest IP allowlist compared with the current IP allowlist.
                      * 
                      */
                     void SetNoChangeIPWhitelist(const IPWhitelist& _noChangeIPWhitelist);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The latest intermediate IPs.
+                     * Latest IP whitelist list.
                      */
                     IPWhitelist m_latestIPWhitelist;
                     bool m_latestIPWhitelistHasBeenSet;
 
                     /**
-                     * The intermediate IPs added to the existing list.
+                     * Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
                      */
                     IPWhitelist m_addedIPWhitelist;
                     bool m_addedIPWhitelistHasBeenSet;
 
                     /**
-                     * The intermediate IPs removed from the existing list.
+                     * The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
                      */
                     IPWhitelist m_removedIPWhitelist;
                     bool m_removedIPWhitelistHasBeenSet;
 
                     /**
-                     * The intermediate IPs that remain unchanged.
+                     * Unchanged part of the latest IP allowlist compared with the current IP allowlist.
                      */
                     IPWhitelist m_noChangeIPWhitelist;
                     bool m_noChangeIPWhitelistHasBeenSet;

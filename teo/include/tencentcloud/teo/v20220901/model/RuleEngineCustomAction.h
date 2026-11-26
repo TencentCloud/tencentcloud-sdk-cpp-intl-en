@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule engine manipulates custom configuration.
+                * Operate the custom configuration of the rule engine.
                 */
                 class RuleEngineCustomAction : public AbstractModel
                 {
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ParametersHasBeenSet() const;
 
                     /**
-                     * 获取<p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
-                     * @return SupportedConditions <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+                     * 获取<p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+                     * @return SupportedConditions <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
                      * 
                      */
                     std::vector<std::string> GetSupportedConditions() const;
 
                     /**
-                     * 设置<p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
-                     * @param _supportedConditions <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+                     * 设置<p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+                     * @param _supportedConditions <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
                      * 
                      */
                     void SetSupportedConditions(const std::vector<std::string>& _supportedConditions);
@@ -179,7 +179,7 @@ namespace TencentCloud
                     bool m_parametersHasBeenSet;
 
                     /**
-                     * <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+                     * <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
                      */
                     std::vector<std::string> m_supportedConditions;
                     bool m_supportedConditionsHasBeenSet;

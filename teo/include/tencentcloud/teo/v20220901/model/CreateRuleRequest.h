@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site
-                     * @return ZoneId ID of the site
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site
-                     * @param _zoneId ID of the site
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The rule name (1 to 255 characters)
-                     * @return RuleName The rule name (1 to 255 characters)
+                     * 获取Rule name. The string length is 1–255.
+                     * @return RuleName Rule name. The string length is 1–255.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置The rule name (1 to 255 characters)
-                     * @param _ruleName The rule name (1 to 255 characters)
+                     * 设置Rule name. The string length is 1–255.
+                     * @param _ruleName Rule name. The string length is 1–255.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -86,23 +86,23 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
-                     * @return Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+                     * 获取Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
+                     * @return Status Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
-                     * @param _status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+                     * 设置Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
+                     * @param _status Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The rule content.
-                     * @return Rules The rule content.
+                     * 获取Rule content.
+                     * @return Rules Rule content.
                      * 
                      */
                     std::vector<Rule> GetRules() const;
 
                     /**
-                     * 设置The rule content.
-                     * @param _rules The rule content.
+                     * 设置Rule content.
+                     * @param _rules Rule content.
                      * 
                      */
                     void SetRules(const std::vector<Rule>& _rules);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool RulesHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the rule.
-                     * @return Tags Tag of the rule.
+                     * 获取Rule tag.
+                     * @return Tags Rule tag.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tag of the rule.
-                     * @param _tags Tag of the rule.
+                     * 设置Rule tag.
+                     * @param _tags Rule tag.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -159,33 +159,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The rule name (1 to 255 characters)
+                     * Rule name. The string length is 1–255.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+                     * Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The rule content.
+                     * Rule content.
                      */
                     std::vector<Rule> m_rules;
                     bool m_rulesHasBeenSet;
 
                     /**
-                     * Tag of the rule.
+                     * Rule tag.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

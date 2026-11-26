@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the number of effective ips or IP ranges in the IP group.
-                     * @return IPTotalCount Specifies the number of effective ips or IP ranges in the IP group.
+                     * 获取Number of IPs or IP ranges in effect in the IP group.
+                     * @return IPTotalCount Number of IPs or IP ranges in effect in the IP group.
                      * 
                      */
                     int64_t GetIPTotalCount() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool IPTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
-                     * @return IPList List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
+                     * 获取List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
+                     * @return IPList List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
                      * 
                      */
                     std::vector<std::string> GetIPList() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the number of effective ips or IP ranges in the IP group.
+                     * Number of IPs or IP ranges in effect in the IP group.
                      */
                     int64_t m_iPTotalCount;
                     bool m_iPTotalCountHasBeenSet;
 
                     /**
-                     * List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
+                     * List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
                      */
                     std::vector<std::string> m_iPList;
                     bool m_iPListHasBeenSet;

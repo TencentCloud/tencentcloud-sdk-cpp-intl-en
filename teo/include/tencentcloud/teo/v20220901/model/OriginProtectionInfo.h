@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin protection configuration
+                * Origin protection info
                 */
                 class OriginProtectionInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site.
-                     * @return ZoneId ID of the site.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site.
-                     * @param _zoneId ID of the site.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of domain names.
-                     * @return Hosts List of domain names.
+                     * 获取Domain name list.
+                     * @return Hosts Domain name list.
                      * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
-                     * 设置List of domain names.
-                     * @param _hosts List of domain names.
+                     * 设置Domain name list.
+                     * @param _hosts Domain name list.
                      * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
@@ -112,19 +112,15 @@ namespace TencentCloud
                     bool ProxyIdsHasBeenSet() const;
 
                     /**
-                     * 获取The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return CurrentIPWhitelist The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取IP allowlist of the current version.
+                     * @return CurrentIPWhitelist IP allowlist of the current version.
                      * 
                      */
                     IPWhitelist GetCurrentIPWhitelist() const;
 
                     /**
-                     * 设置The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _currentIPWhitelist The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置IP allowlist of the current version.
+                     * @param _currentIPWhitelist IP allowlist of the current version.
                      * 
                      */
                     void SetCurrentIPWhitelist(const IPWhitelist& _currentIPWhitelist);
@@ -137,23 +133,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CurrentIPWhitelistHasBeenSet() const;
 
                     /**
-                     * 获取Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
-                     * @return NeedUpdate Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
+                     * 获取Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
+                     * @return NeedUpdate Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
                      * 
                      */
                     bool GetNeedUpdate() const;
 
                     /**
-                     * 设置Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
-                     * @param _needUpdate Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
+                     * 设置Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
+                     * @param _needUpdate Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
                      * 
                      */
                     void SetNeedUpdate(const bool& _needUpdate);
@@ -166,27 +162,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool NeedUpdateHasBeenSet() const;
 
                     /**
-                     * 获取Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
-                     * @return Status Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+                     * 获取Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
+                     * @return Status Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
-                     * @param _status Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+                     * 设置Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
+                     * @param _status Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -199,23 +195,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
-                     * @return PlanSupport Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
+                     * 获取Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
+                     * @return PlanSupport Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
                      * 
                      */
                     bool GetPlanSupport() const;
 
                     /**
-                     * 设置Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
-                     * @param _planSupport Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
+                     * 设置Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
+                     * @param _planSupport Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
                      * 
                      */
                     void SetPlanSupport(const bool& _planSupport);
@@ -228,19 +224,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool PlanSupportHasBeenSet() const;
 
                     /**
-                     * 获取Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return DiffIPWhitelist Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Comparison between the latest IP allowlist and the current IP allowlist.
+                     * @return DiffIPWhitelist Comparison between the latest IP allowlist and the current IP allowlist.
                      * 
                      */
                     DiffIPWhitelist GetDiffIPWhitelist() const;
 
                     /**
-                     * 设置Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _diffIPWhitelist Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Comparison between the latest IP allowlist and the current IP allowlist.
+                     * @param _diffIPWhitelist Comparison between the latest IP allowlist and the current IP allowlist.
                      * 
                      */
                     void SetDiffIPWhitelist(const DiffIPWhitelist& _diffIPWhitelist);
@@ -255,13 +247,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * ID of the site.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of domain names.
+                     * Domain name list.
                      */
                     std::vector<std::string> m_hosts;
                     bool m_hostsHasBeenSet;
@@ -273,40 +265,38 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_proxyIdsHasBeenSet;
 
                     /**
-                     * The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * IP allowlist of the current version.
                      */
                     IPWhitelist m_currentIPWhitelist;
                     bool m_currentIPWhitelistHasBeenSet;
 
                     /**
-                     * Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
+                     * Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
                      */
                     bool m_needUpdate;
                     bool m_needUpdateHasBeenSet;
 
                     /**
-                     * Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+                     * Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
+                     * Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
                      */
                     bool m_planSupport;
                     bool m_planSupportHasBeenSet;
 
                     /**
-                     * Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Comparison between the latest IP allowlist and the current IP allowlist.
                      */
                     DiffIPWhitelist m_diffIPWhitelist;
                     bool m_diffIPWhitelistHasBeenSet;

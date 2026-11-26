@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced origin optimization config.
+                * Advanced origin optimization configuration parameters.
                 */
                 class AdvancedOriginRoutingParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: Self adaptive. The domain name must enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographic location of the client and origin server, without the need to manually specify. For example, if www.example.com enables "advanced origin optimization" but "smart acceleration" is turned off or only partial match conditions are enabled, "advanced origin optimization" will not be effective.</li>
-                     * @return Direction <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: Self adaptive. The domain name must enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographic location of the client and origin server, without the need to manually specify. For example, if www.example.com enables "advanced origin optimization" but "smart acceleration" is turned off or only partial match conditions are enabled, "advanced origin optimization" will not be effective.</li>
+                     * 获取<p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: self-adaptation. The domain name needs to enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographical locations of the client and the origin server, with no need to manually specify. For example, if www.example.com enables "advanced origin optimization", but "smart acceleration" is turned off or only partially enabled for match conditions, "advanced origin optimization" will not be effective.</li>
+                     * @return Direction <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: self-adaptation. The domain name needs to enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographical locations of the client and the origin server, with no need to manually specify. For example, if www.example.com enables "advanced origin optimization", but "smart acceleration" is turned off or only partially enabled for match conditions, "advanced origin optimization" will not be effective.</li>
                      * 
                      */
                     std::string GetDirection() const;
 
                     /**
-                     * 设置<p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: Self adaptive. The domain name must enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographic location of the client and origin server, without the need to manually specify. For example, if www.example.com enables "advanced origin optimization" but "smart acceleration" is turned off or only partial match conditions are enabled, "advanced origin optimization" will not be effective.</li>
-                     * @param _direction <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: Self adaptive. The domain name must enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographic location of the client and origin server, without the need to manually specify. For example, if www.example.com enables "advanced origin optimization" but "smart acceleration" is turned off or only partial match conditions are enabled, "advanced origin optimization" will not be effective.</li>
+                     * 设置<p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: self-adaptation. The domain name needs to enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographical locations of the client and the origin server, with no need to manually specify. For example, if www.example.com enables "advanced origin optimization", but "smart acceleration" is turned off or only partially enabled for match conditions, "advanced origin optimization" will not be effective.</li>
+                     * @param _direction <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: self-adaptation. The domain name needs to enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographical locations of the client and the origin server, with no need to manually specify. For example, if www.example.com enables "advanced origin optimization", but "smart acceleration" is turned off or only partially enabled for match conditions, "advanced origin optimization" will not be effective.</li>
                      * 
                      */
                     void SetDirection(const std::string& _direction);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: Self adaptive. The domain name must enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographic location of the client and origin server, without the need to manually specify. For example, if www.example.com enables "advanced origin optimization" but "smart acceleration" is turned off or only partial match conditions are enabled, "advanced origin optimization" will not be effective.</li>
+                     * <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: self-adaptation. The domain name needs to enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographical locations of the client and the origin server, with no need to manually specify. For example, if www.example.com enables "advanced origin optimization", but "smart acceleration" is turned off or only partially enabled for match conditions, "advanced origin optimization" will not be effective.</li>
                      */
                     std::string m_direction;
                     bool m_directionHasBeenSet;

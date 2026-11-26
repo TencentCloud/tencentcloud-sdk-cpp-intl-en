@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule name
-                     * @return Name Rule name
+                     * 获取Rule name.
+                     * @return Name Rule name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Rule name
-                     * @param _name Rule name
+                     * 设置Rule name.
+                     * @param _name Rule name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
-                     * @return Priority Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+                     * 获取Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
+                     * @return Priority Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
-                     * @param _priority Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+                     * 设置Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
+                     * @param _priority Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
-                     * @return Condition Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+                     * 获取Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
+                     * @return Condition Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
-                     * @param _condition Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+                     * 设置Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
+                     * @param _condition Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -131,26 +131,26 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+                     * 获取JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
-                     * @return InjectJS JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+                     * @return InjectJS JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
                      * 
                      */
                     std::string GetInjectJS() const;
 
                     /**
-                     * 设置JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+                     * 设置JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
-                     * @param _injectJS JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+                     * @param _injectJS JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
                      * 
                      */
@@ -172,27 +172,27 @@ namespace TencentCloud
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Rule name
+                     * Rule name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+                     * Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+                     * Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+                     * JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
                      */
                     std::string m_injectJS;

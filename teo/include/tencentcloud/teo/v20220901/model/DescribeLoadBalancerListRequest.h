@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset of paginated query. Default value: 0.		
-                     * @return Offset Offset of paginated query. Default value: 0.		
+                     * 获取Offset of paginated query. Default value: 0.	
+                     * @return Offset Offset of paginated query. Default value: 0.	
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset of paginated query. Default value: 0.		
-                     * @param _offset Offset of paginated query. Default value: 0.		
+                     * 设置Offset of paginated query. Default value: 0.	
+                     * @param _offset Offset of paginated query. Default value: 0.	
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -107,26 +107,26 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
-                     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
-                     * @param _filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
                      * 
                      */
@@ -148,7 +148,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Offset of paginated query. Default value: 0.		
+                     * Offset of paginated query. Default value: 0.	
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -160,9 +160,9 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+                     * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
                      */
                     std::vector<Filter> m_filters;

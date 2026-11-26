@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HSTS configuration
+                * Hsts configuration
                 */
                 class Hsts : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取MaxAge value. expressed in seconds, maximum value is 1 day.
-                     * @return MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
+                     * 获取MaxAge value, in seconds. Maximum value: 1 day.
+                     * @return MaxAge MaxAge value, in seconds. Maximum value: 1 day.
                      * 
                      */
                     int64_t GetMaxAge() const;
 
                     /**
-                     * 设置MaxAge value. expressed in seconds, maximum value is 1 day.
-                     * @param _maxAge MaxAge value. expressed in seconds, maximum value is 1 day.
+                     * 设置MaxAge value, in seconds. Maximum value: 1 day.
+                     * @param _maxAge MaxAge value, in seconds. Maximum value: 1 day.
                      * 
                      */
                     void SetMaxAge(const int64_t& _maxAge);
@@ -97,26 +97,22 @@ namespace TencentCloud
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the subdomain is included. valid values:.
+                     * 获取Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @return IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+                     * @return IncludeSubDomains Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
                     std::string GetIncludeSubDomains() const;
 
                     /**
-                     * 设置Specifies whether the subdomain is included. valid values:.
+                     * 设置Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @param _includeSubDomains Specifies whether the subdomain is included. valid values:.
+                     * @param _includeSubDomains Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
@@ -130,26 +126,22 @@ namespace TencentCloud
                     bool IncludeSubDomainsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable preloading. valid values:.
+                     * 获取Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @return Preload Whether to enable preloading. valid values:.
+                     * @return Preload Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
                     std::string GetPreload() const;
 
                     /**
-                     * 设置Whether to enable preloading. valid values:.
+                     * 设置Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @param _preload Whether to enable preloading. valid values:.
+                     * @param _preload Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
@@ -165,32 +157,30 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * MaxAge value. expressed in seconds, maximum value is 1 day.
+                     * MaxAge value, in seconds. Maximum value: 1 day.
                      */
                     int64_t m_maxAge;
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * Specifies whether the subdomain is included. valid values:.
+                     * Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      */
                     std::string m_includeSubDomains;
                     bool m_includeSubDomainsHasBeenSet;
 
                     /**
-                     * Whether to enable preloading. valid values:.
+                     * Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      */
                     std::string m_preload;

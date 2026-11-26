@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
+                     * 获取Total number of entries in the query result.
+                     * @return TotalCount Total number of entries in the query result.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Data The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取The top N data list obtained from the statistics of L7 access data by MetricName.
+                     * @return Data The top N data list obtained from the statistics of L7 access data by MetricName.
                      * 
                      */
                     std::vector<TopDataRecord> GetData() const;
@@ -77,14 +75,13 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Total number of query results.
+                     * Total number of entries in the query result.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * The top N data list obtained from the statistics of L7 access data by MetricName.
                      */
                     std::vector<TopDataRecord> m_data;
                     bool m_dataHasBeenSet;

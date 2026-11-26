@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
-                     * @return TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+                     * 获取It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
+                     * @return TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
-                     * @param _taskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+                     * 设置It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
+                     * @param _taskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+                     * It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

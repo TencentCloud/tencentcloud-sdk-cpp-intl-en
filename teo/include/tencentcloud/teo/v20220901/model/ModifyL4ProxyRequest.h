@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Application ID.
-                     * @return ProxyId Application ID.
+                     * 获取App ID.
+                     * @return ProxyId App ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Application ID.
-                     * @param _proxyId Application ID.
+                     * 设置App ID.
+                     * @param _proxyId App ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -85,10 +85,12 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * 获取Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
-                     * @return Ipv6 Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * @return Ipv6 Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
                      * 
@@ -96,10 +98,12 @@ namespace TencentCloud
                     std::string GetIpv6() const;
 
                     /**
-                     * 设置Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * 设置Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
-                     * @param _ipv6 Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * @param _ipv6 Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
                      * 
@@ -114,18 +118,22 @@ namespace TencentCloud
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * 获取Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
-                     * @return AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * @return AccelerateMainland Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
                      * 
                      */
                     std::string GetAccelerateMainland() const;
 
                     /**
-                     * 设置Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * 设置Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
-                     * @param _accelerateMainland Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * @param _accelerateMainland Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
                      * 
                      */
@@ -147,13 +155,14 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Application ID.
+                     * App ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
                      */
@@ -161,7 +170,8 @@ namespace TencentCloud
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+                     * Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
                      */
                     std::string m_accelerateMainland;

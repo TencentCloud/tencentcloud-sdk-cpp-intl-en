@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取JavaScript injection rule list.
-                     * @return JSInjectionRules JavaScript injection rule list.
+                     * 获取List of JavaScript injection rules.
+                     * @return JSInjectionRules List of JavaScript injection rules.
                      * 
                      */
                     std::vector<JSInjectionRule> GetJSInjectionRules() const;
 
                     /**
-                     * 设置JavaScript injection rule list.
-                     * @param _jSInjectionRules JavaScript injection rule list.
+                     * 设置List of JavaScript injection rules.
+                     * @param _jSInjectionRules List of JavaScript injection rules.
                      * 
                      */
                     void SetJSInjectionRules(const std::vector<JSInjectionRule>& _jSInjectionRules);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * JavaScript injection rule list.
+                     * List of JavaScript injection rules.
                      */
                     std::vector<JSInjectionRule> m_jSInjectionRules;
                     bool m_jSInjectionRulesHasBeenSet;

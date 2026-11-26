@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Validate client behavior.
+                * Bot proactive feature recognition client behavior validation.
                 */
                 class AlgDetectJS : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Method to validate client behavior.
-                     * @return Name Method to validate client behavior.
+                     * 获取Operation name.
+                     * @return Name Operation name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Method to validate client behavior.
-                     * @param _name Method to validate client behavior.
+                     * 设置Operation name.
+                     * @param _name Operation name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -69,27 +69,27 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
-                     * @return WorkLevel Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
+                     * 获取Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
+                     * @return WorkLevel Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
                      * 
                      */
                     std::string GetWorkLevel() const;
 
                     /**
-                     * 设置Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
-                     * @param _workLevel Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
+                     * 设置Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
+                     * @param _workLevel Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
                      * 
                      */
                     void SetWorkLevel(const std::string& _workLevel);
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool WorkLevelHasBeenSet() const;
 
                     /**
-                     * 获取Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
-                     * @return ExecuteMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+                     * 获取Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
+                     * @return ExecuteMode Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
                      * 
                      */
                     int64_t GetExecuteMode() const;
 
                     /**
-                     * 设置Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
-                     * @param _executeMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+                     * 设置Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
+                     * @param _executeMode Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
                      * 
                      */
                     void SetExecuteMode(const int64_t& _executeMode);
@@ -123,15 +123,15 @@ namespace TencentCloud
                     bool ExecuteModeHasBeenSet() const;
 
                     /**
-                     * 获取The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
-                     * @return InvalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+                     * 获取Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
+                     * @return InvalidStatTime Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
                      * 
                      */
                     int64_t GetInvalidStatTime() const;
 
                     /**
-                     * 设置The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
-                     * @param _invalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+                     * 设置Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
+                     * @param _invalidStatTime Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
                      * 
                      */
                     void SetInvalidStatTime(const int64_t& _invalidStatTime);
@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool InvalidStatTimeHasBeenSet() const;
 
                     /**
-                     * 获取The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
-                     * @return InvalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+                     * 获取Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
+                     * @return InvalidThreshold Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
                      * 
                      */
                     int64_t GetInvalidThreshold() const;
 
                     /**
-                     * 设置The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
-                     * @param _invalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+                     * 设置Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
+                     * @param _invalidThreshold Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
                      * 
                      */
                     void SetInvalidThreshold(const int64_t& _invalidThreshold);
@@ -165,15 +165,15 @@ namespace TencentCloud
                     bool InvalidThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Client behavior validation results.
-                     * @return AlgDetectResults Client behavior validation results.
+                     * 获取Bot proactive feature recognition client behavior validation result.
+                     * @return AlgDetectResults Bot proactive feature recognition client behavior validation result.
                      * 
                      */
                     std::vector<AlgDetectResult> GetAlgDetectResults() const;
 
                     /**
-                     * 设置Client behavior validation results.
-                     * @param _algDetectResults Client behavior validation results.
+                     * 设置Bot proactive feature recognition client behavior validation result.
+                     * @param _algDetectResults Bot proactive feature recognition client behavior validation result.
                      * 
                      */
                     void SetAlgDetectResults(const std::vector<AlgDetectResult>& _algDetectResults);
@@ -188,40 +188,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Method to validate client behavior.
+                     * Operation name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
+                     * Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
                      */
                     std::string m_workLevel;
                     bool m_workLevelHasBeenSet;
 
                     /**
-                     * Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+                     * Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
                      */
                     int64_t m_executeMode;
                     bool m_executeModeHasBeenSet;
 
                     /**
-                     * The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+                     * Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
                      */
                     int64_t m_invalidStatTime;
                     bool m_invalidStatTimeHasBeenSet;
 
                     /**
-                     * The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+                     * Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
                      */
                     int64_t m_invalidThreshold;
                     bool m_invalidThresholdHasBeenSet;
 
                     /**
-                     * Client behavior validation results.
+                     * Bot proactive feature recognition client behavior validation result.
                      */
                     std::vector<AlgDetectResult> m_algDetectResults;
                     bool m_algDetectResultsHasBeenSet;

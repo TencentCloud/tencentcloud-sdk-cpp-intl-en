@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the site ID.
-                     * @return ZoneId Specifies the site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies the site ID.
-                     * @param _zoneId Specifies the site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the just in time transcoding template, length limited to 64 characters.
-                     * @return TemplateName Name of the just in time transcoding template, length limited to 64 characters.
+                     * 获取Just in time transcoding template name. Length limit: 64 characters.
+                     * @return TemplateName Just in time transcoding template name. Length limit: 64 characters.
                      * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
-                     * 设置Name of the just in time transcoding template, length limited to 64 characters.
-                     * @param _templateName Name of the just in time transcoding template, length limited to 64 characters.
+                     * 设置Just in time transcoding template name. Length limit: 64 characters.
+                     * @param _templateName Just in time transcoding template name. Length limit: 64 characters.
                      * 
                      */
                     void SetTemplateName(const std::string& _templateName);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取Template description, with a length limit of 256 characters. empty by default.
-                     * @return Comment Template description, with a length limit of 256 characters. empty by default.
+                     * 获取Template description information. The length cannot exceed 256 characters. Empty by default.
+                     * @return Comment Template description information. The length cannot exceed 256 characters. Empty by default.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description, with a length limit of 256 characters. empty by default.
-                     * @param _comment Template description, with a length limit of 256 characters. empty by default.
+                     * 设置Template description information. The length cannot exceed 256 characters. Empty by default.
+                     * @param _comment Template description information. The length cannot exceed 256 characters. Empty by default.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -108,27 +108,23 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Enable video stream. valid values:.
+                     * 获取Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-                     * @return VideoStreamSwitch Enable video stream. valid values:.
+<li>off: Disable.</li>Default value: on.
+                     * @return VideoStreamSwitch Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
                      * 
                      */
                     std::string GetVideoStreamSwitch() const;
 
                     /**
-                     * 设置Enable video stream. valid values:.
+                     * 设置Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-                     * @param _videoStreamSwitch Enable video stream. valid values:.
+<li>off: Disable.</li>Default value: on.
+                     * @param _videoStreamSwitch Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
                      * 
                      */
                     void SetVideoStreamSwitch(const std::string& _videoStreamSwitch);
@@ -141,27 +137,23 @@ namespace TencentCloud
                     bool VideoStreamSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Enable audio stream switch. valid values:.
+                     * 获取Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-                     * @return AudioStreamSwitch Enable audio stream switch. valid values:.
+<li>off: Disable.</li>Default value: on.
+                     * @return AudioStreamSwitch Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
                      * 
                      */
                     std::string GetAudioStreamSwitch() const;
 
                     /**
-                     * 设置Enable audio stream switch. valid values:.
+                     * 设置Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-                     * @param _audioStreamSwitch Enable audio stream switch. valid values:.
+<li>off: Disable.</li>Default value: on.
+                     * @param _audioStreamSwitch Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
                      * 
                      */
                     void SetAudioStreamSwitch(const std::string& _audioStreamSwitch);
@@ -174,15 +166,15 @@ namespace TencentCloud
                     bool AudioStreamSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
-                     * @return VideoTemplate Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+                     * 获取Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
+                     * @return VideoTemplate Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
                      * 
                      */
                     VideoTemplateInfo GetVideoTemplate() const;
 
                     /**
-                     * 设置Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
-                     * @param _videoTemplate Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+                     * 设置Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
+                     * @param _videoTemplate Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
                      * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfo& _videoTemplate);
@@ -195,15 +187,15 @@ namespace TencentCloud
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
-                     * @return AudioTemplate Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+                     * 获取Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
+                     * @return AudioTemplate Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
                      * 
                      */
                     AudioTemplateInfo GetAudioTemplate() const;
 
                     /**
-                     * 设置Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
-                     * @param _audioTemplate Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+                     * 设置Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
+                     * @param _audioTemplate Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
                      * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfo& _audioTemplate);
@@ -218,49 +210,47 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Name of the just in time transcoding template, length limited to 64 characters.
+                     * Just in time transcoding template name. Length limit: 64 characters.
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * Template description, with a length limit of 256 characters. empty by default.
+                     * Template description information. The length cannot exceed 256 characters. Empty by default.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Enable video stream. valid values:.
+                     * Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
                      */
                     std::string m_videoStreamSwitch;
                     bool m_videoStreamSwitchHasBeenSet;
 
                     /**
-                     * Enable audio stream switch. valid values:.
+                     * Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
                      */
                     std::string m_audioStreamSwitch;
                     bool m_audioStreamSwitchHasBeenSet;
 
                     /**
-                     * Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+                     * Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
                      */
                     VideoTemplateInfo m_videoTemplate;
                     bool m_videoTemplateHasBeenSet;
 
                     /**
-                     * Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+                     * Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
                      */
                     AudioTemplateInfo m_audioTemplate;
                     bool m_audioTemplateHasBeenSet;

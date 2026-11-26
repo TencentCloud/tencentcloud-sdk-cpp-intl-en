@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * NS access type site parameter description.
+                * NS access type site parameter details.
                 */
                 class NSDetail : public AbstractModel
                 {
@@ -50,23 +50,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
-                     * @return CnameSpeedUp Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+                     * 获取Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+                     * @return CnameSpeedUp Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
                      * 
                      */
                     std::string GetCnameSpeedUp() const;
 
                     /**
-                     * 设置Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
-                     * @param _cnameSpeedUp Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+                     * 设置Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+                     * @param _cnameSpeedUp Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
                      * 
                      */
                     void SetCnameSpeedUp(const std::string& _cnameSpeedUp);
@@ -79,23 +79,23 @@ namespace TencentCloud
                     bool CnameSpeedUpHasBeenSet() const;
 
                     /**
-                     * 获取Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
-                     * @return IsFake Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
+                     * 获取Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
+                     * @return IsFake Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
                      * 
                      */
                     int64_t GetIsFake() const;
 
                     /**
-                     * 设置Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
-                     * @param _isFake Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
+                     * 设置Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
+                     * @param _isFake Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
                      * 
                      */
                     void SetIsFake(const int64_t& _isFake);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool IsFakeHasBeenSet() const;
 
                     /**
-                     * 获取Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
-                     * @return OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * 获取Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * @return OwnershipVerification Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
                      * 
                      */
                     OwnershipVerification GetOwnershipVerification() const;
 
                     /**
-                     * 设置Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
-                     * @param _ownershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * 设置Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * @param _ownershipVerification Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
                      * 
                      */
                     void SetOwnershipVerification(const OwnershipVerification& _ownershipVerification);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool OwnershipVerificationHasBeenSet() const;
 
                     /**
-                     * 获取Lists the NS servers currently in use by the selected site detected by EdgeOne.
-                     * @return OriginalNameServers Lists the NS servers currently in use by the selected site detected by EdgeOne.
+                     * 获取List of NS servers currently in use by the site detected by EdgeOne.
+                     * @return OriginalNameServers List of NS servers currently in use by the site detected by EdgeOne.
                      * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
-                     * 设置Lists the NS servers currently in use by the selected site detected by EdgeOne.
-                     * @param _originalNameServers Lists the NS servers currently in use by the selected site detected by EdgeOne.
+                     * 设置List of NS servers currently in use by the site detected by EdgeOne.
+                     * @param _originalNameServers List of NS servers currently in use by the site detected by EdgeOne.
                      * 
                      */
                     void SetOriginalNameServers(const std::vector<std::string>& _originalNameServers);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool OriginalNameServersHasBeenSet() const;
 
                     /**
-                     * 获取Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
-                     * @return NameServers Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+                     * 获取List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
+                     * @return NameServers List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
                      * 
                      */
                     std::vector<std::string> GetNameServers() const;
 
                     /**
-                     * 设置Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
-                     * @param _nameServers Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+                     * 设置List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
+                     * @param _nameServers List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
                      * 
                      */
                     void SetNameServers(const std::vector<std::string>& _nameServers);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool NameServersHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
-                     * @return VanityNameServers Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+                     * 获取User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
+                     * @return VanityNameServers User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
                      * 
                      */
                     VanityNameServers GetVanityNameServers() const;
 
                     /**
-                     * 设置Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
-                     * @param _vanityNameServers Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+                     * 设置User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
+                     * @param _vanityNameServers User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
                      * 
                      */
                     void SetVanityNameServers(const VanityNameServers& _vanityNameServers);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool VanityNameServersHasBeenSet() const;
 
                     /**
-                     * 获取Describes the IP address information of the user-customized NS server.
-                     * @return VanityNameServersIps Describes the IP address information of the user-customized NS server.
+                     * 获取IP address information corresponding to the user-customized NS server.
+                     * @return VanityNameServersIps IP address information corresponding to the user-customized NS server.
                      * 
                      */
                     std::vector<VanityNameServersIps> GetVanityNameServersIps() const;
 
                     /**
-                     * 设置Describes the IP address information of the user-customized NS server.
-                     * @param _vanityNameServersIps Describes the IP address information of the user-customized NS server.
+                     * 设置IP address information corresponding to the user-customized NS server.
+                     * @param _vanityNameServersIps IP address information corresponding to the user-customized NS server.
                      * 
                      */
                     void SetVanityNameServersIps(const std::vector<VanityNameServersIps>& _vanityNameServersIps);
@@ -215,47 +215,47 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+                     * Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
                      */
                     std::string m_cnameSpeedUp;
                     bool m_cnameSpeedUpHasBeenSet;
 
                     /**
-                     * Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
+                     * Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
                      */
                     int64_t m_isFake;
                     bool m_isFakeHasBeenSet;
 
                     /**
-                     * Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
                      */
                     OwnershipVerification m_ownershipVerification;
                     bool m_ownershipVerificationHasBeenSet;
 
                     /**
-                     * Lists the NS servers currently in use by the selected site detected by EdgeOne.
+                     * List of NS servers currently in use by the site detected by EdgeOne.
                      */
                     std::vector<std::string> m_originalNameServers;
                     bool m_originalNameServersHasBeenSet;
 
                     /**
-                     * Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+                     * List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
                      */
                     std::vector<std::string> m_nameServers;
                     bool m_nameServersHasBeenSet;
 
                     /**
-                     * Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+                     * User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
                      */
                     VanityNameServers m_vanityNameServers;
                     bool m_vanityNameServersHasBeenSet;
 
                     /**
-                     * Describes the IP address information of the user-customized NS server.
+                     * IP address information corresponding to the user-customized NS server.
                      */
                     std::vector<VanityNameServersIps> m_vanityNameServersIps;
                     bool m_vanityNameServersIpsHasBeenSet;

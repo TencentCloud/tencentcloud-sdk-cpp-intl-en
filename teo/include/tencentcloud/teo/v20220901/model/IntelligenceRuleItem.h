@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bot intelligence rule items
+                * Bot intelligent analysis rule detail
                 */
                 class IntelligenceRuleItem : public AbstractModel
                 {
@@ -47,31 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
-                     * @return Label The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
+                     * 获取Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
+                     * @return Label Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
-                     * @param _label The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
+                     * 设置Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
+                     * @param _label Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -84,35 +84,35 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
-                     * @return Action The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+                     * 获取Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
+                     * @return Action Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
-                     * @param _action The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+                     * 设置Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
+                     * @param _action Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -127,22 +127,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
+                     * Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+                     * Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

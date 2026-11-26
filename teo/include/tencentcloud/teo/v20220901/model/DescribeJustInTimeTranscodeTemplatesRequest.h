@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the site ID.
-                     * @return ZoneId Specifies the site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies the site ID.
-                     * @param _zoneId Specifies the site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
-                     * @return Filters Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
+                     * 获取Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
+                     * @return Filters Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
-                     * @param _filters Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
+                     * 设置Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
+                     * @param _filters Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
-                     * @return SortBy Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
+                     * 获取Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
+                     * @return SortBy Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
                      * 
                      */
                     std::string GetSortBy() const;
 
                     /**
-                     * 设置Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
-                     * @param _sortBy Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
+                     * 设置Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
+                     * @param _sortBy Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SortByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
-                     * @return SortOrder Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
+                     * 获取Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
+                     * @return SortOrder Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
-                     * @param _sortOrder Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
+                     * 设置Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
+                     * @param _sortOrder Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool SortOrderHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset. Default value: 0.
-                     * @return Offset Paging offset. Default value: 0.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Paging offset. Default value: 0.
-                     * @param _offset Paging offset. Default value: 0.
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries. default value: 20. maximum value: 1000.
-                     * @return Limit Number of returned entries. default value: 20. maximum value: 1000.
+                     * 获取Number of returned entries. Default value: 20. Maximum value: 1000.
+                     * @return Limit Number of returned entries. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries. default value: 20. maximum value: 1000.
-                     * @param _limit Number of returned entries. default value: 20. maximum value: 1000.
+                     * 设置Number of returned entries. Default value: 20. Maximum value: 1000.
+                     * @param _limit Number of returned entries. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -172,37 +172,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
+                     * Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, authorized just in time transcoding templates under the current ZoneId are returned by default. The detailed filter criteria are as follows: <li>template-name: filter by template name in bulk. For example: mytemplate;</li><li>template-type: filter by template type in bulk. For example: preset or custom.</li><li>template-id: filter by template ID in bulk. For example: C1LZ7982VgTpYhJ7M.</li>Empty by default.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sorting field. valid values: <li>createTime: template creation time.</li> default value: createTime.
+                     * Sorting field. Valid values: <li>createTime: template creation time.</li> Default value: createTime.
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
 
                     /**
-                     * Sorting method. valid values: <li>`asc`: ascending order;</li><li>`desc`: descending order.</li> default value: `desc`.
+                     * Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li> Default value: desc.
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;
 
                     /**
-                     * Paging offset. Default value: 0.
+                     * Pagination offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries. default value: 20. maximum value: 1000.
+                     * Number of returned entries. Default value: 20. Maximum value: 1000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

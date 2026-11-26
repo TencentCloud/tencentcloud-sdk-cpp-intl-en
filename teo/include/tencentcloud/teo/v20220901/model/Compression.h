@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart compression configuration.
+                * Intelligent compression configuration.
                 */
                 class Compression : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,23 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
-                     * @return Algorithms Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+                     * 获取List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
+                     * @return Algorithms List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
                      * 
                      */
                     std::vector<std::string> GetAlgorithms() const;
 
                     /**
-                     * 设置Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
-                     * @param _algorithms Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+                     * 设置List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
+                     * @param _algorithms List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
                      * 
                      */
                     void SetAlgorithms(const std::vector<std::string>& _algorithms);
@@ -107,17 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+                     * List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
                      */
                     std::vector<std::string> m_algorithms;
                     bool m_algorithmsHasBeenSet;

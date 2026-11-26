@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTPS Mutual authentication.
+                * HTTPS mutual authentication.
                 */
                 class MutualTLS : public AbstractModel
                 {
@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
-                     * @return Switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+                     * 获取Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
-                     * @param _switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+                     * 设置Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,18 +77,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Mutual authentication certificate list.
+                     * 获取List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
-                     * @return CertInfos Mutual authentication certificate list.
+                     * @return CertInfos List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      * 
                      */
                     std::vector<CertificateInfo> GetCertInfos() const;
 
                     /**
-                     * 设置Mutual authentication certificate list.
+                     * 设置List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
-                     * @param _certInfos Mutual authentication certificate list.
+                     * @param _certInfos List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      * 
                      */
@@ -96,13 +104,15 @@ Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you 
                 private:
 
                     /**
-                     * Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+                     * Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Mutual authentication certificate list.
+                     * List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
                      */
                     std::vector<CertificateInfo> m_certInfos;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Service monitoring data record for reasoning.
+                * Reasoning service monitoring data records.
                 */
                 class InferenceServiceMonitorRecord : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the inference service.
-                     * @return ServiceId ID of the inference service.
+                     * 获取Inference service ID.
+                     * @return ServiceId Inference service ID.
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置ID of the inference service.
-                     * @param _serviceId ID of the inference service.
+                     * 设置Inference service ID.
+                     * @param _serviceId Inference service ID.
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MetricNameHasBeenSet() const;
 
                     /**
-                     * 获取Detailed service monitoring data for reasoning.
-                     * @return InferenceServiceMonitorItems Detailed service monitoring data for reasoning.
+                     * 获取Detailed reasoning service monitoring data.
+                     * @return InferenceServiceMonitorItems Detailed reasoning service monitoring data.
                      * 
                      */
                     std::vector<InferenceServiceMonitorItem> GetInferenceServiceMonitorItems() const;
 
                     /**
-                     * 设置Detailed service monitoring data for reasoning.
-                     * @param _inferenceServiceMonitorItems Detailed service monitoring data for reasoning.
+                     * 设置Detailed reasoning service monitoring data.
+                     * @param _inferenceServiceMonitorItems Detailed reasoning service monitoring data.
                      * 
                      */
                     void SetInferenceServiceMonitorItems(const std::vector<InferenceServiceMonitorItem>& _inferenceServiceMonitorItems);
@@ -113,7 +113,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the inference service.
+                     * Inference service ID.
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;
@@ -125,7 +125,7 @@ namespace TencentCloud
                     bool m_metricNameHasBeenSet;
 
                     /**
-                     * Detailed service monitoring data for reasoning.
+                     * Detailed reasoning service monitoring data.
                      */
                     std::vector<InferenceServiceMonitorItem> m_inferenceServiceMonitorItems;
                     bool m_inferenceServiceMonitorItemsHasBeenSet;

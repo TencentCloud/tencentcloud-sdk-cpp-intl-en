@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IDs of newly added forwarding rules, returned as an array.
-                     * @return L4ProxyRuleIds IDs of newly added forwarding rules, returned as an array.
+                     * 获取ID of newly added forwarding rule, returned as an array.
+                     * @return L4ProxyRuleIds ID of newly added forwarding rule, returned as an array.
                      * 
                      */
                     std::vector<std::string> GetL4ProxyRuleIds() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IDs of newly added forwarding rules, returned as an array.
+                     * ID of newly added forwarding rule, returned as an array.
                      */
                     std::vector<std::string> m_l4ProxyRuleIds;
                     bool m_l4ProxyRuleIdsHasBeenSet;

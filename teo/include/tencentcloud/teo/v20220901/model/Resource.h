@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Billable resource
+                * Billing resource
                 */
                 class Resource : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The resource ID.
-                     * @return Id The resource ID.
+                     * 获取Resource ID.
+                     * @return Id Resource ID.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置The resource ID.
-                     * @param _id The resource ID.
+                     * 设置Resource ID.
+                     * @param _id Resource ID.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -69,19 +69,19 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode
-`0`: Pay-as-you-go
-                     * @return PayMode Billing mode
-`0`: Pay-as-you-go
+                     * 获取Payment mode. Valid values:
+<li>0: postpaid.</li>
+                     * @return PayMode Payment mode. Valid values:
+<li>0: postpaid.</li>
                      * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode
-`0`: Pay-as-you-go
-                     * @param _payMode Billing mode
-`0`: Pay-as-you-go
+                     * 设置Payment mode. Valid values:
+<li>0: postpaid.</li>
+                     * @param _payMode Payment mode. Valid values:
+<li>0: postpaid.</li>
                      * 
                      */
                     void SetPayMode(const int64_t& _payMode);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取The creation time.
-                     * @return CreateTime The creation time.
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置The creation time.
-                     * @param _createTime The creation time.
+                     * 设置Creation time.
+                     * @param _createTime Creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The effective time.
-                     * @return EnableTime The effective time.
+                     * 获取Effective time.
+                     * @return EnableTime Effective time.
                      * 
                      */
                     std::string GetEnableTime() const;
 
                     /**
-                     * 设置The effective time.
-                     * @param _enableTime The effective time.
+                     * 设置Effective time.
+                     * @param _enableTime Effective time.
                      * 
                      */
                     void SetEnableTime(const std::string& _enableTime);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool EnableTimeHasBeenSet() const;
 
                     /**
-                     * 获取The expiration time.
-                     * @return ExpireTime The expiration time.
+                     * 获取Expiration time.
+                     * @return ExpireTime Expiration time.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置The expiration time.
-                     * @param _expireTime The expiration time.
+                     * 设置Expiration time.
+                     * @param _expireTime Expiration time.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -157,27 +157,27 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
-                     * @return Status The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
+                     * 获取Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
+                     * @return Status Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
-                     * @param _status The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
+                     * 设置Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
+                     * @param _status Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Pricing query parameter
-                     * @return Sv Pricing query parameter
+                     * 获取Price inquiry parameters.
+                     * @return Sv Price inquiry parameters.
                      * 
                      */
                     std::vector<Sv> GetSv() const;
 
                     /**
-                     * 设置Pricing query parameter
-                     * @param _sv Pricing query parameter
+                     * 设置Price inquiry parameters.
+                     * @param _sv Price inquiry parameters.
                      * 
                      */
                     void SetSv(const std::vector<Sv>& _sv);
@@ -211,27 +211,27 @@ namespace TencentCloud
                     bool SvHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
-                     * @return AutoRenewFlag Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
+                     * 获取Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
+                     * @return AutoRenewFlag Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
                      * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
-                     * @param _autoRenewFlag Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
+                     * 设置Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
+                     * @param _autoRenewFlag Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
                      * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
@@ -244,15 +244,15 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取ID of the resource associated with the plan.
-                     * @return PlanId ID of the resource associated with the plan.
+                     * 获取ID of the associated resource in the package.
+                     * @return PlanId ID of the associated resource in the package.
                      * 
                      */
                     std::string GetPlanId() const;
 
                     /**
-                     * 设置ID of the resource associated with the plan.
-                     * @param _planId ID of the resource associated with the plan.
+                     * 设置ID of the associated resource in the package.
+                     * @param _planId ID of the associated resource in the package.
                      * 
                      */
                     void SetPlanId(const std::string& _planId);
@@ -265,27 +265,27 @@ namespace TencentCloud
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
-                     * @return Area Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
+                     * 获取Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
+                     * @return Area Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
-                     * @param _area Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
+                     * 设置Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
+                     * @param _area Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -298,31 +298,27 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Group The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
+                     * @return Group Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
                      * 
                      */
                     std::string GetGroup() const;
 
                     /**
-                     * 设置The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _group The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
+                     * @param _group Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
                      * 
                      */
                     void SetGroup(const std::string& _group);
@@ -335,19 +331,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupHasBeenSet() const;
 
                     /**
-                     * 获取The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneNumber The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of sites bound to the current resource.
+                     * @return ZoneNumber Number of sites bound to the current resource.
                      * 
                      */
                     int64_t GetZoneNumber() const;
 
                     /**
-                     * 设置The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneNumber The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of sites bound to the current resource.
+                     * @param _zoneNumber Number of sites bound to the current resource.
                      * 
                      */
                     void SetZoneNumber(const int64_t& _zoneNumber);
@@ -360,18 +352,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneNumberHasBeenSet() const;
 
                     /**
-                     * 获取Resource tag type. Valid values:
+                     * 获取Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
-                     * @return Type Resource tag type. Valid values:
+                     * @return Type Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Resource tag type. Valid values:
+                     * 设置Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
-                     * @param _type Resource tag type. Valid values:
+                     * @param _type Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
                      * 
                      */
@@ -387,94 +379,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The resource ID.
+                     * Resource ID.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Billing mode
-`0`: Pay-as-you-go
+                     * Payment mode. Valid values:
+<li>0: postpaid.</li>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * The creation time.
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * The effective time.
+                     * Effective time.
                      */
                     std::string m_enableTime;
                     bool m_enableTimeHasBeenSet;
 
                     /**
-                     * The expiration time.
+                     * Expiration time.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
+                     * Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Pricing query parameter
+                     * Price inquiry parameters.
                      */
                     std::vector<Sv> m_sv;
                     bool m_svHasBeenSet;
 
                     /**
-                     * Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
+                     * Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * ID of the resource associated with the plan.
+                     * ID of the associated resource in the package.
                      */
                     std::string m_planId;
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
+                     * Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;
 
                     /**
-                     * The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of sites bound to the current resource.
                      */
                     int64_t m_zoneNumber;
                     bool m_zoneNumberHasBeenSet;
 
                     /**
-                     * Resource tag type. Valid values:
+                     * Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
                      */
                     std::string m_type;

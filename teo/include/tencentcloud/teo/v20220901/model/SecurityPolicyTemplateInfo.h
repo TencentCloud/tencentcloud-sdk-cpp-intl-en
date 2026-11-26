@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The zone ID to which the policy template belongs.
-                     * @return ZoneId The zone ID to which the policy template belongs.
+                     * 获取Site ID of the policy template.
+                     * @return ZoneId Site ID of the policy template.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The zone ID to which the policy template belongs.
-                     * @param _zoneId The zone ID to which the policy template belongs.
+                     * 设置Site ID of the policy template.
+                     * @param _zoneId Site ID of the policy template.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the policy template.
-                     * @return TemplateName The name of the policy template.
+                     * 获取Policy template name.
+                     * @return TemplateName Policy template name.
                      * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
-                     * 设置The name of the policy template.
-                     * @param _templateName The name of the policy template.
+                     * 设置Policy template name.
+                     * @param _templateName Policy template name.
                      * 
                      */
                     void SetTemplateName(const std::string& _templateName);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取Information about domains bound to the policy template.
-                     * @return BindDomains Information about domains bound to the policy template.
+                     * 获取Domain name info bound to the policy template.
+                     * @return BindDomains Domain name info bound to the policy template.
                      * 
                      */
                     std::vector<BindDomainInfo> GetBindDomains() const;
 
                     /**
-                     * 设置Information about domains bound to the policy template.
-                     * @param _bindDomains Information about domains bound to the policy template.
+                     * 设置Domain name info bound to the policy template.
+                     * @param _bindDomains Domain name info bound to the policy template.
                      * 
                      */
                     void SetBindDomains(const std::vector<BindDomainInfo>& _bindDomains);
@@ -134,7 +134,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The zone ID to which the policy template belongs.
+                     * Site ID of the policy template.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -146,13 +146,13 @@ namespace TencentCloud
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * The name of the policy template.
+                     * Policy template name.
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * Information about domains bound to the policy template.
+                     * Domain name info bound to the policy template.
                      */
                     std::vector<BindDomainInfo> m_bindDomains;
                     bool m_bindDomainsHasBeenSet;

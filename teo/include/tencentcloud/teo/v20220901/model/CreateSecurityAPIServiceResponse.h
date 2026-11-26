@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API service ID list.
-                     * @return APIServiceIds API service ID list.
+                     * 获取List of API service IDs.
+                     * @return APIServiceIds List of API service IDs.
                      * 
                      */
                     std::vector<std::string> GetAPIServiceIds() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * API service ID list.
+                     * List of API service IDs.
                      */
                     std::vector<std::string> m_aPIServiceIds;
                     bool m_aPIServiceIdsHasBeenSet;

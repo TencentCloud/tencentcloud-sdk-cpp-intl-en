@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Paginated query limit. default value: 20, maximum value: 100.
-                     * @return Limit Paginated query limit. default value: 20, maximum value: 100.
+                     * 获取Paginated query limit. Default value: 20, maximum value: 100.
+                     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Paginated query limit. default value: 20, maximum value: 100.
-                     * @param _limit Paginated query limit. default value: 20, maximum value: 100.
+                     * 设置Paginated query limit. Default value: 20, maximum value: 100.
+                     * @param _limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Paginated query limit. default value: 20, maximum value: 100.
+                     * Paginated query limit. Default value: 20, maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

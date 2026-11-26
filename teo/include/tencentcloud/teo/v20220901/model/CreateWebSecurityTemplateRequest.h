@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
-                     * @return ZoneId Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
+                     * 获取Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
+                     * @return ZoneId Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
-                     * @param _zoneId Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
+                     * 设置Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
+                     * @param _zoneId Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
-                     * @return TemplateName Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
+                     * 获取Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
+                     * @return TemplateName Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
                      * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
-                     * 设置Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
-                     * @param _templateName Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
+                     * 设置Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
+                     * @param _templateName Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
                      * 
                      */
                     void SetTemplateName(const std::string& _templateName);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TemplateNameHasBeenSet() const;
 
                     /**
-                     * 获取Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
-                     * @return SecurityPolicy Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
+                     * 获取Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
+                     * @return SecurityPolicy Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
                      * 
                      */
                     SecurityPolicy GetSecurityPolicy() const;
 
                     /**
-                     * 设置Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
-                     * @param _securityPolicy Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
+                     * 设置Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
+                     * @param _securityPolicy Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
                      * 
                      */
                     void SetSecurityPolicy(const SecurityPolicy& _securityPolicy);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID. Explicitly identifies the zone to which the policy template belongs for access control purposes.
+                     * Site ID. This parameter clarifies the site to which the policy template belongs in terms of access permission.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Policy template name. Composed of Chinese characters, letters, digits, and underscores. Cannot begin with an underscore and must be less than or equal to 32 characters.
+                     * Policy template name. It consists of Chinese characters, letters, digits, and underscores. It cannot begin with an underscore and cannot exceed 32 characters in length.
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;
 
                     /**
-                     * Web security policy template configuration. Generates default config if empty. Supported: Exception rules, custom rules, rate limiting rules, managed rules. Not supported: Bot management rules (under development).
+                     * Configuration file content of the security policy template. If the field is empty, a default configuration is generated. Currently supports exception rules, custom rules, rate limiting rules, and managed rule configuration in the Web protection module. Configure the security policy through expression syntax. Bot management rule configuration is not currently supported and is under development.
                      */
                     SecurityPolicy m_securityPolicy;
                     bool m_securityPolicyHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Status Code Cache TTL configuration internal structure.
+                * Internal structure of the status code cache TTL config.
                 */
                 class StatusCodeCacheParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
-                     * @return StatusCode Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+                     * 获取Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+                     * @return StatusCode Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
-                     * @param _statusCode Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+                     * 设置Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+                     * @param _statusCode Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取Cache time value in seconds. value range: 0–31536000.
-                     * @return CacheTime Cache time value in seconds. value range: 0–31536000.
+                     * 获取Cache time value, in seconds. Value range: 0–31536000.
+                     * @return CacheTime Cache time value, in seconds. Value range: 0–31536000.
                      * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
-                     * 设置Cache time value in seconds. value range: 0–31536000.
-                     * @param _cacheTime Cache time value in seconds. value range: 0–31536000.
+                     * 设置Cache time value, in seconds. Value range: 0–31536000.
+                     * @param _cacheTime Cache time value, in seconds. Value range: 0–31536000.
                      * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+                     * Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * Cache time value in seconds. value range: 0–31536000.
+                     * Cache time value, in seconds. Value range: 0–31536000.
                      */
                     int64_t m_cacheTime;
                     bool m_cacheTimeHasBeenSet;

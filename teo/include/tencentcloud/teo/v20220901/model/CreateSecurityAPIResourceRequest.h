@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.		
-                     * @return ZoneId Zone ID.		
+                     * 获取Zone ID.	
+                     * @return ZoneId Zone ID.	
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.		
-                     * @param _zoneId Zone ID.		
+                     * 设置Zone ID.	
+                     * @param _zoneId Zone ID.	
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取API resource list.
-                     * @return APIResources API resource list.
+                     * 获取List of API resources.
+                     * @return APIResources List of API resources.
                      * 
                      */
                     std::vector<APIResource> GetAPIResources() const;
 
                     /**
-                     * 设置API resource list.
-                     * @param _aPIResources API resource list.
+                     * 设置List of API resources.
+                     * @param _aPIResources List of API resources.
                      * 
                      */
                     void SetAPIResources(const std::vector<APIResource>& _aPIResources);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.		
+                     * Zone ID.	
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * API resource list.
+                     * List of API resources.
                      */
                     std::vector<APIResource> m_aPIResources;
                     bool m_aPIResourcesHasBeenSet;

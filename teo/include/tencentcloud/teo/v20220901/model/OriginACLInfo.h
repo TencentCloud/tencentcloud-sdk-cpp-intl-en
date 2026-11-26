@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The binding relationship between L7 acceleration domains/layer-4 proxy instances and origin IP ranges contains both origin IP range details and a switchable origin IP range list.
+                * Binding relationship between the layer-7 acceleration domain name/layer-4 proxy instance and the origin IP range, including the origin IP range details and the list of switchable origin IP ranges.
                 */
                 class OriginACLInfo : public AbstractModel
                 {
@@ -49,15 +49,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
-                     * @return L7Hosts The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+                     * 获取<p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+                     * @return L7EnableMode <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+                     * 
+                     */
+                    std::string GetL7EnableMode() const;
+
+                    /**
+                     * 设置<p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+                     * @param _l7EnableMode <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+                     * 
+                     */
+                    void SetL7EnableMode(const std::string& _l7EnableMode);
+
+                    /**
+                     * 判断参数 L7EnableMode 是否已赋值
+                     * @return L7EnableMode 是否已赋值
+                     * 
+                     */
+                    bool L7EnableModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+                     * @return L7Hosts <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
                      * 
                      */
                     std::vector<std::string> GetL7Hosts() const;
 
                     /**
-                     * 设置The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
-                     * @param _l7Hosts The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+                     * 设置<p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+                     * @param _l7Hosts <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
                      * 
                      */
                     void SetL7Hosts(const std::vector<std::string>& _l7Hosts);
@@ -70,15 +91,36 @@ namespace TencentCloud
                     bool L7HostsHasBeenSet() const;
 
                     /**
-                     * 获取The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
-                     * @return L4ProxyIds The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+                     * 获取<p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+                     * @return L4EnableMode <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+                     * 
+                     */
+                    std::string GetL4EnableMode() const;
+
+                    /**
+                     * 设置<p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+                     * @param _l4EnableMode <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+                     * 
+                     */
+                    void SetL4EnableMode(const std::string& _l4EnableMode);
+
+                    /**
+                     * 判断参数 L4EnableMode 是否已赋值
+                     * @return L4EnableMode 是否已赋值
+                     * 
+                     */
+                    bool L4EnableModeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+                     * @return L4ProxyIds <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
                      * 
                      */
                     std::vector<std::string> GetL4ProxyIds() const;
 
                     /**
-                     * 设置The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
-                     * @param _l4ProxyIds The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+                     * 设置<p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+                     * @param _l4ProxyIds <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
                      * 
                      */
                     void SetL4ProxyIds(const std::vector<std::string>& _l4ProxyIds);
@@ -91,19 +133,15 @@ namespace TencentCloud
                     bool L4ProxyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return CurrentOriginACL Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
+                     * @return CurrentOriginACL <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
                      * 
                      */
                     CurrentOriginACL GetCurrentOriginACL() const;
 
                     /**
-                     * 设置Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _currentOriginACL Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
+                     * @param _currentOriginACL <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
                      * 
                      */
                     void SetCurrentOriginACL(const CurrentOriginACL& _currentOriginACL);
@@ -116,19 +154,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool CurrentOriginACLHasBeenSet() const;
 
                     /**
-                     * 获取When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return NextOriginACL When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
+                     * @return NextOriginACL <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
                      * 
                      */
                     NextOriginACL GetNextOriginACL() const;
 
                     /**
-                     * 设置When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _nextOriginACL When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
+                     * @param _nextOriginACL <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
                      * 
                      */
                     void SetNextOriginACL(const NextOriginACL& _nextOriginACL);
@@ -141,27 +175,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool NextOriginACLHasBeenSet() const;
 
                     /**
-                     * 获取Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
-                     * @return Status Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
+                     * 获取<p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
+                     * @return Status <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
-                     * @param _status Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
+                     * 设置<p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
+                     * @param _status <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -174,15 +196,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Origin protection back-to-origin ACL control domain.
-                     * @return OriginACLFamily Origin protection back-to-origin ACL control domain.
+                     * 获取<p>Origin protection origin-pull ACL control domain.</p>
+                     * @return OriginACLFamily <p>Origin protection origin-pull ACL control domain.</p>
                      * 
                      */
                     std::string GetOriginACLFamily() const;
 
                     /**
-                     * 设置Origin protection back-to-origin ACL control domain.
-                     * @param _originACLFamily Origin protection back-to-origin ACL control domain.
+                     * 设置<p>Origin protection origin-pull ACL control domain.</p>
+                     * @param _originACLFamily <p>Origin protection origin-pull ACL control domain.</p>
                      * 
                      */
                     void SetOriginACLFamily(const std::string& _originACLFamily);
@@ -197,42 +219,49 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+                     * <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+                     */
+                    std::string m_l7EnableMode;
+                    bool m_l7EnableModeHasBeenSet;
+
+                    /**
+                     * <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
                      */
                     std::vector<std::string> m_l7Hosts;
                     bool m_l7HostsHasBeenSet;
 
                     /**
-                     * The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+                     * <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+                     */
+                    std::string m_l4EnableMode;
+                    bool m_l4EnableModeHasBeenSet;
+
+                    /**
+                     * <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
                      */
                     std::vector<std::string> m_l4ProxyIds;
                     bool m_l4ProxyIdsHasBeenSet;
 
                     /**
-                     * Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
                      */
                     CurrentOriginACL m_currentOriginACL;
                     bool m_currentOriginACLHasBeenSet;
 
                     /**
-                     * When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
                      */
                     NextOriginACL m_nextOriginACL;
                     bool m_nextOriginACLHasBeenSet;
 
                     /**
-                     * Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
+                     * <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Origin protection back-to-origin ACL control domain.
+                     * <p>Origin protection origin-pull ACL control domain.</p>
                      */
                     std::string m_originACLFamily;
                     bool m_originACLFamilyHasBeenSet;

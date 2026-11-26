@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/ComplianceRestriction.h>
 
 
 namespace TencentCloud
@@ -47,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Function ID.
-                     * @return FunctionId Function ID.
+                     * 获取<p>Function ID.</p>
+                     * @return FunctionId <p>Function ID.</p>
                      * 
                      */
                     std::string GetFunctionId() const;
 
                     /**
-                     * 设置Function ID.
-                     * @param _functionId Function ID.
+                     * 设置<p>Function ID.</p>
+                     * @param _functionId <p>Function ID.</p>
                      * 
                      */
                     void SetFunctionId(const std::string& _functionId);
@@ -68,15 +69,15 @@ namespace TencentCloud
                     bool FunctionIdHasBeenSet() const;
 
                     /**
-                     * 获取Zone ID.
-                     * @return ZoneId Zone ID.
+                     * 获取<p>Site ID.</p>
+                     * @return ZoneId <p>Site ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.
-                     * @param _zoneId Zone ID.
+                     * 设置<p>Site ID.</p>
+                     * @param _zoneId <p>Site ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -89,15 +90,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Function name.
-                     * @return Name Function name.
+                     * 获取<p>Function name.</p>
+                     * @return Name <p>Function name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Function name.
-                     * @param _name Function name.
+                     * 设置<p>Function name.</p>
+                     * @param _name <p>Function name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -110,15 +111,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Function description.
-                     * @return Remark Function description.
+                     * 获取<p>Function description.</p>
+                     * @return Remark <p>Function description.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Function description.
-                     * @param _remark Function description.
+                     * 设置<p>Function description.</p>
+                     * @param _remark <p>Function description.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -131,15 +132,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Function content.
-                     * @return Content Function content.
+                     * 获取<p>Function content.</p>
+                     * @return Content <p>Function content.</p>
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Function content.
-                     * @param _content Function content.
+                     * 设置<p>Function content.</p>
+                     * @param _content <p>Function content.</p>
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -152,15 +153,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Default domain name of a function.
-                     * @return Domain Default domain name of a function.
+                     * 获取<p>Default domain name of a function.</p>
+                     * @return Domain <p>Default domain name of a function.</p>
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Default domain name of a function.
-                     * @param _domain Default domain name of a function.
+                     * 设置<p>Default domain name of a function.</p>
+                     * @param _domain <p>Default domain name of a function.</p>
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -173,15 +174,36 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
-                     * @return CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * 获取<p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+                     * @return DomainComplianceRestrictions <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+                     * 
+                     */
+                    std::vector<ComplianceRestriction> GetDomainComplianceRestrictions() const;
+
+                    /**
+                     * 设置<p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+                     * @param _domainComplianceRestrictions <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+                     * 
+                     */
+                    void SetDomainComplianceRestrictions(const std::vector<ComplianceRestriction>& _domainComplianceRestrictions);
+
+                    /**
+                     * 判断参数 DomainComplianceRestrictions 是否已赋值
+                     * @return DomainComplianceRestrictions 是否已赋值
+                     * 
+                     */
+                    bool DomainComplianceRestrictionsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+                     * @return CreateTime <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
-                     * @param _createTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * 设置<p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+                     * @param _createTime <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -194,15 +216,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
-                     * @return UpdateTime Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * 获取<p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+                     * @return UpdateTime <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
-                     * @param _updateTime Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * 设置<p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
+                     * @param _updateTime <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -217,49 +239,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Function ID.
+                     * <p>Function ID.</p>
                      */
                     std::string m_functionId;
                     bool m_functionIdHasBeenSet;
 
                     /**
-                     * Zone ID.
+                     * <p>Site ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Function name.
+                     * <p>Function name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Function description.
+                     * <p>Function description.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Function content.
+                     * <p>Function content.</p>
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Default domain name of a function.
+                     * <p>Default domain name of a function.</p>
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+                     */
+                    std::vector<ComplianceRestriction> m_domainComplianceRestrictions;
+                    bool m_domainComplianceRestrictionsHasBeenSet;
+
+                    /**
+                     * <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

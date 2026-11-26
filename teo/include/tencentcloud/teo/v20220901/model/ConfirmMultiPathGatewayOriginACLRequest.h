@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取Describes the version number of the origin server IP.
-                     * @return OriginACLVersion Describes the version number of the origin server IP.
+                     * 获取Origin-pull IP version number.
+                     * @return OriginACLVersion Origin-pull IP version number.
                      * 
                      */
                     int64_t GetOriginACLVersion() const;
 
                     /**
-                     * 设置Describes the version number of the origin server IP.
-                     * @param _originACLVersion Describes the version number of the origin server IP.
+                     * 设置Origin-pull IP version number.
+                     * @param _originACLVersion Origin-pull IP version number.
                      * 
                      */
                     void SetOriginACLVersion(const int64_t& _originACLVersion);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_gatewayIdHasBeenSet;
 
                     /**
-                     * Describes the version number of the origin server IP.
+                     * Origin-pull IP version number.
                      */
                     int64_t m_originACLVersion;
                     bool m_originACLVersionHasBeenSet;

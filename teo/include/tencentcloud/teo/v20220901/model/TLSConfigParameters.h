@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * SSL/TLS Security configuration parameters.
+                * SSL/TLS security configuration parameter.
                 */
                 class TLSConfigParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
-                     * @return Version TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
+                     * 获取TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
+                     * @return Version TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
                      * 
                      */
                     std::vector<std::string> GetVersion() const;
 
                     /**
-                     * 设置TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
-                     * @param _version TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
+                     * 设置TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
+                     * @param _version TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
                      * 
                      */
                     void SetVersion(const std::vector<std::string>& _version);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
-                     * @return CipherSuite Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
+                     * 获取Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
+                     * @return CipherSuite Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
                      * 
                      */
                     std::string GetCipherSuite() const;
 
                     /**
-                     * 设置Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
-                     * @param _cipherSuite Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
+                     * 设置Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
+                     * @param _cipherSuite Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
                      * 
                      */
                     void SetCipherSuite(const std::string& _cipherSuite);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TLS version. at least one must be specified. if multiple versions are specified, they must be consecutive, e.g., enable tls1, 1.1, 1.2, and 1.3. it is not allowed to enable only 1 and 1.2 while disabling 1.1. valid values: <li>`tlsv1`: tlsv1 version;</li><li>`tlsv1.1`: tlsv1.1 version;</li><li>`tlsv1.2`: tlsv1.2 version;</li><li>`tlsv1.3`: tlsv1.3 version.</li>.
+                     * TLS version. At least one is required. If multiple versions are specified, they need to be consecutive version numbers. For example, if you enable TLS 1, 1.1, 1.2, and 1.3, you cannot only enable 1 and 1.2 while disabling 1.1. Valid values: <li>TLSv1: TLSv1 version</li><li>TLSv1.1: TLSv1.1 version</li><li>TLSv1.2: TLSv1.2 version</li><li>TLSv1.3: TLSv1.3 version.</li>
                      */
                     std::vector<std::string> m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Cipher suite. for detailed information, please refer to [tls versions and cipher suites description](https://intl.cloud.tencent.com/document/product/1552/86545?from_cn_redirect=1). valid values: <li>`loose-v2023`: loose-v2023 cipher suite;</li><li>`general-v2023`: general-v2023 cipher suite;</li><li>`strict-v2023`: strict-v2023 cipher suite.</li>.
+                     * Cipher suite. For details, see [TLS version and cipher suite description](https://www.tencentcloud.com/document/product/1552/86545?from_cn_redirect=1). Valid values: <li>loose-v2023: loose-v2023 cipher suite;</li><li>general-v2023: general-v2023 cipher suite;</li><li>strict-v2023: strict-v2023 cipher suite.</li>
                      */
                     std::string m_cipherSuite;
                     bool m_cipherSuiteHasBeenSet;

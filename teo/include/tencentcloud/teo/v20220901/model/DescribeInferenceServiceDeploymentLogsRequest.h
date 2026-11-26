@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.
-                     * @return ZoneId Zone ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.
-                     * @param _zoneId Zone ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the inference service.
-                     * @return ServiceId ID of the inference service.
+                     * 获取Inference service ID.
+                     * @return ServiceId Inference service ID.
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置ID of the inference service.
-                     * @param _serviceId ID of the inference service.
+                     * 设置Inference service ID.
+                     * @param _serviceId Inference service ID.
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
-                     * @return EndTime End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+                     * 获取End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
+                     * @return EndTime End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
-                     * @param _endTime End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+                     * 设置End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
+                     * @param _endTime End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
-                     * @return SortBy Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+                     * 获取Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
+                     * @return SortBy Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
                      * 
                      */
                     std::string GetSortBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
-                     * @param _sortBy Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+                     * 设置Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
+                     * @param _sortBy Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool SortByHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
-                     * @return SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+                     * 获取Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
+                     * @return SortOrder Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置<p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
-                     * @param _sortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+                     * 设置Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
+                     * @param _sortOrder Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -234,13 +234,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * ID of the inference service.
+                     * Inference service ID.
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;
@@ -258,19 +258,19 @@ namespace TencentCloud
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+                     * End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+                     * Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
 
                     /**
-                     * <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+                     * Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the origin group.
-                     * @return OriginGroupId The ID of the origin group.
+                     * 获取Origin server group ID.
+                     * @return OriginGroupId Origin server group ID.
                      * 
                      */
                     std::string GetOriginGroupId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the origin group.
+                     * Origin server group ID.
                      */
                     std::string m_originGroupId;
                     bool m_originGroupIdHasBeenSet;

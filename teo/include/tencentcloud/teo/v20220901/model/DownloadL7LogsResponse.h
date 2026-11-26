@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
+                     * 获取Total number of entries in the query result.
+                     * @return TotalCount Total number of entries in the query result.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of L7 logs.
-                     * @return Data List of L7 logs.
+                     * 获取Data list of layer-7 offline logs.
+                     * @return Data Data list of layer-7 offline logs.
                      * 
                      */
                     std::vector<L7OfflineLog> GetData() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of query results.
+                     * Total number of entries in the query result.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of L7 logs.
+                     * Data list of layer-7 offline logs.
                      */
                     std::vector<L7OfflineLog> m_data;
                     bool m_dataHasBeenSet;

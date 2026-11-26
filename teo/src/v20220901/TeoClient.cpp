@@ -1190,6 +1190,56 @@ TeoClient::CreateInferenceAPITokenOutcomeCallable TeoClient::CreateInferenceAPIT
     return prom->get_future();
 }
 
+TeoClient::CreateInferenceDomainOutcome TeoClient::CreateInferenceDomain(const CreateInferenceDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateInferenceDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateInferenceDomainResponse rsp = CreateInferenceDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateInferenceDomainOutcome(rsp);
+        else
+            return CreateInferenceDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateInferenceDomainOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::CreateInferenceDomainAsync(const CreateInferenceDomainRequest& request, const CreateInferenceDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateInferenceDomainRequest&;
+    using Resp = CreateInferenceDomainResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateInferenceDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::CreateInferenceDomainOutcomeCallable TeoClient::CreateInferenceDomainCallable(const CreateInferenceDomainRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateInferenceDomainOutcome>>();
+    CreateInferenceDomainAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateInferenceDomainRequest&,
+        CreateInferenceDomainOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TeoClient::CreateInferenceServiceOutcome TeoClient::CreateInferenceService(const CreateInferenceServiceRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateInferenceService");
@@ -5740,6 +5790,56 @@ TeoClient::DescribeInferenceAPITokensOutcomeCallable TeoClient::DescribeInferenc
     return prom->get_future();
 }
 
+TeoClient::DescribeInferenceDomainsOutcome TeoClient::DescribeInferenceDomains(const DescribeInferenceDomainsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInferenceDomains");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInferenceDomainsResponse rsp = DescribeInferenceDomainsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInferenceDomainsOutcome(rsp);
+        else
+            return DescribeInferenceDomainsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInferenceDomainsOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeInferenceDomainsAsync(const DescribeInferenceDomainsRequest& request, const DescribeInferenceDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeInferenceDomainsRequest&;
+    using Resp = DescribeInferenceDomainsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeInferenceDomains", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DescribeInferenceDomainsOutcomeCallable TeoClient::DescribeInferenceDomainsCallable(const DescribeInferenceDomainsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeInferenceDomainsOutcome>>();
+    DescribeInferenceDomainsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeInferenceDomainsRequest&,
+        DescribeInferenceDomainsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TeoClient::DescribeInferenceHardwareSpecificationsOutcome TeoClient::DescribeInferenceHardwareSpecifications(const DescribeInferenceHardwareSpecificationsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInferenceHardwareSpecifications");
@@ -6382,6 +6482,56 @@ TeoClient::DescribeLogAnalysisDownloadTasksOutcomeCallable TeoClient::DescribeLo
         const TeoClient*,
         const DescribeLogAnalysisDownloadTasksRequest&,
         DescribeLogAnalysisDownloadTasksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TeoClient::DescribeLogAnalysisStatisticsOutcome TeoClient::DescribeLogAnalysisStatistics(const DescribeLogAnalysisStatisticsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLogAnalysisStatistics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLogAnalysisStatisticsResponse rsp = DescribeLogAnalysisStatisticsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLogAnalysisStatisticsOutcome(rsp);
+        else
+            return DescribeLogAnalysisStatisticsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLogAnalysisStatisticsOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeLogAnalysisStatisticsAsync(const DescribeLogAnalysisStatisticsRequest& request, const DescribeLogAnalysisStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeLogAnalysisStatisticsRequest&;
+    using Resp = DescribeLogAnalysisStatisticsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeLogAnalysisStatistics", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DescribeLogAnalysisStatisticsOutcomeCallable TeoClient::DescribeLogAnalysisStatisticsCallable(const DescribeLogAnalysisStatisticsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeLogAnalysisStatisticsOutcome>>();
+    DescribeLogAnalysisStatisticsAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DescribeLogAnalysisStatisticsRequest&,
+        DescribeLogAnalysisStatisticsOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -8682,6 +8832,56 @@ TeoClient::DownloadL7LogsOutcomeCallable TeoClient::DownloadL7LogsCallable(const
         const TeoClient*,
         const DownloadL7LogsRequest&,
         DownloadL7LogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TeoClient::DummyParseZoneFullConfigOutcome TeoClient::DummyParseZoneFullConfig(const DummyParseZoneFullConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "DummyParseZoneFullConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DummyParseZoneFullConfigResponse rsp = DummyParseZoneFullConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DummyParseZoneFullConfigOutcome(rsp);
+        else
+            return DummyParseZoneFullConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return DummyParseZoneFullConfigOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DummyParseZoneFullConfigAsync(const DummyParseZoneFullConfigRequest& request, const DummyParseZoneFullConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DummyParseZoneFullConfigRequest&;
+    using Resp = DummyParseZoneFullConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DummyParseZoneFullConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::DummyParseZoneFullConfigOutcomeCallable TeoClient::DummyParseZoneFullConfigCallable(const DummyParseZoneFullConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DummyParseZoneFullConfigOutcome>>();
+    DummyParseZoneFullConfigAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const DummyParseZoneFullConfigRequest&,
+        DummyParseZoneFullConfigOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -11832,6 +12032,56 @@ TeoClient::ModifyZoneWorkModeOutcomeCallable TeoClient::ModifyZoneWorkModeCallab
         const TeoClient*,
         const ModifyZoneWorkModeRequest&,
         ModifyZoneWorkModeOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TeoClient::OperateInferenceDomainOutcome TeoClient::OperateInferenceDomain(const OperateInferenceDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "OperateInferenceDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        OperateInferenceDomainResponse rsp = OperateInferenceDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return OperateInferenceDomainOutcome(rsp);
+        else
+            return OperateInferenceDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return OperateInferenceDomainOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::OperateInferenceDomainAsync(const OperateInferenceDomainRequest& request, const OperateInferenceDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const OperateInferenceDomainRequest&;
+    using Resp = OperateInferenceDomainResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "OperateInferenceDomain", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::OperateInferenceDomainOutcomeCallable TeoClient::OperateInferenceDomainCallable(const OperateInferenceDomainRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<OperateInferenceDomainOutcome>>();
+    OperateInferenceDomainAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const OperateInferenceDomainRequest&,
+        OperateInferenceDomainOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

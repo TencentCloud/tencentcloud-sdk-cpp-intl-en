@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total eligible alias domain names.
-                     * @return TotalCount Total eligible alias domain names.
+                     * 获取Number of eligible alias domain names.
+                     * @return TotalCount Number of eligible alias domain names.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Information of the eligible alias domain names.
-                     * @return AliasDomains Information of the eligible alias domain names.
+                     * 获取Alias domain name detailed information list.
+                     * @return AliasDomains Alias domain name detailed information list.
                      * 
                      */
                     std::vector<AliasDomain> GetAliasDomains() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total eligible alias domain names.
+                     * Number of eligible alias domain names.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Information of the eligible alias domain names.
+                     * Alias domain name detailed information list.
                      */
                     std::vector<AliasDomain> m_aliasDomains;
                     bool m_aliasDomainsHasBeenSet;

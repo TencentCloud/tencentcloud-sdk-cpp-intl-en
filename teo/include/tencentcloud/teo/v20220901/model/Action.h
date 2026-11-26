@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule engine action. Each feature supports only one of the following three action types. The `RuleAction` array can be of only one of the following types. For all details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+                * Rule engine feature item operations. For a feature, it corresponds to only one of the following three types. Each item in the RuleAction array can only be one of these types. For more feature item completion specifications, call the API to query the rule engine parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
                 */
                 class Action : public AbstractModel
                 {
@@ -50,131 +50,127 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Common feature operations. the options for this category include:.
-<Li>Access url rewrite (`accessurlredirect`).</li>.
-<Li> origin url overriding (upstreamurlredirect);</li>.
-<Li> quic;</li>.
-<Li> websocket;</li>.
-<Li> video dragging (videoseek);</li>.
-<Li> token authentication (authentication);</li>.
-<Li> custom cachekey (cachekey);</li>.
-<Li> node caching ttl (cache);</li>.
-<Li> browser cache ttl (maxage);</li>.
-<Li> offline caching (offlinecache);</li>.
-<Li> smart acceleration (smartrouting);</li>.
-<Li> range-based origin pull (rangeoriginpull);</li>.
-<Li> http/2 origin pull (upstreamhttp2);</li>.
-<Li> host header overriding (hostheader);</li>.
-<Li> force https (forceredirect);</li>.
-<Li> https origin pull (originpullprotocol);</li>.
-<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
-<Li>`CachePrefresh`: cache prefresh.</li>.
-<Li>`Compression`: smart compression.</li>.
-<Li>Hsts;</Li>.
-<Li>ClientIpHeader;</Li>.
-<Li> ssltlssecureconf;</li>.
-<Li> ocspstapling;</li>.
-<Li> http/2 access (http2);</li>.
-<Li> redirection during origin pull (upstreamfollowredirect);</li>.
-<Li> modifying origin server (origin);</li>.
-<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
-<Li> http response (httpresponse).</li>.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return NormalAction Common feature operations. the options for this category include:.
-<Li>Access url rewrite (`accessurlredirect`).</li>.
-<Li> origin url overriding (upstreamurlredirect);</li>.
-<Li> quic;</li>.
-<Li> websocket;</li>.
-<Li> video dragging (videoseek);</li>.
-<Li> token authentication (authentication);</li>.
-<Li> custom cachekey (cachekey);</li>.
-<Li> node caching ttl (cache);</li>.
-<Li> browser cache ttl (maxage);</li>.
-<Li> offline caching (offlinecache);</li>.
-<Li> smart acceleration (smartrouting);</li>.
-<Li> range-based origin pull (rangeoriginpull);</li>.
-<Li> http/2 origin pull (upstreamhttp2);</li>.
-<Li> host header overriding (hostheader);</li>.
-<Li> force https (forceredirect);</li>.
-<Li> https origin pull (originpullprotocol);</li>.
-<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
-<Li>`CachePrefresh`: cache prefresh.</li>.
-<Li>`Compression`: smart compression.</li>.
-<Li>Hsts;</Li>.
-<Li>ClientIpHeader;</Li>.
-<Li> ssltlssecureconf;</li>.
-<Li> ocspstapling;</li>.
-<Li> http/2 access (http2);</li>.
-<Li> redirection during origin pull (upstreamfollowredirect);</li>.
-<Li> modifying origin server (origin);</li>.
-<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
-<Li> http response (httpresponse).</li>.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Normal feature operation. Feature items of this type:
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart acceleration (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Single connection download speed limit (ResponseSpeedLimit);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout).</li>
+<li> HTTP response (HttpResponse).</li>
+                     * @return NormalAction Normal feature operation. Feature items of this type:
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart acceleration (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Single connection download speed limit (ResponseSpeedLimit);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout).</li>
+<li> HTTP response (HttpResponse).</li>
                      * 
                      */
                     NormalAction GetNormalAction() const;
 
                     /**
-                     * 设置Common feature operations. the options for this category include:.
-<Li>Access url rewrite (`accessurlredirect`).</li>.
-<Li> origin url overriding (upstreamurlredirect);</li>.
-<Li> quic;</li>.
-<Li> websocket;</li>.
-<Li> video dragging (videoseek);</li>.
-<Li> token authentication (authentication);</li>.
-<Li> custom cachekey (cachekey);</li>.
-<Li> node caching ttl (cache);</li>.
-<Li> browser cache ttl (maxage);</li>.
-<Li> offline caching (offlinecache);</li>.
-<Li> smart acceleration (smartrouting);</li>.
-<Li> range-based origin pull (rangeoriginpull);</li>.
-<Li> http/2 origin pull (upstreamhttp2);</li>.
-<Li> host header overriding (hostheader);</li>.
-<Li> force https (forceredirect);</li>.
-<Li> https origin pull (originpullprotocol);</li>.
-<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
-<Li>`CachePrefresh`: cache prefresh.</li>.
-<Li>`Compression`: smart compression.</li>.
-<Li>Hsts;</Li>.
-<Li>ClientIpHeader;</Li>.
-<Li> ssltlssecureconf;</li>.
-<Li> ocspstapling;</li>.
-<Li> http/2 access (http2);</li>.
-<Li> redirection during origin pull (upstreamfollowredirect);</li>.
-<Li> modifying origin server (origin);</li>.
-<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
-<Li> http response (httpresponse).</li>.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _normalAction Common feature operations. the options for this category include:.
-<Li>Access url rewrite (`accessurlredirect`).</li>.
-<Li> origin url overriding (upstreamurlredirect);</li>.
-<Li> quic;</li>.
-<Li> websocket;</li>.
-<Li> video dragging (videoseek);</li>.
-<Li> token authentication (authentication);</li>.
-<Li> custom cachekey (cachekey);</li>.
-<Li> node caching ttl (cache);</li>.
-<Li> browser cache ttl (maxage);</li>.
-<Li> offline caching (offlinecache);</li>.
-<Li> smart acceleration (smartrouting);</li>.
-<Li> range-based origin pull (rangeoriginpull);</li>.
-<Li> http/2 origin pull (upstreamhttp2);</li>.
-<Li> host header overriding (hostheader);</li>.
-<Li> force https (forceredirect);</li>.
-<Li> https origin pull (originpullprotocol);</li>.
-<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
-<Li>`CachePrefresh`: cache prefresh.</li>.
-<Li>`Compression`: smart compression.</li>.
-<Li>Hsts;</Li>.
-<Li>ClientIpHeader;</Li>.
-<Li> ssltlssecureconf;</li>.
-<Li> ocspstapling;</li>.
-<Li> http/2 access (http2);</li>.
-<Li> redirection during origin pull (upstreamfollowredirect);</li>.
-<Li> modifying origin server (origin);</li>.
-<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
-<Li> http response (httpresponse).</li>.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Normal feature operation. Feature items of this type:
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart acceleration (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Single connection download speed limit (ResponseSpeedLimit);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout).</li>
+<li> HTTP response (HttpResponse).</li>
+                     * @param _normalAction Normal feature operation. Feature items of this type:
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart acceleration (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Single connection download speed limit (ResponseSpeedLimit);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout).</li>
+<li> HTTP response (HttpResponse).</li>
                      * 
                      */
                     void SetNormalAction(const NormalAction& _normalAction);
@@ -187,27 +183,23 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool NormalActionHasBeenSet() const;
 
                     /**
-                     * 获取Feature operation with a request/response header. Features of this type include:
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>`ResponseHeader`: HTTP response header modification.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RewriteAction Feature operation with a request/response header. Features of this type include:
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>`ResponseHeader`: HTTP response header modification.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Feature operations with request/response headers. Feature items of this type include:
+<li>HTTP request header modification (RequestHeader).</li>
+<li> HTTP response header modification (ResponseHeader).</li>
+                     * @return RewriteAction Feature operations with request/response headers. Feature items of this type include:
+<li>HTTP request header modification (RequestHeader).</li>
+<li> HTTP response header modification (ResponseHeader).</li>
                      * 
                      */
                     RewriteAction GetRewriteAction() const;
 
                     /**
-                     * 设置Feature operation with a request/response header. Features of this type include:
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>`ResponseHeader`: HTTP response header modification.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rewriteAction Feature operation with a request/response header. Features of this type include:
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>`ResponseHeader`: HTTP response header modification.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Feature operations with request/response headers. Feature items of this type include:
+<li>HTTP request header modification (RequestHeader).</li>
+<li> HTTP response header modification (ResponseHeader).</li>
+                     * @param _rewriteAction Feature operations with request/response headers. Feature items of this type include:
+<li>HTTP request header modification (RequestHeader).</li>
+<li> HTTP response header modification (ResponseHeader).</li>
                      * 
                      */
                     void SetRewriteAction(const RewriteAction& _rewriteAction);
@@ -220,27 +212,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RewriteActionHasBeenSet() const;
 
                     /**
-                     * 获取Feature operation with a status code. Features of this type include:
-<li>`ErrorPage`: Custom error page.</li>
-<li>`StatusCodeCache`: Status code cache TTL.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CodeAction Feature operation with a status code. Features of this type include:
-<li>`ErrorPage`: Custom error page.</li>
-<li>`StatusCodeCache`: Status code cache TTL.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Feature operation with a status code. Feature items of this type:
+<li> Custom error page (ErrorPage);</li>
+<li> Status code cache TTL (StatusCodeCache).</li>
+                     * @return CodeAction Feature operation with a status code. Feature items of this type:
+<li> Custom error page (ErrorPage);</li>
+<li> Status code cache TTL (StatusCodeCache).</li>
                      * 
                      */
                     CodeAction GetCodeAction() const;
 
                     /**
-                     * 设置Feature operation with a status code. Features of this type include:
-<li>`ErrorPage`: Custom error page.</li>
-<li>`StatusCodeCache`: Status code cache TTL.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _codeAction Feature operation with a status code. Features of this type include:
-<li>`ErrorPage`: Custom error page.</li>
-<li>`StatusCodeCache`: Status code cache TTL.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Feature operation with a status code. Feature items of this type:
+<li> Custom error page (ErrorPage);</li>
+<li> Status code cache TTL (StatusCodeCache).</li>
+                     * @param _codeAction Feature operation with a status code. Feature items of this type:
+<li> Custom error page (ErrorPage);</li>
+<li> Status code cache TTL (StatusCodeCache).</li>
                      * 
                      */
                     void SetCodeAction(const CodeAction& _codeAction);
@@ -255,54 +243,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Common feature operations. the options for this category include:.
-<Li>Access url rewrite (`accessurlredirect`).</li>.
-<Li> origin url overriding (upstreamurlredirect);</li>.
-<Li> quic;</li>.
-<Li> websocket;</li>.
-<Li> video dragging (videoseek);</li>.
-<Li> token authentication (authentication);</li>.
-<Li> custom cachekey (cachekey);</li>.
-<Li> node caching ttl (cache);</li>.
-<Li> browser cache ttl (maxage);</li>.
-<Li> offline caching (offlinecache);</li>.
-<Li> smart acceleration (smartrouting);</li>.
-<Li> range-based origin pull (rangeoriginpull);</li>.
-<Li> http/2 origin pull (upstreamhttp2);</li>.
-<Li> host header overriding (hostheader);</li>.
-<Li> force https (forceredirect);</li>.
-<Li> https origin pull (originpullprotocol);</li>.
-<Li>`ResponseSpeedLimit`: single connection download speed limit.</li>.
-<Li>`CachePrefresh`: cache prefresh.</li>.
-<Li>`Compression`: smart compression.</li>.
-<Li>Hsts;</Li>.
-<Li>ClientIpHeader;</Li>.
-<Li> ssltlssecureconf;</li>.
-<Li> ocspstapling;</li>.
-<Li> http/2 access (http2);</li>.
-<Li> redirection during origin pull (upstreamfollowredirect);</li>.
-<Li> modifying origin server (origin);</li>.
-<Li> layer 7 origin pull timeout (httpupstreamtimeout).</li>.
-<Li> http response (httpresponse).</li>.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Normal feature operation. Feature items of this type:
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart acceleration (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header overriding (HostHeader);</li>
+<li> Force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Single connection download speed limit (ResponseSpeedLimit);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> SslTlsSecureConf;</li>
+<li> OcspStapling;</li>
+<li> HTTP/2 access (Http2);</li>
+<li> Redirection during origin pull (UpstreamFollowRedirect);</li>
+<li> Modifying origin server (Origin);</li>
+<li> Layer 7 origin pull timeout (HTTPUpstreamTimeout).</li>
+<li> HTTP response (HttpResponse).</li>
                      */
                     NormalAction m_normalAction;
                     bool m_normalActionHasBeenSet;
 
                     /**
-                     * Feature operation with a request/response header. Features of this type include:
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>`ResponseHeader`: HTTP response header modification.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Feature operations with request/response headers. Feature items of this type include:
+<li>HTTP request header modification (RequestHeader).</li>
+<li> HTTP response header modification (ResponseHeader).</li>
                      */
                     RewriteAction m_rewriteAction;
                     bool m_rewriteActionHasBeenSet;
 
                     /**
-                     * Feature operation with a status code. Features of this type include:
-<li>`ErrorPage`: Custom error page.</li>
-<li>`StatusCodeCache`: Status code cache TTL.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Feature operation with a status code. Feature items of this type:
+<li> Custom error page (ErrorPage);</li>
+<li> Status code cache TTL (StatusCodeCache).</li>
                      */
                     CodeAction m_codeAction;
                     bool m_codeActionHasBeenSet;

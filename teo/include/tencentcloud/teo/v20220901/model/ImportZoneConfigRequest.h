@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Site ID.</p>
-                     * @return ZoneId <p>Site ID.</p>
+                     * 获取<p>Zone ID.</p>
+                     * @return ZoneId <p>Zone ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置<p>Site ID.</p>
-                     * @param _zoneId <p>Site ID.</p>
+                     * 设置<p>Zone ID.</p>
+                     * @param _zoneId <p>Zone ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
-                     * @return Content <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+                     * 获取<p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
+                     * @return Content <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置<p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
-                     * @param _content <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+                     * 设置<p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
+                     * @param _content <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Site ID.</p>
+                     * <p>Zone ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+                     * <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

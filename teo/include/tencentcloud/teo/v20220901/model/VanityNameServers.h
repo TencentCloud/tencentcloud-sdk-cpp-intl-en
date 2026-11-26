@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom name servers
+                * Custom nameservers
                 */
                 class VanityNameServers : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
+                     * @return Switch Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
+                     * @param _switch Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取List of custom name servers
-                     * @return Servers List of custom name servers
+                     * 获取List of custom namespaces.
+                     * @return Servers List of custom namespaces.
                      * 
                      */
                     std::vector<std::string> GetServers() const;
 
                     /**
-                     * 设置List of custom name servers
-                     * @param _servers List of custom name servers
+                     * 设置List of custom namespaces.
+                     * @param _servers List of custom namespaces.
                      * 
                      */
                     void SetServers(const std::vector<std::string>& _servers);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * List of custom name servers
+                     * List of custom namespaces.
                      */
                     std::vector<std::string> m_servers;
                     bool m_serversHasBeenSet;

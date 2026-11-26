@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The condition of the exception rule
+                * Specific conditions for an exception rule to take effect.
                 */
                 class ExceptUserRuleCondition : public AbstractModel
                 {
@@ -47,59 +47,59 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
-                     * @return MatchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
+                     * 获取Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
+                     * @return MatchFrom Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
                      * 
                      */
                     std::string GetMatchFrom() const;
 
                     /**
-                     * 设置The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
-                     * @param _matchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
+                     * 设置Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
+                     * @param _matchFrom Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
                      * 
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MatchFromHasBeenSet() const;
 
                     /**
-                     * 获取The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
-                     * @return MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+                     * 获取Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
+                     * @return MatchParam Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
                      * 
                      */
                     std::string GetMatchParam() const;
 
                     /**
-                     * 设置The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
-                     * @param _matchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+                     * 设置Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
+                     * @param _matchParam Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
                      * 
                      */
                     void SetMatchParam(const std::string& _matchParam);
@@ -133,79 +133,79 @@ namespace TencentCloud
                     bool MatchParamHasBeenSet() const;
 
                     /**
-                     * 获取The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
-                     * @return Operator The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+                     * 获取Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
+                     * @return Operator Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
-                     * @param _operator The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+                     * 设置Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
+                     * @param _operator Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取The value of the parameter.
-                     * @return MatchContent The value of the parameter.
+                     * 获取Matching value.
+                     * @return MatchContent Matching value.
                      * 
                      */
                     std::string GetMatchContent() const;
 
                     /**
-                     * 设置The value of the parameter.
-                     * @param _matchContent The value of the parameter.
+                     * 设置Matching value.
+                     * @param _matchContent Matching value.
                      * 
                      */
                     void SetMatchContent(const std::string& _matchContent);
@@ -241,52 +241,52 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
+                     * Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
                      */
                     std::string m_matchFrom;
                     bool m_matchFromHasBeenSet;
 
                     /**
-                     * The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+                     * Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
                      */
                     std::string m_matchParam;
                     bool m_matchParamHasBeenSet;
 
                     /**
-                     * The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+                     * Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * The value of the parameter.
+                     * Matching value.
                      */
                     std::string m_matchContent;
                     bool m_matchContentHasBeenSet;

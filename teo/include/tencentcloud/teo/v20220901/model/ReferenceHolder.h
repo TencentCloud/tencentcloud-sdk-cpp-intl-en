@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Referenced instance information.
+                * Instance information that is cited or referencing.
                 */
                 class ReferenceHolder : public AbstractModel
                 {
@@ -68,18 +68,18 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Values as follows:
+                     * 获取Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
-                     * @return Type Instance type. Values as follows:
+                     * @return Type Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Instance type. Values as follows:
+                     * 设置Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
-                     * @param _type Instance type. Values as follows:
+                     * @param _type Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
                      * 
                      */
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Referenced instance information.
-                     * @return Instance Referenced instance information.
+                     * 获取Instance information that is cited or referencing.
+                     * @return Instance Instance information that is cited or referencing.
                      * 
                      */
                     std::string GetInstance() const;
 
                     /**
-                     * 设置Referenced instance information.
-                     * @param _instance Referenced instance information.
+                     * 设置Instance information that is cited or referencing.
+                     * @param _instance Instance information that is cited or referencing.
                      * 
                      */
                     void SetInstance(const std::string& _instance);
@@ -122,14 +122,14 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Instance type. Values as follows:
+                     * Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Referenced instance information.
+                     * Instance information that is cited or referencing.
                      */
                     std::string m_instance;
                     bool m_instanceHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The proxy ID.
-                     * @return ProxyId The proxy ID.
+                     * 获取Proxy ID.
+                     * @return ProxyId Proxy ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置The proxy ID.
-                     * @param _proxyId The proxy ID.
+                     * 设置Proxy ID.
+                     * @param _proxyId Proxy ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID.
-                     * @return RuleId The rule ID.
+                     * 获取Rule ID.
+                     * @return RuleId Rule ID.
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置The rule ID.
-                     * @param _ruleId The rule ID.
+                     * 设置Rule ID.
+                     * @param _ruleId Rule ID.
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The proxy ID.
+                     * Proxy ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * The rule ID.
+                     * Rule ID.
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;

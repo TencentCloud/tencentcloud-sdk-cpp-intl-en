@@ -44,35 +44,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
-                     * @return Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
+                     * 获取Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
+                     * @return Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
-                     * @param _type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
+                     * 设置Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
+                     * @param _type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
-                     * @return ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+                     * 获取Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
+                     * @return ZoneName Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
-                     * @param _zoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+                     * 设置Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
+                     * @param _zoneName Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -106,27 +106,27 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
-                     * @return Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     * 获取Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+                     * @return Area Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
-                     * @param _area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     * 设置Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+                     * @param _area Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -139,12 +139,12 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+                     * 获取ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
-                     * @return PlanId Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+                     * @return PlanId ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
                      * 
@@ -152,12 +152,12 @@ Note: if this parameter is not specified, a site in "init" status will be create
                     std::string GetPlanId() const;
 
                     /**
-                     * 设置Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+                     * 设置ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
-                     * @param _planId Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+                     * @param _planId ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
                      * 
@@ -172,15 +172,15 @@ Note: if this parameter is not specified, a site in "init" status will be create
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
-                     * @return AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+                     * 获取Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
+                     * @return AliasZoneName Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
                      * 
                      */
                     std::string GetAliasZoneName() const;
 
                     /**
-                     * 设置Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
-                     * @param _aliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+                     * 设置Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
+                     * @param _aliasZoneName Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
                      * 
                      */
                     void SetAliasZoneName(const std::string& _aliasZoneName);
@@ -193,15 +193,15 @@ Note: if this parameter is not specified, a site in "init" status will be create
                     bool AliasZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
-                     * @return Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+                     * 获取Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
+                     * @return Tags Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
-                     * @param _tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+                     * 设置Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
+                     * @param _tags Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -214,23 +214,23 @@ Note: if this parameter is not specified, a site in "init" status will be create
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
-                     * @return AllowDuplicates Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     * 获取Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
+                     * @return AllowDuplicates Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
                      * @deprecated
                      */
                     bool GetAllowDuplicates() const;
 
                     /**
-                     * 设置Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
-                     * @param _allowDuplicates Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     * 设置Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
+                     * @param _allowDuplicates Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
                      * @deprecated
                      */
                     void SetAllowDuplicates(const bool& _allowDuplicates);
@@ -243,15 +243,15 @@ Note: if this parameter is not specified, a site in "init" status will be create
                     bool AllowDuplicatesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to skip scanning the existing DNS records of the site. Default value: false.
-                     * @return JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * 获取Whether to skip scanning existing DNS records of the site. Default value: false.
+                     * @return JumpStart Whether to skip scanning existing DNS records of the site. Default value: false.
                      * @deprecated
                      */
                     bool GetJumpStart() const;
 
                     /**
-                     * 设置Whether to skip scanning the existing DNS records of the site. Default value: false.
-                     * @param _jumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * 设置Whether to skip scanning existing DNS records of the site. Default value: false.
+                     * @param _jumpStart Whether to skip scanning existing DNS records of the site. Default value: false.
                      * @deprecated
                      */
                     void SetJumpStart(const bool& _jumpStart);
@@ -266,34 +266,34 @@ Note: if this parameter is not specified, a site in "init" status will be create
                 private:
 
                     /**
-                     * Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
+                     * Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+                     * Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+                     * Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+                     * ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
                      */
@@ -301,27 +301,27 @@ Note: if this parameter is not specified, a site in "init" status will be create
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+                     * Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;
 
                     /**
-                     * Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+                     * Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     * Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
                      */
                     bool m_allowDuplicates;
                     bool m_allowDuplicatesHasBeenSet;
 
                     /**
-                     * Whether to skip scanning the existing DNS records of the site. Default value: false.
+                     * Whether to skip scanning existing DNS records of the site. Default value: false.
                      */
                     bool m_jumpStart;
                     bool m_jumpStartHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cache prefresh configuration parameters
+                * Cache pre-refresh configuration parameters.
                 */
                 class CachePrefreshParameters : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @return CacheTimePercent Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 获取The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
+                     * @return CacheTimePercent The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
                      * 
                      */
                     int64_t GetCacheTimePercent() const;
 
                     /**
-                     * 设置Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @param _cacheTimePercent Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 设置The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
+                     * @param _cacheTimePercent The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
                      * 
                      */
                     void SetCacheTimePercent(const int64_t& _cacheTimePercent);
@@ -103,16 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable cache prefresh. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Cache pre-refresh switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Prefresh interval set as a percentage of the node cache time. value range: 1-99.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * The pre-refresh time is set to a percentage value of the node cache time. Value range: 1–99.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field. If specified, it does not take effect.
                      */
                     int64_t m_cacheTimePercent;
                     bool m_cacheTimePercentHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance ID.
-                     * @return ProxyId Layer 4 proxy instance ID.
+                     * 获取Layer 4 Proxy Instance ID.
+                     * @return ProxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer 4 proxy instance ID.
-                     * @param _proxyId Layer 4 proxy instance ID.
+                     * 设置Layer 4 Proxy Instance ID.
+                     * @param _proxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -85,19 +85,23 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
-                     * @return Status Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+                     * 获取Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+                     * @return Status Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
-                     * @param _status Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+                     * 设置Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+                     * @param _status Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -118,14 +122,15 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance ID.
+                     * Layer 4 Proxy Instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+                     * Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

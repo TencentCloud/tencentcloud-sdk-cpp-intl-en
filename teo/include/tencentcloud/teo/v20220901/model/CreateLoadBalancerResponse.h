@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID.
-                     * @return InstanceId CLB instance ID.
+                     * 获取<p>Cloud Load Balancer instance ID.</p>
+                     * @return InstanceId <p>Cloud Load Balancer instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB instance ID.
+                     * <p>Cloud Load Balancer instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

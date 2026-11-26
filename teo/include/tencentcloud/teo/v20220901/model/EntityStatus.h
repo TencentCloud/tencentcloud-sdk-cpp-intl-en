@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Status of domain names bound with this template.
+                * Security instance status.
                 */
                 class EntityStatus : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance name. Only subdomain names are supported.
-                     * @return Entity Instance name. Only subdomain names are supported.
+                     * 获取Instance name. Currently, only subdomains are available.
+                     * @return Entity Instance name. Currently, only subdomains are available.
                      * 
                      */
                     std::string GetEntity() const;
 
                     /**
-                     * 设置Instance name. Only subdomain names are supported.
-                     * @param _entity Instance name. Only subdomain names are supported.
+                     * 设置Instance name. Currently, only subdomains are available.
+                     * @param _entity Instance name. Currently, only subdomains are available.
                      * 
                      */
                     void SetEntity(const std::string& _entity);
@@ -68,19 +68,19 @@ namespace TencentCloud
                     bool EntityHasBeenSet() const;
 
                     /**
-                     * 获取Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
-                     * @return Status Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+                     * 获取Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
+                     * @return Status Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
-                     * @param _status Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+                     * 设置Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
+                     * @param _status Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Message returned after the operation completed. 
-                     * @return Message Message returned after the operation completed. 
+                     * 获取Prompt for instance configuration distribution.
+                     * @return Message Prompt for instance configuration distribution.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Message returned after the operation completed. 
-                     * @param _message Message returned after the operation completed. 
+                     * 设置Prompt for instance configuration distribution.
+                     * @param _message Prompt for instance configuration distribution.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -116,20 +116,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance name. Only subdomain names are supported.
+                     * Instance name. Currently, only subdomains are available.
                      */
                     std::string m_entity;
                     bool m_entityHasBeenSet;
 
                     /**
-                     * Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+                     * Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Message returned after the operation completed. 
+                     * Prompt for instance configuration distribution.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

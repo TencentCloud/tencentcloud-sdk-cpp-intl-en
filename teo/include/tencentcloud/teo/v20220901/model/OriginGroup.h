@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin group information.
+                * Origin server group information
                 */
                 class OriginGroup : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the origin group.
-                     * @return GroupId The ID of the origin group.
+                     * 获取Origin server group ID.
+                     * @return GroupId Origin server group ID.
                      * 
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置The ID of the origin group.
-                     * @param _groupId The ID of the origin group.
+                     * 设置Origin server group ID.
+                     * @param _groupId Origin server group ID.
                      * 
                      */
                     void SetGroupId(const std::string& _groupId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the origin group.
-                     * @return Name The name of the origin group.
+                     * 获取Origin server group name.
+                     * @return Name Origin server group name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name of the origin group.
-                     * @param _name The name of the origin group.
+                     * 设置Origin server group name.
+                     * @param _name Origin server group name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,23 +91,23 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
-                     * @return Type The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
+                     * 获取Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
+                     * @return Type Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
-                     * @param _type The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
+                     * 设置Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
+                     * @param _type Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -120,15 +120,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Details of the origin record.
-                     * @return Records Details of the origin record.
+                     * 获取Origin server record information.
+                     * @return Records Origin server record information.
                      * 
                      */
                     std::vector<OriginRecord> GetRecords() const;
 
                     /**
-                     * 设置Details of the origin record.
-                     * @param _records Details of the origin record.
+                     * 设置Origin server record information.
+                     * @param _records Origin server record information.
                      * 
                      */
                     void SetRecords(const std::vector<OriginRecord>& _records);
@@ -141,15 +141,15 @@ namespace TencentCloud
                     bool RecordsHasBeenSet() const;
 
                     /**
-                     * 获取List of instances referencing this origin group.	
-                     * @return References List of instances referencing this origin group.	
+                     * 获取List of instances that reference the origin group.	
+                     * @return References List of instances that reference the origin group.	
                      * 
                      */
                     std::vector<OriginGroupReference> GetReferences() const;
 
                     /**
-                     * 设置List of instances referencing this origin group.	
-                     * @param _references List of instances referencing this origin group.	
+                     * 设置List of instances that reference the origin group.	
+                     * @param _references List of instances that reference the origin group.	
                      * 
                      */
                     void SetReferences(const std::vector<OriginGroupReference>& _references);
@@ -162,15 +162,15 @@ namespace TencentCloud
                     bool ReferencesHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the origin group.
-                     * @return CreateTime Creation time of the origin group.
+                     * 获取Origin group creation time.
+                     * @return CreateTime Origin group creation time.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of the origin group.
-                     * @param _createTime Creation time of the origin group.
+                     * 设置Origin group creation time.
+                     * @param _createTime Origin group creation time.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -183,15 +183,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The update time of the origin group.
-                     * @return UpdateTime The update time of the origin group.
+                     * 获取Origin-pull group update time.
+                     * @return UpdateTime Origin-pull group update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time of the origin group.
-                     * @param _updateTime The update time of the origin group.
+                     * 设置Origin-pull group update time.
+                     * @param _updateTime Origin-pull group update time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -204,15 +204,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the origin-pull Host Header.
-                     * @return HostHeader Specifies the origin-pull Host Header.
+                     * 获取Origin-pull Host Header.
+                     * @return HostHeader Origin-pull Host Header.
                      * 
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置Specifies the origin-pull Host Header.
-                     * @param _hostHeader Specifies the origin-pull Host Header.
+                     * 设置Origin-pull Host Header.
+                     * @param _hostHeader Origin-pull Host Header.
                      * 
                      */
                     void SetHostHeader(const std::string& _hostHeader);
@@ -227,51 +227,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the origin group.
+                     * Origin server group ID.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * The name of the origin group.
+                     * Origin server group name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The origin group type. Values:
-<li>`GENERAL`: General origin group</li>
-<li>`HTTP`: HTTP-specific origin group</li>
+                     * Origin server group type. Valid values:
+<li>GENERAL: general origin group;</li>
+<li>HTTP: HTTP-specific origin group.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Details of the origin record.
+                     * Origin server record information.
                      */
                     std::vector<OriginRecord> m_records;
                     bool m_recordsHasBeenSet;
 
                     /**
-                     * List of instances referencing this origin group.	
+                     * List of instances that reference the origin group.	
                      */
                     std::vector<OriginGroupReference> m_references;
                     bool m_referencesHasBeenSet;
 
                     /**
-                     * Creation time of the origin group.
+                     * Origin group creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * The update time of the origin group.
+                     * Origin-pull group update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Specifies the origin-pull Host Header.
+                     * Origin-pull Host Header.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;

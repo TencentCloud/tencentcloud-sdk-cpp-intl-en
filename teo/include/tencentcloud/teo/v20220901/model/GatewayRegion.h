@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Multi-Channel security gateway available region.
+                * Available regions of the multi-channel security gateway
                 */
                 class GatewayRegion : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CNNameHasBeenSet() const;
 
                     /**
-                     * 获取English name of the region.
-                     * @return ENName English name of the region.
+                     * 获取English region name.
+                     * @return ENName English region name.
                      * 
                      */
                     std::string GetENName() const;
 
                     /**
-                     * 设置English name of the region.
-                     * @param _eNName English name of the region.
+                     * 设置English region name.
+                     * @param _eNName English region name.
                      * 
                      */
                     void SetENName(const std::string& _eNName);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_cNNameHasBeenSet;
 
                     /**
-                     * English name of the region.
+                     * English region name.
                      */
                     std::string m_eNName;
                     bool m_eNNameHasBeenSet;

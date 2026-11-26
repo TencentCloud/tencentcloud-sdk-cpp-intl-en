@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.
-                     * @return ZoneId Zone ID.
+                     * 获取<p>Site ID.</p>
+                     * @return ZoneId <p>Site ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.
-                     * @param _zoneId Zone ID.
+                     * 设置<p>Site ID.</p>
+                     * @param _zoneId <p>Site ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取When first enabling origin protection for a site, configure the layer-7 acceleration domain name in specific IP range mode.
-<li>ALL: Target all layer-7 acceleration domain names under the current site. When the number of domains exceeds 200, please go through first in specific mode to enable 200 domain names, and enable the remaining resource via the ModifyOriginACL API.</li>
-<li>Specific: Enables layer-7 acceleration for the site's designated domain name.</li>Note: When no parameter is defined, the default is specific. For subsequent addition of layer-7 acceleration domain names or layer-4 proxy instances, configure them via the ModifyOriginACL API.
-                     * @return L7EnableMode When first enabling origin protection for a site, configure the layer-7 acceleration domain name in specific IP range mode.
-<li>ALL: Target all layer-7 acceleration domain names under the current site. When the number of domains exceeds 200, please go through first in specific mode to enable 200 domain names, and enable the remaining resource via the ModifyOriginACL API.</li>
-<li>Specific: Enables layer-7 acceleration for the site's designated domain name.</li>Note: When no parameter is defined, the default is specific. For subsequent addition of layer-7 acceleration domain names or layer-4 proxy instances, configure them via the ModifyOriginACL API.
+                     * 获取<p>Origin protection mode for Layer 7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All Layer 7 accelerated domains in the site are automatically added to the origin protection list, including Layer 7 accelerated domains added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the Layer 7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty. When the number of Layer 7 accelerated domains in the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+                     * @return L7EnableMode <p>Origin protection mode for Layer 7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All Layer 7 accelerated domains in the site are automatically added to the origin protection list, including Layer 7 accelerated domains added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the Layer 7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty. When the number of Layer 7 accelerated domains in the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
                      * 
                      */
                     std::string GetL7EnableMode() const;
 
                     /**
-                     * 设置When first enabling origin protection for a site, configure the layer-7 acceleration domain name in specific IP range mode.
-<li>ALL: Target all layer-7 acceleration domain names under the current site. When the number of domains exceeds 200, please go through first in specific mode to enable 200 domain names, and enable the remaining resource via the ModifyOriginACL API.</li>
-<li>Specific: Enables layer-7 acceleration for the site's designated domain name.</li>Note: When no parameter is defined, the default is specific. For subsequent addition of layer-7 acceleration domain names or layer-4 proxy instances, configure them via the ModifyOriginACL API.
-                     * @param _l7EnableMode When first enabling origin protection for a site, configure the layer-7 acceleration domain name in specific IP range mode.
-<li>ALL: Target all layer-7 acceleration domain names under the current site. When the number of domains exceeds 200, please go through first in specific mode to enable 200 domain names, and enable the remaining resource via the ModifyOriginACL API.</li>
-<li>Specific: Enables layer-7 acceleration for the site's designated domain name.</li>Note: When no parameter is defined, the default is specific. For subsequent addition of layer-7 acceleration domain names or layer-4 proxy instances, configure them via the ModifyOriginACL API.
+                     * 设置<p>Origin protection mode for Layer 7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All Layer 7 accelerated domains in the site are automatically added to the origin protection list, including Layer 7 accelerated domains added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the Layer 7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty. When the number of Layer 7 accelerated domains in the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+                     * @param _l7EnableMode <p>Origin protection mode for Layer 7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All Layer 7 accelerated domains in the site are automatically added to the origin protection list, including Layer 7 accelerated domains added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the Layer 7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty. When the number of Layer 7 accelerated domains in the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
                      * 
                      */
                     void SetL7EnableMode(const std::string& _l7EnableMode);
@@ -93,15 +85,15 @@ namespace TencentCloud
                     bool L7EnableModeHasBeenSet() const;
 
                     /**
-                     * 获取Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
-                     * @return L7Hosts Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+                     * 获取<p>List of Layer 7 accelerated domains for which origin protection is to be enabled. This parameter takes effect only when L7EnableMode is specific. A maximum of 200 Layer 7 accelerated domains can be enabled at a time. If you want to enable more than 200 domains, use the ModifyOriginACL API for sharded configuration.</p>
+                     * @return L7Hosts <p>List of Layer 7 accelerated domains for which origin protection is to be enabled. This parameter takes effect only when L7EnableMode is specific. A maximum of 200 Layer 7 accelerated domains can be enabled at a time. If you want to enable more than 200 domains, use the ModifyOriginACL API for sharded configuration.</p>
                      * 
                      */
                     std::vector<std::string> GetL7Hosts() const;
 
                     /**
-                     * 设置Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
-                     * @param _l7Hosts Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+                     * 设置<p>List of Layer 7 accelerated domains for which origin protection is to be enabled. This parameter takes effect only when L7EnableMode is specific. A maximum of 200 Layer 7 accelerated domains can be enabled at a time. If you want to enable more than 200 domains, use the ModifyOriginACL API for sharded configuration.</p>
+                     * @param _l7Hosts <p>List of Layer 7 accelerated domains for which origin protection is to be enabled. This parameter takes effect only when L7EnableMode is specific. A maximum of 200 Layer 7 accelerated domains can be enabled at a time. If you want to enable more than 200 domains, use the ModifyOriginACL API for sharded configuration.</p>
                      * 
                      */
                     void SetL7Hosts(const std::vector<std::string>& _l7Hosts);
@@ -114,23 +106,15 @@ namespace TencentCloud
                     bool L7HostsHasBeenSet() const;
 
                     /**
-                     * 获取When first enabling origin protection for a site, configure the Layer 4 Proxy Instance Configuration in specific IP range mode.
-<li>ALL: Enable all L4 proxy instances under the current site. When the instance count exceeds 100, please go through specific mode to enable 100 domain names first. Enable the remaining resources via the ModifyOriginACL API.</li>
-<li>specific: Enable for the designated L4 proxy instance under the site.</li>Note: When no parameter is defined, the default is specific. Configure subsequent addition of L7 acceleration domains/L4 proxy instances via the ModifyOriginACL API.
-                     * @return L4EnableMode When first enabling origin protection for a site, configure the Layer 4 Proxy Instance Configuration in specific IP range mode.
-<li>ALL: Enable all L4 proxy instances under the current site. When the instance count exceeds 100, please go through specific mode to enable 100 domain names first. Enable the remaining resources via the ModifyOriginACL API.</li>
-<li>specific: Enable for the designated L4 proxy instance under the site.</li>Note: When no parameter is defined, the default is specific. Configure subsequent addition of L7 acceleration domains/L4 proxy instances via the ModifyOriginACL API.
+                     * 获取<p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site are automatically added to the origin protection list, including layer-4 proxy instance resources added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty. When the number of layer-4 proxy instances in the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+                     * @return L4EnableMode <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site are automatically added to the origin protection list, including layer-4 proxy instance resources added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty. When the number of layer-4 proxy instances in the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
                      * 
                      */
                     std::string GetL4EnableMode() const;
 
                     /**
-                     * 设置When first enabling origin protection for a site, configure the Layer 4 Proxy Instance Configuration in specific IP range mode.
-<li>ALL: Enable all L4 proxy instances under the current site. When the instance count exceeds 100, please go through specific mode to enable 100 domain names first. Enable the remaining resources via the ModifyOriginACL API.</li>
-<li>specific: Enable for the designated L4 proxy instance under the site.</li>Note: When no parameter is defined, the default is specific. Configure subsequent addition of L7 acceleration domains/L4 proxy instances via the ModifyOriginACL API.
-                     * @param _l4EnableMode When first enabling origin protection for a site, configure the Layer 4 Proxy Instance Configuration in specific IP range mode.
-<li>ALL: Enable all L4 proxy instances under the current site. When the instance count exceeds 100, please go through specific mode to enable 100 domain names first. Enable the remaining resources via the ModifyOriginACL API.</li>
-<li>specific: Enable for the designated L4 proxy instance under the site.</li>Note: When no parameter is defined, the default is specific. Configure subsequent addition of L7 acceleration domains/L4 proxy instances via the ModifyOriginACL API.
+                     * 设置<p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site are automatically added to the origin protection list, including layer-4 proxy instance resources added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty. When the number of layer-4 proxy instances in the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+                     * @param _l4EnableMode <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site are automatically added to the origin protection list, including layer-4 proxy instance resources added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty. When the number of layer-4 proxy instances in the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
                      * 
                      */
                     void SetL4EnableMode(const std::string& _l4EnableMode);
@@ -143,15 +127,15 @@ namespace TencentCloud
                     bool L4EnableModeHasBeenSet() const;
 
                     /**
-                     * 获取The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
-                     * @return L4ProxyIds The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
+                     * 获取<p>List of layer-4 proxy instances for which origin protection is to be enabled. This parameter takes effect only when L4EnableMode is specific. A maximum of 100 layer-4 proxy instances can be enabled at a time. If you want to enable more than 100 layer-4 proxy instances, use the ModifyOriginACL API for sharded configuration.</p>
+                     * @return L4ProxyIds <p>List of layer-4 proxy instances for which origin protection is to be enabled. This parameter takes effect only when L4EnableMode is specific. A maximum of 100 layer-4 proxy instances can be enabled at a time. If you want to enable more than 100 layer-4 proxy instances, use the ModifyOriginACL API for sharded configuration.</p>
                      * 
                      */
                     std::vector<std::string> GetL4ProxyIds() const;
 
                     /**
-                     * 设置The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
-                     * @param _l4ProxyIds The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
+                     * 设置<p>List of layer-4 proxy instances for which origin protection is to be enabled. This parameter takes effect only when L4EnableMode is specific. A maximum of 100 layer-4 proxy instances can be enabled at a time. If you want to enable more than 100 layer-4 proxy instances, use the ModifyOriginACL API for sharded configuration.</p>
+                     * @param _l4ProxyIds <p>List of layer-4 proxy instances for which origin protection is to be enabled. This parameter takes effect only when L4EnableMode is specific. A maximum of 100 layer-4 proxy instances can be enabled at a time. If you want to enable more than 100 layer-4 proxy instances, use the ModifyOriginACL API for sharded configuration.</p>
                      * 
                      */
                     void SetL4ProxyIds(const std::vector<std::string>& _l4ProxyIds);
@@ -164,43 +148,15 @@ namespace TencentCloud
                     bool L4ProxyIdsHasBeenSet() const;
 
                     /**
-                     * 获取The origin protection back-to-origin ACL control domain. If left empty, the standard global control domain is used by default. Available control domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
-                     * @return OriginACLFamily The origin protection back-to-origin ACL control domain. If left empty, the standard global control domain is used by default. Available control domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     * 获取<p>Origin ACL control domain for origin protection. If not specified, the standard global control domain is used by default. Available control domains can be obtained through the DescribeAvailableOriginACLFamily API.<br>Valid values:</p><li>gaz: standard global AZ control domain;</li><li>mlc: standard Chinese mainland AZ control domain;</li><li>emc: standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: simplified global AZ control domain;</li><li>plat-mlc: simplified Chinese mainland AZ control domain;</li><li>plat-emc: simplified global (excluding Chinese mainland) AZ control domain;</li>
+                     * @return OriginACLFamily <p>Origin ACL control domain for origin protection. If not specified, the standard global control domain is used by default. Available control domains can be obtained through the DescribeAvailableOriginACLFamily API.<br>Valid values:</p><li>gaz: standard global AZ control domain;</li><li>mlc: standard Chinese mainland AZ control domain;</li><li>emc: standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: simplified global AZ control domain;</li><li>plat-mlc: simplified Chinese mainland AZ control domain;</li><li>plat-emc: simplified global (excluding Chinese mainland) AZ control domain;</li>
                      * 
                      */
                     std::string GetOriginACLFamily() const;
 
                     /**
-                     * 设置The origin protection back-to-origin ACL control domain. If left empty, the standard global control domain is used by default. Available control domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
-                     * @param _originACLFamily The origin protection back-to-origin ACL control domain. If left empty, the standard global control domain is used by default. Available control domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     * 设置<p>Origin ACL control domain for origin protection. If not specified, the standard global control domain is used by default. Available control domains can be obtained through the DescribeAvailableOriginACLFamily API.<br>Valid values:</p><li>gaz: standard global AZ control domain;</li><li>mlc: standard Chinese mainland AZ control domain;</li><li>emc: standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: simplified global AZ control domain;</li><li>plat-mlc: simplified Chinese mainland AZ control domain;</li><li>plat-emc: simplified global (excluding Chinese mainland) AZ control domain;</li>
+                     * @param _originACLFamily <p>Origin ACL control domain for origin protection. If not specified, the standard global control domain is used by default. Available control domains can be obtained through the DescribeAvailableOriginACLFamily API.<br>Valid values:</p><li>gaz: standard global AZ control domain;</li><li>mlc: standard Chinese mainland AZ control domain;</li><li>emc: standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: simplified global AZ control domain;</li><li>plat-mlc: simplified Chinese mainland AZ control domain;</li><li>plat-emc: simplified global (excluding Chinese mainland) AZ control domain;</li>
                      * 
                      */
                     void SetOriginACLFamily(const std::string& _originACLFamily);
@@ -215,48 +171,37 @@ Valid values are as follows:
                 private:
 
                     /**
-                     * Zone ID.
+                     * <p>Site ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * When first enabling origin protection for a site, configure the layer-7 acceleration domain name in specific IP range mode.
-<li>ALL: Target all layer-7 acceleration domain names under the current site. When the number of domains exceeds 200, please go through first in specific mode to enable 200 domain names, and enable the remaining resource via the ModifyOriginACL API.</li>
-<li>Specific: Enables layer-7 acceleration for the site's designated domain name.</li>Note: When no parameter is defined, the default is specific. For subsequent addition of layer-7 acceleration domain names or layer-4 proxy instances, configure them via the ModifyOriginACL API.
+                     * <p>Origin protection mode for Layer 7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All Layer 7 accelerated domains in the site are automatically added to the origin protection list, including Layer 7 accelerated domains added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the Layer 7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty. When the number of Layer 7 accelerated domains in the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
                      */
                     std::string m_l7EnableMode;
                     bool m_l7EnableModeHasBeenSet;
 
                     /**
-                     * Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
+                     * <p>List of Layer 7 accelerated domains for which origin protection is to be enabled. This parameter takes effect only when L7EnableMode is specific. A maximum of 200 Layer 7 accelerated domains can be enabled at a time. If you want to enable more than 200 domains, use the ModifyOriginACL API for sharded configuration.</p>
                      */
                     std::vector<std::string> m_l7Hosts;
                     bool m_l7HostsHasBeenSet;
 
                     /**
-                     * When first enabling origin protection for a site, configure the Layer 4 Proxy Instance Configuration in specific IP range mode.
-<li>ALL: Enable all L4 proxy instances under the current site. When the instance count exceeds 100, please go through specific mode to enable 100 domain names first. Enable the remaining resources via the ModifyOriginACL API.</li>
-<li>specific: Enable for the designated L4 proxy instance under the site.</li>Note: When no parameter is defined, the default is specific. Configure subsequent addition of L7 acceleration domains/L4 proxy instances via the ModifyOriginACL API.
+                     * <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site are automatically added to the origin protection list, including layer-4 proxy instance resources added later.</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified are not added to the origin protection list. You can adjust protected resources later through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty. When the number of layer-4 proxy instances in the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
                      */
                     std::string m_l4EnableMode;
                     bool m_l4EnableModeHasBeenSet;
 
                     /**
-                     * The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
+                     * <p>List of layer-4 proxy instances for which origin protection is to be enabled. This parameter takes effect only when L4EnableMode is specific. A maximum of 100 layer-4 proxy instances can be enabled at a time. If you want to enable more than 100 layer-4 proxy instances, use the ModifyOriginACL API for sharded configuration.</p>
                      */
                     std::vector<std::string> m_l4ProxyIds;
                     bool m_l4ProxyIdsHasBeenSet;
 
                     /**
-                     * The origin protection back-to-origin ACL control domain. If left empty, the standard global control domain is used by default. Available control domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+                     * <p>Origin ACL control domain for origin protection. If not specified, the standard global control domain is used by default. Available control domains can be obtained through the DescribeAvailableOriginACLFamily API.<br>Valid values:</p><li>gaz: standard global AZ control domain;</li><li>mlc: standard Chinese mainland AZ control domain;</li><li>emc: standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: simplified global AZ control domain;</li><li>plat-mlc: simplified Chinese mainland AZ control domain;</li><li>plat-emc: simplified global (excluding Chinese mainland) AZ control domain;</li>
                      */
                     std::string m_originACLFamily;
                     bool m_originACLFamilyHasBeenSet;

@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/InferenceContainerConfigForModify.h>
 #include <tencentcloud/teo/v20220901/model/InferenceResourceConfigForModify.h>
+#include <tencentcloud/teo/v20220901/model/InferenceAffinityConfig.h>
 
 
 namespace TencentCloud
@@ -45,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Site ID.</p>
-                     * @return ZoneId <p>Site ID.</p>
+                     * 获取<p>Zone ID.</p>
+                     * @return ZoneId <p>Zone ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置<p>Site ID.</p>
-                     * @param _zoneId <p>Site ID.</p>
+                     * 设置<p>Zone ID.</p>
+                     * @param _zoneId <p>Zone ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -66,15 +67,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>ID of the inference service.</p>
-                     * @return ServiceId <p>ID of the inference service.</p>
+                     * 获取<p>Inference service ID.</p>
+                     * @return ServiceId <p>Inference service ID.</p>
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置<p>ID of the inference service.</p>
-                     * @param _serviceId <p>ID of the inference service.</p>
+                     * 设置<p>Inference service ID.</p>
+                     * @param _serviceId <p>Inference service ID.</p>
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -87,15 +88,15 @@ namespace TencentCloud
                     bool ServiceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
-                     * @return ListenPort <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+                     * 获取<p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
+                     * @return ListenPort <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
                      * 
                      */
                     int64_t GetListenPort() const;
 
                     /**
-                     * 设置<p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
-                     * @param _listenPort <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+                     * 设置<p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
+                     * @param _listenPort <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
                      * 
                      */
                     void SetListenPort(const int64_t& _listenPort);
@@ -108,15 +109,15 @@ namespace TencentCloud
                     bool ListenPortHasBeenSet() const;
 
                     /**
-                     * 获取<p>Request path list for inference service. Supports up to 20 paths.</p>
-                     * @return RequestPaths <p>Request path list for inference service. Supports up to 20 paths.</p>
+                     * 获取<p>Request path list for the inference service. Supports up to 20 paths.</p>
+                     * @return RequestPaths <p>Request path list for the inference service. Supports up to 20 paths.</p>
                      * 
                      */
                     std::vector<std::string> GetRequestPaths() const;
 
                     /**
-                     * 设置<p>Request path list for inference service. Supports up to 20 paths.</p>
-                     * @param _requestPaths <p>Request path list for inference service. Supports up to 20 paths.</p>
+                     * 设置<p>Request path list for the inference service. Supports up to 20 paths.</p>
+                     * @param _requestPaths <p>Request path list for the inference service. Supports up to 20 paths.</p>
                      * 
                      */
                     void SetRequestPaths(const std::vector<std::string>& _requestPaths);
@@ -129,15 +130,15 @@ namespace TencentCloud
                     bool RequestPathsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Container configuration of the inference service. Currently only support setting 1 container.</p>
-                     * @return Containers <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+                     * 获取<p>Container configuration for the inference service. Currently only support setting 1 container.</p>
+                     * @return Containers <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
                      * 
                      */
                     std::vector<InferenceContainerConfigForModify> GetContainers() const;
 
                     /**
-                     * 设置<p>Container configuration of the inference service. Currently only support setting 1 container.</p>
-                     * @param _containers <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+                     * 设置<p>Container configuration for the inference service. Currently only support setting 1 container.</p>
+                     * @param _containers <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
                      * 
                      */
                     void SetContainers(const std::vector<InferenceContainerConfigForModify>& _containers);
@@ -171,15 +172,36 @@ namespace TencentCloud
                     bool ResourceConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Description. The length is limited to 60 characters.</p>
-                     * @return Description <p>Description. The length is limited to 60 characters.</p>
+                     * 获取<p>Inference service affinity configuration</p>
+                     * @return AffinityConfig <p>Inference service affinity configuration</p>
+                     * 
+                     */
+                    InferenceAffinityConfig GetAffinityConfig() const;
+
+                    /**
+                     * 设置<p>Inference service affinity configuration</p>
+                     * @param _affinityConfig <p>Inference service affinity configuration</p>
+                     * 
+                     */
+                    void SetAffinityConfig(const InferenceAffinityConfig& _affinityConfig);
+
+                    /**
+                     * 判断参数 AffinityConfig 是否已赋值
+                     * @return AffinityConfig 是否已赋值
+                     * 
+                     */
+                    bool AffinityConfigHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Description. Length limit: no more than 60 characters.</p>
+                     * @return Description <p>Description. Length limit: no more than 60 characters.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置<p>Description. The length is limited to 60 characters.</p>
-                     * @param _description <p>Description. The length is limited to 60 characters.</p>
+                     * 设置<p>Description. Length limit: no more than 60 characters.</p>
+                     * @param _description <p>Description. Length limit: no more than 60 characters.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -194,31 +216,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Site ID.</p>
+                     * <p>Zone ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>ID of the inference service.</p>
+                     * <p>Inference service ID.</p>
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;
 
                     /**
-                     * <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+                     * <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
                      */
                     int64_t m_listenPort;
                     bool m_listenPortHasBeenSet;
 
                     /**
-                     * <p>Request path list for inference service. Supports up to 20 paths.</p>
+                     * <p>Request path list for the inference service. Supports up to 20 paths.</p>
                      */
                     std::vector<std::string> m_requestPaths;
                     bool m_requestPathsHasBeenSet;
 
                     /**
-                     * <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+                     * <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
                      */
                     std::vector<InferenceContainerConfigForModify> m_containers;
                     bool m_containersHasBeenSet;
@@ -230,7 +252,13 @@ namespace TencentCloud
                     bool m_resourceConfigHasBeenSet;
 
                     /**
-                     * <p>Description. The length is limited to 60 characters.</p>
+                     * <p>Inference service affinity configuration</p>
+                     */
+                    InferenceAffinityConfig m_affinityConfig;
+                    bool m_affinityConfigHasBeenSet;
+
+                    /**
+                     * <p>Description. Length limit: no more than 60 characters.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

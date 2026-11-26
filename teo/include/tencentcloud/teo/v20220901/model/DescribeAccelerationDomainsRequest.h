@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site related with the acceleration domain name.
-                     * @return ZoneId ID of the site related with the acceleration domain name.
+                     * 获取<p>Zone ID of the acceleration domain name.</p>
+                     * @return ZoneId <p>Zone ID of the acceleration domain name.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site related with the acceleration domain name.
-                     * @param _zoneId ID of the site related with the acceleration domain name.
+                     * 设置<p>Zone ID of the acceleration domain name.</p>
+                     * @param _zoneId <p>Zone ID of the acceleration domain name.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset for paginated queries. Default value: 0.
-                     * @return Offset Offset for paginated queries. Default value: 0.
+                     * 获取<p>The offset of paginated query. Default value: 0.</p>
+                     * @return Offset <p>The offset of paginated query. Default value: 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset for paginated queries. Default value: 0.
-                     * @param _offset Offset for paginated queries. Default value: 0.
+                     * 设置<p>The offset of paginated query. Default value: 0.</p>
+                     * @param _offset <p>The offset of paginated query. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * 获取<p>Paginated query limit. Default value: 20, maximum value: 200.</p>
+                     * @return Limit <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * 设置<p>Paginated query limit. Default value: 20, maximum value: 200.</p>
+                     * @param _limit <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,39 +107,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
-                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
+                     * 获取<p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
+                     * @return Filters <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
-                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
+                     * 设置<p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
+                     * @param _filters <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -152,23 +128,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
-                     * @return Order Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     * 获取<p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
+                     * @return Order <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
-                     * @param _order Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     * 设置<p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
+                     * @param _order <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -181,23 +149,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
-                     * @return Direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
+                     * 获取<p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
+                     * @return Direction <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
                      * 
                      */
                     std::string GetDirection() const;
 
                     /**
-                     * 设置Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
-                     * @param _direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
+                     * 设置<p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
+                     * @param _direction <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
                      * 
                      */
                     void SetDirection(const std::string& _direction);
@@ -210,23 +170,15 @@ namespace TencentCloud
                     bool DirectionHasBeenSet() const;
 
                     /**
-                     * 获取The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
-                     * @return Match The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+                     * 获取<p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
+                     * @return Match <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
                      * 
                      */
                     std::string GetMatch() const;
 
                     /**
-                     * 设置The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
-                     * @param _match The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+                     * 设置<p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
+                     * @param _match <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
                      * 
                      */
                     void SetMatch(const std::string& _match);
@@ -241,55 +193,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site related with the acceleration domain name.
+                     * <p>Zone ID of the acceleration domain name.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Offset for paginated queries. Default value: 0.
+                     * <p>The offset of paginated query. Default value: 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
+                     * <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
+                     * <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
+                     * <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
                      */
                     std::string m_direction;
                     bool m_directionHasBeenSet;
 
                     /**
-                     * The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+                     * <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
                      */
                     std::string m_match;
                     bool m_matchHasBeenSet;

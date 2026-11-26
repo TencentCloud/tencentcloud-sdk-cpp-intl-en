@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
-                     * @return ConfigGroupType Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+                     * 获取Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+                     * @return ConfigGroupType Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
                      * 
                      */
                     std::string GetConfigGroupType() const;
 
                     /**
-                     * 设置Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
-                     * @param _configGroupType Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+                     * 设置Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+                     * @param _configGroupType Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
                      * 
                      */
                     void SetConfigGroupType(const std::string& _configGroupType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfigGroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
-                     * @return WorkMode Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+                     * 获取Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
+                     * @return WorkMode Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
                      * 
                      */
                     std::string GetWorkMode() const;
 
                     /**
-                     * 设置Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
-                     * @param _workMode Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+                     * 设置Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
+                     * @param _workMode Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
                      * 
                      */
                     void SetWorkMode(const std::string& _workMode);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+                     * Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
                      */
                     std::string m_configGroupType;
                     bool m_configGroupTypeHasBeenSet;
 
                     /**
-                     * Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+                     * Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
                      */
                     std::string m_workMode;
                     bool m_workModeHasBeenSet;

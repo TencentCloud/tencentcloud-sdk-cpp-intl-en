@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Total number of eligible rule engine custom configurations.</p>
-                     * @return TotalCount <p>Total number of eligible rule engine custom configurations.</p>
+                     * 获取<p>Total number of eligible custom configurations for the rule engine.</p>
+                     * @return TotalCount <p>Total number of eligible custom configurations for the rule engine.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of eligible rule engine custom configurations.</p>
-                     * @return CustomActionSet <p>List of eligible rule engine custom configurations.</p>
+                     * 获取<p>List of eligible custom configurations for the rule engine.</p>
+                     * @return CustomActionSet <p>List of eligible custom configurations for the rule engine.</p>
                      * 
                      */
                     std::vector<RuleEngineCustomAction> GetCustomActionSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Total number of eligible rule engine custom configurations.</p>
+                     * <p>Total number of eligible custom configurations for the rule engine.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>List of eligible rule engine custom configurations.</p>
+                     * <p>List of eligible custom configurations for the rule engine.</p>
                      */
                     std::vector<RuleEngineCustomAction> m_customActionSet;
                     bool m_customActionSetHasBeenSet;

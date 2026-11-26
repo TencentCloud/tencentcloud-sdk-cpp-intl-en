@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the authentication parameter for origin-pull.
+                * Origin-pull authentication parameter.
                 */
                 class OriginAuthenticationParameters : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the authentication request attribute for origin pull.
-                     * @return RequestProperties Specifies the authentication request attribute for origin pull.
+                     * 获取Origin-pull authentication request attributes.
+                     * @return RequestProperties Origin-pull authentication request attributes.
                      * 
                      */
                     std::vector<OriginAuthenticationRequestProperties> GetRequestProperties() const;
 
                     /**
-                     * 设置Specifies the authentication request attribute for origin pull.
-                     * @param _requestProperties Specifies the authentication request attribute for origin pull.
+                     * 设置Origin-pull authentication request attributes.
+                     * @param _requestProperties Origin-pull authentication request attributes.
                      * 
                      */
                     void SetRequestProperties(const std::vector<OriginAuthenticationRequestProperties>& _requestProperties);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the authentication request attribute for origin pull.
+                     * Origin-pull authentication request attributes.
                      */
                     std::vector<OriginAuthenticationRequestProperties> m_requestProperties;
                     bool m_requestPropertiesHasBeenSet;

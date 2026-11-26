@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP information of the custom name server
+                * Custom name server IP information
                 */
                 class VanityNameServersIps : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom name of the name server
-                     * @return Name Custom name of the name server
+                     * 获取Custom name server name.
+                     * @return Name Custom name server name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Custom name of the name server
-                     * @param _name Custom name of the name server
+                     * 设置Custom name server name.
+                     * @param _name Custom name server name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取IPv4 address of the custom name server
-                     * @return IPv4 IPv4 address of the custom name server
+                     * 获取Custom IPv4 address of the name server.
+                     * @return IPv4 Custom IPv4 address of the name server.
                      * 
                      */
                     std::string GetIPv4() const;
 
                     /**
-                     * 设置IPv4 address of the custom name server
-                     * @param _iPv4 IPv4 address of the custom name server
+                     * 设置Custom IPv4 address of the name server.
+                     * @param _iPv4 Custom IPv4 address of the name server.
                      * 
                      */
                     void SetIPv4(const std::string& _iPv4);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom name of the name server
+                     * Custom name server name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * IPv4 address of the custom name server
+                     * Custom IPv4 address of the name server.
                      */
                     std::string m_iPv4;
                     bool m_iPv4HasBeenSet;

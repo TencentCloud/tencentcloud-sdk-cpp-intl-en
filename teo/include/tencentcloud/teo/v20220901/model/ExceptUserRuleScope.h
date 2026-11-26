@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The scope to which the exception rule applies
+                * Effective scope of the exception rule.
                 */
                 class ExceptUserRuleScope : public AbstractModel
                 {
@@ -49,23 +49,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
-                     * @return Type Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
+                     * 获取Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
+                     * @return Type Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
-                     * @param _type Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
+                     * 设置Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
+                     * @param _type Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -78,35 +78,35 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
-                     * @return Modules Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
+                     * 获取Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
+                     * @return Modules Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
                      * 
                      */
                     std::vector<std::string> GetModules() const;
 
                     /**
-                     * 设置Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
-                     * @param _modules Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
+                     * 设置Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
+                     * @param _modules Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
                      * 
                      */
                     void SetModules(const std::vector<std::string>& _modules);
@@ -119,15 +119,15 @@ namespace TencentCloud
                     bool ModulesHasBeenSet() const;
 
                     /**
-                     * 获取Skip exception rule details for some rule ids. if null, use the last set configuration by default.
-                     * @return PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+                     * 获取Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
+                     * @return PartialModules Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
                      * 
                      */
                     std::vector<PartialModule> GetPartialModules() const;
 
                     /**
-                     * 设置Skip exception rule details for some rule ids. if null, use the last set configuration by default.
-                     * @param _partialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+                     * 设置Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
+                     * @param _partialModules Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetPartialModules(const std::vector<PartialModule>& _partialModules);
@@ -140,15 +140,15 @@ namespace TencentCloud
                     bool PartialModulesHasBeenSet() const;
 
                     /**
-                     * 获取Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
-                     * @return SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+                     * 获取Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
+                     * @return SkipConditions Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
                      * 
                      */
                     std::vector<SkipCondition> GetSkipConditions() const;
 
                     /**
-                     * 设置Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
-                     * @param _skipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+                     * 设置Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
+                     * @param _skipConditions Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
                      * 
                      */
                     void SetSkipConditions(const std::vector<SkipCondition>& _skipConditions);
@@ -163,32 +163,32 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
+                     * Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
+                     * Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
                      */
                     std::vector<std::string> m_modules;
                     bool m_modulesHasBeenSet;
 
                     /**
-                     * Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+                     * Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
                      */
                     std::vector<PartialModule> m_partialModules;
                     bool m_partialModulesHasBeenSet;
 
                     /**
-                     * Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+                     * Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
                      */
                     std::vector<SkipCondition> m_skipConditions;
                     bool m_skipConditionsHasBeenSet;

@@ -27,6 +27,7 @@
 #include <tencentcloud/teo/v20220901/model/HostName.h>
 #include <tencentcloud/teo/v20220901/model/URLPath.h>
 #include <tencentcloud/teo/v20220901/model/AccessURLRedirectQueryString.h>
+#include <tencentcloud/teo/v20220901/model/AccessURLRedirectPort.h>
 
 
 namespace TencentCloud
@@ -38,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access URL redirect configuration parameters.
+                * Access URL redirection configuration parameters.
                 */
                 class AccessURLRedirectParameters : public AbstractModel
                 {
@@ -154,6 +155,27 @@ namespace TencentCloud
                      */
                     bool QueryStringHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+                     * @return Port <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+                     * 
+                     */
+                    AccessURLRedirectPort GetPort() const;
+
+                    /**
+                     * 设置<p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+                     * @param _port <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+                     * 
+                     */
+                    void SetPort(const AccessURLRedirectPort& _port);
+
+                    /**
+                     * 判断参数 Port 是否已赋值
+                     * @return Port 是否已赋值
+                     * 
+                     */
+                    bool PortHasBeenSet() const;
+
                 private:
 
                     /**
@@ -185,6 +207,12 @@ namespace TencentCloud
                      */
                     AccessURLRedirectQueryString m_queryString;
                     bool m_queryStringHasBeenSet;
+
+                    /**
+                     * <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+                     */
+                    AccessURLRedirectPort m_port;
+                    bool m_portHasBeenSet;
 
                 };
             }

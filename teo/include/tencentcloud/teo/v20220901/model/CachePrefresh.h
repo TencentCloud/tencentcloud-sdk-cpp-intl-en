@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cache prefresh
+                * Cache pre-refresh
                 */
                 class CachePrefresh : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Cache pre-refresh percentage. value range: 1-99.
-                     * @return Percent Cache pre-refresh percentage. value range: 1-99.
+                     * 获取Cache pre-refresh percentage. Value range: 1-99.
+                     * @return Percent Cache pre-refresh percentage. Value range: 1-99.
                      * 
                      */
                     int64_t GetPercent() const;
 
                     /**
-                     * 设置Cache pre-refresh percentage. value range: 1-99.
-                     * @param _percent Cache pre-refresh percentage. value range: 1-99.
+                     * 设置Cache pre-refresh percentage. Value range: 1-99.
+                     * @param _percent Cache pre-refresh percentage. Value range: 1-99.
                      * 
                      */
                     void SetPercent(const int64_t& _percent);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Cache pre-refresh percentage. value range: 1-99.
+                     * Cache pre-refresh percentage. Value range: 1-99.
                      */
                     int64_t m_percent;
                     bool m_percentHasBeenSet;

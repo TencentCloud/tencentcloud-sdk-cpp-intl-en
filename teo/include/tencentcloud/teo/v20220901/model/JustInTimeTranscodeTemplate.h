@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Just-In-Time transcoding template description.
+                * Details of the just in time transcoding template.
                 */
                 class JustInTimeTranscodeTemplate : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the transcoding template name.
-                     * @return TemplateName Specifies the transcoding template name.
+                     * 获取Transcoding template name.
+                     * @return TemplateName Transcoding template name.
                      * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
-                     * 设置Specifies the transcoding template name.
-                     * @param _templateName Specifies the transcoding template name.
+                     * 设置Transcoding template name.
+                     * @param _templateName Transcoding template name.
                      * 
                      */
                     void SetTemplateName(const std::string& _templateName);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
-                     * @return Type Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+                     * 获取Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
+                     * @return Type Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
-                     * @param _type Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+                     * 设置Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
+                     * @param _type Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
-                     * @return VideoStreamSwitch Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+                     * 获取Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
+                     * @return VideoStreamSwitch Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     std::string GetVideoStreamSwitch() const;
 
                     /**
-                     * 设置Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
-                     * @param _videoStreamSwitch Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+                     * 设置Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
+                     * @param _videoStreamSwitch Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     void SetVideoStreamSwitch(const std::string& _videoStreamSwitch);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool VideoStreamSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @return AudioStreamSwitch Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 获取Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
+                     * @return AudioStreamSwitch Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     std::string GetAudioStreamSwitch() const;
 
                     /**
-                     * 设置Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-                     * @param _audioStreamSwitch Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * 设置Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
+                     * @param _audioStreamSwitch Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
                      * 
                      */
                     void SetAudioStreamSwitch(const std::string& _audioStreamSwitch);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool AudioStreamSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
-                     * @return VideoTemplate Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+                     * 获取Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
+                     * @return VideoTemplate Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
                      * 
                      */
                     VideoTemplateInfo GetVideoTemplate() const;
 
                     /**
-                     * 设置Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
-                     * @param _videoTemplate Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+                     * 设置Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
+                     * @param _videoTemplate Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
                      * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfo& _videoTemplate);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
-                     * @return AudioTemplate Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+                     * 获取Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
+                     * @return AudioTemplate Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
                      * 
                      */
                     AudioTemplateInfo GetAudioTemplate() const;
 
                     /**
-                     * 设置Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
-                     * @param _audioTemplate Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+                     * 设置Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
+                     * @param _audioTemplate Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
                      * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfo& _audioTemplate);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _createTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return UpdateTime Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _updateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -267,7 +267,7 @@ namespace TencentCloud
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Specifies the transcoding template name.
+                     * Transcoding template name.
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;
@@ -279,43 +279,43 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+                     * Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+                     * Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
                      */
                     std::string m_videoStreamSwitch;
                     bool m_videoStreamSwitchHasBeenSet;
 
                     /**
-                     * Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+                     * Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
                      */
                     std::string m_audioStreamSwitch;
                     bool m_audioStreamSwitchHasBeenSet;
 
                     /**
-                     * Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+                     * Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
                      */
                     VideoTemplateInfo m_videoTemplate;
                     bool m_videoTemplateHasBeenSet;
 
                     /**
-                     * Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+                     * Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
                      */
                     AudioTemplateInfo m_audioTemplate;
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
-                     * @return DnsVerification Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
+                     * 获取Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
+                     * @return DnsVerification Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
                      * 
                      */
                     DnsVerification GetDnsVerification() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool DnsVerificationHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
-                     * @return FileVerification Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
+                     * 获取Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
+                     * @return FileVerification Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
                      * 
                      */
                     FileVerification GetFileVerification() const;
@@ -76,13 +76,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
+                     * Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
                      */
                     DnsVerification m_dnsVerification;
                     bool m_dnsVerificationHasBeenSet;
 
                     /**
-                     * Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
+                     * Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
                      */
                     FileVerification m_fileVerification;
                     bool m_fileVerificationHasBeenSet;

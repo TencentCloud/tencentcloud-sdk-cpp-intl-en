@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Block page configuration
+                * Overall configuration of the interception page, used to configure the post-interception action for various modules.
                 */
                 class DropPageConfig : public AbstractModel
                 {
@@ -48,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
-                     * @return WafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+                     * 获取Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
+                     * @return WafDropPageDetail Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
                      * 
                      */
                     DropPageDetail GetWafDropPageDetail() const;
 
                     /**
-                     * 设置Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
-                     * @param _wafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+                     * 设置Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
+                     * @param _wafDropPageDetail Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
                      * 
                      */
                     void SetWafDropPageDetail(const DropPageDetail& _wafDropPageDetail);
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool WafDropPageDetailHasBeenSet() const;
 
                     /**
-                     * 获取Interception page configuration for custom pages. if null, use the last set configuration by default.
-                     * @return AclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
+                     * 获取Interception page configuration for custom pages. If it is null, use the last set configuration by default.
+                     * @return AclDropPageDetail Interception page configuration for custom pages. If it is null, use the last set configuration by default.
                      * 
                      */
                     DropPageDetail GetAclDropPageDetail() const;
 
                     /**
-                     * 设置Interception page configuration for custom pages. if null, use the last set configuration by default.
-                     * @param _aclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
+                     * 设置Interception page configuration for custom pages. If it is null, use the last set configuration by default.
+                     * @param _aclDropPageDetail Interception page configuration for custom pages. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetAclDropPageDetail(const DropPageDetail& _aclDropPageDetail);
@@ -121,21 +121,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+                     * Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
                      */
                     DropPageDetail m_wafDropPageDetail;
                     bool m_wafDropPageDetailHasBeenSet;
 
                     /**
-                     * Interception page configuration for custom pages. if null, use the last set configuration by default.
+                     * Interception page configuration for custom pages. If it is null, use the last set configuration by default.
                      */
                     DropPageDetail m_aclDropPageDetail;
                     bool m_aclDropPageDetailHasBeenSet;

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Service monitoring data for reasoning.</p>
-                     * @return InferenceServiceMonitorRecords <p>Service monitoring data for reasoning.</p>
+                     * 获取<p>Reasoning service monitoring data.</p>
+                     * @return InferenceServiceMonitorRecords <p>Reasoning service monitoring data.</p>
                      * 
                      */
                     std::vector<InferenceServiceMonitorRecord> GetInferenceServiceMonitorRecords() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Service monitoring data for reasoning.</p>
+                     * <p>Reasoning service monitoring data.</p>
                      */
                     std::vector<InferenceServiceMonitorRecord> m_inferenceServiceMonitorRecords;
                     bool m_inferenceServiceMonitorRecordsHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
-                     * @return IPs List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+                     * 获取List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
+                     * @return IPs List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
                      * 
                      */
                     std::vector<std::string> GetIPs() const;
 
                     /**
-                     * 设置List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
-                     * @param _iPs List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+                     * 设置List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
+                     * @param _iPs List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
                      * 
                      */
                     void SetIPs(const std::vector<std::string>& _iPs);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+                     * List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
                      */
                     std::vector<std::string> m_iPs;
                     bool m_iPsHasBeenSet;

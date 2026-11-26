@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node Cache TTL configuration parameters
+                * Node cache TTL config.
                 */
                 class CacheConfigParameters : public AbstractModel
                 {
@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return FollowOrigin Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
+                     * @return FollowOrigin Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      * 
                      */
                     FollowOrigin GetFollowOrigin() const;
 
                     /**
-                     * 设置Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _followOrigin Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
+                     * @param _followOrigin Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      * 
                      */
                     void SetFollowOrigin(const FollowOrigin& _followOrigin);
@@ -75,19 +71,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool FollowOriginHasBeenSet() const;
 
                     /**
-                     * 获取No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return NoCache No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
+                     * @return NoCache No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
                      * 
                      */
                     NoCache GetNoCache() const;
 
                     /**
-                     * 设置No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _noCache No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
+                     * @param _noCache No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
                      * 
                      */
                     void SetNoCache(const NoCache& _noCache);
@@ -100,19 +92,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool NoCacheHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CustomTime Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
+                     * @return CustomTime Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
                      * 
                      */
                     CacheConfigCustomTime GetCustomTime() const;
 
                     /**
-                     * 设置Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _customTime Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
+                     * @param _customTime Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
                      * 
                      */
                     void SetCustomTime(const CacheConfigCustomTime& _customTime);
@@ -127,22 +115,19 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      */
                     FollowOrigin m_followOrigin;
                     bool m_followOriginHasBeenSet;
 
                     /**
-                     * No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
                      */
                     NoCache m_noCache;
                     bool m_noCacheHasBeenSet;
 
                     /**
-                     * Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
                      */
                     CacheConfigCustomTime m_customTime;
                     bool m_customTimeHasBeenSet;

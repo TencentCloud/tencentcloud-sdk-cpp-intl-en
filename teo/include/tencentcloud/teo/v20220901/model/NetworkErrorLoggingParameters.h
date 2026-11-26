@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Network Error Logging configuration.
+                * Network error log configuration item.
                 */
                 class NetworkErrorLoggingParameters : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether Network Error Logging configuration is enabled. Valid values:
+                     * 获取Network error log configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-                     * @return Switch Specifies whether Network Error Logging configuration is enabled. Valid values:
+<li>off: Disable.</li>
+                     * @return Switch Network error log configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Specifies whether Network Error Logging configuration is enabled. Valid values:
+                     * 设置Network error log configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-                     * @param _switch Specifies whether Network Error Logging configuration is enabled. Valid values:
+<li>off: Disable.</li>
+                     * @param _switch Network error log configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies whether Network Error Logging configuration is enabled. Valid values:
+                     * Network error log configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

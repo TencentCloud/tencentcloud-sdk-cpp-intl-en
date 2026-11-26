@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Shared CNAME detail
+                * Shared CNAME details
                 */
                 class SharedCNAMEInfo : public AbstractModel
                 {
@@ -49,23 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
-                     * @return Type Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
+                     * 获取<p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
+                     * @return Type <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
-                     * @param _type Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
+                     * 设置<p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
+                     * @param _type <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -78,15 +70,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Shared CNAME name.
-                     * @return SharedCNAME Shared CNAME name.
+                     * 获取<p>Shared CNAME name.</p>
+                     * @return SharedCNAME <p>Shared CNAME name.</p>
                      * 
                      */
                     std::string GetSharedCNAME() const;
 
                     /**
-                     * 设置Shared CNAME name.
-                     * @param _sharedCNAME Shared CNAME name.
+                     * 设置<p>Shared CNAME name.</p>
+                     * @param _sharedCNAME <p>Shared CNAME name.</p>
                      * 
                      */
                     void SetSharedCNAME(const std::string& _sharedCNAME);
@@ -99,15 +91,15 @@ namespace TencentCloud
                     bool SharedCNAMEHasBeenSet() const;
 
                     /**
-                     * 获取Description.
-                     * @return Description Description.
+                     * 获取<p>Description.</p>
+                     * @return Description <p>Description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description.
-                     * @param _description Description.
+                     * 设置<p>Description.</p>
+                     * @param _description <p>Description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -120,15 +112,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
-                     * @return IPSSLConfig When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+                     * 获取<p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
+                     * @return IPSSLConfig <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
                      * 
                      */
                     IPSSLConfig GetIPSSLConfig() const;
 
                     /**
-                     * 设置When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
-                     * @param _iPSSLConfig When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+                     * 设置<p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
+                     * @param _iPSSLConfig <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
                      * 
                      */
                     void SetIPSSLConfig(const IPSSLConfig& _iPSSLConfig);
@@ -141,15 +133,15 @@ namespace TencentCloud
                     bool IPSSLConfigHasBeenSet() const;
 
                     /**
-                     * 获取Number of acceleration domain names bound to the shared CNAME.
-                     * @return BindDomainCount Number of acceleration domain names bound to the shared CNAME.
+                     * 获取<p>Number of acceleration domain names bound to the shared CNAME.</p>
+                     * @return BindDomainCount <p>Number of acceleration domain names bound to the shared CNAME.</p>
                      * 
                      */
                     int64_t GetBindDomainCount() const;
 
                     /**
-                     * 设置Number of acceleration domain names bound to the shared CNAME.
-                     * @param _bindDomainCount Number of acceleration domain names bound to the shared CNAME.
+                     * 设置<p>Number of acceleration domain names bound to the shared CNAME.</p>
+                     * @param _bindDomainCount <p>Number of acceleration domain names bound to the shared CNAME.</p>
                      * 
                      */
                     void SetBindDomainCount(const int64_t& _bindDomainCount);
@@ -162,15 +154,15 @@ namespace TencentCloud
                     bool BindDomainCountHasBeenSet() const;
 
                     /**
-                     * 获取List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
-                     * @return AccelerationDomains List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+                     * 获取<p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
+                     * @return AccelerationDomains <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
                      * 
                      */
                     std::vector<ReferenceHolder> GetAccelerationDomains() const;
 
                     /**
-                     * 设置List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
-                     * @param _accelerationDomains List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+                     * 设置<p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
+                     * @param _accelerationDomains <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
                      * 
                      */
                     void SetAccelerationDomains(const std::vector<ReferenceHolder>& _accelerationDomains);
@@ -185,39 +177,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
+                     * <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Shared CNAME name.
+                     * <p>Shared CNAME name.</p>
                      */
                     std::string m_sharedCNAME;
                     bool m_sharedCNAMEHasBeenSet;
 
                     /**
-                     * Description.
+                     * <p>Description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+                     * <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
                      */
                     IPSSLConfig m_iPSSLConfig;
                     bool m_iPSSLConfigHasBeenSet;
 
                     /**
-                     * Number of acceleration domain names bound to the shared CNAME.
+                     * <p>Number of acceleration domain names bound to the shared CNAME.</p>
                      */
                     int64_t m_bindDomainCount;
                     bool m_bindDomainCountHasBeenSet;
 
                     /**
-                     * List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+                     * <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
                      */
                     std::vector<ReferenceHolder> m_accelerationDomains;
                     bool m_accelerationDomainsHasBeenSet;

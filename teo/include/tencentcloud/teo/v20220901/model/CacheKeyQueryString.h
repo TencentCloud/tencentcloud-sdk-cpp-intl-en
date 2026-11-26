@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom Cache Key query string configuration parameters
+                * Parameter for custom Cache Key query string configuration.
                 */
                 class CacheKeyQueryString : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,23 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @return Action Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 获取Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
+                     * @return Action Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @param _action Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 设置Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
+                     * @param _action Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -109,15 +105,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @return Values List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 获取List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
+                     * @return Values List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @param _values List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 设置List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
+                     * @param _values List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -132,24 +128,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query string retain/ignore specified parameter switch. valid values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Switch to reserve or ignore specified parameters in the query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Actions to retain/ignore specified parameters in the query string. values:.
-<Li>`IncludeCustom`: retain partial parameters.</li>.
-<Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * Action to reserve or ignore specified parameters in the query string. Valid values:
+<li>includeCustom: means to reserve some parameters;</li>
+<li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

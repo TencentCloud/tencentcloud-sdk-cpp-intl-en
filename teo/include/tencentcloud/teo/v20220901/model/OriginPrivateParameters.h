@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Private authentication parameters for Cloud Object Storage origin server.
+                * Private authentication parameter for the COS origin server.
                 */
                 class OriginPrivateParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Authentication parameter access key id.
-                     * @return AccessKeyId Authentication parameter access key id.
+                     * 获取Access Key ID authentication parameter.
+                     * @return AccessKeyId Access Key ID authentication parameter.
                      * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
-                     * 设置Authentication parameter access key id.
-                     * @param _accessKeyId Authentication parameter access key id.
+                     * 设置Access Key ID authentication parameter.
+                     * @param _accessKeyId Access Key ID authentication parameter.
                      * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AccessKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Authentication parameter secret access key.
-                     * @return SecretAccessKey Authentication parameter secret access key.
+                     * 获取Secret Access Key authentication parameter.
+                     * @return SecretAccessKey Secret Access Key authentication parameter.
                      * 
                      */
                     std::string GetSecretAccessKey() const;
 
                     /**
-                     * 设置Authentication parameter secret access key.
-                     * @param _secretAccessKey Authentication parameter secret access key.
+                     * 设置Secret Access Key authentication parameter.
+                     * @param _secretAccessKey Secret Access Key authentication parameter.
                      * 
                      */
                     void SetSecretAccessKey(const std::string& _secretAccessKey);
@@ -89,23 +89,23 @@ namespace TencentCloud
                     bool SecretAccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
-                     * @return SignatureVersion Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
+                     * 获取Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
+                     * @return SignatureVersion Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
                      * 
                      */
                     std::string GetSignatureVersion() const;
 
                     /**
-                     * 设置Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
-                     * @param _signatureVersion Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
+                     * 设置Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
+                     * @param _signatureVersion Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
                      * 
                      */
                     void SetSignatureVersion(const std::string& _signatureVersion);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool SignatureVersionHasBeenSet() const;
 
                     /**
-                     * 获取Region of the bucket.
-                     * @return Region Region of the bucket.
+                     * 获取Bucket region.
+                     * @return Region Bucket region.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region of the bucket.
-                     * @param _region Region of the bucket.
+                     * 设置Bucket region.
+                     * @param _region Bucket region.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -141,27 +141,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Authentication parameter access key id.
+                     * Access Key ID authentication parameter.
                      */
                     std::string m_accessKeyId;
                     bool m_accessKeyIdHasBeenSet;
 
                     /**
-                     * Authentication parameter secret access key.
+                     * Secret Access Key authentication parameter.
                      */
                     std::string m_secretAccessKey;
                     bool m_secretAccessKeyHasBeenSet;
 
                     /**
-                     * Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
+                     * Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
                      */
                     std::string m_signatureVersion;
                     bool m_signatureVersionHasBeenSet;
 
                     /**
-                     * Region of the bucket.
+                     * Bucket region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;

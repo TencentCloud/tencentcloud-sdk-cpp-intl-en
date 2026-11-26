@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the site ID.
-                     * @return ZoneId Specifies the site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies the site ID.
-                     * @param _zoneId Specifies the site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Multi-Channel security gateway ID.
-                     * @return GatewayId Multi-Channel security gateway ID.
+                     * 获取Multi-channel security gateway ID.
+                     * @return GatewayId Multi-channel security gateway ID.
                      * 
                      */
                     std::string GetGatewayId() const;
 
                     /**
-                     * 设置Multi-Channel security gateway ID.
-                     * @param _gatewayId Multi-Channel security gateway ID.
+                     * 设置Multi-channel security gateway ID.
+                     * @param _gatewayId Multi-channel security gateway ID.
                      * 
                      */
                     void SetGatewayId(const std::string& _gatewayId);
@@ -85,23 +85,19 @@ namespace TencentCloud
                     bool GatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
-                     * @return LineType Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+                     * 获取Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+                     * @return LineType Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
                      * 
                      */
                     std::string GetLineType() const;
 
                     /**
-                     * 设置Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
-                     * @param _lineType Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+                     * 设置Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+                     * @param _lineType Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
                      * 
                      */
                     void SetLineType(const std::string& _lineType);
@@ -114,15 +110,15 @@ namespace TencentCloud
                     bool LineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Line address format: ip:port.
-                     * @return LineAddress Line address format: ip:port.
+                     * 获取Line address in the format of ip:port.
+                     * @return LineAddress Line address in the format of ip:port.
                      * 
                      */
                     std::string GetLineAddress() const;
 
                     /**
-                     * 设置Line address format: ip:port.
-                     * @param _lineAddress Line address format: ip:port.
+                     * 设置Line address in the format of ip:port.
+                     * @param _lineAddress Line address in the format of ip:port.
                      * 
                      */
                     void SetLineAddress(const std::string& _lineAddress);
@@ -135,15 +131,15 @@ namespace TencentCloud
                     bool LineAddressHasBeenSet() const;
 
                     /**
-                     * 获取The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
-                     * @return ProxyId The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
+                     * 获取Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
+                     * @return ProxyId Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
-                     * @param _proxyId The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
+                     * 设置Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
+                     * @param _proxyId Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -156,15 +152,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
-                     * @return RuleId Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
+                     * 获取Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
+                     * @return RuleId Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
-                     * @param _ruleId Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
+                     * 设置Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
+                     * @param _ruleId Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -179,39 +175,38 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Multi-Channel security gateway ID.
+                     * Multi-channel security gateway ID.
                      */
                     std::string m_gatewayId;
                     bool m_gatewayIdHasBeenSet;
 
                     /**
-                     * Line type. valid values:
-<li>direct: direct connection line, cannot be modified or deleted.</li>
- <li>proxy: EdgeOne layer-4 proxy line, supports modifying instance ID and rule ID, but cannot be deleted.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
+                     * Line type. Valid values:
+<li>direct: direct connection line, modification and deletion are not supported.</li> <li>proxy: EdgeOne Layer 4 proxy line, supports modifying instance ID and rule ID, deletion is not supported.</li> <li>custom: custom line, supports modifying and deleting instance ID and rule ID.</li>
                      */
                     std::string m_lineType;
                     bool m_lineTypeHasBeenSet;
 
                     /**
-                     * Line address format: ip:port.
+                     * Line address in the format of ip:port.
                      */
                     std::string m_lineAddress;
                     bool m_lineAddressHasBeenSet;
 
                     /**
-                     * The layer-4 proxy instance ID is required when the LineType value is proxy (EdgeOne layer-4 proxy) and can be obtained via the api [DescribeL4proxy](https://intl.cloud.tencent.com/document/api/1552/103413?from_cn_redirect=1).
+                     * Layer 4 proxy instance ID. It is required when the line type `LineType` value is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4Proxy](https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1) API.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Forwarding rule ID, this field is required when the line type LineType value is proxy (EdgeOne layer-4 proxy). you can obtain it from the api [DescribeL4ProxyRules](https://intl.cloud.tencent.com/document/api/1552/103412?from_cn_redirect=1).
+                     * Forwarding rule ID. Required when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy). You can obtain it via the [DescribeL4ProxyRules](https://www.tencentcloud.com/document/api/1552/103412?from_cn_redirect=1) API.
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;

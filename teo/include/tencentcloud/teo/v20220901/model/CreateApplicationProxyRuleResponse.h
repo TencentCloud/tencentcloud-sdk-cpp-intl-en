@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The rule ID.
-                     * @return RuleId The rule ID.
+                     * 获取Rule ID
+                     * @return RuleId Rule ID
                      * 
                      */
                     std::string GetRuleId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The rule ID.
+                     * Rule ID
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;

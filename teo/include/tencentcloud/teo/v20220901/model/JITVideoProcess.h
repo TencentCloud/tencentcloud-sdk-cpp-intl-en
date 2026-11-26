@@ -48,10 +48,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
                      * @return Switch Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
                      * 
                      */
@@ -59,10 +59,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
                      * @param _switch Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
                      * 
                      */
@@ -79,7 +79,7 @@ namespace TencentCloud
 
                     /**
                      * Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
                      */
                     std::string m_switch;

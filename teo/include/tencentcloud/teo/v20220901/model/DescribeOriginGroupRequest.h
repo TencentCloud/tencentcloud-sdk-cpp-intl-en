@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取(Required) Site ID
-                     * @return ZoneId (Required) Site ID
+                     * 获取Site ID. This parameter is required.
+                     * @return ZoneId Site ID. This parameter is required.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置(Required) Site ID
-                     * @param _zoneId (Required) Site ID
+                     * 设置Site ID. This parameter is required.
+                     * @param _zoneId Site ID. This parameter is required.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The paginated query offset. Default value: 0
-                     * @return Offset The paginated query offset. Default value: 0
+                     * 获取Paginated query offset. Default value: 0.
+                     * @return Offset Paginated query offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The paginated query offset. Default value: 0
-                     * @param _offset The paginated query offset. Default value: 0
+                     * 设置Paginated query offset. Default value: 0.
+                     * @param _offset Paginated query offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Value range: 1-1000. Default value: 20.
-                     * @return Limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
+                     * 获取Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
+                     * @return Limit Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Value range: 1-1000. Default value: 20.
-                     * @param _limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
+                     * 设置Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
+                     * @param _limit Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -108,22 +108,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
                      * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
                      * @param _filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -138,27 +134,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * (Required) Site ID
+                     * Site ID. This parameter is required.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The paginated query offset. Default value: 0
+                     * Paginated query offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Value range: 1-1000. Default value: 20.
+                     * Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
                      * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;

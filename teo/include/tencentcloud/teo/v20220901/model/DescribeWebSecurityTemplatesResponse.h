@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of policy templates.
-                     * @return SecurityPolicyTemplates List of policy templates.
+                     * 获取Policy template list.
+                     * @return SecurityPolicyTemplates Policy template list.
                      * 
                      */
                     std::vector<SecurityPolicyTemplateInfo> GetSecurityPolicyTemplates() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of policy templates.
+                     * Policy template list.
                      */
                     std::vector<SecurityPolicyTemplateInfo> m_securityPolicyTemplates;
                     bool m_securityPolicyTemplatesHasBeenSet;

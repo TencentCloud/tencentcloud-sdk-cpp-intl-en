@@ -35,9 +35,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Key-value pair filters for conditional filtering queries and fuzzy queries, such as filtering ID, name, and status.
-If more than one filter exists, the logical relationship between these filters is `AND`.
-If one filter has multiple values, the logical relationship between these values is `OR`.
+                * Description key-value pair filter, which is used for conditional filtering queries and supports fuzzy query. For example, filter by ID, name, and status.
+If there are multiple Filters, the logical relationship between them is AND.
+If there are multiple Values in the same Filter, the logical relationship between the Values under the same Filter is OR.
                 */
                 class AdvancedFilter : public AbstractModel
                 {
@@ -49,15 +49,15 @@ If one filter has multiple values, the logical relationship between these values
 
 
                     /**
-                     * 获取Field to be filtered.
-                     * @return Name Field to be filtered.
+                     * 获取Fields to be filtered.
+                     * @return Name Fields to be filtered.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Field to be filtered.
-                     * @param _name Field to be filtered.
+                     * 设置Fields to be filtered.
+                     * @param _name Fields to be filtered.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -70,15 +70,15 @@ If one filter has multiple values, the logical relationship between these values
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Value of the filtered field.
-                     * @return Values Value of the filtered field.
+                     * 获取Filter value of the field.
+                     * @return Values Filter value of the field.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Value of the filtered field.
-                     * @param _values Value of the filtered field.
+                     * 设置Filter value of the field.
+                     * @param _values Filter value of the field.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -114,13 +114,13 @@ If one filter has multiple values, the logical relationship between these values
                 private:
 
                     /**
-                     * Field to be filtered.
+                     * Fields to be filtered.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Value of the filtered field.
+                     * Filter value of the field.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

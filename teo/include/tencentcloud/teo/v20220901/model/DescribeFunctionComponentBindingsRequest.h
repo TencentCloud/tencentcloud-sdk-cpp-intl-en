@@ -128,12 +128,12 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
-                     * @return Filters Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
                      * 
@@ -141,12 +141,12 @@ namespace TencentCloud
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
-                     * @param _filters Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
                      * 
@@ -187,8 +187,8 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+                     * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
                      */

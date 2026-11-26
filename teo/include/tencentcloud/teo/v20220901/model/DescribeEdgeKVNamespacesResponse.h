@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of eligible namespaces.
-                     * @return TotalCount Total number of eligible namespaces.
+                     * 获取Total number of namespaces meeting conditions.
+                     * @return TotalCount Total number of namespaces meeting conditions.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取KV namespace information list. If no matching criteria, return an empty array.
-                     * @return KVNamespaces KV namespace information list. If no matching criteria, return an empty array.
+                     * 获取List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
+                     * @return KVNamespaces List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
                      * 
                      */
                     std::vector<KVNamespace> GetKVNamespaces() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of eligible namespaces.
+                     * Total number of namespaces meeting conditions.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * KV namespace information list. If no matching criteria, return an empty array.
+                     * List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
                      */
                     std::vector<KVNamespace> m_kVNamespaces;
                     bool m_kVNamespacesHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of rule engine conditions in `AND` relationship
+                * Rule engine condition AND relationship condition list
                 */
                 class RuleAndConditions : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule engine condition. This condition will be considered met if all items in the array are met.
-                     * @return Conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+                     * 获取Condition of a rule engine. This condition is considered met if all items in the array are met.
+                     * @return Conditions Condition of a rule engine. This condition is considered met if all items in the array are met.
                      * 
                      */
                     std::vector<RuleCondition> GetConditions() const;
 
                     /**
-                     * 设置Rule engine condition. This condition will be considered met if all items in the array are met.
-                     * @param _conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+                     * 设置Condition of a rule engine. This condition is considered met if all items in the array are met.
+                     * @param _conditions Condition of a rule engine. This condition is considered met if all items in the array are met.
                      * 
                      */
                     void SetConditions(const std::vector<RuleCondition>& _conditions);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule engine condition. This condition will be considered met if all items in the array are met.
+                     * Condition of a rule engine. This condition is considered met if all items in the array are met.
                      */
                     std::vector<RuleCondition> m_conditions;
                     bool m_conditionsHasBeenSet;

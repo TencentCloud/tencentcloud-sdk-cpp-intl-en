@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom page ID.
-                     * @return PageId Custom page ID.
+                     * 获取page ID
+                     * @return PageId page ID
                      * 
                      */
                     std::string GetPageId() const;
 
                     /**
-                     * 设置Custom page ID.
-                     * @param _pageId Custom page ID.
+                     * 设置page ID
+                     * @param _pageId page ID
                      * 
                      */
                     void SetPageId(const std::string& _pageId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Custom page ID.
+                     * page ID
                      */
                     std::string m_pageId;
                     bool m_pageIdHasBeenSet;

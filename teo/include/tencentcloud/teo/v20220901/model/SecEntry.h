@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Returned value of security data entry
+                * Security data Entry return value
                 */
                 class SecEntry : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The query dimension value.
-                     * @return Key The query dimension value.
+                     * 获取Query the dimension value.
+                     * @return Key Query the dimension value.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置The query dimension value.
-                     * @param _key The query dimension value.
+                     * 设置Query the dimension value.
+                     * @param _key Query the dimension value.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取The details.
-                     * @return Value The details.
+                     * 获取Detailed data under the query dimension.
+                     * @return Value Detailed data under the query dimension.
                      * 
                      */
                     std::vector<SecEntryValue> GetValue() const;
 
                     /**
-                     * 设置The details.
-                     * @param _value The details.
+                     * 设置Detailed data under the query dimension.
+                     * @param _value Detailed data under the query dimension.
                      * 
                      */
                     void SetValue(const std::vector<SecEntryValue>& _value);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The query dimension value.
+                     * Query the dimension value.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * The details.
+                     * Detailed data under the query dimension.
                      */
                     std::vector<SecEntryValue> m_value;
                     bool m_valueHasBeenSet;

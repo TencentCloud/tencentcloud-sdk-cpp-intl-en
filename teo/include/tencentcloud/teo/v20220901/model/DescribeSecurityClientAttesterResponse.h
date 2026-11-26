@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the authentication option list.
-                     * @return ClientAttesters Specifies the authentication option list.
+                     * 获取Authentication option list.
+                     * @return ClientAttesters Authentication option list.
                      * 
                      */
                     std::vector<ClientAttester> GetClientAttesters() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Specifies the authentication option list.
+                     * Authentication option list.
                      */
                     std::vector<ClientAttester> m_clientAttesters;
                     bool m_clientAttestersHasBeenSet;

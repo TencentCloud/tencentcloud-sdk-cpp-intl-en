@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-                     * @return ActionId <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 获取<p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @return ActionId <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     std::string GetActionId() const;
 
                     /**
-                     * 设置<p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-                     * @param _actionId <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 设置<p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @param _actionId <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     void SetActionId(const std::string& _actionId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ActionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @return Parameters <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 获取<p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @return Parameters <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     std::vector<CustomActionParameter> GetParameters() const;
 
                     /**
-                     * 设置<p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @param _parameters <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 设置<p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @param _parameters <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     void SetParameters(const std::vector<CustomActionParameter>& _parameters);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      */
                     std::string m_actionId;
                     bool m_actionIdHasBeenSet;
 
                     /**
-                     * <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      */
                     std::vector<CustomActionParameter> m_parameters;
                     bool m_parametersHasBeenSet;

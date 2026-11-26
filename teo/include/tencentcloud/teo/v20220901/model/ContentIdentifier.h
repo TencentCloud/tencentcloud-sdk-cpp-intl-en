@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content identifier. This feature is only available to the allowlist.
+                * Content identifier. The feature is open only in the allowlist.
                 */
                 class ContentIdentifier : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content identifier id.
-                     * @return ContentId Content identifier id.
+                     * 获取Content identifier ID.
+                     * @return ContentId Content identifier ID.
                      * 
                      */
                     std::string GetContentId() const;
 
                     /**
-                     * 设置Content identifier id.
-                     * @param _contentId Content identifier id.
+                     * 设置Content identifier ID.
+                     * @param _contentId Content identifier ID.
                      * 
                      */
                     void SetContentId(const std::string& _contentId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Count of citations by the rule engine.
-                     * @return ReferenceCount Count of citations by the rule engine.
+                     * 获取Number of times referenced by the rule engine.
+                     * @return ReferenceCount Number of times referenced by the rule engine.
                      * 
                      */
                     int64_t GetReferenceCount() const;
 
                     /**
-                     * 设置Count of citations by the rule engine.
-                     * @param _referenceCount Count of citations by the rule engine.
+                     * 设置Number of times referenced by the rule engine.
+                     * @param _referenceCount Number of times referenced by the rule engine.
                      * 
                      */
                     void SetReferenceCount(const int64_t& _referenceCount);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ReferenceCountHasBeenSet() const;
 
                     /**
-                     * 获取Bound package id.
-                     * @return PlanId Bound package id.
+                     * 获取Bound package ID.
+                     * @return PlanId Bound package ID.
                      * 
                      */
                     std::string GetPlanId() const;
 
                     /**
-                     * 设置Bound package id.
-                     * @param _planId Bound package id.
+                     * 设置Bound package ID.
+                     * @param _planId Bound package ID.
                      * 
                      */
                     void SetPlanId(const std::string& _planId);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取Bound tags.
-                     * @return Tags Bound tags.
+                     * 获取Bound tag.
+                     * @return Tags Bound tag.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Bound tags.
-                     * @param _tags Bound tags.
+                     * 设置Bound tag.
+                     * @param _tags Bound tag.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -153,23 +153,23 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
-                     * @return Status Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
+                     * 获取Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
+                     * @return Status Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
-                     * @param _status Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
+                     * 设置Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
+                     * @param _status Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -182,15 +182,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-                     * @return CreatedOn Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+                     * 获取Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @return CreatedOn Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
-                     * 设置Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-                     * @param _createdOn Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+                     * 设置Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @param _createdOn Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
@@ -203,15 +203,15 @@ namespace TencentCloud
                     bool CreatedOnHasBeenSet() const;
 
                     /**
-                     * 获取Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-                     * @return ModifiedOn Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+                     * 获取Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @return ModifiedOn Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
-                     * 设置Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-                     * @param _modifiedOn Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+                     * 设置Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @param _modifiedOn Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
@@ -224,19 +224,15 @@ namespace TencentCloud
                     bool ModifiedOnHasBeenSet() const;
 
                     /**
-                     * 获取Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return DeletedOn Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
+                     * @return DeletedOn Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
                      * 
                      */
                     std::string GetDeletedOn() const;
 
                     /**
-                     * 设置Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _deletedOn Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
+                     * @param _deletedOn Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
                      * 
                      */
                     void SetDeletedOn(const std::string& _deletedOn);
@@ -251,7 +247,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Content identifier id.
+                     * Content identifier ID.
                      */
                     std::string m_contentId;
                     bool m_contentIdHasBeenSet;
@@ -263,46 +259,45 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Count of citations by the rule engine.
+                     * Number of times referenced by the rule engine.
                      */
                     int64_t m_referenceCount;
                     bool m_referenceCountHasBeenSet;
 
                     /**
-                     * Bound package id.
+                     * Bound package ID.
                      */
                     std::string m_planId;
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * Bound tags.
+                     * Bound tag.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
+                     * Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+                     * Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      */
                     std::string m_createdOn;
                     bool m_createdOnHasBeenSet;
 
                     /**
-                     * Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+                     * Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      */
                     std::string m_modifiedOn;
                     bool m_modifiedOnHasBeenSet;
 
                     /**
-                     * Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
                      */
                     std::string m_deletedOn;
                     bool m_deletedOnHasBeenSet;

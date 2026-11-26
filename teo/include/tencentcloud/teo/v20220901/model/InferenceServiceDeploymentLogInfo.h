@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Reasoning service deployment log information.
+                * Deployment log information for the reasoning service.
                 */
                 class InferenceServiceDeploymentLogInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Message content of log messages.
-                     * @return LogMessage Message content of log messages.
+                     * 获取Log message content.
+                     * @return LogMessage Log message content.
                      * 
                      */
                     std::string GetLogMessage() const;
 
                     /**
-                     * 设置Message content of log messages.
-                     * @param _logMessage Message content of log messages.
+                     * 设置Log message content.
+                     * @param _logMessage Log message content.
                      * 
                      */
                     void SetLogMessage(const std::string& _logMessage);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Message content of log messages.
+                     * Log message content.
                      */
                     std::string m_logMessage;
                     bool m_logMessageHasBeenSet;

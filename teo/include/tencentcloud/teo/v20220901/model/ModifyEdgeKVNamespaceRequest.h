@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
-                     * @return Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+                     * 获取Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
+                     * @return Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
-                     * @param _remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+                     * 设置Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
+                     * @param _remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+                     * Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

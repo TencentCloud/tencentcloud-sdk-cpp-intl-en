@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of dns records.
-                     * @return TotalCount Total number of dns records.
+                     * 获取Total number of DNS records.
+                     * @return TotalCount Total number of DNS records.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of dns records.
-                     * @return DnsRecords List of dns records.
+                     * 获取DNS record list.
+                     * @return DnsRecords DNS record list.
                      * 
                      */
                     std::vector<DnsRecord> GetDnsRecords() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of dns records.
+                     * Total number of DNS records.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of dns records.
+                     * DNS record list.
                      */
                     std::vector<DnsRecord> m_dnsRecords;
                     bool m_dnsRecordsHasBeenSet;

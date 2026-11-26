@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key-value pair data list. Return results sequentially in the order of input Keys. If a key does not exist, the corresponding Value Field returns empty string.
-                     * @return Data Key-value pair data list. Return results sequentially in the order of input Keys. If a key does not exist, the corresponding Value Field returns empty string.
+                     * 获取List of key-value pair data. Results are returned sequentially in the order of the input Keys. If a key does not exist, the Value Field of the corresponding item returns an empty string.
+                     * @return Data List of key-value pair data. Results are returned sequentially in the order of the input Keys. If a key does not exist, the Value Field of the corresponding item returns an empty string.
                      * 
                      */
                     std::vector<KeyValuePair> GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Key-value pair data list. Return results sequentially in the order of input Keys. If a key does not exist, the corresponding Value Field returns empty string.
+                     * List of key-value pair data. Results are returned sequentially in the order of the input Keys. If a key does not exist, the Value Field of the corresponding item returns an empty string.
                      */
                     std::vector<KeyValuePair> m_data;
                     bool m_dataHasBeenSet;

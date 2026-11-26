@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rate limiting rules
+                * Rate limiting rule
                 */
                 class RateLimitConfig : public AbstractModel
                 {
@@ -50,23 +50,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -79,15 +79,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
-                     * @return RateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+                     * 获取Rate limit - user rule list. If null, use the last set configuration by default.
+                     * @return RateLimitUserRules Rate limit - user rule list. If null, use the last set configuration by default.
                      * 
                      */
                     std::vector<RateLimitUserRule> GetRateLimitUserRules() const;
 
                     /**
-                     * 设置The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
-                     * @param _rateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+                     * 设置Rate limit - user rule list. If null, use the last set configuration by default.
+                     * @param _rateLimitUserRules Rate limit - user rule list. If null, use the last set configuration by default.
                      * 
                      */
                     void SetRateLimitUserRules(const std::vector<RateLimitUserRule>& _rateLimitUserRules);
@@ -100,15 +100,15 @@ namespace TencentCloud
                     bool RateLimitUserRulesHasBeenSet() const;
 
                     /**
-                     * 获取The rate limit template feature. if null, use the last set configuration by default.
-                     * @return RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
+                     * 获取Rate limit template feature. If null, use the last set configuration by default.
+                     * @return RateLimitTemplate Rate limit template feature. If null, use the last set configuration by default.
                      * 
                      */
                     RateLimitTemplate GetRateLimitTemplate() const;
 
                     /**
-                     * 设置The rate limit template feature. if null, use the last set configuration by default.
-                     * @param _rateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
+                     * 设置Rate limit template feature. If null, use the last set configuration by default.
+                     * @param _rateLimitTemplate Rate limit template feature. If null, use the last set configuration by default.
                      * 
                      */
                     void SetRateLimitTemplate(const RateLimitTemplate& _rateLimitTemplate);
@@ -121,15 +121,15 @@ namespace TencentCloud
                     bool RateLimitTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent client filtering. if null, use the last set configuration by default.
-                     * @return RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
+                     * 获取Intelligent client filtering. If it is null, use the last set configuration by default.
+                     * @return RateLimitIntelligence Intelligent client filtering. If it is null, use the last set configuration by default.
                      * 
                      */
                     RateLimitIntelligence GetRateLimitIntelligence() const;
 
                     /**
-                     * 设置Intelligent client filtering. if null, use the last set configuration by default.
-                     * @param _rateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
+                     * 设置Intelligent client filtering. If it is null, use the last set configuration by default.
+                     * @param _rateLimitIntelligence Intelligent client filtering. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetRateLimitIntelligence(const RateLimitIntelligence& _rateLimitIntelligence);
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool RateLimitIntelligenceHasBeenSet() const;
 
                     /**
-                     * 获取The custom rate limiting rules. if it is `null`, the previous settings is used.
-                     * @return RateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
+                     * 获取Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
+                     * @return RateLimitCustomizes Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
                      * 
                      */
                     std::vector<RateLimitUserRule> GetRateLimitCustomizes() const;
 
                     /**
-                     * 设置The custom rate limiting rules. if it is `null`, the previous settings is used.
-                     * @param _rateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
+                     * 设置Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
+                     * @param _rateLimitCustomizes Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
                      * 
                      */
                     void SetRateLimitCustomizes(const std::vector<RateLimitUserRule>& _rateLimitCustomizes);
@@ -165,33 +165,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+                     * Rate limit - user rule list. If null, use the last set configuration by default.
                      */
                     std::vector<RateLimitUserRule> m_rateLimitUserRules;
                     bool m_rateLimitUserRulesHasBeenSet;
 
                     /**
-                     * The rate limit template feature. if null, use the last set configuration by default.
+                     * Rate limit template feature. If null, use the last set configuration by default.
                      */
                     RateLimitTemplate m_rateLimitTemplate;
                     bool m_rateLimitTemplateHasBeenSet;
 
                     /**
-                     * Intelligent client filtering. if null, use the last set configuration by default.
+                     * Intelligent client filtering. If it is null, use the last set configuration by default.
                      */
                     RateLimitIntelligence m_rateLimitIntelligence;
                     bool m_rateLimitIntelligenceHasBeenSet;
 
                     /**
-                     * The custom rate limiting rules. if it is `null`, the previous settings is used.
+                     * Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
                      */
                     std::vector<RateLimitUserRule> m_rateLimitCustomizes;
                     bool m_rateLimitCustomizesHasBeenSet;

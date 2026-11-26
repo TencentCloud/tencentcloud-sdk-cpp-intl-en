@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TCRTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Image address.</p>
-                     * @return Image <p>Image address.</p>
+                     * 获取<p>Image URL.</p>
+                     * @return Image <p>Image URL.</p>
                      * 
                      */
                     std::string GetImage() const;
 
                     /**
-                     * 设置<p>Image address.</p>
-                     * @param _image <p>Image address.</p>
+                     * 设置<p>Image URL.</p>
+                     * @param _image <p>Image URL.</p>
                      * 
                      */
                     void SetImage(const std::string& _image);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取<p>ID of the repository instance. Required when TCRType = Enterprise.</p>
-                     * @return RegistryId <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+                     * 获取<p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
+                     * @return RegistryId <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
                      * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
-                     * 设置<p>ID of the repository instance. Required when TCRType = Enterprise.</p>
-                     * @param _registryId <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+                     * 设置<p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
+                     * @param _registryId <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
                      * 
                      */
                     void SetRegistryId(const std::string& _registryId);
@@ -139,13 +139,13 @@ namespace TencentCloud
                     bool m_tCRTypeHasBeenSet;
 
                     /**
-                     * <p>Image address.</p>
+                     * <p>Image URL.</p>
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
-                     * <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+                     * <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
                      */
                     std::string m_registryId;
                     bool m_registryIdHasBeenSet;

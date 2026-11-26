@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom Variable details.
+                * Custom variable details.
                 */
                 class CustomVariable : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
-                     * @return Name <p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+                     * 获取<p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+                     * @return Name <p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
-                     * @param _name <p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+                     * 设置<p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+                     * @param _name <p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Variable name. You need to fill in the complete prefix: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
+                     * <p>Variable name. The complete prefix must be filled in: user.zone.* refers to a site-level custom variable, and user.rule.* refers to a rule-level custom variable. The custom part after the prefix supports only uppercase and lowercase letters, digits, and underscores. Variable names are case-sensitive and cannot exceed 50 characters in length. Once a variable is created successfully, its name cannot be modified.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

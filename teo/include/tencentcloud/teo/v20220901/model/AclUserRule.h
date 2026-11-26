@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The custom rule
+                * User-defined rules
                 */
                 class AclUserRule : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The rule name.
-                     * @return RuleName The rule name.
+                     * 获取Rule name.
+                     * @return RuleName Rule name.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置The rule name.
-                     * @param _ruleName The rule name.
+                     * 设置Rule name.
+                     * @param _ruleName Rule name.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -69,43 +69,43 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-                     * @return Action The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
+                     * 获取Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
+                     * @return Action Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-                     * @param _action The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
+                     * 设置Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
+                     * @param _action Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -118,23 +118,23 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-                     * @return RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
+                     * 获取Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
+                     * @return RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetRuleStatus() const;
 
                     /**
-                     * 设置The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-                     * @param _ruleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
+                     * 设置Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
+                     * @param _ruleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetRuleStatus(const std::string& _ruleStatus);
@@ -147,15 +147,15 @@ namespace TencentCloud
                     bool RuleStatusHasBeenSet() const;
 
                     /**
-                     * 获取The custom rule.
-                     * @return AclConditions The custom rule.
+                     * 获取Custom rule.
+                     * @return AclConditions Custom rule.
                      * 
                      */
                     std::vector<AclCondition> GetAclConditions() const;
 
                     /**
-                     * 设置The custom rule.
-                     * @param _aclConditions The custom rule.
+                     * 设置Custom rule.
+                     * @param _aclConditions Custom rule.
                      * 
                      */
                     void SetAclConditions(const std::vector<AclCondition>& _aclConditions);
@@ -168,15 +168,15 @@ namespace TencentCloud
                     bool AclConditionsHasBeenSet() const;
 
                     /**
-                     * 获取The rule priority. Value range: 0-100.
-                     * @return RulePriority The rule priority. Value range: 0-100.
+                     * 获取Rule priority. Value range: 0-100.
+                     * @return RulePriority Rule priority. Value range: 0-100.
                      * 
                      */
                     int64_t GetRulePriority() const;
 
                     /**
-                     * 设置The rule priority. Value range: 0-100.
-                     * @param _rulePriority The rule priority. Value range: 0-100.
+                     * 设置Rule priority. Value range: 0-100.
+                     * @param _rulePriority Rule priority. Value range: 0-100.
                      * 
                      */
                     void SetRulePriority(const int64_t& _rulePriority);
@@ -189,15 +189,15 @@ namespace TencentCloud
                     bool RulePriorityHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID, which is only used as an output parameter.
-                     * @return RuleID Rule ID, which is only used as an output parameter.
+                     * 获取Rule Id. Output only.
+                     * @return RuleID Rule Id. Output only.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置Rule ID, which is only used as an output parameter.
-                     * @param _ruleID Rule ID, which is only used as an output parameter.
+                     * 设置Rule Id. Output only.
+                     * @param _ruleID Rule Id. Output only.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -210,15 +210,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取The update time, which is only used as an output parameter.
-                     * @return UpdateTime The update time, which is only used as an output parameter.
+                     * 获取Update time. For output usage only.
+                     * @return UpdateTime Update time. For output usage only.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time, which is only used as an output parameter.
-                     * @param _updateTime The update time, which is only used as an output parameter.
+                     * 设置Update time. For output usage only.
+                     * @param _updateTime Update time. For output usage only.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -231,15 +231,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
-                     * @return PunishTime IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+                     * 获取Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
+                     * @return PunishTime Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
                      * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
-                     * 设置IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
-                     * @param _punishTime IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+                     * 设置Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
+                     * @param _punishTime Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
                      * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
@@ -252,27 +252,27 @@ namespace TencentCloud
                     bool PunishTimeHasBeenSet() const;
 
                     /**
-                     * 获取The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
-                     * @return PunishTimeUnit The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
+                     * 获取Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
+                     * @return PunishTimeUnit Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
                      * 
                      */
                     std::string GetPunishTimeUnit() const;
 
                     /**
-                     * 设置The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
-                     * @param _punishTimeUnit The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
+                     * 设置Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
+                     * @param _punishTimeUnit Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
                      * 
                      */
                     void SetPunishTimeUnit(const std::string& _punishTimeUnit);
@@ -285,15 +285,15 @@ namespace TencentCloud
                     bool PunishTimeUnitHasBeenSet() const;
 
                     /**
-                     * 获取Name of the custom return page. It's required when `Action=page`.	
-                     * @return Name Name of the custom return page. It's required when `Action=page`.	
+                     * 获取Name of the custom return page. Required when Action is page, and cannot be empty.	
+                     * @return Name Name of the custom return page. Required when Action is page, and cannot be empty.	
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of the custom return page. It's required when `Action=page`.	
-                     * @param _name Name of the custom return page. It's required when `Action=page`.	
+                     * 设置Name of the custom return page. Required when Action is page, and cannot be empty.	
+                     * @param _name Name of the custom return page. Required when Action is page, and cannot be empty.	
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -306,15 +306,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取(Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
-                     * @return PageId (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+                     * 获取Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
+                     * @return PageId Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
                      * 
                      */
                     int64_t GetPageId() const;
 
                     /**
-                     * 设置(Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
-                     * @param _pageId (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+                     * 设置Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
+                     * @param _pageId Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
                      * 
                      */
                     void SetPageId(const int64_t& _pageId);
@@ -327,15 +327,15 @@ namespace TencentCloud
                     bool PageIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-                     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * 获取Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+                     * @return CustomResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
                      * 
                      */
                     std::string GetCustomResponseId() const;
 
                     /**
-                     * 设置ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-                     * @param _customResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * 设置Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+                     * @param _customResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
                      * 
                      */
                     void SetCustomResponseId(const std::string& _customResponseId);
@@ -348,15 +348,15 @@ namespace TencentCloud
                     bool CustomResponseIdHasBeenSet() const;
 
                     /**
-                     * 获取The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-                     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * 获取code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+                     * @return ResponseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
                      * 
                      */
                     int64_t GetResponseCode() const;
 
                     /**
-                     * 设置The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-                     * @param _responseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * 设置code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+                     * @param _responseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
                      * 
                      */
                     void SetResponseCode(const int64_t& _responseCode);
@@ -369,15 +369,15 @@ namespace TencentCloud
                     bool ResponseCodeHasBeenSet() const;
 
                     /**
-                     * 获取The redirection URL. It's required when `Action=redirect`.	
-                     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.	
+                     * 获取Address for redirection. Required when Action is `redirect` and cannot be empty.	
+                     * @return RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.	
                      * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
-                     * 设置The redirection URL. It's required when `Action=redirect`.	
-                     * @param _redirectUrl The redirection URL. It's required when `Action=redirect`.	
+                     * 设置Address for redirection. Required when Action is `redirect` and cannot be empty.	
+                     * @param _redirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.	
                      * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
@@ -392,97 +392,97 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The rule name.
+                     * Rule name.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
+                     * Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
+                     * Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_ruleStatus;
                     bool m_ruleStatusHasBeenSet;
 
                     /**
-                     * The custom rule.
+                     * Custom rule.
                      */
                     std::vector<AclCondition> m_aclConditions;
                     bool m_aclConditionsHasBeenSet;
 
                     /**
-                     * The rule priority. Value range: 0-100.
+                     * Rule priority. Value range: 0-100.
                      */
                     int64_t m_rulePriority;
                     bool m_rulePriorityHasBeenSet;
 
                     /**
-                     * Rule ID, which is only used as an output parameter.
+                     * Rule Id. Output only.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * The update time, which is only used as an output parameter.
+                     * Update time. For output usage only.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+                     * Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
                      */
                     int64_t m_punishTime;
                     bool m_punishTimeHasBeenSet;
 
                     /**
-                     * The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
+                     * Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
                      */
                     std::string m_punishTimeUnit;
                     bool m_punishTimeUnitHasBeenSet;
 
                     /**
-                     * Name of the custom return page. It's required when `Action=page`.	
+                     * Name of the custom return page. Required when Action is page, and cannot be empty.	
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+                     * Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
                      */
                     int64_t m_pageId;
                     bool m_pageIdHasBeenSet;
 
                     /**
-                     * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
                      */
                     std::string m_customResponseId;
                     bool m_customResponseIdHasBeenSet;
 
                     /**
-                     * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
                      */
                     int64_t m_responseCode;
                     bool m_responseCodeHasBeenSet;
 
                     /**
-                     * The redirection URL. It's required when `Action=redirect`.	
+                     * Address for redirection. Required when Action is `redirect` and cannot be empty.	
                      */
                     std::string m_redirectUrl;
                     bool m_redirectUrlHasBeenSet;

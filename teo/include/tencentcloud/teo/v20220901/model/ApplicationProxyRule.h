@@ -110,12 +110,12 @@ Note: Up to 20 ports can be input for each rule.
 
                     /**
                      * 获取Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
                      * @return OriginType Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
                      * 
                      */
@@ -123,12 +123,12 @@ Note: Up to 20 ports can be input for each rule.
 
                     /**
                      * 设置Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
                      * @param _originType Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
                      * 
                      */
@@ -144,11 +144,11 @@ Note: Up to 20 ports can be input for each rule.
                     /**
                      * 获取Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * @return OriginValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * 
                      */
@@ -157,11 +157,11 @@ Note: Up to 20 ports can be input for each rule.
                     /**
                      * 设置Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * @param _originValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * 
                      */
@@ -197,14 +197,14 @@ Note: Up to 20 ports can be input for each rule.
 
                     /**
                      * 获取Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
                      * @return Status Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -214,14 +214,14 @@ Note: Up to 20 ports can be input for each rule.
 
                     /**
                      * 设置Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
                      * @param _status Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -353,15 +353,15 @@ Note: Up to 20 ports can be input for each rule.
                     bool OriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the rule.
-                     * @return RuleTag Tag of the rule.
+                     * 获取Rule tag.
+                     * @return RuleTag Rule tag.
                      * 
                      */
                     std::string GetRuleTag() const;
 
                     /**
-                     * 设置Tag of the rule.
-                     * @param _ruleTag Tag of the rule.
+                     * 设置Rule tag.
+                     * @param _ruleTag Rule tag.
                      * 
                      */
                     void SetRuleTag(const std::string& _ruleTag);
@@ -394,8 +394,8 @@ Note: Up to 20 ports can be input for each rule.
 
                     /**
                      * Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
                      */
                     std::string m_originType;
@@ -404,7 +404,7 @@ Note: Up to 20 ports can be input for each rule.
                     /**
                      * Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      */
                     std::vector<std::string> m_originValue;
@@ -418,8 +418,8 @@ Note: Up to 20 ports can be input for each rule.
 
                     /**
                      * Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -460,7 +460,7 @@ Note: Up to 20 ports can be input for each rule.
                     bool m_originPortHasBeenSet;
 
                     /**
-                     * Tag of the rule.
+                     * Rule tag.
                      */
                     std::string m_ruleTag;
                     bool m_ruleTagHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Common action parameter of a rule engine condition
+                * Rule engine condition normal action parameter
                 */
                 class RuleNormalActionParams : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-                     * @return Name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+                     * 获取Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+                     * @return Name Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-                     * @param _name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+                     * 设置Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+                     * @param _name Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The parameter value.
-                     * @return Values The parameter value.
+                     * 获取Parameter value.
+                     * @return Values Parameter value.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置The parameter value.
-                     * @param _values The parameter value.
+                     * 设置Parameter value.
+                     * @param _values Parameter value.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+                     * Parameter name. For completion specifications, call the API to [query the parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The parameter value.
+                     * Parameter value.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

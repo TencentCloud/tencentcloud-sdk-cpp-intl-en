@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * WAF configuration.
+                * Waf configuration.
                 */
                 class WafConfig : public AbstractModel
                 {
@@ -49,23 +49,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
-                     * @return Switch Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+                     * 获取WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
+                     * @return Switch WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
-                     * @param _switch Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+                     * 设置WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
+                     * @param _switch WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,35 +78,35 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
-                     * @return Level The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
+                     * 获取Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
+                     * @return Level Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
-                     * @param _level The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
+                     * 设置Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
+                     * @param _level Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -119,23 +119,23 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
-                     * @return Mode The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
+                     * 获取Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
+                     * @return Mode Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
-                     * @param _mode The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
+                     * 设置Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
+                     * @param _mode Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the managed rule. If it is null, the settings that were last configured will be used.
-                     * @return WafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+                     * 获取Detailed configuration of the managed rule. If null, use the last set configuration by default.
+                     * @return WafRule Detailed configuration of the managed rule. If null, use the last set configuration by default.
                      * 
                      */
                     WafRule GetWafRule() const;
 
                     /**
-                     * 设置The settings of the managed rule. If it is null, the settings that were last configured will be used.
-                     * @param _wafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+                     * 设置Detailed configuration of the managed rule. If null, use the last set configuration by default.
+                     * @param _wafRule Detailed configuration of the managed rule. If null, use the last set configuration by default.
                      * 
                      */
                     void SetWafRule(const WafRule& _wafRule);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool WafRuleHasBeenSet() const;
 
                     /**
-                     * 获取The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
-                     * @return AiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+                     * 获取Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
+                     * @return AiRule Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
                      * 
                      */
                     AiRule GetAiRule() const;
 
                     /**
-                     * 设置The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
-                     * @param _aiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+                     * 设置Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
+                     * @param _aiRule Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetAiRule(const AiRule& _aiRule);
@@ -192,40 +192,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+                     * WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
+                     * Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
+                     * Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * The settings of the managed rule. If it is null, the settings that were last configured will be used.
+                     * Detailed configuration of the managed rule. If null, use the last set configuration by default.
                      */
                     WafRule m_wafRule;
                     bool m_wafRuleHasBeenSet;
 
                     /**
-                     * The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+                     * Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
                      */
                     AiRule m_aiRule;
                     bool m_aiRuleHasBeenSet;

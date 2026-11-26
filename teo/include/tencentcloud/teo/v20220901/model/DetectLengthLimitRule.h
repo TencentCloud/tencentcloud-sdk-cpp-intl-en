@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Length limit detection rule details configuration.
+                * Detection length limit rule details
                 */
                 class DetectLengthLimitRule : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule Id, output parameter only.
-                     * @return RuleId Rule Id, output parameter only.
+                     * 获取Rule Id. Output only.
+                     * @return RuleId Rule Id. Output only.
                      * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
-                     * 设置Rule Id, output parameter only.
-                     * @param _ruleId Rule Id, output parameter only.
+                     * 设置Rule Id. Output only.
+                     * @param _ruleId Rule Id. Output only.
                      * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule name, output parameter only.
-                     * @return RuleName Rule name, output parameter only.
+                     * 获取Rule name. Output usage only.
+                     * @return RuleName Rule name. Output usage only.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Rule name, output parameter only.
-                     * @param _ruleName Rule name, output parameter only.
+                     * 设置Rule name. Output usage only.
+                     * @param _ruleName Rule name. Output usage only.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Rule description, output parameter only.
-                     * @return Description Rule description, output parameter only.
+                     * 获取Rule description. For output usage only.
+                     * @return Description Rule description. For output usage only.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Rule description, output parameter only.
-                     * @param _description Rule description, output parameter only.
+                     * 设置Rule description. For output usage only.
+                     * @param _description Rule description. For output usage only.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Rule configuration conditions, output parameter only.
-                     * @return Conditions Rule configuration conditions, output parameter only.
+                     * 获取Rule configuration condition. For output usage only.
+                     * @return Conditions Rule configuration condition. For output usage only.
                      * 
                      */
                     std::vector<DetectLengthLimitCondition> GetConditions() const;
 
                     /**
-                     * 设置Rule configuration conditions, output parameter only.
-                     * @param _conditions Rule configuration conditions, output parameter only.
+                     * 设置Rule configuration condition. For output usage only.
+                     * @param _conditions Rule configuration condition. For output usage only.
                      * 
                      */
                     void SetConditions(const std::vector<DetectLengthLimitCondition>& _conditions);
@@ -132,23 +132,23 @@ namespace TencentCloud
                     bool ConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
-                     * @return Action Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
+                     * 获取Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
+                     * @return Action Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
-                     * @param _action Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
+                     * 设置Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
+                     * @param _action Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -163,33 +163,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule Id, output parameter only.
+                     * Rule Id. Output only.
                      */
                     uint64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Rule name, output parameter only.
+                     * Rule name. Output usage only.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Rule description, output parameter only.
+                     * Rule description. For output usage only.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Rule configuration conditions, output parameter only.
+                     * Rule configuration condition. For output usage only.
                      */
                     std::vector<DetectLengthLimitCondition> m_conditions;
                     bool m_conditionsHasBeenSet;
 
                     /**
-                     * Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
+                     * Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

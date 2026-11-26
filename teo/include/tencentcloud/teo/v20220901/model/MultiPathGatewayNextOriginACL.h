@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the currently effective origin IP range.
+                * When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a comparison with the currently effective origin-pull IP range.
                 */
                 class MultiPathGatewayNextOriginACL : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the version number.
-                     * @return Version Specifies the version number.
+                     * 获取Version.
+                     * @return Version Version.
                      * 
                      */
                     int64_t GetVersion() const;
 
                     /**
-                     * 设置Specifies the version number.
-                     * @param _version Specifies the version number.
+                     * 设置Version.
+                     * @param _version Version.
                      * 
                      */
                     void SetVersion(const int64_t& _version);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Describes the IP range details for origin servers.
-                     * @return EntireAddresses Describes the IP range details for origin servers.
+                     * 获取Origin-pull IP range details.
+                     * @return EntireAddresses Origin-pull IP range details.
                      * 
                      */
                     Addresses GetEntireAddresses() const;
 
                     /**
-                     * 设置Describes the IP range details for origin servers.
-                     * @param _entireAddresses Describes the IP range details for origin servers.
+                     * 设置Origin-pull IP range details.
+                     * @param _entireAddresses Origin-pull IP range details.
                      * 
                      */
                     void SetEntireAddresses(const Addresses& _entireAddresses);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool EntireAddressesHasBeenSet() const;
 
                     /**
-                     * 获取The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
-                     * @return AddedAddresses The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * 获取Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
+                     * @return AddedAddresses Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
                      * 
                      */
                     Addresses GetAddedAddresses() const;
 
                     /**
-                     * 设置The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
-                     * @param _addedAddresses The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * 设置Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
+                     * @param _addedAddresses Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
                      * 
                      */
                     void SetAddedAddresses(const Addresses& _addedAddresses);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AddedAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
-                     * @return RemovedAddresses Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
+                     * 获取Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * @return RemovedAddresses Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
                      * 
                      */
                     Addresses GetRemovedAddresses() const;
 
                     /**
-                     * 设置Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
-                     * @param _removedAddresses Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
+                     * 设置Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * @param _removedAddresses Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
                      * 
                      */
                     void SetRemovedAddresses(const Addresses& _removedAddresses);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool RemovedAddressesHasBeenSet() const;
 
                     /**
-                     * 获取The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
-                     * @return NoChangeAddresses The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * 获取The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
+                     * @return NoChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
                      * 
                      */
                     Addresses GetNoChangeAddresses() const;
 
                     /**
-                     * 设置The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
-                     * @param _noChangeAddresses The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * 设置The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
+                     * @param _noChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
                      * 
                      */
                     void SetNoChangeAddresses(const Addresses& _noChangeAddresses);
@@ -155,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the version number.
+                     * Version.
                      */
                     int64_t m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Describes the IP range details for origin servers.
+                     * Origin-pull IP range details.
                      */
                     Addresses m_entireAddresses;
                     bool m_entireAddressesHasBeenSet;
 
                     /**
-                     * The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
                      */
                     Addresses m_addedAddresses;
                     bool m_addedAddressesHasBeenSet;
 
                     /**
-                     * Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
+                     * Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
                      */
                     Addresses m_removedAddresses;
                     bool m_removedAddressesHasBeenSet;
 
                     /**
-                     * The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+                     * The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
                      */
                     Addresses m_noChangeAddresses;
                     bool m_noChangeAddressesHasBeenSet;

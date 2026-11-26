@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset of paginated query. default value: 0.
-                     * @return Offset Offset of paginated query. default value: 0.
+                     * 获取Offset of paginated query. Default value: 0.
+                     * @return Offset Offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset of paginated query. default value: 0.
-                     * @param _offset Offset of paginated query. default value: 0.
+                     * 设置Offset of paginated query. Default value: 0.
+                     * @param _offset Offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number limit of paginated query. default value: 20. maximum value: 1000.
-                     * @return Limit Number limit of paginated query. default value: 20. maximum value: 1000.
+                     * 获取Number limit of paginated query. Default value: 20. Maximum value: 1000.
+                     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number limit of paginated query. default value: 20. maximum value: 1000.
-                     * @param _limit Number limit of paginated query. default value: 20. maximum value: 1000.
+                     * 设置Number limit of paginated query. Default value: 20. Maximum value: 1000.
+                     * @param _limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
-                     * @return Filters Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>id: Filter by DNS record ID. Fuzzy query is supported.</li><li>name: Filter by DNS record name. Fuzzy query is supported.</li><li>content: Filter by DNS record content. Fuzzy query is supported.</li><li>type: Filter by DNS record type. Fuzzy query is not supported. Options:<br>        A: Point the domain to an external IPv4 address, such as 8.8.8.8.<br>        AAAA: Point the domain to an external IPv6 address.<br>        CNAME: Point the domain to another domain, which then resolves to the final IP address.<br>        TXT: Identify and describe the domain. Commonly used for domain verification and SPF records (anti-spam).<br>        NS: If you need to delegate a subdomain to another DNS service provider for resolution, you need to add an NS record. NS records cannot be added for root domains.<br>        CAA: Specify the CA that can issue certificates for this site.<br>        SRV: Identify that a server uses a service. Commonly used for directory management in Microsoft systems.<br>        MX: Specify the recipient mail server.</li><li>ttl: Filter by resolution time. Fuzzy query is not supported.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>id: Filter by DNS record ID. Fuzzy query is supported.</li><li>name: Filter by DNS record name. Fuzzy query is supported.</li><li>content: Filter by DNS record content. Fuzzy query is supported.</li><li>type: Filter by DNS record type. Fuzzy query is not supported. Options:<br>        A: Point the domain to an external IPv4 address, such as 8.8.8.8.<br>        AAAA: Point the domain to an external IPv6 address.<br>        CNAME: Point the domain to another domain, which then resolves to the final IP address.<br>        TXT: Identify and describe the domain. Commonly used for domain verification and SPF records (anti-spam).<br>        NS: If you need to delegate a subdomain to another DNS service provider for resolution, you need to add an NS record. NS records cannot be added for root domains.<br>        CAA: Specify the CA that can issue certificates for this site.<br>        SRV: Identify that a server uses a service. Commonly used for directory management in Microsoft systems.<br>        MX: Specify the recipient mail server.</li><li>ttl: Filter by resolution time. Fuzzy query is not supported.</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
-                     * @param _filters Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>id: Filter by DNS record ID. Fuzzy query is supported.</li><li>name: Filter by DNS record name. Fuzzy query is supported.</li><li>content: Filter by DNS record content. Fuzzy query is supported.</li><li>type: Filter by DNS record type. Fuzzy query is not supported. Options:<br>        A: Point the domain to an external IPv4 address, such as 8.8.8.8.<br>        AAAA: Point the domain to an external IPv6 address.<br>        CNAME: Point the domain to another domain, which then resolves to the final IP address.<br>        TXT: Identify and describe the domain. Commonly used for domain verification and SPF records (anti-spam).<br>        NS: If you need to delegate a subdomain to another DNS service provider for resolution, you need to add an NS record. NS records cannot be added for root domains.<br>        CAA: Specify the CA that can issue certificates for this site.<br>        SRV: Identify that a server uses a service. Commonly used for directory management in Microsoft systems.<br>        MX: Specify the recipient mail server.</li><li>ttl: Filter by resolution time. Fuzzy query is not supported.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>id: Filter by DNS record ID. Fuzzy query is supported.</li><li>name: Filter by DNS record name. Fuzzy query is supported.</li><li>content: Filter by DNS record content. Fuzzy query is supported.</li><li>type: Filter by DNS record type. Fuzzy query is not supported. Options:<br>        A: Point the domain to an external IPv4 address, such as 8.8.8.8.<br>        AAAA: Point the domain to an external IPv6 address.<br>        CNAME: Point the domain to another domain, which then resolves to the final IP address.<br>        TXT: Identify and describe the domain. Commonly used for domain verification and SPF records (anti-spam).<br>        NS: If you need to delegate a subdomain to another DNS service provider for resolution, you need to add an NS record. NS records cannot be added for root domains.<br>        CAA: Specify the CA that can issue certificates for this site.<br>        SRV: Identify that a server uses a service. Commonly used for directory management in Microsoft systems.<br>        MX: Specify the recipient mail server.</li><li>ttl: Filter by resolution time. Fuzzy query is not supported.</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
-                     * @return SortBy Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
+                     * 获取Sorting basis. Valid values: <li>content: DNS record content;</li><li>created-on: DNS record creation time;</li><li>name: DNS record name;</li><li>ttl: cache time;</li><li>type: DNS record type.</li>Default sorting order: by the combination of type and name attributes.
+                     * @return SortBy Sorting basis. Valid values: <li>content: DNS record content;</li><li>created-on: DNS record creation time;</li><li>name: DNS record name;</li><li>ttl: cache time;</li><li>type: DNS record type.</li>Default sorting order: by the combination of type and name attributes.
                      * 
                      */
                     std::string GetSortBy() const;
 
                     /**
-                     * 设置Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
-                     * @param _sortBy Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
+                     * 设置Sorting basis. Valid values: <li>content: DNS record content;</li><li>created-on: DNS record creation time;</li><li>name: DNS record name;</li><li>ttl: cache time;</li><li>type: DNS record type.</li>Default sorting order: by the combination of type and name attributes.
+                     * @param _sortBy Sorting basis. Valid values: <li>content: DNS record content;</li><li>created-on: DNS record creation time;</li><li>name: DNS record name;</li><li>ttl: cache time;</li><li>type: DNS record type.</li>Default sorting order: by the combination of type and name attributes.
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool SortByHasBeenSet() const;
 
                     /**
-                     * 获取List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
-                     * @return SortOrder List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
+                     * 获取List sort method. Valid values: <li>asc: ascending sort;</li><li>desc: descending sort.</li> Default value: asc.
+                     * @return SortOrder List sort method. Valid values: <li>asc: ascending sort;</li><li>desc: descending sort.</li> Default value: asc.
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
-                     * @param _sortOrder List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
+                     * 设置List sort method. Valid values: <li>asc: ascending sort;</li><li>desc: descending sort.</li> Default value: asc.
+                     * @param _sortOrder List sort method. Valid values: <li>asc: ascending sort;</li><li>desc: descending sort.</li> Default value: asc.
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool SortOrderHasBeenSet() const;
 
                     /**
-                     * 获取Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
-                     * @return Match Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
+                     * 获取Match mode. Valid values: <li>all: return records that match all query conditions;</li><li>any: return records that match any query condition.</li> Default value: all.
+                     * @return Match Match mode. Valid values: <li>all: return records that match all query conditions;</li><li>any: return records that match any query condition.</li> Default value: all.
                      * 
                      */
                     std::string GetMatch() const;
 
                     /**
-                     * 设置Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
-                     * @param _match Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
+                     * 设置Match mode. Valid values: <li>all: return records that match all query conditions;</li><li>any: return records that match any query condition.</li> Default value: all.
+                     * @param _match Match mode. Valid values: <li>all: return records that match all query conditions;</li><li>any: return records that match any query condition.</li> Default value: all.
                      * 
                      */
                     void SetMatch(const std::string& _match);
@@ -193,43 +193,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Offset of paginated query. default value: 0.
+                     * Offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number limit of paginated query. default value: 20. maximum value: 1000.
+                     * Number limit of paginated query. Default value: 20. Maximum value: 1000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
+                     * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>id: Filter by DNS record ID. Fuzzy query is supported.</li><li>name: Filter by DNS record name. Fuzzy query is supported.</li><li>content: Filter by DNS record content. Fuzzy query is supported.</li><li>type: Filter by DNS record type. Fuzzy query is not supported. Options:<br>        A: Point the domain to an external IPv4 address, such as 8.8.8.8.<br>        AAAA: Point the domain to an external IPv6 address.<br>        CNAME: Point the domain to another domain, which then resolves to the final IP address.<br>        TXT: Identify and describe the domain. Commonly used for domain verification and SPF records (anti-spam).<br>        NS: If you need to delegate a subdomain to another DNS service provider for resolution, you need to add an NS record. NS records cannot be added for root domains.<br>        CAA: Specify the CA that can issue certificates for this site.<br>        SRV: Identify that a server uses a service. Commonly used for directory management in Microsoft systems.<br>        MX: Specify the recipient mail server.</li><li>ttl: Filter by resolution time. Fuzzy query is not supported.</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
+                     * Sorting basis. Valid values: <li>content: DNS record content;</li><li>created-on: DNS record creation time;</li><li>name: DNS record name;</li><li>ttl: cache time;</li><li>type: DNS record type.</li>Default sorting order: by the combination of type and name attributes.
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
 
                     /**
-                     * List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
+                     * List sort method. Valid values: <li>asc: ascending sort;</li><li>desc: descending sort.</li> Default value: asc.
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;
 
                     /**
-                     * Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
+                     * Match mode. Valid values: <li>all: return records that match all query conditions;</li><li>any: return records that match any query condition.</li> Default value: all.
                      */
                     std::string m_match;
                     bool m_matchHasBeenSet;

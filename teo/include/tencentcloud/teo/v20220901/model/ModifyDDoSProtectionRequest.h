@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the exclusive Anti-DDoS configuration.
-                     * @return DDoSProtection Specifies the exclusive Anti-DDoS configuration.
+                     * 获取Exclusive DDoS protection configuration.
+                     * @return DDoSProtection Exclusive DDoS protection configuration.
                      * 
                      */
                     DDoSProtection GetDDoSProtection() const;
 
                     /**
-                     * 设置Specifies the exclusive Anti-DDoS configuration.
-                     * @param _dDoSProtection Specifies the exclusive Anti-DDoS configuration.
+                     * 设置Exclusive DDoS protection configuration.
+                     * @param _dDoSProtection Exclusive DDoS protection configuration.
                      * 
                      */
                     void SetDDoSProtection(const DDoSProtection& _dDoSProtection);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Specifies the exclusive Anti-DDoS configuration.
+                     * Exclusive DDoS protection configuration.
                      */
                     DDoSProtection m_dDoSProtection;
                     bool m_dDoSProtectionHasBeenSet;

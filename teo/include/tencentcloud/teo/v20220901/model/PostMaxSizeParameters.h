@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Maximum size of the file uploaded for streaming via a POST request.
+                * Maximum limit for file streaming transmission in a POST request upload.
                 */
                 class PostMaxSizeParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
-                     * @return Switch Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
+                     * 获取Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
+                     * @return Switch Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
-                     * @param _switch Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
+                     * 设置Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
+                     * @param _switch Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
-                     * @return MaxSize Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+                     * 获取Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
+                     * @return MaxSize Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
                      * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
-                     * 设置Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
-                     * @param _maxSize Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+                     * 设置Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
+                     * @param _maxSize Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
                      * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
+                     * Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+                     * Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
                      */
                     int64_t m_maxSize;
                     bool m_maxSizeHasBeenSet;

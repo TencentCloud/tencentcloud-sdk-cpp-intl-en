@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
-                     * @return RuleIds The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+                     * 获取Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
+                     * @return RuleIds Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
                      * 
                      */
                     std::vector<std::string> GetRuleIds() const;
 
                     /**
-                     * 设置The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
-                     * @param _ruleIds The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+                     * 设置Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
+                     * @param _ruleIds Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
                      * 
                      */
                     void SetRuleIds(const std::vector<std::string>& _ruleIds);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+                     * Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
                      */
                     std::vector<std::string> m_ruleIds;
                     bool m_ruleIdsHasBeenSet;

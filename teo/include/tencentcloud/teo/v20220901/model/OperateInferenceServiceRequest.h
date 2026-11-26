@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.
-                     * @return ZoneId Zone ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.
-                     * @param _zoneId Zone ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the inference service.
-                     * @return ServiceId ID of the inference service.
+                     * 获取Inference service ID.
+                     * @return ServiceId Inference service ID.
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置ID of the inference service.
-                     * @param _serviceId ID of the inference service.
+                     * 设置Inference service ID.
+                     * @param _serviceId Inference service ID.
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * ID of the inference service.
+                     * Inference service ID.
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;

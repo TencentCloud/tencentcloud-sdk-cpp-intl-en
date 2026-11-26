@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP blocklist/allowlist rule details
+                * Custom rule - basic access control configuration.
                 */
                 class IpTableRule : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
-                     * @return Action The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
+                     * 获取Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
+                     * @return Action Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
-                     * @param _action The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
+                     * 设置Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
+                     * @param _action Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -80,23 +80,39 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
-                     * @return MatchFrom The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
+                     * 获取According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
+                     * @return MatchFrom According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
                      * 
                      */
                     std::string GetMatchFrom() const;
 
                     /**
-                     * 设置The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
-                     * @param _matchFrom The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
+                     * 设置According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
+                     * @param _matchFrom According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
                      * 
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
@@ -109,47 +125,63 @@ namespace TencentCloud
                     bool MatchFromHasBeenSet() const;
 
                     /**
-                     * 获取Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Operator Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
+                     * @return Operator Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _operator Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
+                     * @param _operator Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -162,15 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as an output parameter.
-                     * @return RuleID The rule ID, which is only used as an output parameter.
+                     * 获取Rule id. Output only.
+                     * @return RuleID Rule id. Output only.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置The rule ID, which is only used as an output parameter.
-                     * @param _ruleID The rule ID, which is only used as an output parameter.
+                     * 设置Rule id. Output only.
+                     * @param _ruleID Rule id. Output only.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -183,15 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取The update time, which is only used as an output parameter.
-                     * @return UpdateTime The update time, which is only used as an output parameter.
+                     * 获取Update time. For output usage only.
+                     * @return UpdateTime Update time. For output usage only.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time, which is only used as an output parameter.
-                     * @param _updateTime The update time, which is only used as an output parameter.
+                     * 设置Update time. For output usage only.
+                     * @param _updateTime Update time. For output usage only.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -204,27 +236,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
+                     * @return Status Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
+                     * @param _status Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -237,15 +269,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the rule name.
-                     * @return RuleName Specifies the rule name.
+                     * 获取Rule name.
+                     * @return RuleName Rule name.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Specifies the rule name.
-                     * @param _ruleName Specifies the rule name.
+                     * 设置Rule name.
+                     * @param _ruleName Rule name.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -258,15 +290,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
-                     * @return MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * 获取Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
+                     * @return MatchContent Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
                      * 
                      */
                     std::string GetMatchContent() const;
 
                     /**
-                     * 设置Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
-                     * @param _matchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * 设置Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
+                     * @param _matchContent Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
                      * 
                      */
                     void SetMatchContent(const std::string& _matchContent);
@@ -281,65 +325,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
+                     * Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
+                     * According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
                      */
                     std::string m_matchFrom;
                     bool m_matchFromHasBeenSet;
 
                     /**
-                     * Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as an output parameter.
+                     * Rule id. Output only.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * The update time, which is only used as an output parameter.
+                     * Update time. For output usage only.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Specifies the rule name.
+                     * Rule name.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
                      */
                     std::string m_matchContent;
                     bool m_matchContentHasBeenSet;

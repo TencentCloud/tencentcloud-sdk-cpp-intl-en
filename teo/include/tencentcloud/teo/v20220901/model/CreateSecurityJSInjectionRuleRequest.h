@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.		
-                     * @return ZoneId Zone ID.		
+                     * 获取Zone ID.	
+                     * @return ZoneId Zone ID.	
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.		
-                     * @param _zoneId Zone ID.		
+                     * 设置Zone ID.	
+                     * @param _zoneId Zone ID.	
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取JavaScript injection rule list.
-                     * @return JSInjectionRules JavaScript injection rule list.
+                     * 获取List of JavaScript injection rules.
+                     * @return JSInjectionRules List of JavaScript injection rules.
                      * 
                      */
                     std::vector<JSInjectionRule> GetJSInjectionRules() const;
 
                     /**
-                     * 设置JavaScript injection rule list.
-                     * @param _jSInjectionRules JavaScript injection rule list.
+                     * 设置List of JavaScript injection rules.
+                     * @param _jSInjectionRules List of JavaScript injection rules.
                      * 
                      */
                     void SetJSInjectionRules(const std::vector<JSInjectionRule>& _jSInjectionRules);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.		
+                     * Zone ID.	
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * JavaScript injection rule list.
+                     * List of JavaScript injection rules.
                      */
                     std::vector<JSInjectionRule> m_jSInjectionRules;
                     bool m_jSInjectionRulesHasBeenSet;

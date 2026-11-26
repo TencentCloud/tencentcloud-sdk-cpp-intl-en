@@ -48,7 +48,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Domain name configuration information
+                * Domain configuration information
                 */
                 class DetailHost : public AbstractModel
                 {
@@ -60,15 +60,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -81,27 +81,27 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-                     * @return Status The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+                     * 获取Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
+                     * @return Status Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-                     * @param _status The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+                     * 设置Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
+                     * @param _status Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The domain name.
-                     * @return Host The domain name.
+                     * 获取Domain name.
+                     * @return Host Domain name.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置The domain name.
-                     * @param _host The domain name.
+                     * 设置Domain name.
+                     * @param _host Domain name.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Name of the site
-                     * @return ZoneName Name of the site
+                     * 获取Site name.
+                     * @return ZoneName Site name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Name of the site
-                     * @param _zoneName Name of the site
+                     * 设置Site name.
+                     * @param _zoneName Site name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The assigned CNAME
-                     * @return Cname The assigned CNAME
+                     * 获取Assigned Cname domain name
+                     * @return Cname Assigned Cname domain name
                      * 
                      */
                     std::string GetCname() const;
 
                     /**
-                     * 设置The assigned CNAME
-                     * @param _cname The assigned CNAME
+                     * 设置Assigned Cname domain name
+                     * @param _cname Assigned Cname domain name
                      * 
                      */
                     void SetCname(const std::string& _cname);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool CnameHasBeenSet() const;
 
                     /**
-                     * 获取The resource ID.
-                     * @return Id The resource ID.
+                     * 获取Resource ID.
+                     * @return Id Resource ID.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置The resource ID.
-                     * @param _id The resource ID.
+                     * 设置Resource ID.
+                     * @param _id Resource ID.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -198,15 +198,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取The instance ID.
-                     * @return InstanceId The instance ID.
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The instance ID.
-                     * @param _instanceId The instance ID.
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -219,15 +219,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The lock status.
-                     * @return Lock The lock status.
+                     * 获取Lock status.
+                     * @return Lock Lock status.
                      * 
                      */
                     int64_t GetLock() const;
 
                     /**
-                     * 设置The lock status.
-                     * @param _lock The lock status.
+                     * 设置Lock status.
+                     * @param _lock Lock status.
                      * 
                      */
                     void SetLock(const int64_t& _lock);
@@ -240,15 +240,15 @@ namespace TencentCloud
                     bool LockHasBeenSet() const;
 
                     /**
-                     * 获取The domain name status.
-                     * @return Mode The domain name status.
+                     * 获取Domain name status type.
+                     * @return Mode Domain name status type.
                      * 
                      */
                     int64_t GetMode() const;
 
                     /**
-                     * 设置The domain name status.
-                     * @param _mode The domain name status.
+                     * 设置Domain name status type.
+                     * @param _mode Domain name status type.
                      * 
                      */
                     void SetMode(const int64_t& _mode);
@@ -261,27 +261,27 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-                     * @return Area The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * 获取Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
+                     * @return Area Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-                     * @param _area The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * 设置Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
+                     * @param _area Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -294,19 +294,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccelerateType The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Acceleration type configuration item.
+                     * @return AccelerateType Acceleration type configuration item.
                      * 
                      */
                     AccelerateType GetAccelerateType() const;
 
                     /**
-                     * 设置The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accelerateType The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Acceleration type configuration item.
+                     * @param _accelerateType Acceleration type configuration item.
                      * 
                      */
                     void SetAccelerateType(const AccelerateType& _accelerateType);
@@ -319,19 +315,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
-                     * 获取The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Https The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Https configuration item.
+                     * @return Https Https configuration item.
                      * 
                      */
                     Https GetHttps() const;
 
                     /**
-                     * 设置The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _https The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Https configuration item.
+                     * @param _https Https configuration item.
                      * 
                      */
                     void SetHttps(const Https& _https);
@@ -344,19 +336,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpsHasBeenSet() const;
 
                     /**
-                     * 获取The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CacheConfig The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cache configuration item.
+                     * @return CacheConfig Cache configuration item.
                      * 
                      */
                     CacheConfig GetCacheConfig() const;
 
                     /**
-                     * 设置The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cacheConfig The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cache configuration item.
+                     * @param _cacheConfig Cache configuration item.
                      * 
                      */
                     void SetCacheConfig(const CacheConfig& _cacheConfig);
@@ -369,19 +357,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CacheConfigHasBeenSet() const;
 
                     /**
-                     * 获取The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Origin The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Origin server configuration item.
+                     * @return Origin Origin server configuration item.
                      * 
                      */
                     Origin GetOrigin() const;
 
                     /**
-                     * 设置The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _origin The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Origin server configuration item.
+                     * @param _origin Origin server configuration item.
                      * 
                      */
                     void SetOrigin(const Origin& _origin);
@@ -394,19 +378,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SecurityType The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Security type.
+                     * @return SecurityType Security type.
                      * 
                      */
                     SecurityType GetSecurityType() const;
 
                     /**
-                     * 设置The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _securityType The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Security type.
+                     * @param _securityType Security type.
                      * 
                      */
                     void SetSecurityType(const SecurityType& _securityType);
@@ -419,19 +399,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SecurityTypeHasBeenSet() const;
 
                     /**
-                     * 获取The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CacheKey The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cache key configuration item.
+                     * @return CacheKey Cache key configuration item.
                      * 
                      */
                     CacheKey GetCacheKey() const;
 
                     /**
-                     * 设置The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cacheKey The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cache key configuration item.
+                     * @param _cacheKey Cache key configuration item.
                      * 
                      */
                     void SetCacheKey(const CacheKey& _cacheKey);
@@ -444,19 +420,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CacheKeyHasBeenSet() const;
 
                     /**
-                     * 获取The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Compression The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent compression configuration item.
+                     * @return Compression Intelligent compression configuration item.
                      * 
                      */
                     Compression GetCompression() const;
 
                     /**
-                     * 设置The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _compression The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent compression configuration item.
+                     * @param _compression Intelligent compression configuration item.
                      * 
                      */
                     void SetCompression(const Compression& _compression);
@@ -469,19 +441,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CompressionHasBeenSet() const;
 
                     /**
-                     * 获取The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Waf The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Waf protection configuration item.
+                     * @return Waf Waf protection configuration item.
                      * 
                      */
                     Waf GetWaf() const;
 
                     /**
-                     * 设置The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _waf The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Waf protection configuration item.
+                     * @param _waf Waf protection configuration item.
                      * 
                      */
                     void SetWaf(const Waf& _waf);
@@ -494,19 +462,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WafHasBeenSet() const;
 
                     /**
-                     * 获取The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CC The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取CC protection configuration item.
+                     * @return CC CC protection configuration item.
                      * 
                      */
                     CC GetCC() const;
 
                     /**
-                     * 设置The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cC The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置CC protection configuration item.
+                     * @param _cC CC protection configuration item.
                      * 
                      */
                     void SetCC(const CC& _cC);
@@ -519,19 +483,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CCHasBeenSet() const;
 
                     /**
-                     * 获取DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DDoS DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取DDoS protection configuration.
+                     * @return DDoS DDoS protection configuration.
                      * 
                      */
                     DDoS GetDDoS() const;
 
                     /**
-                     * 设置DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dDoS DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置DDoS protection configuration.
+                     * @param _dDoS DDoS protection configuration.
                      * 
                      */
                     void SetDDoS(const DDoS& _dDoS);
@@ -544,19 +504,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DDoSHasBeenSet() const;
 
                     /**
-                     * 获取The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SmartRouting The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent routing configuration item.
+                     * @return SmartRouting Intelligent routing configuration item.
                      * 
                      */
                     SmartRouting GetSmartRouting() const;
 
                     /**
-                     * 设置The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _smartRouting The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent routing configuration item.
+                     * @param _smartRouting Intelligent routing configuration item.
                      * 
                      */
                     void SetSmartRouting(const SmartRouting& _smartRouting);
@@ -569,19 +525,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SmartRoutingHasBeenSet() const;
 
                     /**
-                     * 获取The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Ipv6 The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ipv6 access configuration item.
+                     * @return Ipv6 Ipv6 access configuration item.
                      * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ipv6 The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Ipv6 access configuration item.
+                     * @param _ipv6 Ipv6 access configuration item.
                      * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
@@ -594,19 +546,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Configuration of whether to carry the region of the client IP during origin-pull.
+                     * @return ClientIpCountry Configuration of whether to carry the region of the client IP during origin-pull.
                      * 
                      */
                     ClientIpCountry GetClientIpCountry() const;
 
                     /**
-                     * 设置Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _clientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Configuration of whether to carry the region of the client IP during origin-pull.
+                     * @param _clientIpCountry Configuration of whether to carry the region of the client IP during origin-pull.
                      * 
                      */
                     void SetClientIpCountry(const ClientIpCountry& _clientIpCountry);
@@ -621,158 +569,145 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+                     * Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The domain name.
+                     * Domain name.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Name of the site
+                     * Site name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * The assigned CNAME
+                     * Assigned Cname domain name
                      */
                     std::string m_cname;
                     bool m_cnameHasBeenSet;
 
                     /**
-                     * The resource ID.
+                     * Resource ID.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * The instance ID.
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The lock status.
+                     * Lock status.
                      */
                     int64_t m_lock;
                     bool m_lockHasBeenSet;
 
                     /**
-                     * The domain name status.
+                     * Domain name status type.
                      */
                     int64_t m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Acceleration type configuration item.
                      */
                     AccelerateType m_accelerateType;
                     bool m_accelerateTypeHasBeenSet;
 
                     /**
-                     * The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Https configuration item.
                      */
                     Https m_https;
                     bool m_httpsHasBeenSet;
 
                     /**
-                     * The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cache configuration item.
                      */
                     CacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;
 
                     /**
-                     * The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Origin server configuration item.
                      */
                     Origin m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Security type.
                      */
                     SecurityType m_securityType;
                     bool m_securityTypeHasBeenSet;
 
                     /**
-                     * The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cache key configuration item.
                      */
                     CacheKey m_cacheKey;
                     bool m_cacheKeyHasBeenSet;
 
                     /**
-                     * The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Intelligent compression configuration item.
                      */
                     Compression m_compression;
                     bool m_compressionHasBeenSet;
 
                     /**
-                     * The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Waf protection configuration item.
                      */
                     Waf m_waf;
                     bool m_wafHasBeenSet;
 
                     /**
-                     * The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * CC protection configuration item.
                      */
                     CC m_cC;
                     bool m_cCHasBeenSet;
 
                     /**
-                     * DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * DDoS protection configuration.
                      */
                     DDoS m_dDoS;
                     bool m_dDoSHasBeenSet;
 
                     /**
-                     * The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Intelligent routing configuration item.
                      */
                     SmartRouting m_smartRouting;
                     bool m_smartRoutingHasBeenSet;
 
                     /**
-                     * The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ipv6 access configuration item.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Configuration of whether to carry the region of the client IP during origin-pull.
                      */
                     ClientIpCountry m_clientIpCountry;
                     bool m_clientIpCountryHasBeenSet;

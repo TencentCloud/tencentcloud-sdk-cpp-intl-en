@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * WAF rule
+                * Waf rule
                 */
                 class WafRule : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
+                     * @return Switch Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
+                     * @param _switch Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取IDs of the rules to be disabled.
-                     * @return BlockRuleIDs IDs of the rules to be disabled.
+                     * 获取List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
+                     * @return BlockRuleIDs List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
                      * 
                      */
                     std::vector<int64_t> GetBlockRuleIDs() const;
 
                     /**
-                     * 设置IDs of the rules to be disabled.
-                     * @param _blockRuleIDs IDs of the rules to be disabled.
+                     * 设置List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
+                     * @param _blockRuleIDs List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
                      * 
                      */
                     void SetBlockRuleIDs(const std::vector<int64_t>& _blockRuleIDs);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool BlockRuleIDsHasBeenSet() const;
 
                     /**
-                     * 获取IDs of the rules to be executed in Observe mode.
-                     * @return ObserveRuleIDs IDs of the rules to be executed in Observe mode.
+                     * 获取List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
+                     * @return ObserveRuleIDs List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
                      * 
                      */
                     std::vector<int64_t> GetObserveRuleIDs() const;
 
                     /**
-                     * 设置IDs of the rules to be executed in Observe mode.
-                     * @param _observeRuleIDs IDs of the rules to be executed in Observe mode.
+                     * 设置List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
+                     * @param _observeRuleIDs List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
                      * 
                      */
                     void SetObserveRuleIDs(const std::vector<int64_t>& _observeRuleIDs);
@@ -120,21 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * IDs of the rules to be disabled.
+                     * List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
                      */
                     std::vector<int64_t> m_blockRuleIDs;
                     bool m_blockRuleIDsHasBeenSet;
 
                     /**
-                     * IDs of the rules to be executed in Observe mode.
+                     * List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
                      */
                     std::vector<int64_t> m_observeRuleIDs;
                     bool m_observeRuleIDsHasBeenSet;

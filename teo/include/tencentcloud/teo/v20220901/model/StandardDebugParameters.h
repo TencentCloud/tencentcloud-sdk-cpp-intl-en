@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Debug structure.
+                * Debug struct.
                 */
                 class StandardDebugParameters : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
-                     * @return AllowClientIPList The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
+                     * 获取Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
+                     * @return AllowClientIPList Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
                      * 
                      */
                     std::vector<std::string> GetAllowClientIPList() const;
 
                     /**
-                     * 设置The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
-                     * @param _allowClientIPList The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
+                     * 设置Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
+                     * @param _allowClientIPList Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
                      * 
                      */
                     void SetAllowClientIPList(const std::vector<std::string>& _allowClientIPList);
@@ -101,15 +97,15 @@ namespace TencentCloud
                     bool AllowClientIPListHasBeenSet() const;
 
                     /**
-                     * 获取Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
-                     * @return Expires Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
+                     * 获取Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
+                     * @return Expires Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
                      * 
                      */
                     std::string GetExpires() const;
 
                     /**
-                     * 设置Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
-                     * @param _expires Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
+                     * 设置Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
+                     * @param _expires Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
                      * 
                      */
                     void SetExpires(const std::string& _expires);
@@ -124,22 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable standard debugging. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The client ip to allow. it can be an ipv4/ipv6 address or a cidr block. 0.0.0.0/0 means to allow all ipv4 clients for debugging; ::/0 means to allow all ipv6 clients for debugging; 127.0.0.1 is not allowed. <br>note: this field is required when `switch=on` and the number of entries should be 1-100. when `switch=off`, this field is not required and any value specified will not take effect.
+                     * Allowed client source. Supports filling in IPv4 and IPv6 IP ranges. 0.0.0.0/0 indicates permission for all IPv4 clients to debug; ::/0 indicates permission for all IPv6 clients to debug; 127.0.0.1 cannot be filled in.<br>Note: When the Switch field is on, this field is required, and the number of writes is 1–100; when Switch is off, no need to specify this field, and if filled in, it does not take effect.
                      */
                     std::vector<std::string> m_allowClientIPList;
                     bool m_allowClientIPListHasBeenSet;
 
                     /**
-                     * Debug feature expiration time. the feature will be disabled after the set time. <br>note: this field is required when `switch=on`. when `switch=off`, this field is not required and any value specified will not take effect.
+                     * Expiration time of the Debug feature. If the set time is exceeded, the feature becomes invalid.<br>Note: When Switch is on, this field is required; when Switch is off, this field is not required. If filled in, it does not take effect.
                      */
                     std::string m_expires;
                     bool m_expiresHasBeenSet;

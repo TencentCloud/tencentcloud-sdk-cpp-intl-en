@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP/Region blocklist/allowlist configuration
+                * IP whitelist/blacklist and IP region control configuration
                 */
                 class IpTableConfig : public AbstractModel
                 {
@@ -48,27 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. valid values:.
+                     * 获取Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
-                     * @return Switch Switch. valid values:.
+<li>off: Disable;</li>
+                     * @return Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
+<li>off: Disable;</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. valid values:.
+                     * 设置Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
-                     * @param _switch Switch. valid values:.
+<li>off: Disable;</li>
+                     * @param _switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
+<li>off: Disable;</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -81,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Basic control rules. if null, historical configuration is used by default.
-                     * @return IpTableRules Basic control rules. if null, historical configuration is used by default.
+                     * 获取Basic access control rule. If it is null, use the last set configuration by default.
+                     * @return IpTableRules Basic access control rule. If it is null, use the last set configuration by default.
                      * 
                      */
                     std::vector<IpTableRule> GetIpTableRules() const;
 
                     /**
-                     * 设置Basic control rules. if null, historical configuration is used by default.
-                     * @param _ipTableRules Basic control rules. if null, historical configuration is used by default.
+                     * 设置Basic access control rule. If it is null, use the last set configuration by default.
+                     * @param _ipTableRules Basic access control rule. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetIpTableRules(const std::vector<IpTableRule>& _ipTableRules);
@@ -104,16 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch. valid values:.
+                     * Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
+<li>off: Disable;</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Basic control rules. if null, historical configuration is used by default.
+                     * Basic access control rule. If it is null, use the last set configuration by default.
                      */
                     std::vector<IpTableRule> m_ipTableRules;
                     bool m_ipTableRulesHasBeenSet;

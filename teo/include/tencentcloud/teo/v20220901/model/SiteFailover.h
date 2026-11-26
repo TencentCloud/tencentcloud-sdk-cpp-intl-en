@@ -52,35 +52,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
-                     * @return Mode Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
+                     * 获取Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
+                     * @return Mode Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
-                     * @param _mode Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
+                     * 设置Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
+                     * @param _mode Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -93,27 +93,27 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
-                     * @return Origin Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
+                     * 获取Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
+                     * @return Origin Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
                      * 
                      */
                     std::string GetOrigin() const;
 
                     /**
-                     * 设置Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
-                     * @param _origin Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
+                     * 设置Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
+                     * @param _origin Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
                      * 
                      */
                     void SetOrigin(const std::string& _origin);
@@ -126,27 +126,27 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+                     * 获取Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
-                     * @return OriginProtocol Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
+                     * @return OriginProtocol Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
                      * 
                      */
                     std::string GetOriginProtocol() const;
 
                     /**
-                     * 设置Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+                     * 设置Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
-                     * @param _originProtocol Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
+                     * @param _originProtocol Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
                      * 
                      */
                     void SetOriginProtocol(const std::string& _originProtocol);
@@ -159,15 +159,15 @@ namespace TencentCloud
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
-                     * @return HTTPOriginPort HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+                     * 获取HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+                     * @return HTTPOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
                      * 
                      */
                     int64_t GetHTTPOriginPort() const;
 
                     /**
-                     * 设置HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
-                     * @param _hTTPOriginPort HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+                     * 设置HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+                     * @param _hTTPOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
                      * 
                      */
                     void SetHTTPOriginPort(const int64_t& _hTTPOriginPort);
@@ -180,15 +180,15 @@ namespace TencentCloud
                     bool HTTPOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
-                     * @return HTTPSOriginPort HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
+                     * 获取HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
+                     * @return HTTPSOriginPort HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
                      * 
                      */
                     int64_t GetHTTPSOriginPort() const;
 
                     /**
-                     * 设置HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
-                     * @param _hTTPSOriginPort HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
+                     * 设置HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
+                     * @param _hTTPSOriginPort HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
                      * 
                      */
                     void SetHTTPSOriginPort(const int64_t& _hTTPSOriginPort);
@@ -201,15 +201,15 @@ namespace TencentCloud
                     bool HTTPSOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Host Header rewrite configuration for origin-pull
-                     * @return UpstreamHostHeader Host Header rewrite configuration for origin-pull
+                     * 获取Host Header rewrite configuration for origin-pull.
+                     * @return UpstreamHostHeader Host Header rewrite configuration for origin-pull.
                      * 
                      */
                     HostHeaderParameters GetUpstreamHostHeader() const;
 
                     /**
-                     * 设置Host Header rewrite configuration for origin-pull
-                     * @param _upstreamHostHeader Host Header rewrite configuration for origin-pull
+                     * 设置Host Header rewrite configuration for origin-pull.
+                     * @param _upstreamHostHeader Host Header rewrite configuration for origin-pull.
                      * 
                      */
                     void SetUpstreamHostHeader(const HostHeaderParameters& _upstreamHostHeader);
@@ -243,15 +243,15 @@ namespace TencentCloud
                     bool UpstreamURLRewriteHasBeenSet() const;
 
                     /**
-                     * 获取Origin Requests parameter configuration.
-                     * @return UpstreamRequestParameters Origin Requests parameter configuration.
+                     * 获取Origin-pull request parameter configuration.
+                     * @return UpstreamRequestParameters Origin-pull request parameter configuration.
                      * 
                      */
                     UpstreamRequestParameters GetUpstreamRequestParameters() const;
 
                     /**
-                     * 设置Origin Requests parameter configuration.
-                     * @param _upstreamRequestParameters Origin Requests parameter configuration.
+                     * 设置Origin-pull request parameter configuration.
+                     * @param _upstreamRequestParameters Origin-pull request parameter configuration.
                      * 
                      */
                     void SetUpstreamRequestParameters(const UpstreamRequestParameters& _upstreamRequestParameters);
@@ -264,15 +264,15 @@ namespace TencentCloud
                     bool UpstreamRequestParametersHasBeenSet() const;
 
                     /**
-                     * 获取HTTP2 origin-pull configuration parameters.
-                     * @return UpstreamHTTP2Parameters HTTP2 origin-pull configuration parameters.
+                     * 获取HTTP/2 origin-pull configuration parameter.
+                     * @return UpstreamHTTP2Parameters HTTP/2 origin-pull configuration parameter.
                      * 
                      */
                     UpstreamHTTP2Parameters GetUpstreamHTTP2Parameters() const;
 
                     /**
-                     * 设置HTTP2 origin-pull configuration parameters.
-                     * @param _upstreamHTTP2Parameters HTTP2 origin-pull configuration parameters.
+                     * 设置HTTP/2 origin-pull configuration parameter.
+                     * @param _upstreamHTTP2Parameters HTTP/2 origin-pull configuration parameter.
                      * 
                      */
                     void SetUpstreamHTTP2Parameters(const UpstreamHTTP2Parameters& _upstreamHTTP2Parameters);
@@ -285,10 +285,10 @@ namespace TencentCloud
                     bool UpstreamHTTP2ParametersHasBeenSet() const;
 
                     /**
-                     * 获取Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+                     * 获取Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
-                     * @return PrivateAccess Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+                     * @return PrivateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
                      * 
@@ -296,10 +296,10 @@ namespace TencentCloud
                     std::string GetPrivateAccess() const;
 
                     /**
-                     * 设置Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+                     * 设置Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
-                     * @param _privateAccess Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+                     * @param _privateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
                      * 
@@ -335,15 +335,15 @@ namespace TencentCloud
                     bool PrivateParametersHasBeenSet() const;
 
                     /**
-                     * 获取Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
-                     * @return RedirectURL Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
+                     * 获取Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
+                     * @return RedirectURL Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
                      * 
                      */
                     std::string GetRedirectURL() const;
 
                     /**
-                     * 设置Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
-                     * @param _redirectURL Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
+                     * 设置Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
+                     * @param _redirectURL Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
                      * 
                      */
                     void SetRedirectURL(const std::string& _redirectURL);
@@ -356,15 +356,15 @@ namespace TencentCloud
                     bool RedirectURLHasBeenSet() const;
 
                     /**
-                     * 获取Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
-                     * @return ResponsePageId Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
+                     * 获取page ID. This parameter is required when Mode is FailoverCustomResponsePage.
+                     * @return ResponsePageId page ID. This parameter is required when Mode is FailoverCustomResponsePage.
                      * 
                      */
                     std::string GetResponsePageId() const;
 
                     /**
-                     * 设置Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
-                     * @param _responsePageId Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
+                     * 设置page ID. This parameter is required when Mode is FailoverCustomResponsePage.
+                     * @param _responsePageId page ID. This parameter is required when Mode is FailoverCustomResponsePage.
                      * 
                      */
                     void SetResponsePageId(const std::string& _responsePageId);
@@ -377,22 +377,22 @@ namespace TencentCloud
                     bool ResponsePageIdHasBeenSet() const;
 
                     /**
-                     * 获取Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+                     * 获取status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
-                     * @return StatusCode Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+                     * @return StatusCode status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+                     * 设置status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
-                     * @param _statusCode Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+                     * @param _statusCode status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
                      * 
                      */
@@ -408,48 +408,48 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
+                     * Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
+                     * Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+                     * Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
                      */
                     std::string m_originProtocol;
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+                     * HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
                      */
                     int64_t m_hTTPOriginPort;
                     bool m_hTTPOriginPortHasBeenSet;
 
                     /**
-                     * HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
+                     * HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
                      */
                     int64_t m_hTTPSOriginPort;
                     bool m_hTTPSOriginPortHasBeenSet;
 
                     /**
-                     * Host Header rewrite configuration for origin-pull
+                     * Host Header rewrite configuration for origin-pull.
                      */
                     HostHeaderParameters m_upstreamHostHeader;
                     bool m_upstreamHostHeaderHasBeenSet;
@@ -461,19 +461,19 @@ namespace TencentCloud
                     bool m_upstreamURLRewriteHasBeenSet;
 
                     /**
-                     * Origin Requests parameter configuration.
+                     * Origin-pull request parameter configuration.
                      */
                     UpstreamRequestParameters m_upstreamRequestParameters;
                     bool m_upstreamRequestParametersHasBeenSet;
 
                     /**
-                     * HTTP2 origin-pull configuration parameters.
+                     * HTTP/2 origin-pull configuration parameter.
                      */
                     UpstreamHTTP2Parameters m_upstreamHTTP2Parameters;
                     bool m_upstreamHTTP2ParametersHasBeenSet;
 
                     /**
-                     * Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+                     * Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
                      */
@@ -487,20 +487,20 @@ namespace TencentCloud
                     bool m_privateParametersHasBeenSet;
 
                     /**
-                     * Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
+                     * Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
                      */
                     std::string m_redirectURL;
                     bool m_redirectURLHasBeenSet;
 
                     /**
-                     * Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
+                     * page ID. This parameter is required when Mode is FailoverCustomResponsePage.
                      */
                     std::string m_responsePageId;
                     bool m_responsePageIdHasBeenSet;
 
                     /**
-                     * Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+                     * status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
                      */
                     int64_t m_statusCode;

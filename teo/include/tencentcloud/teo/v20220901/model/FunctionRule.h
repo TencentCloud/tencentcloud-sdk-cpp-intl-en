@@ -93,14 +93,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
                      * @return TriggerType Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
                      * 
                      */
@@ -108,14 +108,14 @@ namespace TencentCloud
 
                     /**
                      * 设置Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
                      * @param _triggerType Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
                      * 
                      */
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool TriggerTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the function ID to be executed. valid only when TriggerType is direct.
-                     * @return FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
+                     * 获取Specify the function ID to be executed. Valid when TriggerType is direct.
+                     * @return FunctionId Specify the function ID to be executed. Valid when TriggerType is direct.
                      * 
                      */
                     std::string GetFunctionId() const;
 
                     /**
-                     * 设置Specifies the function ID to be executed. valid only when TriggerType is direct.
-                     * @param _functionId Specifies the function ID to be executed. valid only when TriggerType is direct.
+                     * 设置Specify the function ID to be executed. Valid when TriggerType is direct.
+                     * @param _functionId Specify the function ID to be executed. Valid when TriggerType is direct.
                      * 
                      */
                     void SetFunctionId(const std::string& _functionId);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool FunctionIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the name of the function executed.
-                     * @return FunctionName Specifies the name of the function executed.
+                     * 获取Name of the function to execute.
+                     * @return FunctionName Name of the function to execute.
                      * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
-                     * 设置Specifies the name of the function executed.
-                     * @param _functionName Specifies the name of the function executed.
+                     * 设置Name of the function to execute.
+                     * @param _functionName Name of the function to execute.
                      * 
                      */
                     void SetFunctionName(const std::string& _functionName);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool RegionMappingSelectionsHasBeenSet() const;
 
                     /**
-                     * 获取Describes the function selection configuration based on weight.
-                     * @return WeightedSelections Describes the function selection configuration based on weight.
+                     * 获取Function selection configuration based on weight.
+                     * @return WeightedSelections Function selection configuration based on weight.
                      * 
                      */
                     std::vector<FunctionWeightedSelection> GetWeightedSelections() const;
 
                     /**
-                     * 设置Describes the function selection configuration based on weight.
-                     * @param _weightedSelections Describes the function selection configuration based on weight.
+                     * 设置Function selection configuration based on weight.
+                     * @param _weightedSelections Function selection configuration based on weight.
                      * 
                      */
                     void SetWeightedSelections(const std::vector<FunctionWeightedSelection>& _weightedSelections);
@@ -312,22 +312,22 @@ namespace TencentCloud
 
                     /**
                      * Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
                      */
                     std::string m_triggerType;
                     bool m_triggerTypeHasBeenSet;
 
                     /**
-                     * Specifies the function ID to be executed. valid only when TriggerType is direct.
+                     * Specify the function ID to be executed. Valid when TriggerType is direct.
                      */
                     std::string m_functionId;
                     bool m_functionIdHasBeenSet;
 
                     /**
-                     * Specifies the name of the function executed.
+                     * Name of the function to execute.
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
@@ -339,7 +339,7 @@ namespace TencentCloud
                     bool m_regionMappingSelectionsHasBeenSet;
 
                     /**
-                     * Describes the function selection configuration based on weight.
+                     * Function selection configuration based on weight.
                      */
                     std::vector<FunctionWeightedSelection> m_weightedSelections;
                     bool m_weightedSelectionsHasBeenSet;

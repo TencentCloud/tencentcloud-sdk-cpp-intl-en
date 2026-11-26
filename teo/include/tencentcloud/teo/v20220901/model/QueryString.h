@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Request parameter contained in `CacheKey`
+                * CacheKey contains the request parameter
                 */
                 class QueryString : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
-                     * @return Switch Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
+                     * 获取Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
+                     * @return Switch Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
-                     * @param _switch Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
+                     * 设置Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
+                     * @param _switch Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,23 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
-                     * @return Action CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
+                     * 获取CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
+                     * @return Action CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
-                     * @param _action CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
+                     * 设置CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
+                     * @param _action CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -105,15 +105,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the url parameter array for usage/exclusion.
-                     * @return Value Specifies the url parameter array for usage/exclusion.
+                     * 获取url parameter array for usage or exclusion.
+                     * @return Value url parameter array for usage or exclusion.
                      * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
-                     * 设置Specifies the url parameter array for usage/exclusion.
-                     * @param _value Specifies the url parameter array for usage/exclusion.
+                     * 设置url parameter array for usage or exclusion.
+                     * @param _value url parameter array for usage or exclusion.
                      * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
@@ -128,23 +128,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
+                     * Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
+                     * CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Specifies the url parameter array for usage/exclusion.
+                     * url parameter array for usage or exclusion.
                      */
                     std::vector<std::string> m_value;
                     bool m_valueHasBeenSet;

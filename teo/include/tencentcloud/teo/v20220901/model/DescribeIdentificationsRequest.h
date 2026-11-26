@@ -44,15 +44,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
-                     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+                     * 获取Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
+                     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
-                     * @param _filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+                     * 设置Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
+                     * @param _filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -65,15 +69,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The page offset. Default value: 0
-                     * @return Offset The page offset. Default value: 0
+                     * 获取The offset of paginated query. Default value: 0.
+                     * @return Offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The page offset. Default value: 0
-                     * @param _offset The page offset. Default value: 0
+                     * 设置The offset of paginated query. Default value: 0.
+                     * @param _offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,15 +90,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The paginated query limit. Default value: 20. Maximum value: 1000.
-                     * @return Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 获取The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The paginated query limit. Default value: 20. Maximum value: 1000.
-                     * @param _limit The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 设置The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * @param _limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -109,19 +113,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+                     * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The page offset. Default value: 0
+                     * The offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

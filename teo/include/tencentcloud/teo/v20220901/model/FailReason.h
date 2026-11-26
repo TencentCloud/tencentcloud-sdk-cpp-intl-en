@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Failure reason
+                * Failure cause.
                 */
                 class FailReason : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ReasonHasBeenSet() const;
 
                     /**
-                     * 获取List of resources failed to be processed. 
-                     * @return Targets List of resources failed to be processed. 
+                     * 获取List of resources that failed processing.
+                     * @return Targets List of resources that failed processing.
                      * 
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
-                     * 设置List of resources failed to be processed. 
-                     * @param _targets List of resources failed to be processed. 
+                     * 设置List of resources that failed processing.
+                     * @param _targets List of resources that failed processing.
                      * 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_reasonHasBeenSet;
 
                     /**
-                     * List of resources failed to be processed. 
+                     * List of resources that failed processing.
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;

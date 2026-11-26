@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the content compression configuration switch. valid values:.
+                     * 获取Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
-                     * @return Switch Specifies the content compression configuration switch. valid values:.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
+                     * @return Switch Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Specifies the content compression configuration switch. valid values:.
+                     * 设置Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
-                     * @param _switch Specifies the content compression configuration switch. valid values:.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
+                     * @param _switch Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -82,10 +82,10 @@ Specifies whether to simultaneously support brotli and gzip compression algorith
                 private:
 
                     /**
-                     * Specifies the content compression configuration switch. valid values:.
+                     * Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

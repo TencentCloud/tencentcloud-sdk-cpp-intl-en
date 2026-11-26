@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
-                     * @return GatewayStatus Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+                     * 获取Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
+                     * @return GatewayStatus Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
                      * 
                      */
                     std::string GetGatewayStatus() const;
 
                     /**
-                     * 设置Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
-                     * @param _gatewayStatus Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+                     * 设置Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
+                     * @param _gatewayStatus Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
                      * 
                      */
                     void SetGatewayStatus(const std::string& _gatewayStatus);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+                     * Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
                      */
                     std::string m_gatewayStatus;
                     bool m_gatewayStatusHasBeenSet;

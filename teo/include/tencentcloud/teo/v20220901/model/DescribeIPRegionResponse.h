@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IP attribution information.
-                     * @return IPRegionInfo List of IP attribution information.
+                     * 获取IP attribution information list.
+                     * @return IPRegionInfo IP attribution information list.
                      * 
                      */
                     std::vector<IPRegionInfo> GetIPRegionInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of IP attribution information.
+                     * IP attribution information list.
                      */
                     std::vector<IPRegionInfo> m_iPRegionInfo;
                     bool m_iPRegionInfoHasBeenSet;

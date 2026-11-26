@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Host Header Rewrite configuration parameters.
+                * Host Header rewrite configuration parameters.
                 */
                 class HostHeaderParameters : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
-                     * @return Action Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
+                     * 获取Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
+                     * @return Action Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
-                     * @param _action Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
+                     * 设置Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
+                     * @param _action Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
-                     * @return ServerName Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+                     * 获取Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
+                     * @return ServerName Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
                      * 
                      */
                     std::string GetServerName() const;
 
                     /**
-                     * 设置Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
-                     * @param _serverName Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+                     * 设置Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
+                     * @param _serverName Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
                      * 
                      */
                     void SetServerName(const std::string& _serverName);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
+                     * Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+                     * Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
                      */
                     std::string m_serverName;
                     bool m_serverNameHasBeenSet;

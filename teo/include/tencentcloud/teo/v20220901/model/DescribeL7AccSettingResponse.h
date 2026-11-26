@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ZoneSetting Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Site acceleration global configuration.
+                     * @return ZoneSetting Site acceleration global configuration.
                      * 
                      */
                     ZoneConfigParameters GetZoneSetting() const;
@@ -63,8 +61,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Site acceleration global configuration.
                      */
                     ZoneConfigParameters m_zoneSetting;
                     bool m_zoneSettingHasBeenSet;

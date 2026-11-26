@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Length limit detection condition configuration.
+                * Detect the length limit configuration condition.
                 */
                 class DetectLengthLimitCondition : public AbstractModel
                 {
@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
-                     * @return Name Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
+                     * 获取Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
+                     * @return Name Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
-                     * @param _name Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
+                     * 设置Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
+                     * @param _name Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -72,13 +72,13 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+                     * 获取Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>
-                     * @return Values The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+                     * @return Values Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>
@@ -87,13 +87,13 @@ When the Name value is body_depth, Values only support passing in a single value
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+                     * 设置Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>
-                     * @param _values The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+                     * @param _values Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>
@@ -111,15 +111,15 @@ When the Name value is body_depth, Values only support passing in a single value
                 private:
 
                     /**
-                     * Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
+                     * Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+                     * Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>

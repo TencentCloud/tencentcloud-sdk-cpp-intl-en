@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Lists available regions for the gateway.
-                     * @return GatewayRegions Lists available regions for the gateway.
+                     * 获取List of available regions for the gateway.
+                     * @return GatewayRegions List of available regions for the gateway.
                      * 
                      */
                     std::vector<GatewayRegion> GetGatewayRegions() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Lists available regions for the gateway.
+                     * List of available regions for the gateway.
                      */
                     std::vector<GatewayRegion> m_gatewayRegions;
                     bool m_gatewayRegionsHasBeenSet;

@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
-                     * @return ValueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+                     * 获取<p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+                     * @return ValueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
                      * 
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置<p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
-                     * @param _valueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+                     * 设置<p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+                     * @param _valueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
                      * 
                      */
                     void SetValueType(const std::string& _valueType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Field default value of the parameter.</p>
-                     * @return Default <p>Field default value of the parameter.</p>
+                     * 获取<p>Parameter field default value.</p>
+                     * @return Default <p>Parameter field default value.</p>
                      * 
                      */
                     std::string GetDefault() const;
 
                     /**
-                     * 设置<p>Field default value of the parameter.</p>
-                     * @param _default <p>Field default value of the parameter.</p>
+                     * 设置<p>Parameter field default value.</p>
+                     * @param _default <p>Parameter field default value.</p>
                      * 
                      */
                     void SetDefault(const std::string& _default);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool UnitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
-                     * @return Required <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
+                     * 获取<p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
+                     * @return Required <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
                      * 
                      */
                     bool GetRequired() const;
 
                     /**
-                     * 设置<p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
-                     * @param _required <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
+                     * 设置<p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
+                     * @param _required <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
                      * 
                      */
                     void SetRequired(const bool& _required);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RequiredHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
-                     * @return MinValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
+                     * 获取<p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
+                     * @return MinValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
                      * 
                      */
                     double GetMinValue() const;
 
                     /**
-                     * 设置<p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
-                     * @param _minValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
+                     * 设置<p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
+                     * @param _minValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
                      * 
                      */
                     void SetMinValue(const double& _minValue);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool MinValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
-                     * @return MaxValue <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
+                     * 获取<p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
+                     * @return MaxValue <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
                      * 
                      */
                     double GetMaxValue() const;
 
                     /**
-                     * 设置<p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
-                     * @param _maxValue <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
+                     * 设置<p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
+                     * @param _maxValue <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
                      * 
                      */
                     void SetMaxValue(const double& _maxValue);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool MaxValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
-                     * @return MinLength <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
+                     * 获取<p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
+                     * @return MinLength <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
                      * 
                      */
                     int64_t GetMinLength() const;
 
                     /**
-                     * 设置<p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
-                     * @param _minLength <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
+                     * 设置<p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
+                     * @param _minLength <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
                      * 
                      */
                     void SetMinLength(const int64_t& _minLength);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool MinLengthHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
-                     * @return MaxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
+                     * 获取<p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
+                     * @return MaxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
                      * 
                      */
                     int64_t GetMaxLength() const;
 
                     /**
-                     * 设置<p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
-                     * @param _maxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
+                     * 设置<p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
+                     * @param _maxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
                      * 
                      */
                     void SetMaxLength(const int64_t& _maxLength);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool MaxLengthHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
-                     * @return MinItems <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
+                     * 获取<p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
+                     * @return MinItems <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
                      * 
                      */
                     int64_t GetMinItems() const;
 
                     /**
-                     * 设置<p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
-                     * @param _minItems <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
+                     * 设置<p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
+                     * @param _minItems <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
                      * 
                      */
                     void SetMinItems(const int64_t& _minItems);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool MinItemsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
-                     * @return MaxItems <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
+                     * 获取<p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
+                     * @return MaxItems <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
                      * 
                      */
                     int64_t GetMaxItems() const;
 
                     /**
-                     * 设置<p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
-                     * @param _maxItems <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
+                     * 设置<p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
+                     * @param _maxItems <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
                      * 
                      */
                     void SetMaxItems(const int64_t& _maxItems);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool MaxItemsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
-                     * @return UniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
+                     * 获取<p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
+                     * @return UniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
                      * 
                      */
                     bool GetUniqueItems() const;
 
                     /**
-                     * 设置<p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
-                     * @param _uniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
+                     * 设置<p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
+                     * @param _uniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
                      * 
                      */
                     void SetUniqueItems(const bool& _uniqueItems);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool UniqueItemsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
-                     * @return AllowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
+                     * 获取<p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
+                     * @return AllowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
                      * 
                      */
                     std::string GetAllowedPattern() const;
 
                     /**
-                     * 设置<p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
-                     * @param _allowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
+                     * 设置<p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
+                     * @param _allowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
                      * 
                      */
                     void SetAllowedPattern(const std::string& _allowedPattern);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool AllowedPatternHasBeenSet() const;
 
                     /**
-                     * 获取<p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
-                     * @return AllowedValues <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
+                     * 获取<p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
+                     * @return AllowedValues <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
                      * 
                      */
                     std::vector<std::string> GetAllowedValues() const;
 
                     /**
-                     * 设置<p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
-                     * @param _allowedValues <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
+                     * 设置<p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
+                     * @param _allowedValues <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
                      * 
                      */
                     void SetAllowedValues(const std::vector<std::string>& _allowedValues);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool AllowedValuesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
-                     * @return MultipleOf <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
+                     * 获取<p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
+                     * @return MultipleOf <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
                      * 
                      */
                     std::string GetMultipleOf() const;
 
                     /**
-                     * 设置<p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
-                     * @param _multipleOf <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
+                     * 设置<p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
+                     * @param _multipleOf <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
                      * 
                      */
                     void SetMultipleOf(const std::string& _multipleOf);
@@ -391,7 +391,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+                     * <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
@@ -403,7 +403,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Field default value of the parameter.</p>
+                     * <p>Parameter field default value.</p>
                      */
                     std::string m_default;
                     bool m_defaultHasBeenSet;
@@ -415,67 +415,67 @@ namespace TencentCloud
                     bool m_unitHasBeenSet;
 
                     /**
-                     * <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
+                     * <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
                      */
                     bool m_required;
                     bool m_requiredHasBeenSet;
 
                     /**
-                     * <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
+                     * <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
                      */
                     double m_minValue;
                     bool m_minValueHasBeenSet;
 
                     /**
-                     * <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
+                     * <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
                      */
                     double m_maxValue;
                     bool m_maxValueHasBeenSet;
 
                     /**
-                     * <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
+                     * <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
                      */
                     int64_t m_minLength;
                     bool m_minLengthHasBeenSet;
 
                     /**
-                     * <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
+                     * <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
                      */
                     int64_t m_maxLength;
                     bool m_maxLengthHasBeenSet;
 
                     /**
-                     * <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
+                     * <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
                      */
                     int64_t m_minItems;
                     bool m_minItemsHasBeenSet;
 
                     /**
-                     * <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
+                     * <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
                      */
                     int64_t m_maxItems;
                     bool m_maxItemsHasBeenSet;
 
                     /**
-                     * <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
+                     * <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
                      */
                     bool m_uniqueItems;
                     bool m_uniqueItemsHasBeenSet;
 
                     /**
-                     * <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
+                     * <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
                      */
                     std::string m_allowedPattern;
                     bool m_allowedPatternHasBeenSet;
 
                     /**
-                     * <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
+                     * <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
                      */
                     std::vector<std::string> m_allowedValues;
                     bool m_allowedValuesHasBeenSet;
 
                     /**
-                     * <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
+                     * <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
                      */
                     std::string m_multipleOf;
                     bool m_multipleOfHasBeenSet;

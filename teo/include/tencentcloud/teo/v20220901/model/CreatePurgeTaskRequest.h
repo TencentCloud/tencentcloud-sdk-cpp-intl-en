@@ -44,23 +44,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-.
-If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
-                     * @return ZoneId Zone id.
-.
-If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+                     * 获取Zone ID.
+If you wish to quickly submit Targets Url under different sites, you can fill in *, but the account calling the API must have permission for all site resources under the root account.
+                     * @return ZoneId Zone ID.
+If you wish to quickly submit Targets Url under different sites, you can fill in *, but the account calling the API must have permission for all site resources under the root account.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-.
-If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
-                     * @param _zoneId Zone id.
-.
-If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+                     * 设置Zone ID.
+If you wish to quickly submit Targets Url under different sites, you can fill in *, but the account calling the API must have permission for all site resources under the root account.
+                     * @param _zoneId Zone ID.
+If you wish to quickly submit Targets Url under different sites, you can fill in *, but the account calling the API must have permission for all site resources under the root account.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -73,35 +69,35 @@ If you want to quickly submit targets urls under different sites, you can set it
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Node cache clearing type, valid values:
+                     * 获取Node cache clearing type, with values:
 <li>purge_url: URL refresh;</li>
-<li>purge_prefix: Directory refresh.</li>
+<li>purge_prefix: directory refresh;</li>
 <li>purge_host: Hostname refresh;</li>
-<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
-<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
-                     * @return Type Node cache clearing type, valid values:
+<li>purge_all: cache purge for all under the site (when this value is used, ZoneId input parameter * is not supported);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For cache purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+                     * @return Type Node cache clearing type, with values:
 <li>purge_url: URL refresh;</li>
-<li>purge_prefix: Directory refresh.</li>
+<li>purge_prefix: directory refresh;</li>
 <li>purge_host: Hostname refresh;</li>
-<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
-<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+<li>purge_all: cache purge for all under the site (when this value is used, ZoneId input parameter * is not supported);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For cache purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Node cache clearing type, valid values:
+                     * 设置Node cache clearing type, with values:
 <li>purge_url: URL refresh;</li>
-<li>purge_prefix: Directory refresh.</li>
+<li>purge_prefix: directory refresh;</li>
 <li>purge_host: Hostname refresh;</li>
-<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
-<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
-                     * @param _type Node cache clearing type, valid values:
+<li>purge_all: cache purge for all under the site (when this value is used, ZoneId input parameter * is not supported);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For cache purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+                     * @param _type Node cache clearing type, with values:
 <li>purge_url: URL refresh;</li>
-<li>purge_prefix: Directory refresh.</li>
+<li>purge_prefix: directory refresh;</li>
 <li>purge_host: Hostname refresh;</li>
-<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
-<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+<li>purge_all: cache purge for all under the site (when this value is used, ZoneId input parameter * is not supported);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For cache purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -114,15 +110,15 @@ If you want to quickly submit targets urls under different sites, you can set it
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
-                     * @return Method Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
+                     * 获取Node cache purge method, valid for directory refresh, Hostname refresh, and refresh all cache types. Valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li><li> delete: refresh node resources regardless of whether resources under the directory are updated.</li>Default value: invalidate.
+                     * @return Method Node cache purge method, valid for directory refresh, Hostname refresh, and refresh all cache types. Valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li><li> delete: refresh node resources regardless of whether resources under the directory are updated.</li>Default value: invalidate.
                      * 
                      */
                     std::string GetMethod() const;
 
                     /**
-                     * 设置Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
-                     * @param _method Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
+                     * 设置Node cache purge method, valid for directory refresh, Hostname refresh, and refresh all cache types. Valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li><li> delete: refresh node resources regardless of whether resources under the directory are updated.</li>Default value: invalidate.
+                     * @param _method Node cache purge method, valid for directory refresh, Hostname refresh, and refresh all cache types. Valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li><li> delete: refresh node resources regardless of whether resources under the directory are updated.</li>Default value: invalidate.
                      * 
                      */
                     void SetMethod(const std::string& _method);
@@ -135,15 +131,15 @@ If you want to quickly submit targets urls under different sites, you can set it
                     bool MethodHasBeenSet() const;
 
                     /**
-                     * 获取The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
-                     * @return Targets The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
+                     * 获取List of resources for cache purging, for example, https://www.example.com/example.jpg. Protocol information must be included. The format of additional elements depends on the type of cache purging. Refer to the API call example below.<li>The number of tasks that can be submitted at a time is limited by the billing package quota. Check [EO billing packages](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).</li>
+                     * @return Targets List of resources for cache purging, for example, https://www.example.com/example.jpg. Protocol information must be included. The format of additional elements depends on the type of cache purging. Refer to the API call example below.<li>The number of tasks that can be submitted at a time is limited by the billing package quota. Check [EO billing packages](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).</li>
                      * 
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
-                     * 设置The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
-                     * @param _targets The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
+                     * 设置List of resources for cache purging, for example, https://www.example.com/example.jpg. Protocol information must be included. The format of additional elements depends on the type of cache purging. Refer to the API call example below.<li>The number of tasks that can be submitted at a time is limited by the billing package quota. Check [EO billing packages](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).</li>
+                     * @param _targets List of resources for cache purging, for example, https://www.example.com/example.jpg. Protocol information must be included. The format of additional elements depends on the type of cache purging. Refer to the API call example below.<li>The number of tasks that can be submitted at a time is limited by the billing package quota. Check [EO billing packages](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).</li>
                      * 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
@@ -156,19 +152,19 @@ If you want to quickly submit targets urls under different sites, you can set it
                     bool TargetsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to transcode non-ASCII URLs according to RFC3986.
-Note that if it’s enabled, the purging is based on the converted URLs.
-                     * @return EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
-Note that if it’s enabled, the purging is based on the converted URLs.
+                     * 获取If transcoding exists, only delete the resources that match after transcoding.
+If the content contains characters in a non-ASCII character set, enable this switch for encoding conversion (the encoding rule adheres to RFC3986).
+                     * @return EncodeUrl If transcoding exists, only delete the resources that match after transcoding.
+If the content contains characters in a non-ASCII character set, enable this switch for encoding conversion (the encoding rule adheres to RFC3986).
                      * @deprecated
                      */
                     bool GetEncodeUrl() const;
 
                     /**
-                     * 设置Specifies whether to transcode non-ASCII URLs according to RFC3986.
-Note that if it’s enabled, the purging is based on the converted URLs.
-                     * @param _encodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
-Note that if it’s enabled, the purging is based on the converted URLs.
+                     * 设置If transcoding exists, only delete the resources that match after transcoding.
+If the content contains characters in a non-ASCII character set, enable this switch for encoding conversion (the encoding rule adheres to RFC3986).
+                     * @param _encodeUrl If transcoding exists, only delete the resources that match after transcoding.
+If the content contains characters in a non-ASCII character set, enable this switch for encoding conversion (the encoding rule adheres to RFC3986).
                      * @deprecated
                      */
                     void SetEncodeUrl(const bool& _encodeUrl);
@@ -181,15 +177,15 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                     bool EncodeUrlHasBeenSet() const;
 
                     /**
-                     * 获取The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
-                     * @return CacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+                     * 获取This parameter is required when the node cache purge type is set to purge_cache_tag. The input value is a domain name.
+                     * @return CacheTag This parameter is required when the node cache purge type is set to purge_cache_tag. The input value is a domain name.
                      * 
                      */
                     CacheTag GetCacheTag() const;
 
                     /**
-                     * 设置The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
-                     * @param _cacheTag The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+                     * 设置This parameter is required when the node cache purge type is set to purge_cache_tag. The input value is a domain name.
+                     * @param _cacheTag This parameter is required when the node cache purge type is set to purge_cache_tag. The input value is a domain name.
                      * 
                      */
                     void SetCacheTag(const CacheTag& _cacheTag);
@@ -204,45 +200,44 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                 private:
 
                     /**
-                     * Zone id.
-.
-If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+                     * Zone ID.
+If you wish to quickly submit Targets Url under different sites, you can fill in *, but the account calling the API must have permission for all site resources under the root account.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Node cache clearing type, valid values:
+                     * Node cache clearing type, with values:
 <li>purge_url: URL refresh;</li>
-<li>purge_prefix: Directory refresh.</li>
+<li>purge_prefix: directory refresh;</li>
 <li>purge_host: Hostname refresh;</li>
-<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
-<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+<li>purge_all: cache purge for all under the site (when this value is used, ZoneId input parameter * is not supported);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For cache purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
+                     * Node cache purge method, valid for directory refresh, Hostname refresh, and refresh all cache types. Valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li><li> delete: refresh node resources regardless of whether resources under the directory are updated.</li>Default value: invalidate.
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
 
                     /**
-                     * The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
+                     * List of resources for cache purging, for example, https://www.example.com/example.jpg. Protocol information must be included. The format of additional elements depends on the type of cache purging. Refer to the API call example below.<li>The number of tasks that can be submitted at a time is limited by the billing package quota. Check [EO billing packages](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).</li>
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;
 
                     /**
-                     * Specifies whether to transcode non-ASCII URLs according to RFC3986.
-Note that if it’s enabled, the purging is based on the converted URLs.
+                     * If transcoding exists, only delete the resources that match after transcoding.
+If the content contains characters in a non-ASCII character set, enable this switch for encoding conversion (the encoding rule adheres to RFC3986).
                      */
                     bool m_encodeUrl;
                     bool m_encodeUrlHasBeenSet;
 
                     /**
-                     * The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+                     * This parameter is required when the node cache purge type is set to purge_cache_tag. The input value is a domain name.
                      */
                     CacheTag m_cacheTag;
                     bool m_cacheTagHasBeenSet;

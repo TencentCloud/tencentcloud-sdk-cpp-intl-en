@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the site ID.
-                     * @return ZoneId Specifies the site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies the site ID.
-                     * @param _zoneId Specifies the site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the paginated query limit. default value: 20. upper limit: 100.
-                     * @return Limit Specifies the paginated query limit. default value: 20. upper limit: 100.
+                     * 获取Number limit of paginated query. Default value: 20. Maximum value: 100.
+                     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Specifies the paginated query limit. default value: 20. upper limit: 100.
-                     * @param _limit Specifies the paginated query limit. default value: 20. upper limit: 100.
+                     * 设置Number limit of paginated query. Default value: 20. Maximum value: 100.
+                     * @param _limit Number limit of paginated query. Default value: 20. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,23 +107,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
-                     * @return Filters Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
-                     * @param _filters Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -138,7 +138,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Specifies the paginated query limit. default value: 20. upper limit: 100.
+                     * Number limit of paginated query. Default value: 20. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+                     * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

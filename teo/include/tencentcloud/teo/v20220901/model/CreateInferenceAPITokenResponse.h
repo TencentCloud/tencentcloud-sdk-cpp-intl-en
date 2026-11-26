@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reasoning API Token ID.
-                     * @return TokenId Reasoning API Token ID.
+                     * 获取Inference API Token ID.
+                     * @return TokenId Inference API Token ID.
                      * 
                      */
                     std::string GetTokenId() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Reasoning API Token ID.
+                     * Inference API Token ID.
                      */
                     std::string m_tokenId;
                     bool m_tokenIdHasBeenSet;

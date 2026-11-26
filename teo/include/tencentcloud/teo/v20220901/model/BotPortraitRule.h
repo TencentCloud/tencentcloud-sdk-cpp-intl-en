@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bot user portrait rules
+                * bot user profiling rules
                 */
                 class BotPortraitRule : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as an output parameter.
-                     * @return RuleID The rule ID, which is only used as an output parameter.
+                     * 获取Rule ID. Output only.
+                     * @return RuleID Rule ID. Output only.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置The rule ID, which is only used as an output parameter.
-                     * @param _ruleID The rule ID, which is only used as an output parameter.
+                     * 设置Rule ID. Output only.
+                     * @param _ruleID Rule ID. Output only.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID of JS challenge. default all rules without configuring JS challenge.
-                     * @return AlgManagedIds The rule ID of JS challenge. default all rules without configuring JS challenge.
+                     * 获取Rule ID of the JS challenge. All rules have no JS challenge configured by default.
+                     * @return AlgManagedIds Rule ID of the JS challenge. All rules have no JS challenge configured by default.
                      * 
                      */
                     std::vector<int64_t> GetAlgManagedIds() const;
 
                     /**
-                     * 设置The rule ID of JS challenge. default all rules without configuring JS challenge.
-                     * @param _algManagedIds The rule ID of JS challenge. default all rules without configuring JS challenge.
+                     * 设置Rule ID of the JS challenge. All rules have no JS challenge configured by default.
+                     * @param _algManagedIds Rule ID of the JS challenge. All rules have no JS challenge configured by default.
                      * 
                      */
                     void SetAlgManagedIds(const std::vector<int64_t>& _algManagedIds);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool AlgManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
-                     * @return CapManagedIds Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+                     * 获取Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+                     * @return CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
                      * 
                      */
                     std::vector<int64_t> GetCapManagedIds() const;
 
                     /**
-                     * 设置Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
-                     * @param _capManagedIds Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+                     * 设置Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+                     * @param _capManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
                      * 
                      */
                     void SetCapManagedIds(const std::vector<int64_t>& _capManagedIds);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool CapManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID for observation. by default, observation is not configured for all rules.
-                     * @return MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+                     * 获取Rule ID for observation. By default, no rule is configured for observation.
+                     * @return MonManagedIds Rule ID for observation. By default, no rule is configured for observation.
                      * 
                      */
                     std::vector<int64_t> GetMonManagedIds() const;
 
                     /**
-                     * 设置Rule ID for observation. by default, observation is not configured for all rules.
-                     * @param _monManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+                     * 设置Rule ID for observation. By default, no rule is configured for observation.
+                     * @param _monManagedIds Rule ID for observation. By default, no rule is configured for observation.
                      * 
                      */
                     void SetMonManagedIds(const std::vector<int64_t>& _monManagedIds);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool MonManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID for interception. default to all rules with no configuration interception.
-                     * @return DropManagedIds Rule ID for interception. default to all rules with no configuration interception.
+                     * 获取Rule ID for interception. By default, no interception is configured for all rules.
+                     * @return DropManagedIds Rule ID for interception. By default, no interception is configured for all rules.
                      * 
                      */
                     std::vector<int64_t> GetDropManagedIds() const;
 
                     /**
-                     * 设置Rule ID for interception. default to all rules with no configuration interception.
-                     * @param _dropManagedIds Rule ID for interception. default to all rules with no configuration interception.
+                     * 设置Rule ID for interception. By default, no interception is configured for all rules.
+                     * @param _dropManagedIds Rule ID for interception. By default, no interception is configured for all rules.
                      * 
                      */
                     void SetDropManagedIds(const std::vector<int64_t>& _dropManagedIds);
@@ -183,39 +183,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as an output parameter.
+                     * Rule ID. Output only.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * The rule ID of JS challenge. default all rules without configuring JS challenge.
+                     * Rule ID of the JS challenge. All rules have no JS challenge configured by default.
                      */
                     std::vector<int64_t> m_algManagedIds;
                     bool m_algManagedIdsHasBeenSet;
 
                     /**
-                     * Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+                     * Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
                      */
                     std::vector<int64_t> m_capManagedIds;
                     bool m_capManagedIdsHasBeenSet;
 
                     /**
-                     * Rule ID for observation. by default, observation is not configured for all rules.
+                     * Rule ID for observation. By default, no rule is configured for observation.
                      */
                     std::vector<int64_t> m_monManagedIds;
                     bool m_monManagedIdsHasBeenSet;
 
                     /**
-                     * Rule ID for interception. default to all rules with no configuration interception.
+                     * Rule ID for interception. By default, no interception is configured for all rules.
                      */
                     std::vector<int64_t> m_dropManagedIds;
                     bool m_dropManagedIdsHasBeenSet;

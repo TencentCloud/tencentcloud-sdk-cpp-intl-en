@@ -69,19 +69,19 @@ namespace TencentCloud
                     bool EnvIdHasBeenSet() const;
 
                     /**
-                     * 获取Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
-                     * @return EnvType Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
+                     * 获取Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
+                     * @return EnvType Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
                      * 
                      */
                     std::string GetEnvType() const;
 
                     /**
-                     * 设置Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
-                     * @param _envType Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
+                     * 设置Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
+                     * @param _envType Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
                      * 
                      */
                     void SetEnvType(const std::string& _envType);
@@ -94,27 +94,27 @@ namespace TencentCloud
                     bool EnvTypeHasBeenSet() const;
 
                     /**
-                     * 获取Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
-                     * @return Status Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+                     * 获取Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
+                     * @return Status Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
-                     * @param _status Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+                     * 设置Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
+                     * @param _status Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -127,23 +127,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
-                     * @return Scope Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+                     * 获取Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
+                     * @return Scope Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
                      * 
                      */
                     std::vector<std::string> GetScope() const;
 
                     /**
-                     * 设置Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
-                     * @param _scope Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+                     * 设置Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
+                     * @param _scope Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
                      * 
                      */
                     void SetScope(const std::vector<std::string>& _scope);
@@ -156,23 +156,23 @@ namespace TencentCloud
                     bool ScopeHasBeenSet() const;
 
                     /**
-                     * 获取For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
-                     * @return CurrentConfigGroupVersionInfos For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+                     * 获取Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
+                     * @return CurrentConfigGroupVersionInfos Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
                      * 
                      */
                     std::vector<ConfigGroupVersionInfo> GetCurrentConfigGroupVersionInfos() const;
 
                     /**
-                     * 设置For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
-                     * @param _currentConfigGroupVersionInfos For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+                     * 设置Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
+                     * @param _currentConfigGroupVersionInfos Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
                      * 
                      */
                     void SetCurrentConfigGroupVersionInfos(const std::vector<ConfigGroupVersionInfo>& _currentConfigGroupVersionInfos);
@@ -185,15 +185,15 @@ namespace TencentCloud
                     bool CurrentConfigGroupVersionInfosHasBeenSet() const;
 
                     /**
-                     * 获取Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-                     * @return CreateTime Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * 获取Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @return CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-                     * @param _createTime Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * 设置Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @param _createTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -206,15 +206,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-                     * @return UpdateTime Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * 获取Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @return UpdateTime Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-                     * @param _updateTime Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * 设置Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @param _updateTime Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -235,45 +235,45 @@ namespace TencentCloud
                     bool m_envIdHasBeenSet;
 
                     /**
-                     * Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
+                     * Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
                      */
                     std::string m_envType;
                     bool m_envTypeHasBeenSet;
 
                     /**
-                     * Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+                     * Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+                     * Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
                      */
                     std::vector<std::string> m_scope;
                     bool m_scopeHasBeenSet;
 
                     /**
-                     * For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+                     * Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
                      */
                     std::vector<ConfigGroupVersionInfo> m_currentConfigGroupVersionInfos;
                     bool m_currentConfigGroupVersionInfosHasBeenSet;
 
                     /**
-                     * Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

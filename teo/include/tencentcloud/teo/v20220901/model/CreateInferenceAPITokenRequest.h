@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the reasoning API Token, length limited to no more than 30 characters.
-                     * @return Name Name of the reasoning API Token, length limited to no more than 30 characters.
+                     * 获取Name of the inference API Token. Length limited to 30 characters.
+                     * @return Name Name of the inference API Token. Length limited to 30 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of the reasoning API Token, length limited to no more than 30 characters.
-                     * @param _name Name of the reasoning API Token, length limited to no more than 30 characters.
+                     * 设置Name of the inference API Token. Length limited to 30 characters.
+                     * @param _name Name of the inference API Token. Length limited to 30 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Name of the reasoning API Token, length limited to no more than 30 characters.
+                     * Name of the inference API Token. Length limited to 30 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

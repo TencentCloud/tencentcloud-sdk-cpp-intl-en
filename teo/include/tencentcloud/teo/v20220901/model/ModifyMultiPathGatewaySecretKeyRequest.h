@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
-                     * @return SecretKey Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+                     * 获取Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
+                     * @return SecretKey Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
-                     * @param _secretKey Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+                     * 设置Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
+                     * @param _secretKey Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+                     * Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

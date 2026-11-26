@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
-                     * @return TemplateId Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
+                     * 获取Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
+                     * @return TemplateId Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
                      * 
                      */
                     std::string GetTemplateId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
+                     * Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

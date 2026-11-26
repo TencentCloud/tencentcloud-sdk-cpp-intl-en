@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Edge function replica.
+                * Replica of an edge function.
                 */
                 class FunctionReplica : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FunctionIdHasBeenSet() const;
 
                     /**
-                     * 获取Edge function copy name.
-                     * @return ReplicaName Edge function copy name.
+                     * 获取Name of the edge function copy.
+                     * @return ReplicaName Name of the edge function copy.
                      * 
                      */
                     std::string GetReplicaName() const;
 
                     /**
-                     * 设置Edge function copy name.
-                     * @param _replicaName Edge function copy name.
+                     * 设置Name of the edge function copy.
+                     * @param _replicaName Name of the edge function copy.
                      * 
                      */
                     void SetReplicaName(const std::string& _replicaName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ReplicaNameHasBeenSet() const;
 
                     /**
-                     * 获取Edge function replica content. Format is JavaScript code.
-                     * @return Content Edge function replica content. Format is JavaScript code.
+                     * 获取Content of the edge function copy. Format: JavaScript code.
+                     * @return Content Content of the edge function copy. Format: JavaScript code.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Edge function replica content. Format is JavaScript code.
-                     * @param _content Edge function replica content. Format is JavaScript code.
+                     * 设置Content of the edge function copy. Format: JavaScript code.
+                     * @param _content Content of the edge function copy. Format: JavaScript code.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Edge function replica description.
-                     * @return Remark Edge function replica description.
+                     * 获取Description of the edge function replica.
+                     * @return Remark Description of the edge function replica.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Edge function replica description.
-                     * @param _remark Edge function replica description.
+                     * 设置Description of the edge function replica.
+                     * @param _remark Description of the edge function replica.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Edge function replica creation time.
-                     * @return CreatedOn Edge function replica creation time.
+                     * 获取Creation time of the edge function replica.
+                     * @return CreatedOn Creation time of the edge function replica.
                      * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
-                     * 设置Edge function replica creation time.
-                     * @param _createdOn Edge function replica creation time.
+                     * 设置Creation time of the edge function replica.
+                     * @param _createdOn Creation time of the edge function replica.
                      * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreatedOnHasBeenSet() const;
 
                     /**
-                     * 获取Edge function replica last update time.
-                     * @return ModifiedOn Edge function replica last update time.
+                     * 获取Last update time of the edge function replica.
+                     * @return ModifiedOn Last update time of the edge function replica.
                      * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
-                     * 设置Edge function replica last update time.
-                     * @param _modifiedOn Edge function replica last update time.
+                     * 设置Last update time of the edge function replica.
+                     * @param _modifiedOn Last update time of the edge function replica.
                      * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
@@ -181,31 +181,31 @@ namespace TencentCloud
                     bool m_functionIdHasBeenSet;
 
                     /**
-                     * Edge function copy name.
+                     * Name of the edge function copy.
                      */
                     std::string m_replicaName;
                     bool m_replicaNameHasBeenSet;
 
                     /**
-                     * Edge function replica content. Format is JavaScript code.
+                     * Content of the edge function copy. Format: JavaScript code.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Edge function replica description.
+                     * Description of the edge function replica.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Edge function replica creation time.
+                     * Creation time of the edge function replica.
                      */
                     std::string m_createdOn;
                     bool m_createdOnHasBeenSet;
 
                     /**
-                     * Edge function replica last update time.
+                     * Last update time of the edge function replica.
                      */
                     std::string m_modifiedOn;
                     bool m_modifiedOnHasBeenSet;

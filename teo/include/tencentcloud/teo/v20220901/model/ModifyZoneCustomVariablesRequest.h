@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Site ID.</p>
-                     * @return ZoneId <p>Site ID.</p>
+                     * 获取<p>Zone ID.</p>
+                     * @return ZoneId <p>Zone ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置<p>Site ID.</p>
-                     * @param _zoneId <p>Site ID.</p>
+                     * 设置<p>Zone ID.</p>
+                     * @param _zoneId <p>Zone ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
-                     * @return CustomVariables <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+                     * 获取<p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
+                     * @return CustomVariables <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
                      * 
                      */
                     std::vector<CustomVariable> GetCustomVariables() const;
 
                     /**
-                     * 设置<p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
-                     * @param _customVariables <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+                     * 设置<p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
+                     * @param _customVariables <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
                      * 
                      */
                     void SetCustomVariables(const std::vector<CustomVariable>& _customVariables);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool CustomVariablesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
-                     * @return CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+                     * 获取<p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
+                     * @return CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
                      * 
                      */
                     std::vector<CustomVariableOperation> GetCustomVariableOperations() const;
 
                     /**
-                     * 设置<p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
-                     * @param _customVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+                     * 设置<p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
+                     * @param _customVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
                      * 
                      */
                     void SetCustomVariableOperations(const std::vector<CustomVariableOperation>& _customVariableOperations);
@@ -110,19 +110,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Site ID.</p>
+                     * <p>Zone ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+                     * <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
                      */
                     std::vector<CustomVariable> m_customVariables;
                     bool m_customVariablesHasBeenSet;
 
                     /**
-                     * <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+                     * <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
                      */
                     std::vector<CustomVariableOperation> m_customVariableOperations;
                     bool m_customVariableOperationsHasBeenSet;

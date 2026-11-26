@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>IP group ID.</p>
-                     * @return GroupId <p>IP group ID.</p>
+                     * 获取<p>ID of the IP group.</p>
+                     * @return GroupId <p>ID of the IP group.</p>
                      * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
-                     * 设置<p>IP group ID.</p>
-                     * @param _groupId <p>IP group ID.</p>
+                     * 设置<p>ID of the IP group.</p>
+                     * @param _groupId <p>ID of the IP group.</p>
                      * 
                      */
                     void SetGroupId(const int64_t& _groupId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paging offset.</p><p>Default value: 0.</p>
-                     * @return Offset <p>Paging offset.</p><p>Default value: 0.</p>
+                     * 获取<p>Paging offset.</p><p>Default value: 0</p>
+                     * @return Offset <p>Paging offset.</p><p>Default value: 0</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Paging offset.</p><p>Default value: 0.</p>
-                     * @param _offset <p>Paging offset.</p><p>Default value: 0.</p>
+                     * 设置<p>Paging offset.</p><p>Default value: 0</p>
+                     * @param _offset <p>Paging offset.</p><p>Default value: 0</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
-                     * @return Limit <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+                     * 获取<p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
+                     * @return Limit <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
-                     * @param _limit <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+                     * 设置<p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
+                     * @param _limit <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -135,19 +135,19 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>IP group ID.</p>
+                     * <p>ID of the IP group.</p>
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * <p>Paging offset.</p><p>Default value: 0.</p>
+                     * <p>Paging offset.</p><p>Default value: 0</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+                     * <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

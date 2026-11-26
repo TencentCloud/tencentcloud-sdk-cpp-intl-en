@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
-                     * @return Name <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+                     * 获取<p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
+                     * @return Name <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
-                     * @param _name <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+                     * 设置<p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
+                     * @param _name <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
-                     * @return Value <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+                     * 获取<p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+                     * @return Value <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置<p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
-                     * @param _value <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+                     * 设置<p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+                     * @param _value <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+                     * <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+                     * <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

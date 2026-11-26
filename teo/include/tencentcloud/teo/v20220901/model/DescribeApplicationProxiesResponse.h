@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of application proxies.
-                     * @return ApplicationProxies List of application proxies.
+                     * 获取Application proxy list.
+                     * @return ApplicationProxies Application proxy list.
                      * 
                      */
                     std::vector<ApplicationProxy> GetApplicationProxies() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ApplicationProxiesHasBeenSet() const;
 
                     /**
-                     * 获取Total number of records.
-                     * @return TotalCount Total number of records.
+                     * 获取Total number of records
+                     * @return TotalCount Total number of records
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of application proxies.
+                     * Application proxy list.
                      */
                     std::vector<ApplicationProxy> m_applicationProxies;
                     bool m_applicationProxiesHasBeenSet;
 
                     /**
-                     * Total number of records.
+                     * Total number of records
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

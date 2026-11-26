@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>History list for reasoning service deployment.</p>
-                     * @return RecordSet <p>History list for reasoning service deployment.</p>
+                     * 获取<p>Reasoning service deployment history list.</p>
+                     * @return RecordSet <p>Reasoning service deployment history list.</p>
                      * 
                      */
                     std::vector<InferenceServiceDeploymentRecord> GetRecordSet() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>History list for reasoning service deployment.</p>
+                     * <p>Reasoning service deployment history list.</p>
                      */
                     std::vector<InferenceServiceDeploymentRecord> m_recordSet;
                     bool m_recordSetHasBeenSet;

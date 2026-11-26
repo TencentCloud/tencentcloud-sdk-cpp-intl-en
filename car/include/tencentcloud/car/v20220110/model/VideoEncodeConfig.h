@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StreamPushGOPSeconds Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Push streaming GOP length, in seconds.
+                     * @return StreamPushGOPSeconds Push streaming GOP length, in seconds.
                      * 
                      */
                     uint64_t GetStreamPushGOPSeconds() const;
 
                     /**
-                     * 设置Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _streamPushGOPSeconds Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Push streaming GOP length, in seconds.
+                     * @param _streamPushGOPSeconds Push streaming GOP length, in seconds.
                      * 
                      */
                     void SetStreamPushGOPSeconds(const uint64_t& _streamPushGOPSeconds);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Push streaming GOP length, in seconds.
                      */
                     uint64_t m_streamPushGOPSeconds;
                     bool m_streamPushGOPSecondsHasBeenSet;

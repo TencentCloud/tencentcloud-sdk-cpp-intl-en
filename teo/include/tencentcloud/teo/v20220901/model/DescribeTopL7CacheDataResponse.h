@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
+                     * 获取Total number of entries in the query result.
+                     * @return TotalCount Total number of entries in the query result.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Data list of top N Layer-7 cache traffic volumes.
+                     * @return Data Data list of top N Layer-7 cache traffic volumes.
                      * 
                      */
                     std::vector<TopDataRecord> GetData() const;
@@ -77,14 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of query results.
+                     * Total number of entries in the query result.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Data list of top N Layer-7 cache traffic volumes.
                      */
                     std::vector<TopDataRecord> m_data;
                     bool m_dataHasBeenSet;

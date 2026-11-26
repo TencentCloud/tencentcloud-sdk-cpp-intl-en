@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content identifier id.
-                     * @return ContentId Content identifier id.
+                     * 获取Content identifier ID.
+                     * @return ContentId Content identifier ID.
                      * 
                      */
                     std::string GetContentId() const;
 
                     /**
-                     * 设置Content identifier id.
-                     * @param _contentId Content identifier id.
+                     * 设置Content identifier ID.
+                     * @param _contentId Content identifier ID.
                      * 
                      */
                     void SetContentId(const std::string& _contentId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Content identifier id.
+                     * Content identifier ID.
                      */
                     std::string m_contentId;
                     bool m_contentIdHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the access key for the multi-channel security acceleration gateway.
-                     * @return SecretKey Specifies the access key for the multi-channel security acceleration gateway.
+                     * 获取Key for integrating a multi-channel security acceleration gateway.
+                     * @return SecretKey Key for integrating a multi-channel security acceleration gateway.
                      * 
                      */
                     std::string GetSecretKey() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the access key for the multi-channel security acceleration gateway.
+                     * Key for integrating a multi-channel security acceleration gateway.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

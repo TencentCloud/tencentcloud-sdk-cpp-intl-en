@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID
-                     * @return ZoneId Site ID
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID
-                     * @param _zoneId Site ID
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取(Required) Origins in the origin group.
-                     * @return Records (Required) Origins in the origin group.
+                     * 获取Origin server record information. This parameter is required.
+                     * @return Records Origin server record information. This parameter is required.
                      * 
                      */
                     std::vector<OriginRecord> GetRecords() const;
 
                     /**
-                     * 设置(Required) Origins in the origin group.
-                     * @param _records (Required) Origins in the origin group.
+                     * 设置Origin server record information. This parameter is required.
+                     * @param _records Origin server record information. This parameter is required.
                      * 
                      */
                     void SetRecords(const std::vector<OriginRecord>& _records);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool RecordsHasBeenSet() const;
 
                     /**
-                     * 获取Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
-                     * @return Name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
+                     * 获取Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
+                     * @return Name Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
-                     * @param _name Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
+                     * 设置Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
+                     * @param _name Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -107,23 +107,23 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取(Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
-                     * @return Type (Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
+                     * 获取Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
+                     * @return Type Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置(Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
-                     * @param _type (Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
+                     * 设置Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
+                     * @param _type Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
-                     * @return HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+                     * 获取Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
+                     * @return HostHeader Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
                      * 
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
-                     * @param _hostHeader Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+                     * 设置Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
+                     * @param _hostHeader Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
                      * 
                      */
                     void SetHostHeader(const std::string& _hostHeader);
@@ -159,33 +159,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Site ID
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * (Required) Origins in the origin group.
+                     * Origin server record information. This parameter is required.
                      */
                     std::vector<OriginRecord> m_records;
                     bool m_recordsHasBeenSet;
 
                     /**
-                     * Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
+                     * Origin group name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * (Required) Origin group type. Values:
-<li>`GENERAL`: General origin groups. It supports IPs and domain names. It can be referenced by DNS, Rule Engine, Layer 4 Proxy and General LoadBalancer. </li>
-<li>`HTTP`: HTTP-specific origin groups. It supports IPs/domain names and object storage buckets. It can be referenced by acceleration domain names, rule engines and HTTP LoadBalancer. It cannot be referenced by L4 proxies. </li>
+                     * Origin server group type. This parameter is required. Valid values:
+<li>GENERAL: general origin group, only supports adding IP/domain origin servers, and can be referenced by DNS, rule engine, Layer 4 proxy, general load balancer, and HTTP-specific load balancer;</li>
+<li>HTTP: HTTP-specific origin server group. It supports adding IP/domain name and COS origin server as the origin server. It cannot be referenced by Layer-4 proxy. It can only be referenced by add acceleration domain name, rule engine - modify origin, and HTTP-specific load balancer.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
+                     * Origin-pull Host Header. It takes effect only when it is input and Type is HTTP. The rule engine modification of the Host Header configuration has a higher priority than the Host Header of the origin server group.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;

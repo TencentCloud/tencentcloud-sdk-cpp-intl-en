@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the domain names bound to the policy template.
+                * Domain name info bound to the policy template
                 */
                 class BindDomainInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Zone ID to which the domain belongs.
-                     * @return ZoneId Zone ID to which the domain belongs.
+                     * 获取Site ID of the domain name.
+                     * @return ZoneId Site ID of the domain name.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID to which the domain belongs.
-                     * @param _zoneId Zone ID to which the domain belongs.
+                     * 设置Site ID of the domain name.
+                     * @param _zoneId Site ID of the domain name.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -89,27 +89,27 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
-                     * @return Status Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+                     * 获取Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
+                     * @return Status Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
-                     * @param _status Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+                     * 设置Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
+                     * @param _status Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -130,16 +130,16 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Zone ID to which the domain belongs.
+                     * Site ID of the domain name.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+                     * Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

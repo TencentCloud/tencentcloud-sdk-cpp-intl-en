@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The rule content.
-                     * @return Rules The rule content.
+                     * 获取Rule content.
+                     * @return Rules Rule content.
                      * 
                      */
                     std::vector<RuleEngineItem> GetRules() const;
 
                     /**
-                     * 设置The rule content.
-                     * @param _rules The rule content.
+                     * 设置Rule content.
+                     * @param _rules Rule content.
                      * 
                      */
                     void SetRules(const std::vector<RuleEngineItem>& _rules);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The rule content.
+                     * Rule content.
                      */
                     std::vector<RuleEngineItem> m_rules;
                     bool m_rulesHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bindings between a shared CNAME and connected domain names
+                * Binding relationship between the shared CNAME and domain name.
                 */
                 class BindSharedCNAMEMap : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The shared CNAME to be bound with or unbound from.
-                     * @return SharedCNAME The shared CNAME to be bound with or unbound from.
+                     * 获取Shared CNAME to bind or unbind.
+                     * @return SharedCNAME Shared CNAME to bind or unbind.
                      * 
                      */
                     std::string GetSharedCNAME() const;
 
                     /**
-                     * 设置The shared CNAME to be bound with or unbound from.
-                     * @param _sharedCNAME The shared CNAME to be bound with or unbound from.
+                     * 设置Shared CNAME to bind or unbind.
+                     * @param _sharedCNAME Shared CNAME to bind or unbind.
                      * 
                      */
                     void SetSharedCNAME(const std::string& _sharedCNAME);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SharedCNAMEHasBeenSet() const;
 
                     /**
-                     * 获取Acceleration domains (up to 20).
-                     * @return DomainNames Acceleration domains (up to 20).
+                     * 获取Acceleration domain names. You can pass multiple ones, up to 20.
+                     * @return DomainNames Acceleration domain names. You can pass multiple ones, up to 20.
                      * 
                      */
                     std::vector<std::string> GetDomainNames() const;
 
                     /**
-                     * 设置Acceleration domains (up to 20).
-                     * @param _domainNames Acceleration domains (up to 20).
+                     * 设置Acceleration domain names. You can pass multiple ones, up to 20.
+                     * @param _domainNames Acceleration domain names. You can pass multiple ones, up to 20.
                      * 
                      */
                     void SetDomainNames(const std::vector<std::string>& _domainNames);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The shared CNAME to be bound with or unbound from.
+                     * Shared CNAME to bind or unbind.
                      */
                     std::string m_sharedCNAME;
                     bool m_sharedCNAMEHasBeenSet;
 
                     /**
-                     * Acceleration domains (up to 20).
+                     * Acceleration domain names. You can pass multiple ones, up to 20.
                      */
                     std::vector<std::string> m_domainNames;
                     bool m_domainNamesHasBeenSet;

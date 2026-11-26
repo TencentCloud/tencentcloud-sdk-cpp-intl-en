@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DNSPod managed type site parameter description.
+                * Details of the DNSPod managed type site parameters.
                 */
                 class DNSPodDetail : public AbstractModel
                 {
@@ -47,26 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * 获取Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-                     * @return IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * @return IsFake Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
                      * 
                      */
                     int64_t GetIsFake() const;
 
                     /**
-                     * 设置Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * 设置Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-                     * @param _isFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * @param _isFake Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
                      * 
                      */
@@ -82,9 +82,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
                      */
                     int64_t m_isFake;

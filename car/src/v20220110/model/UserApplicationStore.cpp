@@ -25,7 +25,8 @@ UserApplicationStore::UserApplicationStore() :
     m_cosRegionHasBeenSet(false),
     m_storeTypeHasBeenSet(false),
     m_storeStateHasBeenSet(false),
-    m_storePathHasBeenSet(false)
+    m_storePathHasBeenSet(false),
+    m_subStorePathsHasBeenSet(false)
 {
 }
 
@@ -84,6 +85,19 @@ CoreInternalOutcome UserApplicationStore::Deserialize(const rapidjson::Value &va
         m_storePathHasBeenSet = true;
     }
 
+    if (value.HasMember("SubStorePaths") && !value["SubStorePaths"].IsNull())
+    {
+        if (!value["SubStorePaths"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `UserApplicationStore.SubStorePaths` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SubStorePaths"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_subStorePaths.push_back((*itr).GetString());
+        }
+        m_subStorePathsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +143,19 @@ void UserApplicationStore::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "StorePath";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_storePath.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subStorePathsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubStorePaths";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_subStorePaths.begin(); itr != m_subStorePaths.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 }
@@ -212,5 +239,21 @@ void UserApplicationStore::SetStorePath(const string& _storePath)
 bool UserApplicationStore::StorePathHasBeenSet() const
 {
     return m_storePathHasBeenSet;
+}
+
+vector<string> UserApplicationStore::GetSubStorePaths() const
+{
+    return m_subStorePaths;
+}
+
+void UserApplicationStore::SetSubStorePaths(const vector<string>& _subStorePaths)
+{
+    m_subStorePaths = _subStorePaths;
+    m_subStorePathsHasBeenSet = true;
+}
+
+bool UserApplicationStore::SubStorePathsHasBeenSet() const
+{
+    return m_subStorePathsHasBeenSet;
 }
 

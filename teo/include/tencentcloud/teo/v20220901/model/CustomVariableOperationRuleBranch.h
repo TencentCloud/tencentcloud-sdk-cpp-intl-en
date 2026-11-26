@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ActionsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
-                     * @return SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+                     * 获取<p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
+                     * @return SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
                      * 
                      */
                     std::vector<std::shared_ptr<CustomVariableOperationSubRule>> GetSubRules() const;
 
                     /**
-                     * 设置<p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
-                     * @param _subRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+                     * 设置<p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
+                     * @param _subRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
                      * 
                      */
                     void SetSubRules(const std::vector<std::shared_ptr<CustomVariableOperationSubRule>>& _subRules);
@@ -127,7 +127,7 @@ namespace TencentCloud
                     bool m_actionsHasBeenSet;
 
                     /**
-                     * <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+                     * <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
                      */
                     std::vector<std::shared_ptr<CustomVariableOperationSubRule>> m_subRules;
                     bool m_subRulesHasBeenSet;

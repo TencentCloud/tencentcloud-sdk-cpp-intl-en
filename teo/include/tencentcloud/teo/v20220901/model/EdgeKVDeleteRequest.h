@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
-                     * @return Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+                     * 获取Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
+                     * @return Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
                      * 
                      */
                     std::vector<std::string> GetKeys() const;
 
                     /**
-                     * 设置Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
-                     * @param _keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+                     * 设置Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
+                     * @param _keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
                      * 
                      */
                     void SetKeys(const std::vector<std::string>& _keys);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+                     * Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
                      */
                     std::vector<std::string> m_keys;
                     bool m_keysHasBeenSet;

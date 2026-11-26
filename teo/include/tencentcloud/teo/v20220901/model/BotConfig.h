@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bot security configuration
+                * Security Bot configuration
                 */
                 class BotConfig : public AbstractModel
                 {
@@ -52,23 +52,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -81,15 +81,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
-                     * @return BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+                     * 获取Common detailed basic rules. If it is null, use the last set configuration by default.
+                     * @return BotManagedRule Common detailed basic rules. If it is null, use the last set configuration by default.
                      * 
                      */
                     BotManagedRule GetBotManagedRule() const;
 
                     /**
-                     * 设置The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
-                     * @param _botManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+                     * 设置Common detailed basic rules. If it is null, use the last set configuration by default.
+                     * @param _botManagedRule Common detailed basic rules. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetBotManagedRule(const BotManagedRule& _botManagedRule);
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool BotManagedRuleHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
-                     * @return BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+                     * 获取User profiling rule. If it is null, use the last set configuration by default.
+                     * @return BotPortraitRule User profiling rule. If it is null, use the last set configuration by default.
                      * 
                      */
                     BotPortraitRule GetBotPortraitRule() const;
 
                     /**
-                     * 设置The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
-                     * @param _botPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+                     * 设置User profiling rule. If it is null, use the last set configuration by default.
+                     * @param _botPortraitRule User profiling rule. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetBotPortraitRule(const BotPortraitRule& _botPortraitRule);
@@ -123,15 +123,15 @@ namespace TencentCloud
                     bool BotPortraitRuleHasBeenSet() const;
 
                     /**
-                     * 获取Bot intelligent analysis. if null, use the last set configuration by default.
-                     * @return IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
+                     * 获取Bot intelligent analysis. If it is null, use the last set configuration by default.
+                     * @return IntelligenceRule Bot intelligent analysis. If it is null, use the last set configuration by default.
                      * 
                      */
                     IntelligenceRule GetIntelligenceRule() const;
 
                     /**
-                     * 设置Bot intelligent analysis. if null, use the last set configuration by default.
-                     * @param _intelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
+                     * 设置Bot intelligent analysis. If it is null, use the last set configuration by default.
+                     * @param _intelligenceRule Bot intelligent analysis. If it is null, use the last set configuration by default.
                      * 
                      */
                     void SetIntelligenceRule(const IntelligenceRule& _intelligenceRule);
@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool IntelligenceRuleHasBeenSet() const;
 
                     /**
-                     * 获取Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
-                     * @return BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * 获取Bot custom rule. If it is null, the last set configuration is used by default.
+                     * @return BotUserRules Bot custom rule. If it is null, the last set configuration is used by default.
                      * 
                      */
                     std::vector<BotUserRule> GetBotUserRules() const;
 
                     /**
-                     * 设置Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
-                     * @param _botUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * 设置Bot custom rule. If it is null, the last set configuration is used by default.
+                     * @param _botUserRules Bot custom rule. If it is null, the last set configuration is used by default.
                      * 
                      */
                     void SetBotUserRules(const std::vector<BotUserRule>& _botUserRules);
@@ -165,15 +165,15 @@ namespace TencentCloud
                     bool BotUserRulesHasBeenSet() const;
 
                     /**
-                     * 获取Active bot detection rule.
-                     * @return AlgDetectRule Active bot detection rule.
+                     * 获取Bot active feature detection rule.
+                     * @return AlgDetectRule Bot active feature detection rule.
                      * 
                      */
                     std::vector<AlgDetectRule> GetAlgDetectRule() const;
 
                     /**
-                     * 设置Active bot detection rule.
-                     * @param _algDetectRule Active bot detection rule.
+                     * 设置Bot active feature detection rule.
+                     * @param _algDetectRule Bot active feature detection rule.
                      * 
                      */
                     void SetAlgDetectRule(const std::vector<AlgDetectRule>& _algDetectRule);
@@ -186,15 +186,15 @@ namespace TencentCloud
                     bool AlgDetectRuleHasBeenSet() const;
 
                     /**
-                     * 获取Bot managed custom policy. optional input. output usage only.
-                     * @return Customizes Bot managed custom policy. optional input. output usage only.
+                     * 获取Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
+                     * @return Customizes Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
                      * 
                      */
                     std::vector<BotUserRule> GetCustomizes() const;
 
                     /**
-                     * 设置Bot managed custom policy. optional input. output usage only.
-                     * @param _customizes Bot managed custom policy. optional input. output usage only.
+                     * 设置Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
+                     * @param _customizes Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
                      * 
                      */
                     void SetCustomizes(const std::vector<BotUserRule>& _customizes);
@@ -209,45 +209,45 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+                     * Common detailed basic rules. If it is null, use the last set configuration by default.
                      */
                     BotManagedRule m_botManagedRule;
                     bool m_botManagedRuleHasBeenSet;
 
                     /**
-                     * The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+                     * User profiling rule. If it is null, use the last set configuration by default.
                      */
                     BotPortraitRule m_botPortraitRule;
                     bool m_botPortraitRuleHasBeenSet;
 
                     /**
-                     * Bot intelligent analysis. if null, use the last set configuration by default.
+                     * Bot intelligent analysis. If it is null, use the last set configuration by default.
                      */
                     IntelligenceRule m_intelligenceRule;
                     bool m_intelligenceRuleHasBeenSet;
 
                     /**
-                     * Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * Bot custom rule. If it is null, the last set configuration is used by default.
                      */
                     std::vector<BotUserRule> m_botUserRules;
                     bool m_botUserRulesHasBeenSet;
 
                     /**
-                     * Active bot detection rule.
+                     * Bot active feature detection rule.
                      */
                     std::vector<AlgDetectRule> m_algDetectRule;
                     bool m_algDetectRuleHasBeenSet;
 
                     /**
-                     * Bot managed custom policy. optional input. output usage only.
+                     * Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
                      */
                     std::vector<BotUserRule> m_customizes;
                     bool m_customizesHasBeenSet;

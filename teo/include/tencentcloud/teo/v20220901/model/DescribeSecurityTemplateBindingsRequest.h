@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site to query
-                     * @return ZoneId ID of the site to query
+                     * 获取Site ID to query.
+                     * @return ZoneId Site ID to query.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site to query
-                     * @param _zoneId ID of the site to query
+                     * 设置Site ID to query.
+                     * @param _zoneId Site ID to query.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the policy template to query.
-                     * @return TemplateId ID of the policy template to query.
+                     * 获取Template ID of the policy to query.
+                     * @return TemplateId Template ID of the policy to query.
                      * 
                      */
                     std::vector<std::string> GetTemplateId() const;
 
                     /**
-                     * 设置ID of the policy template to query.
-                     * @param _templateId ID of the policy template to query.
+                     * 设置Template ID of the policy to query.
+                     * @param _templateId Template ID of the policy to query.
                      * 
                      */
                     void SetTemplateId(const std::vector<std::string>& _templateId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site to query
+                     * Site ID to query.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * ID of the policy template to query.
+                     * Template ID of the policy to query.
                      */
                     std::vector<std::string> m_templateId;
                     bool m_templateIdHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of eligible functions bound.
-                     * @return TotalCount Total number of eligible functions bound.
+                     * 获取Total number of bound functions that meet the condition.
+                     * @return TotalCount Total number of bound functions that meet the condition.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Function component bound list.
-                     * @return FunctionComponentBindings Function component bound list.
+                     * 获取List of function component bindings.
+                     * @return FunctionComponentBindings List of function component bindings.
                      * 
                      */
                     std::vector<FunctionComponentBinding> GetFunctionComponentBindings() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of eligible functions bound.
+                     * Total number of bound functions that meet the condition.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Function component bound list.
+                     * List of function component bindings.
                      */
                     std::vector<FunctionComponentBinding> m_functionComponentBindings;
                     bool m_functionComponentBindingsHasBeenSet;

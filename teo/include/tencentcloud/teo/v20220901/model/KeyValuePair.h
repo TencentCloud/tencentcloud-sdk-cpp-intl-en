@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * KV key-value pair data, including key name, key-value, and expiration time information.
+                * KV key-value pair data, including key name, key value, and expiration time info.
                 */
                 class KeyValuePair : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
-                     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+                     * 获取Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
+                     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
-                     * @param _key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+                     * 设置Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
+                     * @param _key Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
-                     * @return Value Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
+                     * 获取Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
+                     * @return Value Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
-                     * @param _value Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
+                     * 设置Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
+                     * @param _value Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
-                     * @return Expiration Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+                     * 获取Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
+                     * @return Expiration Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
                      * 
                      */
                     std::string GetExpiration() const;
 
                     /**
-                     * 设置Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
-                     * @param _expiration Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+                     * 设置Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
+                     * @param _expiration Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
                      * 
                      */
                     void SetExpiration(const std::string& _expiration);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+                     * Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
+                     * Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+                     * Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
                      */
                     std::string m_expiration;
                     bool m_expirationHasBeenSet;

@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the service area of the site is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
-                     * @return Area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the service area of the site is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+                     * 获取<p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to get all data.</p>
+                     * @return Area <p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to get all data.</p>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置<p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the service area of the site is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
-                     * @param _area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the service area of the site is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+                     * 设置<p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to get all data.</p>
+                     * @param _area <p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to get all data.</p>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取<p>Start time, example value: 2020-04-29T00:00:00Z. The maximum span from the supported query start time to this day varies for different package versions. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
-                     * @return StartTime <p>Start time, example value: 2020-04-29T00:00:00Z. The maximum span from the supported query start time to this day varies for different package versions. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+                     * 获取<p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+                     * @return StartTime <p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置<p>Start time, example value: 2020-04-29T00:00:00Z. The maximum span from the supported query start time to this day varies for different package versions. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
-                     * @param _startTime <p>Start time, example value: 2020-04-29T00:00:00Z. The maximum span from the supported query start time to this day varies for different package versions. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+                     * 设置<p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+                     * @param _startTime <p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>End time, for example, 2020-04-30T00:00:00Z. The time span from the start time to the end time per request is up to 31 days.</p>
-                     * @return EndTime <p>End time, for example, 2020-04-30T00:00:00Z. The time span from the start time to the end time per request is up to 31 days.</p>
+                     * 获取<p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
+                     * @return EndTime <p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置<p>End time, for example, 2020-04-30T00:00:00Z. The time span from the start time to the end time per request is up to 31 days.</p>
-                     * @param _endTime <p>End time, for example, 2020-04-30T00:00:00Z. The time span from the start time to the end time per request is up to 31 days.</p>
+                     * 设置<p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
+                     * @param _endTime <p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log type. Value range: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
-                     * @return LogType <p>Log type. Value range: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+                     * 获取<p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+                     * @return LogType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置<p>Log type. Value range: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
-                     * @param _logType <p>Log type. Value range: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+                     * 设置<p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+                     * @param _logType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
-                     * @return Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+                     * 获取<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+                     * @return Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
-                     * @param _condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+                     * 设置<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+                     * @param _condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取<p>File format, available values: <ul><li>csv</li></ul>Defaults to csv.</p>
-                     * @return Format <p>File format, available values: <ul><li>csv</li></ul>Defaults to csv.</p>
+                     * 获取<p>File format. Available value: <ul><li>csv</li></ul> Default value: csv.</p>
+                     * @return Format <p>File format. Available value: <ul><li>csv</li></ul> Default value: csv.</p>
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置<p>File format, available values: <ul><li>csv</li></ul>Defaults to csv.</p>
-                     * @param _format <p>File format, available values: <ul><li>csv</li></ul>Defaults to csv.</p>
+                     * 设置<p>File format. Available value: <ul><li>csv</li></ul> Default value: csv.</p>
+                     * @param _format <p>File format. Available value: <ul><li>csv</li></ul> Default value: csv.</p>
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取<p>Time sorting of raw logs. Available values: <ul><li>asc: ascending order;</li> <li>desc: descending order.</li></ul> Default is desc.</p>
-                     * @return Sort <p>Time sorting of raw logs. Available values: <ul><li>asc: ascending order;</li> <li>desc: descending order.</li></ul> Default is desc.</p>
+                     * 获取<p>Time sorting of raw logs. Available values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul> Default value: desc.</p>
+                     * @return Sort <p>Time sorting of raw logs. Available values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul> Default value: desc.</p>
                      * 
                      */
                     std::string GetSort() const;
 
                     /**
-                     * 设置<p>Time sorting of raw logs. Available values: <ul><li>asc: ascending order;</li> <li>desc: descending order.</li></ul> Default is desc.</p>
-                     * @param _sort <p>Time sorting of raw logs. Available values: <ul><li>asc: ascending order;</li> <li>desc: descending order.</li></ul> Default is desc.</p>
+                     * 设置<p>Time sorting of raw logs. Available values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul> Default value: desc.</p>
+                     * @param _sort <p>Time sorting of raw logs. Available values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul> Default value: desc.</p>
                      * 
                      */
                     void SetSort(const std::string& _sort);
@@ -219,43 +219,43 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul>Note: If the service area of the site is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+                     * <p>Data ownership region. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>Note: If the site service area is "global availability zone", query the data of mainland and overseas separately to get all data.</p>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * <p>Start time, example value: 2020-04-29T00:00:00Z. The maximum span from the supported query start time to this day varies for different package versions. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
+                     * <p>Start time. Example value: 2020-04-29T00:00:00Z. The maximum supported span from the query start time to this day varies by package version. For details, see <a href="https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1#45435466-9103-4ff6-be22-e31717044fb2">Package Selection Comparison</a>.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * <p>End time, for example, 2020-04-30T00:00:00Z. The time span from the start time to the end time per request is up to 31 days.</p>
+                     * <p>End time, for example, 2020-04-30T00:00:00Z. The maximum time span from start time to end time per request is 31 days.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>Log type. Value range: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+                     * <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+                     * <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * <p>File format, available values: <ul><li>csv</li></ul>Defaults to csv.</p>
+                     * <p>File format. Available value: <ul><li>csv</li></ul> Default value: csv.</p>
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * <p>Time sorting of raw logs. Available values: <ul><li>asc: ascending order;</li> <li>desc: descending order.</li></ul> Default is desc.</p>
+                     * <p>Time sorting of raw logs. Available values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul> Default value: desc.</p>
                      */
                     std::string m_sort;
                     bool m_sortHasBeenSet;

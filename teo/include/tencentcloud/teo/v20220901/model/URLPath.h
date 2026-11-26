@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access URL redirect path configuration parameters.
+                * Path configuration parameter for access URL redirection.
                 */
                 class URLPath : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
-                     * @return Action Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
+                     * 获取Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
+                     * @return Action Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
-                     * @param _action Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
+                     * 设置Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
+                     * @param _action Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -80,15 +80,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
-                     * @return Regex Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+                     * 获取Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
+                     * @return Regex Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
                      * 
                      */
                     std::string GetRegex() const;
 
                     /**
-                     * 设置Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
-                     * @param _regex Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+                     * 设置Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
+                     * @param _regex Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
                      * 
                      */
                     void SetRegex(const std::string& _regex);
@@ -101,15 +101,15 @@ namespace TencentCloud
                     bool RegexHasBeenSet() const;
 
                     /**
-                     * 获取Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
-                     * @return Value Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+                     * 获取Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
+                     * @return Value Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
-                     * @param _value Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+                     * 设置Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
+                     * @param _value Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -124,22 +124,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
+                     * Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+                     * Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
                      */
                     std::string m_regex;
                     bool m_regexHasBeenSet;
 
                     /**
-                     * Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+                     * Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

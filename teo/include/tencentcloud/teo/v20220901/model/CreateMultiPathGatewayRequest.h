@@ -64,23 +64,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
-                     * @return GatewayType Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
+                     * 获取Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
+                     * @return GatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
                      * 
                      */
                     std::string GetGatewayType() const;
 
                     /**
-                     * 设置Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
-                     * @param _gatewayType Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
+                     * 设置Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
+                     * @param _gatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
                      * 
                      */
                     void SetGatewayType(const std::string& _gatewayType);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool GatewayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
-                     * @return GatewayName Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+                     * 获取Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
+                     * @return GatewayName Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
                      * 
                      */
                     std::string GetGatewayName() const;
 
                     /**
-                     * 设置Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
-                     * @param _gatewayName Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+                     * 设置Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
+                     * @param _gatewayName Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
                      * 
                      */
                     void SetGatewayName(const std::string& _gatewayName);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool GatewayNameHasBeenSet() const;
 
                     /**
-                     * 获取Gateway port: value range: 1-65535 (excluding 8888).
-                     * @return GatewayPort Gateway port: value range: 1-65535 (excluding 8888).
+                     * 获取Gateway port. Range: 1–65535 (excluding 8888).
+                     * @return GatewayPort Gateway port. Range: 1–65535 (excluding 8888).
                      * 
                      */
                     int64_t GetGatewayPort() const;
 
                     /**
-                     * 设置Gateway port: value range: 1-65535 (excluding 8888).
-                     * @param _gatewayPort Gateway port: value range: 1-65535 (excluding 8888).
+                     * 设置Gateway port. Range: 1–65535 (excluding 8888).
+                     * @param _gatewayPort Gateway port. Range: 1–65535 (excluding 8888).
                      * 
                      */
                     void SetGatewayPort(const int64_t& _gatewayPort);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool GatewayPortHasBeenSet() const;
 
                     /**
-                     * 获取Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
-                     * @return RegionId Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
+                     * 获取Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
+                     * @return RegionId Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
-                     * @param _regionId Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
+                     * 设置Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
+                     * @param _regionId Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -156,23 +156,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
-                     * @return GatewayIP Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
+                     * 获取Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
+                     * @return GatewayIP Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
                      * 
                      */
                     std::string GetGatewayIP() const;
 
                     /**
-                     * 设置Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
-                     * @param _gatewayIP Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
+                     * 设置Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
+                     * @param _gatewayIP Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
                      * 
                      */
                     void SetGatewayIP(const std::string& _gatewayIP);
@@ -193,35 +185,33 @@ If not registered, submit a support ticket or contact your architect to pre-regi
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
+                     * Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
                      */
                     std::string m_gatewayType;
                     bool m_gatewayTypeHasBeenSet;
 
                     /**
-                     * Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+                     * Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
                      */
                     std::string m_gatewayName;
                     bool m_gatewayNameHasBeenSet;
 
                     /**
-                     * Gateway port: value range: 1-65535 (excluding 8888).
+                     * Gateway port. Range: 1–65535 (excluding 8888).
                      */
                     int64_t m_gatewayPort;
                     bool m_gatewayPortHasBeenSet;
 
                     /**
-                     * Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
+                     * Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
+                     * Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
                      */
                     std::string m_gatewayIP;
                     bool m_gatewayIPHasBeenSet;

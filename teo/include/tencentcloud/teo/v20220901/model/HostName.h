@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access URL redirect HostName configuration parameters.
+                * HostName configuration parameter for access URL redirection.
                 */
                 class HostName : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
-                     * @return Action Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
+                     * 获取Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
+                     * @return Action Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
-                     * @param _action Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
+                     * 设置Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
+                     * @param _action Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
-                     * @return Value Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+                     * 获取custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
+                     * @return Value custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
-                     * @param _value Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+                     * 设置custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
+                     * @param _value custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
+                     * Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+                     * custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

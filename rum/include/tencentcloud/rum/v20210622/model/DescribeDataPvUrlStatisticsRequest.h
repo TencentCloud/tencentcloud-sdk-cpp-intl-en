@@ -484,27 +484,15 @@ namespace TencentCloud
                     bool EnvHasBeenSet() const;
 
                     /**
-                     * 获取group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
-                     * @return GroupByType group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
+                     * 获取Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
+                     * @return GroupByType Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
                      * 
                      */
                     int64_t GetGroupByType() const;
 
                     /**
-                     * 设置group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
-                     * @param _groupByType group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
+                     * 设置Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
+                     * @param _groupByType Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
                      * 
                      */
                     void SetGroupByType(const int64_t& _groupByType);
@@ -517,19 +505,15 @@ namespace TencentCloud
                     bool GroupByTypeHasBeenSet() const;
 
                     /**
-                     * 获取1: Query Intelligent Research
-0: Use old logic, already offline, do not use
-                     * @return IsNewData 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+                     * 获取Set to 1 to query the new data source. The legacy query mode (0) has been retired.
+                     * @return IsNewData Set to 1 to query the new data source. The legacy query mode (0) has been retired.
                      * 
                      */
                     int64_t GetIsNewData() const;
 
                     /**
-                     * 设置1: Query Intelligent Research
-0: Use old logic, already offline, do not use
-                     * @param _isNewData 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+                     * 设置Set to 1 to query the new data source. The legacy query mode (0) has been retired.
+                     * @param _isNewData Set to 1 to query the new data source. The legacy query mode (0) has been retired.
                      * 
                      */
                     void SetIsNewData(const int64_t& _isNewData);
@@ -670,17 +654,13 @@ namespace TencentCloud
                     bool m_envHasBeenSet;
 
                     /**
-                     * group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
+                     * Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
                      */
                     int64_t m_groupByType;
                     bool m_groupByTypeHasBeenSet;
 
                     /**
-                     * 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+                     * Set to 1 to query the new data source. The legacy query mode (0) has been retired.
                      */
                     int64_t m_isNewData;
                     bool m_isNewDataHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The top-ranked data
+                * TopN data Entry
                 */
                 class TopEntryValue : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The item name.
-                     * @return Name The item name.
+                     * 获取Sort entity names.
+                     * @return Name Sort entity names.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The item name.
-                     * @param _name The item name.
+                     * 设置Sort entity names.
+                     * @param _name Sort entity names.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The number of items.
-                     * @return Count The number of items.
+                     * 获取Sort the number of entities.
+                     * @return Count Sort the number of entities.
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置The number of items.
-                     * @param _count The number of items.
+                     * 设置Sort the number of entities.
+                     * @param _count Sort the number of entities.
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The item name.
+                     * Sort entity names.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The number of items.
+                     * Sort the number of entities.
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;

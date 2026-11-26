@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Private authentication parameters for Cloud Object Storage origin server
+                * Private authentication parameters for the COS origin server
                 */
                 class PrivateParameter : public AbstractModel
                 {
@@ -47,31 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The name of the private authentication parameter. Valid values:
+                     * 获取Private authentication parameter name. Valid values:
 <li>AccessKeyId: Access Key ID for authentication;</li>
-<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SecretAccessKey: authentication parameter Secret Access Key;</li>
 <li>SignatureVersion: Authentication version, v2 or v4;</li>
-<li>Region: The region of the storage bucket.</li>
-                     * @return Name The name of the private authentication parameter. Valid values:
+<li>Region: bucket region.</li>
+                     * @return Name Private authentication parameter name. Valid values:
 <li>AccessKeyId: Access Key ID for authentication;</li>
-<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SecretAccessKey: authentication parameter Secret Access Key;</li>
 <li>SignatureVersion: Authentication version, v2 or v4;</li>
-<li>Region: The region of the storage bucket.</li>
+<li>Region: bucket region.</li>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name of the private authentication parameter. Valid values:
+                     * 设置Private authentication parameter name. Valid values:
 <li>AccessKeyId: Access Key ID for authentication;</li>
-<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SecretAccessKey: authentication parameter Secret Access Key;</li>
 <li>SignatureVersion: Authentication version, v2 or v4;</li>
-<li>Region: The region of the storage bucket.</li>
-                     * @param _name The name of the private authentication parameter. Valid values:
+<li>Region: bucket region.</li>
+                     * @param _name Private authentication parameter name. Valid values:
 <li>AccessKeyId: Access Key ID for authentication;</li>
-<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SecretAccessKey: authentication parameter Secret Access Key;</li>
 <li>SignatureVersion: Authentication version, v2 or v4;</li>
-<li>Region: The region of the storage bucket.</li>
+<li>Region: bucket region.</li>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The parameter value.
-                     * @return Value The parameter value.
+                     * 获取Private authentication parameter value.
+                     * @return Value Private authentication parameter value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置The parameter value.
-                     * @param _value The parameter value.
+                     * 设置Private authentication parameter value.
+                     * @param _value Private authentication parameter value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -107,17 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The name of the private authentication parameter. Valid values:
+                     * Private authentication parameter name. Valid values:
 <li>AccessKeyId: Access Key ID for authentication;</li>
-<li>SecretAccessKey: Secret Access Key for authentication;</li>
+<li>SecretAccessKey: authentication parameter Secret Access Key;</li>
 <li>SignatureVersion: Authentication version, v2 or v4;</li>
-<li>Region: The region of the storage bucket.</li>
+<li>Region: bucket region.</li>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The parameter value.
+                     * Private authentication parameter value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

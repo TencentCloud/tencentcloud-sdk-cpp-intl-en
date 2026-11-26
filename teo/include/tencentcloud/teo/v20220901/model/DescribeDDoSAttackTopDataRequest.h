@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time.
-                     * @return StartTime The start time.
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time.
-                     * @param _startTime The start time.
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-                     * @return EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * 获取End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * @return EndTime End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-                     * @param _endTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * 设置End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * @param _endTime End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -85,39 +85,39 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
-                     * @return MetricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+                     * 获取Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
+                     * @return MetricName Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
                      * 
                      */
                     std::string GetMetricName() const;
 
                     /**
-                     * 设置The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
-                     * @param _metricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+                     * 设置Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
+                     * @param _metricName Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
                      * 
                      */
                     void SetMetricName(const std::string& _metricName);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool MetricNameHasBeenSet() const;
 
                     /**
-                     * 获取Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-                     * @return ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+                     * 获取Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+                     * @return ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-                     * @param _zoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+                     * 设置Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+                     * @param _zoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
-                     * 获取The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
-                     * @return PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+                     * 获取Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
+                     * @return PolicyIds Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
                      * 
                      */
                     std::vector<int64_t> GetPolicyIds() const;
 
                     /**
-                     * 设置The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
-                     * @param _policyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+                     * 设置Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
+                     * @param _policyIds Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
                      * 
                      */
                     void SetPolicyIds(const std::vector<int64_t>& _policyIds);
@@ -172,27 +172,27 @@ namespace TencentCloud
                     bool PolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
-                     * @return AttackType The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+                     * 获取Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
+                     * @return AttackType Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
                      * 
                      */
                     std::string GetAttackType() const;
 
                     /**
-                     * 设置The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
-                     * @param _attackType The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+                     * 设置Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
+                     * @param _attackType Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
                      * 
                      */
                     void SetAttackType(const std::string& _attackType);
@@ -205,27 +205,27 @@ namespace TencentCloud
                     bool AttackTypeHasBeenSet() const;
 
                     /**
-                     * 获取The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
-                     * @return ProtocolType The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+                     * 获取Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
+                     * @return ProtocolType Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
                      * 
                      */
                     std::string GetProtocolType() const;
 
                     /**
-                     * 设置The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
-                     * @param _protocolType The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+                     * 设置Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
+                     * @param _protocolType Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
                      * 
                      */
                     void SetProtocolType(const std::string& _protocolType);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool ProtocolTypeHasBeenSet() const;
 
                     /**
-                     * 获取The port number.
-                     * @return Port The port number.
+                     * 获取Port number.
+                     * @return Port Port number.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置The port number.
-                     * @param _port The port number.
+                     * 设置Port number.
+                     * @param _port Port number.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
-                     * @return Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * 获取Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
+                     * @return Limit Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
-                     * @param _limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * 设置Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
+                     * @param _limit Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -280,23 +280,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
-                     * @return Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+                     * 获取Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
+                     * @return Area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
-                     * @param _area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+                     * 设置Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
+                     * @param _area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -311,75 +311,75 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start time.
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+                     * End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+                     * Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
                      */
                     std::string m_metricName;
                     bool m_metricNameHasBeenSet;
 
                     /**
-                     * Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+                     * Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
-                     * The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+                     * Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
                      */
                     std::vector<int64_t> m_policyIds;
                     bool m_policyIdsHasBeenSet;
 
                     /**
-                     * The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+                     * Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
                      */
                     std::string m_attackType;
                     bool m_attackTypeHasBeenSet;
 
                     /**
-                     * The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+                     * Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
                      */
                     std::string m_protocolType;
                     bool m_protocolTypeHasBeenSet;
 
                     /**
-                     * The port number.
+                     * Port number.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+                     * Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

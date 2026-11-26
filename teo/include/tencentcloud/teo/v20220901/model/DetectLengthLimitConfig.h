@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Length limit detection configuration.
+                * Length limit for detection
                 */
                 class DetectLengthLimitConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of rules that detect length limits.
-                     * @return DetectLengthLimitRules List of rules that detect length limits.
+                     * 获取Rule list for detection length limit.
+                     * @return DetectLengthLimitRules Rule list for detection length limit.
                      * 
                      */
                     std::vector<DetectLengthLimitRule> GetDetectLengthLimitRules() const;
 
                     /**
-                     * 设置List of rules that detect length limits.
-                     * @param _detectLengthLimitRules List of rules that detect length limits.
+                     * 设置Rule list for detection length limit.
+                     * @param _detectLengthLimitRules Rule list for detection length limit.
                      * 
                      */
                     void SetDetectLengthLimitRules(const std::vector<DetectLengthLimitRule>& _detectLengthLimitRules);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of rules that detect length limits.
+                     * Rule list for detection length limit.
                      */
                     std::vector<DetectLengthLimitRule> m_detectLengthLimitRules;
                     bool m_detectLengthLimitRulesHasBeenSet;

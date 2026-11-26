@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the DDoS attacker
+                * DDoS attack event objects
                 */
                 class DDoSAttackEvent : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The event ID.
-                     * @return EventId The event ID.
+                     * 获取<p>Event ID.</p>
+                     * @return EventId <p>Event ID.</p>
                      * 
                      */
                     std::string GetEventId() const;
 
                     /**
-                     * 设置The event ID.
-                     * @param _eventId The event ID.
+                     * 设置<p>Event ID.</p>
+                     * @param _eventId <p>Event ID.</p>
                      * 
                      */
                     void SetEventId(const std::string& _eventId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EventIdHasBeenSet() const;
 
                     /**
-                     * 获取The attack type.
-                     * @return AttackType The attack type.
+                     * 获取<p>Attack type.</p>
+                     * @return AttackType <p>Attack type.</p>
                      * 
                      */
                     std::string GetAttackType() const;
 
                     /**
-                     * 设置The attack type.
-                     * @param _attackType The attack type.
+                     * 设置<p>Attack type.</p>
+                     * @param _attackType <p>Attack type.</p>
                      * 
                      */
                     void SetAttackType(const std::string& _attackType);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool AttackTypeHasBeenSet() const;
 
                     /**
-                     * 获取The attack status.
-                     * @return AttackStatus The attack status.
+                     * 获取<p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
+                     * @return AttackStatus <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
                      * 
                      */
                     int64_t GetAttackStatus() const;
 
                     /**
-                     * 设置The attack status.
-                     * @param _attackStatus The attack status.
+                     * 设置<p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
+                     * @param _attackStatus <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
                      * 
                      */
                     void SetAttackStatus(const int64_t& _attackStatus);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AttackStatusHasBeenSet() const;
 
                     /**
-                     * 获取Maximum bandwidth of the attack in bps.
-                     * @return AttackMaxBandWidth Maximum bandwidth of the attack in bps.
+                     * 获取<p>Maximum attack bandwidth, in bps.</p>
+                     * @return AttackMaxBandWidth <p>Maximum attack bandwidth, in bps.</p>
                      * 
                      */
                     int64_t GetAttackMaxBandWidth() const;
 
                     /**
-                     * 设置Maximum bandwidth of the attack in bps.
-                     * @param _attackMaxBandWidth Maximum bandwidth of the attack in bps.
+                     * 设置<p>Maximum attack bandwidth, in bps.</p>
+                     * @param _attackMaxBandWidth <p>Maximum attack bandwidth, in bps.</p>
                      * 
                      */
                     void SetAttackMaxBandWidth(const int64_t& _attackMaxBandWidth);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AttackMaxBandWidthHasBeenSet() const;
 
                     /**
-                     * 获取Peak attack packet rate, unit: pps.
-                     * @return AttackPacketMaxRate Peak attack packet rate, unit: pps.
+                     * 获取<p>Peak attack packet rate, unit: pps.</p>
+                     * @return AttackPacketMaxRate <p>Peak attack packet rate, unit: pps.</p>
                      * 
                      */
                     int64_t GetAttackPacketMaxRate() const;
 
                     /**
-                     * 设置Peak attack packet rate, unit: pps.
-                     * @param _attackPacketMaxRate Peak attack packet rate, unit: pps.
+                     * 设置<p>Peak attack packet rate, unit: pps.</p>
+                     * @param _attackPacketMaxRate <p>Peak attack packet rate, unit: pps.</p>
                      * 
                      */
                     void SetAttackPacketMaxRate(const int64_t& _attackPacketMaxRate);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool AttackPacketMaxRateHasBeenSet() const;
 
                     /**
-                     * 获取The attack start time recorded in seconds.
-                     * @return AttackStartTime The attack start time recorded in seconds.
+                     * 获取<p>Attack start timestamp.</p><p>Unit: second</p>
+                     * @return AttackStartTime <p>Attack start timestamp.</p><p>Unit: second</p>
                      * 
                      */
                     int64_t GetAttackStartTime() const;
 
                     /**
-                     * 设置The attack start time recorded in seconds.
-                     * @param _attackStartTime The attack start time recorded in seconds.
+                     * 设置<p>Attack start timestamp.</p><p>Unit: second</p>
+                     * @param _attackStartTime <p>Attack start timestamp.</p><p>Unit: second</p>
                      * 
                      */
                     void SetAttackStartTime(const int64_t& _attackStartTime);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool AttackStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The attack end time recorded in seconds.
-                     * @return AttackEndTime The attack end time recorded in seconds.
+                     * 获取<p>Attack end timestamp.</p><p>Unit: second</p>
+                     * @return AttackEndTime <p>Attack end timestamp.</p><p>Unit: second</p>
                      * 
                      */
                     int64_t GetAttackEndTime() const;
 
                     /**
-                     * 设置The attack end time recorded in seconds.
-                     * @param _attackEndTime The attack end time recorded in seconds.
+                     * 设置<p>Attack end timestamp.</p><p>Unit: second</p>
+                     * @param _attackEndTime <p>Attack end timestamp.</p><p>Unit: second</p>
                      * 
                      */
                     void SetAttackEndTime(const int64_t& _attackEndTime);
@@ -195,19 +195,15 @@ namespace TencentCloud
                     bool AttackEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return PolicyId The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>DDoS policy group ID.</p>
+                     * @return PolicyId <p>DDoS policy group ID.</p>
                      * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
-                     * 设置The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _policyId The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>DDoS policy group ID.</p>
+                     * @param _policyId <p>DDoS policy group ID.</p>
                      * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
@@ -220,19 +216,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool PolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ZoneId The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Zone ID.</p>
+                     * @return ZoneId <p>Zone ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _zoneId The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Zone ID.</p>
+                     * @param _zoneId <p>Zone ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -245,27 +237,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
+                     * @return Area <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
+                     * @param _area <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -278,19 +258,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return DDoSBlockData The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取<p>Block and unblock info.</p>
+                     * @return DDoSBlockData <p>Block and unblock info.</p>
                      * 
                      */
                     std::vector<DDoSBlockData> GetDDoSBlockData() const;
 
                     /**
-                     * 设置The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _dDoSBlockData The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置<p>Block and unblock info.</p>
+                     * @param _dDoSBlockData <p>Block and unblock info.</p>
                      * 
                      */
                     void SetDDoSBlockData(const std::vector<DDoSBlockData>& _dDoSBlockData);
@@ -302,79 +278,100 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool DDoSBlockDataHasBeenSet() const;
 
+                    /**
+                     * 获取<p>List of target IPs under DDoS attack.</p>
+                     * @return DDoSAttackDips <p>List of target IPs under DDoS attack.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetDDoSAttackDips() const;
+
+                    /**
+                     * 设置<p>List of target IPs under DDoS attack.</p>
+                     * @param _dDoSAttackDips <p>List of target IPs under DDoS attack.</p>
+                     * 
+                     */
+                    void SetDDoSAttackDips(const std::vector<std::string>& _dDoSAttackDips);
+
+                    /**
+                     * 判断参数 DDoSAttackDips 是否已赋值
+                     * @return DDoSAttackDips 是否已赋值
+                     * 
+                     */
+                    bool DDoSAttackDipsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The event ID.
+                     * <p>Event ID.</p>
                      */
                     std::string m_eventId;
                     bool m_eventIdHasBeenSet;
 
                     /**
-                     * The attack type.
+                     * <p>Attack type.</p>
                      */
                     std::string m_attackType;
                     bool m_attackTypeHasBeenSet;
 
                     /**
-                     * The attack status.
+                     * <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
                      */
                     int64_t m_attackStatus;
                     bool m_attackStatusHasBeenSet;
 
                     /**
-                     * Maximum bandwidth of the attack in bps.
+                     * <p>Maximum attack bandwidth, in bps.</p>
                      */
                     int64_t m_attackMaxBandWidth;
                     bool m_attackMaxBandWidthHasBeenSet;
 
                     /**
-                     * Peak attack packet rate, unit: pps.
+                     * <p>Peak attack packet rate, unit: pps.</p>
                      */
                     int64_t m_attackPacketMaxRate;
                     bool m_attackPacketMaxRateHasBeenSet;
 
                     /**
-                     * The attack start time recorded in seconds.
+                     * <p>Attack start timestamp.</p><p>Unit: second</p>
                      */
                     int64_t m_attackStartTime;
                     bool m_attackStartTimeHasBeenSet;
 
                     /**
-                     * The attack end time recorded in seconds.
+                     * <p>Attack end timestamp.</p><p>Unit: second</p>
                      */
                     int64_t m_attackEndTime;
                     bool m_attackEndTimeHasBeenSet;
 
                     /**
-                     * The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>DDoS policy group ID.</p>
                      */
                     int64_t m_policyId;
                     bool m_policyIdHasBeenSet;
 
                     /**
-                     * The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Zone ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * <p>Block and unblock info.</p>
                      */
                     std::vector<DDoSBlockData> m_dDoSBlockData;
                     bool m_dDoSBlockDataHasBeenSet;
+
+                    /**
+                     * <p>List of target IPs under DDoS attack.</p>
+                     */
+                    std::vector<std::string> m_dDoSAttackDips;
+                    bool m_dDoSAttackDipsHasBeenSet;
 
                 };
             }

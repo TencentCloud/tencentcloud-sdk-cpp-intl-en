@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The site verification information.
-                     * @return Identifications The site verification information.
+                     * 获取Site verification information list.
+                     * @return Identifications Site verification information list.
                      * 
                      */
                     std::vector<Identification> GetIdentifications() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The site verification information.
+                     * Site verification information list.
                      */
                     std::vector<Identification> m_identifications;
                     bool m_identificationsHasBeenSet;

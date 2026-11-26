@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom bot rules
+                * Bot custom rule
                 */
                 class BotUserRule : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RuleName 
+                     * 获取Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+                     * @return RuleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置
-                     * @param _ruleName 
+                     * 设置Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+                     * @param _ruleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -70,59 +70,59 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
-                     * @return Action The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
+                     * 获取Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+                     * @return Action Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
-                     * @param _action The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
+                     * 设置Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+                     * @param _action Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -135,23 +135,23 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
-                     * @return RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+                     * 获取Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
+                     * @return RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
                      * 
                      */
                     std::string GetRuleStatus() const;
 
                     /**
-                     * 设置The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
-                     * @param _ruleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+                     * 设置Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
+                     * @param _ruleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
                      * 
                      */
                     void SetRuleStatus(const std::string& _ruleStatus);
@@ -164,15 +164,15 @@ namespace TencentCloud
                     bool RuleStatusHasBeenSet() const;
 
                     /**
-                     * 获取Details of the rule.
-                     * @return AclConditions Details of the rule.
+                     * 获取Rule details.
+                     * @return AclConditions Rule details.
                      * 
                      */
                     std::vector<AclCondition> GetAclConditions() const;
 
                     /**
-                     * 设置Details of the rule.
-                     * @param _aclConditions Details of the rule.
+                     * 设置Rule details.
+                     * @param _aclConditions Rule details.
                      * 
                      */
                     void SetAclConditions(const std::vector<AclCondition>& _aclConditions);
@@ -185,15 +185,15 @@ namespace TencentCloud
                     bool AclConditionsHasBeenSet() const;
 
                     /**
-                     * 获取The rule weight. Value range: 0-100.
-                     * @return RulePriority The rule weight. Value range: 0-100.
+                     * 获取Rule weight. Value range: 0-100.
+                     * @return RulePriority Rule weight. Value range: 0-100.
                      * 
                      */
                     int64_t GetRulePriority() const;
 
                     /**
-                     * 设置The rule weight. Value range: 0-100.
-                     * @param _rulePriority The rule weight. Value range: 0-100.
+                     * 设置Rule weight. Value range: 0-100.
+                     * @param _rulePriority Rule weight. Value range: 0-100.
                      * 
                      */
                     void SetRulePriority(const int64_t& _rulePriority);
@@ -206,15 +206,15 @@ namespace TencentCloud
                     bool RulePriorityHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID, which is only used as an output parameter.
-                     * @return RuleID Rule ID, which is only used as an output parameter.
+                     * 获取Rule Id. Output only.
+                     * @return RuleID Rule Id. Output only.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置Rule ID, which is only used as an output parameter.
-                     * @param _ruleID Rule ID, which is only used as an output parameter.
+                     * 设置Rule Id. Output only.
+                     * @param _ruleID Rule Id. Output only.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -227,15 +227,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取[Currently unavailable] Specify the random action and percentage.
-                     * @return ExtendActions [Currently unavailable] Specify the random action and percentage.
+                     * 获取Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
+                     * @return ExtendActions Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
                      * 
                      */
                     std::vector<BotExtendAction> GetExtendActions() const;
 
                     /**
-                     * 设置[Currently unavailable] Specify the random action and percentage.
-                     * @param _extendActions [Currently unavailable] Specify the random action and percentage.
+                     * 设置Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
+                     * @param _extendActions Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
                      * 
                      */
                     void SetExtendActions(const std::vector<BotExtendAction>& _extendActions);
@@ -248,23 +248,23 @@ namespace TencentCloud
                     bool ExtendActionsHasBeenSet() const;
 
                     /**
-                     * 获取The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
-                     * @return FreqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+                     * 获取Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+                     * @return FreqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
                      * 
                      */
                     std::vector<std::string> GetFreqFields() const;
 
                     /**
-                     * 设置The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
-                     * @param _freqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+                     * 设置Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+                     * @param _freqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
                      * 
                      */
                     void SetFreqFields(const std::vector<std::string>& _freqFields);
@@ -277,15 +277,15 @@ This parameter is left empty by default.
                     bool FreqFieldsHasBeenSet() const;
 
                     /**
-                     * 获取The update time, which is only used as an output parameter.
-                     * @return UpdateTime The update time, which is only used as an output parameter.
+                     * 获取Update time. For output usage only.
+                     * @return UpdateTime Update time. For output usage only.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time, which is only used as an output parameter.
-                     * @param _updateTime The update time, which is only used as an output parameter.
+                     * 设置Update time. For output usage only.
+                     * @param _updateTime Update time. For output usage only.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -298,27 +298,27 @@ This parameter is left empty by default.
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
-                     * @return FreqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+                     * 获取Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+                     * @return FreqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
                      * 
                      */
                     std::vector<std::string> GetFreqScope() const;
 
                     /**
-                     * 设置Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
-                     * @param _freqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+                     * 设置Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+                     * @param _freqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
                      * 
                      */
                     void SetFreqScope(const std::vector<std::string>& _freqScope);
@@ -331,15 +331,15 @@ Default: `source_to_eo`.
                     bool FreqScopeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the custom return page. It's required when `Action=page`.
-                     * @return Name Name of the custom return page. It's required when `Action=page`.
+                     * 获取Name of the custom return page. Required when Action is page, and cannot be empty.
+                     * @return Name Name of the custom return page. Required when Action is page, and cannot be empty.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of the custom return page. It's required when `Action=page`.
-                     * @param _name Name of the custom return page. It's required when `Action=page`.
+                     * 设置Name of the custom return page. Required when Action is page, and cannot be empty.
+                     * @param _name Name of the custom return page. Required when Action is page, and cannot be empty.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -352,15 +352,15 @@ Default: `source_to_eo`.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-                     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * 获取Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
+                     * @return CustomResponseId Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
                      * 
                      */
                     std::string GetCustomResponseId() const;
 
                     /**
-                     * 设置ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-                     * @param _customResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * 设置Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
+                     * @param _customResponseId Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
                      * 
                      */
                     void SetCustomResponseId(const std::string& _customResponseId);
@@ -373,15 +373,15 @@ Default: `source_to_eo`.
                     bool CustomResponseIdHasBeenSet() const;
 
                     /**
-                     * 获取The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-                     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * 获取Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
+                     * @return ResponseCode Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
                      * 
                      */
                     int64_t GetResponseCode() const;
 
                     /**
-                     * 设置The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-                     * @param _responseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * 设置Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
+                     * @param _responseCode Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
                      * 
                      */
                     void SetResponseCode(const int64_t& _responseCode);
@@ -394,15 +394,15 @@ Default: `source_to_eo`.
                     bool ResponseCodeHasBeenSet() const;
 
                     /**
-                     * 获取The redirection URL. It's required when `Action=redirect`.
-                     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.
+                     * 获取Address for redirection. Required when Action is `redirect` and cannot be empty.
+                     * @return RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
                      * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
-                     * 设置The redirection URL. It's required when `Action=redirect`.
-                     * @param _redirectUrl The redirection URL. It's required when `Action=redirect`.
+                     * 设置Address for redirection. Required when Action is `redirect` and cannot be empty.
+                     * @param _redirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
                      * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
@@ -417,103 +417,103 @@ Default: `source_to_eo`.
                 private:
 
                     /**
-                     * 
+                     * Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
+                     * Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+                     * Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
                      */
                     std::string m_ruleStatus;
                     bool m_ruleStatusHasBeenSet;
 
                     /**
-                     * Details of the rule.
+                     * Rule details.
                      */
                     std::vector<AclCondition> m_aclConditions;
                     bool m_aclConditionsHasBeenSet;
 
                     /**
-                     * The rule weight. Value range: 0-100.
+                     * Rule weight. Value range: 0-100.
                      */
                     int64_t m_rulePriority;
                     bool m_rulePriorityHasBeenSet;
 
                     /**
-                     * Rule ID, which is only used as an output parameter.
+                     * Rule Id. Output only.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * [Currently unavailable] Specify the random action and percentage.
+                     * Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
                      */
                     std::vector<BotExtendAction> m_extendActions;
                     bool m_extendActionsHasBeenSet;
 
                     /**
-                     * The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+                     * Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
                      */
                     std::vector<std::string> m_freqFields;
                     bool m_freqFieldsHasBeenSet;
 
                     /**
-                     * The update time, which is only used as an output parameter.
+                     * Update time. For output usage only.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+                     * Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
                      */
                     std::vector<std::string> m_freqScope;
                     bool m_freqScopeHasBeenSet;
 
                     /**
-                     * Name of the custom return page. It's required when `Action=page`.
+                     * Name of the custom return page. Required when Action is page, and cannot be empty.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+                     * Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
                      */
                     std::string m_customResponseId;
                     bool m_customResponseIdHasBeenSet;
 
                     /**
-                     * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+                     * Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
                      */
                     int64_t m_responseCode;
                     bool m_responseCodeHasBeenSet;
 
                     /**
-                     * The redirection URL. It's required when `Action=redirect`.
+                     * Address for redirection. Required when Action is `redirect` and cannot be empty.
                      */
                     std::string m_redirectUrl;
                     bool m_redirectUrlHasBeenSet;

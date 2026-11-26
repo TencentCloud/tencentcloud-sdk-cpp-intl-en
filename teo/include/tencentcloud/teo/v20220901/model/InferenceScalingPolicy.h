@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Edge reasoning auto scaling policy.
+                * Auto scaling policy for edge reasoning.
                 */
                 class InferenceScalingPolicy : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
-                     * @return PolicyName Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+                     * 获取Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
+                     * @return PolicyName Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
                      * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
-                     * 设置Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
-                     * @param _policyName Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+                     * 设置Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
+                     * @param _policyName Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
                      * 
                      */
                     void SetPolicyName(const std::string& _policyName);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
-                     * @return PolicyType Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+                     * 获取Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+                     * @return PolicyType Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
                      * 
                      */
                     std::string GetPolicyType() const;
 
                     /**
-                     * 设置Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
-                     * @param _policyType Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+                     * 设置Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+                     * @param _policyType Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
                      * 
                      */
                     void SetPolicyType(const std::string& _policyType);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
-                     * @return ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+                     * 获取Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
+                     * @return ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
                      * 
                      */
                     InferenceScheduledScalingPolicy GetScheduledScalingPolicy() const;
 
                     /**
-                     * 设置Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
-                     * @param _scheduledScalingPolicy Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+                     * 设置Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
+                     * @param _scheduledScalingPolicy Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
                      * 
                      */
                     void SetScheduledScalingPolicy(const InferenceScheduledScalingPolicy& _scheduledScalingPolicy);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+                     * Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
                      */
                     std::string m_policyName;
                     bool m_policyNameHasBeenSet;
 
                     /**
-                     * Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+                     * Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
                      */
                     std::string m_policyType;
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+                     * Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
                      */
                     InferenceScheduledScalingPolicy m_scheduledScalingPolicy;
                     bool m_scheduledScalingPolicyHasBeenSet;

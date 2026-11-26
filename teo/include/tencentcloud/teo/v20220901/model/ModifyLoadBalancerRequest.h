@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
-                     * @return OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * 获取List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * @return OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
                      * 
                      */
                     std::vector<OriginGroupInLoadBalancer> GetOriginGroups() const;
 
                     /**
-                     * 设置List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
-                     * @param _originGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * 设置List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * @param _originGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
                      * 
                      */
                     void SetOriginGroups(const std::vector<OriginGroupInLoadBalancer>& _originGroups);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool OriginGroupsHasBeenSet() const;
 
                     /**
-                     * 获取Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
-                     * @return HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * 获取Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * @return HealthChecker Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
                      * 
                      */
                     HealthChecker GetHealthChecker() const;
 
                     /**
-                     * 设置Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
-                     * @param _healthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * 设置Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * @param _healthChecker Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
                      * 
                      */
                     void SetHealthChecker(const HealthChecker& _healthChecker);
@@ -175,10 +175,10 @@ namespace TencentCloud
                     bool SteeringPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+                     * 获取Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
-                     * @return FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+                     * @return FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
                      * 
@@ -186,10 +186,10 @@ namespace TencentCloud
                     std::string GetFailoverPolicy() const;
 
                     /**
-                     * 设置Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+                     * 设置Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
-                     * @param _failoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+                     * @param _failoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
                      * 
@@ -224,13 +224,13 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
                      */
                     std::vector<OriginGroupInLoadBalancer> m_originGroups;
                     bool m_originGroupsHasBeenSet;
 
                     /**
-                     * Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+                     * Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
                      */
                     HealthChecker m_healthChecker;
                     bool m_healthCheckerHasBeenSet;
@@ -243,7 +243,7 @@ namespace TencentCloud
                     bool m_steeringPolicyHasBeenSet;
 
                     /**
-                     * Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+                     * Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
                      */

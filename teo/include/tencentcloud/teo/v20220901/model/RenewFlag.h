@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The auto-renewal flag for prepaid plan has the following values:
+                     * 获取Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
-                     * @return Switch The auto-renewal flag for prepaid plan has the following values:
+                     * @return Switch Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置The auto-renewal flag for prepaid plan has the following values:
+                     * 设置Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
-                     * @param _switch The auto-renewal flag for prepaid plan has the following values:
+                     * @param _switch Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
                      * 
@@ -78,7 +78,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The auto-renewal flag for prepaid plan has the following values:
+                     * Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
                      */

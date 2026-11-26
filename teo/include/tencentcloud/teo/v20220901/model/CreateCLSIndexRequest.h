@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the real-time log delivery task.
-                     * @return TaskId The ID of the real-time log delivery task.
+                     * 获取ID of a real-time log shipping task.
+                     * @return TaskId ID of a real-time log shipping task.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The ID of the real-time log delivery task.
-                     * @param _taskId The ID of the real-time log delivery task.
+                     * 设置ID of a real-time log shipping task.
+                     * @param _taskId ID of a real-time log shipping task.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The ID of the real-time log delivery task.
+                     * ID of a real-time log shipping task.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

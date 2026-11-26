@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of zone IDs. A maximum of 100 zones can be queried in a single request.
-                     * @return ZoneIds List of zone IDs. A maximum of 100 zones can be queried in a single request.
+                     * 获取Site ID list. A single query can import up to 100 sites.
+                     * @return ZoneIds Site ID list. A single query can import up to 100 sites.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of zone IDs. A maximum of 100 zones can be queried in a single request.
-                     * @param _zoneIds List of zone IDs. A maximum of 100 zones can be queried in a single request.
+                     * 设置Site ID list. A single query can import up to 100 sites.
+                     * @param _zoneIds Site ID list. A single query can import up to 100 sites.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of zone IDs. A maximum of 100 zones can be queried in a single request.
+                     * Site ID list. A single query can import up to 100 sites.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

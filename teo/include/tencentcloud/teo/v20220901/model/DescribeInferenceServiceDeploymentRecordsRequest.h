@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>ID of the inference service.</p>
-                     * @return ServiceId <p>ID of the inference service.</p>
+                     * 获取<p>Inference service ID.</p>
+                     * @return ServiceId <p>Inference service ID.</p>
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置<p>ID of the inference service.</p>
-                     * @param _serviceId <p>ID of the inference service.</p>
+                     * 设置<p>Inference service ID.</p>
+                     * @param _serviceId <p>Inference service ID.</p>
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ServiceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
-                     * @return SortBy <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+                     * 获取<p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
+                     * @return SortBy <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
                      * 
                      */
                     std::string GetSortBy() const;
 
                     /**
-                     * 设置<p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
-                     * @param _sortBy <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+                     * 设置<p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
+                     * @param _sortBy <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SortByHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
-                     * @return SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+                     * 获取<p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
+                     * @return SortOrder <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置<p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
-                     * @param _sortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+                     * 设置<p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
+                     * @param _sortOrder <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -177,19 +177,19 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>ID of the inference service.</p>
+                     * <p>Inference service ID.</p>
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;
 
                     /**
-                     * <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+                     * <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
 
                     /**
-                     * <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+                     * <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;

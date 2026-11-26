@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Environment ID. Please specify the environment ID to which the version should be released.
-                     * @return EnvId Environment ID. Please specify the environment ID to which the version should be released.
+                     * 获取Environment ID. Please enter the environment ID to which the version needs to be released.
+                     * @return EnvId Environment ID. Please enter the environment ID to which the version needs to be released.
                      * 
                      */
                     std::string GetEnvId() const;
 
                     /**
-                     * 设置Environment ID. Please specify the environment ID to which the version should be released.
-                     * @param _envId Environment ID. Please specify the environment ID to which the version should be released.
+                     * 设置Environment ID. Please enter the environment ID to which the version needs to be released.
+                     * @param _envId Environment ID. Please enter the environment ID to which the version needs to be released.
                      * 
                      */
                     void SetEnvId(const std::string& _envId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool EnvIdHasBeenSet() const;
 
                     /**
-                     * 获取Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
-                     * @return ConfigGroupVersionInfos Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+                     * 获取Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
+                     * @return ConfigGroupVersionInfos Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
                      * 
                      */
                     std::vector<ConfigGroupVersionInfo> GetConfigGroupVersionInfos() const;
 
                     /**
-                     * 设置Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
-                     * @param _configGroupVersionInfos Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+                     * 设置Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
+                     * @param _configGroupVersionInfos Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
                      * 
                      */
                     void SetConfigGroupVersionInfos(const std::vector<ConfigGroupVersionInfo>& _configGroupVersionInfos);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ConfigGroupVersionInfosHasBeenSet() const;
 
                     /**
-                     * 获取Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
-                     * @return Description Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+                     * 获取Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
+                     * @return Description Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
-                     * @param _description Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+                     * 设置Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
+                     * @param _description Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -136,19 +136,19 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Environment ID. Please specify the environment ID to which the version should be released.
+                     * Environment ID. Please enter the environment ID to which the version needs to be released.
                      */
                     std::string m_envId;
                     bool m_envIdHasBeenSet;
 
                     /**
-                     * Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+                     * Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
                      */
                     std::vector<ConfigGroupVersionInfo> m_configGroupVersionInfos;
                     bool m_configGroupVersionInfosHasBeenSet;
 
                     /**
-                     * Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+                     * Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID.
-                     * @return ZoneId Site ID.
+                     * 获取Site Id.
+                     * @return ZoneId Site Id.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID.
-                     * @param _zoneId Site ID.
+                     * 设置Site Id.
+                     * @param _zoneId Site Id.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取IP group ID.
-                     * @return GroupId IP group ID.
+                     * 获取IP group Id.
+                     * @return GroupId IP group Id.
                      * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
-                     * 设置IP group ID.
-                     * @param _groupId IP group ID.
+                     * 设置IP group Id.
+                     * @param _groupId IP group Id.
                      * 
                      */
                     void SetGroupId(const int64_t& _groupId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Site ID.
+                     * Site Id.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * IP group ID.
+                     * IP group Id.
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;

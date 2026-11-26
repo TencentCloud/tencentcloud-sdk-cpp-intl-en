@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of Layer 4 proxy instances.
-                     * @return TotalCount The number of Layer 4 proxy instances.
+                     * 获取The number of L4 proxy instances.
+                     * @return TotalCount The number of L4 proxy instances.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of Layer 4 proxy instances.
-                     * @return L4Proxies List of Layer 4 proxy instances.
+                     * 获取Layer-4 proxy instance list.
+                     * @return L4Proxies Layer-4 proxy instance list.
                      * 
                      */
                     std::vector<L4Proxy> GetL4Proxies() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The number of Layer 4 proxy instances.
+                     * The number of L4 proxy instances.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of Layer 4 proxy instances.
+                     * Layer-4 proxy instance list.
                      */
                     std::vector<L4Proxy> m_l4Proxies;
                     bool m_l4ProxiesHasBeenSet;

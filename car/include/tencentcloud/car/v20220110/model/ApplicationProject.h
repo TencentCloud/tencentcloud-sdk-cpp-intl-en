@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project ID.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectId Project ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Project ID.</p>
+                     * @return ProjectId <p>Project ID.</p>
                      * 
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置Project ID.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectId Project ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Project ID.</p>
+                     * @param _projectId <p>Project ID.</p>
                      * 
                      */
                     void SetProjectId(const std::string& _projectId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Project name.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Project name.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Project name.</p>
+                     * @return Name <p>Project name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Project name.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Project name.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Project name.</p>
+                     * @param _name <p>Project name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Project description.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Description Project description.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Project description.</p>
+                     * @return Description <p>Project description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Project description.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _description Project description.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Project description.</p>
+                     * @param _description <p>Project description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
+                     * @return Type <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
+                     * @param _type <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationId Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cloud Application ID</p>
+                     * @return ApplicationId <p>Cloud Application ID</p>
                      * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationId Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cloud Application ID</p>
+                     * @param _applicationId <p>Cloud Application ID</p>
                      * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
-                     * 获取Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsPreload Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Pre-launch</p>
+                     * @return IsPreload <p>Pre-launch</p>
                      * 
                      */
                     bool GetIsPreload() const;
 
                     /**
-                     * 设置Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isPreload Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Pre-launch</p>
+                     * @param _isPreload <p>Pre-launch</p>
                      * 
                      */
                     void SetIsPreload(const bool& _isPreload);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool IsPreloadHasBeenSet() const;
 
                     /**
-                     * 获取Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Amount Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Configured concurrency</p>
+                     * @return Amount <p>Configured concurrency</p>
                      * 
                      */
                     int64_t GetAmount() const;
 
                     /**
-                     * 设置Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _amount Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Configured concurrency</p>
+                     * @param _amount <p>Configured concurrency</p>
                      * 
                      */
                     void SetAmount(const int64_t& _amount);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool AmountHasBeenSet() const;
 
                     /**
-                     * 获取Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Using Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Number of concurrencies in use</p>
+                     * @return Using <p>Number of concurrencies in use</p>
                      * 
                      */
                     int64_t GetUsing() const;
 
                     /**
-                     * 设置Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _using Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Number of concurrencies in use</p>
+                     * @param _using <p>Number of concurrencies in use</p>
                      * 
                      */
                     void SetUsing(const int64_t& _using);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool UsingHasBeenSet() const;
 
                     /**
-                     * 获取Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationStatus Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
+                     * @return ApplicationStatus <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
                      * 
                      */
                     std::string GetApplicationStatus() const;
 
                     /**
-                     * 设置Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationStatus Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
+                     * @param _applicationStatus <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
                      * 
                      */
                     void SetApplicationStatus(const std::string& _applicationStatus);
@@ -236,23 +236,15 @@ namespace TencentCloud
                     bool ApplicationStatusHasBeenSet() const;
 
                     /**
-                     * 获取Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationParams Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Application startup parameter</p>
+                     * @return ApplicationParams <p>Application startup parameter</p>
                      * 
                      */
                     std::string GetApplicationParams() const;
 
                     /**
-                     * 设置Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationParams Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Application startup parameter</p>
+                     * @param _applicationParams <p>Application startup parameter</p>
                      * 
                      */
                     void SetApplicationParams(const std::string& _applicationParams);
@@ -265,23 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationParamsHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -294,23 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationName Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Application name</p>
+                     * @return ApplicationName <p>Application name</p>
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationName Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Application name</p>
+                     * @param _applicationName <p>Application name</p>
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -323,15 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Resolution Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Resolution, format as "width x height", for example 1920x1080</p>
+                     * @return Resolution <p>Resolution, format as "width x height", for example 1920x1080</p>
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resolution Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Resolution, format as "width x height", for example 1920x1080</p>
+                     * @param _resolution <p>Resolution, format as "width x height", for example 1920x1080</p>
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -344,15 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResolutionHasBeenSet() const;
 
                     /**
-                     * 获取Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectType Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
+                     * @return ProjectType <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
                      * 
                      */
                     std::string GetProjectType() const;
 
                     /**
-                     * 设置Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectType Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
+                     * @param _projectType <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
                      * 
                      */
                     void SetProjectType(const std::string& _projectType);
@@ -365,15 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProjectTypeHasBeenSet() const;
 
                     /**
-                     * 获取Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Purpose Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Purpose.<br>EXPERIENCE: Experience</p>
+                     * @return Purpose <p>Purpose.<br>EXPERIENCE: Experience</p>
                      * 
                      */
                     std::string GetPurpose() const;
 
                     /**
-                     * 设置Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _purpose Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Purpose.<br>EXPERIENCE: Experience</p>
+                     * @param _purpose <p>Purpose.<br>EXPERIENCE: Experience</p>
                      * 
                      */
                     void SetPurpose(const std::string& _purpose);
@@ -386,15 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PurposeHasBeenSet() const;
 
                     /**
-                     * 获取Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationRegions Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
+                     * @return ApplicationRegions <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
                      * 
                      */
                     std::vector<std::string> GetApplicationRegions() const;
 
                     /**
-                     * 设置Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationRegions Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
+                     * @param _applicationRegions <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
                      * 
                      */
                     void SetApplicationRegions(const std::vector<std::string>& _applicationRegions);
@@ -407,15 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ConcurrentRegions Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
+                     * @return ConcurrentRegions <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
                      * 
                      */
                     std::vector<std::string> GetConcurrentRegions() const;
 
                     /**
-                     * 设置Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _concurrentRegions Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
+                     * @param _concurrentRegions <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
                      * 
                      */
                     void SetConcurrentRegions(const std::vector<std::string>& _concurrentRegions);
@@ -428,15 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConcurrentRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectCategory Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
+                     * @return ProjectCategory <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
                      * 
                      */
                     std::string GetProjectCategory() const;
 
                     /**
-                     * 设置Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _projectCategory Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
+                     * @param _projectCategory <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
                      * 
                      */
                     void SetProjectCategory(const std::string& _projectCategory);
@@ -451,115 +427,109 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Project ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Project ID.</p>
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Project name.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Project name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Project description.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Project description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cloud Application ID</p>
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
 
                     /**
-                     * Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Pre-launch</p>
                      */
                     bool m_isPreload;
                     bool m_isPreloadHasBeenSet;
 
                     /**
-                     * Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Configured concurrency</p>
                      */
                     int64_t m_amount;
                     bool m_amountHasBeenSet;
 
                     /**
-                     * Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Number of concurrencies in use</p>
                      */
                     int64_t m_using;
                     bool m_usingHasBeenSet;
 
                     /**
-                     * Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
                      */
                     std::string m_applicationStatus;
                     bool m_applicationStatusHasBeenSet;
 
                     /**
-                     * Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Application startup parameter</p>
                      */
                     std::string m_applicationParams;
                     bool m_applicationParamsHasBeenSet;
 
                     /**
-                     * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Application name</p>
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Resolution, format as "width x height", for example 1920x1080</p>
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
 
                     /**
-                     * Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
                      */
                     std::string m_projectType;
                     bool m_projectTypeHasBeenSet;
 
                     /**
-                     * Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Purpose.<br>EXPERIENCE: Experience</p>
                      */
                     std::string m_purpose;
                     bool m_purposeHasBeenSet;
 
                     /**
-                     * Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
                      */
                     std::vector<std::string> m_applicationRegions;
                     bool m_applicationRegionsHasBeenSet;
 
                     /**
-                     * Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
                      */
                     std::vector<std::string> m_concurrentRegions;
                     bool m_concurrentRegionsHasBeenSet;
 
                     /**
-                     * Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
                      */
                     std::string m_projectCategory;
                     bool m_projectCategoryHasBeenSet;

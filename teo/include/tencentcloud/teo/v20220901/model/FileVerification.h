@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information required for HTTP access verification file when applying for a free certificate in CNAME mode integration to verify ownership of a site or domain name.
+                * Information required for HTTP access verification file when verifying ownership or applying for a free certificate for a domain name in CNAME mode site integration.
                 */
                 class FileVerification : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
-                     * @return Path EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+                     * 获取The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
+                     * @return Path The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
-                     * @param _path EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+                     * 设置The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
+                     * @param _path The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
-                     * @return Content Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+                     * 获取Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
+                     * @return Content Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
-                     * @param _content Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+                     * 设置Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
+                     * @param _content Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+                     * The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+                     * Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

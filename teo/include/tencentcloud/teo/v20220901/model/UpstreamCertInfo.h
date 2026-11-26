@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Used to enable/disable origin-pull mutual authentication and origin certificate verification. the certificate for origin-pull mutual authentication is carried by EO during origin-pull, and the origin server can optionally validate this certificate to ensure the request originates from a trusted EO node. when enabled, the certificate configuration is used for EO nodes to verify whether the origin certificate is trustworthy.
+                * Used to enable or disable origin-pull mutual authentication and origin certificate verification respectively. The certificate for origin-pull mutual authentication is carried when EO pulls from the origin. The origin can choose to verify this certificate to ensure the request originates from a trusted EO node. When origin certificate verification is enabled, the certificate configuration is used for EO nodes to validate whether the origin certificate is trustworthy.
                 */
                 class UpstreamCertInfo : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool UpstreamMutualTLSHasBeenSet() const;
 
                     /**
-                     * 获取In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
-                     * @return UpstreamCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+                     * 获取In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
+                     * @return UpstreamCertificateVerify In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
                      * 
                      */
                     OriginCertificateVerify GetUpstreamCertificateVerify() const;
 
                     /**
-                     * 设置In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
-                     * @param _upstreamCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+                     * 设置In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
+                     * @param _upstreamCertificateVerify In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
                      * 
                      */
                     void SetUpstreamCertificateVerify(const OriginCertificateVerify& _upstreamCertificateVerify);
@@ -99,7 +99,7 @@ namespace TencentCloud
                     bool m_upstreamMutualTLSHasBeenSet;
 
                     /**
-                     * In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+                     * In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
                      */
                     OriginCertificateVerify m_upstreamCertificateVerify;
                     bool m_upstreamCertificateVerifyHasBeenSet;

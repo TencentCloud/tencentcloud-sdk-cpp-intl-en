@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site
-                     * @return ZoneId ID of the site
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of rules. Rules are sorted in order of execution.
-                     * @return RuleItems List of rules. Rules are sorted in order of execution.
+                     * 获取Rule list, sorted by rule execution order from first to last.
+                     * @return RuleItems Rule list, sorted by rule execution order from first to last.
                      * 
                      */
                     std::vector<RuleItem> GetRuleItems() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of rules. Rules are sorted in order of execution.
+                     * Rule list, sorted by rule execution order from first to last.
                      */
                     std::vector<RuleItem> m_ruleItems;
                     bool m_ruleItemsHasBeenSet;

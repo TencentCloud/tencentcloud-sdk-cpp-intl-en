@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Package information list.
-                     * @return Plans Package information list.
+                     * 获取List of package information.
+                     * @return Plans List of package information.
                      * 
                      */
                     std::vector<Plan> GetPlans() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Package information list.
+                     * List of package information.
                      */
                     std::vector<Plan> m_plans;
                     bool m_plansHasBeenSet;

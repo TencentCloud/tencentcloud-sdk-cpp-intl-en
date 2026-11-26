@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID.
-                     * @return ZoneId Site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID.
-                     * @param _zoneId Site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -87,19 +87,19 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
-                     * @return ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+                     * 获取When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
+                     * @return ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
                      * 
                      */
                     std::string GetProxyName() const;
 
                     /**
-                     * 设置Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
-                     * @param _proxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+                     * 设置When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
+                     * @param _proxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
                      * 
                      */
                     void SetProxyName(const std::string& _proxyName);
@@ -112,19 +112,19 @@ Instance name when `ProxyType=instance`.
                     bool ProxyNameHasBeenSet() const;
 
                     /**
-                     * 获取The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
-                     * @return SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
+                     * 获取Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
+                     * @return SessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
                      * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
-                     * 设置The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
-                     * @param _sessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
+                     * 设置Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
+                     * @param _sessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
                      * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
@@ -137,19 +137,19 @@ The original configuration will apply if this field is not specified.
                     bool SessionPersistTimeHasBeenSet() const;
 
                     /**
-                     * 获取L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
-                     * @return ProxyType L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+                     * 获取L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
+                     * @return ProxyType L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
                      * 
                      */
                     std::string GetProxyType() const;
 
                     /**
-                     * 设置L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
-                     * @param _proxyType L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+                     * 设置L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
+                     * @param _proxyType L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
                      * 
                      */
                     void SetProxyType(const std::string& _proxyType);
@@ -162,15 +162,15 @@ The original configuration will apply if this field is not specified.
                     bool ProxyTypeHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 access configuration. The original configuration will apply if it is not specified.
-                     * @return Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
+                     * 获取Ipv6 access configuration. Maintain the original configuration if not specified.
+                     * @return Ipv6 Ipv6 access configuration. Maintain the original configuration if not specified.
                      * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置IPv6 access configuration. The original configuration will apply if it is not specified.
-                     * @param _ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
+                     * 设置Ipv6 access configuration. Maintain the original configuration if not specified.
+                     * @param _ipv6 Ipv6 access configuration. Maintain the original configuration if not specified.
                      * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
@@ -183,15 +183,15 @@ The original configuration will apply if this field is not specified.
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
-                     * @return AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     * 获取Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
+                     * @return AccelerateMainland Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
                      * 
                      */
                     AccelerateMainland GetAccelerateMainland() const;
 
                     /**
-                     * 设置Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
-                     * @param _accelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     * 设置Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
+                     * @param _accelerateMainland Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
                      * 
                      */
                     void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
@@ -206,7 +206,7 @@ The original configuration will apply if this field is not specified.
                 private:
 
                     /**
-                     * Site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -218,34 +218,34 @@ The original configuration will apply if this field is not specified.
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+                     * When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
                      */
                     std::string m_proxyName;
                     bool m_proxyNameHasBeenSet;
 
                     /**
-                     * The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
+                     * Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
                      */
                     uint64_t m_sessionPersistTime;
                     bool m_sessionPersistTimeHasBeenSet;
 
                     /**
-                     * L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+                     * L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
                      */
                     std::string m_proxyType;
                     bool m_proxyTypeHasBeenSet;
 
                     /**
-                     * IPv6 access configuration. The original configuration will apply if it is not specified.
+                     * Ipv6 access configuration. Maintain the original configuration if not specified.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+                     * Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
                      */
                     AccelerateMainland m_accelerateMainland;
                     bool m_accelerateMainlandHasBeenSet;

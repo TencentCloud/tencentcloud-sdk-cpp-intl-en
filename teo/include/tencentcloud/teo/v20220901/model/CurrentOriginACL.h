@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Currently effective origin ACLs.
+                * Currently effective origin-pull IP range.
                 */
                 class CurrentOriginACL : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return EntireAddresses IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Origin-pull IP range details.
+                     * @return EntireAddresses Origin-pull IP range details.
                      * 
                      */
                     Addresses GetEntireAddresses() const;
 
                     /**
-                     * 设置IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _entireAddresses IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Origin-pull IP range details.
+                     * @param _entireAddresses Origin-pull IP range details.
                      * 
                      */
                     void SetEntireAddresses(const Addresses& _entireAddresses);
@@ -73,19 +69,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool EntireAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Version Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Version.
+                     * @return Version Version.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _version Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Version.
+                     * @param _version Version.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -98,19 +90,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return ActiveTime Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+                     * @return ActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     std::string GetActiveTime() const;
 
                     /**
-                     * 设置Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _activeTime Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+                     * @param _activeTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     void SetActiveTime(const std::string& _activeTime);
@@ -123,27 +111,23 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool ActiveTimeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return IsPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
+                     * @return IsPlaned This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
                      * 
                      */
                     std::string GetIsPlaned() const;
 
                     /**
-                     * 设置This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _isPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
+                     * @param _isPlaned This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
                      * 
                      */
                     void SetIsPlaned(const std::string& _isPlaned);
@@ -158,31 +142,27 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Origin-pull IP range details.
                      */
                     Addresses m_entireAddresses;
                     bool m_entireAddressesHasBeenSet;
 
                     /**
-                     * Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Version.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
                      */
                     std::string m_activeTime;
                     bool m_activeTimeHasBeenSet;
 
                     /**
-                     * This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
                      */
                     std::string m_isPlaned;
                     bool m_isPlanedHasBeenSet;

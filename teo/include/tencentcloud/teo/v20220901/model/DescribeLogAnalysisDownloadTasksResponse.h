@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Total number of entries for the log analysis download task that meets the match condition.</p>
-                     * @return TotalCount <p>Total number of entries for the log analysis download task that meets the match condition.</p>
+                     * 获取<p>Total number of log analysis download tasks that meet the log match conditions.</p>
+                     * @return TotalCount <p>Total number of log analysis download tasks that meet the log match conditions.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Download task list for log analysis that meets the log match condition.</p>
-                     * @return Tasks <p>Download task list for log analysis that meets the log match condition.</p>
+                     * 获取<p>List of log analytics download tasks that meet the log match condition.</p>
+                     * @return Tasks <p>List of log analytics download tasks that meet the log match condition.</p>
                      * 
                      */
                     std::vector<LogAnalysisDownloadTask> GetTasks() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Total number of entries for the log analysis download task that meets the match condition.</p>
+                     * <p>Total number of log analysis download tasks that meet the log match conditions.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Download task list for log analysis that meets the log match condition.</p>
+                     * <p>List of log analytics download tasks that meet the log match condition.</p>
                      */
                     std::vector<LogAnalysisDownloadTask> m_tasks;
                     bool m_tasksHasBeenSet;

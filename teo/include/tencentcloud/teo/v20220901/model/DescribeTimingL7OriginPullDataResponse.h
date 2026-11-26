@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Time series data list for origin-pull data.
-                     * @return TimingDataRecords Time series data list for origin-pull data.
+                     * 获取List of origin-pull time series data.
+                     * @return TimingDataRecords List of origin-pull time series data.
                      * 
                      */
                     std::vector<TimingDataRecord> GetTimingDataRecords() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Time series data list for origin-pull data.
+                     * List of origin-pull time series data.
                      */
                     std::vector<TimingDataRecord> m_timingDataRecords;
                     bool m_timingDataRecordsHasBeenSet;

@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
-                     * @return SortBy Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+                     * 获取Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
+                     * @return SortBy Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
                      * 
                      */
                     std::string GetSortBy() const;
 
                     /**
-                     * 设置Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
-                     * @param _sortBy Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+                     * 设置Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
+                     * @param _sortBy Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool SortByHasBeenSet() const;
 
                     /**
-                     * 获取List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
-                     * @return SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+                     * 获取List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
+                     * @return SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
                      * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
-                     * @param _sortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+                     * 设置List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
+                     * @param _sortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
                      * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool SortOrderHasBeenSet() const;
 
                     /**
-                     * 获取Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
-                     * @return Filters Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
-                     * @param _filters Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -217,19 +217,19 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+                     * Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
 
                     /**
-                     * List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+                     * List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;
 
                     /**
-                     * Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+                     * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;

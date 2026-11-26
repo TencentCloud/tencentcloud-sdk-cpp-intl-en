@@ -65,15 +65,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID to modify.
-                     * @return ZoneId Site ID to modify.
+                     * 获取Site ID to be changed.
+                     * @return ZoneId Site ID to be changed.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID to modify.
-                     * @param _zoneId Site ID to modify.
+                     * 设置Site ID to be changed.
+                     * @param _zoneId Site ID to be changed.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -86,19 +86,19 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Cache expiration time configuration
-The original configuration will apply if this field is not specified.
-                     * @return CacheConfig Cache expiration time configuration
-The original configuration will apply if this field is not specified.
+                     * 获取Cache expiration time configuration.
+Leave blank to retain the original configuration.
+                     * @return CacheConfig Cache expiration time configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     CacheConfig GetCacheConfig() const;
 
                     /**
-                     * 设置Cache expiration time configuration
-The original configuration will apply if this field is not specified.
-                     * @param _cacheConfig Cache expiration time configuration
-The original configuration will apply if this field is not specified.
+                     * 设置Cache expiration time configuration.
+Leave blank to retain the original configuration.
+                     * @param _cacheConfig Cache expiration time configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetCacheConfig(const CacheConfig& _cacheConfig);
@@ -111,19 +111,19 @@ The original configuration will apply if this field is not specified.
                     bool CacheConfigHasBeenSet() const;
 
                     /**
-                     * 获取The node cache key configuration.
-The original configuration will apply if this field is not specified.
-                     * @return CacheKey The node cache key configuration.
-The original configuration will apply if this field is not specified.
+                     * 获取Node cache key configuration.
+Leave blank to retain the original configuration.
+                     * @return CacheKey Node cache key configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     CacheKey GetCacheKey() const;
 
                     /**
-                     * 设置The node cache key configuration.
-The original configuration will apply if this field is not specified.
-                     * @param _cacheKey The node cache key configuration.
-The original configuration will apply if this field is not specified.
+                     * 设置Node cache key configuration.
+Leave blank to retain the original configuration.
+                     * @param _cacheKey Node cache key configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetCacheKey(const CacheKey& _cacheKey);
@@ -136,19 +136,19 @@ The original configuration will apply if this field is not specified.
                     bool CacheKeyHasBeenSet() const;
 
                     /**
-                     * 获取The browser cache configuration.
-The original configuration will apply if this field is not specified.
-                     * @return MaxAge The browser cache configuration.
-The original configuration will apply if this field is not specified.
+                     * 获取Browser cache configuration.
+Leave blank to retain the original configuration.
+                     * @return MaxAge Browser cache configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     MaxAge GetMaxAge() const;
 
                     /**
-                     * 设置The browser cache configuration.
-The original configuration will apply if this field is not specified.
-                     * @param _maxAge The browser cache configuration.
-The original configuration will apply if this field is not specified.
+                     * 设置Browser cache configuration.
+Leave blank to retain the original configuration.
+                     * @param _maxAge Browser cache configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetMaxAge(const MaxAge& _maxAge);
@@ -161,19 +161,19 @@ The original configuration will apply if this field is not specified.
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取The offline cache configuration.
-The original configuration will apply if this field is not specified.
-                     * @return OfflineCache The offline cache configuration.
-The original configuration will apply if this field is not specified.
+                     * 获取Offline cache configuration.
+Leave blank to retain the original configuration.
+                     * @return OfflineCache Offline cache configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     OfflineCache GetOfflineCache() const;
 
                     /**
-                     * 设置The offline cache configuration.
-The original configuration will apply if this field is not specified.
-                     * @param _offlineCache The offline cache configuration.
-The original configuration will apply if this field is not specified.
+                     * 设置Offline cache configuration.
+Leave blank to retain the original configuration.
+                     * @param _offlineCache Offline cache configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetOfflineCache(const OfflineCache& _offlineCache);
@@ -186,19 +186,19 @@ The original configuration will apply if this field is not specified.
                     bool OfflineCacheHasBeenSet() const;
 
                     /**
-                     * 获取QUIC access configuration. 
-The original configuration will apply if it is not specified.
-                     * @return Quic QUIC access configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取Quic access configuration.
+Leave blank to retain the original configuration.
+                     * @return Quic Quic access configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     Quic GetQuic() const;
 
                     /**
-                     * 设置QUIC access configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _quic QUIC access configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置Quic access configuration.
+Leave blank to retain the original configuration.
+                     * @param _quic Quic access configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetQuic(const Quic& _quic);
@@ -211,19 +211,19 @@ The original configuration will apply if it is not specified.
                     bool QuicHasBeenSet() const;
 
                     /**
-                     * 获取POST transport configuration. 
-The original configuration will apply if it is not specified.
-                     * @return PostMaxSize POST transport configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取Configuration for Post request transmission.
+Leave blank to retain the original configuration.
+                     * @return PostMaxSize Configuration for Post request transmission.
+Leave blank to retain the original configuration.
                      * 
                      */
                     PostMaxSize GetPostMaxSize() const;
 
                     /**
-                     * 设置POST transport configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _postMaxSize POST transport configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置Configuration for Post request transmission.
+Leave blank to retain the original configuration.
+                     * @param _postMaxSize Configuration for Post request transmission.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetPostMaxSize(const PostMaxSize& _postMaxSize);
@@ -236,19 +236,19 @@ The original configuration will apply if it is not specified.
                     bool PostMaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取The smart compression configuration.
-The original configuration will apply if this field is not specified.
-                     * @return Compression The smart compression configuration.
-The original configuration will apply if this field is not specified.
+                     * 获取Intelligent compression configuration.
+Leave blank to retain the original configuration.
+                     * @return Compression Intelligent compression configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     Compression GetCompression() const;
 
                     /**
-                     * 设置The smart compression configuration.
-The original configuration will apply if this field is not specified.
-                     * @param _compression The smart compression configuration.
-The original configuration will apply if this field is not specified.
+                     * 设置Intelligent compression configuration.
+Leave blank to retain the original configuration.
+                     * @param _compression Intelligent compression configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetCompression(const Compression& _compression);
@@ -261,19 +261,19 @@ The original configuration will apply if this field is not specified.
                     bool CompressionHasBeenSet() const;
 
                     /**
-                     * 获取HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
-                     * @return UpstreamHttp2 HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
+                     * @return UpstreamHttp2 Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     UpstreamHttp2 GetUpstreamHttp2() const;
 
                     /**
-                     * 设置HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _upstreamHttp2 HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
+                     * @param _upstreamHttp2 Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetUpstreamHttp2(const UpstreamHttp2& _upstreamHttp2);
@@ -286,19 +286,19 @@ The original configuration will apply if it is not specified.
                     bool UpstreamHttp2HasBeenSet() const;
 
                     /**
-                     * 获取Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
-                     * @return ForceRedirect Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
+                     * @return ForceRedirect Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     ForceRedirect GetForceRedirect() const;
 
                     /**
-                     * 设置Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _forceRedirect Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
+                     * @param _forceRedirect Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetForceRedirect(const ForceRedirect& _forceRedirect);
@@ -311,19 +311,19 @@ The original configuration will apply if it is not specified.
                     bool ForceRedirectHasBeenSet() const;
 
                     /**
-                     * 获取HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
-                     * @return Https HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取Https acceleration configuration.
+Leave blank to retain the original configuration.
+                     * @return Https Https acceleration configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     Https GetHttps() const;
 
                     /**
-                     * 设置HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _https HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置Https acceleration configuration.
+Leave blank to retain the original configuration.
+                     * @param _https Https acceleration configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetHttps(const Https& _https);
@@ -336,19 +336,19 @@ The original configuration will apply if it is not specified.
                     bool HttpsHasBeenSet() const;
 
                     /**
-                     * 获取The origin server configuration.
-The original configuration will apply if this field is not specified.
-                     * @return Origin The origin server configuration.
-The original configuration will apply if this field is not specified.
+                     * 获取Origin server configuration.
+Leave blank to retain the original configuration.
+                     * @return Origin Origin server configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     Origin GetOrigin() const;
 
                     /**
-                     * 设置The origin server configuration.
-The original configuration will apply if this field is not specified.
-                     * @param _origin The origin server configuration.
-The original configuration will apply if this field is not specified.
+                     * 设置Origin server configuration.
+Leave blank to retain the original configuration.
+                     * @param _origin Origin server configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetOrigin(const Origin& _origin);
@@ -361,19 +361,19 @@ The original configuration will apply if this field is not specified.
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
-                     * @return SmartRouting The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
+                     * 获取Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
+                     * @return SmartRouting Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     SmartRouting GetSmartRouting() const;
 
                     /**
-                     * 设置The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
-                     * @param _smartRouting The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
+                     * 设置Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
+                     * @param _smartRouting Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetSmartRouting(const SmartRouting& _smartRouting);
@@ -386,19 +386,19 @@ The original configuration will apply if this field is not specified.
                     bool SmartRoutingHasBeenSet() const;
 
                     /**
-                     * 获取WebSocket configuration. 
-The original configuration will apply if it is not specified.
-                     * @return WebSocket WebSocket configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取WebSocket configuration.
+Leave blank to retain the original configuration.
+                     * @return WebSocket WebSocket configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     WebSocket GetWebSocket() const;
 
                     /**
-                     * 设置WebSocket configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _webSocket WebSocket configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置WebSocket configuration.
+Leave blank to retain the original configuration.
+                     * @param _webSocket WebSocket configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetWebSocket(const WebSocket& _webSocket);
@@ -411,19 +411,19 @@ The original configuration will apply if it is not specified.
                     bool WebSocketHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
-                     * @return ClientIpHeader Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
+                     * @return ClientIpHeader Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     ClientIpHeader GetClientIpHeader() const;
 
                     /**
-                     * 设置Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _clientIpHeader Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
+                     * @param _clientIpHeader Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetClientIpHeader(const ClientIpHeader& _clientIpHeader);
@@ -436,19 +436,19 @@ The original configuration will apply if it is not specified.
                     bool ClientIpHeaderHasBeenSet() const;
 
                     /**
-                     * 获取The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
-                     * @return CachePrefresh The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
+                     * 获取Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
+                     * @return CachePrefresh Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     CachePrefresh GetCachePrefresh() const;
 
                     /**
-                     * 设置The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
-                     * @param _cachePrefresh The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
+                     * 设置Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
+                     * @param _cachePrefresh Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetCachePrefresh(const CachePrefresh& _cachePrefresh);
@@ -461,19 +461,19 @@ The original configuration will apply if this field is not specified.
                     bool CachePrefreshHasBeenSet() const;
 
                     /**
-                     * 获取Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
-                     * @return Ipv6 Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
+                     * 获取Ipv6 access configuration.
+Leave blank to retain the original configuration.
+                     * @return Ipv6 Ipv6 access configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
-                     * @param _ipv6 Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
+                     * 设置Ipv6 access configuration.
+Leave blank to retain the original configuration.
+                     * @param _ipv6 Ipv6 access configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
@@ -486,19 +486,19 @@ The original configuration will apply if it is not specified.
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
-                     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
+                     * 获取Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
+                     * @return ClientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
                      * 
                      */
                     ClientIpCountry GetClientIpCountry() const;
 
                     /**
-                     * 设置Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
-                     * @param _clientIpCountry Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
+                     * 设置Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
+                     * @param _clientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetClientIpCountry(const ClientIpCountry& _clientIpCountry);
@@ -511,19 +511,19 @@ The original configuration will apply if it is not specified.
                     bool ClientIpCountryHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
-                     * @return Grpc Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
+                     * 获取Grpc protocol support configuration.
+Leave blank to retain the original configuration.
+                     * @return Grpc Grpc protocol support configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     Grpc GetGrpc() const;
 
                     /**
-                     * 设置Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
-                     * @param _grpc Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
+                     * 设置Grpc protocol support configuration.
+Leave blank to retain the original configuration.
+                     * @param _grpc Grpc protocol support configuration.
+Leave blank to retain the original configuration.
                      * 
                      */
                     void SetGrpc(const Grpc& _grpc);
@@ -536,15 +536,15 @@ The original configuration will apply if it is not specified.
                     bool GrpcHasBeenSet() const;
 
                     /**
-                     * 获取Network Error Logging configuration. The original configuration will apply if it is not specified.
-                     * @return NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     * 获取Network error log configuration. If this field is not specified, the original configuration will be retained.
+                     * @return NetworkErrorLogging Network error log configuration. If this field is not specified, the original configuration will be retained.
                      * 
                      */
                     NetworkErrorLogging GetNetworkErrorLogging() const;
 
                     /**
-                     * 设置Network Error Logging configuration. The original configuration will apply if it is not specified.
-                     * @param _networkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     * 设置Network error log configuration. If this field is not specified, the original configuration will be retained.
+                     * @param _networkErrorLogging Network error log configuration. If this field is not specified, the original configuration will be retained.
                      * 
                      */
                     void SetNetworkErrorLogging(const NetworkErrorLogging& _networkErrorLogging);
@@ -557,19 +557,19 @@ The original configuration will apply if it is not specified.
                     bool NetworkErrorLoggingHasBeenSet() const;
 
                     /**
-                     * 获取Image optimization. 
-It is disabled if this parameter is not specified.
-                     * @return ImageOptimize Image optimization. 
-It is disabled if this parameter is not specified.
+                     * 获取Image optimization configuration.
+Not specified: disabled.
+                     * @return ImageOptimize Image optimization configuration.
+Not specified: disabled.
                      * 
                      */
                     ImageOptimize GetImageOptimize() const;
 
                     /**
-                     * 设置Image optimization. 
-It is disabled if this parameter is not specified.
-                     * @param _imageOptimize Image optimization. 
-It is disabled if this parameter is not specified.
+                     * 设置Image optimization configuration.
+Not specified: disabled.
+                     * @param _imageOptimize Image optimization configuration.
+Not specified: disabled.
                      * 
                      */
                     void SetImageOptimize(const ImageOptimize& _imageOptimize);
@@ -582,15 +582,15 @@ It is disabled if this parameter is not specified.
                     bool ImageOptimizeHasBeenSet() const;
 
                     /**
-                     * 获取Standard debugging configuration.
-                     * @return StandardDebug Standard debugging configuration.
+                     * 获取Standard Debug configuration.
+                     * @return StandardDebug Standard Debug configuration.
                      * 
                      */
                     StandardDebug GetStandardDebug() const;
 
                     /**
-                     * 设置Standard debugging configuration.
-                     * @param _standardDebug Standard debugging configuration.
+                     * 设置Standard Debug configuration.
+                     * @param _standardDebug Standard Debug configuration.
                      * 
                      */
                     void SetStandardDebug(const StandardDebug& _standardDebug);
@@ -626,152 +626,152 @@ It is disabled if this parameter is not specified.
                 private:
 
                     /**
-                     * Site ID to modify.
+                     * Site ID to be changed.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Cache expiration time configuration
-The original configuration will apply if this field is not specified.
+                     * Cache expiration time configuration.
+Leave blank to retain the original configuration.
                      */
                     CacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;
 
                     /**
-                     * The node cache key configuration.
-The original configuration will apply if this field is not specified.
+                     * Node cache key configuration.
+Leave blank to retain the original configuration.
                      */
                     CacheKey m_cacheKey;
                     bool m_cacheKeyHasBeenSet;
 
                     /**
-                     * The browser cache configuration.
-The original configuration will apply if this field is not specified.
+                     * Browser cache configuration.
+Leave blank to retain the original configuration.
                      */
                     MaxAge m_maxAge;
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * The offline cache configuration.
-The original configuration will apply if this field is not specified.
+                     * Offline cache configuration.
+Leave blank to retain the original configuration.
                      */
                     OfflineCache m_offlineCache;
                     bool m_offlineCacheHasBeenSet;
 
                     /**
-                     * QUIC access configuration. 
-The original configuration will apply if it is not specified.
+                     * Quic access configuration.
+Leave blank to retain the original configuration.
                      */
                     Quic m_quic;
                     bool m_quicHasBeenSet;
 
                     /**
-                     * POST transport configuration. 
-The original configuration will apply if it is not specified.
+                     * Configuration for Post request transmission.
+Leave blank to retain the original configuration.
                      */
                     PostMaxSize m_postMaxSize;
                     bool m_postMaxSizeHasBeenSet;
 
                     /**
-                     * The smart compression configuration.
-The original configuration will apply if this field is not specified.
+                     * Intelligent compression configuration.
+Leave blank to retain the original configuration.
                      */
                     Compression m_compression;
                     bool m_compressionHasBeenSet;
 
                     /**
-                     * HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
+                     * Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
                      */
                     UpstreamHttp2 m_upstreamHttp2;
                     bool m_upstreamHttp2HasBeenSet;
 
                     /**
-                     * Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
+                     * Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
                      */
                     ForceRedirect m_forceRedirect;
                     bool m_forceRedirectHasBeenSet;
 
                     /**
-                     * HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
+                     * Https acceleration configuration.
+Leave blank to retain the original configuration.
                      */
                     Https m_https;
                     bool m_httpsHasBeenSet;
 
                     /**
-                     * The origin server configuration.
-The original configuration will apply if this field is not specified.
+                     * Origin server configuration.
+Leave blank to retain the original configuration.
                      */
                     Origin m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
+                     * Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
                      */
                     SmartRouting m_smartRouting;
                     bool m_smartRoutingHasBeenSet;
 
                     /**
-                     * WebSocket configuration. 
-The original configuration will apply if it is not specified.
+                     * WebSocket configuration.
+Leave blank to retain the original configuration.
                      */
                     WebSocket m_webSocket;
                     bool m_webSocketHasBeenSet;
 
                     /**
-                     * Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
+                     * Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
                      */
                     ClientIpHeader m_clientIpHeader;
                     bool m_clientIpHeaderHasBeenSet;
 
                     /**
-                     * The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
+                     * Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
                      */
                     CachePrefresh m_cachePrefresh;
                     bool m_cachePrefreshHasBeenSet;
 
                     /**
-                     * Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
+                     * Ipv6 access configuration.
+Leave blank to retain the original configuration.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
+                     * Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
                      */
                     ClientIpCountry m_clientIpCountry;
                     bool m_clientIpCountryHasBeenSet;
 
                     /**
-                     * Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
+                     * Grpc protocol support configuration.
+Leave blank to retain the original configuration.
                      */
                     Grpc m_grpc;
                     bool m_grpcHasBeenSet;
 
                     /**
-                     * Network Error Logging configuration. The original configuration will apply if it is not specified.
+                     * Network error log configuration. If this field is not specified, the original configuration will be retained.
                      */
                     NetworkErrorLogging m_networkErrorLogging;
                     bool m_networkErrorLoggingHasBeenSet;
 
                     /**
-                     * Image optimization. 
-It is disabled if this parameter is not specified.
+                     * Image optimization configuration.
+Not specified: disabled.
                      */
                     ImageOptimize m_imageOptimize;
                     bool m_imageOptimizeHasBeenSet;
 
                     /**
-                     * Standard debugging configuration.
+                     * Standard Debug configuration.
                      */
                     StandardDebug m_standardDebug;
                     bool m_standardDebugHasBeenSet;

@@ -76,11 +76,11 @@ If this field is not specified, the default value '1' will be used.
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取The auto-renewal flag for prepaid plan has the following values:
+                     * 获取Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.
-                     * @return RenewFlag The auto-renewal flag for prepaid plan has the following values:
+                     * @return RenewFlag Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.
@@ -89,11 +89,11 @@ If this field is not specified, the default value 'off' will be used. When auto-
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置The auto-renewal flag for prepaid plan has the following values:
+                     * 设置Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.
-                     * @param _renewFlag The auto-renewal flag for prepaid plan has the following values:
+                     * @param _renewFlag Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.
@@ -119,7 +119,7 @@ If this field is not specified, the default value '1' will be used.
                     bool m_periodHasBeenSet;
 
                     /**
-                     * The auto-renewal flag for prepaid plan has the following values:
+                     * Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
 If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.

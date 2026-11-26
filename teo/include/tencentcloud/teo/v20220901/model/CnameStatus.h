@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CNAME configuration status for domain integration.
+                * CNAME configuration status of the integration domain
                 */
                 class CnameStatus : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RecordNameHasBeenSet() const;
 
                     /**
-                     * 获取EdgeOne is assigned to the CNAME of the domain name.
-                     * @return Cname EdgeOne is assigned to the CNAME of the domain name.
+                     * 获取CNAME assigned to the domain name integrated with EdgeOne.
+                     * @return Cname CNAME assigned to the domain name integrated with EdgeOne.
                      * 
                      */
                     std::string GetCname() const;
 
                     /**
-                     * 设置EdgeOne is assigned to the CNAME of the domain name.
-                     * @param _cname EdgeOne is assigned to the CNAME of the domain name.
+                     * 设置CNAME assigned to the domain name integrated with EdgeOne.
+                     * @param _cname CNAME assigned to the domain name integrated with EdgeOne.
                      * 
                      */
                     void SetCname(const std::string& _cname);
@@ -89,27 +89,27 @@ namespace TencentCloud
                     bool CnameHasBeenSet() const;
 
                     /**
-                     * 获取CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
-                     * @return Status CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+                     * 获取CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
+                     * @return Status CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
-                     * @param _status CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+                     * 设置CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
+                     * @param _status CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -130,16 +130,16 @@ namespace TencentCloud
                     bool m_recordNameHasBeenSet;
 
                     /**
-                     * EdgeOne is assigned to the CNAME of the domain name.
+                     * CNAME assigned to the domain name integrated with EdgeOne.
                      */
                     std::string m_cname;
                     bool m_cnameHasBeenSet;
 
                     /**
-                     * CNAME configuration status verification result. valid values:.
-<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+                     * CNAME configuration status check results. Valid values:
+<li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+<li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+<li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

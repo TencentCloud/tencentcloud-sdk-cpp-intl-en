@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total release records.
-                     * @return TotalCount Total release records.
+                     * 获取Total number of release records.
+                     * @return TotalCount Total number of release records.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Release record details.
-                     * @return Records Release record details.
+                     * 获取Details of the release record.
+                     * @return Records Details of the release record.
                      * 
                      */
                     std::vector<DeployRecord> GetRecords() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total release records.
+                     * Total number of release records.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Release record details.
+                     * Details of the release record.
                      */
                     std::vector<DeployRecord> m_records;
                     bool m_recordsHasBeenSet;

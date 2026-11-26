@@ -47,19 +47,36 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return AssociatedDomain Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+                     * @return ZoneId <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+                     * 
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置<p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+                     * @param _zoneId <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+                     * 
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
+                     * @return AssociatedDomain <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
                      * 
                      */
                     std::string GetAssociatedDomain() const;
 
                     /**
-                     * 设置Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _associatedDomain Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
+                     * @param _associatedDomain <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
                      * 
                      */
                     void SetAssociatedDomain(const std::string& _associatedDomain);
@@ -72,31 +89,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool AssociatedDomainHasBeenSet() const;
 
                     /**
-                     * 获取Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
-                     * @return Status Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+                     * 获取<p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
+                     * @return Status <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
-                     * @param _status Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+                     * 设置<p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
+                     * @param _status <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -111,18 +112,19 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
                      */
                     std::string m_associatedDomain;
                     bool m_associatedDomainHasBeenSet;
 
                     /**
-                     * Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+                     * <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

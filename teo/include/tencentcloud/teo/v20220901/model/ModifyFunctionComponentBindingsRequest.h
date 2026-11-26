@@ -87,16 +87,16 @@ namespace TencentCloud
 
                     /**
                      * 获取Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
                      * @return Operation Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
                      * 
                      */
@@ -104,16 +104,16 @@ namespace TencentCloud
 
                     /**
                      * 设置Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
                      * @param _operation Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
                      * 
                      */
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
-                     * @return FunctionComponentBindings Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+                     * 获取List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
+                     * @return FunctionComponentBindings List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
                      * 
                      */
                     std::vector<FunctionComponentBinding> GetFunctionComponentBindings() const;
 
                     /**
-                     * 设置Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
-                     * @param _functionComponentBindings Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+                     * 设置List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
+                     * @param _functionComponentBindings List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
                      * 
                      */
                     void SetFunctionComponentBindings(const std::vector<FunctionComponentBinding>& _functionComponentBindings);
@@ -163,17 +163,17 @@ namespace TencentCloud
 
                     /**
                      * Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
 
                     /**
-                     * Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+                     * List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
                      */
                     std::vector<FunctionComponentBinding> m_functionComponentBindings;
                     bool m_functionComponentBindingsHasBeenSet;

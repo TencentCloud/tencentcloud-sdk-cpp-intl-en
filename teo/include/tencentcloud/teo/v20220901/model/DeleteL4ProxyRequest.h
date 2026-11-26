@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance ID.
-                     * @return ProxyId Layer 4 proxy instance ID.
+                     * 获取Layer 4 Proxy Instance ID.
+                     * @return ProxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer 4 proxy instance ID.
-                     * @param _proxyId Layer 4 proxy instance ID.
+                     * 设置Layer 4 Proxy Instance ID.
+                     * @param _proxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance ID.
+                     * Layer 4 Proxy Instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;

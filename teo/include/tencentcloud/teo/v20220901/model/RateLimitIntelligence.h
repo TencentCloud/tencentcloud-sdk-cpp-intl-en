@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Client filtering
+                * Intelligent client filtering
                 */
                 class RateLimitIntelligence : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,23 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
-                     * @return Action Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
+                     * 获取Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
+                     * @return Action Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
-                     * @param _action Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
+                     * 设置Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
+                     * @param _action Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -105,15 +105,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as a response parameter.
-                     * @return RuleId The rule ID, which is only used as a response parameter.
+                     * 获取Rule id, output only.
+                     * @return RuleId Rule id, output only.
                      * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
-                     * 设置The rule ID, which is only used as a response parameter.
-                     * @param _ruleId The rule ID, which is only used as a response parameter.
+                     * 设置Rule id, output only.
+                     * @param _ruleId Rule id, output only.
                      * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
@@ -128,23 +128,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
+                     * Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as a response parameter.
+                     * Rule id, output only.
                      */
                     int64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;

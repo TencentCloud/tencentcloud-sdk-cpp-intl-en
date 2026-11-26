@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance ID.
-                     * @return ProxyId Layer 4 proxy instance ID.
+                     * 获取Layer 4 Proxy Instance ID.
+                     * @return ProxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer 4 proxy instance ID.
-                     * @param _proxyId Layer 4 proxy instance ID.
+                     * 设置Layer 4 Proxy Instance ID.
+                     * @param _proxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -86,19 +86,19 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
-                     * @return L4ProxyRules List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
+                     * 获取Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
+                     * @return L4ProxyRules Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
                      * 
                      */
                     std::vector<L4ProxyRule> GetL4ProxyRules() const;
 
                     /**
-                     * 设置List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
-                     * @param _l4ProxyRules List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
+                     * 设置Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
+                     * @param _l4ProxyRules Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
                      * 
                      */
                     void SetL4ProxyRules(const std::vector<L4ProxyRule>& _l4ProxyRules);
@@ -119,14 +119,14 @@ Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortR
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance ID.
+                     * Layer 4 Proxy Instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
+                     * Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
                      */
                     std::vector<L4ProxyRule> m_l4ProxyRules;
                     bool m_l4ProxyRulesHasBeenSet;

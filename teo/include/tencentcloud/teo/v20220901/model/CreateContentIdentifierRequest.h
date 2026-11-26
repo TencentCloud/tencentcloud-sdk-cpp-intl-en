@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Description of the content identifier, length limit of up to 20 characters.
-                     * @return Description Description of the content identifier, length limit of up to 20 characters.
+                     * 获取Description of the content identifier. Length limited to 20 characters.
+                     * @return Description Description of the content identifier. Length limited to 20 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description of the content identifier, length limit of up to 20 characters.
-                     * @param _description Description of the content identifier, length limit of up to 20 characters.
+                     * 设置Description of the content identifier. Length limited to 20 characters.
+                     * @param _description Description of the content identifier. Length limited to 20 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Target plan id to be bound, available only for the enterprise edition. <li>if there is already a plan under your account, go to [plan management](https://console.cloud.tencent.com/edgeone/package) to get the plan id and directly bind the content identifier to the plan;</li><li>if you do not have a plan to bind, please purchase an enterprise edition plan first.</li>.
-                     * @return PlanId Target plan id to be bound, available only for the enterprise edition. <li>if there is already a plan under your account, go to [plan management](https://console.cloud.tencent.com/edgeone/package) to get the plan id and directly bind the content identifier to the plan;</li><li>if you do not have a plan to bind, please purchase an enterprise edition plan first.</li>.
+                     * 获取Target bundle ID to be bound. Enterprise edition only.<li>If a package already exists under your account, go to [Plan management](https://console.cloud.tencent.com/edgeone/package) to get the package ID, and bind the content identifier to that package directly;</li><li>If you currently have no bindable package, purchase an enterprise edition package first.</li>
+                     * @return PlanId Target bundle ID to be bound. Enterprise edition only.<li>If a package already exists under your account, go to [Plan management](https://console.cloud.tencent.com/edgeone/package) to get the package ID, and bind the content identifier to that package directly;</li><li>If you currently have no bindable package, purchase an enterprise edition package first.</li>
                      * 
                      */
                     std::string GetPlanId() const;
 
                     /**
-                     * 设置Target plan id to be bound, available only for the enterprise edition. <li>if there is already a plan under your account, go to [plan management](https://console.cloud.tencent.com/edgeone/package) to get the plan id and directly bind the content identifier to the plan;</li><li>if you do not have a plan to bind, please purchase an enterprise edition plan first.</li>.
-                     * @param _planId Target plan id to be bound, available only for the enterprise edition. <li>if there is already a plan under your account, go to [plan management](https://console.cloud.tencent.com/edgeone/package) to get the plan id and directly bind the content identifier to the plan;</li><li>if you do not have a plan to bind, please purchase an enterprise edition plan first.</li>.
+                     * 设置Target bundle ID to be bound. Enterprise edition only.<li>If a package already exists under your account, go to [Plan management](https://console.cloud.tencent.com/edgeone/package) to get the package ID, and bind the content identifier to that package directly;</li><li>If you currently have no bindable package, purchase an enterprise edition package first.</li>
+                     * @param _planId Target bundle ID to be bound. Enterprise edition only.<li>If a package already exists under your account, go to [Plan management](https://console.cloud.tencent.com/edgeone/package) to get the package ID, and bind the content identifier to that package directly;</li><li>If you currently have no bindable package, purchase an enterprise edition package first.</li>
                      * 
                      */
                     void SetPlanId(const std::string& _planId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取Tags of the content identifier. this parameter is used for authority control. to create tags, go to the [tag console](https://console.cloud.tencent.com/tag/taglist).
-                     * @return Tags Tags of the content identifier. this parameter is used for authority control. to create tags, go to the [tag console](https://console.cloud.tencent.com/tag/taglist).
+                     * 获取Tag. This parameter is used for authority control over content identifiers. Go to the tag console (https://console.cloud.tencent.com/tag/taglist) first to create tags before you can input the corresponding tag key and tag value here.
+                     * @return Tags Tag. This parameter is used for authority control over content identifiers. Go to the tag console (https://console.cloud.tencent.com/tag/taglist) first to create tags before you can input the corresponding tag key and tag value here.
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tags of the content identifier. this parameter is used for authority control. to create tags, go to the [tag console](https://console.cloud.tencent.com/tag/taglist).
-                     * @param _tags Tags of the content identifier. this parameter is used for authority control. to create tags, go to the [tag console](https://console.cloud.tencent.com/tag/taglist).
+                     * 设置Tag. This parameter is used for authority control over content identifiers. Go to the tag console (https://console.cloud.tencent.com/tag/taglist) first to create tags before you can input the corresponding tag key and tag value here.
+                     * @param _tags Tag. This parameter is used for authority control over content identifiers. Go to the tag console (https://console.cloud.tencent.com/tag/taglist) first to create tags before you can input the corresponding tag key and tag value here.
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Description of the content identifier, length limit of up to 20 characters.
+                     * Description of the content identifier. Length limited to 20 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Target plan id to be bound, available only for the enterprise edition. <li>if there is already a plan under your account, go to [plan management](https://console.cloud.tencent.com/edgeone/package) to get the plan id and directly bind the content identifier to the plan;</li><li>if you do not have a plan to bind, please purchase an enterprise edition plan first.</li>.
+                     * Target bundle ID to be bound. Enterprise edition only.<li>If a package already exists under your account, go to [Plan management](https://console.cloud.tencent.com/edgeone/package) to get the package ID, and bind the content identifier to that package directly;</li><li>If you currently have no bindable package, purchase an enterprise edition package first.</li>
                      */
                     std::string m_planId;
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * Tags of the content identifier. this parameter is used for authority control. to create tags, go to the [tag console](https://console.cloud.tencent.com/tag/taglist).
+                     * Tag. This parameter is used for authority control over content identifiers. Go to the tag console (https://console.cloud.tencent.com/tag/taglist) first to create tags before you can input the corresponding tag key and tag value here.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

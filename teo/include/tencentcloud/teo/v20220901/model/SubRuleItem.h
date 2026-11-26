@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule engine nested rule
+                * Nested rule of the rule engine
                 */
                 class SubRuleItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Nested rule settings
-                     * @return Rules Nested rule settings
+                     * 获取Nested rule information.
+                     * @return Rules Nested rule information.
                      * 
                      */
                     std::vector<SubRule> GetRules() const;
 
                     /**
-                     * 设置Nested rule settings
-                     * @param _rules Nested rule settings
+                     * 设置Nested rule information.
+                     * @param _rules Nested rule information.
                      * 
                      */
                     void SetRules(const std::vector<SubRule>& _rules);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool RulesHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the rule.
-                     * @return Tags Tag of the rule.
+                     * 获取Rule tag.
+                     * @return Tags Rule tag.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tag of the rule.
-                     * @param _tags Tag of the rule.
+                     * 设置Rule tag.
+                     * @param _tags Rule tag.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Nested rule settings
+                     * Nested rule information.
                      */
                     std::vector<SubRule> m_rules;
                     bool m_rulesHasBeenSet;
 
                     /**
-                     * Tag of the rule.
+                     * Rule tag.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

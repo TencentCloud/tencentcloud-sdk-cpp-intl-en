@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PlanInfo Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Package types available for purchase and information related to the current account.
+                     * @return PlanInfo Package types available for purchase and information related to the current account.
                      * 
                      */
                     std::vector<PlanInfo> GetPlanInfo() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Package types available for purchase and information related to the current account.
                      */
                     std::vector<PlanInfo> m_planInfo;
                     bool m_planInfoHasBeenSet;

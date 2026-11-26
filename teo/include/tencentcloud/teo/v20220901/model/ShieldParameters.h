@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin server uninstallation config.
+                * Origin server uninstallation configuration parameters.
                 */
                 class ShieldParameters : public AbstractModel
                 {

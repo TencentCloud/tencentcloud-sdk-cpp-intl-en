@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of domain name ownership verification.
+                * This structure represents the content used to verify user ownership of a site domain name in various scenarios and modes.
                 */
                 class OwnershipVerification : public AbstractModel
                 {
@@ -50,23 +50,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return DnsVerification CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Information required for CNAME and domainless access when using DNS resolution verification. For details, see [Site/Domain Ownership Verification].
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+                     * @return DnsVerification Information required for CNAME and domainless access when using DNS resolution verification. For details, see [Site/Domain Ownership Verification].
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
                      * 
                      */
                     DnsVerification GetDnsVerification() const;
 
                     /**
-                     * 设置CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _dnsVerification CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Information required for CNAME and domainless access when using DNS resolution verification. For details, see [Site/Domain Ownership Verification].
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+                     * @param _dnsVerification Information required for CNAME and domainless access when using DNS resolution verification. For details, see [Site/Domain Ownership Verification].
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
                      * 
                      */
                     void SetDnsVerification(const DnsVerification& _dnsVerification);
@@ -79,23 +75,19 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool DnsVerificationHasBeenSet() const;
 
                     /**
-                     * 获取CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return FileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取CNAME, when there is no domain name access, the information required for file verification is used. For details, see [Site/Domain Ownership Verification
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+                     * @return FileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, see [Site/Domain Ownership Verification
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
                      * 
                      */
                     FileVerification GetFileVerification() const;
 
                     /**
-                     * 设置CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _fileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置CNAME, when there is no domain name access, the information required for file verification is used. For details, see [Site/Domain Ownership Verification
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
+                     * @param _fileVerification CNAME, when there is no domain name access, the information required for file verification is used. For details, see [Site/Domain Ownership Verification
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
                      * 
                      */
                     void SetFileVerification(const FileVerification& _fileVerification);
@@ -108,19 +100,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool FileVerificationHasBeenSet() const;
 
                     /**
-                     * 获取u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @return NsVerification u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 获取Information required for access via NS and switching DNS servers. For details, see [Modify DNS Server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1).
+                     * @return NsVerification Information required for access via NS and switching DNS servers. For details, see [Modify DNS Server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1).
                      * 
                      */
                     NsVerification GetNsVerification() const;
 
                     /**
-                     * 设置u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
-                     * @param _nsVerification u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * 设置Information required for access via NS and switching DNS servers. For details, see [Modify DNS Server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1).
+                     * @param _nsVerification Information required for access via NS and switching DNS servers. For details, see [Modify DNS Server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1).
                      * 
                      */
                     void SetNsVerification(const NsVerification& _nsVerification);
@@ -135,24 +123,21 @@ Note: This field may return·null, indicating that no valid values can be obtain
                 private:
 
                     /**
-                     * CNAME, when there is no domain name access, the information required for DNS resolution verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Information required for CNAME and domainless access when using DNS resolution verification. For details, see [Site/Domain Ownership Verification].
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
                      */
                     DnsVerification m_dnsVerification;
                     bool m_dnsVerificationHasBeenSet;
 
                     /**
-                     * CNAME, when there is no domain name access, the information required for file verification is used. For details, refer to [Site/Domain Ownership Verification
-](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * CNAME, when there is no domain name access, the information required for file verification is used. For details, see [Site/Domain Ownership Verification
+](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1#7af6ecf8-afca-4e35-8811-b5797ed1bde5).
                      */
                     FileVerification m_fileVerification;
                     bool m_fileVerificationHasBeenSet;
 
                     /**
-                     * u200cInformation required for switching DNS servers. It's applicable to sites connected via NSs. For details, see [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
+                     * Information required for access via NS and switching DNS servers. For details, see [Modify DNS Server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1).
                      */
                     NsVerification m_nsVerification;
                     bool m_nsVerificationHasBeenSet;

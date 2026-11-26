@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneSetting The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Site configuration.
+                     * @return ZoneSetting Site configuration.
                      * 
                      */
                     ZoneSetting GetZoneSetting() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Site configuration.
                      */
                     ZoneSetting m_zoneSetting;
                     bool m_zoneSettingHasBeenSet;

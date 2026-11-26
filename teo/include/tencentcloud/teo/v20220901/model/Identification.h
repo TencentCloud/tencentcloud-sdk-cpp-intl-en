@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The site verification information
+                * Site verification info
                 */
                 class Identification : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site name.
-                     * @return ZoneName The site name.
+                     * 获取Site name.
+                     * @return ZoneName Site name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置The site name.
-                     * @param _zoneName The site name.
+                     * 设置Site name.
+                     * @param _zoneName Site name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The subdomain name to be verified. to verify the ownership of a site, leave it blank.
-                     * @return Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+                     * 获取Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
+                     * @return Domain Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置The subdomain name to be verified. to verify the ownership of a site, leave it blank.
-                     * @param _domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+                     * 设置Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
+                     * @param _domain Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -91,23 +91,23 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
-                     * @return Status The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
+                     * 获取Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
+                     * @return Status Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
-                     * @param _status The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
+                     * 设置Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
+                     * @param _status Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -120,15 +120,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Details of the DNS record.
-                     * @return Ascription Details of the DNS record.
+                     * 获取Site ownership verification: Dns verification information.
+                     * @return Ascription Site ownership verification: Dns verification information.
                      * 
                      */
                     AscriptionInfo GetAscription() const;
 
                     /**
-                     * 设置Details of the DNS record.
-                     * @param _ascription Details of the DNS record.
+                     * 设置Site ownership verification: Dns verification information.
+                     * @param _ascription Site ownership verification: Dns verification information.
                      * 
                      */
                     void SetAscription(const AscriptionInfo& _ascription);
@@ -141,15 +141,15 @@ namespace TencentCloud
                     bool AscriptionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the current NS record of the domain name.
-                     * @return OriginalNameServers Specifies the current NS record of the domain name.
+                     * 获取Current NS record of the domain name.
+                     * @return OriginalNameServers Current NS record of the domain name.
                      * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
-                     * 设置Specifies the current NS record of the domain name.
-                     * @param _originalNameServers Specifies the current NS record of the domain name.
+                     * 设置Current NS record of the domain name.
+                     * @param _originalNameServers Current NS record of the domain name.
                      * 
                      */
                     void SetOriginalNameServers(const std::vector<std::string>& _originalNameServers);
@@ -162,15 +162,15 @@ namespace TencentCloud
                     bool OriginalNameServersHasBeenSet() const;
 
                     /**
-                     * 获取Details of the verification file.
-                     * @return FileAscription Details of the verification file.
+                     * 获取Site ownership verification: file verification information.
+                     * @return FileAscription Site ownership verification: file verification information.
                      * 
                      */
                     FileAscriptionInfo GetFileAscription() const;
 
                     /**
-                     * 设置Details of the verification file.
-                     * @param _fileAscription Details of the verification file.
+                     * 设置Site ownership verification: file verification information.
+                     * @param _fileAscription Site ownership verification: file verification information.
                      * 
                      */
                     void SetFileAscription(const FileAscriptionInfo& _fileAscription);
@@ -185,39 +185,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site name.
+                     * Site name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+                     * Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
+                     * Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Details of the DNS record.
+                     * Site ownership verification: Dns verification information.
                      */
                     AscriptionInfo m_ascription;
                     bool m_ascriptionHasBeenSet;
 
                     /**
-                     * Specifies the current NS record of the domain name.
+                     * Current NS record of the domain name.
                      */
                     std::vector<std::string> m_originalNameServers;
                     bool m_originalNameServersHasBeenSet;
 
                     /**
-                     * Details of the verification file.
+                     * Site ownership verification: file verification information.
                      */
                     FileAscriptionInfo m_fileAscription;
                     bool m_fileAscriptionHasBeenSet;

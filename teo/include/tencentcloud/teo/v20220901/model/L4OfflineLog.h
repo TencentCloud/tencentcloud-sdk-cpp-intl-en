@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The L7 log details
+                * Offline log details
                 */
                 class L4OfflineLog : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取L4 proxy instance ID.
-                     * @return ProxyId L4 proxy instance ID.
+                     * 获取Layer 4 Proxy Instance ID.
+                     * @return ProxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置L4 proxy instance ID.
-                     * @param _proxyId L4 proxy instance ID.
+                     * 设置Layer 4 Proxy Instance ID.
+                     * @param _proxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -68,23 +68,23 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
-                     * @return Area Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+                     * 获取Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+                     * @return Area Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
-                     * @param _area Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+                     * 设置Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+                     * @param _area Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Log packet name.
-                     * @return LogPacketName Log packet name.
+                     * 获取Name of the offline log data packet.
+                     * @return LogPacketName Name of the offline log data packet.
                      * 
                      */
                     std::string GetLogPacketName() const;
 
                     /**
-                     * 设置Log packet name.
-                     * @param _logPacketName Log packet name.
+                     * 设置Name of the offline log data packet.
+                     * @param _logPacketName Name of the offline log data packet.
                      * 
                      */
                     void SetLogPacketName(const std::string& _logPacketName);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool LogPacketNameHasBeenSet() const;
 
                     /**
-                     * 获取Log download address.
-                     * @return Url Log download address.
+                     * 获取Offline log download URL.
+                     * @return Url Offline log download URL.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Log download address.
-                     * @param _url Log download address.
+                     * 设置Offline log download URL.
+                     * @param _url Offline log download URL.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取(Disused) Log packaging time. 
-                     * @return LogTime (Disused) Log packaging time. 
+                     * 获取Log packaging time. This parameter has been deprecated.
+                     * @return LogTime Log packaging time. This parameter has been deprecated.
                      * 
                      */
                     int64_t GetLogTime() const;
 
                     /**
-                     * 设置(Disused) Log packaging time. 
-                     * @param _logTime (Disused) Log packaging time. 
+                     * 设置Log packaging time. This parameter has been deprecated.
+                     * @param _logTime Log packaging time. This parameter has been deprecated.
                      * 
                      */
                     void SetLogTime(const int64_t& _logTime);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool LogTimeHasBeenSet() const;
 
                     /**
-                     * 获取Start time of log packaging.
-                     * @return LogStartTime Start time of log packaging.
+                     * 获取Start time for log packaging.
+                     * @return LogStartTime Start time for log packaging.
                      * 
                      */
                     std::string GetLogStartTime() const;
 
                     /**
-                     * 设置Start time of log packaging.
-                     * @param _logStartTime Start time of log packaging.
+                     * 设置Start time for log packaging.
+                     * @param _logStartTime Start time for log packaging.
                      * 
                      */
                     void SetLogStartTime(const std::string& _logStartTime);
@@ -181,15 +181,15 @@ namespace TencentCloud
                     bool LogStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the log package.
-                     * @return LogEndTime End time of the log package.
+                     * 获取Log packaging end time.
+                     * @return LogEndTime Log packaging end time.
                      * 
                      */
                     std::string GetLogEndTime() const;
 
                     /**
-                     * 设置End time of the log package.
-                     * @param _logEndTime End time of the log package.
+                     * 设置Log packaging end time.
+                     * @param _logEndTime Log packaging end time.
                      * 
                      */
                     void SetLogEndTime(const std::string& _logEndTime);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool LogEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Log size (in bytes).
-                     * @return Size Log size (in bytes).
+                     * 获取Log size in bytes.
+                     * @return Size Log size in bytes.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Log size (in bytes).
-                     * @param _size Log size (in bytes).
+                     * 设置Log size in bytes.
+                     * @param _size Log size in bytes.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -225,51 +225,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * L4 proxy instance ID.
+                     * Layer 4 Proxy Instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+                     * Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Log packet name.
+                     * Name of the offline log data packet.
                      */
                     std::string m_logPacketName;
                     bool m_logPacketNameHasBeenSet;
 
                     /**
-                     * Log download address.
+                     * Offline log download URL.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * (Disused) Log packaging time. 
+                     * Log packaging time. This parameter has been deprecated.
                      */
                     int64_t m_logTime;
                     bool m_logTimeHasBeenSet;
 
                     /**
-                     * Start time of log packaging.
+                     * Start time for log packaging.
                      */
                     std::string m_logStartTime;
                     bool m_logStartTimeHasBeenSet;
 
                     /**
-                     * End time of the log package.
+                     * Log packaging end time.
                      */
                     std::string m_logEndTime;
                     bool m_logEndTimeHasBeenSet;
 
                     /**
-                     * Log size (in bytes).
+                     * Log size in bytes.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

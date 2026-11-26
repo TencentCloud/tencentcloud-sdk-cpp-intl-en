@@ -70,19 +70,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return SmartRouting <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Intelligent acceleration configuration.
+                     * @return SmartRouting Intelligent acceleration configuration.
                      * 
                      */
                     SmartRoutingParameters GetSmartRouting() const;
 
                     /**
-                     * 设置<Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _smartRouting <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Intelligent acceleration configuration.
+                     * @param _smartRouting Intelligent acceleration configuration.
                      * 
                      */
                     void SetSmartRouting(const SmartRoutingParameters& _smartRouting);
@@ -95,23 +91,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool SmartRoutingHasBeenSet() const;
 
                     /**
-                     * 获取Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Cache Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Cache expiration time configuration.
+                     * @return Cache Cache expiration time configuration.
                      * 
                      */
                     CacheConfigParameters GetCache() const;
 
                     /**
-                     * 设置Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cache Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Cache expiration time configuration.
+                     * @param _cache Cache expiration time configuration.
                      * 
                      */
                     void SetCache(const CacheConfigParameters& _cache);
@@ -124,23 +112,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool CacheHasBeenSet() const;
 
                     /**
-                     * 获取Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return MaxAge Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Browser cache configuration.
+                     * @return MaxAge Browser cache configuration.
                      * 
                      */
                     MaxAgeParameters GetMaxAge() const;
 
                     /**
-                     * 设置Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _maxAge Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Browser cache configuration.
+                     * @param _maxAge Browser cache configuration.
                      * 
                      */
                     void SetMaxAge(const MaxAgeParameters& _maxAge);
@@ -153,19 +133,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CacheKey The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Node cache key configuration.
+                     * @return CacheKey Node cache key configuration.
                      * 
                      */
                     CacheKeyConfigParameters GetCacheKey() const;
 
                     /**
-                     * 设置The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cacheKey The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Node cache key configuration.
+                     * @param _cacheKey Node cache key configuration.
                      * 
                      */
                     void SetCacheKey(const CacheKeyConfigParameters& _cacheKey);
@@ -178,19 +154,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool CacheKeyHasBeenSet() const;
 
                     /**
-                     * 获取Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return CachePrefresh Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Cache pre-refresh configuration.
+                     * @return CachePrefresh Cache pre-refresh configuration.
                      * 
                      */
                     CachePrefreshParameters GetCachePrefresh() const;
 
                     /**
-                     * 设置Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _cachePrefresh Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Cache pre-refresh configuration.
+                     * @param _cachePrefresh Cache pre-refresh configuration.
                      * 
                      */
                     void SetCachePrefresh(const CachePrefreshParameters& _cachePrefresh);
@@ -204,18 +176,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return OfflineCache Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     OfflineCacheParameters GetOfflineCache() const;
 
                     /**
                      * 设置Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _offlineCache Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetOfflineCache(const OfflineCacheParameters& _offlineCache);
@@ -228,23 +196,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool OfflineCacheHasBeenSet() const;
 
                     /**
-                     * 获取Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Compression Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Intelligent compression configuration.
+                     * @return Compression Intelligent compression configuration.
                      * 
                      */
                     CompressionParameters GetCompression() const;
 
                     /**
-                     * 设置Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _compression Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Intelligent compression configuration.
+                     * @param _compression Intelligent compression configuration.
                      * 
                      */
                     void SetCompression(const CompressionParameters& _compression);
@@ -257,23 +217,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool CompressionHasBeenSet() const;
 
                     /**
-                     * 获取Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ForceRedirectHTTPS Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Forced HTTPS redirect configuration for access protocols.
+                     * @return ForceRedirectHTTPS Forced HTTPS redirect configuration for access protocols.
                      * 
                      */
                     ForceRedirectHTTPSParameters GetForceRedirectHTTPS() const;
 
                     /**
-                     * 设置Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _forceRedirectHTTPS Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Forced HTTPS redirect configuration for access protocols.
+                     * @param _forceRedirectHTTPS Forced HTTPS redirect configuration for access protocols.
                      * 
                      */
                     void SetForceRedirectHTTPS(const ForceRedirectHTTPSParameters& _forceRedirectHTTPS);
@@ -287,18 +239,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return HSTS HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     HSTSParameters GetHSTS() const;
 
                     /**
                      * 设置HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _hSTS HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetHSTS(const HSTSParameters& _hSTS);
@@ -312,18 +260,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return TLSConfig TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     TLSConfigParameters GetTLSConfig() const;
 
                     /**
                      * 设置TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _tLSConfig TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetTLSConfig(const TLSConfigParameters& _tLSConfig);
@@ -337,18 +281,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return OCSPStapling OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     OCSPStaplingParameters GetOCSPStapling() const;
 
                     /**
                      * 设置OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _oCSPStapling OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetOCSPStapling(const OCSPStaplingParameters& _oCSPStapling);
@@ -362,18 +302,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return HTTP2 HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     HTTP2Parameters GetHTTP2() const;
 
                     /**
                      * 设置HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _hTTP2 HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetHTTP2(const HTTP2Parameters& _hTTP2);
@@ -387,18 +323,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return QUIC QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     QUICParameters GetQUIC() const;
 
                     /**
                      * 设置QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _qUIC QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetQUIC(const QUICParameters& _qUIC);
@@ -411,19 +343,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool QUICHasBeenSet() const;
 
                     /**
-                     * 获取HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return UpstreamHTTP2 HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取HTTP/2 origin-pull configuration.
+                     * @return UpstreamHTTP2 HTTP/2 origin-pull configuration.
                      * 
                      */
                     UpstreamHTTP2Parameters GetUpstreamHTTP2() const;
 
                     /**
-                     * 设置HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _upstreamHTTP2 HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置HTTP/2 origin-pull configuration.
+                     * @param _upstreamHTTP2 HTTP/2 origin-pull configuration.
                      * 
                      */
                     void SetUpstreamHTTP2(const UpstreamHTTP2Parameters& _upstreamHTTP2);
@@ -437,18 +365,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return IPv6 IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     IPv6Parameters GetIPv6() const;
 
                     /**
                      * 设置IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _iPv6 IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetIPv6(const IPv6Parameters& _iPv6);
@@ -462,18 +386,14 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * 获取WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @return WebSocket WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     WebSocketParameters GetWebSocket() const;
 
                     /**
                      * 设置WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * @param _webSocket WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetWebSocket(const WebSocketParameters& _webSocket);
@@ -486,19 +406,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool WebSocketHasBeenSet() const;
 
                     /**
-                     * 获取POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return PostMaxSize POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Configuration for POST request transmission.
+                     * @return PostMaxSize Configuration for POST request transmission.
                      * 
                      */
                     PostMaxSizeParameters GetPostMaxSize() const;
 
                     /**
-                     * 设置POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _postMaxSize POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Configuration for POST request transmission.
+                     * @param _postMaxSize Configuration for POST request transmission.
                      * 
                      */
                     void SetPostMaxSize(const PostMaxSizeParameters& _postMaxSize);
@@ -511,19 +427,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool PostMaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ClientIPHeader Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Client IP origin-pull request header configuration.
+                     * @return ClientIPHeader Client IP origin-pull request header configuration.
                      * 
                      */
                     ClientIPHeaderParameters GetClientIPHeader() const;
 
                     /**
-                     * 设置Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _clientIPHeader Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Client IP origin-pull request header configuration.
+                     * @param _clientIPHeader Client IP origin-pull request header configuration.
                      * 
                      */
                     void SetClientIPHeader(const ClientIPHeaderParameters& _clientIPHeader);
@@ -536,19 +448,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ClientIPHeaderHasBeenSet() const;
 
                     /**
-                     * 获取Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return ClientIPCountry Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Configuration of whether to carry the regional information of the client IP during origin-pull.
+                     * @return ClientIPCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
                      * 
                      */
                     ClientIPCountryParameters GetClientIPCountry() const;
 
                     /**
-                     * 设置Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _clientIPCountry Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Configuration of whether to carry the regional information of the client IP during origin-pull.
+                     * @param _clientIPCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
                      * 
                      */
                     void SetClientIPCountry(const ClientIPCountryParameters& _clientIPCountry);
@@ -561,19 +469,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ClientIPCountryHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Grpc Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取The gRPC protocol supports configuration.
+                     * @return Grpc The gRPC protocol supports configuration.
                      * 
                      */
                     GrpcParameters GetGrpc() const;
 
                     /**
-                     * 设置Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _grpc Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置The gRPC protocol supports configuration.
+                     * @param _grpc The gRPC protocol supports configuration.
                      * 
                      */
                     void SetGrpc(const GrpcParameters& _grpc);
@@ -586,19 +490,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool GrpcHasBeenSet() const;
 
                     /**
-                     * 获取Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return NetworkErrorLogging Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Network error log configuration.
+                     * @return NetworkErrorLogging Network error log configuration.
                      * 
                      */
                     NetworkErrorLoggingParameters GetNetworkErrorLogging() const;
 
                     /**
-                     * 设置Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _networkErrorLogging Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Network error log configuration.
+                     * @param _networkErrorLogging Network error log configuration.
                      * 
                      */
                     void SetNetworkErrorLogging(const NetworkErrorLoggingParameters& _networkErrorLogging);
@@ -611,19 +511,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool NetworkErrorLoggingHasBeenSet() const;
 
                     /**
-                     * 获取Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return AccelerateMainland Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Acceleration optimization configuration in the Chinese mainland.
+                     * @return AccelerateMainland Acceleration optimization configuration in the Chinese mainland.
                      * 
                      */
                     AccelerateMainlandParameters GetAccelerateMainland() const;
 
                     /**
-                     * 设置Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _accelerateMainland Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Acceleration optimization configuration in the Chinese mainland.
+                     * @param _accelerateMainland Acceleration optimization configuration in the Chinese mainland.
                      * 
                      */
                     void SetAccelerateMainland(const AccelerateMainlandParameters& _accelerateMainland);
@@ -636,23 +532,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool AccelerateMainlandHasBeenSet() const;
 
                     /**
-                     * 获取Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return StandardDebug Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Standard Debug configuration.
+                     * @return StandardDebug Standard Debug configuration.
                      * 
                      */
                     StandardDebugParameters GetStandardDebug() const;
 
                     /**
-                     * 设置Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _standardDebug Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Standard Debug configuration.
+                     * @param _standardDebug Standard Debug configuration.
                      * 
                      */
                     void SetStandardDebug(const StandardDebugParameters& _standardDebug);
@@ -667,167 +555,139 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Intelligent acceleration configuration.
                      */
                     SmartRoutingParameters m_smartRouting;
                     bool m_smartRoutingHasBeenSet;
 
                     /**
-                     * Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Cache expiration time configuration.
                      */
                     CacheConfigParameters m_cache;
                     bool m_cacheHasBeenSet;
 
                     /**
-                     * Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Browser cache configuration.
                      */
                     MaxAgeParameters m_maxAge;
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Node cache key configuration.
                      */
                     CacheKeyConfigParameters m_cacheKey;
                     bool m_cacheKeyHasBeenSet;
 
                     /**
-                     * Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Cache pre-refresh configuration.
                      */
                     CachePrefreshParameters m_cachePrefresh;
                     bool m_cachePrefreshHasBeenSet;
 
                     /**
                      * Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     OfflineCacheParameters m_offlineCache;
                     bool m_offlineCacheHasBeenSet;
 
                     /**
-                     * Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Intelligent compression configuration.
                      */
                     CompressionParameters m_compression;
                     bool m_compressionHasBeenSet;
 
                     /**
-                     * Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Forced HTTPS redirect configuration for access protocols.
                      */
                     ForceRedirectHTTPSParameters m_forceRedirectHTTPS;
                     bool m_forceRedirectHTTPSHasBeenSet;
 
                     /**
                      * HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     HSTSParameters m_hSTS;
                     bool m_hSTSHasBeenSet;
 
                     /**
                      * TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     TLSConfigParameters m_tLSConfig;
                     bool m_tLSConfigHasBeenSet;
 
                     /**
                      * OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     OCSPStaplingParameters m_oCSPStapling;
                     bool m_oCSPStaplingHasBeenSet;
 
                     /**
                      * HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     HTTP2Parameters m_hTTP2;
                     bool m_hTTP2HasBeenSet;
 
                     /**
                      * QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     QUICParameters m_qUIC;
                     bool m_qUICHasBeenSet;
 
                     /**
-                     * HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * HTTP/2 origin-pull configuration.
                      */
                     UpstreamHTTP2Parameters m_upstreamHTTP2;
                     bool m_upstreamHTTP2HasBeenSet;
 
                     /**
                      * IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     IPv6Parameters m_iPv6;
                     bool m_iPv6HasBeenSet;
 
                     /**
                      * WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
                      */
                     WebSocketParameters m_webSocket;
                     bool m_webSocketHasBeenSet;
 
                     /**
-                     * POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Configuration for POST request transmission.
                      */
                     PostMaxSizeParameters m_postMaxSize;
                     bool m_postMaxSizeHasBeenSet;
 
                     /**
-                     * Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Client IP origin-pull request header configuration.
                      */
                     ClientIPHeaderParameters m_clientIPHeader;
                     bool m_clientIPHeaderHasBeenSet;
 
                     /**
-                     * Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Configuration of whether to carry the regional information of the client IP during origin-pull.
                      */
                     ClientIPCountryParameters m_clientIPCountry;
                     bool m_clientIPCountryHasBeenSet;
 
                     /**
-                     * Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * The gRPC protocol supports configuration.
                      */
                     GrpcParameters m_grpc;
                     bool m_grpcHasBeenSet;
 
                     /**
-                     * Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * Network error log configuration.
                      */
                     NetworkErrorLoggingParameters m_networkErrorLogging;
                     bool m_networkErrorLoggingHasBeenSet;
 
                     /**
-                     * Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Acceleration optimization configuration in the Chinese mainland.
                      */
                     AccelerateMainlandParameters m_accelerateMainland;
                     bool m_accelerateMainlandHasBeenSet;
 
                     /**
-                     * Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Standard Debug configuration.
                      */
                     StandardDebugParameters m_standardDebug;
                     bool m_standardDebugHasBeenSet;

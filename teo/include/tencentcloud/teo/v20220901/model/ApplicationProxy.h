@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The site name.
-                     * @return ZoneName The site name.
+                     * 获取Site name.
+                     * @return ZoneName Site name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置The site name.
-                     * @param _zoneName The site name.
+                     * 设置Site name.
+                     * @param _zoneName Site name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The proxy ID.
-                     * @return ProxyId The proxy ID.
+                     * 获取Proxy ID.
+                     * @return ProxyId Proxy ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置The proxy ID.
-                     * @param _proxyId The proxy ID.
+                     * 设置Proxy ID.
+                     * @param _proxyId Proxy ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -113,19 +113,19 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
-                     * @return ProxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+                     * 获取When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+                     * @return ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
                      * 
                      */
                     std::string GetProxyName() const;
 
                     /**
-                     * 设置The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
-                     * @param _proxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+                     * 设置When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+                     * @param _proxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
                      * 
                      */
                     void SetProxyName(const std::string& _proxyName);
@@ -138,23 +138,23 @@ The instance name when `ProxyType=instance`.
                     bool ProxyNameHasBeenSet() const;
 
                     /**
-                     * 获取The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
-                     * @return ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
+                     * 获取L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
+                     * @return ProxyType L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
                      * 
                      */
                     std::string GetProxyType() const;
 
                     /**
-                     * 设置The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
-                     * @param _proxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
+                     * 设置L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
+                     * @param _proxyType L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
                      * 
                      */
                     void SetProxyType(const std::string& _proxyType);
@@ -167,23 +167,23 @@ The instance name when `ProxyType=instance`.
                     bool ProxyTypeHasBeenSet() const;
 
                     /**
-                     * 获取The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
-                     * @return PlatType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+                     * 获取Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+                     * @return PlatType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
                      * 
                      */
                     std::string GetPlatType() const;
 
                     /**
-                     * 设置The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
-                     * @param _platType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+                     * 设置Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+                     * @param _platType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
                      * 
                      */
                     void SetPlatType(const std::string& _platType);
@@ -196,27 +196,27 @@ The instance name when `ProxyType=instance`.
                     bool PlatTypeHasBeenSet() const;
 
                     /**
-                     * 获取Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
-                     * @return Area Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
+                     * 获取Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
+                     * @return Area Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
-                     * @param _area Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
+                     * 设置Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
+                     * @param _area Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -229,23 +229,23 @@ Default value: overseas.
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
-                     * @return SecurityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+                     * 获取Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
+                     * @return SecurityType Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
                      * 
                      */
                     int64_t GetSecurityType() const;
 
                     /**
-                     * 设置Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
-                     * @param _securityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+                     * 设置Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
+                     * @param _securityType Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
                      * 
                      */
                     void SetSecurityType(const int64_t& _securityType);
@@ -258,23 +258,23 @@ Default value: overseas.
                     bool SecurityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
-                     * @return AccelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+                     * 获取Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+                     * @return AccelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
                      * 
                      */
                     int64_t GetAccelerateType() const;
 
                     /**
-                     * 设置Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
-                     * @param _accelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+                     * 设置Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+                     * @param _accelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
                      * 
                      */
                     void SetAccelerateType(const int64_t& _accelerateType);
@@ -287,15 +287,15 @@ Default value: overseas.
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Session hold time, unit: seconds.
-                     * @return SessionPersistTime Session hold time, unit: seconds.
+                     * 获取Session hold time, in seconds.
+                     * @return SessionPersistTime Session hold time, in seconds.
                      * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
-                     * 设置Session hold time, unit: seconds.
-                     * @param _sessionPersistTime Session hold time, unit: seconds.
+                     * 设置Session hold time, in seconds.
+                     * @param _sessionPersistTime Session hold time, in seconds.
                      * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
@@ -308,35 +308,35 @@ Default value: overseas.
                     bool SessionPersistTimeHasBeenSet() const;
 
                     /**
-                     * 获取The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
-                     * @return Status The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
+                     * 获取Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
+                     * @return Status Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
-                     * @param _status The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
+                     * 设置Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
+                     * @param _status Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -349,31 +349,31 @@ Default value: overseas.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
-                     * @return BanStatus The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+                     * 获取Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
+                     * @return BanStatus Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
                      * 
                      */
                     std::string GetBanStatus() const;
 
                     /**
-                     * 设置The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
-                     * @param _banStatus The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+                     * 设置Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
+                     * @param _banStatus Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
                      * 
                      */
                     void SetBanStatus(const std::string& _banStatus);
@@ -407,19 +407,19 @@ Default value: overseas.
                     bool ScheduleValueHasBeenSet() const;
 
                     /**
-                     * 获取When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
-                     * @return HostId When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
+                     * 获取When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
+                     * @return HostId When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
                      * 
                      */
                     std::string GetHostId() const;
 
                     /**
-                     * 设置When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
-                     * @param _hostId When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
+                     * 设置When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
+                     * @param _hostId When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
                      * 
                      */
                     void SetHostId(const std::string& _hostId);
@@ -432,15 +432,15 @@ This field indicates the unique ID of the subdomain name.
                     bool HostIdHasBeenSet() const;
 
                     /**
-                     * 获取The IPv6 access configuration.
-                     * @return Ipv6 The IPv6 access configuration.
+                     * 获取Ipv6 access configuration.
+                     * @return Ipv6 Ipv6 access configuration.
                      * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置The IPv6 access configuration.
-                     * @param _ipv6 The IPv6 access configuration.
+                     * 设置Ipv6 access configuration.
+                     * @param _ipv6 Ipv6 access configuration.
                      * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
@@ -453,15 +453,15 @@ This field indicates the unique ID of the subdomain name.
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取The update time.
-                     * @return UpdateTime The update time.
+                     * 获取Update time.
+                     * @return UpdateTime Update time.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time.
-                     * @param _updateTime The update time.
+                     * 设置Update time.
+                     * @param _updateTime Update time.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -474,15 +474,15 @@ This field indicates the unique ID of the subdomain name.
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of rules.
-                     * @return ApplicationProxyRules List of rules.
+                     * 获取Rule list.
+                     * @return ApplicationProxyRules Rule list.
                      * 
                      */
                     std::vector<ApplicationProxyRule> GetApplicationProxyRules() const;
 
                     /**
-                     * 设置List of rules.
-                     * @param _applicationProxyRules List of rules.
+                     * 设置Rule list.
+                     * @param _applicationProxyRules Rule list.
                      * 
                      */
                     void SetApplicationProxyRules(const std::vector<ApplicationProxyRule>& _applicationProxyRules);
@@ -495,15 +495,15 @@ This field indicates the unique ID of the subdomain name.
                     bool ApplicationProxyRulesHasBeenSet() const;
 
                     /**
-                     * 获取Cross-MLC-border acceleration.
-                     * @return AccelerateMainland Cross-MLC-border acceleration.
+                     * 获取Acceleration optimization configuration for the Chinese mainland.
+                     * @return AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
                      * 
                      */
                     AccelerateMainland GetAccelerateMainland() const;
 
                     /**
-                     * 设置Cross-MLC-border acceleration.
-                     * @param _accelerateMainland Cross-MLC-border acceleration.
+                     * 设置Acceleration optimization configuration for the Chinese mainland.
+                     * @param _accelerateMainland Acceleration optimization configuration for the Chinese mainland.
                      * 
                      */
                     void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
@@ -518,94 +518,94 @@ This field indicates the unique ID of the subdomain name.
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The site name.
+                     * Site name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * The proxy ID.
+                     * Proxy ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+                     * When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
                      */
                     std::string m_proxyName;
                     bool m_proxyNameHasBeenSet;
 
                     /**
-                     * The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
+                     * L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
                      */
                     std::string m_proxyType;
                     bool m_proxyTypeHasBeenSet;
 
                     /**
-                     * The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+                     * Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
                      */
                     std::string m_platType;
                     bool m_platTypeHasBeenSet;
 
                     /**
-                     * Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
+                     * Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+                     * Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
                      */
                     int64_t m_securityType;
                     bool m_securityTypeHasBeenSet;
 
                     /**
-                     * Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+                     * Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
                      */
                     int64_t m_accelerateType;
                     bool m_accelerateTypeHasBeenSet;
 
                     /**
-                     * Session hold time, unit: seconds.
+                     * Session hold time, in seconds.
                      */
                     uint64_t m_sessionPersistTime;
                     bool m_sessionPersistTimeHasBeenSet;
 
                     /**
-                     * The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
+                     * Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+                     * Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
                      */
                     std::string m_banStatus;
                     bool m_banStatusHasBeenSet;
@@ -617,32 +617,32 @@ Default value: overseas.
                     bool m_scheduleValueHasBeenSet;
 
                     /**
-                     * When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
+                     * When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
                      */
                     std::string m_hostId;
                     bool m_hostIdHasBeenSet;
 
                     /**
-                     * The IPv6 access configuration.
+                     * Ipv6 access configuration.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * The update time.
+                     * Update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * List of rules.
+                     * Rule list.
                      */
                     std::vector<ApplicationProxyRule> m_applicationProxyRules;
                     bool m_applicationProxyRulesHasBeenSet;
 
                     /**
-                     * Cross-MLC-border acceleration.
+                     * Acceleration optimization configuration for the Chinese mainland.
                      */
                     AccelerateMainland m_accelerateMainland;
                     bool m_accelerateMainlandHasBeenSet;

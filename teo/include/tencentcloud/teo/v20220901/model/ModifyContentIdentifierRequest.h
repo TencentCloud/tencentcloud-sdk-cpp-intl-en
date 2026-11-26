@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content identifier id.
-                     * @return ContentId Content identifier id.
+                     * 获取Content identifier ID.
+                     * @return ContentId Content identifier ID.
                      * 
                      */
                     std::string GetContentId() const;
 
                     /**
-                     * 设置Content identifier id.
-                     * @param _contentId Content identifier id.
+                     * 设置Content identifier ID.
+                     * @param _contentId Content identifier ID.
                      * 
                      */
                     void SetContentId(const std::string& _contentId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ContentIdHasBeenSet() const;
 
                     /**
-                     * 获取Content identifier description. length limit: 20 characters.
-                     * @return Description Content identifier description. length limit: 20 characters.
+                     * 获取Content identifier description, up to 20 characters.
+                     * @return Description Content identifier description, up to 20 characters.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Content identifier description. length limit: 20 characters.
-                     * @param _description Content identifier description. length limit: 20 characters.
+                     * 设置Content identifier description, up to 20 characters.
+                     * @param _description Content identifier description, up to 20 characters.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Content identifier id.
+                     * Content identifier ID.
                      */
                     std::string m_contentId;
                     bool m_contentIdHasBeenSet;
 
                     /**
-                     * Content identifier description. length limit: 20 characters.
+                     * Content identifier description, up to 20 characters.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

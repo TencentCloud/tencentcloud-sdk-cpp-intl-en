@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Default value: 0.
-                     * @return Offset Pagination offset. Default value: 0.
+                     * 获取The offset of paginated query. Default value: 0.
+                     * @return Offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Default value: 0.
-                     * @param _offset Pagination offset. Default value: 0.
+                     * 设置The offset of paginated query. Default value: 0.
+                     * @param _offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination limit. Default value: 20, maximum value: 1000.
-                     * @return Limit Pagination limit. Default value: 20, maximum value: 1000.
+                     * 获取The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Pagination limit. Default value: 20, maximum value: 1000.
-                     * @param _limit Pagination limit. Default value: 20, maximum value: 1000.
+                     * 设置The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * @param _limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,23 +107,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
-                     * @return Filters Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+                     * 获取Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
+                     * @return Filters Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
-                     * @param _filters Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+                     * 设置Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
+                     * @param _filters Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -144,21 +144,21 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Pagination offset. Default value: 0.
+                     * The offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Pagination limit. Default value: 20, maximum value: 1000.
+                     * The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+                     * Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

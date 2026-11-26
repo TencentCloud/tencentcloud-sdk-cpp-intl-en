@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
-                     * @return ContentId Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
+                     * 获取ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
+                     * @return ContentId ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
                      * 
                      */
                     std::string GetContentId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
+                     * ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
                      */
                     std::string m_contentId;
                     bool m_contentIdHasBeenSet;

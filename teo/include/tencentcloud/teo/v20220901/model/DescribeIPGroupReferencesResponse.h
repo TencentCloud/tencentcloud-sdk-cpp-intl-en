@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Details of policy configurations that reference the specified IP group.</p>
-                     * @return References <p>Details of policy configurations that reference the specified IP group.</p>
+                     * 获取<p>Refer to the configuration message of the corresponding IP group.</p>
+                     * @return References <p>Refer to the configuration message of the corresponding IP group.</p>
                      * 
                      */
                     std::vector<IPGroupReference> GetReferences() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Details of policy configurations that reference the specified IP group.</p>
+                     * <p>Refer to the configuration message of the corresponding IP group.</p>
                      */
                     std::vector<IPGroupReference> m_references;
                     bool m_referencesHasBeenSet;

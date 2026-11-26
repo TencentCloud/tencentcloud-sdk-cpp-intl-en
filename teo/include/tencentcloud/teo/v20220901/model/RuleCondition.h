@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule engine condition parameters
+                * Rule engine condition parameter
                 */
                 class RuleCondition : public AbstractModel
                 {
@@ -48,30 +48,30 @@ namespace TencentCloud
 
                     /**
                      * 获取Operator. Valid values:
-<li>`equal`: Equal</li>
-<li>`notEquals`: Does not equal</li>
-<li>`exist`: Exists</li>
-<li>`notexist`: Does not exist</li>
+<li> equal: equal to; </li>
+<li> notequal: neq;</li>
+<li> exist: exist; </li>
+<li> notexist: Not found.</li>
                      * @return Operator Operator. Valid values:
-<li>`equal`: Equal</li>
-<li>`notEquals`: Does not equal</li>
-<li>`exist`: Exists</li>
-<li>`notexist`: Does not exist</li>
+<li> equal: equal to; </li>
+<li> notequal: neq;</li>
+<li> exist: exist; </li>
+<li> notexist: Not found.</li>
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Operator. Valid values:
-<li>`equal`: Equal</li>
-<li>`notEquals`: Does not equal</li>
-<li>`exist`: Exists</li>
-<li>`notexist`: Does not exist</li>
+<li> equal: equal to; </li>
+<li> notequal: neq;</li>
+<li> exist: exist; </li>
+<li> notexist: Not found.</li>
                      * @param _operator Operator. Valid values:
-<li>`equal`: Equal</li>
-<li>`notEquals`: Does not equal</li>
-<li>`exist`: Exists</li>
-<li>`notexist`: Does not exist</li>
+<li> equal: equal to; </li>
+<li> notequal: neq;</li>
+<li> exist: exist; </li>
+<li> notexist: Not found.</li>
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -105,62 +105,62 @@ namespace TencentCloud
                     bool TargetHasBeenSet() const;
 
                     /**
-                     * 获取Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+                     * 获取Parameter values for match types. An empty array is allowed only when the match type is query_string or request_header and the operator is Exist or Does Not Exist. The corresponding matching types are:
 <li>extension: File suffix such as jpg or txt;</li>
-<li> filename: For example, foo in foo.jpg;</li>
-<li> all (any request under the site): all;</li>
-<li> host: The host under the current site. For example, www.maxx55.com;</li>
-<li> URL path: The request for a URL path under the current site. For example, /example;</li>
-<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All (arbitrary request to the site): all;</li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: complete URL request under the current site, must contain HTTP protocol, Host, and path, for example: https://www.maxx55.cn/example;</li>
 <li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
-<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
 <li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
-<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li>Request protocol: protocol of current request. Value range: HTTP, HTTPS;</li>
 <li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
-                     * @return Values Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+                     * @return Values Parameter values for match types. An empty array is allowed only when the match type is query_string or request_header and the operator is Exist or Does Not Exist. The corresponding matching types are:
 <li>extension: File suffix such as jpg or txt;</li>
-<li> filename: For example, foo in foo.jpg;</li>
-<li> all (any request under the site): all;</li>
-<li> host: The host under the current site. For example, www.maxx55.com;</li>
-<li> URL path: The request for a URL path under the current site. For example, /example;</li>
-<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All (arbitrary request to the site): all;</li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: complete URL request under the current site, must contain HTTP protocol, Host, and path, for example: https://www.maxx55.cn/example;</li>
 <li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
-<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
 <li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
-<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li>Request protocol: protocol of current request. Value range: HTTP, HTTPS;</li>
 <li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+                     * 设置Parameter values for match types. An empty array is allowed only when the match type is query_string or request_header and the operator is Exist or Does Not Exist. The corresponding matching types are:
 <li>extension: File suffix such as jpg or txt;</li>
-<li> filename: For example, foo in foo.jpg;</li>
-<li> all (any request under the site): all;</li>
-<li> host: The host under the current site. For example, www.maxx55.com;</li>
-<li> URL path: The request for a URL path under the current site. For example, /example;</li>
-<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All (arbitrary request to the site): all;</li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: complete URL request under the current site, must contain HTTP protocol, Host, and path, for example: https://www.maxx55.cn/example;</li>
 <li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
-<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
 <li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
-<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li>Request protocol: protocol of current request. Value range: HTTP, HTTPS;</li>
 <li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
-                     * @param _values Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+                     * @param _values Parameter values for match types. An empty array is allowed only when the match type is query_string or request_header and the operator is Exist or Does Not Exist. The corresponding matching types are:
 <li>extension: File suffix such as jpg or txt;</li>
-<li> filename: For example, foo in foo.jpg;</li>
-<li> all (any request under the site): all;</li>
-<li> host: The host under the current site. For example, www.maxx55.com;</li>
-<li> URL path: The request for a URL path under the current site. For example, /example;</li>
-<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All (arbitrary request to the site): all;</li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: complete URL request under the current site, must contain HTTP protocol, Host, and path, for example: https://www.maxx55.cn/example;</li>
 <li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
-<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
 <li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
-<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li>Request protocol: protocol of current request. Value range: HTTP, HTTPS;</li>
 <li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
                      * 
                      */
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Whether the parameter value is case insensitive. Default value: false.
-                     * @return IgnoreCase Whether the parameter value is case insensitive. Default value: false.
+                     * 获取Whether to ignore the case sensitivity of parameter values. Default value: `false`.
+                     * @return IgnoreCase Whether to ignore the case sensitivity of parameter values. Default value: `false`.
                      * 
                      */
                     bool GetIgnoreCase() const;
 
                     /**
-                     * 设置Whether the parameter value is case insensitive. Default value: false.
-                     * @param _ignoreCase Whether the parameter value is case insensitive. Default value: false.
+                     * 设置Whether to ignore the case sensitivity of parameter values. Default value: `false`.
+                     * @param _ignoreCase Whether to ignore the case sensitivity of parameter values. Default value: `false`.
                      * 
                      */
                     void SetIgnoreCase(const bool& _ignoreCase);
@@ -195,23 +195,23 @@ namespace TencentCloud
                     bool IgnoreCaseHasBeenSet() const;
 
                     /**
-                     * 获取The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
-<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
-<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
-                     * @return Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
-<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
-<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+                     * 获取Name of the parameter for the corresponding matching type. Valid when Target is set to the following values, and the value cannot be empty:
+<li> query_string: The parameter names in the query string of the URL requested under the current site, for example, lang and version in lang=cn&version=1; </li>
+<li> request_header: The name of the HTTP request header field. For example, Accept-Language in Accept-Language:zh-CN,zh;q=0.9. </li>
+                     * @return Name Name of the parameter for the corresponding matching type. Valid when Target is set to the following values, and the value cannot be empty:
+<li> query_string: The parameter names in the query string of the URL requested under the current site, for example, lang and version in lang=cn&version=1; </li>
+<li> request_header: The name of the HTTP request header field. For example, Accept-Language in Accept-Language:zh-CN,zh;q=0.9. </li>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
-<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
-<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
-                     * @param _name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
-<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
-<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+                     * 设置Name of the parameter for the corresponding matching type. Valid when Target is set to the following values, and the value cannot be empty:
+<li> query_string: The parameter names in the query string of the URL requested under the current site, for example, lang and version in lang=cn&version=1; </li>
+<li> request_header: The name of the HTTP request header field. For example, Accept-Language in Accept-Language:zh-CN,zh;q=0.9. </li>
+                     * @param _name Name of the parameter for the corresponding matching type. Valid when Target is set to the following values, and the value cannot be empty:
+<li> query_string: The parameter names in the query string of the URL requested under the current site, for example, lang and version in lang=cn&version=1; </li>
+<li> request_header: The name of the HTTP request header field. For example, Accept-Language in Accept-Language:zh-CN,zh;q=0.9. </li>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -224,19 +224,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the parameter name is case insensitive. Default value: `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to ignore the case sensitivity of parameter names. Default value: `false`.
+                     * @return IgnoreNameCase Whether to ignore the case sensitivity of parameter names. Default value: `false`.
                      * @deprecated
                      */
                     bool GetIgnoreNameCase() const;
 
                     /**
-                     * 设置Whether the parameter name is case insensitive. Default value: `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ignoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to ignore the case sensitivity of parameter names. Default value: `false`.
+                     * @param _ignoreNameCase Whether to ignore the case sensitivity of parameter names. Default value: `false`.
                      * @deprecated
                      */
                     void SetIgnoreNameCase(const bool& _ignoreNameCase);
@@ -252,10 +248,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Operator. Valid values:
-<li>`equal`: Equal</li>
-<li>`notEquals`: Does not equal</li>
-<li>`exist`: Exists</li>
-<li>`notexist`: Does not exist</li>
+<li> equal: equal to; </li>
+<li> notequal: neq;</li>
+<li> exist: exist; </li>
+<li> notexist: Not found.</li>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
@@ -267,40 +263,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_targetHasBeenSet;
 
                     /**
-                     * Parameter values for corresponding matching types. It is allowed to pass an empty array only when the matching type is query_string or request_header and the operator value is exist or not exist. Corresponding match types include:
+                     * Parameter values for match types. An empty array is allowed only when the match type is query_string or request_header and the operator is Exist or Does Not Exist. The corresponding matching types are:
 <li>extension: File suffix such as jpg or txt;</li>
-<li> filename: For example, foo in foo.jpg;</li>
-<li> all (any request under the site): all;</li>
-<li> host: The host under the current site. For example, www.maxx55.com;</li>
-<li> URL path: The request for a URL path under the current site. For example, /example;</li>
-<li> URL full: The request for a complete URL under the current site, including the HTTP protocol, the host, and the path. For example: https://www.maxx55.cn/example;</li>
+<li> File name: For example, foo in foo.jpg;</li>
+<li> All (arbitrary request to the site): all;</li>
+<li> HOST: The host under the current site, for example, www.maxx55.com;</li>
+<li> URL Path: Request for the URL path under the current site, for example, /example;</li>
+<li> URL Full: complete URL request under the current site, must contain HTTP protocol, Host, and path, for example: https://www.maxx55.cn/example;</li>
 <li> client_country: Country/region identifier compliant with the ISO3166 standard;</li>
-<li> query_string: The parameter value in the query string of the requested URL under the current site. For example, cn and 1 in lang=cn&version=1;</li>
+<li> Query string: The parameter values in the query string of the URL requested under the current site, for example, cn and 1 in lang=cn&version=1; </li>
 <li> request_header: The value of the HTTP request header field. For example, zh-CN,zh;q=0.9 in Accept-Language:zh-CN,zh;q=0.9;</li>
 <li> client_ip: The client request IP carried in the current request, which supports IPv4/IPv6 and an IP range;</li>
-<li> request_protocol: The protocol of the current request. Valid values: HTTP and HTTPS;</li>
+<li>Request protocol: protocol of current request. Value range: HTTP, HTTPS;</li>
 <li> request_method: The method of the current request. Valid values: GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, OPTIONS, PATCH, COPY, LOCK, MKCOL, MOVE, PROPFIND, PROPPATCH, and UNLOCK. </li>
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Whether the parameter value is case insensitive. Default value: false.
+                     * Whether to ignore the case sensitivity of parameter values. Default value: `false`.
                      */
                     bool m_ignoreCase;
                     bool m_ignoreCaseHasBeenSet;
 
                     /**
-                     * The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
-<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
-<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+                     * Name of the parameter for the corresponding matching type. Valid when Target is set to the following values, and the value cannot be empty:
+<li> query_string: The parameter names in the query string of the URL requested under the current site, for example, lang and version in lang=cn&version=1; </li>
+<li> request_header: The name of the HTTP request header field. For example, Accept-Language in Accept-Language:zh-CN,zh;q=0.9. </li>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Whether the parameter name is case insensitive. Default value: `false`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to ignore the case sensitivity of parameter names. Default value: `false`.
                      */
                     bool m_ignoreNameCase;
                     bool m_ignoreNameCaseHasBeenSet;

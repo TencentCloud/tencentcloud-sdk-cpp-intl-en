@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Module settings of the exception rule
+                * Detailed module configuration of the exception rule.
                 */
                 class PartialModule : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
-                     * @return Module Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
+                     * 获取Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
+                     * @return Module Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
                      * 
                      */
                     std::string GetModule() const;
 
                     /**
-                     * 设置Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
-                     * @param _module Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
+                     * 设置Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
+                     * @param _module Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
                      * 
                      */
                     void SetModule(const std::string& _module);
@@ -80,15 +80,15 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the list of rule ids that require exceptions under the module.
-                     * @return Include Specifies the list of rule ids that require exceptions under the module.
+                     * 获取List of specific rule IDs that require exceptions under the module.
+                     * @return Include List of specific rule IDs that require exceptions under the module.
                      * 
                      */
                     std::vector<int64_t> GetInclude() const;
 
                     /**
-                     * 设置Specifies the list of rule ids that require exceptions under the module.
-                     * @param _include Specifies the list of rule ids that require exceptions under the module.
+                     * 设置List of specific rule IDs that require exceptions under the module.
+                     * @param _include List of specific rule IDs that require exceptions under the module.
                      * 
                      */
                     void SetInclude(const std::vector<int64_t>& _include);
@@ -103,16 +103,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
+                     * Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
                      */
                     std::string m_module;
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * Specifies the list of rule ids that require exceptions under the module.
+                     * List of specific rule IDs that require exceptions under the module.
                      */
                     std::vector<int64_t> m_include;
                     bool m_includeHasBeenSet;

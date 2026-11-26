@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The origin server configuration.
+                * Origin server configuration.
                 */
                 class Origin : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin server list.
-                     * @return Origins Origin server list.
+                     * 获取Primary origin server list.
+                     * @return Origins Primary origin server list.
                      * 
                      */
                     std::vector<std::string> GetOrigins() const;
 
                     /**
-                     * 设置Origin server list.
-                     * @param _origins Origin server list.
+                     * 设置Primary origin server list.
+                     * @param _origins Primary origin server list.
                      * 
                      */
                     void SetOrigins(const std::vector<std::string>& _origins);
@@ -89,27 +89,27 @@ namespace TencentCloud
                     bool BackupOriginsHasBeenSet() const;
 
                     /**
-                     * 获取Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
-                     * @return OriginPullProtocol Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
+                     * 获取Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
+                     * @return OriginPullProtocol Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
                      * 
                      */
                     std::string GetOriginPullProtocol() const;
 
                     /**
-                     * 设置Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
-                     * @param _originPullProtocol Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
+                     * 设置Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
+                     * @param _originPullProtocol Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
                      * 
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
@@ -122,23 +122,23 @@ namespace TencentCloud
                     bool OriginPullProtocolHasBeenSet() const;
 
                     /**
-                     * 获取When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
-                     * @return CosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+                     * 获取Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
+                     * @return CosPrivateAccess Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
                      * 
                      */
                     std::string GetCosPrivateAccess() const;
 
                     /**
-                     * 设置When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
-                     * @param _cosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+                     * 设置Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
+                     * @param _cosPrivateAccess Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
                      * 
                      */
                     void SetCosPrivateAccess(const std::string& _cosPrivateAccess);
@@ -153,7 +153,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Origin server list.
+                     * Primary origin server list.
                      */
                     std::vector<std::string> m_origins;
                     bool m_originsHasBeenSet;
@@ -165,18 +165,18 @@ namespace TencentCloud
                     bool m_backupOriginsHasBeenSet;
 
                     /**
-                     * Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
+                     * Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
                      */
                     std::string m_originPullProtocol;
                     bool m_originPullProtocolHasBeenSet;
 
                     /**
-                     * When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+                     * Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
                      */
                     std::string m_cosPrivateAccess;
                     bool m_cosPrivateAccessHasBeenSet;

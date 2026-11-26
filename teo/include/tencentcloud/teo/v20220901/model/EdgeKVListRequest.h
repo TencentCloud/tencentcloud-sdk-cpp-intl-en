@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
-                     * @return Prefix Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
+                     * 获取Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
+                     * @return Prefix Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
                      * 
                      */
                     std::string GetPrefix() const;
 
                     /**
-                     * 设置Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
-                     * @param _prefix Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
+                     * 设置Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
+                     * @param _prefix Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
                      * 
                      */
                     void SetPrefix(const std::string& _prefix);
@@ -106,18 +106,18 @@ namespace TencentCloud
                     bool PrefixHasBeenSet() const;
 
                     /**
-                     * 获取Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+                     * 获取Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
-                     * @return Cursor Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+                     * @return Cursor Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
                      * 
                      */
                     std::string GetCursor() const;
 
                     /**
-                     * 设置Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+                     * 设置Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
-                     * @param _cursor Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+                     * @param _cursor Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
                      * 
                      */
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CursorHasBeenSet() const;
 
                     /**
-                     * 获取Number of key names returned. Default value: 20. Maximum value: 1000.
-                     * @return Limit Number of key names returned. Default value: 20. Maximum value: 1000.
+                     * 获取Number of returned key names. Default value: 20. Maximum value: 1000.
+                     * @return Limit Number of returned key names. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of key names returned. Default value: 20. Maximum value: 1000.
-                     * @param _limit Number of key names returned. Default value: 20. Maximum value: 1000.
+                     * 设置Number of returned key names. Default value: 20. Maximum value: 1000.
+                     * @param _limit Number of returned key names. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -166,20 +166,20 @@ namespace TencentCloud
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
+                     * Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
                      */
                     std::string m_prefix;
                     bool m_prefixHasBeenSet;
 
                     /**
-                     * Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+                     * Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
                      */
                     std::string m_cursor;
                     bool m_cursorHasBeenSet;
 
                     /**
-                     * Number of key names returned. Default value: 20. Maximum value: 1000.
+                     * Number of returned key names. Default value: 20. Maximum value: 1000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

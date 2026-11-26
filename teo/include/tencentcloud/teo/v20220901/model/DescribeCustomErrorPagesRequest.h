@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.
-                     * @return ZoneId Zone ID.
+                     * 获取<p>Site ID.</p>
+                     * @return ZoneId <p>Site ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.
-                     * @param _zoneId Zone ID.
+                     * 设置<p>Site ID.</p>
+                     * @param _zoneId <p>Site ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,31 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
-                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
+                     * 获取<p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
+                     * @return Filters <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
-                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
+                     * 设置<p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
+                     * @param _filters <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -102,15 +86,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取The offset of paginated query. Default value: 0.
-                     * @return Offset The offset of paginated query. Default value: 0.
+                     * 获取<p>Paginated query offset. Default value: 0.</p>
+                     * @return Offset <p>Paginated query offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The offset of paginated query. Default value: 0.
-                     * @param _offset The offset of paginated query. Default value: 0.
+                     * 设置<p>Paginated query offset. Default value: 0.</p>
+                     * @param _offset <p>Paginated query offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -123,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The limit of paginated query. Default value: 20. Maximum value: 1,000.  
-                     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+                     * 获取<p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
+                     * @return Limit <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The limit of paginated query. Default value: 20. Maximum value: 1,000.  
-                     * @param _limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+                     * 设置<p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
+                     * @param _limit <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -146,29 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.
+                     * <p>Site ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
+                     * <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * The offset of paginated query. Default value: 0.
+                     * <p>Paginated query offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+                     * <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

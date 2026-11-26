@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Services referencing this origin group
+                * Origin server group reference service.
                 */
                 class OriginGroupReference : public AbstractModel
                 {
@@ -47,31 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
-                     * @return InstanceType Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
+                     * 获取Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
+                     * @return InstanceType Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
-                     * @param _instanceType Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
+                     * 设置Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
+                     * @param _instanceType Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the instances referencing the origin group
-                     * @return InstanceId ID of the instances referencing the origin group
+                     * 获取ID of the referenced instance.
+                     * @return InstanceId ID of the referenced instance.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the instances referencing the origin group
-                     * @param _instanceId ID of the instances referencing the origin group
+                     * 设置ID of the referenced instance.
+                     * @param _instanceId ID of the referenced instance.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -105,15 +105,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the instance name of the reference type.
-                     * @return InstanceName Specifies the instance name of the reference type.
+                     * 获取Instance name of the reference type.
+                     * @return InstanceName Instance name of the reference type.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Specifies the instance name of the reference type.
-                     * @param _instanceName Specifies the instance name of the reference type.
+                     * 设置Instance name of the reference type.
+                     * @param _instanceName Instance name of the reference type.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -147,15 +147,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Refers to the site name.
-                     * @return ZoneName Refers to the site name.
+                     * 获取Refer to the site name.
+                     * @return ZoneName Refer to the site name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Refers to the site name.
-                     * @param _zoneName Refers to the site name.
+                     * 设置Refer to the site name.
+                     * @param _zoneName Refer to the site name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -168,15 +168,15 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Refers to the site alias.
-                     * @return AliasZoneName Refers to the site alias.
+                     * 获取Refer to the site alias.
+                     * @return AliasZoneName Refer to the site alias.
                      * 
                      */
                     std::string GetAliasZoneName() const;
 
                     /**
-                     * 设置Refers to the site alias.
-                     * @param _aliasZoneName Refers to the site alias.
+                     * 设置Refer to the site alias.
+                     * @param _aliasZoneName Refer to the site alias.
                      * 
                      */
                     void SetAliasZoneName(const std::string& _aliasZoneName);
@@ -191,23 +191,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
+                     * Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * ID of the instances referencing the origin group
+                     * ID of the referenced instance.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Specifies the instance name of the reference type.
+                     * Instance name of the reference type.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -219,13 +219,13 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Refers to the site name.
+                     * Refer to the site name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Refers to the site alias.
+                     * Refer to the site alias.
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;

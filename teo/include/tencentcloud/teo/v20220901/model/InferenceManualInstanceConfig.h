@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Manual setting of inference service instance configuration.
+                * Manually set configurations for the inference service.
                 */
                 class InferenceManualInstanceConfig : public AbstractModel
                 {

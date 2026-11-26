@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site related with the accelerated domain name.
-                     * @return ZoneId ID of the site related with the accelerated domain name.
+                     * 获取Zone ID of the acceleration domain name.
+                     * @return ZoneId Zone ID of the acceleration domain name.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site related with the accelerated domain name.
-                     * @param _zoneId ID of the site related with the accelerated domain name.
+                     * 设置Zone ID of the acceleration domain name.
+                     * @param _zoneId Zone ID of the acceleration domain name.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of accelerated domain names to be modified.
-                     * @return DomainNames List of accelerated domain names to be modified.
+                     * 获取List of acceleration domain names for which to modify the execution status.
+                     * @return DomainNames List of acceleration domain names for which to modify the execution status.
                      * 
                      */
                     std::vector<std::string> GetDomainNames() const;
 
                     /**
-                     * 设置List of accelerated domain names to be modified.
-                     * @param _domainNames List of accelerated domain names to be modified.
+                     * 设置List of acceleration domain names for which to modify the execution status.
+                     * @param _domainNames List of acceleration domain names for which to modify the execution status.
                      * 
                      */
                     void SetDomainNames(const std::vector<std::string>& _domainNames);
@@ -85,23 +85,23 @@ namespace TencentCloud
                     bool DomainNamesHasBeenSet() const;
 
                     /**
-                     * 获取Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-                     * @return Status Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+                     * 获取Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+                     * @return Status Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-                     * @param _status Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+                     * 设置Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+                     * @param _status Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -114,23 +114,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
-                     * @return Force Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+                     * 获取Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
+                     * @return Force Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
                      * 
                      */
                     bool GetForce() const;
 
                     /**
-                     * 设置Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
-                     * @param _force Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+                     * 设置Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
+                     * @param _force Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
                      * 
                      */
                     void SetForce(const bool& _force);
@@ -145,29 +145,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site related with the accelerated domain name.
+                     * Zone ID of the acceleration domain name.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of accelerated domain names to be modified.
+                     * List of acceleration domain names for which to modify the execution status.
                      */
                     std::vector<std::string> m_domainNames;
                     bool m_domainNamesHasBeenSet;
 
                     /**
-                     * Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+                     * Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+                     * Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
                      */
                     bool m_force;
                     bool m_forceHasBeenSet;

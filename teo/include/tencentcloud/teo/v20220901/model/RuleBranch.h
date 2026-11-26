@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
-                     * @return Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+                     * 获取[Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+                     * @return Condition [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
-                     * @param _condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+                     * 设置[Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+                     * @param _condition [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -71,19 +71,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取[Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取[Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
+                     * @return Actions [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
                      * 
                      */
                     std::vector<RuleEngineAction> GetActions() const;
 
                     /**
-                     * 设置[Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置[Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
+                     * @param _actions [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
                      * 
                      */
                     void SetActions(const std::vector<RuleEngineAction>& _actions);
@@ -96,19 +92,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool ActionsHasBeenSet() const;
 
                     /**
-                     * 获取List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return SubRules List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
+                     * @return SubRules Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
                      * 
                      */
                     std::vector<std::shared_ptr<RuleEngineSubRule>> GetSubRules() const;
 
                     /**
-                     * 设置List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _subRules List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
+                     * @param _subRules Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
                      * 
                      */
                     void SetSubRules(const std::vector<std::shared_ptr<RuleEngineSubRule>>& _subRules);
@@ -123,21 +115,19 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+                     * [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
                      */
                     std::vector<RuleEngineAction> m_actions;
                     bool m_actionsHasBeenSet;
 
                     /**
-                     * List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
                      */
                     std::vector<std::shared_ptr<RuleEngineSubRule>> m_subRules;
                     bool m_subRulesHasBeenSet;

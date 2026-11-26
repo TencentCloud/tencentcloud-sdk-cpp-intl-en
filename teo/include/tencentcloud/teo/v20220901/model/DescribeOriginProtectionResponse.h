@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return OriginProtectionInfo Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Origin protection information.
+                     * @return OriginProtectionInfo Origin protection information.
                      * 
                      */
                     std::vector<OriginProtectionInfo> GetOriginProtectionInfo() const;
@@ -63,8 +61,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Origin protection information.
                      */
                     std::vector<OriginProtectionInfo> m_originProtectionInfo;
                     bool m_originProtectionInfoHasBeenSet;

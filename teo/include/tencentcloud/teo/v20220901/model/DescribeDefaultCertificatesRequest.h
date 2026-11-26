@@ -65,19 +65,19 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
-                     * @return Filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+                     * 获取Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
+                     * @return Filters Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
-                     * @param _filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+                     * 设置Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
+                     * @param _filters Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Offset for paginated queries. Default value: `0`
-                     * @return Offset Offset for paginated queries. Default value: `0`
+                     * 获取The offset of paginated query. Default value: 0.
+                     * @return Offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset for paginated queries. Default value: `0`
-                     * @param _offset Offset for paginated queries. Default value: `0`
+                     * 设置The offset of paginated query. Default value: 0.
+                     * @param _offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Default value: `20`. Maximum value: `100`.
-                     * @return Limit Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+                     * 获取Paginated query limit. Default value: 20, maximum value: 100.
+                     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Default value: `20`. Maximum value: `100`.
-                     * @param _limit Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+                     * 设置Paginated query limit. Default value: 20, maximum value: 100.
+                     * @param _limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -140,20 +140,20 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+                     * Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Offset for paginated queries. Default value: `0`
+                     * The offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+                     * Paginated query limit. Default value: 20, maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

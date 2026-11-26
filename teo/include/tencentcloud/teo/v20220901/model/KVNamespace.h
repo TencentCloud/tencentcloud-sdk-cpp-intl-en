@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * KV namespace information, including namespace basic attribute, capacity utilization and reference relationship. KV namespace is a container for edge function to store key-value pair data. It supports read-write operation in edge function through binding method.
+                * KV namespace information, including the basic attributes, storage capacity utilization, and reference relationships of the namespace. A KV namespace is a container for edge functions to store key-value pair data, which can be read and written in edge functions through binding.
                 */
                 class KVNamespace : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Namespace name. Has uniqueness in the same site.
-                     * @return Namespace Namespace name. Has uniqueness in the same site.
+                     * 获取Namespace name. It is unique within the same site.
+                     * @return Namespace Namespace name. It is unique within the same site.
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Namespace name. Has uniqueness in the same site.
-                     * @param _namespace Namespace name. Has uniqueness in the same site.
+                     * 设置Namespace name. It is unique within the same site.
+                     * @param _namespace Namespace name. It is unique within the same site.
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
-                     * @return Remark Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+                     * 获取Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+                     * @return Remark Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
-                     * @param _remark Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+                     * 设置Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+                     * @param _remark Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
-                     * @return Capacity Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+                     * 获取Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
+                     * @return Capacity Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
                      * 
                      */
                     int64_t GetCapacity() const;
 
                     /**
-                     * 设置Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
-                     * @param _capacity Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+                     * 设置Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
+                     * @param _capacity Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
                      * 
                      */
                     void SetCapacity(const int64_t& _capacity);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool CapacityHasBeenSet() const;
 
                     /**
-                     * 获取KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
-                     * @return CapacityUsed KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+                     * 获取Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
+                     * @return CapacityUsed Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
                      * 
                      */
                     int64_t GetCapacityUsed() const;
 
                     /**
-                     * 设置KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
-                     * @param _capacityUsed KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+                     * 设置Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
+                     * @param _capacityUsed Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
                      * 
                      */
                     void SetCapacityUsed(const int64_t& _capacityUsed);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CapacityUsedHasBeenSet() const;
 
                     /**
-                     * 获取List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
-                     * @return References List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+                     * 获取List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
+                     * @return References List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
                      * 
                      */
                     std::vector<ComponentReference> GetReferences() const;
 
                     /**
-                     * 设置List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
-                     * @param _references List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+                     * 设置List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
+                     * @param _references List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
                      * 
                      */
                     void SetReferences(const std::vector<ComponentReference>& _references);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ReferencesHasBeenSet() const;
 
                     /**
-                     * 获取The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
-                     * @return CreatedOn The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * 获取Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * @return CreatedOn Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
                      * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
-                     * 设置The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
-                     * @param _createdOn The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * 设置Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * @param _createdOn Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
                      * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool CreatedOnHasBeenSet() const;
 
                     /**
-                     * 获取The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
-                     * @return ModifiedOn The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * 获取Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * @return ModifiedOn Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
                      * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
-                     * 设置The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
-                     * @param _modifiedOn The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * 设置Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * @param _modifiedOn Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
                      * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
@@ -197,43 +197,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Namespace name. Has uniqueness in the same site.
+                     * Namespace name. It is unique within the same site.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+                     * Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+                     * Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
                      */
                     int64_t m_capacity;
                     bool m_capacityHasBeenSet;
 
                     /**
-                     * KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+                     * Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
                      */
                     int64_t m_capacityUsed;
                     bool m_capacityUsedHasBeenSet;
 
                     /**
-                     * List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+                     * List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
                      */
                     std::vector<ComponentReference> m_references;
                     bool m_referencesHasBeenSet;
 
                     /**
-                     * The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
                      */
                     std::string m_createdOn;
                     bool m_createdOnHasBeenSet;
 
                     /**
-                     * The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+                     * Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
                      */
                     std::string m_modifiedOn;
                     bool m_modifiedOnHasBeenSet;

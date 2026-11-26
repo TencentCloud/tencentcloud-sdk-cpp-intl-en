@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Active bot detection results.
+                * Proactive feature recognition check results for Bot.
                 */
                 class AlgDetectResult : public AbstractModel
                 {
@@ -47,51 +47,51 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
-                     * @return Result The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
+                     * 获取Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
+                     * @return Result Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
                      * 
                      */
                     std::string GetResult() const;
 
                     /**
-                     * 设置The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
-                     * @param _result The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
+                     * 设置Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
+                     * @param _result Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
                      * 
                      */
                     void SetResult(const std::string& _result);
@@ -104,35 +104,35 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
-                     * @return Action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+                     * 获取Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
+                     * @return Action Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
-                     * @param _action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+                     * 设置Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
+                     * @param _action Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -147,27 +147,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
+                     * Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+                     * Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

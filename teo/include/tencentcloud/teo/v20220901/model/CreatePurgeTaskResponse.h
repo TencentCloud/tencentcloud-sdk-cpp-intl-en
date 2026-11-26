@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the task.
-                     * @return JobId ID of the task.
+                     * 获取Task ID.
+                     * @return JobId Task ID.
                      * 
                      */
                     std::string GetJobId() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool JobIdHasBeenSet() const;
 
                     /**
-                     * 获取List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailedList List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of failed tasks and causes.
+                     * @return FailedList List of failed tasks and causes.
                      * 
                      */
                     std::vector<FailReason> GetFailedList() const;
@@ -77,14 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of the task.
+                     * Task ID.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;
 
                     /**
-                     * List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of failed tasks and causes.
                      */
                     std::vector<FailReason> m_failedList;
                     bool m_failedListHasBeenSet;

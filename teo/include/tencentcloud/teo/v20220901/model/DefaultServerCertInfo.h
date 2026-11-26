@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTPS server certificate configuration
+                * https server certificate configuration
                 */
                 class DefaultServerCertInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the server certificate ID.
-                     * @return CertId Specifies the server certificate ID.
+                     * 获取Server certificate ID.
+                     * @return CertId Server certificate ID.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置Specifies the server certificate ID.
-                     * @param _certId Specifies the server certificate ID.
+                     * 设置Server certificate ID.
+                     * @param _certId Server certificate ID.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -89,34 +89,26 @@ namespace TencentCloud
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type. valid values:.
+                     * 获取Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
-                     * @return Type Certificate type. valid values:.
+                     * @return Type Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Certificate type. valid values:.
+                     * 设置Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
-                     * @param _type Certificate type. valid values:.
+                     * @param _type Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
                      * 
                      */
@@ -172,15 +164,15 @@ namespace TencentCloud
                     bool EffectiveTimeHasBeenSet() const;
 
                     /**
-                     * 获取Common name of the cert.
-                     * @return CommonName Common name of the cert.
+                     * 获取Certificate common name.
+                     * @return CommonName Certificate common name.
                      * 
                      */
                     std::string GetCommonName() const;
 
                     /**
-                     * 设置Common name of the cert.
-                     * @param _commonName Common name of the cert.
+                     * 设置Certificate common name.
+                     * @param _commonName Certificate common name.
                      * 
                      */
                     void SetCommonName(const std::string& _commonName);
@@ -193,15 +185,15 @@ namespace TencentCloud
                     bool CommonNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the SAN domain of the certificate.
-                     * @return SubjectAltName Specifies the SAN domain of the certificate.
+                     * 获取SAN domain of the certificate.
+                     * @return SubjectAltName SAN domain of the certificate.
                      * 
                      */
                     std::vector<std::string> GetSubjectAltName() const;
 
                     /**
-                     * 设置Specifies the SAN domain of the certificate.
-                     * @param _subjectAltName Specifies the SAN domain of the certificate.
+                     * 设置SAN domain of the certificate.
+                     * @param _subjectAltName SAN domain of the certificate.
                      * 
                      */
                     void SetSubjectAltName(const std::vector<std::string>& _subjectAltName);
@@ -214,27 +206,27 @@ namespace TencentCloud
                     bool SubjectAltNameHasBeenSet() const;
 
                     /**
-                     * 获取Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
-                     * @return Status Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
+                     * 获取Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
+                     * @return Status Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
-                     * @param _status Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
+                     * 设置Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
+                     * @param _status Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -247,15 +239,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the failure reason when the Status is failed.
-                     * @return Message Indicates the failure reason when the Status is failed.
+                     * 获取If the Status is failed, this field returns the failure reason.
+                     * @return Message If the Status is failed, this field returns the failure reason.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Indicates the failure reason when the Status is failed.
-                     * @param _message Indicates the failure reason when the Status is failed.
+                     * 设置If the Status is failed, this field returns the failure reason.
+                     * @param _message If the Status is failed, this field returns the failure reason.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -291,7 +283,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the server certificate ID.
+                     * Server certificate ID.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;
@@ -303,11 +295,9 @@ namespace TencentCloud
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Certificate type. valid values:.
+                     * Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
                      */
                     std::string m_type;
@@ -326,28 +316,28 @@ namespace TencentCloud
                     bool m_effectiveTimeHasBeenSet;
 
                     /**
-                     * Common name of the cert.
+                     * Certificate common name.
                      */
                     std::string m_commonName;
                     bool m_commonNameHasBeenSet;
 
                     /**
-                     * Specifies the SAN domain of the certificate.
+                     * SAN domain of the certificate.
                      */
                     std::vector<std::string> m_subjectAltName;
                     bool m_subjectAltNameHasBeenSet;
 
                     /**
-                     * Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
+                     * Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Indicates the failure reason when the Status is failed.
+                     * If the Status is failed, this field returns the failure reason.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

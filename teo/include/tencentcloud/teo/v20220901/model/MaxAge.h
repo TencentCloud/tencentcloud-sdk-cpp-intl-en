@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Browser cache rule configuration, which is used to set the default value of `MaxAge` and is disabled by default.
+                * Browser cache rule configuration, used to set the default MaxAge. Disabled by default.
                 */
                 class MaxAge : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
-                     * @return FollowOrigin Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+                     * 获取Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
+                     * @return FollowOrigin Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
                      * 
                      */
                     std::string GetFollowOrigin() const;
 
                     /**
-                     * 设置Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
-                     * @param _followOrigin Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+                     * 设置Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
+                     * @param _followOrigin Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
                      * 
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool FollowOriginHasBeenSet() const;
 
                     /**
-                     * 获取MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
-                     * @return MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+                     * 获取MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
+                     * @return MaxAgeTime MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
                      * 
                      */
                     int64_t GetMaxAgeTime() const;
 
                     /**
-                     * 设置MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
-                     * @param _maxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+                     * 设置MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
+                     * @param _maxAgeTime MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
                      * 
                      */
                     void SetMaxAgeTime(const int64_t& _maxAgeTime);
@@ -103,16 +103,16 @@ Specifies the time when the cache is disabled if set to 0.
                 private:
 
                     /**
-                     * Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+                     * Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
                      */
                     std::string m_followOrigin;
                     bool m_followOriginHasBeenSet;
 
                     /**
-                     * MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+                     * MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
                      */
                     int64_t m_maxAgeTime;
                     bool m_maxAgeTimeHasBeenSet;

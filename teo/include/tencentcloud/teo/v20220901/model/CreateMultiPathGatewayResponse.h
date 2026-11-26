@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the gateway ID.
-                     * @return GatewayId Specifies the gateway ID.
+                     * 获取Gateway ID.
+                     * @return GatewayId Gateway ID.
                      * 
                      */
                     std::string GetGatewayId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the gateway ID.
+                     * Gateway ID.
                      */
                     std::string m_gatewayId;
                     bool m_gatewayIdHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * When origin ACLs are updated, this field will be returned with the next version of the IP range to take effect, including a comparison with the currently effective IP range.
+                * When the origin-pull IP range is updated, this field will return the origin-pull IP range that will be effective in the next version, including a comparison with the currently effective origin-pull IP range.
                 */
                 class NextOriginACL : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Version number.
-                     * @return Version Version number.
+                     * 获取Version.
+                     * @return Version Version.
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Version number.
-                     * @param _version Version number.
+                     * 设置Version.
+                     * @param _version Version.
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
-                     * @return PlannedActiveTime Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+                     * 获取Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+                     * @return PlannedActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     std::string GetPlannedActiveTime() const;
 
                     /**
-                     * 设置Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
-                     * @param _plannedActiveTime Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+                     * 设置Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+                     * @param _plannedActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     void SetPlannedActiveTime(const std::string& _plannedActiveTime);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool PlannedActiveTimeHasBeenSet() const;
 
                     /**
-                     * 获取IP range details.
-                     * @return EntireAddresses IP range details.
+                     * 获取Origin-pull IP range details.
+                     * @return EntireAddresses Origin-pull IP range details.
                      * 
                      */
                     Addresses GetEntireAddresses() const;
 
                     /**
-                     * 设置IP range details.
-                     * @param _entireAddresses IP range details.
+                     * 设置Origin-pull IP range details.
+                     * @param _entireAddresses Origin-pull IP range details.
                      * 
                      */
                     void SetEntireAddresses(const Addresses& _entireAddresses);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool EntireAddressesHasBeenSet() const;
 
                     /**
-                     * 获取The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
-                     * @return AddedAddresses The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+                     * 获取Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
+                     * @return AddedAddresses Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
                      * 
                      */
                     Addresses GetAddedAddresses() const;
 
                     /**
-                     * 设置The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
-                     * @param _addedAddresses The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+                     * 设置Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
+                     * @param _addedAddresses Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
                      * 
                      */
                     void SetAddedAddresses(const Addresses& _addedAddresses);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AddedAddressesHasBeenSet() const;
 
                     /**
-                     * 获取The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
-                     * @return RemovedAddresses The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+                     * 获取The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
+                     * @return RemovedAddresses The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
                      * 
                      */
                     Addresses GetRemovedAddresses() const;
 
                     /**
-                     * 设置The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
-                     * @param _removedAddresses The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+                     * 设置The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
+                     * @param _removedAddresses The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
                      * 
                      */
                     void SetRemovedAddresses(const Addresses& _removedAddresses);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool RemovedAddressesHasBeenSet() const;
 
                     /**
-                     * 获取The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
-                     * @return NoChangeAddresses The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+                     * 获取The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
+                     * @return NoChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
                      * 
                      */
                     Addresses GetNoChangeAddresses() const;
 
                     /**
-                     * 设置The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
-                     * @param _noChangeAddresses The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+                     * 设置The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
+                     * @param _noChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
                      * 
                      */
                     void SetNoChangeAddresses(const Addresses& _noChangeAddresses);
@@ -176,37 +176,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Version number.
+                     * Version.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+                     * Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
                      */
                     std::string m_plannedActiveTime;
                     bool m_plannedActiveTimeHasBeenSet;
 
                     /**
-                     * IP range details.
+                     * Origin-pull IP range details.
                      */
                     Addresses m_entireAddresses;
                     bool m_entireAddressesHasBeenSet;
 
                     /**
-                     * The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+                     * Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
                      */
                     Addresses m_addedAddresses;
                     bool m_addedAddressesHasBeenSet;
 
                     /**
-                     * The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+                     * The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
                      */
                     Addresses m_removedAddresses;
                     bool m_removedAddressesHasBeenSet;
 
                     /**
-                     * The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+                     * The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
                      */
                     Addresses m_noChangeAddresses;
                     bool m_noChangeAddressesHasBeenSet;

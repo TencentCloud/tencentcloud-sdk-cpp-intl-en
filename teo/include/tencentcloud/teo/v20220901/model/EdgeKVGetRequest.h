@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
-                     * @return Namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+                     * 获取Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
+                     * @return Namespace Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
-                     * @param _namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+                     * 设置Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
+                     * @param _namespace Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
-                     * @return Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+                     * 获取Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
+                     * @return Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
                      * 
                      */
                     std::vector<std::string> GetKeys() const;
 
                     /**
-                     * 设置Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
-                     * @param _keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+                     * 设置Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
+                     * @param _keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
                      * 
                      */
                     void SetKeys(const std::vector<std::string>& _keys);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+                     * Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+                     * Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
                      */
                     std::vector<std::string> m_keys;
                     bool m_keysHasBeenSet;

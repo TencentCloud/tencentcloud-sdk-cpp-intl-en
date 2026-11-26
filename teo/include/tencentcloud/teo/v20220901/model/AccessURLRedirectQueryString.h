@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access URL redirect configuration parameters.
+                * Access URL redirection configuration parameters.
                 */
                 class AccessURLRedirectQueryString : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
-                     * @return Action Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+                     * 获取Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
+                     * @return Action Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
-                     * @param _action Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+                     * 设置Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
+                     * @param _action Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+                     * Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

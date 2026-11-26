@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
-                     * @return AliasNames The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+                     * 获取Alias domain name pending deletion. If it is empty, no deletion operation is performed.
+                     * @return AliasNames Alias domain name pending deletion. If it is empty, no deletion operation is performed.
                      * 
                      */
                     std::vector<std::string> GetAliasNames() const;
 
                     /**
-                     * 设置The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
-                     * @param _aliasNames The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+                     * 设置Alias domain name pending deletion. If it is empty, no deletion operation is performed.
+                     * @param _aliasNames Alias domain name pending deletion. If it is empty, no deletion operation is performed.
                      * 
                      */
                     void SetAliasNames(const std::vector<std::string>& _aliasNames);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+                     * Alias domain name pending deletion. If it is empty, no deletion operation is performed.
                      */
                     std::vector<std::string> m_aliasNames;
                     bool m_aliasNamesHasBeenSet;

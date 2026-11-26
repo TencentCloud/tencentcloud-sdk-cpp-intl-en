@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CC configuration item.
+                * cc configuration item.
                 */
                 class CC : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取WAF switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch WAF switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Waf switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Waf switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置WAF switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch WAF switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Waf switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Waf switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取ID of the policy
-                     * @return PolicyId ID of the policy
+                     * 获取Policy ID.
+                     * @return PolicyId Policy ID.
                      * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
-                     * 设置ID of the policy
-                     * @param _policyId ID of the policy
+                     * 设置Policy ID.
+                     * @param _policyId Policy ID.
                      * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * WAF switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Waf switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * ID of the policy
+                     * Policy ID.
                      */
                     int64_t m_policyId;
                     bool m_policyIdHasBeenSet;

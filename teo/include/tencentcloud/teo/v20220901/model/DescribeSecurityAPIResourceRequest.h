@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.		
-                     * @return ZoneId Zone ID.		
+                     * 获取Zone ID.	
+                     * @return ZoneId Zone ID.	
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.		
-                     * @param _zoneId Zone ID.		
+                     * 设置Zone ID.	
+                     * @param _zoneId Zone ID.	
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Paginated query limit. default value: 20, maximum value: 100.
-                     * @return Limit Paginated query limit. default value: 20, maximum value: 100.
+                     * 获取Paginated query limit. Default value: 20, maximum value: 100.
+                     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Paginated query limit. default value: 20, maximum value: 100.
-                     * @param _limit Paginated query limit. default value: 20, maximum value: 100.
+                     * 设置Paginated query limit. Default value: 20, maximum value: 100.
+                     * @param _limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.		
+                     * Zone ID.	
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Paginated query limit. default value: 20, maximum value: 100.
+                     * Paginated query limit. Default value: 20, maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Security template settings
+                * Security template configuration
                 */
                 class TemplateConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The template ID.
-                     * @return TemplateId The template ID.
+                     * 获取Template ID.
+                     * @return TemplateId Template ID.
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置The template ID.
-                     * @param _templateId The template ID.
+                     * 设置Template ID.
+                     * @param _templateId Template ID.
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取The template name.
-                     * @return TemplateName The template name.
+                     * 获取Template Name
+                     * @return TemplateName Template Name
                      * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
-                     * 设置The template name.
-                     * @param _templateName The template name.
+                     * 设置Template Name
+                     * @param _templateName Template Name
                      * 
                      */
                     void SetTemplateName(const std::string& _templateName);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The template ID.
+                     * Template ID.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * The template name.
+                     * Template Name
                      */
                     std::string m_templateName;
                     bool m_templateNameHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Standard debugging
+                * Supports the standard debug struct
                 */
                 class StandardDebug : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-                     * @return Switch Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
+                     * 获取Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-                     * @param _switch Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
+                     * 设置Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
-                     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * 获取Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
+                     * @return AllowClientIPList Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
                      * 
                      */
                     std::vector<std::string> GetAllowClientIPList() const;
 
                     /**
-                     * 设置The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
-                     * @param _allowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * 设置Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
+                     * @param _allowClientIPList Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
                      * 
                      */
                     void SetAllowClientIPList(const std::vector<std::string>& _allowClientIPList);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool AllowClientIPListHasBeenSet() const;
 
                     /**
-                     * 获取The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
-                     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+                     * 获取Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
+                     * @return ExpireTime Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
-                     * @param _expireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+                     * 设置Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
+                     * @param _expireTime Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -120,21 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
+                     * Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+                     * Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
                      */
                     std::vector<std::string> m_allowClientIPList;
                     bool m_allowClientIPListHasBeenSet;
 
                     /**
-                     * The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+                     * Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

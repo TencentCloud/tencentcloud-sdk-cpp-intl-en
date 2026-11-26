@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.		
-                     * @return ZoneId Zone ID.		
+                     * 获取Zone ID.	
+                     * @return ZoneId Zone ID.	
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.		
-                     * @param _zoneId Zone ID.		
+                     * 设置Zone ID.	
+                     * @param _zoneId Zone ID.	
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ID list of API resources to be deleted.
-                     * @return APIResourceIds Specifies the ID list of API resources to be deleted.
+                     * 获取List of API resource IDs to delete.
+                     * @return APIResourceIds List of API resource IDs to delete.
                      * 
                      */
                     std::vector<std::string> GetAPIResourceIds() const;
 
                     /**
-                     * 设置Specifies the ID list of API resources to be deleted.
-                     * @param _aPIResourceIds Specifies the ID list of API resources to be deleted.
+                     * 设置List of API resource IDs to delete.
+                     * @param _aPIResourceIds List of API resource IDs to delete.
                      * 
                      */
                     void SetAPIResourceIds(const std::vector<std::string>& _aPIResourceIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.		
+                     * Zone ID.	
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Specifies the ID list of API resources to be deleted.
+                     * List of API resource IDs to delete.
                      */
                     std::vector<std::string> m_aPIResourceIds;
                     bool m_aPIResourceIdsHasBeenSet;

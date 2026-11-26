@@ -23,28 +23,14 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/rum/v20210622/model/CreateLogExportRequest.h>
-#include <tencentcloud/rum/v20210622/model/CreateLogExportResponse.h>
-#include <tencentcloud/rum/v20210622/model/CreateOfflineLogConfigRequest.h>
-#include <tencentcloud/rum/v20210622/model/CreateOfflineLogConfigResponse.h>
-#include <tencentcloud/rum/v20210622/model/CreateProjectRequest.h>
-#include <tencentcloud/rum/v20210622/model/CreateProjectResponse.h>
 #include <tencentcloud/rum/v20210622/model/CreateReleaseFileRequest.h>
 #include <tencentcloud/rum/v20210622/model/CreateReleaseFileResponse.h>
 #include <tencentcloud/rum/v20210622/model/CreateStarProjectRequest.h>
 #include <tencentcloud/rum/v20210622/model/CreateStarProjectResponse.h>
-#include <tencentcloud/rum/v20210622/model/CreateTawInstanceRequest.h>
-#include <tencentcloud/rum/v20210622/model/CreateTawInstanceResponse.h>
 #include <tencentcloud/rum/v20210622/model/CreateWhitelistRequest.h>
 #include <tencentcloud/rum/v20210622/model/CreateWhitelistResponse.h>
 #include <tencentcloud/rum/v20210622/model/DeleteInstanceRequest.h>
 #include <tencentcloud/rum/v20210622/model/DeleteInstanceResponse.h>
-#include <tencentcloud/rum/v20210622/model/DeleteLogExportRequest.h>
-#include <tencentcloud/rum/v20210622/model/DeleteLogExportResponse.h>
-#include <tencentcloud/rum/v20210622/model/DeleteOfflineLogConfigRequest.h>
-#include <tencentcloud/rum/v20210622/model/DeleteOfflineLogConfigResponse.h>
-#include <tencentcloud/rum/v20210622/model/DeleteOfflineLogRecordRequest.h>
-#include <tencentcloud/rum/v20210622/model/DeleteOfflineLogRecordResponse.h>
 #include <tencentcloud/rum/v20210622/model/DeleteProjectRequest.h>
 #include <tencentcloud/rum/v20210622/model/DeleteProjectResponse.h>
 #include <tencentcloud/rum/v20210622/model/DeleteReleaseFileRequest.h>
@@ -83,8 +69,6 @@
 #include <tencentcloud/rum/v20210622/model/DescribeDataPerformancePageResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeDataPerformancePageV2Request.h>
 #include <tencentcloud/rum/v20210622/model/DescribeDataPerformancePageV2Response.h>
-#include <tencentcloud/rum/v20210622/model/DescribeDataPerformanceProjectRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeDataPerformanceProjectResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeDataPvUrlInfoRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeDataPvUrlInfoResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeDataPvUrlStatisticsRequest.h>
@@ -117,16 +101,6 @@
 #include <tencentcloud/rum/v20210622/model/DescribeDataWebVitalsPageV2Response.h>
 #include <tencentcloud/rum/v20210622/model/DescribeErrorRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeErrorResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeLogExportsRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeLogExportsResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeLogListRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeLogListResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeOfflineLogConfigsRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeOfflineLogConfigsResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeOfflineLogRecordsRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeOfflineLogRecordsResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeOfflineLogsRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeOfflineLogsResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeProjectLimitsRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeProjectLimitsResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeProjectsRequest.h>
@@ -187,39 +161,18 @@ namespace TencentCloud
                 RumClient(const Credential &credential, const std::string &region);
                 RumClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Core::Error, Model::CreateLogExportResponse> CreateLogExportOutcome;
-                typedef std::future<CreateLogExportOutcome> CreateLogExportOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::CreateLogExportRequest&, CreateLogExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLogExportAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateOfflineLogConfigResponse> CreateOfflineLogConfigOutcome;
-                typedef std::future<CreateOfflineLogConfigOutcome> CreateOfflineLogConfigOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::CreateOfflineLogConfigRequest&, CreateOfflineLogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOfflineLogConfigAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateProjectResponse> CreateProjectOutcome;
-                typedef std::future<CreateProjectOutcome> CreateProjectOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::CreateProjectRequest&, CreateProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateReleaseFileResponse> CreateReleaseFileOutcome;
                 typedef std::future<CreateReleaseFileOutcome> CreateReleaseFileOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::CreateReleaseFileRequest&, CreateReleaseFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReleaseFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateStarProjectResponse> CreateStarProjectOutcome;
                 typedef std::future<CreateStarProjectOutcome> CreateStarProjectOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::CreateStarProjectRequest&, CreateStarProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStarProjectAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateTawInstanceResponse> CreateTawInstanceOutcome;
-                typedef std::future<CreateTawInstanceOutcome> CreateTawInstanceOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::CreateTawInstanceRequest&, CreateTawInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTawInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateWhitelistResponse> CreateWhitelistOutcome;
                 typedef std::future<CreateWhitelistOutcome> CreateWhitelistOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::CreateWhitelistRequest&, CreateWhitelistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWhitelistAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteInstanceResponse> DeleteInstanceOutcome;
                 typedef std::future<DeleteInstanceOutcome> DeleteInstanceOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DeleteInstanceRequest&, DeleteInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstanceAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteLogExportResponse> DeleteLogExportOutcome;
-                typedef std::future<DeleteLogExportOutcome> DeleteLogExportOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DeleteLogExportRequest&, DeleteLogExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLogExportAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteOfflineLogConfigResponse> DeleteOfflineLogConfigOutcome;
-                typedef std::future<DeleteOfflineLogConfigOutcome> DeleteOfflineLogConfigOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DeleteOfflineLogConfigRequest&, DeleteOfflineLogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOfflineLogConfigAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteOfflineLogRecordResponse> DeleteOfflineLogRecordOutcome;
-                typedef std::future<DeleteOfflineLogRecordOutcome> DeleteOfflineLogRecordOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DeleteOfflineLogRecordRequest&, DeleteOfflineLogRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOfflineLogRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteProjectResponse> DeleteProjectOutcome;
                 typedef std::future<DeleteProjectOutcome> DeleteProjectOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DeleteProjectRequest&, DeleteProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProjectAsyncHandler;
@@ -277,9 +230,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDataPerformancePageV2Response> DescribeDataPerformancePageV2Outcome;
                 typedef std::future<DescribeDataPerformancePageV2Outcome> DescribeDataPerformancePageV2OutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeDataPerformancePageV2Request&, DescribeDataPerformancePageV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataPerformancePageV2AsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeDataPerformanceProjectResponse> DescribeDataPerformanceProjectOutcome;
-                typedef std::future<DescribeDataPerformanceProjectOutcome> DescribeDataPerformanceProjectOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeDataPerformanceProjectRequest&, DescribeDataPerformanceProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataPerformanceProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDataPvUrlInfoResponse> DescribeDataPvUrlInfoOutcome;
                 typedef std::future<DescribeDataPvUrlInfoOutcome> DescribeDataPvUrlInfoOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeDataPvUrlInfoRequest&, DescribeDataPvUrlInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataPvUrlInfoAsyncHandler;
@@ -328,21 +278,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeErrorResponse> DescribeErrorOutcome;
                 typedef std::future<DescribeErrorOutcome> DescribeErrorOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeErrorRequest&, DescribeErrorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeErrorAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeLogExportsResponse> DescribeLogExportsOutcome;
-                typedef std::future<DescribeLogExportsOutcome> DescribeLogExportsOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeLogExportsRequest&, DescribeLogExportsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogExportsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeLogListResponse> DescribeLogListOutcome;
-                typedef std::future<DescribeLogListOutcome> DescribeLogListOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeLogListRequest&, DescribeLogListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeOfflineLogConfigsResponse> DescribeOfflineLogConfigsOutcome;
-                typedef std::future<DescribeOfflineLogConfigsOutcome> DescribeOfflineLogConfigsOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeOfflineLogConfigsRequest&, DescribeOfflineLogConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOfflineLogConfigsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeOfflineLogRecordsResponse> DescribeOfflineLogRecordsOutcome;
-                typedef std::future<DescribeOfflineLogRecordsOutcome> DescribeOfflineLogRecordsOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeOfflineLogRecordsRequest&, DescribeOfflineLogRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOfflineLogRecordsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeOfflineLogsResponse> DescribeOfflineLogsOutcome;
-                typedef std::future<DescribeOfflineLogsOutcome> DescribeOfflineLogsOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeOfflineLogsRequest&, DescribeOfflineLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOfflineLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeProjectLimitsResponse> DescribeProjectLimitsOutcome;
                 typedef std::future<DescribeProjectLimitsOutcome> DescribeProjectLimitsOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeProjectLimitsRequest&, DescribeProjectLimitsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectLimitsAsyncHandler;
@@ -416,37 +351,6 @@ namespace TencentCloud
 
 
                 /**
-                 *API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to create a log download task.
-
-Default API request rate limit: 20 requests/sec.
-                 * @param req CreateLogExportRequest
-                 * @return CreateLogExportOutcome
-                 */
-                CreateLogExportOutcome CreateLogExport(const Model::CreateLogExportRequest &request);
-                void CreateLogExportAsync(const Model::CreateLogExportRequest& request, const CreateLogExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateLogExportOutcomeCallable CreateLogExportCallable(const Model::CreateLogExportRequest& request);
-
-                /**
-                 *This API is used to create an offline log listener to report offline logs of particular users.
-                 * @param req CreateOfflineLogConfigRequest
-                 * @return CreateOfflineLogConfigOutcome
-                 */
-                CreateOfflineLogConfigOutcome CreateOfflineLogConfig(const Model::CreateOfflineLogConfigRequest &request);
-                void CreateOfflineLogConfigAsync(const Model::CreateOfflineLogConfigRequest& request, const CreateOfflineLogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateOfflineLogConfigOutcomeCallable CreateOfflineLogConfigCallable(const Model::CreateOfflineLogConfigRequest& request);
-
-                /**
-                 *This API is used to create a RUM application which belongs to a specific team.
-                 * @param req CreateProjectRequest
-                 * @return CreateProjectOutcome
-                 */
-                CreateProjectOutcome CreateProject(const Model::CreateProjectRequest &request);
-                void CreateProjectAsync(const Model::CreateProjectRequest& request, const CreateProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateProjectOutcomeCallable CreateProjectCallable(const Model::CreateProjectRequest& request);
-
-                /**
                  *This API is used to create a file record for the specified project.
                  * @param req CreateReleaseFileRequest
                  * @return CreateReleaseFileOutcome
@@ -465,15 +369,6 @@ Default API request rate limit: 20 requests/sec.
                 CreateStarProjectOutcomeCallable CreateStarProjectCallable(const Model::CreateStarProjectRequest& request);
 
                 /**
-                 *This API is used to create a RUM business system.
-                 * @param req CreateTawInstanceRequest
-                 * @return CreateTawInstanceOutcome
-                 */
-                CreateTawInstanceOutcome CreateTawInstance(const Model::CreateTawInstanceRequest &request);
-                void CreateTawInstanceAsync(const Model::CreateTawInstanceRequest& request, const CreateTawInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateTawInstanceOutcomeCallable CreateTawInstanceCallable(const Model::CreateTawInstanceRequest& request);
-
-                /**
                  *This API is used to create an allowlist.
                  * @param req CreateWhitelistRequest
                  * @return CreateWhitelistOutcome
@@ -490,37 +385,6 @@ Default API request rate limit: 20 requests/sec.
                 DeleteInstanceOutcome DeleteInstance(const Model::DeleteInstanceRequest &request);
                 void DeleteInstanceAsync(const Model::DeleteInstanceRequest& request, const DeleteInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteInstanceOutcomeCallable DeleteInstanceCallable(const Model::DeleteInstanceRequest& request);
-
-                /**
-                 *API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to delete a log download task.
-
-Default API request rate limit: 20 requests/sec.
-                 * @param req DeleteLogExportRequest
-                 * @return DeleteLogExportOutcome
-                 */
-                DeleteLogExportOutcome DeleteLogExport(const Model::DeleteLogExportRequest &request);
-                void DeleteLogExportAsync(const Model::DeleteLogExportRequest& request, const DeleteLogExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteLogExportOutcomeCallable DeleteLogExportCallable(const Model::DeleteLogExportRequest& request);
-
-                /**
-                 *This API is used to delete an offline RUM log listener. Then, offline logs of particular users will not be reported.
-                 * @param req DeleteOfflineLogConfigRequest
-                 * @return DeleteOfflineLogConfigOutcome
-                 */
-                DeleteOfflineLogConfigOutcome DeleteOfflineLogConfig(const Model::DeleteOfflineLogConfigRequest &request);
-                void DeleteOfflineLogConfigAsync(const Model::DeleteOfflineLogConfigRequest& request, const DeleteOfflineLogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteOfflineLogConfigOutcomeCallable DeleteOfflineLogConfigCallable(const Model::DeleteOfflineLogConfigRequest& request);
-
-                /**
-                 *This API is used to delete an offline log record.
-                 * @param req DeleteOfflineLogRecordRequest
-                 * @return DeleteOfflineLogRecordOutcome
-                 */
-                DeleteOfflineLogRecordOutcome DeleteOfflineLogRecord(const Model::DeleteOfflineLogRecordRequest &request);
-                void DeleteOfflineLogRecordAsync(const Model::DeleteOfflineLogRecordRequest& request, const DeleteOfflineLogRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteOfflineLogRecordOutcomeCallable DeleteOfflineLogRecordCallable(const Model::DeleteOfflineLogRecordRequest& request);
 
                 /**
                  *This API is used to delete the specified RUM project.
@@ -694,15 +558,6 @@ Default API request rate limit: 20 requests/sec.
                 DescribeDataPerformancePageV2OutcomeCallable DescribeDataPerformancePageV2Callable(const Model::DescribeDataPerformancePageV2Request& request);
 
                 /**
-                 *This API is used to get the PerformanceProject information.
-                 * @param req DescribeDataPerformanceProjectRequest
-                 * @return DescribeDataPerformanceProjectOutcome
-                 */
-                DescribeDataPerformanceProjectOutcome DescribeDataPerformanceProject(const Model::DescribeDataPerformanceProjectRequest &request);
-                void DescribeDataPerformanceProjectAsync(const Model::DescribeDataPerformanceProjectRequest& request, const DescribeDataPerformanceProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeDataPerformanceProjectOutcomeCallable DescribeDataPerformanceProjectCallable(const Model::DescribeDataPerformanceProjectRequest& request);
-
-                /**
                  *This API is used to get the PvUrlInfo information.
                  * @param req DescribeDataPvUrlInfoRequest
                  * @return DescribeDataPvUrlInfoOutcome
@@ -847,55 +702,6 @@ Web Vitals for page loading performance are key performance metrics.
                 DescribeErrorOutcome DescribeError(const Model::DescribeErrorRequest &request);
                 void DescribeErrorAsync(const Model::DescribeErrorRequest& request, const DescribeErrorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeErrorOutcomeCallable DescribeErrorCallable(const Model::DescribeErrorRequest& request);
-
-                /**
-                 *API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to get the list of log download tasks.
-
-Default API request rate limit: 20 requests/sec.
-                 * @param req DescribeLogExportsRequest
-                 * @return DescribeLogExportsOutcome
-                 */
-                DescribeLogExportsOutcome DescribeLogExports(const Model::DescribeLogExportsRequest &request);
-                void DescribeLogExportsAsync(const Model::DescribeLogExportsRequest& request, const DescribeLogExportsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeLogExportsOutcomeCallable DescribeLogExportsCallable(const Model::DescribeLogExportsRequest& request);
-
-                /**
-                 *This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
-                 * @param req DescribeLogListRequest
-                 * @return DescribeLogListOutcome
-                 */
-                DescribeLogListOutcome DescribeLogList(const Model::DescribeLogListRequest &request);
-                void DescribeLogListAsync(const Model::DescribeLogListRequest& request, const DescribeLogListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeLogListOutcomeCallable DescribeLogListCallable(const Model::DescribeLogListRequest& request);
-
-                /**
-                 *This API is used to get the configuration of the set offline log listener and return the unique user ID.
-                 * @param req DescribeOfflineLogConfigsRequest
-                 * @return DescribeOfflineLogConfigsOutcome
-                 */
-                DescribeOfflineLogConfigsOutcome DescribeOfflineLogConfigs(const Model::DescribeOfflineLogConfigsRequest &request);
-                void DescribeOfflineLogConfigsAsync(const Model::DescribeOfflineLogConfigsRequest& request, const DescribeOfflineLogConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeOfflineLogConfigsOutcomeCallable DescribeOfflineLogConfigsCallable(const Model::DescribeOfflineLogConfigsRequest& request);
-
-                /**
-                 *This API is used to get all (up to 100) offline log records.
-                 * @param req DescribeOfflineLogRecordsRequest
-                 * @return DescribeOfflineLogRecordsOutcome
-                 */
-                DescribeOfflineLogRecordsOutcome DescribeOfflineLogRecords(const Model::DescribeOfflineLogRecordsRequest &request);
-                void DescribeOfflineLogRecordsAsync(const Model::DescribeOfflineLogRecordsRequest& request, const DescribeOfflineLogRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeOfflineLogRecordsOutcomeCallable DescribeOfflineLogRecordsCallable(const Model::DescribeOfflineLogRecordsRequest& request);
-
-                /**
-                 *This API is used to get the specified offline log.
-                 * @param req DescribeOfflineLogsRequest
-                 * @return DescribeOfflineLogsOutcome
-                 */
-                DescribeOfflineLogsOutcome DescribeOfflineLogs(const Model::DescribeOfflineLogsRequest &request);
-                void DescribeOfflineLogsAsync(const Model::DescribeOfflineLogsRequest& request, const DescribeOfflineLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeOfflineLogsOutcomeCallable DescribeOfflineLogsCallable(const Model::DescribeOfflineLogsRequest& request);
 
                 /**
                  *This API is used to get the sampling information of an application’s reporting APIs.

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration of gRPC support
+                * Grpc configuration item
                 */
                 class Grpc : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable gRPC support. Valid values: 
+                     * 获取Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-                     * @return Switch Whether to enable gRPC support. Valid values: 
+<li>off: Disable.</li>
+                     * @return Switch Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable gRPC support. Valid values: 
+                     * 设置Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-                     * @param _switch Whether to enable gRPC support. Valid values: 
+<li>off: Disable.</li>
+                     * @param _switch Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable gRPC support. Valid values: 
+                     * Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

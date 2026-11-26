@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220901/model/CustomVariable.h>
+#include <tencentcloud/teo/v20220901/model/CustomVariableOperation.h>
 #include <tencentcloud/teo/v20220901/model/RuleBranch.h>
 
 
@@ -36,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule details of the rule engine.
+                * Rule details of the engine rule.
                 */
                 class RuleEngineItem : public AbstractModel
                 {
@@ -48,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
-                     * @return Status Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+                     * 获取<p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
+                     * @return Status <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
-                     * @param _status Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+                     * 设置<p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
+                     * @param _status <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -69,15 +71,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
-                     * @return RuleId Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+                     * 获取<p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
+                     * @return RuleId <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
-                     * @param _ruleId Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+                     * 设置<p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
+                     * @param _ruleId <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -90,15 +92,15 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Rule name. name length limit: 255 characters.
-                     * @return RuleName Rule name. name length limit: 255 characters.
+                     * 获取<p>Rule name. The name can contain no more than 255 characters.</p>
+                     * @return RuleName <p>Rule name. The name can contain no more than 255 characters.</p>
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Rule name. name length limit: 255 characters.
-                     * @param _ruleName Rule name. name length limit: 255 characters.
+                     * 设置<p>Rule name. The name can contain no more than 255 characters.</p>
+                     * @param _ruleName <p>Rule name. The name can contain no more than 255 characters.</p>
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -111,15 +113,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Rule annotation. multiple annotations can be added.
-                     * @return Description Rule annotation. multiple annotations can be added.
+                     * 获取<p>Rule note. Multiple notes can be filled.</p>
+                     * @return Description <p>Rule note. Multiple notes can be filled.</p>
                      * 
                      */
                     std::vector<std::string> GetDescription() const;
 
                     /**
-                     * 设置Rule annotation. multiple annotations can be added.
-                     * @param _description Rule annotation. multiple annotations can be added.
+                     * 设置<p>Rule note. Multiple notes can be filled.</p>
+                     * @param _description <p>Rule note. Multiple notes can be filled.</p>
                      * 
                      */
                     void SetDescription(const std::vector<std::string>& _description);
@@ -132,19 +134,57 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Branches Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+                     * @return CustomVariables <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+                     * 
+                     */
+                    std::vector<CustomVariable> GetCustomVariables() const;
+
+                    /**
+                     * 设置<p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+                     * @param _customVariables <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+                     * 
+                     */
+                    void SetCustomVariables(const std::vector<CustomVariable>& _customVariables);
+
+                    /**
+                     * 判断参数 CustomVariables 是否已赋值
+                     * @return CustomVariables 是否已赋值
+                     * 
+                     */
+                    bool CustomVariablesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+                     * @return CustomVariableOperations <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+                     * 
+                     */
+                    std::vector<CustomVariableOperation> GetCustomVariableOperations() const;
+
+                    /**
+                     * 设置<p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+                     * @param _customVariableOperations <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+                     * 
+                     */
+                    void SetCustomVariableOperations(const std::vector<CustomVariableOperation>& _customVariableOperations);
+
+                    /**
+                     * 判断参数 CustomVariableOperations 是否已赋值
+                     * @return CustomVariableOperations 是否已赋值
+                     * 
+                     */
+                    bool CustomVariableOperationsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+                     * @return Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
                      * 
                      */
                     std::vector<RuleBranch> GetBranches() const;
 
                     /**
-                     * 设置Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _branches Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+                     * @param _branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
                      * 
                      */
                     void SetBranches(const std::vector<RuleBranch>& _branches);
@@ -157,15 +197,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool BranchesHasBeenSet() const;
 
                     /**
-                     * 获取Rule priority. only used as an output parameter.
-                     * @return RulePriority Rule priority. only used as an output parameter.
+                     * 获取<p>Rule priority. Output only.</p>
+                     * @return RulePriority <p>Rule priority. Output only.</p>
                      * 
                      */
                     int64_t GetRulePriority() const;
 
                     /**
-                     * 设置Rule priority. only used as an output parameter.
-                     * @param _rulePriority Rule priority. only used as an output parameter.
+                     * 设置<p>Rule priority. Output only.</p>
+                     * @param _rulePriority <p>Rule priority. Output only.</p>
                      * 
                      */
                     void SetRulePriority(const int64_t& _rulePriority);
@@ -180,38 +220,49 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+                     * <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+                     * <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Rule name. name length limit: 255 characters.
+                     * <p>Rule name. The name can contain no more than 255 characters.</p>
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Rule annotation. multiple annotations can be added.
+                     * <p>Rule note. Multiple notes can be filled.</p>
                      */
                     std::vector<std::string> m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+                     */
+                    std::vector<CustomVariable> m_customVariables;
+                    bool m_customVariablesHasBeenSet;
+
+                    /**
+                     * <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+                     */
+                    std::vector<CustomVariableOperation> m_customVariableOperations;
+                    bool m_customVariableOperationsHasBeenSet;
+
+                    /**
+                     * <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
                      */
                     std::vector<RuleBranch> m_branches;
                     bool m_branchesHasBeenSet;
 
                     /**
-                     * Rule priority. only used as an output parameter.
+                     * <p>Rule priority. Output only.</p>
                      */
                     int64_t m_rulePriority;
                     bool m_rulePriorityHasBeenSet;

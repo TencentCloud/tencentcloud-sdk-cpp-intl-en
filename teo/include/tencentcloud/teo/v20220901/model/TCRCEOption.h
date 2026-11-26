@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Channel information.
-                     * @return Channel Channel information.
+                     * 获取Channel info.
+                     * @return Channel Channel info.
                      * 
                      */
                     std::string GetChannel() const;
 
                     /**
-                     * 设置Channel information.
-                     * @param _channel Channel information.
+                     * 设置Channel info.
+                     * @param _channel Channel info.
                      * 
                      */
                     void SetChannel(const std::string& _channel);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ChannelHasBeenSet() const;
 
                     /**
-                     * 获取Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
-                     * @return Region Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+                     * 获取Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
+                     * @return Region Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
-                     * @param _region Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+                     * 设置Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
+                     * @param _region Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Channel information.
+                     * Channel info.
                      */
                     std::string m_channel;
                     bool m_channelHasBeenSet;
 
                     /**
-                     * Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+                     * Enabled regions for RCE Channel. Currently optional values: <li>ap-beijing: North China (Beijing);</li><li>ap-jakarta: Southeast Asia Pacific (Jakarta);</li><li>ap-singapore: Southeast Asia Pacific (Singapore);</li><li>eu-frankfurt: Europe (Frankfurt);</li><li>na-siliconvalley: West US (Silicon Valley).</li>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;

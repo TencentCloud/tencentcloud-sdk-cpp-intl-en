@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Edge reasoning scheduled scaling policy configuration.
+                * Scheduled scaling policy configuration for edge reasoning.
                 */
                 class InferenceScheduledScalingPolicy : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scheduled scaling action list. Fill in at least 1, supports up to 10.
-                     * @return ScheduledActions Scheduled scaling action list. Fill in at least 1, supports up to 10.
+                     * 获取List of scheduled scaling actions. Fill in at least 1 and up to 10.
+                     * @return ScheduledActions List of scheduled scaling actions. Fill in at least 1 and up to 10.
                      * 
                      */
                     std::vector<InferenceScheduledScalingAction> GetScheduledActions() const;
 
                     /**
-                     * 设置Scheduled scaling action list. Fill in at least 1, supports up to 10.
-                     * @param _scheduledActions Scheduled scaling action list. Fill in at least 1, supports up to 10.
+                     * 设置List of scheduled scaling actions. Fill in at least 1 and up to 10.
+                     * @param _scheduledActions List of scheduled scaling actions. Fill in at least 1 and up to 10.
                      * 
                      */
                     void SetScheduledActions(const std::vector<InferenceScheduledScalingAction>& _scheduledActions);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ScheduledActionsHasBeenSet() const;
 
                     /**
-                     * 获取Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
-                     * @return EffectiveRange Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+                     * 获取Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
+                     * @return EffectiveRange Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
                      * 
                      */
                     InferenceScheduledScalingEffectiveRange GetEffectiveRange() const;
 
                     /**
-                     * 设置Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
-                     * @param _effectiveRange Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+                     * 设置Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
+                     * @param _effectiveRange Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
                      * 
                      */
                     void SetEffectiveRange(const InferenceScheduledScalingEffectiveRange& _effectiveRange);
@@ -91,13 +91,13 @@ namespace TencentCloud
                     bool EffectiveRangeHasBeenSet() const;
 
                     /**
-                     * 获取Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+                     * 获取Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
 
 
-                     * @return TimeZone Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+                     * @return TimeZone Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
@@ -108,13 +108,13 @@ namespace TencentCloud
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+                     * 设置Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
 
 
-                     * @param _timeZone Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+                     * @param _timeZone Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
@@ -134,19 +134,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Scheduled scaling action list. Fill in at least 1, supports up to 10.
+                     * List of scheduled scaling actions. Fill in at least 1 and up to 10.
                      */
                     std::vector<InferenceScheduledScalingAction> m_scheduledActions;
                     bool m_scheduledActionsHasBeenSet;
 
                     /**
-                     * Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+                     * Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
                      */
                     InferenceScheduledScalingEffectiveRange m_effectiveRange;
                     bool m_effectiveRangeHasBeenSet;
 
                     /**
-                     * Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+                     * Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 

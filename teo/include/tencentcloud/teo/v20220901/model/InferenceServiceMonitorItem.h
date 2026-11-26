@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Service monitoring data items for reasoning.
+                * Reasoning service monitoring data item.
                 */
                 class InferenceServiceMonitorItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Corresponding time point of monitoring data.
-                     * @return Timestamp Corresponding time point of monitoring data.
+                     * 获取Time point of the monitoring data.
+                     * @return Timestamp Time point of the monitoring data.
                      * 
                      */
                     std::string GetTimestamp() const;
 
                     /**
-                     * 设置Corresponding time point of monitoring data.
-                     * @param _timestamp Corresponding time point of monitoring data.
+                     * 设置Time point of the monitoring data.
+                     * @param _timestamp Time point of the monitoring data.
                      * 
                      */
                     void SetTimestamp(const std::string& _timestamp);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Corresponding time point of monitoring data.
+                     * Time point of the monitoring data.
                      */
                     std::string m_timestamp;
                     bool m_timestampHasBeenSet;

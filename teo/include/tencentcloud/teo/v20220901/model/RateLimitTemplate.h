@@ -48,39 +48,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-                     * @return Mode The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
+                     * 获取Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+                     * @return Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-                     * @param _mode The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
+                     * 设置Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+                     * @param _mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -93,23 +93,23 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
-                     * @return Action The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+                     * 获取Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
+                     * @return Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
-                     * @param _action The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+                     * 设置Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
+                     * @param _action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -122,15 +122,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the rate limiting template. It is only used as an output parameter.
-                     * @return RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+                     * 获取Description of the template value. Returned only as an output parameter.
+                     * @return RateLimitTemplateDetail Description of the template value. Returned only as an output parameter.
                      * 
                      */
                     RateLimitTemplateDetail GetRateLimitTemplateDetail() const;
 
                     /**
-                     * 设置The settings of the rate limiting template. It is only used as an output parameter.
-                     * @param _rateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+                     * 设置Description of the template value. Returned only as an output parameter.
+                     * @param _rateLimitTemplateDetail Description of the template value. Returned only as an output parameter.
                      * 
                      */
                     void SetRateLimitTemplateDetail(const RateLimitTemplateDetail& _rateLimitTemplateDetail);
@@ -145,27 +145,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
+                     * Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+                     * Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The settings of the rate limiting template. It is only used as an output parameter.
+                     * Description of the template value. Returned only as an output parameter.
                      */
                     RateLimitTemplateDetail m_rateLimitTemplateDetail;
                     bool m_rateLimitTemplateDetailHasBeenSet;

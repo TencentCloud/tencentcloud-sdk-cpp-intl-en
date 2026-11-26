@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the authentication option ID list.
-                     * @return ClientAttesterIds Specifies the authentication option ID list.
+                     * 获取Authentication option ID list.
+                     * @return ClientAttesterIds Authentication option ID list.
                      * 
                      */
                     std::vector<std::string> GetClientAttesterIds() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the authentication option ID list.
+                     * Authentication option ID list.
                      */
                     std::vector<std::string> m_clientAttesterIds;
                     bool m_clientAttesterIdsHasBeenSet;

@@ -109,12 +109,12 @@ namespace TencentCloud
                     /**
                      * 获取Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
                      * @return SortBy Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
                      * 
                      */
                     std::string GetSortBy() const;
@@ -122,12 +122,12 @@ Default value is created-on.
                     /**
                      * 设置Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
                      * @param _sortBy Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
                      * 
                      */
                     void SetSortBy(const std::string& _sortBy);
@@ -142,13 +142,13 @@ Default value is created-on.
                     /**
                      * 获取List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
                      * @return SortOrder List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
                      * 
                      */
@@ -157,13 +157,13 @@ Default value is desc.
                     /**
                      * 设置List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
                      * @param _sortOrder List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
                      * 
                      */
@@ -177,12 +177,12 @@ Default value is desc.
                     bool SortOrderHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
-                     * @return Filters Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
                      * 
@@ -190,12 +190,12 @@ Default value is desc.
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
-                     * @param _filters Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
                      * 
@@ -232,8 +232,8 @@ Default value is desc.
                     /**
                      * Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
                      */
                     std::string m_sortBy;
                     bool m_sortByHasBeenSet;
@@ -241,16 +241,16 @@ Default value is created-on.
                     /**
                      * List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;
 
                     /**
-                     * Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+                     * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
                      */

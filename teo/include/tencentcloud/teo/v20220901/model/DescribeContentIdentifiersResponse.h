@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of content identifiers that meet the filter conditions.	
-                     * @return TotalCount Total number of content identifiers that meet the filter conditions.	
+                     * 获取Total number of unique identifiers of content that meet filtering criteria.	
+                     * @return TotalCount Total number of unique identifiers of content that meet filtering criteria.	
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Detailed content identifier list.
-                     * @return ContentIdentifiers Detailed content identifier list.
+                     * 获取Content identifier detailed content list.
+                     * @return ContentIdentifiers Content identifier detailed content list.
                      * 
                      */
                     std::vector<ContentIdentifier> GetContentIdentifiers() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of content identifiers that meet the filter conditions.	
+                     * Total number of unique identifiers of content that meet filtering criteria.	
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Detailed content identifier list.
+                     * Content identifier detailed content list.
                      */
                     std::vector<ContentIdentifier> m_contentIdentifiers;
                     bool m_contentIdentifiersHasBeenSet;

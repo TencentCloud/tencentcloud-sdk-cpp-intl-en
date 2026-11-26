@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Rules Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Rule list. Rules are executed in top-to-bottom order. For details, see [Priority of Rules to Take Effect](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1#.E4.BC.98.E5.85.88.E7.BA.A7).
+                     * @return Rules Rule list. Rules are executed in top-to-bottom order. For details, see [Priority of Rules to Take Effect](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1#.E4.BC.98.E5.85.88.E7.BA.A7).
                      * 
                      */
                     std::vector<RuleEngineItem> GetRules() const;
@@ -83,8 +81,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Rule list. Rules are executed in top-to-bottom order. For details, see [Priority of Rules to Take Effect](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1#.E4.BC.98.E5.85.88.E7.BA.A7).
                      */
                     std::vector<RuleEngineItem> m_rules;
                     bool m_rulesHasBeenSet;

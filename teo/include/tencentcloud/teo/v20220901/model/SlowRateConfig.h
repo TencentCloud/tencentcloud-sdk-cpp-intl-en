@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The configuration to detect slow attacks
+                * Basic configuration of slow attack.
                 */
                 class SlowRateConfig : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
-                     * @return Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+                     * 获取Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
+                     * @return Interval Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
                      * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
-                     * 设置The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
-                     * @param _interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+                     * 设置Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
+                     * @param _interval Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
                      * 
                      */
                     void SetInterval(const uint64_t& _interval);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
-                     * @return Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+                     * 获取Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
+                     * @return Threshold Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
                      * 
                      */
                     uint64_t GetThreshold() const;
 
                     /**
-                     * 设置Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
-                     * @param _threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+                     * 设置Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
+                     * @param _threshold Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
                      * 
                      */
                     void SetThreshold(const uint64_t& _threshold);
@@ -120,21 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+                     * Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
                      */
                     uint64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+                     * Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
                      */
                     uint64_t m_threshold;
                     bool m_thresholdHasBeenSet;

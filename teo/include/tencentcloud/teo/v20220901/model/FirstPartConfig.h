@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The configuration to detect slow attacks based on the transfer period the first 8 KB of requests
+                * Slow attack first segment packet configuration.
                 */
                 class FirstPartConfig : public AbstractModel
                 {
@@ -47,26 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. valid values:.
+                     * 获取Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @return Switch Switch. valid values:.
+                     * @return Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. valid values:.
+                     * 设置Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @param _switch Switch. valid values:.
+                     * @param _switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
@@ -80,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
-                     * @return StatTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+                     * 获取Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
+                     * @return StatTime Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
                      * 
                      */
                     uint64_t GetStatTime() const;
 
                     /**
-                     * 设置The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
-                     * @param _statTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+                     * 设置Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
+                     * @param _statTime Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
                      * 
                      */
                     void SetStatTime(const uint64_t& _statTime);
@@ -103,16 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch. valid values:.
+                     * Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+                     * Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
                      */
                     uint64_t m_statTime;
                     bool m_statTimeHasBeenSet;

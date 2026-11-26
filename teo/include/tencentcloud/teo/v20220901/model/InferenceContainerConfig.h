@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Container configuration of the inference service.
+                * Container configuration for the inference service.
                 */
                 class InferenceContainerConfig : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
-                     * @return ImageType Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
+                     * 获取<p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
+                     * @return ImageType <p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
                      * 
                      */
                     std::string GetImageType() const;
 
                     /**
-                     * 设置Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
-                     * @param _imageType Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
+                     * 设置<p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
+                     * @param _imageType <p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
                      * 
                      */
                     void SetImageType(const std::string& _imageType);
@@ -70,19 +70,15 @@ namespace TencentCloud
                     bool ImageTypeHasBeenSet() const;
 
                     /**
-                     * 获取TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return TcrRepositoryConfig TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取<p>TCR image repository info. Required when ImageType is TCR.</p>
+                     * @return TcrRepositoryConfig <p>TCR image repository info. Required when ImageType is TCR.</p>
                      * 
                      */
                     InferenceTCRRepositoryConfig GetTcrRepositoryConfig() const;
 
                     /**
-                     * 设置TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _tcrRepositoryConfig TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置<p>TCR image repository info. Required when ImageType is TCR.</p>
+                     * @param _tcrRepositoryConfig <p>TCR image repository info. Required when ImageType is TCR.</p>
                      * 
                      */
                     void SetTcrRepositoryConfig(const InferenceTCRRepositoryConfig& _tcrRepositoryConfig);
@@ -95,15 +91,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool TcrRepositoryConfigHasBeenSet() const;
 
                     /**
-                     * 获取Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
-                     * @return StartupCommand Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
+                     * 获取<p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
+                     * @return StartupCommand <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
                      * 
                      */
                     std::string GetStartupCommand() const;
 
                     /**
-                     * 设置Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
-                     * @param _startupCommand Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
+                     * 设置<p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
+                     * @param _startupCommand <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
                      * 
                      */
                     void SetStartupCommand(const std::string& _startupCommand);
@@ -116,15 +112,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool StartupCommandHasBeenSet() const;
 
                     /**
-                     * 获取Environment variables of the container runtime. Supports up to 10 variables.
-                     * @return EnvironmentVariables Environment variables of the container runtime. Supports up to 10 variables.
+                     * 获取<p>Environment variables for the container runtime. Supports up to 10 variables.</p>
+                     * @return EnvironmentVariables <p>Environment variables for the container runtime. Supports up to 10 variables.</p>
                      * 
                      */
                     std::vector<InferenceEnvironmentVariable> GetEnvironmentVariables() const;
 
                     /**
-                     * 设置Environment variables of the container runtime. Supports up to 10 variables.
-                     * @param _environmentVariables Environment variables of the container runtime. Supports up to 10 variables.
+                     * 设置<p>Environment variables for the container runtime. Supports up to 10 variables.</p>
+                     * @param _environmentVariables <p>Environment variables for the container runtime. Supports up to 10 variables.</p>
                      * 
                      */
                     void SetEnvironmentVariables(const std::vector<InferenceEnvironmentVariable>& _environmentVariables);
@@ -139,26 +135,25 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service image.</li>
+                     * <p>Image type. Valid values: <li>TCR: Image from Tencent Cloud container mirroring service.</li></p>
                      */
                     std::string m_imageType;
                     bool m_imageTypeHasBeenSet;
 
                     /**
-                     * TCR image repository information. Required when ImageType is TCR.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * <p>TCR image repository info. Required when ImageType is TCR.</p>
                      */
                     InferenceTCRRepositoryConfig m_tcrRepositoryConfig;
                     bool m_tcrRepositoryConfigHasBeenSet;
 
                     /**
-                     * Executed command at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
+                     * <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
                      */
                     std::string m_startupCommand;
                     bool m_startupCommandHasBeenSet;
 
                     /**
-                     * Environment variables of the container runtime. Supports up to 10 variables.
+                     * <p>Environment variables for the container runtime. Supports up to 10 variables.</p>
                      */
                     std::vector<InferenceEnvironmentVariable> m_environmentVariables;
                     bool m_environmentVariablesHasBeenSet;

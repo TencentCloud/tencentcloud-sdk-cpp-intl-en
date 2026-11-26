@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total of matched alias domain names
-                     * @return TotalCount Total of matched alias domain names
+                     * 获取<p>Count of acceleration domain names that meet the search criteria.</p>
+                     * @return TotalCount <p>Count of acceleration domain names that meet the search criteria.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Information of all matched acceleration domain names.
-                     * @return AccelerationDomains Information of all matched acceleration domain names.
+                     * 获取<p>Information of all acceleration domain names that meet the search criteria.</p>
+                     * @return AccelerationDomains <p>Information of all acceleration domain names that meet the search criteria.</p>
                      * 
                      */
                     std::vector<AccelerationDomain> GetAccelerationDomains() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total of matched alias domain names
+                     * <p>Count of acceleration domain names that meet the search criteria.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Information of all matched acceleration domain names.
+                     * <p>Information of all acceleration domain names that meet the search criteria.</p>
                      */
                     std::vector<AccelerationDomain> m_accelerationDomains;
                     bool m_accelerationDomainsHasBeenSet;

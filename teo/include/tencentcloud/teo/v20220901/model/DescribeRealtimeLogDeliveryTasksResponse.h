@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of real-time log delivery tasks which match the query conditions.
-                     * @return TotalCount The number of real-time log delivery tasks which match the query conditions.
+                     * 获取Number of real-time log delivery tasks that meet the search criteria.
+                     * @return TotalCount Number of real-time log delivery tasks that meet the search criteria.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of all real-time log delivery tasks which match the query conditions.
-                     * @return RealtimeLogDeliveryTasks The list of all real-time log delivery tasks which match the query conditions.
+                     * 获取List of all real-time log delivery tasks that meet the search criteria.
+                     * @return RealtimeLogDeliveryTasks List of all real-time log delivery tasks that meet the search criteria.
                      * 
                      */
                     std::vector<RealtimeLogDeliveryTask> GetRealtimeLogDeliveryTasks() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The number of real-time log delivery tasks which match the query conditions.
+                     * Number of real-time log delivery tasks that meet the search criteria.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of all real-time log delivery tasks which match the query conditions.
+                     * List of all real-time log delivery tasks that meet the search criteria.
                      */
                     std::vector<RealtimeLogDeliveryTask> m_realtimeLogDeliveryTasks;
                     bool m_realtimeLogDeliveryTasksHasBeenSet;

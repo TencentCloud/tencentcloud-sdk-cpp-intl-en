@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
-                     * @return MultiPathGatewayOriginACLInfo Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
+                     * 获取Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
+                     * @return MultiPathGatewayOriginACLInfo Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
                      * 
                      */
                     MultiPathGatewayOriginACLInfo GetMultiPathGatewayOriginACLInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
+                     * Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
                      */
                     MultiPathGatewayOriginACLInfo m_multiPathGatewayOriginACLInfo;
                     bool m_multiPathGatewayOriginACLInfoHasBeenSet;

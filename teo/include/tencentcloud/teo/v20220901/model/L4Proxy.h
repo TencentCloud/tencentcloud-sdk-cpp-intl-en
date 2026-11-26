@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Layer 4 proxy instance.
+                * L4 proxy instance.
                 */
                 class L4Proxy : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance ID.
-                     * @return ProxyId Layer 4 proxy instance ID.
+                     * 获取Layer 4 Proxy Instance ID.
+                     * @return ProxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer 4 proxy instance ID.
-                     * @param _proxyId Layer 4 proxy instance ID.
+                     * 设置Layer 4 Proxy Instance ID.
+                     * @param _proxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance name.
-                     * @return ProxyName Layer 4 proxy instance name.
+                     * 获取Name of the L4 proxy instance.
+                     * @return ProxyName Name of the L4 proxy instance.
                      * 
                      */
                     std::string GetProxyName() const;
 
                     /**
-                     * 设置Layer 4 proxy instance name.
-                     * @param _proxyName Layer 4 proxy instance name.
+                     * 设置Name of the L4 proxy instance.
+                     * @param _proxyName Name of the L4 proxy instance.
                      * 
                      */
                     void SetProxyName(const std::string& _proxyName);
@@ -111,15 +111,27 @@ namespace TencentCloud
                     bool ProxyNameHasBeenSet() const;
 
                     /**
-                     * 获取Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
-                     * @return Area Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+                     * 获取Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
+                     * @return Area Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
-                     * @param _area Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+                     * 设置Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
+                     * @param _area Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -153,15 +165,15 @@ namespace TencentCloud
                     bool CnameHasBeenSet() const;
 
                     /**
-                     * 获取After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
-                     * @return Ips After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+                     * 获取After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
+                     * @return Ips After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
                      * 
                      */
                     std::vector<std::string> GetIps() const;
 
                     /**
-                     * 设置After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
-                     * @param _ips After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+                     * 设置After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
+                     * @param _ips After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
                      * 
                      */
                     void SetIps(const std::vector<std::string>& _ips);
@@ -174,35 +186,39 @@ namespace TencentCloud
                     bool IpsHasBeenSet() const;
 
                     /**
-                     * 获取Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+                     * 获取Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
-                     * @return Status Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
+                     * @return Status Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+                     * 设置Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
-                     * @param _status Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
+                     * @param _status Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -215,15 +231,23 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
-                     * @return Ipv6 Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+                     * 获取Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
+                     * @return Ipv6 Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetIpv6() const;
 
                     /**
-                     * 设置Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
-                     * @param _ipv6 Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+                     * 设置Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
+                     * @param _ipv6 Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
                      * 
                      */
                     void SetIpv6(const std::string& _ipv6);
@@ -236,15 +260,19 @@ namespace TencentCloud
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
-                     * @return StaticIp Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+                     * 获取Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
+                     * @return StaticIp Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
                      * 
                      */
                     std::string GetStaticIp() const;
 
                     /**
-                     * 设置Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
-                     * @param _staticIp Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+                     * 设置Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
+                     * @param _staticIp Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
                      * 
                      */
                     void SetStaticIp(const std::string& _staticIp);
@@ -257,15 +285,19 @@ namespace TencentCloud
                     bool StaticIpHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
-                     * @return AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+                     * 获取Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
+                     * @return AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
                      * 
                      */
                     std::string GetAccelerateMainland() const;
 
                     /**
-                     * 设置Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
-                     * @param _accelerateMainland Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+                     * 设置Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
+                     * @param _accelerateMainland Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
                      * 
                      */
                     void SetAccelerateMainland(const std::string& _accelerateMainland);
@@ -278,23 +310,19 @@ namespace TencentCloud
                     bool AccelerateMainlandHasBeenSet() const;
 
                     /**
-                     * 获取Security protection settings.
+                     * 获取Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return DDosProtectionConfig Security protection settings.
+                     * @return DDosProtectionConfig Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * @deprecated
                      */
                     DDosProtectionConfig GetDDosProtectionConfig() const;
 
                     /**
-                     * 设置Security protection settings.
+                     * 设置Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _dDosProtectionConfig Security protection settings.
+                     * @param _dDosProtectionConfig Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * @deprecated
                      */
                     void SetDDosProtectionConfig(const DDosProtectionConfig& _dDosProtectionConfig);
@@ -307,15 +335,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool DDosProtectionConfigHasBeenSet() const;
 
                     /**
-                     * 获取Number of forwarding rules under the Layer 4 proxy instance.
-                     * @return L4ProxyRuleCount Number of forwarding rules under the Layer 4 proxy instance.
+                     * 获取Number of forwarding rules under the layer 4 proxy instance.
+                     * @return L4ProxyRuleCount Number of forwarding rules under the layer 4 proxy instance.
                      * 
                      */
                     int64_t GetL4ProxyRuleCount() const;
 
                     /**
-                     * 设置Number of forwarding rules under the Layer 4 proxy instance.
-                     * @param _l4ProxyRuleCount Number of forwarding rules under the Layer 4 proxy instance.
+                     * 设置Number of forwarding rules under the layer 4 proxy instance.
+                     * @param _l4ProxyRuleCount Number of forwarding rules under the layer 4 proxy instance.
                      * 
                      */
                     void SetL4ProxyRuleCount(const int64_t& _l4ProxyRuleCount);
@@ -357,19 +385,22 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance ID.
+                     * Layer 4 Proxy Instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance name.
+                     * Name of the L4 proxy instance.
                      */
                     std::string m_proxyName;
                     bool m_proxyNameHasBeenSet;
 
                     /**
-                     * Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+                     * Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
@@ -381,50 +412,54 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool m_cnameHasBeenSet;
 
                     /**
-                     * After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+                     * After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
                      */
                     std::vector<std::string> m_ips;
                     bool m_ipsHasBeenSet;
 
                     /**
-                     * Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+                     * Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+                     * Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
                      */
                     std::string m_ipv6;
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+                     * Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
                      */
                     std::string m_staticIp;
                     bool m_staticIpHasBeenSet;
 
                     /**
-                     * Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+                     * Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
                      */
                     std::string m_accelerateMainland;
                     bool m_accelerateMainlandHasBeenSet;
 
                     /**
-                     * Security protection settings.
+                     * Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     DDosProtectionConfig m_dDosProtectionConfig;
                     bool m_dDosProtectionConfigHasBeenSet;
 
                     /**
-                     * Number of forwarding rules under the Layer 4 proxy instance.
+                     * Number of forwarding rules under the layer 4 proxy instance.
                      */
                     int64_t m_l4ProxyRuleCount;
                     bool m_l4ProxyRuleCountHasBeenSet;

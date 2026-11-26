@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Verification file, used to verify site ownership
+                * Site ownership verification — file verification information.
                 */
                 class FileAscriptionInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Directory of the verification file.
-                     * @return IdentifyPath Directory of the verification file.
+                     * 获取File verification directory.
+                     * @return IdentifyPath File verification directory.
                      * 
                      */
                     std::string GetIdentifyPath() const;
 
                     /**
-                     * 设置Directory of the verification file.
-                     * @param _identifyPath Directory of the verification file.
+                     * 设置File verification directory.
+                     * @param _identifyPath File verification directory.
                      * 
                      */
                     void SetIdentifyPath(const std::string& _identifyPath);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdentifyPathHasBeenSet() const;
 
                     /**
-                     * 获取Content of the verification file.
-                     * @return IdentifyContent Content of the verification file.
+                     * 获取File content verification.
+                     * @return IdentifyContent File content verification.
                      * 
                      */
                     std::string GetIdentifyContent() const;
 
                     /**
-                     * 设置Content of the verification file.
-                     * @param _identifyContent Content of the verification file.
+                     * 设置File content verification.
+                     * @param _identifyContent File content verification.
                      * 
                      */
                     void SetIdentifyContent(const std::string& _identifyContent);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Directory of the verification file.
+                     * File verification directory.
                      */
                     std::string m_identifyPath;
                     bool m_identifyPathHasBeenSet;
 
                     /**
-                     * Content of the verification file.
+                     * File content verification.
                      */
                     std::string m_identifyContent;
                     bool m_identifyContentHasBeenSet;

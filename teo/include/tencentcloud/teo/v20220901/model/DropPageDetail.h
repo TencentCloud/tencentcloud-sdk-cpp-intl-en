@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The configuration details of the block page
+                * Configuration message of the interception page
                 */
                 class DropPageDetail : public AbstractModel
                 {
@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
-                     * @return PageId The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
+                     * 获取Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
+                     * @return PageId Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
                      * 
                      */
                     int64_t GetPageId() const;
 
                     /**
-                     * 设置The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
-                     * @param _pageId The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
+                     * 设置Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
+                     * @param _pageId Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
                      * 
                      */
                     void SetPageId(const int64_t& _pageId);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool PageIdHasBeenSet() const;
 
                     /**
-                     * 获取The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
-                     * @return StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+                     * 获取HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
+                     * @return StatusCode HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
-                     * @param _statusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+                     * 设置HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
+                     * @param _statusCode HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取The block page file or URL.
-                     * @return Name The block page file or URL.
+                     * 获取Page file name or url.
+                     * @return Name Page file name or url.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The block page file or URL.
-                     * @param _name The block page file or URL.
+                     * 设置Page file name or url.
+                     * @param _name Page file name or url.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -114,22 +114,22 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+                     * 获取Page type, with values:
+<li>page: Specified page.</li>
 
-                     * @return Type Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+                     * @return Type Page type, with values:
+<li>page: Specified page.</li>
 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+                     * 设置Page type, with values:
+<li>page: Specified page.</li>
 
-                     * @param _type Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+                     * @param _type Page type, with values:
+<li>page: Specified page.</li>
 
                      * 
                      */
@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
-                     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     * 获取Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
+                     * @return CustomResponseId Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
                      * 
                      */
                     std::string GetCustomResponseId() const;
 
                     /**
-                     * 设置ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
-                     * @param _customResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     * 设置Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
+                     * @param _customResponseId Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
                      * 
                      */
                     void SetCustomResponseId(const std::string& _customResponseId);
@@ -166,34 +166,34 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
+                     * Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
                      */
                     int64_t m_pageId;
                     bool m_pageIdHasBeenSet;
 
                     /**
-                     * The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+                     * HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * The block page file or URL.
+                     * Page file name or url.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+                     * Page type, with values:
+<li>page: Specified page.</li>
 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+                     * Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
                      */
                     std::string m_customResponseId;
                     bool m_customResponseIdHasBeenSet;

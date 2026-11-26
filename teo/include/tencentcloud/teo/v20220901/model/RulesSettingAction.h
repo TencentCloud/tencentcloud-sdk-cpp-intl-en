@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of the settings of the rule engine that can be used for request match and their detailed information.
+                * Settings list of a rule engine applicable to matchmaking requests and its detailed information
                 */
                 class RulesSettingAction : public AbstractModel
                 {
@@ -49,122 +49,122 @@ namespace TencentCloud
 
                     /**
                      * 获取Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
                      * @return Action Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
                      * @param _action Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Parameter information
-                     * @return Properties Parameter information
+                     * 获取Parameter information.
+                     * @return Properties Parameter information.
                      * 
                      */
                     std::vector<RulesProperties> GetProperties() const;
 
                     /**
-                     * 设置Parameter information
-                     * @param _properties Parameter information
+                     * 设置Parameter information.
+                     * @param _properties Parameter information.
                      * 
                      */
                     void SetProperties(const std::vector<RulesProperties>& _properties);
@@ -201,39 +201,39 @@ namespace TencentCloud
 
                     /**
                      * Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Parameter information
+                     * Parameter information.
                      */
                     std::vector<RulesProperties> m_properties;
                     bool m_propertiesHasBeenSet;

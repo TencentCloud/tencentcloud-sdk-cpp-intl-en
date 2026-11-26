@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Detailed configuration parameters required when binding a KV namespace to an edge function, used to specify the source of the bound namespace. With this configuration, the edge function can operate the KV namespace of the designated site.
+                * Detailed configuration parameters required for binding a KV namespace to an edge function, used to specify the source of the bound namespace. With this configuration, the edge function can operate the KV namespace under the specified site.
                 */
                 class KVNamespaceParameters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
-                     * @return ZoneId The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
+                     * 获取Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
+                     * @return ZoneId Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
-                     * @param _zoneId The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
+                     * 设置Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
+                     * @param _zoneId Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
-                     * @return Namespace KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
+                     * 获取KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
+                     * @return Namespace KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
-                     * @param _namespace KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
+                     * 设置KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
+                     * @param _namespace KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
+                     * Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
+                     * KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;

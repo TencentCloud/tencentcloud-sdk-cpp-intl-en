@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone ID.		
-                     * @return ZoneId Zone ID.		
+                     * 获取Zone ID.	
+                     * @return ZoneId Zone ID.	
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone ID.		
-                     * @param _zoneId Zone ID.		
+                     * 设置Zone ID.	
+                     * @param _zoneId Zone ID.	
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取API service list.
-                     * @return APIServices API service list.
+                     * 获取List of API services.
+                     * @return APIServices List of API services.
                      * 
                      */
                     std::vector<APIService> GetAPIServices() const;
 
                     /**
-                     * 设置API service list.
-                     * @param _aPIServices API service list.
+                     * 设置List of API services.
+                     * @param _aPIServices List of API services.
                      * 
                      */
                     void SetAPIServices(const std::vector<APIService>& _aPIServices);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone ID.		
+                     * Zone ID.	
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * API service list.
+                     * List of API services.
                      */
                     std::vector<APIService> m_aPIServices;
                     bool m_aPIServicesHasBeenSet;

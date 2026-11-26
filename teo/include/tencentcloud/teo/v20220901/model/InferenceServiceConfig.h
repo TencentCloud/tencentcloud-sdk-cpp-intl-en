@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/InferenceContainerConfig.h>
 #include <tencentcloud/teo/v20220901/model/InferenceResourceConfig.h>
+#include <tencentcloud/teo/v20220901/model/InferenceAffinityConfig.h>
 
 
 namespace TencentCloud
@@ -37,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Deployment configuration for a single inference service.
+                * Deployment configuration of a single inference service.
                 */
                 class InferenceServiceConfig : public AbstractModel
                 {
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Ports monitored by the model service.
-                     * @return ListenPort Ports monitored by the model service.
+                     * 获取<p>Ports monitored by the model service.</p>
+                     * @return ListenPort <p>Ports monitored by the model service.</p>
                      * 
                      */
                     int64_t GetListenPort() const;
 
                     /**
-                     * 设置Ports monitored by the model service.
-                     * @param _listenPort Ports monitored by the model service.
+                     * 设置<p>Ports monitored by the model service.</p>
+                     * @param _listenPort <p>Ports monitored by the model service.</p>
                      * 
                      */
                     void SetListenPort(const int64_t& _listenPort);
@@ -70,15 +71,15 @@ namespace TencentCloud
                     bool ListenPortHasBeenSet() const;
 
                     /**
-                     * 获取Request path list for inference service.
-                     * @return RequestPaths Request path list for inference service.
+                     * 获取<p>Request path list of the inference service.</p>
+                     * @return RequestPaths <p>Request path list of the inference service.</p>
                      * 
                      */
                     std::vector<std::string> GetRequestPaths() const;
 
                     /**
-                     * 设置Request path list for inference service.
-                     * @param _requestPaths Request path list for inference service.
+                     * 设置<p>Request path list of the inference service.</p>
+                     * @param _requestPaths <p>Request path list of the inference service.</p>
                      * 
                      */
                     void SetRequestPaths(const std::vector<std::string>& _requestPaths);
@@ -91,15 +92,15 @@ namespace TencentCloud
                     bool RequestPathsHasBeenSet() const;
 
                     /**
-                     * 获取Container configuration of the inference service.
-                     * @return Containers Container configuration of the inference service.
+                     * 获取<p>Container configuration for the inference service.</p>
+                     * @return Containers <p>Container configuration for the inference service.</p>
                      * 
                      */
                     std::vector<InferenceContainerConfig> GetContainers() const;
 
                     /**
-                     * 设置Container configuration of the inference service.
-                     * @param _containers Container configuration of the inference service.
+                     * 设置<p>Container configuration for the inference service.</p>
+                     * @param _containers <p>Container configuration for the inference service.</p>
                      * 
                      */
                     void SetContainers(const std::vector<InferenceContainerConfig>& _containers);
@@ -112,15 +113,15 @@ namespace TencentCloud
                     bool ContainersHasBeenSet() const;
 
                     /**
-                     * 获取Resource configuration of the inference service.
-                     * @return ResourceConfig Resource configuration of the inference service.
+                     * 获取<p>Resource configuration of the inference service.</p>
+                     * @return ResourceConfig <p>Resource configuration of the inference service.</p>
                      * 
                      */
                     InferenceResourceConfig GetResourceConfig() const;
 
                     /**
-                     * 设置Resource configuration of the inference service.
-                     * @param _resourceConfig Resource configuration of the inference service.
+                     * 设置<p>Resource configuration of the inference service.</p>
+                     * @param _resourceConfig <p>Resource configuration of the inference service.</p>
                      * 
                      */
                     void SetResourceConfig(const InferenceResourceConfig& _resourceConfig);
@@ -132,31 +133,58 @@ namespace TencentCloud
                      */
                     bool ResourceConfigHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Inference service affinity configuration.</p>
+                     * @return AffinityConfig <p>Inference service affinity configuration.</p>
+                     * 
+                     */
+                    InferenceAffinityConfig GetAffinityConfig() const;
+
+                    /**
+                     * 设置<p>Inference service affinity configuration.</p>
+                     * @param _affinityConfig <p>Inference service affinity configuration.</p>
+                     * 
+                     */
+                    void SetAffinityConfig(const InferenceAffinityConfig& _affinityConfig);
+
+                    /**
+                     * 判断参数 AffinityConfig 是否已赋值
+                     * @return AffinityConfig 是否已赋值
+                     * 
+                     */
+                    bool AffinityConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Ports monitored by the model service.
+                     * <p>Ports monitored by the model service.</p>
                      */
                     int64_t m_listenPort;
                     bool m_listenPortHasBeenSet;
 
                     /**
-                     * Request path list for inference service.
+                     * <p>Request path list of the inference service.</p>
                      */
                     std::vector<std::string> m_requestPaths;
                     bool m_requestPathsHasBeenSet;
 
                     /**
-                     * Container configuration of the inference service.
+                     * <p>Container configuration for the inference service.</p>
                      */
                     std::vector<InferenceContainerConfig> m_containers;
                     bool m_containersHasBeenSet;
 
                     /**
-                     * Resource configuration of the inference service.
+                     * <p>Resource configuration of the inference service.</p>
                      */
                     InferenceResourceConfig m_resourceConfig;
                     bool m_resourceConfigHasBeenSet;
+
+                    /**
+                     * <p>Inference service affinity configuration.</p>
+                     */
+                    InferenceAffinityConfig m_affinityConfig;
+                    bool m_affinityConfigHasBeenSet;
 
                 };
             }

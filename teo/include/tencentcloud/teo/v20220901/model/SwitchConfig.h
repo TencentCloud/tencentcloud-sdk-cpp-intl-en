@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Web security configuration switch
+                * Master switch for features
                 */
                 class SwitchConfig : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
-                     * @return WebSwitch Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+                     * 获取Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
+                     * @return WebSwitch Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
                      * 
                      */
                     std::string GetWebSwitch() const;
 
                     /**
-                     * 设置Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
-                     * @param _webSwitch Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+                     * 设置Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
+                     * @param _webSwitch Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
                      * 
                      */
                     void SetWebSwitch(const std::string& _webSwitch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+                     * Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
                      */
                     std::string m_webSwitch;
                     bool m_webSwitchHasBeenSet;

@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
-                     * @return CommonName Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
+                     * 获取Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
+                     * @return CommonName Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
                      * 
                      */
                     std::string GetCommonName() const;
@@ -60,8 +60,8 @@ Note: only one free certificate can be applied for a domain name. if a wildcard 
                     bool CommonNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
-                     * @return SignatureAlgorithm Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
+                     * 获取Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
+                     * @return SignatureAlgorithm Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
                      * 
                      */
                     std::string GetSignatureAlgorithm() const;
@@ -74,8 +74,8 @@ Note: only one free certificate can be applied for a domain name. if a wildcard 
                     bool SignatureAlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
-                     * @return ExpireTime Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
+                     * 获取Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
+                     * @return ExpireTime Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
                      * 
                      */
                     std::string GetExpireTime() const;
@@ -90,20 +90,20 @@ Note: only one free certificate can be applied for a domain name. if a wildcard 
                 private:
 
                     /**
-                     * Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
+                     * Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
                      */
                     std::string m_commonName;
                     bool m_commonNameHasBeenSet;
 
                     /**
-                     * Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
+                     * Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
                      */
                     std::string m_signatureAlgorithm;
                     bool m_signatureAlgorithmHasBeenSet;
 
                     /**
-                     * Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
+                     * Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DDoS blocking details
+                * DDoS unblocking information
                 */
                 class DDoSBlockData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time recorded in UNIX timestamp.
-                     * @return StartTime The start time recorded in UNIX timestamp.
+                     * 获取Start time in unix timestamp.
+                     * @return StartTime Start time in unix timestamp.
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置The start time recorded in UNIX timestamp.
-                     * @param _startTime The start time recorded in UNIX timestamp.
+                     * 设置Start time in unix timestamp.
+                     * @param _startTime Start time in unix timestamp.
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
-                     * @return EndTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+                     * 获取Termination time in unix timestamp. 0 means the ban is still in effect.
+                     * @return EndTime Termination time in unix timestamp. 0 means the ban is still in effect.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
-                     * @param _endTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+                     * 设置Termination time in unix timestamp. 0 means the ban is still in effect.
+                     * @param _endTime Termination time in unix timestamp. 0 means the ban is still in effect.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The regions blocked.
-                     * @return BlockArea The regions blocked.
+                     * 获取Block the affected area.
+                     * @return BlockArea Block the affected area.
                      * 
                      */
                     std::string GetBlockArea() const;
 
                     /**
-                     * 设置The regions blocked.
-                     * @param _blockArea The regions blocked.
+                     * 设置Block the affected area.
+                     * @param _blockArea Block the affected area.
                      * 
                      */
                     void SetBlockArea(const std::string& _blockArea);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start time recorded in UNIX timestamp.
+                     * Start time in unix timestamp.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+                     * Termination time in unix timestamp. 0 means the ban is still in effect.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The regions blocked.
+                     * Block the affected area.
                      */
                     std::string m_blockArea;
                     bool m_blockAreaHasBeenSet;

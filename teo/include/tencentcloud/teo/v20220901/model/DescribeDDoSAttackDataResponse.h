@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
+                     * 获取<p>Total number of entries in the query result.</p>
+                     * @return TotalCount <p>Total number of entries in the query result.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>List of DDoS attack data content.</p>
+                     * @return Data <p>List of DDoS attack data content.</p>
                      * 
                      */
                     std::vector<SecEntry> GetData() const;
@@ -77,14 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of query results.
+                     * <p>Total number of entries in the query result.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>List of DDoS attack data content.</p>
                      */
                     std::vector<SecEntry> m_data;
                     bool m_dataHasBeenSet;

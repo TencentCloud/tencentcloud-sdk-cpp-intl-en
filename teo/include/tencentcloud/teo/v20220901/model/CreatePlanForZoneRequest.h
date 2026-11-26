@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site.
-                     * @return ZoneId ID of the site.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site.
-                     * @param _zoneId ID of the site.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,63 +64,63 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta_global`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
-                     * @return PlanType The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta_global`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
+                     * 获取Type of the package to purchase. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan on the Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan of global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan for global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Enterprise package of global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> ent_cm: CDN enterprise plan for the Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise plan on the Chinese mainland with bundled bot management.</li>
+<li> ent_global: Enterprise package for global content delivery network (including Chinese mainland); </li>
+<li> ent_global_with_bot: Enterprise package of global content delivery network (including Chinese mainland) with bundled bot management.</li>For the package types available for the current account, refer to the response of <a href="https://www.tencentcloud.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
+                     * @return PlanType Type of the package to purchase. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan on the Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan of global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan for global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Enterprise package of global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> ent_cm: CDN enterprise plan for the Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise plan on the Chinese mainland with bundled bot management.</li>
+<li> ent_global: Enterprise package for global content delivery network (including Chinese mainland); </li>
+<li> ent_global_with_bot: Enterprise package of global content delivery network (including Chinese mainland) with bundled bot management.</li>For the package types available for the current account, refer to the response of <a href="https://www.tencentcloud.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
                      * 
                      */
                     std::string GetPlanType() const;
 
                     /**
-                     * 设置The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta_global`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
-                     * @param _planType The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta_global`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
+                     * 设置Type of the package to purchase. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan on the Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan of global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan for global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Enterprise package of global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> ent_cm: CDN enterprise plan for the Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise plan on the Chinese mainland with bundled bot management.</li>
+<li> ent_global: Enterprise package for global content delivery network (including Chinese mainland); </li>
+<li> ent_global_with_bot: Enterprise package of global content delivery network (including Chinese mainland) with bundled bot management.</li>For the package types available for the current account, refer to the response of <a href="https://www.tencentcloud.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
+                     * @param _planType Type of the package to purchase. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan on the Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan of global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan for global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Enterprise package of global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> ent_cm: CDN enterprise plan for the Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise plan on the Chinese mainland with bundled bot management.</li>
+<li> ent_global: Enterprise package for global content delivery network (including Chinese mainland); </li>
+<li> ent_global_with_bot: Enterprise package of global content delivery network (including Chinese mainland) with bundled bot management.</li>For the package types available for the current account, refer to the response of <a href="https://www.tencentcloud.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
                      * 
                      */
                     void SetPlanType(const std::string& _planType);
@@ -135,25 +135,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta_global`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
+                     * Type of the package to purchase. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan on the Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan of global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan for global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Enterprise package of global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> ent_cm: CDN enterprise plan for the Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise plan on the Chinese mainland with bundled bot management.</li>
+<li> ent_global: Enterprise package for global content delivery network (including Chinese mainland); </li>
+<li> ent_global_with_bot: Enterprise package of global content delivery network (including Chinese mainland) with bundled bot management.</li>For the package types available for the current account, refer to the response of <a href="https://www.tencentcloud.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
                      */
                     std::string m_planType;
                     bool m_planTypeHasBeenSet;

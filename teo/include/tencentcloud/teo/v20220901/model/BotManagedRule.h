@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bot managed rules. The rule IDs can be obtained from the output of DescribeBotManagedRules.
+                * Bot Rules. The following rule IDs can be found in the ID information returned by the DescribeBotManagedRules API.
                 */
                 class BotManagedRule : public AbstractModel
                 {
@@ -47,31 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-                     * @return Action The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
+                     * 获取Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
+                     * @return Action Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-                     * @param _action The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
+                     * 设置Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
+                     * @param _action Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as an output parameter.
-                     * @return RuleID The rule ID, which is only used as an output parameter.
+                     * 获取Rule ID. Output only.
+                     * @return RuleID Rule ID. Output only.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置The rule ID, which is only used as an output parameter.
-                     * @param _ruleID The rule ID, which is only used as an output parameter.
+                     * 设置Rule ID. Output only.
+                     * @param _ruleID Rule ID. Output only.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -105,15 +105,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID to allow. defaults to no rules configured for allowance.
-                     * @return TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
+                     * 获取Rule ID to allow. By default, no rule is allowed.
+                     * @return TransManagedIds Rule ID to allow. By default, no rule is allowed.
                      * 
                      */
                     std::vector<int64_t> GetTransManagedIds() const;
 
                     /**
-                     * 设置Rule ID to allow. defaults to no rules configured for allowance.
-                     * @param _transManagedIds Rule ID to allow. defaults to no rules configured for allowance.
+                     * 设置Rule ID to allow. By default, no rule is allowed.
+                     * @param _transManagedIds Rule ID to allow. By default, no rule is allowed.
                      * 
                      */
                     void SetTransManagedIds(const std::vector<int64_t>& _transManagedIds);
@@ -126,15 +126,15 @@ namespace TencentCloud
                     bool TransManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
-                     * @return AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+                     * 获取Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
+                     * @return AlgManagedIds Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
                      * 
                      */
                     std::vector<int64_t> GetAlgManagedIds() const;
 
                     /**
-                     * 设置Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
-                     * @param _algManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+                     * 设置Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
+                     * @param _algManagedIds Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
                      * 
                      */
                     void SetAlgManagedIds(const std::vector<int64_t>& _algManagedIds);
@@ -147,15 +147,15 @@ namespace TencentCloud
                     bool AlgManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID for digit verification code. by default, all rules do not configure digit verification code.
-                     * @return CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+                     * 获取Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+                     * @return CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
                      * 
                      */
                     std::vector<int64_t> GetCapManagedIds() const;
 
                     /**
-                     * 设置The rule ID for digit verification code. by default, all rules do not configure digit verification code.
-                     * @param _capManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+                     * 设置Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+                     * @param _capManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
                      * 
                      */
                     void SetCapManagedIds(const std::vector<int64_t>& _capManagedIds);
@@ -168,15 +168,15 @@ namespace TencentCloud
                     bool CapManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID for observation. by default, observation is not configured for all rules.
-                     * @return MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+                     * 获取Rule ID to observe. By default, no rule is configured for observation.
+                     * @return MonManagedIds Rule ID to observe. By default, no rule is configured for observation.
                      * 
                      */
                     std::vector<int64_t> GetMonManagedIds() const;
 
                     /**
-                     * 设置Rule ID for observation. by default, observation is not configured for all rules.
-                     * @param _monManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+                     * 设置Rule ID to observe. By default, no rule is configured for observation.
+                     * @param _monManagedIds Rule ID to observe. By default, no rule is configured for observation.
                      * 
                      */
                     void SetMonManagedIds(const std::vector<int64_t>& _monManagedIds);
@@ -189,15 +189,15 @@ namespace TencentCloud
                     bool MonManagedIdsHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID for interception. by default, all rules have no configuration interception.
-                     * @return DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
+                     * 获取Rule ID to intercept. By default, no rule is intercepted.
+                     * @return DropManagedIds Rule ID to intercept. By default, no rule is intercepted.
                      * 
                      */
                     std::vector<int64_t> GetDropManagedIds() const;
 
                     /**
-                     * 设置Rule ID for interception. by default, all rules have no configuration interception.
-                     * @param _dropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
+                     * 设置Rule ID to intercept. By default, no rule is intercepted.
+                     * @param _dropManagedIds Rule ID to intercept. By default, no rule is intercepted.
                      * 
                      */
                     void SetDropManagedIds(const std::vector<int64_t>& _dropManagedIds);
@@ -212,47 +212,47 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
+                     * Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as an output parameter.
+                     * Rule ID. Output only.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * Rule ID to allow. defaults to no rules configured for allowance.
+                     * Rule ID to allow. By default, no rule is allowed.
                      */
                     std::vector<int64_t> m_transManagedIds;
                     bool m_transManagedIdsHasBeenSet;
 
                     /**
-                     * Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+                     * Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
                      */
                     std::vector<int64_t> m_algManagedIds;
                     bool m_algManagedIdsHasBeenSet;
 
                     /**
-                     * The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+                     * Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
                      */
                     std::vector<int64_t> m_capManagedIds;
                     bool m_capManagedIdsHasBeenSet;
 
                     /**
-                     * Rule ID for observation. by default, observation is not configured for all rules.
+                     * Rule ID to observe. By default, no rule is configured for observation.
                      */
                     std::vector<int64_t> m_monManagedIds;
                     bool m_monManagedIdsHasBeenSet;
 
                     /**
-                     * Rule ID for interception. by default, all rules have no configuration interception.
+                     * Rule ID to intercept. By default, no rule is intercepted.
                      */
                     std::vector<int64_t> m_dropManagedIds;
                     bool m_dropManagedIdsHasBeenSet;

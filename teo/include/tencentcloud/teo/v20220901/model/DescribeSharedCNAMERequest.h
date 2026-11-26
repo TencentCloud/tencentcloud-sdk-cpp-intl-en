@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shared CNAME associated site ID.
-                     * @return ZoneId Shared CNAME associated site ID.
+                     * 获取Zone ID associated with the shared CNAME.
+                     * @return ZoneId Zone ID associated with the shared CNAME.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Shared CNAME associated site ID.
-                     * @param _zoneId Shared CNAME associated site ID.
+                     * 设置Zone ID associated with the shared CNAME.
+                     * @param _zoneId Zone ID associated with the shared CNAME.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -66,26 +66,26 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
                      * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
                      * @param _filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -100,10 +100,10 @@ namespace TencentCloud
                     /**
                      * 获取List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
                      * @return Direction List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
                      * 
                      */
                     std::string GetDirection() const;
@@ -111,10 +111,10 @@ namespace TencentCloud
                     /**
                      * 设置List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
                      * @param _direction List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
                      * 
                      */
                     void SetDirection(const std::string& _direction);
@@ -128,22 +128,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
                      * @return Match Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
                      * 
                      */
                     std::string GetMatch() const;
 
                     /**
                      * 设置Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
                      * @param _match Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
                      * 
                      */
                     void SetMatch(const std::string& _match);
@@ -157,22 +157,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
                      * @return Order Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
                      * @param _order Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -206,15 +206,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number limit of paginated query. Default value: 20. Upper limit: 200.
-                     * @return Limit Number limit of paginated query. Default value: 20. Upper limit: 200.
+                     * 获取Number limit of paginated query. Default value: 20. Maximum value: 200.
+                     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 200.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number limit of paginated query. Default value: 20. Upper limit: 200.
-                     * @param _limit Number limit of paginated query. Default value: 20. Upper limit: 200.
+                     * 设置Number limit of paginated query. Default value: 20. Maximum value: 200.
+                     * @param _limit Number limit of paginated query. Default value: 20. Maximum value: 200.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -229,16 +229,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shared CNAME associated site ID.
+                     * Zone ID associated with the shared CNAME.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
                      * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -246,23 +246,23 @@ namespace TencentCloud
                     /**
                      * List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
                      */
                     std::string m_direction;
                     bool m_directionHasBeenSet;
 
                     /**
                      * Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
                      */
                     std::string m_match;
                     bool m_matchHasBeenSet;
 
                     /**
                      * Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
@@ -274,7 +274,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number limit of paginated query. Default value: 20. Upper limit: 200.
+                     * Number limit of paginated query. Default value: 20. Maximum value: 200.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

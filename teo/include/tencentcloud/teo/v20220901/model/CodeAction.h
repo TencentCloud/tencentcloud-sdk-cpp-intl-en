@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule engine action with a status code
+                * Action with a status code for the rule engine
                 */
                 class CodeAction : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
-                     * @return Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+                     * 获取Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+                     * @return Action Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
-                     * @param _action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+                     * 设置Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+                     * @param _action Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+                     * Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

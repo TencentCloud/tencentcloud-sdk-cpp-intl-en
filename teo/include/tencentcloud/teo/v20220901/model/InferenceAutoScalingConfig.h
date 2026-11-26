@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Inference service auto scaling configuration.
+                * Scaling configuration for automatic scaling of the inference service.
                 */
                 class InferenceAutoScalingConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
-                     * @return MinInstanceCount <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+                     * 获取<p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
+                     * @return MinInstanceCount <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
                      * 
                      */
                     int64_t GetMinInstanceCount() const;
 
                     /**
-                     * 设置<p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
-                     * @param _minInstanceCount <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+                     * 设置<p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
+                     * @param _minInstanceCount <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
                      * 
                      */
                     void SetMinInstanceCount(const int64_t& _minInstanceCount);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+                     * <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
                      */
                     int64_t m_minInstanceCount;
                     bool m_minInstanceCountHasBeenSet;

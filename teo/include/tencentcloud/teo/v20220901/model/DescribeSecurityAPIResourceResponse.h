@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取API resource list.	
-                     * @return APIResources API resource list.	
+                     * 获取List of API resources.	
+                     * @return APIResources List of API resources.	
                      * 
                      */
                     std::vector<APIResource> GetAPIResources() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * API resource list.	
+                     * List of API resources.	
                      */
                     std::vector<APIResource> m_aPIResources;
                     bool m_aPIResourcesHasBeenSet;

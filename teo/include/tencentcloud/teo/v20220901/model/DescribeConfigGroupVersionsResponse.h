@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total versions.
-                     * @return TotalCount Total versions.
+                     * 获取Total number of versions.
+                     * @return TotalCount Total number of versions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total versions.
+                     * Total number of versions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

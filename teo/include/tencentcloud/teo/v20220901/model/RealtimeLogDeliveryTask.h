@@ -55,15 +55,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Real-time log delivery task ID.</p>
-                     * @return TaskId <p>Real-time log delivery task ID.</p>
+                     * 获取<p>ID of the real-time log delivery task.</p>
+                     * @return TaskId <p>ID of the real-time log delivery task.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置<p>Real-time log delivery task ID.</p>
-                     * @param _taskId <p>Real-time log delivery task ID.</p>
+                     * 设置<p>ID of the real-time log delivery task.</p>
+                     * @param _taskId <p>ID of the real-time log delivery task.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
-                     * @return DeliveryStatus <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
+                     * 获取<p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
+                     * @return DeliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
                      * 
                      */
                     std::string GetDeliveryStatus() const;
 
                     /**
-                     * 设置<p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
-                     * @param _deliveryStatus <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
+                     * 设置<p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
+                     * @param _deliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
                      * 
                      */
                     void SetDeliveryStatus(const std::string& _deliveryStatus);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool DeliveryStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
-                     * @return TaskType <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
+                     * 获取<p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
+                     * @return TaskType <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置<p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
-                     * @param _taskType <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
+                     * 设置<p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
+                     * @param _taskType <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
-                     * @return EntityList <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
+                     * 获取<p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
+                     * @return EntityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
                      * 
                      */
                     std::vector<std::string> GetEntityList() const;
 
                     /**
-                     * 设置<p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
-                     * @param _entityList <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
+                     * 设置<p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
+                     * @param _entityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
                      * 
                      */
                     void SetEntityList(const std::vector<std::string>& _entityList);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool EntityListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
-                     * @return LogType <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
+                     * 获取<p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
+                     * @return LogType <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置<p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
-                     * @param _logType <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
+                     * 设置<p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
+                     * @param _logType <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -181,15 +181,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
-                     * @return Area <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
+                     * 获取<p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
+                     * @return Area <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置<p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
-                     * @param _area <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
+                     * 设置<p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
+                     * @param _area <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of predefined fields for delivery.</p>
-                     * @return Fields <p>List of predefined fields for delivery.</p>
+                     * 获取<p>List of preset fields to deliver.</p>
+                     * @return Fields <p>List of preset fields to deliver.</p>
                      * 
                      */
                     std::vector<std::string> GetFields() const;
 
                     /**
-                     * 设置<p>List of predefined fields for delivery.</p>
-                     * @param _fields <p>List of predefined fields for delivery.</p>
+                     * 设置<p>List of preset fields to deliver.</p>
+                     * @param _fields <p>List of preset fields to deliver.</p>
                      * 
                      */
                     void SetFields(const std::vector<std::string>& _fields);
@@ -223,15 +223,15 @@ namespace TencentCloud
                     bool FieldsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Custom fields for delivery.</p>
-                     * @return CustomFields <p>Custom fields for delivery.</p>
+                     * 获取<p>List of custom fields to deliver.</p>
+                     * @return CustomFields <p>List of custom fields to deliver.</p>
                      * 
                      */
                     std::vector<CustomField> GetCustomFields() const;
 
                     /**
-                     * 设置<p>Custom fields for delivery.</p>
-                     * @param _customFields <p>Custom fields for delivery.</p>
+                     * 设置<p>List of custom fields to deliver.</p>
+                     * @param _customFields <p>List of custom fields to deliver.</p>
                      * 
                      */
                     void SetCustomFields(const std::vector<CustomField>& _customFields);
@@ -244,15 +244,15 @@ namespace TencentCloud
                     bool CustomFieldsHasBeenSet() const;
 
                     /**
-                     * 获取<p>List of custom expression fields for shipping.</p>
-                     * @return CustomExpressionFields <p>List of custom expression fields for shipping.</p>
+                     * 获取<p>List of custom expression fields to deliver.</p>
+                     * @return CustomExpressionFields <p>List of custom expression fields to deliver.</p>
                      * 
                      */
                     std::vector<CustomExpressionField> GetCustomExpressionFields() const;
 
                     /**
-                     * 设置<p>List of custom expression fields for shipping.</p>
-                     * @param _customExpressionFields <p>List of custom expression fields for shipping.</p>
+                     * 设置<p>List of custom expression fields to deliver.</p>
+                     * @param _customExpressionFields <p>List of custom expression fields to deliver.</p>
                      * 
                      */
                     void SetCustomExpressionFields(const std::vector<CustomExpressionField>& _customExpressionFields);
@@ -265,15 +265,15 @@ namespace TencentCloud
                     bool CustomExpressionFieldsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter criteria of log shipping.</p>
-                     * @return DeliveryConditions <p>Filter criteria of log shipping.</p>
+                     * 获取<p>Filter conditions for log delivery.</p>
+                     * @return DeliveryConditions <p>Filter conditions for log delivery.</p>
                      * 
                      */
                     std::vector<DeliveryCondition> GetDeliveryConditions() const;
 
                     /**
-                     * 设置<p>Filter criteria of log shipping.</p>
-                     * @param _deliveryConditions <p>Filter criteria of log shipping.</p>
+                     * 设置<p>Filter conditions for log delivery.</p>
+                     * @param _deliveryConditions <p>Filter conditions for log delivery.</p>
                      * 
                      */
                     void SetDeliveryConditions(const std::vector<DeliveryCondition>& _deliveryConditions);
@@ -307,15 +307,15 @@ namespace TencentCloud
                     bool SampleHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
-                     * @return LogFormat <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
+                     * 获取<p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
+                     * @return LogFormat <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
                      * 
                      */
                     LogFormat GetLogFormat() const;
 
                     /**
-                     * 设置<p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
-                     * @param _logFormat <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
+                     * 设置<p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
+                     * @param _logFormat <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
                      * 
                      */
                     void SetLogFormat(const LogFormat& _logFormat);
@@ -328,15 +328,15 @@ namespace TencentCloud
                     bool LogFormatHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration information of the CLS.</p>
-                     * @return CLS <p>Configuration information of the CLS.</p>
+                     * 获取<p>Configuration of CLS.</p>
+                     * @return CLS <p>Configuration of CLS.</p>
                      * 
                      */
                     CLSTopic GetCLS() const;
 
                     /**
-                     * 设置<p>Configuration information of the CLS.</p>
-                     * @param _cLS <p>Configuration information of the CLS.</p>
+                     * 设置<p>Configuration of CLS.</p>
+                     * @param _cLS <p>Configuration of CLS.</p>
                      * 
                      */
                     void SetCLS(const CLSTopic& _cLS);
@@ -349,15 +349,15 @@ namespace TencentCloud
                     bool CLSHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration information of the custom HTTP service.</p>
-                     * @return CustomEndpoint <p>Configuration information of the custom HTTP service.</p>
+                     * 获取<p>Configuration of the custom HTTP service.</p>
+                     * @return CustomEndpoint <p>Configuration of the custom HTTP service.</p>
                      * 
                      */
                     CustomEndpoint GetCustomEndpoint() const;
 
                     /**
-                     * 设置<p>Configuration information of the custom HTTP service.</p>
-                     * @param _customEndpoint <p>Configuration information of the custom HTTP service.</p>
+                     * 设置<p>Configuration of the custom HTTP service.</p>
+                     * @param _customEndpoint <p>Configuration of the custom HTTP service.</p>
                      * 
                      */
                     void SetCustomEndpoint(const CustomEndpoint& _customEndpoint);
@@ -370,15 +370,15 @@ namespace TencentCloud
                     bool CustomEndpointHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
-                     * @return S3 <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
+                     * 获取<p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
+                     * @return S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
                      * 
                      */
                     S3 GetS3() const;
 
                     /**
-                     * 设置<p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
-                     * @param _s3 <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
+                     * 设置<p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
+                     * @param _s3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
                      * 
                      */
                     void SetS3(const S3& _s3);
@@ -391,15 +391,15 @@ namespace TencentCloud
                     bool S3HasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
-                     * @return AWSS3 <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+                     * 获取<p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
+                     * @return AWSS3 <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
                      * 
                      */
                     AWSS3 GetAWSS3() const;
 
                     /**
-                     * 设置<p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
-                     * @param _aWSS3 <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+                     * 设置<p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
+                     * @param _aWSS3 <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
                      * 
                      */
                     void SetAWSS3(const AWSS3& _aWSS3);
@@ -456,7 +456,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Real-time log delivery task ID.</p>
+                     * <p>ID of the real-time log delivery task.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
@@ -468,55 +468,55 @@ namespace TencentCloud
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
+                     * <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
                      */
                     std::string m_deliveryStatus;
                     bool m_deliveryStatusHasBeenSet;
 
                     /**
-                     * <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
+                     * <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
+                     * <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
                      */
                     std::vector<std::string> m_entityList;
                     bool m_entityListHasBeenSet;
 
                     /**
-                     * <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
+                     * <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
+                     * <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * <p>List of predefined fields for delivery.</p>
+                     * <p>List of preset fields to deliver.</p>
                      */
                     std::vector<std::string> m_fields;
                     bool m_fieldsHasBeenSet;
 
                     /**
-                     * <p>Custom fields for delivery.</p>
+                     * <p>List of custom fields to deliver.</p>
                      */
                     std::vector<CustomField> m_customFields;
                     bool m_customFieldsHasBeenSet;
 
                     /**
-                     * <p>List of custom expression fields for shipping.</p>
+                     * <p>List of custom expression fields to deliver.</p>
                      */
                     std::vector<CustomExpressionField> m_customExpressionFields;
                     bool m_customExpressionFieldsHasBeenSet;
 
                     /**
-                     * <p>Filter criteria of log shipping.</p>
+                     * <p>Filter conditions for log delivery.</p>
                      */
                     std::vector<DeliveryCondition> m_deliveryConditions;
                     bool m_deliveryConditionsHasBeenSet;
@@ -528,31 +528,31 @@ namespace TencentCloud
                     bool m_sampleHasBeenSet;
 
                     /**
-                     * <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
+                     * <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
                      */
                     LogFormat m_logFormat;
                     bool m_logFormatHasBeenSet;
 
                     /**
-                     * <p>Configuration information of the CLS.</p>
+                     * <p>Configuration of CLS.</p>
                      */
                     CLSTopic m_cLS;
                     bool m_cLSHasBeenSet;
 
                     /**
-                     * <p>Configuration information of the custom HTTP service.</p>
+                     * <p>Configuration of the custom HTTP service.</p>
                      */
                     CustomEndpoint m_customEndpoint;
                     bool m_customEndpointHasBeenSet;
 
                     /**
-                     * <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
+                     * <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
                      */
                     S3 m_s3;
                     bool m_s3HasBeenSet;
 
                     /**
-                     * <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+                     * <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
                      */
                     AWSS3 m_aWSS3;
                     bool m_aWSS3HasBeenSet;

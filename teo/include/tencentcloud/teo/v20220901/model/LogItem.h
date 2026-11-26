@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log generation time point, using unix millisecond-level timestamp.
-                     * @return Timestamp Log generation time point, using unix millisecond-level timestamp.
+                     * 获取Time point when the log is generated, using a unix millisecond-level timestamp.
+                     * @return Timestamp Time point when the log is generated, using a unix millisecond-level timestamp.
                      * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
-                     * 设置Log generation time point, using unix millisecond-level timestamp.
-                     * @param _timestamp Log generation time point, using unix millisecond-level timestamp.
+                     * 设置Time point when the log is generated, using a unix millisecond-level timestamp.
+                     * @param _timestamp Time point when the log is generated, using a unix millisecond-level timestamp.
                      * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取Specific contents of the log, using JSON String Format.
-                     * @return LogJson Specific contents of the log, using JSON String Format.
+                     * 获取Specific contents of the log in JSON String Format.
+                     * @return LogJson Specific contents of the log in JSON String Format.
                      * 
                      */
                     std::string GetLogJson() const;
 
                     /**
-                     * 设置Specific contents of the log, using JSON String Format.
-                     * @param _logJson Specific contents of the log, using JSON String Format.
+                     * 设置Specific contents of the log in JSON String Format.
+                     * @param _logJson Specific contents of the log in JSON String Format.
                      * 
                      */
                     void SetLogJson(const std::string& _logJson);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log generation time point, using unix millisecond-level timestamp.
+                     * Time point when the log is generated, using a unix millisecond-level timestamp.
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * Specific contents of the log, using JSON String Format.
+                     * Specific contents of the log in JSON String Format.
                      */
                     std::string m_logJson;
                     bool m_logJsonHasBeenSet;

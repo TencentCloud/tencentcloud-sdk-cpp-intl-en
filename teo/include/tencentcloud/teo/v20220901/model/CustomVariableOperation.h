@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom Variable operation details.
+                * Operation details of custom variables.
                 */
                 class CustomVariableOperation : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
-                     * @return Branches <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+                     * 获取<p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+                     * @return Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
                      * 
                      */
                     std::vector<CustomVariableOperationRuleBranch> GetBranches() const;
 
                     /**
-                     * 设置<p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
-                     * @param _branches <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+                     * 设置<p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+                     * @param _branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
                      * 
                      */
                     void SetBranches(const std::vector<CustomVariableOperationRuleBranch>& _branches);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BranchesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Rule note. Multiple notes can be filled.</p>
-                     * @return Description <p>Rule note. Multiple notes can be filled.</p>
+                     * 获取<p>Rule annotation. Multiple annotations can be filled.</p>
+                     * @return Description <p>Rule annotation. Multiple annotations can be filled.</p>
                      * 
                      */
                     std::vector<std::string> GetDescription() const;
 
                     /**
-                     * 设置<p>Rule note. Multiple notes can be filled.</p>
-                     * @param _description <p>Rule note. Multiple notes can be filled.</p>
+                     * 设置<p>Rule annotation. Multiple annotations can be filled.</p>
+                     * @param _description <p>Rule annotation. Multiple annotations can be filled.</p>
                      * 
                      */
                     void SetDescription(const std::vector<std::string>& _description);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+                     * <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
                      */
                     std::vector<CustomVariableOperationRuleBranch> m_branches;
                     bool m_branchesHasBeenSet;
 
                     /**
-                     * <p>Rule note. Multiple notes can be filled.</p>
+                     * <p>Rule annotation. Multiple annotations can be filled.</p>
                      */
                     std::vector<std::string> m_description;
                     bool m_descriptionHasBeenSet;

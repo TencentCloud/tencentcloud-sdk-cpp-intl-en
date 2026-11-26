@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Nested rule settings
+                * Nested rule information.
                 */
                 class SubRule : public AbstractModel
                 {
@@ -49,19 +49,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
-                     * @return Conditions The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
+                     * 获取Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+                     * @return Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
                      * 
                      */
                     std::vector<RuleAndConditions> GetConditions() const;
 
                     /**
-                     * 设置The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
-                     * @param _conditions The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
+                     * 设置Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+                     * @param _conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
                      * 
                      */
                     void SetConditions(const std::vector<RuleAndConditions>& _conditions);
@@ -74,15 +74,15 @@ Note: If any condition in the array is met, the feature will run.
                     bool ConditionsHasBeenSet() const;
 
                     /**
-                     * 获取The feature to be executed.
-                     * @return Actions The feature to be executed.
+                     * 获取Function to execute.
+                     * @return Actions Function to execute.
                      * 
                      */
                     std::vector<Action> GetActions() const;
 
                     /**
-                     * 设置The feature to be executed.
-                     * @param _actions The feature to be executed.
+                     * 设置Function to execute.
+                     * @param _actions Function to execute.
                      * 
                      */
                     void SetActions(const std::vector<Action>& _actions);
@@ -97,14 +97,14 @@ Note: If any condition in the array is met, the feature will run.
                 private:
 
                     /**
-                     * The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
+                     * Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
                      */
                     std::vector<RuleAndConditions> m_conditions;
                     bool m_conditionsHasBeenSet;
 
                     /**
-                     * The feature to be executed.
+                     * Function to execute.
                      */
                     std::vector<Action> m_actions;
                     bool m_actionsHasBeenSet;

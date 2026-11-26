@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter of the action for the HTTP request/response header of a rule engine condition.
+                * Action parameter for HTTP request/response header operations in rule engine conditions.
                 */
                 class RuleRewriteActionParams : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
-                     * @return Action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
+                     * 获取For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
+                     * @return Action For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
-                     * @param _action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
+                     * 设置For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
+                     * @param _action For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -80,15 +80,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Parameter name
-                     * @return Name Parameter name
+                     * 获取Parameter name.
+                     * @return Name Parameter name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Parameter name
-                     * @param _name Parameter name
+                     * 设置Parameter name.
+                     * @param _name Parameter name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -101,15 +101,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Parameter value
-                     * @return Values Parameter value
+                     * 获取Parameter value.
+                     * @return Values Parameter value.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Parameter value
-                     * @param _values Parameter value
+                     * 设置Parameter value.
+                     * @param _values Parameter value.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -124,22 +124,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
+                     * For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Parameter name
+                     * Parameter name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Parameter value
+                     * Parameter value.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

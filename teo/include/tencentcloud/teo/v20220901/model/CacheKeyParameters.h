@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom Cache Key config.
+                * Custom Cache Key configuration parameters.
                 */
                 class CacheKeyParameters : public AbstractModel
                 {
@@ -50,27 +50,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
-                     * @return FullURLCache Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
+                     * 获取Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
+                     * @return FullURLCache Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
                      * 
                      */
                     std::string GetFullURLCache() const;
 
                     /**
-                     * 设置Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
-                     * @param _fullURLCache Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
+                     * 设置Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
+                     * @param _fullURLCache Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
                      * 
                      */
                     void SetFullURLCache(const std::string& _fullURLCache);
@@ -83,15 +79,15 @@ namespace TencentCloud
                     bool FullURLCacheHasBeenSet() const;
 
                     /**
-                     * 获取Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
-                     * @return QueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+                     * 获取Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
+                     * @return QueryString Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
                      * 
                      */
                     CacheKeyQueryString GetQueryString() const;
 
                     /**
-                     * 设置Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
-                     * @param _queryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+                     * 设置Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
+                     * @param _queryString Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
                      * 
                      */
                     void SetQueryString(const CacheKeyQueryString& _queryString);
@@ -104,27 +100,23 @@ namespace TencentCloud
                     bool QueryStringHasBeenSet() const;
 
                     /**
-                     * 获取Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-                     * @return IgnoreCase Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+                     * 获取Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @return IgnoreCase Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     std::string GetIgnoreCase() const;
 
                     /**
-                     * 设置Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-                     * @param _ignoreCase Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+                     * 设置Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @param _ignoreCase Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     void SetIgnoreCase(const std::string& _ignoreCase);
@@ -137,15 +129,15 @@ namespace TencentCloud
                     bool IgnoreCaseHasBeenSet() const;
 
                     /**
-                     * 获取HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
-                     * @return Header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * 获取HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
+                     * @return Header HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
                      * 
                      */
                     CacheKeyHeader GetHeader() const;
 
                     /**
-                     * 设置HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
-                     * @param _header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * 设置HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
+                     * @param _header HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
                      * 
                      */
                     void SetHeader(const CacheKeyHeader& _header);
@@ -158,27 +150,23 @@ namespace TencentCloud
                     bool HeaderHasBeenSet() const;
 
                     /**
-                     * 获取Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-                     * @return Scheme Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+                     * 获取Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @return Scheme Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-                     * @param _scheme Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+                     * 设置Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * @param _scheme Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      * 
                      */
                     void SetScheme(const std::string& _scheme);
@@ -191,15 +179,15 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
-                     * @return Cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * 获取Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
+                     * @return Cookie Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
                      * 
                      */
                     CacheKeyCookie GetCookie() const;
 
                     /**
-                     * 设置Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
-                     * @param _cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * 设置Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
+                     * @param _cookie Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
                      * 
                      */
                     void SetCookie(const CacheKeyCookie& _cookie);
@@ -214,46 +202,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
+                     * Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
                      */
                     std::string m_fullURLCache;
                     bool m_fullURLCacheHasBeenSet;
 
                     /**
-                     * Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+                     * Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
                      */
                     CacheKeyQueryString m_queryString;
                     bool m_queryStringHasBeenSet;
 
                     /**
-                     * Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+                     * Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      */
                     std::string m_ignoreCase;
                     bool m_ignoreCaseHasBeenSet;
 
                     /**
-                     * HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
                      */
                     CacheKeyHeader m_header;
                     bool m_headerHasBeenSet;
 
                     /**
-                     * Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+                     * Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+                     * Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
                      */
                     CacheKeyCookie m_cookie;
                     bool m_cookieHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return COSFileId ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the COS file.
+                     * @return COSFileId ID of the COS file.
                      * 
                      */
                     std::string GetCOSFileId() const;
 
                     /**
-                     * 设置ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cOSFileId ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the COS file.
+                     * @param _cOSFileId ID of the COS file.
                      * 
                      */
                     void SetCOSFileId(const std::string& _cOSFileId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool COSFileIdHasBeenSet() const;
 
                     /**
-                     * 获取Download URL.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return URL Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Download URL.
+                     * @return URL Download URL.
                      * 
                      */
                     std::string GetURL() const;
 
                     /**
-                     * 设置Download URL.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uRL Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Download URL.
+                     * @param _uRL Download URL.
                      * 
                      */
                     void SetURL(const std::string& _uRL);
@@ -90,22 +90,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _name Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -118,23 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Creation Time
+                     * @return CreateTime Creation Time
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Creation Time
+                     * @param _createTime Creation Time
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -149,29 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID of the COS file.
                      */
                     std::string m_cOSFileId;
                     bool m_cOSFileIdHasBeenSet;
 
                     /**
-                     * Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Download URL.
                      */
                     std::string m_uRL;
                     bool m_uRLHasBeenSet;
 
                     /**
                      * Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Creation Time
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

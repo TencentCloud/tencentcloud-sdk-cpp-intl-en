@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * @return Data List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<TimingDataRecord> GetData() const;
@@ -84,7 +82,6 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
                     /**
                      * List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<TimingDataRecord> m_data;
                     bool m_dataHasBeenSet;

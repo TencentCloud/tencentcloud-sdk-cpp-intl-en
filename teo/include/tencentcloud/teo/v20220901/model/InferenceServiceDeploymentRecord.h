@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Service deployment history record for reasoning.
+                * Reasoning service deployment history.
                 */
                 class InferenceServiceDeploymentRecord : public AbstractModel
                 {
@@ -69,31 +69,31 @@ namespace TencentCloud
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
-                     * @return Operation Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+                     * 获取Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
+                     * @return Operation Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
-                     * @param _operation Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+                     * 设置Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
+                     * @param _operation Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -107,12 +107,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
                      * @return Status Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
                      * 
                      */
@@ -120,12 +120,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
                      * @param _status Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
                      * 
                      */
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Deployment duration, unit: second.
-                     * @return Duration Deployment duration, unit: second.
+                     * 获取Deployment duration. Unit: seconds.
+                     * @return Duration Deployment duration. Unit: seconds.
                      * 
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置Deployment duration, unit: second.
-                     * @param _duration Deployment duration, unit: second.
+                     * 设置Deployment duration. Unit: seconds.
+                     * @param _duration Deployment duration. Unit: seconds.
                      * 
                      */
                     void SetDuration(const int64_t& _duration);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Configuration for this service deployment.
-                     * @return InferenceServiceConfig Configuration for this service deployment.
+                     * 获取Configuration of this inference service deployment.
+                     * @return InferenceServiceConfig Configuration of this inference service deployment.
                      * 
                      */
                     InferenceServiceConfig GetInferenceServiceConfig() const;
 
                     /**
-                     * 设置Configuration for this service deployment.
-                     * @param _inferenceServiceConfig Configuration for this service deployment.
+                     * 设置Configuration of this inference service deployment.
+                     * @param _inferenceServiceConfig Configuration of this inference service deployment.
                      * 
                      */
                     void SetInferenceServiceConfig(const InferenceServiceConfig& _inferenceServiceConfig);
@@ -202,23 +202,23 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
-                     * @return ActiveStatus Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+                     * 获取Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
+                     * @return ActiveStatus Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
                      * 
                      */
                     std::string GetActiveStatus() const;
 
                     /**
-                     * 设置Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
-                     * @param _activeStatus Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+                     * 设置Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
+                     * @param _activeStatus Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
                      * 
                      */
                     void SetActiveStatus(const std::string& _activeStatus);
@@ -239,32 +239,32 @@ namespace TencentCloud
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+                     * Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
 
                     /**
                      * Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Deployment duration, unit: second.
+                     * Deployment duration. Unit: seconds.
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Configuration for this service deployment.
+                     * Configuration of this inference service deployment.
                      */
                     InferenceServiceConfig m_inferenceServiceConfig;
                     bool m_inferenceServiceConfigHasBeenSet;
@@ -276,9 +276,9 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+                     * Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
                      */
                     std::string m_activeStatus;
                     bool m_activeStatusHasBeenSet;

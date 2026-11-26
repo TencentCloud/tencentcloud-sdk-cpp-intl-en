@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site name.
-                     * @return ZoneName The site name.
+                     * 获取Site name.
+                     * @return ZoneName Site name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置The site name.
-                     * @param _zoneName The site name.
+                     * 设置Site name.
+                     * @param _zoneName Site name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -64,18 +64,18 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+                     * 获取Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
-                     * @return Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+                     * @return Domain Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+                     * 设置Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
-                     * @param _domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+                     * @param _domain Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
                      * 
                      */
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site name.
+                     * Site name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+                     * Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
                      */
                     std::string m_domain;

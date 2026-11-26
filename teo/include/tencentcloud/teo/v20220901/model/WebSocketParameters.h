@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * WebSocket configuration
+                * WebSocket configuration.
                 */
                 class WebSocketParameters : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
-                     * @return Switch Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
+                     * 获取WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
+                     * @return Switch WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
-                     * @param _switch Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
+                     * 设置WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
+                     * @param _switch WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
-                     * @return Timeout Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+                     * 获取Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
+                     * @return Timeout Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
                      * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
-                     * 设置Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
-                     * @param _timeout Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+                     * 设置Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
+                     * @param _timeout Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
                      * 
                      */
                     void SetTimeout(const int64_t& _timeout);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
+                     * WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+                     * Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
                      */
                     int64_t m_timeout;
                     bool m_timeoutHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Hardware specifications list.</p>
-                     * @return HardwareSpecifications <p>Hardware specifications list.</p>
+                     * 获取<p>Hardware specification list.</p>
+                     * @return HardwareSpecifications <p>Hardware specification list.</p>
                      * 
                      */
                     std::vector<InferenceHardwareSpecification> GetHardwareSpecifications() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Hardware specifications list.</p>
+                     * <p>Hardware specification list.</p>
                      */
                     std::vector<InferenceHardwareSpecification> m_hardwareSpecifications;
                     bool m_hardwareSpecificationsHasBeenSet;

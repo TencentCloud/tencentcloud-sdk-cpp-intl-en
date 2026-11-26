@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details of the DNS record.
-                     * @return Ascription Details of the DNS record.
+                     * 获取Site ownership verification: Dns verification information.
+                     * @return Ascription Site ownership verification: Dns verification information.
                      * 
                      */
                     AscriptionInfo GetAscription() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool AscriptionHasBeenSet() const;
 
                     /**
-                     * 获取Details of the verification file.
-                     * @return FileAscription Details of the verification file.
+                     * 获取Site ownership verification: file verification information.
+                     * @return FileAscription Site ownership verification: file verification information.
                      * 
                      */
                     FileAscriptionInfo GetFileAscription() const;
@@ -76,13 +76,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Details of the DNS record.
+                     * Site ownership verification: Dns verification information.
                      */
                     AscriptionInfo m_ascription;
                     bool m_ascriptionHasBeenSet;
 
                     /**
-                     * Details of the verification file.
+                     * Site ownership verification: file verification information.
                      */
                     FileAscriptionInfo m_fileAscription;
                     bool m_fileAscriptionHasBeenSet;

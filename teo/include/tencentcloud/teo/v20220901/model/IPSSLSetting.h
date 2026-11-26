@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
-                     * @return Operation Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+                     * 获取Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
+                     * @return Operation Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
-                     * @param _operation Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+                     * 设置Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
+                     * @param _operation Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+                     * Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total environments.
-                     * @return TotalCount Total environments.
+                     * 获取Total number of environments.
+                     * @return TotalCount Total number of environments.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Environment list.
-                     * @return EnvInfos Environment list.
+                     * 获取List of environments.
+                     * @return EnvInfos List of environments.
                      * 
                      */
                     std::vector<EnvInfo> GetEnvInfos() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total environments.
+                     * Total number of environments.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Environment list.
+                     * List of environments.
                      */
                     std::vector<EnvInfo> m_envInfos;
                     bool m_envInfosHasBeenSet;

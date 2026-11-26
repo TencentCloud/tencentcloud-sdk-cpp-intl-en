@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin group record
+                * Origin server group records
                 */
                 class OriginRecord : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The origin record value, which can be an IPv4/IPv6 address or a domain name.
-                     * @return Record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+                     * 获取Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
+                     * @return Record Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
                      * 
                      */
                     std::string GetRecord() const;
 
                     /**
-                     * 设置The origin record value, which can be an IPv4/IPv6 address or a domain name.
-                     * @param _record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+                     * 设置Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
+                     * @param _record Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
                      * 
                      */
                     void SetRecord(const std::string& _record);
@@ -69,27 +69,27 @@ namespace TencentCloud
                     bool RecordHasBeenSet() const;
 
                     /**
-                     * 获取The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
-                     * @return Type The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
+                     * 获取Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
+                     * @return Type Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
-                     * @param _type The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
+                     * 设置Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
+                     * @param _type Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The origin record ID.
-                     * @return RecordId The origin record ID.
+                     * 获取Origin record ID.
+                     * @return RecordId Origin record ID.
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置The origin record ID.
-                     * @param _recordId The origin record ID.
+                     * 设置Origin record ID.
+                     * @param _recordId Origin record ID.
                      * 
                      */
                     void SetRecordId(const std::string& _recordId);
@@ -123,19 +123,15 @@ namespace TencentCloud
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取[Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @return Weight [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 获取【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
+                     * @return Weight 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置[Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-                     * @param _weight [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 设置【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
+                     * @param _weight 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -148,26 +144,26 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+                     * 获取Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
-                     * @return Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+                     * @return Private Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
                      * 
                      */
                     bool GetPrivate() const;
 
                     /**
-                     * 设置Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+                     * 设置Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
-                     * @param _private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+                     * @param _private Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
                      * 
                      */
@@ -181,15 +177,15 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                     bool PrivateHasBeenSet() const;
 
                     /**
-                     * 获取Private authentication parameters. This field is valid when `Private=true`.
-                     * @return PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
+                     * 获取Private authentication parameter. Valid when the origin server type is Private=true.
+                     * @return PrivateParameters Private authentication parameter. Valid when the origin server type is Private=true.
                      * 
                      */
                     std::vector<PrivateParameter> GetPrivateParameters() const;
 
                     /**
-                     * 设置Private authentication parameters. This field is valid when `Private=true`.
-                     * @param _privateParameters Private authentication parameters. This field is valid when `Private=true`.
+                     * 设置Private authentication parameter. Valid when the origin server type is Private=true.
+                     * @param _privateParameters Private authentication parameter. Valid when the origin server type is Private=true.
                      * 
                      */
                     void SetPrivateParameters(const std::vector<PrivateParameter>& _privateParameters);
@@ -204,44 +200,43 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * The origin record value, which can be an IPv4/IPv6 address or a domain name.
+                     * Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
                      */
                     std::string m_record;
                     bool m_recordHasBeenSet;
 
                     /**
-                     * The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
+                     * Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The origin record ID.
+                     * Origin record ID.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+                     * Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
                      */
                     bool m_private;
                     bool m_privateHasBeenSet;
 
                     /**
-                     * Private authentication parameters. This field is valid when `Private=true`.
+                     * Private authentication parameter. Valid when the origin server type is Private=true.
                      */
                     std::vector<PrivateParameter> m_privateParameters;
                     bool m_privateParametersHasBeenSet;

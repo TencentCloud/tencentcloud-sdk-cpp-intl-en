@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Site ID.</p>
-                     * @return ZoneId <p>Site ID.</p>
+                     * 获取<p>Zone ID.</p>
+                     * @return ZoneId <p>Zone ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置<p>Site ID.</p>
-                     * @param _zoneId <p>Site ID.</p>
+                     * 设置<p>Zone ID.</p>
+                     * @param _zoneId <p>Zone ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paginated query offset. Default value: 0.</p>
-                     * @return Offset <p>Paginated query offset. Default value: 0.</p>
+                     * 获取<p>The offset of paginated query. Default value: 0.</p>
+                     * @return Offset <p>The offset of paginated query. Default value: 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Paginated query offset. Default value: 0.</p>
-                     * @param _offset <p>Paginated query offset. Default value: 0.</p>
+                     * 设置<p>The offset of paginated query. Default value: 0.</p>
+                     * @param _offset <p>The offset of paginated query. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -108,13 +108,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Site ID.</p>
+                     * <p>Zone ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>Paginated query offset. Default value: 0.</p>
+                     * <p>The offset of paginated query. Default value: 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

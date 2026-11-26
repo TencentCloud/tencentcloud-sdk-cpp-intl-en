@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PurgeQuota Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Update related quotas.
+                     * @return PurgeQuota Update related quotas.
                      * 
                      */
                     std::vector<Quota> GetPurgeQuota() const;
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PurgeQuotaHasBeenSet() const;
 
                     /**
-                     * 获取Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrefetchQuota Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Preheating-related quota.
+                     * @return PrefetchQuota Preheating-related quota.
                      * 
                      */
                     std::vector<Quota> GetPrefetchQuota() const;
@@ -79,15 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Update related quotas.
                      */
                     std::vector<Quota> m_purgeQuota;
                     bool m_purgeQuotaHasBeenSet;
 
                     /**
-                     * Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Preheating-related quota.
                      */
                     std::vector<Quota> m_prefetchQuota;
                     bool m_prefetchQuotaHasBeenSet;

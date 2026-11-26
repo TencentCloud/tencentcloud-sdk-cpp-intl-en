@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The L4 application proxy ID.
-                     * @return ProxyId The L4 application proxy ID.
+                     * 获取ID of the newly-added L4 proxy application.
+                     * @return ProxyId ID of the newly-added L4 proxy application.
                      * 
                      */
                     std::string GetProxyId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The L4 application proxy ID.
+                     * ID of the newly-added L4 proxy application.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;

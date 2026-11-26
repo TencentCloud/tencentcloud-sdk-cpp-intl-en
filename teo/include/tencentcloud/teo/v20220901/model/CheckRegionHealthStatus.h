@@ -71,11 +71,11 @@ namespace TencentCloud
                     /**
                      * 获取Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
                      * @return Healthy Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
                      * 
                      */
@@ -84,11 +84,11 @@ namespace TencentCloud
                     /**
                      * 设置Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
                      * @param _healthy Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
                      * 
                      */
@@ -133,7 +133,7 @@ namespace TencentCloud
                     /**
                      * Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
                      */
                     std::string m_healthy;

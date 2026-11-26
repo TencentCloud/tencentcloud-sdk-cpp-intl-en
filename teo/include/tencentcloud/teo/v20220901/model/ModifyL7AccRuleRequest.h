@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
-                     * @return Rule Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+                     * 获取Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
+                     * @return Rule Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
                      * 
                      */
                     RuleEngineItem GetRule() const;
 
                     /**
-                     * 设置Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
-                     * @param _rule Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+                     * 设置Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
+                     * @param _rule Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
                      * 
                      */
                     void SetRule(const RuleEngineItem& _rule);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+                     * Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
                      */
                     RuleEngineItem m_rule;
                     bool m_ruleHasBeenSet;

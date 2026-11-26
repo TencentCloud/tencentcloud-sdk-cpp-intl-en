@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bot intelligence rules
+                * Intelligent analysis rule
                 */
                 class IntelligenceRule : public AbstractModel
                 {
@@ -48,26 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. valid values:.
+                     * 获取Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @return Switch Switch. valid values:.
+                     * @return Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. valid values:.
+                     * 设置Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @param _switch Switch. valid values:.
+                     * @param _switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
@@ -81,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the rule detail.
-                     * @return IntelligenceRuleItems Specifies the rule detail.
+                     * 获取Rule details.
+                     * @return IntelligenceRuleItems Rule details.
                      * 
                      */
                     std::vector<IntelligenceRuleItem> GetIntelligenceRuleItems() const;
 
                     /**
-                     * 设置Specifies the rule detail.
-                     * @param _intelligenceRuleItems Specifies the rule detail.
+                     * 设置Rule details.
+                     * @param _intelligenceRuleItems Rule details.
                      * 
                      */
                     void SetIntelligenceRuleItems(const std::vector<IntelligenceRuleItem>& _intelligenceRuleItems);
@@ -104,16 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch. valid values:.
+                     * Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Specifies the rule detail.
+                     * Rule details.
                      */
                     std::vector<IntelligenceRuleItem> m_intelligenceRuleItems;
                     bool m_intelligenceRuleItemsHasBeenSet;

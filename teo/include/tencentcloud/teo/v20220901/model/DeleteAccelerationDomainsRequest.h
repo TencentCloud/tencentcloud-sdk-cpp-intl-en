@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site related with the accelerated domain name.
-                     * @return ZoneId ID of the site related with the accelerated domain name.
+                     * 获取Zone ID of the acceleration domain name.
+                     * @return ZoneId Zone ID of the acceleration domain name.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site related with the accelerated domain name.
-                     * @param _zoneId ID of the site related with the accelerated domain name.
+                     * 设置Zone ID of the acceleration domain name.
+                     * @param _zoneId Zone ID of the acceleration domain name.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取List of accelerated domain names to be deleted.
-                     * @return DomainNames List of accelerated domain names to be deleted.
+                     * 获取List of acceleration domain name IDs that need to be deleted.
+                     * @return DomainNames List of acceleration domain name IDs that need to be deleted.
                      * 
                      */
                     std::vector<std::string> GetDomainNames() const;
 
                     /**
-                     * 设置List of accelerated domain names to be deleted.
-                     * @param _domainNames List of accelerated domain names to be deleted.
+                     * 设置List of acceleration domain name IDs that need to be deleted.
+                     * @param _domainNames List of acceleration domain name IDs that need to be deleted.
                      * 
                      */
                     void SetDomainNames(const std::vector<std::string>& _domainNames);
@@ -85,23 +85,23 @@ namespace TencentCloud
                     bool DomainNamesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
-                     * @return Force Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+                     * 获取Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
+                     * @return Force Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
                      * 
                      */
                     bool GetForce() const;
 
                     /**
-                     * 设置Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
-                     * @param _force Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+                     * 设置Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
+                     * @param _force Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
                      * 
                      */
                     void SetForce(const bool& _force);
@@ -116,21 +116,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site related with the accelerated domain name.
+                     * Zone ID of the acceleration domain name.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * List of accelerated domain names to be deleted.
+                     * List of acceleration domain name IDs that need to be deleted.
                      */
                     std::vector<std::string> m_domainNames;
                     bool m_domainNamesHasBeenSet;
 
                     /**
-                     * Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+                     * Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
                      */
                     bool m_force;
                     bool m_forceHasBeenSet;

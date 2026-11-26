@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time.
-                     * @return StartTime The start time.
+                     * 获取Start time.
+                     * @return StartTime Start time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The start time.
-                     * @param _startTime The start time.
+                     * 设置Start time.
+                     * @param _startTime Start time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -86,111 +86,111 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Queried metric. valid values:.
-<li> l7Flow_outFlux_country: specifies the l7 EdgeOne response traffic metric by country/region dimension.</li>.
-<li> l7Flow_outFlux_province: specifies the l7 EdgeOne response traffic metric counted by the dimension of provinces in chinese mainland.</li>.
-<li> l7Flow_outFlux_statusCode: specifies the l7 EdgeOne response traffic metric by status code dimension.</li>.
-<li> l7Flow_outFlux_domain: specifies the l7 EdgeOne response traffic metric counted by the domain name dimension.</li>.
-<li> l7Flow_outFlux_url: specifies the l7 EdgeOne response traffic metric counted by url Path dimension. </li>.
-<li> l7Flow_outFlux_resourceType: specifies the l7 EdgeOne response traffic metric counted by resource type dimension.</li>.
-<li> l7Flow_outFlux_sip: specifies the l7 EdgeOne response traffic metric counted by the client IP dimension.</li>.
-<li> l7Flow_outFlux_referers: specifies the l7 EdgeOne response traffic metrics statistics by Referer dimension.</li>.
-<li> l7Flow_outFlux_ua_device: specifies the l7 EdgeOne response traffic metric counted by the device type dimension.</li>.
-<li> l7Flow_outFlux_ua_browser: specifies the l7 EdgeOne response traffic metric by browser type dimension.</li>.
-<li> l7Flow_outFlux_ua_os: specifies the l7 EdgeOne response traffic metric counted by the operating system type dimension.</li>.
-<li> l7Flow_outFlux_ua: specifies the l7 EdgeOne response traffic metric by User-Agent dimension statistics.</li>.
-<li> l7Flow_request_country: specifies the l7 access request count metric by country/region dimension.</li>.
-<li> l7Flow_request_province: specifies the l7 access request count metric by the dimension of provinces in the chinese mainland.</li>.
-<li> l7Flow_request_statusCode: specifies the l7 access request count metric by status code dimension.</li>.
-<li> l7Flow_request_domain: specifies the l7 access request count metric counted by the domain name dimension.</li>.
-<li> l7Flow_request_url: specifies the request count metrics of l7 access counted by url Path dimension. </li>.
-<li> l7Flow_request_resourceType: specifies the l7 access request count metric counted by the resource type dimension.</li>.
-<li> l7Flow_request_sip: specifies the l7 access request count metric counted by the client IP dimension.</li>.
-<li> l7Flow_request_referers: specifies the request count metrics for l7 access statistics by Referer dimension.</li>.
-<li> l7Flow_request_ua_device: specifies the l7 access request count metric by device type dimension.</li>.
-<li> l7Flow_request_ua_browser: specifies the l7 access request count metric by browser type dimension.</li>.
-<li> l7Flow_request_ua_os: specifies the l7 access request count metric counted by the operating system type dimension.</li>.
-<li> l7Flow_request_ua: specifies the l7 access request count metric counted by the User-Agent dimension.</li>.
-                     * @return MetricName Queried metric. valid values:.
-<li> l7Flow_outFlux_country: specifies the l7 EdgeOne response traffic metric by country/region dimension.</li>.
-<li> l7Flow_outFlux_province: specifies the l7 EdgeOne response traffic metric counted by the dimension of provinces in chinese mainland.</li>.
-<li> l7Flow_outFlux_statusCode: specifies the l7 EdgeOne response traffic metric by status code dimension.</li>.
-<li> l7Flow_outFlux_domain: specifies the l7 EdgeOne response traffic metric counted by the domain name dimension.</li>.
-<li> l7Flow_outFlux_url: specifies the l7 EdgeOne response traffic metric counted by url Path dimension. </li>.
-<li> l7Flow_outFlux_resourceType: specifies the l7 EdgeOne response traffic metric counted by resource type dimension.</li>.
-<li> l7Flow_outFlux_sip: specifies the l7 EdgeOne response traffic metric counted by the client IP dimension.</li>.
-<li> l7Flow_outFlux_referers: specifies the l7 EdgeOne response traffic metrics statistics by Referer dimension.</li>.
-<li> l7Flow_outFlux_ua_device: specifies the l7 EdgeOne response traffic metric counted by the device type dimension.</li>.
-<li> l7Flow_outFlux_ua_browser: specifies the l7 EdgeOne response traffic metric by browser type dimension.</li>.
-<li> l7Flow_outFlux_ua_os: specifies the l7 EdgeOne response traffic metric counted by the operating system type dimension.</li>.
-<li> l7Flow_outFlux_ua: specifies the l7 EdgeOne response traffic metric by User-Agent dimension statistics.</li>.
-<li> l7Flow_request_country: specifies the l7 access request count metric by country/region dimension.</li>.
-<li> l7Flow_request_province: specifies the l7 access request count metric by the dimension of provinces in the chinese mainland.</li>.
-<li> l7Flow_request_statusCode: specifies the l7 access request count metric by status code dimension.</li>.
-<li> l7Flow_request_domain: specifies the l7 access request count metric counted by the domain name dimension.</li>.
-<li> l7Flow_request_url: specifies the request count metrics of l7 access counted by url Path dimension. </li>.
-<li> l7Flow_request_resourceType: specifies the l7 access request count metric counted by the resource type dimension.</li>.
-<li> l7Flow_request_sip: specifies the l7 access request count metric counted by the client IP dimension.</li>.
-<li> l7Flow_request_referers: specifies the request count metrics for l7 access statistics by Referer dimension.</li>.
-<li> l7Flow_request_ua_device: specifies the l7 access request count metric by device type dimension.</li>.
-<li> l7Flow_request_ua_browser: specifies the l7 access request count metric by browser type dimension.</li>.
-<li> l7Flow_request_ua_os: specifies the l7 access request count metric counted by the operating system type dimension.</li>.
-<li> l7Flow_request_ua: specifies the l7 access request count metric counted by the User-Agent dimension.</li>.
+                     * 获取Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: l7 EdgeOne response traffic metric counted by url Path dimension; </li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: statistics of L7 EdgeOne response traffic by Referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_outFlux_ua: L7 EdgeOne response traffic metric by User-Agent dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: l7 access request count metrics counted by url Path dimension; </li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referers: L7 access request count metric by Referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_ua: L7 access request count metric counted by the User-Agent dimension.</li>
+                     * @return MetricName Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: l7 EdgeOne response traffic metric counted by url Path dimension; </li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: statistics of L7 EdgeOne response traffic by Referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_outFlux_ua: L7 EdgeOne response traffic metric by User-Agent dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: l7 access request count metrics counted by url Path dimension; </li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referers: L7 access request count metric by Referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_ua: L7 access request count metric counted by the User-Agent dimension.</li>
                      * 
                      */
                     std::string GetMetricName() const;
 
                     /**
-                     * 设置Queried metric. valid values:.
-<li> l7Flow_outFlux_country: specifies the l7 EdgeOne response traffic metric by country/region dimension.</li>.
-<li> l7Flow_outFlux_province: specifies the l7 EdgeOne response traffic metric counted by the dimension of provinces in chinese mainland.</li>.
-<li> l7Flow_outFlux_statusCode: specifies the l7 EdgeOne response traffic metric by status code dimension.</li>.
-<li> l7Flow_outFlux_domain: specifies the l7 EdgeOne response traffic metric counted by the domain name dimension.</li>.
-<li> l7Flow_outFlux_url: specifies the l7 EdgeOne response traffic metric counted by url Path dimension. </li>.
-<li> l7Flow_outFlux_resourceType: specifies the l7 EdgeOne response traffic metric counted by resource type dimension.</li>.
-<li> l7Flow_outFlux_sip: specifies the l7 EdgeOne response traffic metric counted by the client IP dimension.</li>.
-<li> l7Flow_outFlux_referers: specifies the l7 EdgeOne response traffic metrics statistics by Referer dimension.</li>.
-<li> l7Flow_outFlux_ua_device: specifies the l7 EdgeOne response traffic metric counted by the device type dimension.</li>.
-<li> l7Flow_outFlux_ua_browser: specifies the l7 EdgeOne response traffic metric by browser type dimension.</li>.
-<li> l7Flow_outFlux_ua_os: specifies the l7 EdgeOne response traffic metric counted by the operating system type dimension.</li>.
-<li> l7Flow_outFlux_ua: specifies the l7 EdgeOne response traffic metric by User-Agent dimension statistics.</li>.
-<li> l7Flow_request_country: specifies the l7 access request count metric by country/region dimension.</li>.
-<li> l7Flow_request_province: specifies the l7 access request count metric by the dimension of provinces in the chinese mainland.</li>.
-<li> l7Flow_request_statusCode: specifies the l7 access request count metric by status code dimension.</li>.
-<li> l7Flow_request_domain: specifies the l7 access request count metric counted by the domain name dimension.</li>.
-<li> l7Flow_request_url: specifies the request count metrics of l7 access counted by url Path dimension. </li>.
-<li> l7Flow_request_resourceType: specifies the l7 access request count metric counted by the resource type dimension.</li>.
-<li> l7Flow_request_sip: specifies the l7 access request count metric counted by the client IP dimension.</li>.
-<li> l7Flow_request_referers: specifies the request count metrics for l7 access statistics by Referer dimension.</li>.
-<li> l7Flow_request_ua_device: specifies the l7 access request count metric by device type dimension.</li>.
-<li> l7Flow_request_ua_browser: specifies the l7 access request count metric by browser type dimension.</li>.
-<li> l7Flow_request_ua_os: specifies the l7 access request count metric counted by the operating system type dimension.</li>.
-<li> l7Flow_request_ua: specifies the l7 access request count metric counted by the User-Agent dimension.</li>.
-                     * @param _metricName Queried metric. valid values:.
-<li> l7Flow_outFlux_country: specifies the l7 EdgeOne response traffic metric by country/region dimension.</li>.
-<li> l7Flow_outFlux_province: specifies the l7 EdgeOne response traffic metric counted by the dimension of provinces in chinese mainland.</li>.
-<li> l7Flow_outFlux_statusCode: specifies the l7 EdgeOne response traffic metric by status code dimension.</li>.
-<li> l7Flow_outFlux_domain: specifies the l7 EdgeOne response traffic metric counted by the domain name dimension.</li>.
-<li> l7Flow_outFlux_url: specifies the l7 EdgeOne response traffic metric counted by url Path dimension. </li>.
-<li> l7Flow_outFlux_resourceType: specifies the l7 EdgeOne response traffic metric counted by resource type dimension.</li>.
-<li> l7Flow_outFlux_sip: specifies the l7 EdgeOne response traffic metric counted by the client IP dimension.</li>.
-<li> l7Flow_outFlux_referers: specifies the l7 EdgeOne response traffic metrics statistics by Referer dimension.</li>.
-<li> l7Flow_outFlux_ua_device: specifies the l7 EdgeOne response traffic metric counted by the device type dimension.</li>.
-<li> l7Flow_outFlux_ua_browser: specifies the l7 EdgeOne response traffic metric by browser type dimension.</li>.
-<li> l7Flow_outFlux_ua_os: specifies the l7 EdgeOne response traffic metric counted by the operating system type dimension.</li>.
-<li> l7Flow_outFlux_ua: specifies the l7 EdgeOne response traffic metric by User-Agent dimension statistics.</li>.
-<li> l7Flow_request_country: specifies the l7 access request count metric by country/region dimension.</li>.
-<li> l7Flow_request_province: specifies the l7 access request count metric by the dimension of provinces in the chinese mainland.</li>.
-<li> l7Flow_request_statusCode: specifies the l7 access request count metric by status code dimension.</li>.
-<li> l7Flow_request_domain: specifies the l7 access request count metric counted by the domain name dimension.</li>.
-<li> l7Flow_request_url: specifies the request count metrics of l7 access counted by url Path dimension. </li>.
-<li> l7Flow_request_resourceType: specifies the l7 access request count metric counted by the resource type dimension.</li>.
-<li> l7Flow_request_sip: specifies the l7 access request count metric counted by the client IP dimension.</li>.
-<li> l7Flow_request_referers: specifies the request count metrics for l7 access statistics by Referer dimension.</li>.
-<li> l7Flow_request_ua_device: specifies the l7 access request count metric by device type dimension.</li>.
-<li> l7Flow_request_ua_browser: specifies the l7 access request count metric by browser type dimension.</li>.
-<li> l7Flow_request_ua_os: specifies the l7 access request count metric counted by the operating system type dimension.</li>.
-<li> l7Flow_request_ua: specifies the l7 access request count metric counted by the User-Agent dimension.</li>.
+                     * 设置Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: l7 EdgeOne response traffic metric counted by url Path dimension; </li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: statistics of L7 EdgeOne response traffic by Referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_outFlux_ua: L7 EdgeOne response traffic metric by User-Agent dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: l7 access request count metrics counted by url Path dimension; </li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referers: L7 access request count metric by Referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_ua: L7 access request count metric counted by the User-Agent dimension.</li>
+                     * @param _metricName Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: l7 EdgeOne response traffic metric counted by url Path dimension; </li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: statistics of L7 EdgeOne response traffic by Referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_outFlux_ua: L7 EdgeOne response traffic metric by User-Agent dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: l7 access request count metrics counted by url Path dimension; </li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referers: L7 access request count metric by Referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_ua: L7 access request count metric counted by the User-Agent dimension.</li>
                      * 
                      */
                     void SetMetricName(const std::string& _metricName);
@@ -203,15 +203,15 @@ namespace TencentCloud
                     bool MetricNameHasBeenSet() const;
 
                     /**
-                     * 获取Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-                     * @return ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+                     * 获取Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
+                     * @return ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-                     * @param _zoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+                     * 设置Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
+                     * @param _zoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -245,19 +245,19 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
-If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
-                     * @return Filters Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
-If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
+                     * 获取Filter criteria used when filtering data. For values, see the available filter options for L7 access traffic, bandwidth, and request count in [Metric Analysis Filter Criteria](https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If you need to limit the site or content identifier, enter the corresponding value in the `ZoneIds.N` parameter.
+                     * @return Filters Filter criteria used when filtering data. For values, see the available filter options for L7 access traffic, bandwidth, and request count in [Metric Analysis Filter Criteria](https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If you need to limit the site or content identifier, enter the corresponding value in the `ZoneIds.N` parameter.
                      * 
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
-If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
-                     * @param _filters Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
-If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
+                     * 设置Filter criteria used when filtering data. For values, see the available filter options for L7 access traffic, bandwidth, and request count in [Metric Analysis Filter Criteria](https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If you need to limit the site or content identifier, enter the corresponding value in the `ZoneIds.N` parameter.
+                     * @param _filters Filter criteria used when filtering data. For values, see the available filter options for L7 access traffic, bandwidth, and request count in [Metric Analysis Filter Criteria](https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If you need to limit the site or content identifier, enter the corresponding value in the `ZoneIds.N` parameter.
                      * 
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
@@ -270,15 +270,15 @@ If needed, limit the site or content identifier by importing the corresponding v
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Query time granularity. this parameter is invalid. to be deprecated.
-                     * @return Interval Query time granularity. this parameter is invalid. to be deprecated.
+                     * 获取Query time granularity. This parameter is invalid and to be deprecated.
+                     * @return Interval Query time granularity. This parameter is invalid and to be deprecated.
                      * 
                      */
                     std::string GetInterval() const;
 
                     /**
-                     * 设置Query time granularity. this parameter is invalid. to be deprecated.
-                     * @param _interval Query time granularity. this parameter is invalid. to be deprecated.
+                     * 设置Query time granularity. This parameter is invalid and to be deprecated.
+                     * @param _interval Query time granularity. This parameter is invalid and to be deprecated.
                      * 
                      */
                     void SetInterval(const std::string& _interval);
@@ -291,15 +291,15 @@ If needed, limit the site or content identifier by importing the corresponding v
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
-                     * @return Area Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
+                     * 获取Data ownership region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
+                     * @return Area Data ownership region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
-                     * @param _area Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
+                     * 设置Data ownership region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
+                     * @param _area Data ownership region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -314,7 +314,7 @@ If needed, limit the site or content identifier by importing the corresponding v
                 private:
 
                     /**
-                     * The start time.
+                     * Start time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -326,37 +326,37 @@ If needed, limit the site or content identifier by importing the corresponding v
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Queried metric. valid values:.
-<li> l7Flow_outFlux_country: specifies the l7 EdgeOne response traffic metric by country/region dimension.</li>.
-<li> l7Flow_outFlux_province: specifies the l7 EdgeOne response traffic metric counted by the dimension of provinces in chinese mainland.</li>.
-<li> l7Flow_outFlux_statusCode: specifies the l7 EdgeOne response traffic metric by status code dimension.</li>.
-<li> l7Flow_outFlux_domain: specifies the l7 EdgeOne response traffic metric counted by the domain name dimension.</li>.
-<li> l7Flow_outFlux_url: specifies the l7 EdgeOne response traffic metric counted by url Path dimension. </li>.
-<li> l7Flow_outFlux_resourceType: specifies the l7 EdgeOne response traffic metric counted by resource type dimension.</li>.
-<li> l7Flow_outFlux_sip: specifies the l7 EdgeOne response traffic metric counted by the client IP dimension.</li>.
-<li> l7Flow_outFlux_referers: specifies the l7 EdgeOne response traffic metrics statistics by Referer dimension.</li>.
-<li> l7Flow_outFlux_ua_device: specifies the l7 EdgeOne response traffic metric counted by the device type dimension.</li>.
-<li> l7Flow_outFlux_ua_browser: specifies the l7 EdgeOne response traffic metric by browser type dimension.</li>.
-<li> l7Flow_outFlux_ua_os: specifies the l7 EdgeOne response traffic metric counted by the operating system type dimension.</li>.
-<li> l7Flow_outFlux_ua: specifies the l7 EdgeOne response traffic metric by User-Agent dimension statistics.</li>.
-<li> l7Flow_request_country: specifies the l7 access request count metric by country/region dimension.</li>.
-<li> l7Flow_request_province: specifies the l7 access request count metric by the dimension of provinces in the chinese mainland.</li>.
-<li> l7Flow_request_statusCode: specifies the l7 access request count metric by status code dimension.</li>.
-<li> l7Flow_request_domain: specifies the l7 access request count metric counted by the domain name dimension.</li>.
-<li> l7Flow_request_url: specifies the request count metrics of l7 access counted by url Path dimension. </li>.
-<li> l7Flow_request_resourceType: specifies the l7 access request count metric counted by the resource type dimension.</li>.
-<li> l7Flow_request_sip: specifies the l7 access request count metric counted by the client IP dimension.</li>.
-<li> l7Flow_request_referers: specifies the request count metrics for l7 access statistics by Referer dimension.</li>.
-<li> l7Flow_request_ua_device: specifies the l7 access request count metric by device type dimension.</li>.
-<li> l7Flow_request_ua_browser: specifies the l7 access request count metric by browser type dimension.</li>.
-<li> l7Flow_request_ua_os: specifies the l7 access request count metric counted by the operating system type dimension.</li>.
-<li> l7Flow_request_ua: specifies the l7 access request count metric counted by the User-Agent dimension.</li>.
+                     * Queried metric. Valid values:
+<li> l7Flow_outFlux_country: L7 EdgeOne response traffic metric counted by the country/region dimension;</li>
+<li> l7Flow_outFlux_province: L7 EdgeOne response traffic metric counted by the dimension of provinces in Chinese mainland;</li>
+<li> l7Flow_outFlux_statusCode: L7 EdgeOne response traffic metric counted by the status code dimension;</li>
+<li> l7Flow_outFlux_domain: L7 EdgeOne response traffic metric counted by the domain name dimension;</li>
+<li> l7Flow_outFlux_url: l7 EdgeOne response traffic metric counted by url Path dimension; </li>
+<li> l7Flow_outFlux_resourceType: L7 EdgeOne response traffic metric counted by the resource type dimension;</li>
+<li> l7Flow_outFlux_sip: L7 EdgeOne response traffic metric counted by the client IP dimension;</li>
+<li> l7Flow_outFlux_referers: statistics of L7 EdgeOne response traffic by Referer dimension;</li>
+<li> l7Flow_outFlux_ua_device: L7 EdgeOne response traffic metric counted by the device type dimension;</li>
+<li> l7Flow_outFlux_ua_browser: L7 EdgeOne response traffic metric counted by the browser type dimension;</li>
+<li> l7Flow_outFlux_ua_os: L7 EdgeOne response traffic metric counted by the operating system type dimension;</li>
+<li> l7Flow_outFlux_ua: L7 EdgeOne response traffic metric by User-Agent dimension;</li>
+<li> l7Flow_request_country: L7 access request count metric counted by the country/region dimension;</li>
+<li> l7Flow_request_province: L7 access request count metric counted by the dimension of provinces in the Chinese mainland;</li>
+<li> l7Flow_request_statusCode: L7 access request count metric counted by the status code dimension;</li>
+<li> l7Flow_request_domain: L7 access request count metric counted by the domain name dimension;</li>
+<li> l7Flow_request_url: l7 access request count metrics counted by url Path dimension; </li>
+<li> l7Flow_request_resourceType: L7 access request count metric counted by the resource type dimension;</li>
+<li> l7Flow_request_sip: L7 access request count metric counted by the client IP dimension;</li>
+<li> l7Flow_request_referers: L7 access request count metric by Referer dimension;</li>
+<li> l7Flow_request_ua_device: L7 access request count metric counted by the device type dimension;</li>
+<li> l7Flow_request_ua_browser: L7 access request count metric counted by the browser type dimension;</li>
+<li> l7Flow_request_ua_os: L7 access request count metric counted by the operating system type dimension;</li>
+<li> l7Flow_request_ua: L7 access request count metric counted by the User-Agent dimension.</li>
                      */
                     std::string m_metricName;
                     bool m_metricNameHasBeenSet;
 
                     /**
-                     * Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1145/59980). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+                     * Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you must have permission for all site resources of this interface.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
@@ -368,20 +368,20 @@ If needed, limit the site or content identifier by importing the corresponding v
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter criteria used when filtering data. valid values refer to the available filter options for L7 access traffic, bandwidth, and request count in the [metric analysis filtering condition description](https://www.tencentcloud.com/document/product/1145/56985).
-If needed, limit the site or content identifier by importing the corresponding value in the `ZoneIds.N` parameter.
+                     * Filter criteria used when filtering data. For values, see the available filter options for L7 access traffic, bandwidth, and request count in [Metric Analysis Filter Criteria](https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945).
+If you need to limit the site or content identifier, enter the corresponding value in the `ZoneIds.N` parameter.
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Query time granularity. this parameter is invalid. to be deprecated.
+                     * Query time granularity. This parameter is invalid and to be deprecated.
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Data ownership region. this parameter is deprecated. please filter data by client region in `Filters.country`.
+                     * Data ownership region. This parameter is deprecated. Please filter data by client region in `Filters.country`.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

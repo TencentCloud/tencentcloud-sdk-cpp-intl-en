@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site to which the shared CNAME belongs.
-                     * @return ZoneId ID of the site to which the shared CNAME belongs.
+                     * 获取ID of the site associated with the shared CNAME.
+                     * @return ZoneId ID of the site associated with the shared CNAME.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site to which the shared CNAME belongs.
-                     * @param _zoneId ID of the site to which the shared CNAME belongs.
+                     * 设置ID of the site associated with the shared CNAME.
+                     * @param _zoneId ID of the site associated with the shared CNAME.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The shared CNAME to be deleted
-                     * @return SharedCNAME The shared CNAME to be deleted
+                     * 获取Shared CNAME that needs to be deleted.
+                     * @return SharedCNAME Shared CNAME that needs to be deleted.
                      * 
                      */
                     std::string GetSharedCNAME() const;
 
                     /**
-                     * 设置The shared CNAME to be deleted
-                     * @param _sharedCNAME The shared CNAME to be deleted
+                     * 设置Shared CNAME that needs to be deleted.
+                     * @param _sharedCNAME Shared CNAME that needs to be deleted.
                      * 
                      */
                     void SetSharedCNAME(const std::string& _sharedCNAME);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site to which the shared CNAME belongs.
+                     * ID of the site associated with the shared CNAME.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The shared CNAME to be deleted
+                     * Shared CNAME that needs to be deleted.
                      */
                     std::string m_sharedCNAME;
                     bool m_sharedCNAMEHasBeenSet;

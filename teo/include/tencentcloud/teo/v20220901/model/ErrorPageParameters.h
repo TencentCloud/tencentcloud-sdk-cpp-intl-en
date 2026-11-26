@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom error page configuration parameters.
+                * Configuration parameters for the custom error page.
                 */
                 class ErrorPageParameters : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom error page configuration list.
-                     * @return ErrorPageParams Custom error page configuration list.
+                     * 获取List of custom error page configurations.
+                     * @return ErrorPageParams List of custom error page configurations.
                      * 
                      */
                     std::vector<ErrorPage> GetErrorPageParams() const;
 
                     /**
-                     * 设置Custom error page configuration list.
-                     * @param _errorPageParams Custom error page configuration list.
+                     * 设置List of custom error page configurations.
+                     * @param _errorPageParams List of custom error page configurations.
                      * 
                      */
                     void SetErrorPageParams(const std::vector<ErrorPage>& _errorPageParams);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom error page configuration list.
+                     * List of custom error page configurations.
                      */
                     std::vector<ErrorPage> m_errorPageParams;
                     bool m_errorPageParamsHasBeenSet;

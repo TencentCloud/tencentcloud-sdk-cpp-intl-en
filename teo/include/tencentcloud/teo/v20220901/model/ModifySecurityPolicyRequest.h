@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
-                     * @return SecurityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
+                     * 获取Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
+                     * @return SecurityConfig Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
                      * 
                      */
                     SecurityConfig GetSecurityConfig() const;
 
                     /**
-                     * 设置Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
-                     * @param _securityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
+                     * 设置Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
+                     * @param _securityConfig Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
                      * 
                      */
                     void SetSecurityConfig(const SecurityConfig& _securityConfig);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool SecurityConfigHasBeenSet() const;
 
                     /**
-                     * 获取Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
-                     * @return SecurityPolicy Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
+                     * 获取Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
+                     * @return SecurityPolicy Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
                      * 
                      */
                     SecurityPolicy GetSecurityPolicy() const;
 
                     /**
-                     * 设置Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
-                     * @param _securityPolicy Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
+                     * 设置Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
+                     * @param _securityPolicy Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
                      * 
                      */
                     void SetSecurityPolicy(const SecurityPolicy& _securityPolicy);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool SecurityPolicyHasBeenSet() const;
 
                     /**
-                     * 获取`SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
-                     * @return Entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+                     * 获取Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
+                     * @return Entity Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
                      * 
                      */
                     std::string GetEntity() const;
 
                     /**
-                     * 设置`SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
-                     * @param _entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+                     * 设置Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
+                     * @param _entity Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
                      * 
                      */
                     void SetEntity(const std::string& _entity);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool EntityHasBeenSet() const;
 
                     /**
-                     * 获取Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
-                     * @return Host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+                     * 获取Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+                     * @return Host Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
-                     * @param _host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+                     * 设置Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+                     * @param _host Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
-                     * @return TemplateId Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+                     * 获取Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
+                     * @return TemplateId Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
-                     * @param _templateId Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+                     * 设置Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
+                     * @param _templateId Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -179,31 +179,31 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
+                     * Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
                      */
                     SecurityConfig m_securityConfig;
                     bool m_securityConfigHasBeenSet;
 
                     /**
-                     * Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
+                     * Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
                      */
                     SecurityPolicy m_securityPolicy;
                     bool m_securityPolicyHasBeenSet;
 
                     /**
-                     * `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+                     * Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
                      */
                     std::string m_entity;
                     bool m_entityHasBeenSet;
 
                     /**
-                     * Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+                     * Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+                     * Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

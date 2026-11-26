@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The page offset. Default value: 0.
-                     * @return Offset The page offset. Default value: 0.
+                     * 获取The offset of paginated query. Default value: 0.
+                     * @return Offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The page offset. Default value: 0.
-                     * @param _offset The page offset. Default value: 0.
+                     * 设置The offset of paginated query. Default value: 0.
+                     * @param _offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Default value: 20. Maximum value: 100.
-                     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 100.
+                     * 获取Paginated query limit. Default value: 20, maximum value: 100.
+                     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Default value: 20. Maximum value: 100.
-                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 100.
+                     * 设置Paginated query limit. Default value: 20, maximum value: 100.
+                     * @param _limit Paginated query limit. Default value: 20, maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
-                     * @return Filters Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
-                     * @param _filters Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -107,39 +107,39 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
-                     * @return Order Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
+                     * 获取Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
+                     * @return Order Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
-                     * @param _order Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
+                     * 设置Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
+                     * @param _order Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -152,23 +152,23 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
-                     * @return Direction Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+                     * 获取Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
+                     * @return Direction Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
                      * 
                      */
                     std::string GetDirection() const;
 
                     /**
-                     * 设置Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
-                     * @param _direction Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+                     * 设置Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
+                     * @param _direction Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
                      * 
                      */
                     void SetDirection(const std::string& _direction);
@@ -183,39 +183,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The page offset. Default value: 0.
+                     * The offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Default value: 20. Maximum value: 100.
+                     * Paginated query limit. Default value: 20, maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
+                     * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
+                     * Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+                     * Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
                      */
                     std::string m_direction;
                     bool m_directionHasBeenSet;

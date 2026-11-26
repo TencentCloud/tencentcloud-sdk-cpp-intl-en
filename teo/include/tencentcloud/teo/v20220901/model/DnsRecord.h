@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DNS record
+                * DNS record.
                 */
                 class DnsRecord : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @return ZoneId Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 获取Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+                     * @return ZoneId Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @param _zoneId Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 设置Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+                     * @param _zoneId Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取DNS record id.
-                     * @return RecordId DNS record id.
+                     * 获取DNS record ID.
+                     * @return RecordId DNS record ID.
                      * 
                      */
                     std::string GetRecordId() const;
 
                     /**
-                     * 设置DNS record id.
-                     * @param _recordId DNS record id.
+                     * 设置DNS record ID.
+                     * @param _recordId DNS record ID.
                      * 
                      */
                     void SetRecordId(const std::string& _recordId);
@@ -110,47 +110,47 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
-                     * @return Type DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
+                     * 获取DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
+                     * @return Type DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
-                     * @param _type DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
+                     * 设置DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
+                     * @param _type DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
-                     * @return Location DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+                     * 获取DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
+                     * @return Location DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
                      * 
                      */
                     std::string GetLocation() const;
 
                     /**
-                     * 设置DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
-                     * @param _location DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+                     * 设置DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
+                     * @param _location DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
                      * 
                      */
                     void SetLocation(const std::string& _location);
@@ -184,15 +184,15 @@ namespace TencentCloud
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取DNS record content. fill in the corresponding content based on the type value.
-                     * @return Content DNS record content. fill in the corresponding content based on the type value.
+                     * 获取DNS record content. Fill in the corresponding content based on the Type value.
+                     * @return Content DNS record content. Fill in the corresponding content based on the Type value.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置DNS record content. fill in the corresponding content based on the type value.
-                     * @param _content DNS record content. fill in the corresponding content based on the type value.
+                     * 设置DNS record content. Fill in the corresponding content based on the Type value.
+                     * @param _content DNS record content. Fill in the corresponding content based on the Type value.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -205,15 +205,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
-                     * @return TTL Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
+                     * 获取Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
+                     * @return TTL Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
                      * 
                      */
                     int64_t GetTTL() const;
 
                     /**
-                     * 设置Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
-                     * @param _tTL Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
+                     * 设置Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
+                     * @param _tTL Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
                      * 
                      */
                     void SetTTL(const int64_t& _tTL);
@@ -226,15 +226,15 @@ namespace TencentCloud
                     bool TTLHasBeenSet() const;
 
                     /**
-                     * 获取DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
-                     * @return Weight DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+                     * 获取DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
+                     * @return Weight DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
-                     * @param _weight DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+                     * 设置DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
+                     * @param _weight DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -247,15 +247,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取MX record priority. value range: 0–50. the smaller the value, the higher the priority.
-                     * @return Priority MX record priority. value range: 0–50. the smaller the value, the higher the priority.
+                     * 获取MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
+                     * @return Priority MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
                      * 
                      */
                     int64_t GetPriority() const;
 
                     /**
-                     * 设置MX record priority. value range: 0–50. the smaller the value, the higher the priority.
-                     * @param _priority MX record priority. value range: 0–50. the smaller the value, the higher the priority.
+                     * 设置MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
+                     * @param _priority MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
                      * 
                      */
                     void SetPriority(const int64_t& _priority);
@@ -268,15 +268,15 @@ namespace TencentCloud
                     bool PriorityHasBeenSet() const;
 
                     /**
-                     * 获取DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @return Status DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 获取DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
+                     * @return Status DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @param _status DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 设置DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
+                     * @param _status DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -289,15 +289,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @return CreatedOn Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 获取Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+                     * @return CreatedOn Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
-                     * 设置Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @param _createdOn Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 设置Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+                     * @param _createdOn Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
@@ -310,15 +310,15 @@ namespace TencentCloud
                     bool CreatedOnHasBeenSet() const;
 
                     /**
-                     * 获取Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @return ModifiedOn Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 获取Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+                     * @return ModifiedOn Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
-                     * 设置Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-                     * @param _modifiedOn Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * 设置Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+                     * @param _modifiedOn Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
@@ -333,13 +333,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * DNS record id.
+                     * DNS record ID.
                      */
                     std::string m_recordId;
                     bool m_recordIdHasBeenSet;
@@ -351,63 +351,63 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
+                     * DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+                     * DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
                      */
                     std::string m_location;
                     bool m_locationHasBeenSet;
 
                     /**
-                     * DNS record content. fill in the corresponding content based on the type value.
+                     * DNS record content. Fill in the corresponding content based on the Type value.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
+                     * Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
                      */
                     int64_t m_tTL;
                     bool m_tTLHasBeenSet;
 
                     /**
-                     * DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+                     * DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * MX record priority. value range: 0–50. the smaller the value, the higher the priority.
+                     * MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
                      */
                     int64_t m_priority;
                     bool m_priorityHasBeenSet;
 
                     /**
-                     * DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      */
                     std::string m_createdOn;
                     bool m_createdOnHasBeenSet;
 
                     /**
-                     * Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+                     * Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
                      */
                     std::string m_modifiedOn;
                     bool m_modifiedOnHasBeenSet;

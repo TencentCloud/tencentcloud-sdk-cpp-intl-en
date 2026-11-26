@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ACL configuration
+                * ACL configurations.
                 */
                 class AclConfig : public AbstractModel
                 {
@@ -48,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The custom rule.
-                     * @return AclUserRules The custom rule.
+                     * 获取User-defined rules.
+                     * @return AclUserRules User-defined rules.
                      * 
                      */
                     std::vector<AclUserRule> GetAclUserRules() const;
 
                     /**
-                     * 设置The custom rule.
-                     * @param _aclUserRules The custom rule.
+                     * 设置User-defined rules.
+                     * @param _aclUserRules User-defined rules.
                      * 
                      */
                     void SetAclUserRules(const std::vector<AclUserRule>& _aclUserRules);
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool AclUserRulesHasBeenSet() const;
 
                     /**
-                     * 获取Managed custom rules.
-                     * @return Customizes Managed custom rules.
+                     * 获取Managed custom rule
+                     * @return Customizes Managed custom rule
                      * 
                      */
                     std::vector<AclUserRule> GetCustomizes() const;
 
                     /**
-                     * 设置Managed custom rules.
-                     * @param _customizes Managed custom rules.
+                     * 设置Managed custom rule
+                     * @param _customizes Managed custom rule
                      * 
                      */
                     void SetCustomizes(const std::vector<AclUserRule>& _customizes);
@@ -121,21 +121,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The custom rule.
+                     * User-defined rules.
                      */
                     std::vector<AclUserRule> m_aclUserRules;
                     bool m_aclUserRulesHasBeenSet;
 
                     /**
-                     * Managed custom rules.
+                     * Managed custom rule
                      */
                     std::vector<AclUserRule> m_customizes;
                     bool m_customizesHasBeenSet;

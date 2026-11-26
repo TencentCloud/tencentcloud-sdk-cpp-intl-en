@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The proxy ID.
-                     * @return ProxyId The proxy ID.
+                     * 获取Proxy ID.
+                     * @return ProxyId Proxy ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置The proxy ID.
-                     * @param _proxyId The proxy ID.
+                     * 设置Proxy ID.
+                     * @param _proxyId Proxy ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -85,23 +85,23 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
-                     * @return Proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
+                     * 获取Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
+                     * @return Proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
                      * 
                      */
                     std::string GetProto() const;
 
                     /**
-                     * 设置The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
-                     * @param _proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
+                     * 设置Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
+                     * @param _proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
                      * 
                      */
                     void SetProto(const std::string& _proto);
@@ -114,23 +114,23 @@ namespace TencentCloud
                     bool ProtoHasBeenSet() const;
 
                     /**
-                     * 获取The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
-                     * @return Port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+                     * 获取Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+                     * @return Port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
                      * 
                      */
                     std::vector<std::string> GetPort() const;
 
                     /**
-                     * 设置The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
-                     * @param _port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+                     * 设置Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+                     * @param _port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
                      * 
                      */
                     void SetPort(const std::vector<std::string>& _port);
@@ -143,19 +143,27 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
-                     * @return OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+                     * 获取Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
+                     * @return OriginType Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
                      * 
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
-                     * @param _originType Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+                     * 设置Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
+                     * @param _originType Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -168,15 +176,27 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-                     * @return OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * 获取Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * @return OriginValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * 
                      */
                     std::vector<std::string> GetOriginValue() const;
 
                     /**
-                     * 设置Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-                     * @param _originValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * 设置Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * @param _originValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * 
                      */
                     void SetOriginValue(const std::vector<std::string>& _originValue);
@@ -189,31 +209,31 @@ namespace TencentCloud
                     bool OriginValueHasBeenSet() const;
 
                     /**
-                     * 获取Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
-                     * @return ForwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
+                     * 获取Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
+                     * @return ForwardClientIp Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
                      * 
                      */
                     std::string GetForwardClientIp() const;
 
                     /**
-                     * 设置Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
-                     * @param _forwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
+                     * 设置Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
+                     * @param _forwardClientIp Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
                      * 
                      */
                     void SetForwardClientIp(const std::string& _forwardClientIp);
@@ -226,23 +246,23 @@ namespace TencentCloud
                     bool ForwardClientIpHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
-                     * @return SessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+                     * 获取Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
+                     * @return SessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
                      * 
                      */
                     bool GetSessionPersist() const;
 
                     /**
-                     * 设置Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
-                     * @param _sessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+                     * 设置Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
+                     * @param _sessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
                      * 
                      */
                     void SetSessionPersist(const bool& _sessionPersist);
@@ -276,23 +296,23 @@ namespace TencentCloud
                     bool SessionPersistTimeHasBeenSet() const;
 
                     /**
-                     * 获取The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
-                     * @return OriginPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+                     * 获取Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+                     * @return OriginPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
                      * 
                      */
                     std::string GetOriginPort() const;
 
                     /**
-                     * 设置The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
-                     * @param _originPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+                     * 设置Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+                     * @param _originPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
                      * 
                      */
                     void SetOriginPort(const std::string& _originPort);
@@ -305,15 +325,15 @@ namespace TencentCloud
                     bool OriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Rule tag. This parameter is left empty by default.
-                     * @return RuleTag Rule tag. This parameter is left empty by default.
+                     * 获取Rule tag. The default value is an empty string.
+                     * @return RuleTag Rule tag. The default value is an empty string.
                      * 
                      */
                     std::string GetRuleTag() const;
 
                     /**
-                     * 设置Rule tag. This parameter is left empty by default.
-                     * @param _ruleTag Rule tag. This parameter is left empty by default.
+                     * 设置Rule tag. The default value is an empty string.
+                     * @param _ruleTag Rule tag. The default value is an empty string.
                      * 
                      */
                     void SetRuleTag(const std::string& _ruleTag);
@@ -328,60 +348,65 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The proxy ID.
+                     * Proxy ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
+                     * Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
                      */
                     std::string m_proto;
                     bool m_protoHasBeenSet;
 
                     /**
-                     * The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+                     * Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
                      */
                     std::vector<std::string> m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+                     * Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+                     * Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      */
                     std::vector<std::string> m_originValue;
                     bool m_originValueHasBeenSet;
 
                     /**
-                     * Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
+                     * Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
                      */
                     std::string m_forwardClientIp;
                     bool m_forwardClientIpHasBeenSet;
 
                     /**
-                     * Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+                     * Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
                      */
                     bool m_sessionPersist;
                     bool m_sessionPersistHasBeenSet;
@@ -393,15 +418,15 @@ namespace TencentCloud
                     bool m_sessionPersistTimeHasBeenSet;
 
                     /**
-                     * The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+                     * Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
                      */
                     std::string m_originPort;
                     bool m_originPortHasBeenSet;
 
                     /**
-                     * Rule tag. This parameter is left empty by default.
+                     * Rule tag. The default value is an empty string.
                      */
                     std::string m_ruleTag;
                     bool m_ruleTagHasBeenSet;

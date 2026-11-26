@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Edge reasoning scheduled scaling validity period range configuration.
+                * Configuration of the validity period range for scheduled scaling of edge reasoning.
                 */
                 class InferenceScheduledScalingEffectiveRange : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
-                     * @return EffectiveType <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+                     * 获取<p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
+                     * @return EffectiveType <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
                      * 
                      */
                     std::string GetEffectiveType() const;
 
                     /**
-                     * 设置<p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
-                     * @param _effectiveType <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+                     * 设置<p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
+                     * @param _effectiveType <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
                      * 
                      */
                     void SetEffectiveType(const std::string& _effectiveType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EffectiveTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
-                     * @return StartDate <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+                     * 获取<p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
+                     * @return StartDate <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
                      * 
                      */
                     std::string GetStartDate() const;
 
                     /**
-                     * 设置<p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
-                     * @param _startDate <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+                     * 设置<p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
+                     * @param _startDate <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
                      * 
                      */
                     void SetStartDate(const std::string& _startDate);
@@ -112,13 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+                     * <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
                      */
                     std::string m_effectiveType;
                     bool m_effectiveTypeHasBeenSet;
 
                     /**
-                     * <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+                     * <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
                      */
                     std::string m_startDate;
                     bool m_startDateHasBeenSet;

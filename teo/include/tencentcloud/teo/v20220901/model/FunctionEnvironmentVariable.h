@@ -91,10 +91,10 @@ namespace TencentCloud
                     /**
                      * 获取Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
                      * @return Type Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
                      * 
                      */
                     std::string GetType() const;
@@ -102,10 +102,10 @@ namespace TencentCloud
                     /**
                      * 设置Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
                      * @param _type Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -134,7 +134,7 @@ namespace TencentCloud
                     /**
                      * Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

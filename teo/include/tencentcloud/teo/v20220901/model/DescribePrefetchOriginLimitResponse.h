@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the total count of origin-pull speed limit restrictions.
-                     * @return TotalCount Specifies the total count of origin-pull speed limit restrictions.
+                     * 获取Total number of origin-pull rate limits.
+                     * @return TotalCount Total number of origin-pull rate limits.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Describes the List of origin-pull speed limit details.
-                     * @return Limits Describes the List of origin-pull speed limit details.
+                     * 获取List of origin-pull rate limits.
+                     * @return Limits List of origin-pull rate limits.
                      * 
                      */
                     std::vector<PrefetchOriginLimit> GetLimits() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the total count of origin-pull speed limit restrictions.
+                     * Total number of origin-pull rate limits.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Describes the List of origin-pull speed limit details.
+                     * List of origin-pull rate limits.
                      */
                     std::vector<PrefetchOriginLimit> m_limits;
                     bool m_limitsHasBeenSet;

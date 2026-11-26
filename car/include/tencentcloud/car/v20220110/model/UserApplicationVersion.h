@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application version ID.
-                     * @return ApplicationVersionId Application version ID.
+                     * 获取<p>Application version Id</p>
+                     * @return ApplicationVersionId <p>Application version Id</p>
                      * 
                      */
                     std::string GetApplicationVersionId() const;
 
                     /**
-                     * 设置Application version ID.
-                     * @param _applicationVersionId Application version ID.
+                     * 设置<p>Application version Id</p>
+                     * @param _applicationVersionId <p>Application version Id</p>
                      * 
                      */
                     void SetApplicationVersionId(const std::string& _applicationVersionId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ApplicationVersionIdHasBeenSet() const;
 
                     /**
-                     * 获取Application version size.
-                     * @return ApplicationVersionSize Application version size.
+                     * 获取<p>Application version size</p>
+                     * @return ApplicationVersionSize <p>Application version size</p>
                      * 
                      */
                     int64_t GetApplicationVersionSize() const;
 
                     /**
-                     * 设置Application version size.
-                     * @param _applicationVersionSize Application version size.
+                     * 设置<p>Application version size</p>
+                     * @param _applicationVersionSize <p>Application version size</p>
                      * 
                      */
                     void SetApplicationVersionSize(const int64_t& _applicationVersionSize);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ApplicationVersionSizeHasBeenSet() const;
 
                     /**
-                     * 获取Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
-                     * @return ApplicationVersionStatus Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
+                     * 获取<p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
+                     * @return ApplicationVersionStatus <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
                      * 
                      */
                     std::string GetApplicationVersionStatus() const;
 
                     /**
-                     * 设置Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
-                     * @param _applicationVersionStatus Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
+                     * 设置<p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
+                     * @param _applicationVersionStatus <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
                      * 
                      */
                     void SetApplicationVersionStatus(const std::string& _applicationVersionStatus);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ApplicationVersionStatusHasBeenSet() const;
 
                     /**
-                     * 获取Application version name.
-                     * @return ApplicationVersionName Application version name.
+                     * 获取<p>Application version name</p>
+                     * @return ApplicationVersionName <p>Application version name</p>
                      * 
                      */
                     std::string GetApplicationVersionName() const;
 
                     /**
-                     * 设置Application version name.
-                     * @param _applicationVersionName Application version name.
+                     * 设置<p>Application version name</p>
+                     * @param _applicationVersionName <p>Application version name</p>
                      * 
                      */
                     void SetApplicationVersionName(const std::string& _applicationVersionName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ApplicationVersionNameHasBeenSet() const;
 
                     /**
-                     * 获取Application version creation time.
-                     * @return CreateTime Application version creation time.
+                     * 获取<p>Application version creation time</p>
+                     * @return CreateTime <p>Application version creation time</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Application version creation time.
-                     * @param _createTime Application version creation time.
+                     * 设置<p>Application version creation time</p>
+                     * @param _createTime <p>Application version creation time</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -152,99 +152,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationVersionRegions Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
+                     * @return ApplicationVersionRegions <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
                      * 
                      */
                     std::vector<std::string> GetApplicationVersionRegions() const;
 
                     /**
-                     * 设置Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationVersionRegions Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
+                     * @param _applicationVersionRegions <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
                      * 
                      */
                     void SetApplicationVersionRegions(const std::vector<std::string>& _applicationVersionRegions);
@@ -257,27 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ApplicationVersionRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ApplicationVersionUpdateMode Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
+                     * @return ApplicationVersionUpdateMode <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
                      * 
                      */
                     std::string GetApplicationVersionUpdateMode() const;
 
                     /**
-                     * 设置Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _applicationVersionUpdateMode Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
+                     * @param _applicationVersionUpdateMode <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
                      * 
                      */
                     void SetApplicationVersionUpdateMode(const std::string& _applicationVersionUpdateMode);
@@ -292,67 +196,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Application version ID.
+                     * <p>Application version Id</p>
                      */
                     std::string m_applicationVersionId;
                     bool m_applicationVersionIdHasBeenSet;
 
                     /**
-                     * Application version size.
+                     * <p>Application version size</p>
                      */
                     int64_t m_applicationVersionSize;
                     bool m_applicationVersionSizeHasBeenSet;
 
                     /**
-                     * Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
+                     * <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
                      */
                     std::string m_applicationVersionStatus;
                     bool m_applicationVersionStatusHasBeenSet;
 
                     /**
-                     * Application version name.
+                     * <p>Application version name</p>
                      */
                     std::string m_applicationVersionName;
                     bool m_applicationVersionNameHasBeenSet;
 
                     /**
-                     * Application version creation time.
+                     * <p>Application version creation time</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
                      */
                     std::vector<std::string> m_applicationVersionRegions;
                     bool m_applicationVersionRegionsHasBeenSet;
 
                     /**
-                     * Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
                      */
                     std::string m_applicationVersionUpdateMode;
                     bool m_applicationVersionUpdateModeHasBeenSet;

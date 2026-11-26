@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Slow attack defense configuration.
+                * Slow attack configuration.
                 */
                 class SlowPostConfig : public AbstractModel
                 {
@@ -49,23 +49,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -99,15 +99,15 @@ namespace TencentCloud
                     bool FirstPartConfigHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the basic configuration.
-                     * @return SlowRateConfig Specifies the basic configuration.
+                     * 获取Basic configuration.
+                     * @return SlowRateConfig Basic configuration.
                      * 
                      */
                     SlowRateConfig GetSlowRateConfig() const;
 
                     /**
-                     * 设置Specifies the basic configuration.
-                     * @param _slowRateConfig Specifies the basic configuration.
+                     * 设置Basic configuration.
+                     * @param _slowRateConfig Basic configuration.
                      * 
                      */
                     void SetSlowRateConfig(const SlowRateConfig& _slowRateConfig);
@@ -120,23 +120,23 @@ namespace TencentCloud
                     bool SlowRateConfigHasBeenSet() const;
 
                     /**
-                     * 获取Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
-                     * @return Action Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
+                     * 获取Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
+                     * @return Action Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
-                     * @param _action Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
+                     * 设置Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
+                     * @param _action Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the Id of this rule.
-                     * @return RuleId Specifies the Id of this rule.
+                     * 获取Rule Id.
+                     * @return RuleId Rule Id.
                      * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
-                     * 设置Specifies the Id of this rule.
-                     * @param _ruleId Specifies the Id of this rule.
+                     * 设置Rule Id.
+                     * @param _ruleId Rule Id.
                      * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
@@ -172,9 +172,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -186,21 +186,21 @@ namespace TencentCloud
                     bool m_firstPartConfigHasBeenSet;
 
                     /**
-                     * Specifies the basic configuration.
+                     * Basic configuration.
                      */
                     SlowRateConfig m_slowRateConfig;
                     bool m_slowRateConfigHasBeenSet;
 
                     /**
-                     * Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
+                     * Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Specifies the Id of this rule.
+                     * Rule Id.
                      */
                     uint64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;

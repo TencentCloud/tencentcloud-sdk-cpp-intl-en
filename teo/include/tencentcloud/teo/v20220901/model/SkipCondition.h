@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exception rule conditions, used to filter requests by specific fields
+                * Skip match condition of the exception rule. In case of an exception, skip the specified field and content based on this match condition.
                 */
                 class SkipCondition : public AbstractModel
                 {
@@ -47,39 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
-                     * @return Type The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
+                     * 获取Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
+                     * @return Type Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
-                     * @param _type The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
+                     * 设置Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
+                     * @param _type Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -92,43 +92,43 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
-                     * @return Selector The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
+                     * 获取Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
+                     * @return Selector Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
                      * 
                      */
                     std::string GetSelector() const;
 
                     /**
-                     * 设置The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
-                     * @param _selector The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
+                     * 设置Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
+                     * @param _selector Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
                      * 
                      */
                     void SetSelector(const std::string& _selector);
@@ -141,23 +141,23 @@ namespace TencentCloud
                     bool SelectorHasBeenSet() const;
 
                     /**
-                     * 获取The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
-                     * @return MatchFromType The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 获取Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
+                     * @return MatchFromType Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
                      * 
                      */
                     std::string GetMatchFromType() const;
 
                     /**
-                     * 设置The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
-                     * @param _matchFromType The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 设置Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
+                     * @param _matchFromType Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
                      * 
                      */
                     void SetMatchFromType(const std::string& _matchFromType);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool MatchFromTypeHasBeenSet() const;
 
                     /**
-                     * 获取Match the Key value.
-                     * @return MatchFrom Match the Key value.
+                     * 获取Value of the match Key.
+                     * @return MatchFrom Value of the match Key.
                      * 
                      */
                     std::vector<std::string> GetMatchFrom() const;
 
                     /**
-                     * 设置Match the Key value.
-                     * @param _matchFrom Match the Key value.
+                     * 设置Value of the match Key.
+                     * @param _matchFrom Value of the match Key.
                      * 
                      */
                     void SetMatchFrom(const std::vector<std::string>& _matchFrom);
@@ -191,23 +191,23 @@ namespace TencentCloud
                     bool MatchFromHasBeenSet() const;
 
                     /**
-                     * 获取The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
-                     * @return MatchContentType The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 获取Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
+                     * @return MatchContentType Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
                      * 
                      */
                     std::string GetMatchContentType() const;
 
                     /**
-                     * 设置The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
-                     * @param _matchContentType The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 设置Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
+                     * @param _matchContentType Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
                      * 
                      */
                     void SetMatchContentType(const std::string& _matchContentType);
@@ -220,15 +220,15 @@ namespace TencentCloud
                     bool MatchContentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Match the Value.
-                     * @return MatchContent Match the Value.
+                     * 获取Value of the match Value.
+                     * @return MatchContent Value of the match Value.
                      * 
                      */
                     std::vector<std::string> GetMatchContent() const;
 
                     /**
-                     * 设置Match the Value.
-                     * @param _matchContent Match the Value.
+                     * 设置Value of the match Value.
+                     * @param _matchContent Value of the match Value.
                      * 
                      */
                     void SetMatchContent(const std::vector<std::string>& _matchContent);
@@ -243,54 +243,54 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
+                     * Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
+                     * Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
                      */
                     std::string m_selector;
                     bool m_selectorHasBeenSet;
 
                     /**
-                     * The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
                      */
                     std::string m_matchFromType;
                     bool m_matchFromTypeHasBeenSet;
 
                     /**
-                     * Match the Key value.
+                     * Value of the match Key.
                      */
                     std::vector<std::string> m_matchFrom;
                     bool m_matchFromHasBeenSet;
 
                     /**
-                     * The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
                      */
                     std::string m_matchContentType;
                     bool m_matchContentTypeHasBeenSet;
 
                     /**
-                     * Match the Value.
+                     * Value of the match Value.
                      */
                     std::vector<std::string> m_matchContent;
                     bool m_matchContentHasBeenSet;

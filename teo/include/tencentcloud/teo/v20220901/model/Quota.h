@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Purging/Pre-warming available usage and quota
+                * Refresh/preheat available amount and quotas
                 */
                 class Quota : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Batch 
+                     * 获取Quota limit for a single batch submission.
+                     * @return Batch Quota limit for a single batch submission.
                      * 
                      */
                     int64_t GetBatch() const;
 
                     /**
-                     * 设置
-                     * @param _batch 
+                     * 设置Quota limit for a single batch submission.
+                     * @param _batch Quota limit for a single batch submission.
                      * 
                      */
                     void SetBatch(const int64_t& _batch);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DailyHasBeenSet() const;
 
                     /**
-                     * 获取Remaining daily submission quota.
-                     * @return DailyAvailable Remaining daily submission quota.
+                     * 获取Daily unconsumed submission quota.
+                     * @return DailyAvailable Daily unconsumed submission quota.
                      * 
                      */
                     int64_t GetDailyAvailable() const;
 
                     /**
-                     * 设置Remaining daily submission quota.
-                     * @param _dailyAvailable Remaining daily submission quota.
+                     * 设置Daily unconsumed submission quota.
+                     * @param _dailyAvailable Daily unconsumed submission quota.
                      * 
                      */
                     void SetDailyAvailable(const int64_t& _dailyAvailable);
@@ -110,35 +110,35 @@ namespace TencentCloud
                     bool DailyAvailableHasBeenSet() const;
 
                     /**
-                     * 获取Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
-                     * @return Type Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+                     * 获取Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
+                     * @return Type Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
-                     * @param _type Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+                     * 设置Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
+                     * @param _type Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -153,7 +153,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Quota limit for a single batch submission.
                      */
                     int64_t m_batch;
                     bool m_batchHasBeenSet;
@@ -165,18 +165,18 @@ namespace TencentCloud
                     bool m_dailyHasBeenSet;
 
                     /**
-                     * Remaining daily submission quota.
+                     * Daily unconsumed submission quota.
                      */
                     int64_t m_dailyAvailable;
                     bool m_dailyAvailableHasBeenSet;
 
                     /**
-                     * Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+                     * Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

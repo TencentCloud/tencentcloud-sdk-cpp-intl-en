@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the authentication option list.
-                     * @return ClientAttesters Specifies the authentication option list.
+                     * 获取Authentication option list.
+                     * @return ClientAttesters Authentication option list.
                      * 
                      */
                     std::vector<ClientAttester> GetClientAttesters() const;
 
                     /**
-                     * 设置Specifies the authentication option list.
-                     * @param _clientAttesters Specifies the authentication option list.
+                     * 设置Authentication option list.
+                     * @param _clientAttesters Authentication option list.
                      * 
                      */
                     void SetClientAttesters(const std::vector<ClientAttester>& _clientAttesters);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Specifies the authentication option list.
+                     * Authentication option list.
                      */
                     std::vector<ClientAttester> m_clientAttesters;
                     bool m_clientAttestersHasBeenSet;

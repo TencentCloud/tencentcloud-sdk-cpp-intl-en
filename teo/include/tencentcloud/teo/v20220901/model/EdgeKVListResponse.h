@@ -58,9 +58,9 @@ namespace TencentCloud
                     bool KeysHasBeenSet() const;
 
                     /**
-                     * 获取Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+                     * 获取Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
 
-                     * @return Cursor Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+                     * @return Cursor Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
 
                      * 
                      */
@@ -82,7 +82,7 @@ namespace TencentCloud
                     bool m_keysHasBeenSet;
 
                     /**
-                     * Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+                     * Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
 
                      */
                     std::string m_cursor;

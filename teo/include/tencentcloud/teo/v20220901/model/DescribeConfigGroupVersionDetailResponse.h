@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ConfigGroupVersionInfoHasBeenSet() const;
 
                     /**
-                     * 获取Version file content. It is returned in JSON format.
-                     * @return Content Version file content. It is returned in JSON format.
+                     * 获取The content of the version file. Return in JSON format.
+                     * @return Content The content of the version file. Return in JSON format.
                      * 
                      */
                     std::string GetContent() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_configGroupVersionInfoHasBeenSet;
 
                     /**
-                     * Version file content. It is returned in JSON format.
+                     * The content of the version file. Return in JSON format.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

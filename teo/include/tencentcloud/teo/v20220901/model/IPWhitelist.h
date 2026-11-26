@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intermediate IPs
+                * IP allowlist for origin protection
                 */
                 class IPWhitelist : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IPv4 addresses
-                     * @return IPv4 List of IPv4 addresses
+                     * 获取IPv4 list.
+                     * @return IPv4 IPv4 list.
                      * 
                      */
                     std::vector<std::string> GetIPv4() const;
 
                     /**
-                     * 设置List of IPv4 addresses
-                     * @param _iPv4 List of IPv4 addresses
+                     * 设置IPv4 list.
+                     * @param _iPv4 IPv4 list.
                      * 
                      */
                     void SetIPv4(const std::vector<std::string>& _iPv4);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IPv4HasBeenSet() const;
 
                     /**
-                     * 获取List of IPv6 addresses
-                     * @return IPv6 List of IPv6 addresses
+                     * 获取IPv6 list.
+                     * @return IPv6 IPv6 list.
                      * 
                      */
                     std::vector<std::string> GetIPv6() const;
 
                     /**
-                     * 设置List of IPv6 addresses
-                     * @param _iPv6 List of IPv6 addresses
+                     * 设置IPv6 list.
+                     * @param _iPv6 IPv6 list.
                      * 
                      */
                     void SetIPv6(const std::vector<std::string>& _iPv6);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of IPv4 addresses
+                     * IPv4 list.
                      */
                     std::vector<std::string> m_iPv4;
                     bool m_iPv4HasBeenSet;
 
                     /**
-                     * List of IPv6 addresses
+                     * IPv6 list.
                      */
                     std::vector<std::string> m_iPv6;
                     bool m_iPv6HasBeenSet;

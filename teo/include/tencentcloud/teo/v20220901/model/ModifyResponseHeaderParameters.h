@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Modify HTTP node response header configuration parameters.
+                * HTTP node response header configuration parameter modification.
                 */
                 class ModifyResponseHeaderParameters : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HTTP origin header rule list.
-                     * @return HeaderActions HTTP origin header rule list.
+                     * 获取List of HTTP origin-pull header rules.
+                     * @return HeaderActions List of HTTP origin-pull header rules.
                      * 
                      */
                     std::vector<HeaderAction> GetHeaderActions() const;
 
                     /**
-                     * 设置HTTP origin header rule list.
-                     * @param _headerActions HTTP origin header rule list.
+                     * 设置List of HTTP origin-pull header rules.
+                     * @param _headerActions List of HTTP origin-pull header rules.
                      * 
                      */
                     void SetHeaderActions(const std::vector<HeaderAction>& _headerActions);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * HTTP origin header rule list.
+                     * List of HTTP origin-pull header rules.
                      */
                     std::vector<HeaderAction> m_headerActions;
                     bool m_headerActionsHasBeenSet;

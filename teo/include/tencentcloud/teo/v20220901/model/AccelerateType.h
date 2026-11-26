@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

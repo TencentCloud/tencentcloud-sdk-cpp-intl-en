@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters of the action with the `StatusCode` field as the rule engine condition
+                * Rule engine condition uses the StatusCode field action parameter
                 */
                 class RuleCodeActionParams : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The status code.
-                     * @return StatusCode The status code.
+                     * 获取Status Code.
+                     * @return StatusCode Status Code.
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置The status code.
-                     * @param _statusCode The status code.
+                     * 设置Status Code.
+                     * @param _statusCode Status Code.
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-                     * @return Name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+                     * 获取Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+                     * @return Name Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-                     * @param _name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+                     * 设置Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+                     * @param _name Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The parameter value.
-                     * @return Values The parameter value.
+                     * 获取Parameter value.
+                     * @return Values Parameter value.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置The parameter value.
-                     * @param _values The parameter value.
+                     * 设置Parameter value.
+                     * @param _values Parameter value.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The status code.
+                     * Status Code.
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+                     * Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The parameter value.
+                     * Parameter value.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

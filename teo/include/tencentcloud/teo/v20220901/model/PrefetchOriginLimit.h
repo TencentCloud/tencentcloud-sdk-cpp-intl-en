@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin speed limit details.
+                * Origin-pull speed limit details.
                 */
                 class PrefetchOriginLimit : public AbstractModel
                 {
@@ -89,27 +89,27 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
-                     * @return Area Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
+                     * 获取Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
+                     * @return Area Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
-                     * @param _area Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
+                     * 设置Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
+                     * @param _area Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -122,19 +122,19 @@ During preheating, the acceleration region will be subject to the configured Ban
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
-                     * @return Bandwidth Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
+                     * 获取Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100–100,000. Unit: Mbps.
+                     * @return Bandwidth Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100–100,000. Unit: Mbps.
                      * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
-                     * 设置Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
-                     * @param _bandwidth Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
+                     * 设置Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100–100,000. Unit: Mbps.
+                     * @param _bandwidth Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100–100,000. Unit: Mbps.
                      * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
@@ -147,15 +147,15 @@ Specifies the upper limit of bandwidth returning to the origin server during pre
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Describes the time when the origin-pull speed limit was created.
-                     * @return CreateTime Describes the time when the origin-pull speed limit was created.
+                     * 获取The time when the origin-pull speed limit was created.
+                     * @return CreateTime The time when the origin-pull speed limit was created.
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Describes the time when the origin-pull speed limit was created.
-                     * @param _createTime Describes the time when the origin-pull speed limit was created.
+                     * 设置The time when the origin-pull speed limit was created.
+                     * @param _createTime The time when the origin-pull speed limit was created.
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -168,15 +168,15 @@ Specifies the upper limit of bandwidth returning to the origin server during pre
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Describes the time when the origin-pull speed limit is updated.
-                     * @return UpdateTime Describes the time when the origin-pull speed limit is updated.
+                     * 获取The time when the origin-pull rate limit is updated.
+                     * @return UpdateTime The time when the origin-pull rate limit is updated.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Describes the time when the origin-pull speed limit is updated.
-                     * @param _updateTime Describes the time when the origin-pull speed limit is updated.
+                     * 设置The time when the origin-pull rate limit is updated.
+                     * @param _updateTime The time when the origin-pull rate limit is updated.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -203,29 +203,29 @@ Specifies the upper limit of bandwidth returning to the origin server during pre
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
+                     * Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
+                     * Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100–100,000. Unit: Mbps.
                      */
                     int64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * Describes the time when the origin-pull speed limit was created.
+                     * The time when the origin-pull speed limit was created.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Describes the time when the origin-pull speed limit is updated.
+                     * The time when the origin-pull rate limit is updated.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

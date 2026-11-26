@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Accelerate optimization and configuration in mainland China.
+                * Acceleration optimization configuration in Chinese mainland.
                 */
                 class AccelerateMainlandParameters : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -82,10 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

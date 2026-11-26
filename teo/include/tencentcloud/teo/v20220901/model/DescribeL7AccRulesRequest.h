@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,19 +65,19 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
-                     * @return Filters Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
-                     * @param _filters Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Number limit of paginated query. default value: 20. maximum value: 1000.
-                     * @return Limit Number limit of paginated query. default value: 20. maximum value: 1000.
+                     * 获取Number limit of paginated query. Default value: 20. Maximum value: 1000.
+                     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number limit of paginated query. default value: 20. maximum value: 1000.
-                     * @param _limit Number limit of paginated query. default value: 20. maximum value: 1000.
+                     * 设置Number limit of paginated query. Default value: 20. Maximum value: 1000.
+                     * @param _limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset of paginated query. default value: 0.
-                     * @return Offset Offset of paginated query. default value: 0.
+                     * 获取Offset of paginated query. Default value: 0.
+                     * @return Offset Offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset of paginated query. default value: 0.
-                     * @param _offset Offset of paginated query. default value: 0.
+                     * 设置Offset of paginated query. Default value: 0.
+                     * @param _offset Offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -134,26 +134,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
+                     * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Number limit of paginated query. default value: 20. maximum value: 1000.
+                     * Number limit of paginated query. Default value: 20. Maximum value: 1000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset of paginated query. default value: 0.
+                     * Offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

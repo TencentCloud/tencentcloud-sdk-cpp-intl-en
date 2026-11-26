@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site related with the accelerated domain name.
-                     * @return ZoneId ID of the site related with the accelerated domain name.
+                     * 获取Zone ID of the acceleration domain name.
+                     * @return ZoneId Zone ID of the acceleration domain name.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site related with the accelerated domain name.
-                     * @param _zoneId ID of the site related with the accelerated domain name.
+                     * 设置Zone ID of the acceleration domain name.
+                     * @param _zoneId Zone ID of the acceleration domain name.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Accelerated domain name
-                     * @return DomainName Accelerated domain name
+                     * 获取Acceleration domain name.
+                     * @return DomainName Acceleration domain name.
                      * 
                      */
                     std::string GetDomainName() const;
 
                     /**
-                     * 设置Accelerated domain name
-                     * @param _domainName Accelerated domain name
+                     * 设置Acceleration domain name.
+                     * @param _domainName Acceleration domain name.
                      * 
                      */
                     void SetDomainName(const std::string& _domainName);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Details of the origin.
-                     * @return OriginInfo Details of the origin.
+                     * 获取Origin server information.
+                     * @return OriginInfo Origin server information.
                      * 
                      */
                     OriginInfo GetOriginInfo() const;
 
                     /**
-                     * 设置Details of the origin.
-                     * @param _originInfo Details of the origin.
+                     * 设置Origin server information.
+                     * @param _originInfo Origin server information.
                      * 
                      */
                     void SetOriginInfo(const OriginInfo& _originInfo);
@@ -107,31 +107,31 @@ namespace TencentCloud
                     bool OriginInfoHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
-                     * @return OriginProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
+                     * 获取Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
+                     * @return OriginProtocol Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
                      * 
                      */
                     std::string GetOriginProtocol() const;
 
                     /**
-                     * 设置Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
-                     * @param _originProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
+                     * 设置Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
+                     * @param _originProtocol Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
                      * 
                      */
                     void SetOriginProtocol(const std::string& _originProtocol);
@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
-                     * @return HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+                     * 获取HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
+                     * @return HttpOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
                      * 
                      */
                     uint64_t GetHttpOriginPort() const;
 
                     /**
-                     * 设置Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
-                     * @param _httpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+                     * 设置HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
+                     * @param _httpOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
                      * 
                      */
                     void SetHttpOriginPort(const uint64_t& _httpOriginPort);
@@ -165,15 +165,15 @@ namespace TencentCloud
                     bool HttpOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
-                     * @return HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+                     * 获取HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
+                     * @return HttpsOriginPort HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
                      * 
                      */
                     uint64_t GetHttpsOriginPort() const;
 
                     /**
-                     * 设置Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
-                     * @param _httpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+                     * 设置HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
+                     * @param _httpsOriginPort HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
                      * 
                      */
                     void SetHttpsOriginPort(const uint64_t& _httpsOriginPort);
@@ -186,31 +186,31 @@ namespace TencentCloud
                     bool HttpsOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
-                     * @return IPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
+                     * 获取IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
+                     * @return IPv6Status IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
                      * 
                      */
                     std::string GetIPv6Status() const;
 
                     /**
-                     * 设置IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
-                     * @param _iPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
+                     * 设置IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
+                     * @param _iPv6Status IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
                      * 
                      */
                     void SetIPv6Status(const std::string& _iPv6Status);
@@ -225,51 +225,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site related with the accelerated domain name.
+                     * Zone ID of the acceleration domain name.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Accelerated domain name
+                     * Acceleration domain name.
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Details of the origin.
+                     * Origin server information.
                      */
                     OriginInfo m_originInfo;
                     bool m_originInfoHasBeenSet;
 
                     /**
-                     * Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
+                     * Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
                      */
                     std::string m_originProtocol;
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+                     * HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
                      */
                     uint64_t m_httpOriginPort;
                     bool m_httpOriginPortHasBeenSet;
 
                     /**
-                     * Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+                     * HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
                      */
                     uint64_t m_httpsOriginPort;
                     bool m_httpsOriginPortHasBeenSet;
 
                     /**
-                     * IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
+                     * IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
                      */
                     std::string m_iPv6Status;
                     bool m_iPv6StatusHasBeenSet;

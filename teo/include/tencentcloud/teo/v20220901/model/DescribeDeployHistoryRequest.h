@@ -86,19 +86,19 @@ namespace TencentCloud
                     bool EnvIdHasBeenSet() const;
 
                     /**
-                     * 获取Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
-                     * @return Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+                     * 获取Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
+                     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
-                     * @param _filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+                     * 设置Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
+                     * @param _filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -125,8 +125,8 @@ namespace TencentCloud
                     bool m_envIdHasBeenSet;
 
                     /**
-                     * Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+                     * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;

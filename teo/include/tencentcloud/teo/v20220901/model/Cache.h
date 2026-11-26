@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cache time settings
+                * Cache time setting
                 */
                 class Cache : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
-                     * @return CacheTime Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
+                     * 获取Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
+                     * @return CacheTime Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
                      * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
-                     * 设置Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
-                     * @param _cacheTime Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
+                     * 设置Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
+                     * @param _cacheTime Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
                      * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
@@ -101,27 +101,23 @@ Unit: seconds. the maximum settable value is 365 days.
                     bool CacheTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IgnoreCacheControl Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return IgnoreCacheControl Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * @deprecated
                      */
                     std::string GetIgnoreCacheControl() const;
 
                     /**
-                     * 设置Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ignoreCacheControl Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _ignoreCacheControl Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * @deprecated
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
@@ -136,25 +132,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
+                     * Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
                      */
                     int64_t m_cacheTime;
                     bool m_cacheTimeHasBeenSet;
 
                     /**
-                     * Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;

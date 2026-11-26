@@ -37,7 +37,7 @@ namespace TencentCloud
             {
                 class RuleBranch;
                 /**
-                * Sub-rule
+                * Sub-rule.
                 */
                 class RuleEngineSubRule : public AbstractModel
                 {
@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @return Branches Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 获取Sub-rule branch
+                     * @return Branches Sub-rule branch
                      * 
                      */
                     std::vector<std::shared_ptr<RuleBranch>> GetBranches() const;
 
                     /**
-                     * 设置Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-                     * @param _branches Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * 设置Sub-rule branch
+                     * @param _branches Sub-rule branch
                      * 
                      */
                     void SetBranches(const std::vector<std::shared_ptr<RuleBranch>>& _branches);
@@ -74,15 +70,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                     bool BranchesHasBeenSet() const;
 
                     /**
-                     * 获取Rule comments.
-                     * @return Description Rule comments.
+                     * 获取Rule note.
+                     * @return Description Rule note.
                      * 
                      */
                     std::vector<std::string> GetDescription() const;
 
                     /**
-                     * 设置Rule comments.
-                     * @param _description Rule comments.
+                     * 设置Rule note.
+                     * @param _description Rule note.
                      * 
                      */
                     void SetDescription(const std::vector<std::string>& _description);
@@ -97,14 +93,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+                     * Sub-rule branch
                      */
                     std::vector<std::shared_ptr<RuleBranch>> m_branches;
                     bool m_branchesHasBeenSet;
 
                     /**
-                     * Rule comments.
+                     * Rule note.
                      */
                     std::vector<std::string> m_description;
                     bool m_descriptionHasBeenSet;

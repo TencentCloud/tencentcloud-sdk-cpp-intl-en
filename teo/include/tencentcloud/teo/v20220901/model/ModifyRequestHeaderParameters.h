@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Modify HTTP request header configuration parameters.
+                * Modify HTTP back-to-origin request header configuration.
                 */
                 class ModifyRequestHeaderParameters : public AbstractModel
                 {

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the total rule count for JavaScript injection.
-                     * @return TotalCount Specifies the total rule count for JavaScript injection.
+                     * 获取Total rule count for JavaScript injection.
+                     * @return TotalCount Total rule count for JavaScript injection.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the total rule count for JavaScript injection.
+                     * Total rule count for JavaScript injection.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

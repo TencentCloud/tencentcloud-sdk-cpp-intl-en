@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Inference service info.
+                * Inference service information.
                 */
                 class InferenceService : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the inference service.
-                     * @return ServiceId ID of the inference service.
+                     * 获取Inference service ID.
+                     * @return ServiceId Inference service ID.
                      * 
                      */
                     std::string GetServiceId() const;
 
                     /**
-                     * 设置ID of the inference service.
-                     * @param _serviceId ID of the inference service.
+                     * 设置Inference service ID.
+                     * @param _serviceId Inference service ID.
                      * 
                      */
                     void SetServiceId(const std::string& _serviceId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ServiceIdHasBeenSet() const;
 
                     /**
-                     * 获取Reasoning service name.
-                     * @return Name Reasoning service name.
+                     * 获取Name of the inference service.
+                     * @return Name Name of the inference service.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Reasoning service name.
-                     * @param _name Reasoning service name.
+                     * 设置Name of the inference service.
+                     * @param _name Name of the inference service.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Ports monitored by the model service. Only integers between 1 and 65535 are supported.
-                     * @return ListenPort Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+                     * 获取Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
+                     * @return ListenPort Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
                      * 
                      */
                     int64_t GetListenPort() const;
 
                     /**
-                     * 设置Ports monitored by the model service. Only integers between 1 and 65535 are supported.
-                     * @param _listenPort Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+                     * 设置Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
+                     * @param _listenPort Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
                      * 
                      */
                     void SetListenPort(const int64_t& _listenPort);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ListenPortHasBeenSet() const;
 
                     /**
-                     * 获取Request path list for inference service. Supports up to 20 paths.
-                     * @return RequestPaths Request path list for inference service. Supports up to 20 paths.
+                     * 获取Request path list for the inference service. Supports up to 20 paths.
+                     * @return RequestPaths Request path list for the inference service. Supports up to 20 paths.
                      * 
                      */
                     std::vector<std::string> GetRequestPaths() const;
 
                     /**
-                     * 设置Request path list for inference service. Supports up to 20 paths.
-                     * @param _requestPaths Request path list for inference service. Supports up to 20 paths.
+                     * 设置Request path list for the inference service. Supports up to 20 paths.
+                     * @param _requestPaths Request path list for the inference service. Supports up to 20 paths.
                      * 
                      */
                     void SetRequestPaths(const std::vector<std::string>& _requestPaths);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool ResourceConfigHasBeenSet() const;
 
                     /**
-                     * 获取Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
-                     * @return Status Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+                     * 获取Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+                     * @return Status Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
-                     * @param _status Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+                     * 设置Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+                     * @param _status Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
-                     * @return ScalingStatus Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+                     * 获取Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
+                     * @return ScalingStatus Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
                      * 
                      */
                     std::string GetScalingStatus() const;
 
                     /**
-                     * 设置Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
-                     * @param _scalingStatus Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+                     * 设置Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
+                     * @param _scalingStatus Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
                      * 
                      */
                     void SetScalingStatus(const std::string& _scalingStatus);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool ScalingStatusHasBeenSet() const;
 
                     /**
-                     * 获取Number of running instances.
-                     * @return CurrentInstanceCount Number of running instances.
+                     * 获取Number of currently running instances.
+                     * @return CurrentInstanceCount Number of currently running instances.
                      * 
                      */
                     int64_t GetCurrentInstanceCount() const;
 
                     /**
-                     * 设置Number of running instances.
-                     * @param _currentInstanceCount Number of running instances.
+                     * 设置Number of currently running instances.
+                     * @param _currentInstanceCount Number of currently running instances.
                      * 
                      */
                     void SetCurrentInstanceCount(const int64_t& _currentInstanceCount);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool CurrentInstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Reasoning access address, perform reasoning via links to access the underlying model.
-                     * @return InferenceURL Reasoning access address, perform reasoning via links to access the underlying model.
+                     * 获取Inference access address. You can access the underlying model for reasoning via links.
+                     * @return InferenceURL Inference access address. You can access the underlying model for reasoning via links.
                      * 
                      */
                     std::string GetInferenceURL() const;
 
                     /**
-                     * 设置Reasoning access address, perform reasoning via links to access the underlying model.
-                     * @param _inferenceURL Reasoning access address, perform reasoning via links to access the underlying model.
+                     * 设置Inference access address. You can access the underlying model for reasoning via links.
+                     * @param _inferenceURL Inference access address. You can access the underlying model for reasoning via links.
                      * 
                      */
                     void SetInferenceURL(const std::string& _inferenceURL);
@@ -324,13 +324,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the inference service.
+                     * Inference service ID.
                      */
                     std::string m_serviceId;
                     bool m_serviceIdHasBeenSet;
 
                     /**
-                     * Reasoning service name.
+                     * Name of the inference service.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -342,13 +342,13 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+                     * Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
                      */
                     int64_t m_listenPort;
                     bool m_listenPortHasBeenSet;
 
                     /**
-                     * Request path list for inference service. Supports up to 20 paths.
+                     * Request path list for the inference service. Supports up to 20 paths.
                      */
                     std::vector<std::string> m_requestPaths;
                     bool m_requestPathsHasBeenSet;
@@ -366,25 +366,25 @@ namespace TencentCloud
                     bool m_resourceConfigHasBeenSet;
 
                     /**
-                     * Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+                     * Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+                     * Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
                      */
                     std::string m_scalingStatus;
                     bool m_scalingStatusHasBeenSet;
 
                     /**
-                     * Number of running instances.
+                     * Number of currently running instances.
                      */
                     int64_t m_currentInstanceCount;
                     bool m_currentInstanceCountHasBeenSet;
 
                     /**
-                     * Reasoning access address, perform reasoning via links to access the underlying model.
+                     * Inference access address. You can access the underlying model for reasoning via links.
                      */
                     std::string m_inferenceURL;
                     bool m_inferenceURLHasBeenSet;

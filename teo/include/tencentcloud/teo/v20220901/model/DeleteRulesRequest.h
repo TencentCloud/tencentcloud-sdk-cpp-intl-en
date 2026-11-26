@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site
-                     * @return ZoneId ID of the site
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site
-                     * @param _zoneId ID of the site
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取IDs of the rules to be deleted.
-                     * @return RuleIds IDs of the rules to be deleted.
+                     * 获取List of specified rule IDs to be deleted.
+                     * @return RuleIds List of specified rule IDs to be deleted.
                      * 
                      */
                     std::vector<std::string> GetRuleIds() const;
 
                     /**
-                     * 设置IDs of the rules to be deleted.
-                     * @param _ruleIds IDs of the rules to be deleted.
+                     * 设置List of specified rule IDs to be deleted.
+                     * @param _ruleIds List of specified rule IDs to be deleted.
                      * 
                      */
                     void SetRuleIds(const std::vector<std::string>& _ruleIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * IDs of the rules to be deleted.
+                     * List of specified rule IDs to be deleted.
                      */
                     std::vector<std::string> m_ruleIds;
                     bool m_ruleIdsHasBeenSet;

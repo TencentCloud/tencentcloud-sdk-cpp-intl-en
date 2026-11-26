@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP address, IPV4 or IPV6.
-                     * @return IP IP address, IPV4 or IPV6.
+                     * 获取IP, IPV4, or IPV6.
+                     * @return IP IP, IPV4, or IPV6.
                      * 
                      */
                     std::string GetIP() const;
 
                     /**
-                     * 设置IP address, IPV4 or IPV6.
-                     * @param _iP IP address, IPV4 or IPV6.
+                     * 设置IP, IPV4, or IPV6.
+                     * @param _iP IP, IPV4, or IPV6.
                      * 
                      */
                     void SetIP(const std::string& _iP);
@@ -69,22 +69,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
                      * @return IsEdgeOneIP Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
                      * 
                      */
                     std::string GetIsEdgeOneIP() const;
 
                     /**
                      * 设置Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
                      * @param _isEdgeOneIP Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
                      * 
                      */
                     void SetIsEdgeOneIP(const std::string& _isEdgeOneIP);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IP address, IPV4 or IPV6.
+                     * IP, IPV4, or IPV6.
                      */
                     std::string m_iP;
                     bool m_iPHasBeenSet;
 
                     /**
                      * Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
                      */
                     std::string m_isEdgeOneIP;
                     bool m_isEdgeOneIPHasBeenSet;

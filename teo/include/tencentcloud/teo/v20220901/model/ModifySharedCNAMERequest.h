@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shared CNAME associated site ID.
-                     * @return ZoneId Shared CNAME associated site ID.
+                     * 获取ID of the site associated with the shared CNAME.
+                     * @return ZoneId ID of the site associated with the shared CNAME.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Shared CNAME associated site ID.
-                     * @param _zoneId Shared CNAME associated site ID.
+                     * 设置ID of the site associated with the shared CNAME.
+                     * @param _zoneId ID of the site associated with the shared CNAME.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Set the IP SSL message of the shared CNAME with IP SSL type.
-                     * @return IPSSLSetting Set the IP SSL message of the shared CNAME with IP SSL type.
+                     * 获取Set the IP SSL info of the shared CNAME of IP SSL type.
+                     * @return IPSSLSetting Set the IP SSL info of the shared CNAME of IP SSL type.
                      * 
                      */
                     IPSSLSetting GetIPSSLSetting() const;
 
                     /**
-                     * 设置Set the IP SSL message of the shared CNAME with IP SSL type.
-                     * @param _iPSSLSetting Set the IP SSL message of the shared CNAME with IP SSL type.
+                     * 设置Set the IP SSL info of the shared CNAME of IP SSL type.
+                     * @param _iPSSLSetting Set the IP SSL info of the shared CNAME of IP SSL type.
                      * 
                      */
                     void SetIPSSLSetting(const IPSSLSetting& _iPSSLSetting);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shared CNAME associated site ID.
+                     * ID of the site associated with the shared CNAME.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -148,7 +148,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Set the IP SSL message of the shared CNAME with IP SSL type.
+                     * Set the IP SSL info of the shared CNAME of IP SSL type.
                      */
                     IPSSLSetting m_iPSSLSetting;
                     bool m_iPSSLSettingHasBeenSet;

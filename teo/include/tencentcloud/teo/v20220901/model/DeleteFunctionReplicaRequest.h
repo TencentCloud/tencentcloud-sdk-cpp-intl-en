@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool FunctionIdHasBeenSet() const;
 
                     /**
-                     * 获取Copy name of the deleted function. Input in the form of a list is supported.
-                     * @return ReplicaNames Copy name of the deleted function. Input in the form of a list is supported.
+                     * 获取Copy names of functions to be deleted. Input is supported in the form of a list.
+                     * @return ReplicaNames Copy names of functions to be deleted. Input is supported in the form of a list.
                      * 
                      */
                     std::vector<std::string> GetReplicaNames() const;
 
                     /**
-                     * 设置Copy name of the deleted function. Input in the form of a list is supported.
-                     * @param _replicaNames Copy name of the deleted function. Input in the form of a list is supported.
+                     * 设置Copy names of functions to be deleted. Input is supported in the form of a list.
+                     * @param _replicaNames Copy names of functions to be deleted. Input is supported in the form of a list.
                      * 
                      */
                     void SetReplicaNames(const std::vector<std::string>& _replicaNames);
@@ -120,7 +120,7 @@ namespace TencentCloud
                     bool m_functionIdHasBeenSet;
 
                     /**
-                     * Copy name of the deleted function. Input in the form of a list is supported.
+                     * Copy names of functions to be deleted. Input is supported in the form of a list.
                      */
                     std::vector<std::string> m_replicaNames;
                     bool m_replicaNamesHasBeenSet;

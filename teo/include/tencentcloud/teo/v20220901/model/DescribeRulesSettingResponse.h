@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
-                     * @return Actions List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+                     * 获取Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
+                     * @return Actions Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
                      * 
                      */
                     std::vector<RulesSettingAction> GetActions() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+                     * Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
                      */
                     std::vector<RulesSettingAction> m_actions;
                     bool m_actionsHasBeenSet;

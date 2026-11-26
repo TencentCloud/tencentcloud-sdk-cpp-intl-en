@@ -46,7 +46,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Web security configuration.
+                * Web security configuration
                 */
                 class SecurityConfig : public AbstractModel
                 {
@@ -58,15 +58,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Managed rule. if the parameter is null or not filled, use the last set configuration by default.
-                     * @return WafConfig Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Managed rule. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return WafConfig Managed rule. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     WafConfig GetWafConfig() const;
 
                     /**
-                     * 设置Managed rule. if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _wafConfig Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Managed rule. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _wafConfig Managed rule. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetWafConfig(const WafConfig& _wafConfig);
@@ -79,15 +79,15 @@ namespace TencentCloud
                     bool WafConfigHasBeenSet() const;
 
                     /**
-                     * 获取Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
-                     * @return RateLimitConfig Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+                     * 获取Rate limit. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return RateLimitConfig Rate limit. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     RateLimitConfig GetRateLimitConfig() const;
 
                     /**
-                     * 设置Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
-                     * @param _rateLimitConfig Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+                     * 设置Rate limit. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _rateLimitConfig Rate limit. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetRateLimitConfig(const RateLimitConfig& _rateLimitConfig);
@@ -100,15 +100,15 @@ namespace TencentCloud
                     bool RateLimitConfigHasBeenSet() const;
 
                     /**
-                     * 获取Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
-                     * @return AclConfig Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Custom rule. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return AclConfig Custom rule. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     AclConfig GetAclConfig() const;
 
                     /**
-                     * 设置Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _aclConfig Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Custom rule. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _aclConfig Custom rule. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetAclConfig(const AclConfig& _aclConfig);
@@ -121,15 +121,15 @@ namespace TencentCloud
                     bool AclConfigHasBeenSet() const;
 
                     /**
-                     * 获取Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
-                     * @return BotConfig Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return BotConfig Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     BotConfig GetBotConfig() const;
 
                     /**
-                     * 设置Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _botConfig Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _botConfig Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetBotConfig(const BotConfig& _botConfig);
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool BotConfigHasBeenSet() const;
 
                     /**
-                     * 获取Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
-                     * @return SwitchConfig Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     SwitchConfig GetSwitchConfig() const;
 
                     /**
-                     * 设置Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _switchConfig Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _switchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetSwitchConfig(const SwitchConfig& _switchConfig);
@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool SwitchConfigHasBeenSet() const;
 
                     /**
-                     * 获取Basic access control. if the parameter is null or not filled, use the last set configuration by default.
-                     * @return IpTableConfig Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Basic access control. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return IpTableConfig Basic access control. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     IpTableConfig GetIpTableConfig() const;
 
                     /**
-                     * 设置Basic access control. if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _ipTableConfig Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Basic access control. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _ipTableConfig Basic access control. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetIpTableConfig(const IpTableConfig& _ipTableConfig);
@@ -184,15 +184,15 @@ namespace TencentCloud
                     bool IpTableConfigHasBeenSet() const;
 
                     /**
-                     * 获取Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
-                     * @return ExceptConfig Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return ExceptConfig Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     ExceptConfig GetExceptConfig() const;
 
                     /**
-                     * 设置Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _exceptConfig Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _exceptConfig Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetExceptConfig(const ExceptConfig& _exceptConfig);
@@ -205,15 +205,15 @@ namespace TencentCloud
                     bool ExceptConfigHasBeenSet() const;
 
                     /**
-                     * 获取Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
-                     * @return DropPageConfig Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
+                     * @return DropPageConfig Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
                      * 
                      */
                     DropPageConfig GetDropPageConfig() const;
 
                     /**
-                     * 设置Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _dropPageConfig Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
+                     * @param _dropPageConfig Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
                      * 
                      */
                     void SetDropPageConfig(const DropPageConfig& _dropPageConfig);
@@ -226,15 +226,15 @@ namespace TencentCloud
                     bool DropPageConfigHasBeenSet() const;
 
                     /**
-                     * 获取Template configuration. specifies parameter usage for output only.
-                     * @return TemplateConfig Template configuration. specifies parameter usage for output only.
+                     * 获取Template configuration. This parameter is output-only.
+                     * @return TemplateConfig Template configuration. This parameter is output-only.
                      * 
                      */
                     TemplateConfig GetTemplateConfig() const;
 
                     /**
-                     * 设置Template configuration. specifies parameter usage for output only.
-                     * @param _templateConfig Template configuration. specifies parameter usage for output only.
+                     * 设置Template configuration. This parameter is output-only.
+                     * @param _templateConfig Template configuration. This parameter is output-only.
                      * 
                      */
                     void SetTemplateConfig(const TemplateConfig& _templateConfig);
@@ -247,15 +247,15 @@ namespace TencentCloud
                     bool TemplateConfigHasBeenSet() const;
 
                     /**
-                     * 获取Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
-                     * @return SlowPostConfig Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * 获取Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
+                     * @return SlowPostConfig Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     SlowPostConfig GetSlowPostConfig() const;
 
                     /**
-                     * 设置Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
-                     * @param _slowPostConfig Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * 设置Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
+                     * @param _slowPostConfig Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
                      * 
                      */
                     void SetSlowPostConfig(const SlowPostConfig& _slowPostConfig);
@@ -268,15 +268,15 @@ namespace TencentCloud
                     bool SlowPostConfigHasBeenSet() const;
 
                     /**
-                     * 获取Detect length limit configuration. for output usage only.
-                     * @return DetectLengthLimitConfig Detect length limit configuration. for output usage only.
+                     * 获取Detection length limit configuration. For output usage only.
+                     * @return DetectLengthLimitConfig Detection length limit configuration. For output usage only.
                      * 
                      */
                     DetectLengthLimitConfig GetDetectLengthLimitConfig() const;
 
                     /**
-                     * 设置Detect length limit configuration. for output usage only.
-                     * @param _detectLengthLimitConfig Detect length limit configuration. for output usage only.
+                     * 设置Detection length limit configuration. For output usage only.
+                     * @param _detectLengthLimitConfig Detection length limit configuration. For output usage only.
                      * 
                      */
                     void SetDetectLengthLimitConfig(const DetectLengthLimitConfig& _detectLengthLimitConfig);
@@ -291,67 +291,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+                     * Managed rule. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     WafConfig m_wafConfig;
                     bool m_wafConfigHasBeenSet;
 
                     /**
-                     * Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+                     * Rate limit. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     RateLimitConfig m_rateLimitConfig;
                     bool m_rateLimitConfigHasBeenSet;
 
                     /**
-                     * Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+                     * Custom rule. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     AclConfig m_aclConfig;
                     bool m_aclConfigHasBeenSet;
 
                     /**
-                     * Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     BotConfig m_botConfig;
                     bool m_botConfigHasBeenSet;
 
                     /**
-                     * Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+                     * Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     SwitchConfig m_switchConfig;
                     bool m_switchConfigHasBeenSet;
 
                     /**
-                     * Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+                     * Basic access control. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     IpTableConfig m_ipTableConfig;
                     bool m_ipTableConfigHasBeenSet;
 
                     /**
-                     * Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     ExceptConfig m_exceptConfig;
                     bool m_exceptConfigHasBeenSet;
 
                     /**
-                     * Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+                     * Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
                      */
                     DropPageConfig m_dropPageConfig;
                     bool m_dropPageConfigHasBeenSet;
 
                     /**
-                     * Template configuration. specifies parameter usage for output only.
+                     * Template configuration. This parameter is output-only.
                      */
                     TemplateConfig m_templateConfig;
                     bool m_templateConfigHasBeenSet;
 
                     /**
-                     * Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+                     * Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
                      */
                     SlowPostConfig m_slowPostConfig;
                     bool m_slowPostConfigHasBeenSet;
 
                     /**
-                     * Detect length limit configuration. for output usage only.
+                     * Detection length limit configuration. For output usage only.
                      */
                     DetectLengthLimitConfig m_detectLengthLimitConfig;
                     bool m_detectLengthLimitConfigHasBeenSet;

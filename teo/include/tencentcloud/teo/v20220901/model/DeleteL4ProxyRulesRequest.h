@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer 4 proxy instance ID.
-                     * @return ProxyId Layer 4 proxy instance ID.
+                     * 获取Layer 4 Proxy Instance ID.
+                     * @return ProxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer 4 proxy instance ID.
-                     * @param _proxyId Layer 4 proxy instance ID.
+                     * 设置Layer 4 Proxy Instance ID.
+                     * @param _proxyId Layer 4 Proxy Instance ID.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
-                     * @return RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+                     * 获取List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+                     * @return RuleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
                      * 
                      */
                     std::vector<std::string> GetRuleIds() const;
 
                     /**
-                     * 设置List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
-                     * @param _ruleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+                     * 设置List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+                     * @param _ruleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
                      * 
                      */
                     void SetRuleIds(const std::vector<std::string>& _ruleIds);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Layer 4 proxy instance ID.
+                     * Layer 4 Proxy Instance ID.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+                     * List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
                      */
                     std::vector<std::string> m_ruleIds;
                     bool m_ruleIdsHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the resource ID.
-                     * @return Id Specifies the resource ID.
+                     * 获取Resource ID.
+                     * @return Id Resource ID.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Specifies the resource ID.
-                     * @param _id Specifies the resource ID.
+                     * 设置Resource ID.
+                     * @param _id Resource ID.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the resource name.
-                     * @return Name Specifies the resource name.
+                     * 获取Resource name.
+                     * @return Name Resource name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specifies the resource name.
-                     * @param _name Specifies the resource name.
+                     * 设置Resource name.
+                     * @param _name Resource name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the API service ID list associated with the API resource.
-                     * @return APIServiceIds Specifies the API service ID list associated with the API resource.
+                     * 获取List of API service IDs associated with the API resource.
+                     * @return APIServiceIds List of API service IDs associated with the API resource.
                      * 
                      */
                     std::vector<std::string> GetAPIServiceIds() const;
 
                     /**
-                     * 设置Specifies the API service ID list associated with the API resource.
-                     * @param _aPIServiceIds Specifies the API service ID list associated with the API resource.
+                     * 设置List of API service IDs associated with the API resource.
+                     * @param _aPIServiceIds List of API service IDs associated with the API resource.
                      * 
                      */
                     void SetAPIServiceIds(const std::vector<std::string>& _aPIServiceIds);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool APIServiceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the resource path.
-                     * @return Path Specifies the resource path.
+                     * 获取Resource path.
+                     * @return Path Resource path.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Specifies the resource path.
-                     * @param _path Specifies the resource path.
+                     * 设置Resource path.
+                     * @param _path Resource path.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
-                     * @return Methods Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+                     * 获取Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+                     * @return Methods Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
                      * 
                      */
                     std::vector<std::string> GetMethods() const;
 
                     /**
-                     * 设置Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
-                     * @param _methods Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+                     * 设置Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+                     * @param _methods Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
                      * 
                      */
                     void SetMethods(const std::vector<std::string>& _methods);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool MethodsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
-                     * @return RequestConstraint Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+                     * 获取Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
+                     * @return RequestConstraint Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
                      * 
                      */
                     std::string GetRequestConstraint() const;
 
                     /**
-                     * 设置Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
-                     * @param _requestConstraint Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+                     * 设置Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
+                     * @param _requestConstraint Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
                      * 
                      */
                     void SetRequestConstraint(const std::string& _requestConstraint);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the resource ID.
+                     * Resource ID.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Specifies the resource name.
+                     * Resource name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Specifies the API service ID list associated with the API resource.
+                     * List of API service IDs associated with the API resource.
                      */
                     std::vector<std::string> m_aPIServiceIds;
                     bool m_aPIServiceIdsHasBeenSet;
 
                     /**
-                     * Specifies the resource path.
+                     * Resource path.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+                     * Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
                      */
                     std::vector<std::string> m_methods;
                     bool m_methodsHasBeenSet;
 
                     /**
-                     * Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+                     * Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
                      */
                     std::string m_requestConstraint;
                     bool m_requestConstraintHasBeenSet;

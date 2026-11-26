@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the API service name.
-                     * @return Name Specifies the API service name.
+                     * 获取API service name.
+                     * @return Name API service name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specifies the API service name.
-                     * @param _name Specifies the API service name.
+                     * 设置API service name.
+                     * @param _name API service name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the base path.
-                     * @return BasePath Specifies the base path.
+                     * 获取Base path.
+                     * @return BasePath Base path.
                      * 
                      */
                     std::string GetBasePath() const;
 
                     /**
-                     * 设置Specifies the base path.
-                     * @param _basePath Specifies the base path.
+                     * 设置Base path.
+                     * @param _basePath Base path.
                      * 
                      */
                     void SetBasePath(const std::string& _basePath);
@@ -118,13 +118,13 @@ namespace TencentCloud
                     bool m_idHasBeenSet;
 
                     /**
-                     * Specifies the API service name.
+                     * API service name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Specifies the base path.
+                     * Base path.
                      */
                     std::string m_basePath;
                     bool m_basePathHasBeenSet;

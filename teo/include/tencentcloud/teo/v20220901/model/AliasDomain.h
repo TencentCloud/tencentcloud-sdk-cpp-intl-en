@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the alias domain name
+                * Alias domain information.
                 */
                 class AliasDomain : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The alias domain name.
-                     * @return AliasName The alias domain name.
+                     * 获取Alias domain name.
+                     * @return AliasName Alias domain name.
                      * 
                      */
                     std::string GetAliasName() const;
 
                     /**
-                     * 设置The alias domain name.
-                     * @param _aliasName The alias domain name.
+                     * 设置Alias domain name.
+                     * @param _aliasName Alias domain name.
                      * 
                      */
                     void SetAliasName(const std::string& _aliasName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AliasNameHasBeenSet() const;
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The target domain name.
-                     * @return TargetName The target domain name.
+                     * 获取Target domain name.
+                     * @return TargetName Target domain name.
                      * 
                      */
                     std::string GetTargetName() const;
 
                     /**
-                     * 设置The target domain name.
-                     * @param _targetName The target domain name.
+                     * 设置Target domain name.
+                     * @param _targetName Target domain name.
                      * 
                      */
                     void SetTargetName(const std::string& _targetName);
@@ -110,31 +110,31 @@ namespace TencentCloud
                     bool TargetNameHasBeenSet() const;
 
                     /**
-                     * 获取Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
-                     * @return Status Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
+                     * 获取Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
+                     * @return Status Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
-                     * @param _status Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
+                     * 设置Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
+                     * @param _status Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -147,27 +147,27 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
-                     * @return ForbidMode The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
+                     * 获取Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
+                     * @return ForbidMode Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
                      * 
                      */
                     int64_t GetForbidMode() const;
 
                     /**
-                     * 设置The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
-                     * @param _forbidMode The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
+                     * 设置Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
+                     * @param _forbidMode Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
                      * 
                      */
                     void SetForbidMode(const int64_t& _forbidMode);
@@ -180,15 +180,15 @@ namespace TencentCloud
                     bool ForbidModeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the alias domain name.
-                     * @return CreatedOn Creation time of the alias domain name.
+                     * 获取Alias domain creation time.
+                     * @return CreatedOn Alias domain creation time.
                      * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
-                     * 设置Creation time of the alias domain name.
-                     * @param _createdOn Creation time of the alias domain name.
+                     * 设置Alias domain creation time.
+                     * @param _createdOn Alias domain creation time.
                      * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
@@ -201,15 +201,15 @@ namespace TencentCloud
                     bool CreatedOnHasBeenSet() const;
 
                     /**
-                     * 获取Modification time of the alias domain name.
-                     * @return ModifiedOn Modification time of the alias domain name.
+                     * 获取Alias domain name modification time.
+                     * @return ModifiedOn Alias domain name modification time.
                      * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
-                     * 设置Modification time of the alias domain name.
-                     * @param _modifiedOn Modification time of the alias domain name.
+                     * 设置Alias domain name modification time.
+                     * @param _modifiedOn Alias domain name modification time.
                      * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
@@ -224,50 +224,50 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The alias domain name.
+                     * Alias domain name.
                      */
                     std::string m_aliasName;
                     bool m_aliasNameHasBeenSet;
 
                     /**
-                     * The site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The target domain name.
+                     * Target domain name.
                      */
                     std::string m_targetName;
                     bool m_targetNameHasBeenSet;
 
                     /**
-                     * Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
+                     * Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
+                     * Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
                      */
                     int64_t m_forbidMode;
                     bool m_forbidModeHasBeenSet;
 
                     /**
-                     * Creation time of the alias domain name.
+                     * Alias domain creation time.
                      */
                     std::string m_createdOn;
                     bool m_createdOnHasBeenSet;
 
                     /**
-                     * Modification time of the alias domain name.
+                     * Alias domain name modification time.
                      */
                     std::string m_modifiedOn;
                     bool m_modifiedOnHasBeenSet;

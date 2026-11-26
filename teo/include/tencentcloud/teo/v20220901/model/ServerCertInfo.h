@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTPS server certificate configuration
+                * https server certificate configuration
                 */
                 class ServerCertInfo : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+                     * 获取Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
-                     * @return CertId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+                     * @return CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+                     * 设置Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
-                     * @param _certId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+                     * @param _certId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
                      * 
                      */
@@ -93,27 +93,27 @@ namespace TencentCloud
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
-                     * @return Type Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
+                     * 获取Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+                     * @return Type Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
-                     * @param _type Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
+                     * 设置Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+                     * @param _type Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -147,15 +147,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the cert deployment time.
-                     * @return DeployTime Specifies the cert deployment time.
+                     * 获取Deployment time of the certificate.
+                     * @return DeployTime Deployment time of the certificate.
                      * 
                      */
                     std::string GetDeployTime() const;
 
                     /**
-                     * 设置Specifies the cert deployment time.
-                     * @param _deployTime Specifies the cert deployment time.
+                     * 设置Deployment time of the certificate.
+                     * @param _deployTime Deployment time of the certificate.
                      * 
                      */
                     void SetDeployTime(const std::string& _deployTime);
@@ -189,15 +189,15 @@ namespace TencentCloud
                     bool SignAlgoHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the certificate.
-                     * @return CommonName Domain name of the certificate.
+                     * 获取Domain name of the certificate ownership.
+                     * @return CommonName Domain name of the certificate ownership.
                      * 
                      */
                     std::string GetCommonName() const;
 
                     /**
-                     * 设置Domain name of the certificate.
-                     * @param _commonName Domain name of the certificate.
+                     * 设置Domain name of the certificate ownership.
+                     * @param _commonName Domain name of the certificate ownership.
                      * 
                      */
                     void SetCommonName(const std::string& _commonName);
@@ -212,7 +212,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+                     * Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
                      */
                     std::string m_certId;
@@ -225,10 +225,10 @@ namespace TencentCloud
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
+                     * Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -240,7 +240,7 @@ namespace TencentCloud
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Specifies the cert deployment time.
+                     * Deployment time of the certificate.
                      */
                     std::string m_deployTime;
                     bool m_deployTimeHasBeenSet;
@@ -252,7 +252,7 @@ namespace TencentCloud
                     bool m_signAlgoHasBeenSet;
 
                     /**
-                     * Domain name of the certificate.
+                     * Domain name of the certificate ownership.
                      */
                     std::string m_commonName;
                     bool m_commonNameHasBeenSet;

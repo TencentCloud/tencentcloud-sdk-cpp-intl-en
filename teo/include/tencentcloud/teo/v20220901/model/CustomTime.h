@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,27 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @return IgnoreCacheControl Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 获取Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
+                     * @return IgnoreCacheControl Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
                      * 
                      */
                     std::string GetIgnoreCacheControl() const;
 
                     /**
-                     * 设置Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-                     * @param _ignoreCacheControl Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * 设置Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
+                     * @param _ignoreCacheControl Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
                      * 
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
@@ -113,15 +105,15 @@ namespace TencentCloud
                     bool IgnoreCacheControlHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @return CacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 获取Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
+                     * @return CacheTime Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
                      * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
-                     * 设置Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @param _cacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 设置Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
+                     * @param _cacheTime Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
                      * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
@@ -136,25 +128,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+                     * Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;
 
                     /**
-                     * Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
                      */
                     int64_t m_cacheTime;
                     bool m_cacheTimeHasBeenSet;

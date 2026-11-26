@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Environment variable of the container runtime for reasoning.
+                * Environment variable of the reasoning container runtime.
                 */
                 class InferenceEnvironmentVariable : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
-                     * @return Key Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+                     * 获取Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
+                     * @return Key Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
-                     * @param _key Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+                     * 设置Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
+                     * @param _key Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
-                     * @return Value Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+                     * 获取Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
+                     * @return Value Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
-                     * @param _value Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+                     * 设置Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
+                     * @param _value Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+                     * Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+                     * Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

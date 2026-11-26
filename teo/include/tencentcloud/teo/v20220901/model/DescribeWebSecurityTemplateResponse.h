@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Web Security policy template configuration. Bot management configuration is not currently supported (under development).
-                     * @return SecurityPolicy Web Security policy template configuration. Bot management configuration is not currently supported (under development).
+                     * 获取Security policy template configuration content. Bot configuration is not currently supported and is under development.
+                     * @return SecurityPolicy Security policy template configuration content. Bot configuration is not currently supported and is under development.
                      * 
                      */
                     SecurityPolicy GetSecurityPolicy() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Web Security policy template configuration. Bot management configuration is not currently supported (under development).
+                     * Security policy template configuration content. Bot configuration is not currently supported and is under development.
                      */
                     SecurityPolicy m_securityPolicy;
                     bool m_securityPolicyHasBeenSet;

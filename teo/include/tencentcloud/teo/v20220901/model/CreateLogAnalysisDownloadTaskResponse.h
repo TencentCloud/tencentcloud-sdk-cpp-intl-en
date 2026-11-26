@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Log analysis download task ID.</p>
-                     * @return TaskId <p>Log analysis download task ID.</p>
+                     * 获取<p>Log analytics download task ID.</p>
+                     * @return TaskId <p>Log analytics download task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Log analysis download task ID.</p>
+                     * <p>Log analytics download task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

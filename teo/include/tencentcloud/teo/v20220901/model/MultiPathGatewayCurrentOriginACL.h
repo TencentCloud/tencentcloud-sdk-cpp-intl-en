@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the currently effective IP range for origin servers.
+                * Currently effective origin-pull IP range.
                 */
                 class MultiPathGatewayCurrentOriginACL : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Describes the IP range details for origin servers.
-                     * @return EntireAddresses Describes the IP range details for origin servers.
+                     * 获取Origin-pull IP range details.
+                     * @return EntireAddresses Origin-pull IP range details.
                      * 
                      */
                     Addresses GetEntireAddresses() const;
 
                     /**
-                     * 设置Describes the IP range details for origin servers.
-                     * @param _entireAddresses Describes the IP range details for origin servers.
+                     * 设置Origin-pull IP range details.
+                     * @param _entireAddresses Origin-pull IP range details.
                      * 
                      */
                     void SetEntireAddresses(const Addresses& _entireAddresses);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool EntireAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the version number.
-                     * @return Version Specifies the version number.
+                     * 获取Version.
+                     * @return Version Version.
                      * 
                      */
                     int64_t GetVersion() const;
 
                     /**
-                     * 设置Specifies the version number.
-                     * @param _version Specifies the version number.
+                     * 设置Version.
+                     * @param _version Version.
                      * 
                      */
                     void SetVersion(const int64_t& _version);
@@ -90,27 +90,27 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
-                     * @return IsPlaned This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+                     * 获取This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
+                     * @return IsPlaned This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
                      * 
                      */
                     std::string GetIsPlaned() const;
 
                     /**
-                     * 设置This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
-                     * @param _isPlaned This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+                     * 设置This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
+                     * @param _isPlaned This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
                      * 
                      */
                     void SetIsPlaned(const std::string& _isPlaned);
@@ -125,22 +125,22 @@ Note: when false is returned for this parameter, please confirm in time whether 
                 private:
 
                     /**
-                     * Describes the IP range details for origin servers.
+                     * Origin-pull IP range details.
                      */
                     Addresses m_entireAddresses;
                     bool m_entireAddressesHasBeenSet;
 
                     /**
-                     * Specifies the version number.
+                     * Version.
                      */
                     int64_t m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+                     * This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
                      */
                     std::string m_isPlaned;
                     bool m_isPlanedHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Location information of the client IP carried in origin-pull. It is formatted as a two-letter ISO-3166-1 country/region code.
+                * Carry the regional information of the client IP during origin-pull. The value format is an ISO-3166-1 two-letter code.
                 */
                 class ClientIpCountry : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
-The default value `EO-Client-IPCountry` is used when it is not specified.
-                     * @return HeaderName Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
-The default value `EO-Client-IPCountry` is used when it is not specified.
+                     * 获取Request header name for storing the region of the client IP. Valid when Switch is on.
+If it is empty, use the default value: EO-Client-IPCountry.
+                     * @return HeaderName Request header name for storing the region of the client IP. Valid when Switch is on.
+If it is empty, use the default value: EO-Client-IPCountry.
                      * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
-                     * 设置Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
-The default value `EO-Client-IPCountry` is used when it is not specified.
-                     * @param _headerName Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
-The default value `EO-Client-IPCountry` is used when it is not specified.
+                     * 设置Request header name for storing the region of the client IP. Valid when Switch is on.
+If it is empty, use the default value: EO-Client-IPCountry.
+                     * @param _headerName Request header name for storing the region of the client IP. Valid when Switch is on.
+If it is empty, use the default value: EO-Client-IPCountry.
                      * 
                      */
                     void SetHeaderName(const std::string& _headerName);
@@ -103,16 +103,16 @@ The default value `EO-Client-IPCountry` is used when it is not specified.
                 private:
 
                     /**
-                     * Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
-The default value `EO-Client-IPCountry` is used when it is not specified.
+                     * Request header name for storing the region of the client IP. Valid when Switch is on.
+If it is empty, use the default value: EO-Client-IPCountry.
                      */
                     std::string m_headerName;
                     bool m_headerNameHasBeenSet;

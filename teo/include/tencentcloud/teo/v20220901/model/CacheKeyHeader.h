@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @return Values Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 获取List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
+                     * @return Values List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @param _values Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 设置List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
+                     * @param _values List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -103,16 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable feature. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Custom cache key http request header list.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * List of custom Cache Key HTTP request headers.<br>Note: This field is required when Switch is on. It is not required when Switch is off, and will not take effect if specified.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

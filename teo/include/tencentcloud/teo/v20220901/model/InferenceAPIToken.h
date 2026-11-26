@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Reasoning API Token information.
+                * Token information for the reasoning API.
                 */
                 class InferenceAPIToken : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TokenIdHasBeenSet() const;
 
                     /**
-                     * 获取Reasoning API Token name.
-                     * @return Name Reasoning API Token name.
+                     * 获取Name of the reasoning API Token.
+                     * @return Name Name of the reasoning API Token.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Reasoning API Token name.
-                     * @param _name Reasoning API Token name.
+                     * 设置Name of the reasoning API Token.
+                     * @param _name Name of the reasoning API Token.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Reasoning API Token content.
-                     * @return Content Reasoning API Token content.
+                     * 获取Content of the reasoning API Token.
+                     * @return Content Content of the reasoning API Token.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Reasoning API Token content.
-                     * @param _content Reasoning API Token content.
+                     * 设置Content of the reasoning API Token.
+                     * @param _content Content of the reasoning API Token.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -139,13 +139,13 @@ namespace TencentCloud
                     bool m_tokenIdHasBeenSet;
 
                     /**
-                     * Reasoning API Token name.
+                     * Name of the reasoning API Token.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Reasoning API Token content.
+                     * Content of the reasoning API Token.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

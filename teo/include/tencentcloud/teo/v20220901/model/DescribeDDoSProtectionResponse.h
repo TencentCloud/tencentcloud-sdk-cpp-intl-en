@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
-                     * @return DDoSProtection Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
+                     * 获取Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
+                     * @return DDoSProtection Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
                      * 
                      */
                     DDoSProtection GetDDoSProtection() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
+                     * Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
                      */
                     DDoSProtection m_dDoSProtection;
                     bool m_dDoSProtectionHasBeenSet;

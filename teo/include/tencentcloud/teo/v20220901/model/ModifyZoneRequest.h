@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -66,11 +66,11 @@ namespace TencentCloud
 
                     /**
                      * 获取Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      * @return Type Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      * 
@@ -79,11 +79,11 @@ namespace TencentCloud
 
                     /**
                      * 设置Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      * @param _type Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      * 
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
-                     * @return VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+                     * 获取Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
+                     * @return VanityNameServers Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
                      * 
                      */
                     VanityNameServers GetVanityNameServers() const;
 
                     /**
-                     * 设置The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
-                     * @param _vanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+                     * 设置Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
+                     * @param _vanityNameServers Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
                      * 
                      */
                     void SetVanityNameServers(const VanityNameServers& _vanityNameServers);
@@ -119,15 +119,15 @@ namespace TencentCloud
                     bool VanityNameServersHasBeenSet() const;
 
                     /**
-                     * 获取Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
-                     * @return AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+                     * 获取Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
+                     * @return AliasZoneName Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
                      * 
                      */
                     std::string GetAliasZoneName() const;
 
                     /**
-                     * 设置Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
-                     * @param _aliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+                     * 设置Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
+                     * @param _aliasZoneName Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
                      * 
                      */
                     void SetAliasZoneName(const std::string& _aliasZoneName);
@@ -140,27 +140,27 @@ namespace TencentCloud
                     bool AliasZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
-                     * @return Area The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     * 获取Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
+                     * @return Area Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
-                     * @param _area The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     * 设置Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
+                     * @param _area Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
-                     * @return ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     * 获取Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
+                     * @return ZoneName Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
-                     * @param _zoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     * 设置Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
+                     * @param _zoneName Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -196,14 +196,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
                      * Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
                      */
@@ -211,28 +211,28 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+                     * Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
                      */
                     VanityNameServers m_vanityNameServers;
                     bool m_vanityNameServersHasBeenSet;
 
                     /**
-                     * Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+                     * Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;
 
                     /**
-                     * The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+                     * Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+                     * Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;

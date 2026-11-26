@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable L4 remote authentication. Valid values:
+                     * 获取L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
-                     * @return Switch Whether to enable L4 remote authentication. Valid values:
+                     * @return Switch L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable L4 remote authentication. Valid values:
+                     * 设置L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
-                     * @param _switch Whether to enable L4 remote authentication. Valid values:
+                     * @param _switch L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
                      * 
@@ -101,10 +101,10 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+                     * 获取Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
-                     * @return ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+                     * @return ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
                      * 
@@ -112,10 +112,10 @@ namespace TencentCloud
                     std::string GetServerFaultyBehavior() const;
 
                     /**
-                     * 设置Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+                     * 设置Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
-                     * @param _serverFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+                     * @param _serverFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
                      * 
@@ -132,7 +132,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable L4 remote authentication. Valid values:
+                     * L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
                      */
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_addressHasBeenSet;
 
                     /**
-                     * Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+                     * Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
                      */

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exclusive Anti-DDoS protection configuration.
+                * Exclusive DDoS protection configuration.
                 */
                 class DDoSProtection : public AbstractModel
                 {
@@ -48,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
-                     * @return ProtectionOption Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
+                     * 获取Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
+                     * @return ProtectionOption Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
                      * 
                      */
                     std::string GetProtectionOption() const;
 
                     /**
-                     * 设置Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
-                     * @param _protectionOption Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
+                     * 设置Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
+                     * @param _protectionOption Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
                      * 
                      */
                     void SetProtectionOption(const std::string& _protectionOption);
@@ -77,23 +77,23 @@ namespace TencentCloud
                     bool ProtectionOptionHasBeenSet() const;
 
                     /**
-                     * 获取Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
-                     * @return DomainDDoSProtections Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
+                     * 获取Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
+                     * @return DomainDDoSProtections Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
                      * 
                      */
                     std::vector<DomainDDoSProtection> GetDomainDDoSProtections() const;
 
                     /**
-                     * 设置Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
-                     * @param _domainDDoSProtections Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
+                     * 设置Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
+                     * @param _domainDDoSProtections Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
                      * 
                      */
                     void SetDomainDDoSProtections(const std::vector<DomainDDoSProtection>& _domainDDoSProtections);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DomainDDoSProtectionsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
-                     * @return SharedCNAMEDDoSProtections Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
+                     * 获取Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
+                     * @return SharedCNAMEDDoSProtections Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
                      * 
                      */
                     std::vector<DomainDDoSProtection> GetSharedCNAMEDDoSProtections() const;
 
                     /**
-                     * 设置Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
-                     * @param _sharedCNAMEDDoSProtections Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
+                     * 设置Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
+                     * @param _sharedCNAMEDDoSProtections Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
                      * 
                      */
                     void SetSharedCNAMEDDoSProtections(const std::vector<DomainDDoSProtection>& _sharedCNAMEDDoSProtections);
@@ -129,23 +129,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the protection scope of standalone DDoS. valid values:.
-<li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-<li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
+                     * Specify the protection scope of standalone DDoS. Value:
+<li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+<li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
                      */
                     std::string m_protectionOption;
                     bool m_protectionOptionHasBeenSet;
 
                     /**
-                     * Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-<li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-<li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
+                     * Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+<li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+<li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
                      */
                     std::vector<DomainDDoSProtection> m_domainDDoSProtections;
                     bool m_domainDDoSProtectionsHasBeenSet;
 
                     /**
-                     * Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
+                     * Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
                      */
                     std::vector<DomainDDoSProtection> m_sharedCNAMEDDoSProtections;
                     bool m_sharedCNAMEDDoSProtectionsHasBeenSet;

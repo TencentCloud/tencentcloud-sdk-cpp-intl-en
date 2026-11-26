@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTPS server certificate configuration.
+                * https certificate configuration.
                 */
                 class CertificateInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CertIdHasBeenSet() const;
 
                     /**
-                     * 获取Alias of the certificate.
-                     * @return Alias Alias of the certificate.
+                     * 获取Certificate remark name.
+                     * @return Alias Certificate remark name.
                      * 
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Alias of the certificate.
-                     * @param _alias Alias of the certificate.
+                     * 设置Certificate remark name.
+                     * @param _alias Certificate remark name.
                      * 
                      */
                     void SetAlias(const std::string& _alias);
@@ -89,27 +89,27 @@ namespace TencentCloud
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-                     * @return Type Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
+                     * 获取Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+                     * @return Type Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-                     * @param _type Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
+                     * 设置Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+                     * @param _type Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -122,15 +122,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The certificate expiration time.
-                     * @return ExpireTime The certificate expiration time.
+                     * 获取Certificate expiration time.
+                     * @return ExpireTime Certificate expiration time.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置The certificate expiration time.
-                     * @param _expireTime The certificate expiration time.
+                     * 设置Certificate expiration time.
+                     * @param _expireTime Certificate expiration time.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time when the certificate is deployed.
-                     * @return DeployTime Time when the certificate is deployed.
+                     * 获取Deployment time of the certificate.
+                     * @return DeployTime Deployment time of the certificate.
                      * 
                      */
                     std::string GetDeployTime() const;
 
                     /**
-                     * 设置Time when the certificate is deployed.
-                     * @param _deployTime Time when the certificate is deployed.
+                     * 设置Deployment time of the certificate.
+                     * @param _deployTime Deployment time of the certificate.
                      * 
                      */
                     void SetDeployTime(const std::string& _deployTime);
@@ -185,35 +185,35 @@ namespace TencentCloud
                     bool SignAlgoHasBeenSet() const;
 
                     /**
-                     * 获取Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
-                     * @return Status Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+                     * 获取Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
+                     * @return Status Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
-                     * @param _status Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+                     * 设置Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
+                     * @param _status Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -234,28 +234,28 @@ u200c<li>`failed`: Application rejected</li>
                     bool m_certIdHasBeenSet;
 
                     /**
-                     * Alias of the certificate.
+                     * Certificate remark name.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
+                     * Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The certificate expiration time.
+                     * Certificate expiration time.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Time when the certificate is deployed.
+                     * Deployment time of the certificate.
                      */
                     std::string m_deployTime;
                     bool m_deployTimeHasBeenSet;
@@ -267,12 +267,12 @@ u200c<li>`failed`: Application rejected</li>
                     bool m_signAlgoHasBeenSet;
 
                     /**
-                     * Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+                     * Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

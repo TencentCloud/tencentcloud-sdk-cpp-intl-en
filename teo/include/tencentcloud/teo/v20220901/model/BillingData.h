@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the data timestamp.
-                     * @return Time Specifies the data timestamp.
+                     * 获取Data timestamp.
+                     * @return Time Data timestamp.
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Specifies the data timestamp.
-                     * @param _time Specifies the data timestamp.
+                     * 设置Data timestamp.
+                     * @param _time Data timestamp.
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Value.
-                     * @return Value Value.
+                     * 获取Numeric value.
+                     * @return Value Numeric value.
                      * 
                      */
                     uint64_t GetValue() const;
 
                     /**
-                     * 设置Value.
-                     * @param _value Value.
+                     * 设置Numeric value.
+                     * @param _value Numeric value.
                      * 
                      */
                     void SetValue(const uint64_t& _value);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
-                     * @return ZoneId Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+                     * 获取Site ID to which the data point belongs. If the content identifier feature is used, the value of this item is the content identifier.
+                     * @return ZoneId Site ID to which the data point belongs. If the content identifier feature is used, the value of this item is the content identifier.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
-                     * @param _zoneId Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+                     * 设置Site ID to which the data point belongs. If the content identifier feature is used, the value of this item is the content identifier.
+                     * @param _zoneId Site ID to which the data point belongs. If the content identifier feature is used, the value of this item is the content identifier.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the domain name of the data point.
-                     * @return Host Specifies the domain name of the data point.
+                     * 获取Domain name to which the data point belongs.
+                     * @return Host Domain name to which the data point belongs.
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Specifies the domain name of the data point.
-                     * @param _host Specifies the domain name of the data point.
+                     * 设置Domain name to which the data point belongs.
+                     * @param _host Domain name to which the data point belongs.
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the layer-4 proxy instance ID the data point belongs to.
-                     * @return ProxyId Specifies the layer-4 proxy instance ID the data point belongs to.
+                     * 获取ID of the Layer 4 Proxy instance to which the data point belongs.
+                     * @return ProxyId ID of the Layer 4 Proxy instance to which the data point belongs.
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Specifies the layer-4 proxy instance ID the data point belongs to.
-                     * @param _proxyId Specifies the layer-4 proxy instance ID the data point belongs to.
+                     * 设置ID of the Layer 4 Proxy instance to which the data point belongs.
+                     * @param _proxyId ID of the Layer 4 Proxy instance to which the data point belongs.
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
-                     * @return RegionId Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
+                     * 获取ID of the billing region to which the data point belongs. The billing region is determined by the region of the EdgeOne node that actually serves the user client. Valid values: <li>CH: Chinese mainland</li><li>AF: Africa</li><li>AS1: Asia Pacific zone 1</li><li>AS2: Asia Pacific zone 2</li><li>AS3: Asia Pacific zone 3</li><li>EU: Europe</li><li>MidEast: Middle East</li><li>NA: North America</li><li> SA: South America</li>
+                     * @return RegionId ID of the billing region to which the data point belongs. The billing region is determined by the region of the EdgeOne node that actually serves the user client. Valid values: <li>CH: Chinese mainland</li><li>AF: Africa</li><li>AS1: Asia Pacific zone 1</li><li>AS2: Asia Pacific zone 2</li><li>AS3: Asia Pacific zone 3</li><li>EU: Europe</li><li>MidEast: Middle East</li><li>NA: North America</li><li> SA: South America</li>
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
-                     * @param _regionId Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
+                     * 设置ID of the billing region to which the data point belongs. The billing region is determined by the region of the EdgeOne node that actually serves the user client. Valid values: <li>CH: Chinese mainland</li><li>AF: Africa</li><li>AS1: Asia Pacific zone 1</li><li>AS2: Asia Pacific zone 2</li><li>AS3: Asia Pacific zone 3</li><li>EU: Europe</li><li>MidEast: Middle East</li><li>NA: North America</li><li> SA: South America</li>
+                     * @param _regionId ID of the billing region to which the data point belongs. The billing region is determined by the region of the EdgeOne node that actually serves the user client. Valid values: <li>CH: Chinese mainland</li><li>AF: Africa</li><li>AS1: Asia Pacific zone 1</li><li>AS2: Asia Pacific zone 2</li><li>AS3: Asia Pacific zone 3</li><li>EU: Europe</li><li>MidEast: Middle East</li><li>NA: North America</li><li> SA: South America</li>
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the data timestamp.
+                     * Data timestamp.
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Value.
+                     * Numeric value.
                      */
                     uint64_t m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+                     * Site ID to which the data point belongs. If the content identifier feature is used, the value of this item is the content identifier.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Specifies the domain name of the data point.
+                     * Domain name to which the data point belongs.
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Specifies the layer-4 proxy instance ID the data point belongs to.
+                     * ID of the Layer 4 Proxy instance to which the data point belongs.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
+                     * ID of the billing region to which the data point belongs. The billing region is determined by the region of the EdgeOne node that actually serves the user client. Valid values: <li>CH: Chinese mainland</li><li>AF: Africa</li><li>AS1: Asia Pacific zone 1</li><li>AS2: Asia Pacific zone 2</li><li>AS3: Asia Pacific zone 3</li><li>EU: Europe</li><li>MidEast: Middle East</li><li>NA: North America</li><li> SA: South America</li>
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;

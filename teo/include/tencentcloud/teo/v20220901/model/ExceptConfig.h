@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exception rules, which are used to bypass specific rules
+                * Exception rule for configuring rules that need to skip specific scenarios
                 */
                 class ExceptConfig : public AbstractModel
                 {
@@ -48,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @return Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 获取Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-                     * @param _switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * 设置Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The settings of the exception rule. if it is null, the settings that were last configured will be used.
-                     * @return ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
+                     * 获取Exception rule details. If null, use the last set configuration by default.
+                     * @return ExceptUserRules Exception rule details. If null, use the last set configuration by default.
                      * 
                      */
                     std::vector<ExceptUserRule> GetExceptUserRules() const;
 
                     /**
-                     * 设置The settings of the exception rule. if it is null, the settings that were last configured will be used.
-                     * @param _exceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
+                     * 设置Exception rule details. If null, use the last set configuration by default.
+                     * @param _exceptUserRules Exception rule details. If null, use the last set configuration by default.
                      * 
                      */
                     void SetExceptUserRules(const std::vector<ExceptUserRule>& _exceptUserRules);
@@ -100,15 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+                     * Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The settings of the exception rule. if it is null, the settings that were last configured will be used.
+                     * Exception rule details. If null, use the last set configuration by default.
                      */
                     std::vector<ExceptUserRule> m_exceptUserRules;
                     bool m_exceptUserRulesHasBeenSet;

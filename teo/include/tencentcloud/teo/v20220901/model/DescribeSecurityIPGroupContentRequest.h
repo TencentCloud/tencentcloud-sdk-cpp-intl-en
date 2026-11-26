@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the IP group ID.
-                     * @return GroupId Specifies the IP group ID.
+                     * 获取IP group ID.
+                     * @return GroupId IP group ID.
                      * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
-                     * 设置Specifies the IP group ID.
-                     * @param _groupId Specifies the IP group ID.
+                     * 设置IP group ID.
+                     * @param _groupId IP group ID.
                      * 
                      */
                     void SetGroupId(const int64_t& _groupId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Paginated query limit. default value: 2000, maximum value: 100000.
-                     * @return Limit Paginated query limit. default value: 2000, maximum value: 100000.
+                     * 获取Paginated query limit. Default value: 2000. Maximum value: 100000.
+                     * @return Limit Paginated query limit. Default value: 2000. Maximum value: 100000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Paginated query limit. default value: 2000, maximum value: 100000.
-                     * @param _limit Paginated query limit. default value: 2000, maximum value: 100000.
+                     * 设置Paginated query limit. Default value: 2000. Maximum value: 100000.
+                     * @param _limit Paginated query limit. Default value: 2000. Maximum value: 100000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -135,13 +135,13 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Specifies the IP group ID.
+                     * IP group ID.
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Paginated query limit. default value: 2000, maximum value: 100000.
+                     * Paginated query limit. Default value: 2000. Maximum value: 100000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

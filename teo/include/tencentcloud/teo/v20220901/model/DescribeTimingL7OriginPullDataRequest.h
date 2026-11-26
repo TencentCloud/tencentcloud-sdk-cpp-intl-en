@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID set. This parameter is required. A maximum of 100 zone-ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
-                     * @return ZoneIds Site ID set. This parameter is required. A maximum of 100 zone-ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
+                     * 获取Site ID set. This parameter is required. You can input up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permissions for all site resources of this interface.
+                     * @return ZoneIds Site ID set. This parameter is required. You can input up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permissions for all site resources of this interface.
                      * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置Site ID set. This parameter is required. A maximum of 100 zone-ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
-                     * @param _zoneIds Site ID set. This parameter is required. A maximum of 100 zone-ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
+                     * 设置Site ID set. This parameter is required. You can input up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permissions for all site resources of this interface.
+                     * @param _zoneIds Site ID set. This parameter is required. You can input up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permissions for all site resources of this interface.
                      * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
@@ -66,18 +66,34 @@ namespace TencentCloud
 
                     /**
                      * 获取Metric list. Valid values:
-<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
+<ul><li>l7Flow_outFlux_hy: Request traffic from EdgeOne node to origin server direction, unit: Byte;</li>
+<li>l7Flow_outBandwidth_hy: Request bandwidth from EdgeOne node to origin server direction, unit: bps;</li>
+<li>l7Flow_request_hy: request count from EdgeOne node to origin server direction, unit: count.</li>
+<li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node, measurement unit: Byte;</li>
+<li>l7Flow_inBandwidth_hy: Response bandwidth from the origin to the EdgeOne node, unit: bps.</li></ul>
                      * @return MetricNames Metric list. Valid values:
-<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
+<ul><li>l7Flow_outFlux_hy: Request traffic from EdgeOne node to origin server direction, unit: Byte;</li>
+<li>l7Flow_outBandwidth_hy: Request bandwidth from EdgeOne node to origin server direction, unit: bps;</li>
+<li>l7Flow_request_hy: request count from EdgeOne node to origin server direction, unit: count.</li>
+<li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node, measurement unit: Byte;</li>
+<li>l7Flow_inBandwidth_hy: Response bandwidth from the origin to the EdgeOne node, unit: bps.</li></ul>
                      * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
                      * 设置Metric list. Valid values:
-<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
+<ul><li>l7Flow_outFlux_hy: Request traffic from EdgeOne node to origin server direction, unit: Byte;</li>
+<li>l7Flow_outBandwidth_hy: Request bandwidth from EdgeOne node to origin server direction, unit: bps;</li>
+<li>l7Flow_request_hy: request count from EdgeOne node to origin server direction, unit: count.</li>
+<li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node, measurement unit: Byte;</li>
+<li>l7Flow_inBandwidth_hy: Response bandwidth from the origin to the EdgeOne node, unit: bps.</li></ul>
                      * @param _metricNames Metric list. Valid values:
-<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
+<ul><li>l7Flow_outFlux_hy: Request traffic from EdgeOne node to origin server direction, unit: Byte;</li>
+<li>l7Flow_outBandwidth_hy: Request bandwidth from EdgeOne node to origin server direction, unit: bps;</li>
+<li>l7Flow_request_hy: request count from EdgeOne node to origin server direction, unit: count.</li>
+<li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node, measurement unit: Byte;</li>
+<li>l7Flow_inBandwidth_hy: Response bandwidth from the origin to the EdgeOne node, unit: bps.</li></ul>
                      * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
@@ -133,18 +149,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Time granularity of the query. Valid values:
-<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
                      * @return Interval Time granularity of the query. Valid values:
-<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
                      * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Time granularity of the query. Valid values:
-<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
                      * @param _interval Time granularity of the query. Valid values:
-<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
                      * 
                      */
                     void SetInterval(const std::string& _interval);
@@ -157,23 +173,23 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. Detailed filter criteria:
-<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
-Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
-                     * @return Filters Filter criteria. Detailed filter criteria:
-<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
-Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+                     * 获取Filter criteria. The detailed filter criteria are as follows:
+<ul><li><strong>domain</strong>: domain name requested by the client. If EdgeOne is connected via wildcard domain access, the data records the wildcard domain name rather than the specific domain name.</li><li><strong>originStatusCode</strong>: Origin status code. This filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>Options for the corresponding Value are as follows:<ul><li><code>1xx</code>: Status codes of type 1xx;</li><li><code>2xx</code>: Status codes of type 2xx;</li><li><code>3xx</code>: Status codes of type 3xx;</li><li><code>4xx</code>: Status codes of type 4xx;</li><li><code>5xx</code>: Status codes of type 5xx;</li><li>Integers within the range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>
+**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+                     * @return Filters Filter criteria. The detailed filter criteria are as follows:
+<ul><li><strong>domain</strong>: domain name requested by the client. If EdgeOne is connected via wildcard domain access, the data records the wildcard domain name rather than the specific domain name.</li><li><strong>originStatusCode</strong>: Origin status code. This filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>Options for the corresponding Value are as follows:<ul><li><code>1xx</code>: Status codes of type 1xx;</li><li><code>2xx</code>: Status codes of type 2xx;</li><li><code>3xx</code>: Status codes of type 3xx;</li><li><code>4xx</code>: Status codes of type 4xx;</li><li><code>5xx</code>: Status codes of type 5xx;</li><li>Integers within the range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>
+**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
                      * 
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. Detailed filter criteria:
-<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
-Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
-                     * @param _filters Filter criteria. Detailed filter criteria:
-<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
-Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+                     * 设置Filter criteria. The detailed filter criteria are as follows:
+<ul><li><strong>domain</strong>: domain name requested by the client. If EdgeOne is connected via wildcard domain access, the data records the wildcard domain name rather than the specific domain name.</li><li><strong>originStatusCode</strong>: Origin status code. This filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>Options for the corresponding Value are as follows:<ul><li><code>1xx</code>: Status codes of type 1xx;</li><li><code>2xx</code>: Status codes of type 2xx;</li><li><code>3xx</code>: Status codes of type 3xx;</li><li><code>4xx</code>: Status codes of type 4xx;</li><li><code>5xx</code>: Status codes of type 5xx;</li><li>Integers within the range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>
+**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+                     * @param _filters Filter criteria. The detailed filter criteria are as follows:
+<ul><li><strong>domain</strong>: domain name requested by the client. If EdgeOne is connected via wildcard domain access, the data records the wildcard domain name rather than the specific domain name.</li><li><strong>originStatusCode</strong>: Origin status code. This filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>Options for the corresponding Value are as follows:<ul><li><code>1xx</code>: Status codes of type 1xx;</li><li><code>2xx</code>: Status codes of type 2xx;</li><li><code>3xx</code>: Status codes of type 3xx;</li><li><code>4xx</code>: Status codes of type 4xx;</li><li><code>5xx</code>: Status codes of type 5xx;</li><li>Integers within the range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>
+**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
                      * 
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
@@ -186,31 +202,19 @@ Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><c
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Query dimension name. Valid values:
-<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
-When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
-                     * @return DimensionName Query dimension name. Valid values:
-<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
-When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
+                     * 获取<p>Query dimension name. Valid values:</p><ul><li><strong>domain</strong>: Domain name requested by the client. If the domain is connected to EdgeOne as a wildcard domain, it is recorded as a wildcard domain in the data.<br>When using the domain dimension, you must include the <code>domain</code> filter item in <code>Filters</code>, and specify no more than 100 domain names to be queried in the list.</li><li><strong>origin-status-code</strong>: Origin-pull status codes, such as 200 and 404.<br>This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin-pull status code categories, such as 2xx and 4xx.<br>This dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is empty, data is aggregated by the <code>AppId</code> dimension by default, and only one set of data is returned.</p><p>If <code>DimensionName</code> is not empty, data is grouped by the specified query dimension and the corresponding time series data is returned. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li>In the returned data, <code>TimingDataRecords.TypeKey</code> is the specific origin-pull status code, such as 200.</li><li>In the returned data, <code>TimingDataRecords.TypeValue</code> is the time series data for this status code.</li></ul></ul>
+<strong>Note</strong>: Concurrent calls are forbidden when specifying DimensionName for queries. If the query frequency limit is exceeded, an error <code><strong>InvalidParameter.ActionInProgress</strong></code> will be returned.
+                     * @return DimensionName <p>Query dimension name. Valid values:</p><ul><li><strong>domain</strong>: Domain name requested by the client. If the domain is connected to EdgeOne as a wildcard domain, it is recorded as a wildcard domain in the data.<br>When using the domain dimension, you must include the <code>domain</code> filter item in <code>Filters</code>, and specify no more than 100 domain names to be queried in the list.</li><li><strong>origin-status-code</strong>: Origin-pull status codes, such as 200 and 404.<br>This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin-pull status code categories, such as 2xx and 4xx.<br>This dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is empty, data is aggregated by the <code>AppId</code> dimension by default, and only one set of data is returned.</p><p>If <code>DimensionName</code> is not empty, data is grouped by the specified query dimension and the corresponding time series data is returned. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li>In the returned data, <code>TimingDataRecords.TypeKey</code> is the specific origin-pull status code, such as 200.</li><li>In the returned data, <code>TimingDataRecords.TypeValue</code> is the time series data for this status code.</li></ul></ul>
+<strong>Note</strong>: Concurrent calls are forbidden when specifying DimensionName for queries. If the query frequency limit is exceeded, an error <code><strong>InvalidParameter.ActionInProgress</strong></code> will be returned.
                      * 
                      */
                     std::string GetDimensionName() const;
 
                     /**
-                     * 设置Query dimension name. Valid values:
-<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
-When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
-                     * @param _dimensionName Query dimension name. Valid values:
-<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
-When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
+                     * 设置<p>Query dimension name. Valid values:</p><ul><li><strong>domain</strong>: Domain name requested by the client. If the domain is connected to EdgeOne as a wildcard domain, it is recorded as a wildcard domain in the data.<br>When using the domain dimension, you must include the <code>domain</code> filter item in <code>Filters</code>, and specify no more than 100 domain names to be queried in the list.</li><li><strong>origin-status-code</strong>: Origin-pull status codes, such as 200 and 404.<br>This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin-pull status code categories, such as 2xx and 4xx.<br>This dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is empty, data is aggregated by the <code>AppId</code> dimension by default, and only one set of data is returned.</p><p>If <code>DimensionName</code> is not empty, data is grouped by the specified query dimension and the corresponding time series data is returned. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li>In the returned data, <code>TimingDataRecords.TypeKey</code> is the specific origin-pull status code, such as 200.</li><li>In the returned data, <code>TimingDataRecords.TypeValue</code> is the time series data for this status code.</li></ul></ul>
+<strong>Note</strong>: Concurrent calls are forbidden when specifying DimensionName for queries. If the query frequency limit is exceeded, an error <code><strong>InvalidParameter.ActionInProgress</strong></code> will be returned.
+                     * @param _dimensionName <p>Query dimension name. Valid values:</p><ul><li><strong>domain</strong>: Domain name requested by the client. If the domain is connected to EdgeOne as a wildcard domain, it is recorded as a wildcard domain in the data.<br>When using the domain dimension, you must include the <code>domain</code> filter item in <code>Filters</code>, and specify no more than 100 domain names to be queried in the list.</li><li><strong>origin-status-code</strong>: Origin-pull status codes, such as 200 and 404.<br>This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin-pull status code categories, such as 2xx and 4xx.<br>This dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is empty, data is aggregated by the <code>AppId</code> dimension by default, and only one set of data is returned.</p><p>If <code>DimensionName</code> is not empty, data is grouped by the specified query dimension and the corresponding time series data is returned. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li>In the returned data, <code>TimingDataRecords.TypeKey</code> is the specific origin-pull status code, such as 200.</li><li>In the returned data, <code>TimingDataRecords.TypeValue</code> is the time series data for this status code.</li></ul></ul>
+<strong>Note</strong>: Concurrent calls are forbidden when specifying DimensionName for queries. If the query frequency limit is exceeded, an error <code><strong>InvalidParameter.ActionInProgress</strong></code> will be returned.
                      * 
                      */
                     void SetDimensionName(const std::string& _dimensionName);
@@ -225,14 +229,18 @@ This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]<
                 private:
 
                     /**
-                     * Site ID set. This parameter is required. A maximum of 100 zone-ids can be imported. Use `*` to query data for all sites under the Tencent Cloud root account. Querying account-level data requires permissions for all site resources in this API.
+                     * Site ID set. This parameter is required. You can input up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permissions for all site resources of this interface.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
 
                     /**
                      * Metric list. Valid values:
-<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
+<ul><li>l7Flow_outFlux_hy: Request traffic from EdgeOne node to origin server direction, unit: Byte;</li>
+<li>l7Flow_outBandwidth_hy: Request bandwidth from EdgeOne node to origin server direction, unit: bps;</li>
+<li>l7Flow_request_hy: request count from EdgeOne node to origin server direction, unit: count.</li>
+<li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node, measurement unit: Byte;</li>
+<li>l7Flow_inBandwidth_hy: Response bandwidth from the origin to the EdgeOne node, unit: bps.</li></ul>
                      */
                     std::vector<std::string> m_metricNames;
                     bool m_metricNamesHasBeenSet;
@@ -251,25 +259,22 @@ This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]<
 
                     /**
                      * Time granularity of the query. Valid values:
-<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Filter criteria. Detailed filter criteria:
-<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
-Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+                     * Filter criteria. The detailed filter criteria are as follows:
+<ul><li><strong>domain</strong>: domain name requested by the client. If EdgeOne is connected via wildcard domain access, the data records the wildcard domain name rather than the specific domain name.</li><li><strong>originStatusCode</strong>: Origin status code. This filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>Options for the corresponding Value are as follows:<ul><li><code>1xx</code>: Status codes of type 1xx;</li><li><code>2xx</code>: Status codes of type 2xx;</li><li><code>3xx</code>: Status codes of type 3xx;</li><li><code>4xx</code>: Status codes of type 4xx;</li><li><code>5xx</code>: Status codes of type 5xx;</li><li>Integers within the range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>
+**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Query dimension name. Valid values:
-<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
-When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
-This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
+                     * <p>Query dimension name. Valid values:</p><ul><li><strong>domain</strong>: Domain name requested by the client. If the domain is connected to EdgeOne as a wildcard domain, it is recorded as a wildcard domain in the data.<br>When using the domain dimension, you must include the <code>domain</code> filter item in <code>Filters</code>, and specify no more than 100 domain names to be queried in the list.</li><li><strong>origin-status-code</strong>: Origin-pull status codes, such as 200 and 404.<br>This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin-pull status code categories, such as 2xx and 4xx.<br>This dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is empty, data is aggregated by the <code>AppId</code> dimension by default, and only one set of data is returned.</p><p>If <code>DimensionName</code> is not empty, data is grouped by the specified query dimension and the corresponding time series data is returned. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li>In the returned data, <code>TimingDataRecords.TypeKey</code> is the specific origin-pull status code, such as 200.</li><li>In the returned data, <code>TimingDataRecords.TypeValue</code> is the time series data for this status code.</li></ul></ul>
+<strong>Note</strong>: Concurrent calls are forbidden when specifying DimensionName for queries. If the query frequency limit is exceeded, an error <code><strong>InvalidParameter.ActionInProgress</strong></code> will be returned.
                      */
                     std::string m_dimensionName;
                     bool m_dimensionNameHasBeenSet;

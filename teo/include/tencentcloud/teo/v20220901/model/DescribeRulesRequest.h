@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site
-                     * @return ZoneId ID of the site
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site
-                     * @param _zoneId ID of the site
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,23 +65,19 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
-                     * @return Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+                     * 获取Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
+                     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
-                     * @param _filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+                     * 设置Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
+                     * @param _filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -96,15 +92,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+                     * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

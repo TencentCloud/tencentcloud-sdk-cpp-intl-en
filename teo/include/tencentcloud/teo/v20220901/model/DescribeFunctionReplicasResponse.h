@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Edge function replica list.
-                     * @return FunctionReplicas Edge function replica list.
+                     * 获取List of edge function replicas.
+                     * @return FunctionReplicas List of edge function replicas.
                      * 
                      */
                     std::vector<FunctionReplica> GetFunctionReplicas() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Edge function replica list.
+                     * List of edge function replicas.
                      */
                     std::vector<FunctionReplica> m_functionReplicas;
                     bool m_functionReplicasHasBeenSet;

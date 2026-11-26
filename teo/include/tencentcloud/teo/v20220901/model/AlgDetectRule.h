@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Active bot detection rule.
+                * Bot active feature detection rule.
                 */
                 class AlgDetectRule : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the rule.
-                     * @return RuleID ID of the rule.
+                     * 获取Rule id.
+                     * @return RuleID Rule id.
                      * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置ID of the rule.
-                     * @param _ruleID ID of the rule.
+                     * 设置Rule id.
+                     * @param _ruleID Rule id.
                      * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Name of the rule.
-                     * @return RuleName Name of the rule.
+                     * 获取Rule name.
+                     * @return RuleName Rule name.
                      * 
                      */
                     std::string GetRuleName() const;
 
                     /**
-                     * 设置Name of the rule.
-                     * @param _ruleName Name of the rule.
+                     * 设置Rule name.
+                     * @param _ruleName Rule name.
                      * 
                      */
                     void SetRuleName(const std::string& _ruleName);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the rule.
-                     * @return Switch Whether to enable the rule.
+                     * 获取Rule switch.
+                     * @return Switch Rule switch.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable the rule.
-                     * @param _switch Whether to enable the rule.
+                     * 设置Rule switch.
+                     * @param _switch Rule switch.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Condition specified for the rule.
-                     * @return AlgConditions Condition specified for the rule.
+                     * 获取Custom rule.
+                     * @return AlgConditions Custom rule.
                      * 
                      */
                     std::vector<AclCondition> GetAlgConditions() const;
 
                     /**
-                     * 设置Condition specified for the rule.
-                     * @param _algConditions Condition specified for the rule.
+                     * 设置Custom rule.
+                     * @param _algConditions Custom rule.
                      * 
                      */
                     void SetAlgConditions(const std::vector<AclCondition>& _algConditions);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool AlgConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Checksum of the Cookie and behavior analysis of the session.
-                     * @return AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
+                     * 获取Cookie checksum and session behavior analysis.
+                     * @return AlgDetectSession Cookie checksum and session behavior analysis.
                      * 
                      */
                     AlgDetectSession GetAlgDetectSession() const;
 
                     /**
-                     * 设置Checksum of the Cookie and behavior analysis of the session.
-                     * @param _algDetectSession Checksum of the Cookie and behavior analysis of the session.
+                     * 设置Cookie checksum and session behavior analysis.
+                     * @param _algDetectSession Cookie checksum and session behavior analysis.
                      * 
                      */
                     void SetAlgDetectSession(const AlgDetectSession& _algDetectSession);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool AlgDetectSessionHasBeenSet() const;
 
                     /**
-                     * 获取Validate client behavior when the condition is satisfied.
-                     * @return AlgDetectJS Validate client behavior when the condition is satisfied.
+                     * 获取Client behavior validation.
+                     * @return AlgDetectJS Client behavior validation.
                      * 
                      */
                     std::vector<AlgDetectJS> GetAlgDetectJS() const;
 
                     /**
-                     * 设置Validate client behavior when the condition is satisfied.
-                     * @param _algDetectJS Validate client behavior when the condition is satisfied.
+                     * 设置Client behavior validation.
+                     * @param _algDetectJS Client behavior validation.
                      * 
                      */
                     void SetAlgDetectJS(const std::vector<AlgDetectJS>& _algDetectJS);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool AlgDetectJSHasBeenSet() const;
 
                     /**
-                     * 获取The update time, which is only used as an output parameter.
-                     * @return UpdateTime The update time, which is only used as an output parameter.
+                     * 获取Update time. For output usage only.
+                     * @return UpdateTime Update time. For output usage only.
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time, which is only used as an output parameter.
-                     * @param _updateTime The update time, which is only used as an output parameter.
+                     * 设置Update time. For output usage only.
+                     * @param _updateTime Update time. For output usage only.
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -199,43 +199,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the rule.
+                     * Rule id.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * Name of the rule.
+                     * Rule name.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Whether to enable the rule.
+                     * Rule switch.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Condition specified for the rule.
+                     * Custom rule.
                      */
                     std::vector<AclCondition> m_algConditions;
                     bool m_algConditionsHasBeenSet;
 
                     /**
-                     * Checksum of the Cookie and behavior analysis of the session.
+                     * Cookie checksum and session behavior analysis.
                      */
                     AlgDetectSession m_algDetectSession;
                     bool m_algDetectSessionHasBeenSet;
 
                     /**
-                     * Validate client behavior when the condition is satisfied.
+                     * Client behavior validation.
                      */
                     std::vector<AlgDetectJS> m_algDetectJS;
                     bool m_algDetectJSHasBeenSet;
 
                     /**
-                     * The update time, which is only used as an output parameter.
+                     * Update time. For output usage only.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

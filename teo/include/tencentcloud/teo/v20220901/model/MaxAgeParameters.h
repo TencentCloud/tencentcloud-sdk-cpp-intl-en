@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Browser Cache TTL configuration parameters
+                * Browser cache TTL config.
                 */
                 class MaxAgeParameters : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
-                     * @return FollowOrigin Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+                     * 获取Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
+                     * @return FollowOrigin Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
                      * 
                      */
                     std::string GetFollowOrigin() const;
 
                     /**
-                     * 设置Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
-                     * @param _followOrigin Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+                     * 设置Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
+                     * @param _followOrigin Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
                      * 
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool FollowOriginHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
-                     * @return CacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+                     * 获取Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
+                     * @return CacheTime Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
                      * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
-                     * 设置Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
-                     * @param _cacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+                     * 设置Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
+                     * @param _cacheTime Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
                      * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
@@ -99,15 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+                     * Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
                      */
                     std::string m_followOrigin;
                     bool m_followOriginHasBeenSet;
 
                     /**
-                     * Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+                     * Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
                      */
                     int64_t m_cacheTime;
                     bool m_cacheTimeHasBeenSet;

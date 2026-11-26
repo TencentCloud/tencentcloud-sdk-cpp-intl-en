@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The total count of forwarding rules.
-                     * @return TotalCount The total count of forwarding rules.
+                     * 获取Total number of forwarding rules.
+                     * @return TotalCount Total number of forwarding rules.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of forwarding rules.	
-                     * @return L4ProxyRules List of forwarding rules.	
+                     * 获取Forwarding rule list.	
+                     * @return L4ProxyRules Forwarding rule list.	
                      * 
                      */
                     std::vector<L4ProxyRule> GetL4ProxyRules() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The total count of forwarding rules.
+                     * Total number of forwarding rules.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of forwarding rules.	
+                     * Forwarding rule list.	
                      */
                     std::vector<L4ProxyRule> m_l4ProxyRules;
                     bool m_l4ProxyRulesHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The Top-ranked data
+                * TopN Entry data
                 */
                 class TopEntry : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The query dimension value.
-                     * @return Key The query dimension value.
+                     * 获取top query dimension value.
+                     * @return Key top query dimension value.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置The query dimension value.
-                     * @param _key The query dimension value.
+                     * 设置top query dimension value.
+                     * @param _key top query dimension value.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取The details.
-                     * @return Value The details.
+                     * 获取Query specific data.
+                     * @return Value Query specific data.
                      * 
                      */
                     std::vector<TopEntryValue> GetValue() const;
 
                     /**
-                     * 设置The details.
-                     * @param _value The details.
+                     * 设置Query specific data.
+                     * @param _value Query specific data.
                      * 
                      */
                     void SetValue(const std::vector<TopEntryValue>& _value);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The query dimension value.
+                     * top query dimension value.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * The details.
+                     * Query specific data.
                      */
                     std::vector<TopEntryValue> m_value;
                     bool m_valueHasBeenSet;

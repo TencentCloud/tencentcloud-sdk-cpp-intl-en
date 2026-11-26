@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Encoding format for audio streams. optional values:.
+                     * 获取Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
-                     * @return Codec Encoding format for audio streams. optional values:.
+                     * @return Codec Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Encoding format for audio streams. optional values:.
+                     * 设置Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
-                     * @param _codec Encoding format for audio streams. optional values:.
+                     * @param _codec Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
                      * 
                      */
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
-                     * @return AudioChannel Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+                     * 获取Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
+                     * @return AudioChannel Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
                      * 
                      */
                     uint64_t GetAudioChannel() const;
 
                     /**
-                     * 设置Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
-                     * @param _audioChannel Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+                     * 设置Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
+                     * @param _audioChannel Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
                      * 
                      */
                     void SetAudioChannel(const uint64_t& _audioChannel);
@@ -95,14 +95,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Encoding format for audio streams. optional values:.
+                     * Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+                     * Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
                      */
                     uint64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Log analytics log download task.
+                * Log analysis log download task.
                 */
                 class LogAnalysisDownloadTask : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Site ID.</p>
-                     * @return ZoneId <p>Site ID.</p>
+                     * 获取<p>Zone ID.</p>
+                     * @return ZoneId <p>Zone ID.</p>
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置<p>Site ID.</p>
-                     * @param _zoneId <p>Site ID.</p>
+                     * 设置<p>Zone ID.</p>
+                     * @param _zoneId <p>Zone ID.</p>
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取<p>Start time, example value: 2020-04-29T00:00:00Z.</p>
-                     * @return StartTime <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+                     * 获取<p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
+                     * @return StartTime <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置<p>Start time, example value: 2020-04-29T00:00:00Z.</p>
-                     * @param _startTime <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+                     * 设置<p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
+                     * @param _startTime <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
-                     * @return LogType <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+                     * 获取<p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
+                     * @return LogType <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置<p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
-                     * @param _logType <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+                     * 设置<p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
+                     * @param _logType <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
-                     * @return Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+                     * 获取<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+                     * @return Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
                      * 
                      */
                     std::string GetCondition() const;
 
                     /**
-                     * 设置<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
-                     * @param _condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+                     * 设置<p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+                     * @param _condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
                      * 
                      */
                     void SetCondition(const std::string& _condition);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ConditionHasBeenSet() const;
 
                     /**
-                     * 获取<p>File format, valid values:</p><ul><li>csv.</li></ul>
-                     * @return Format <p>File format, valid values:</p><ul><li>csv.</li></ul>
+                     * 获取<p>File format. Valid values:</p><ul><li>csv.</li></ul>
+                     * @return Format <p>File format. Valid values:</p><ul><li>csv.</li></ul>
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置<p>File format, valid values:</p><ul><li>csv.</li></ul>
-                     * @param _format <p>File format, valid values:</p><ul><li>csv.</li></ul>
+                     * 设置<p>File format. Valid values:</p><ul><li>csv.</li></ul>
+                     * @param _format <p>File format. Valid values:</p><ul><li>csv.</li></ul>
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
-                     * @return Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+                     * 获取<p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
+                     * @return Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
                      * 
                      */
                     std::string GetSort() const;
 
                     /**
-                     * 设置<p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
-                     * @param _sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+                     * 设置<p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
+                     * @param _sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
                      * 
                      */
                     void SetSort(const std::string& _sort);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool SortHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
-                     * @return Status <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+                     * 获取<p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
+                     * @return Status <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
-                     * @param _status <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+                     * 设置<p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
+                     * @param _status <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task creation time. After successful task creation, the retention period is 3 days.</p>
-                     * @return CreateTime <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+                     * 获取<p>Task creation time. It will be retained for 3 days after successful task creation.</p>
+                     * @return CreateTime <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Task creation time. After successful task creation, the retention period is 3 days.</p>
-                     * @param _createTime <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+                     * 设置<p>Task creation time. It will be retained for 3 days after successful task creation.</p>
+                     * @param _createTime <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Download link, only returned when Status = completed.</p>
-                     * @return Url <p>Download link, only returned when Status = completed.</p>
+                     * 获取<p>Download URL. It is returned only when Status = completed.</p>
+                     * @return Url <p>Download URL. It is returned only when Status = completed.</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>Download link, only returned when Status = completed.</p>
-                     * @param _url <p>Download link, only returned when Status = completed.</p>
+                     * 设置<p>Download URL. It is returned only when Status = completed.</p>
+                     * @param _url <p>Download URL. It is returned only when Status = completed.</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
-                     * @return ExpireTime <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+                     * 获取<p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
+                     * @return ExpireTime <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置<p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
-                     * @param _expireTime <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+                     * 设置<p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
+                     * @param _expireTime <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -328,7 +328,7 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Site ID.</p>
+                     * <p>Zone ID.</p>
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
@@ -340,7 +340,7 @@ namespace TencentCloud
                     bool m_areaHasBeenSet;
 
                     /**
-                     * <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+                     * <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -352,49 +352,49 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+                     * <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+                     * <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
                      */
                     std::string m_condition;
                     bool m_conditionHasBeenSet;
 
                     /**
-                     * <p>File format, valid values:</p><ul><li>csv.</li></ul>
+                     * <p>File format. Valid values:</p><ul><li>csv.</li></ul>
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+                     * <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
                      */
                     std::string m_sort;
                     bool m_sortHasBeenSet;
 
                     /**
-                     * <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+                     * <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+                     * <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Download link, only returned when Status = completed.</p>
+                     * <p>Download URL. It is returned only when Status = completed.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+                     * <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

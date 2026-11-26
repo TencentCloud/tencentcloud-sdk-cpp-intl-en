@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool FunctionIdHasBeenSet() const;
 
                     /**
-                     * 获取Edge function copy name that needs to be modified.
-                     * @return ReplicaName Edge function copy name that needs to be modified.
+                     * 获取Name of the edge function copy that needs to be modified.
+                     * @return ReplicaName Name of the edge function copy that needs to be modified.
                      * 
                      */
                     std::string GetReplicaName() const;
 
                     /**
-                     * 设置Edge function copy name that needs to be modified.
-                     * @param _replicaName Edge function copy name that needs to be modified.
+                     * 设置Name of the edge function copy that needs to be modified.
+                     * @param _replicaName Name of the edge function copy that needs to be modified.
                      * 
                      */
                     void SetReplicaName(const std::string& _replicaName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ReplicaNameHasBeenSet() const;
 
                     /**
-                     * 获取Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
-                     * @return Content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+                     * 获取Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
+                     * @return Content Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
-                     * @param _content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+                     * 设置Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
+                     * @param _content Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Edge function replica description. Supports up to 50 characters.
-                     * @return Remark Edge function replica description. Supports up to 50 characters.
+                     * 获取Description of the edge function copy. It can contain up to 50 characters.
+                     * @return Remark Description of the edge function copy. It can contain up to 50 characters.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Edge function replica description. Supports up to 50 characters.
-                     * @param _remark Edge function replica description. Supports up to 50 characters.
+                     * 设置Description of the edge function copy. It can contain up to 50 characters.
+                     * @param _remark Description of the edge function copy. It can contain up to 50 characters.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -162,19 +162,19 @@ namespace TencentCloud
                     bool m_functionIdHasBeenSet;
 
                     /**
-                     * Edge function copy name that needs to be modified.
+                     * Name of the edge function copy that needs to be modified.
                      */
                     std::string m_replicaName;
                     bool m_replicaNameHasBeenSet;
 
                     /**
-                     * Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+                     * Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Edge function replica description. Supports up to 50 characters.
+                     * Description of the edge function copy. It can contain up to 50 characters.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

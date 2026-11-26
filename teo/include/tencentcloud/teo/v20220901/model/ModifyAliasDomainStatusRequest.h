@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,23 +64,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
-                     * @return Paused Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
+                     * 获取Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
+                     * @return Paused Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
                      * 
                      */
                     bool GetPaused() const;
 
                     /**
-                     * 设置Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
-                     * @param _paused Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
+                     * 设置Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
+                     * @param _paused Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
                      * 
                      */
                     void SetPaused(const bool& _paused);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool PausedHasBeenSet() const;
 
                     /**
-                     * 获取The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
-                     * @return AliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+                     * 获取Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
+                     * @return AliasNames Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
                      * 
                      */
                     std::vector<std::string> GetAliasNames() const;
 
                     /**
-                     * 设置The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
-                     * @param _aliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+                     * 设置Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
+                     * @param _aliasNames Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
                      * 
                      */
                     void SetAliasNames(const std::vector<std::string>& _aliasNames);
@@ -116,21 +116,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
+                     * Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
                      */
                     bool m_paused;
                     bool m_pausedHasBeenSet;
 
                     /**
-                     * The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+                     * Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
                      */
                     std::vector<std::string> m_aliasNames;
                     bool m_aliasNamesHasBeenSet;

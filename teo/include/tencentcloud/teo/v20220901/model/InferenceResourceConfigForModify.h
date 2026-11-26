@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/teo/v20220901/model/InferenceAutoScalingConfig.h>
 #include <tencentcloud/teo/v20220901/model/InferenceManualInstanceConfig.h>
+#include <tencentcloud/teo/v20220901/model/InferenceHardwareConfigForModify.h>
 
 
 namespace TencentCloud
@@ -49,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
-                     * @return ScalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+                     * 获取<p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+                     * @return ScalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
                      * 
                      */
                     std::string GetScalingMode() const;
 
                     /**
-                     * 设置Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
-                     * @param _scalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+                     * 设置<p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+                     * @param _scalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
                      * 
                      */
                     void SetScalingMode(const std::string& _scalingMode);
@@ -70,15 +71,15 @@ namespace TencentCloud
                     bool ScalingModeHasBeenSet() const;
 
                     /**
-                     * 获取Inference service auto scaling configuration. Required when ScalingMode is Auto.
-                     * @return AutoScalingConfig Inference service auto scaling configuration. Required when ScalingMode is Auto.
+                     * 获取<p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
+                     * @return AutoScalingConfig <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
                      * 
                      */
                     InferenceAutoScalingConfig GetAutoScalingConfig() const;
 
                     /**
-                     * 设置Inference service auto scaling configuration. Required when ScalingMode is Auto.
-                     * @param _autoScalingConfig Inference service auto scaling configuration. Required when ScalingMode is Auto.
+                     * 设置<p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
+                     * @param _autoScalingConfig <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
                      * 
                      */
                     void SetAutoScalingConfig(const InferenceAutoScalingConfig& _autoScalingConfig);
@@ -91,15 +92,15 @@ namespace TencentCloud
                     bool AutoScalingConfigHasBeenSet() const;
 
                     /**
-                     * 获取Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-                     * @return ManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+                     * 获取<p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+                     * @return ManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
                      * 
                      */
                     InferenceManualInstanceConfig GetManualInstanceConfig() const;
 
                     /**
-                     * 设置Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-                     * @param _manualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+                     * 设置<p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+                     * @param _manualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
                      * 
                      */
                     void SetManualInstanceConfig(const InferenceManualInstanceConfig& _manualInstanceConfig);
@@ -112,15 +113,15 @@ namespace TencentCloud
                     bool ManualInstanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取Concurrency of a single instance. Default value is 1.
-                     * @return Concurrency Concurrency of a single instance. Default value is 1.
+                     * 获取<p>Concurrency of a single instance. Default value: 1.</p>
+                     * @return Concurrency <p>Concurrency of a single instance. Default value: 1.</p>
                      * 
                      */
                     int64_t GetConcurrency() const;
 
                     /**
-                     * 设置Concurrency of a single instance. Default value is 1.
-                     * @param _concurrency Concurrency of a single instance. Default value is 1.
+                     * 设置<p>Concurrency of a single instance. Default value: 1.</p>
+                     * @param _concurrency <p>Concurrency of a single instance. Default value: 1.</p>
                      * 
                      */
                     void SetConcurrency(const int64_t& _concurrency);
@@ -132,31 +133,58 @@ namespace TencentCloud
                      */
                     bool ConcurrencyHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Hardware resource configuration of the inference service.</p>
+                     * @return HardwareConfig <p>Hardware resource configuration of the inference service.</p>
+                     * 
+                     */
+                    InferenceHardwareConfigForModify GetHardwareConfig() const;
+
+                    /**
+                     * 设置<p>Hardware resource configuration of the inference service.</p>
+                     * @param _hardwareConfig <p>Hardware resource configuration of the inference service.</p>
+                     * 
+                     */
+                    void SetHardwareConfig(const InferenceHardwareConfigForModify& _hardwareConfig);
+
+                    /**
+                     * 判断参数 HardwareConfig 是否已赋值
+                     * @return HardwareConfig 是否已赋值
+                     * 
+                     */
+                    bool HardwareConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+                     * <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
                      */
                     std::string m_scalingMode;
                     bool m_scalingModeHasBeenSet;
 
                     /**
-                     * Inference service auto scaling configuration. Required when ScalingMode is Auto.
+                     * <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
                      */
                     InferenceAutoScalingConfig m_autoScalingConfig;
                     bool m_autoScalingConfigHasBeenSet;
 
                     /**
-                     * Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+                     * <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
                      */
                     InferenceManualInstanceConfig m_manualInstanceConfig;
                     bool m_manualInstanceConfigHasBeenSet;
 
                     /**
-                     * Concurrency of a single instance. Default value is 1.
+                     * <p>Concurrency of a single instance. Default value: 1.</p>
                      */
                     int64_t m_concurrency;
                     bool m_concurrencyHasBeenSet;
+
+                    /**
+                     * <p>Hardware resource configuration of the inference service.</p>
+                     */
+                    InferenceHardwareConfigForModify m_hardwareConfig;
+                    bool m_hardwareConfigHasBeenSet;
 
                 };
             }

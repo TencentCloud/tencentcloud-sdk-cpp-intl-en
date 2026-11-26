@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of shared CNAMEs that meet filtering criteria.
-                     * @return TotalCount Total number of shared CNAMEs that meet filtering criteria.
+                     * 获取Total count of shared CNAMEs that meet the filtering criteria.
+                     * @return TotalCount Total count of shared CNAMEs that meet the filtering criteria.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Shared CNAME table detail.
-                     * @return SharedCNAMEInfo Shared CNAME table detail.
+                     * 获取List of shared CNAMEs.
+                     * @return SharedCNAMEInfo List of shared CNAMEs.
                      * 
                      */
                     std::vector<SharedCNAMEInfo> GetSharedCNAMEInfo() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of shared CNAMEs that meet filtering criteria.
+                     * Total count of shared CNAMEs that meet the filtering criteria.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Shared CNAME table detail.
+                     * List of shared CNAMEs.
                      */
                     std::vector<SharedCNAMEInfo> m_sharedCNAMEInfo;
                     bool m_sharedCNAMEInfoHasBeenSet;

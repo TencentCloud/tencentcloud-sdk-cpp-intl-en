@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CNAME access type site parameter description.
+                * Details of the site parameters for the CNAME access type.
                 */
                 class CNAMEDetail : public AbstractModel
                 {
@@ -48,26 +48,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * 获取Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-                     * @return IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * @return IsFake Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
                      * 
                      */
                     int64_t GetIsFake() const;
 
                     /**
-                     * 设置Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * 设置Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-                     * @param _isFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * @param _isFake Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
                      * 
                      */
@@ -81,15 +81,15 @@ namespace TencentCloud
                     bool IsFakeHasBeenSet() const;
 
                     /**
-                     * 获取Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
-                     * @return OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * 获取Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * @return OwnershipVerification Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
                      * 
                      */
                     OwnershipVerification GetOwnershipVerification() const;
 
                     /**
-                     * 设置Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
-                     * @param _ownershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * 设置Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * @param _ownershipVerification Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
                      * 
                      */
                     void SetOwnershipVerification(const OwnershipVerification& _ownershipVerification);
@@ -104,16 +104,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+                     * Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
                      */
                     int64_t m_isFake;
                     bool m_isFakeHasBeenSet;
 
                     /**
-                     * Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+                     * Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
                      */
                     OwnershipVerification m_ownershipVerification;
                     bool m_ownershipVerificationHasBeenSet;

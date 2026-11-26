@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset for paginated queries. Default value: 0. Minimum value: 0.
-                     * @return Offset Offset for paginated queries. Default value: 0. Minimum value: 0.
+                     * 获取The offset of paginated query. Default value: 0, minimum value: 0.
+                     * @return Offset The offset of paginated query. Default value: 0, minimum value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset for paginated queries. Default value: 0. Minimum value: 0.
-                     * @param _offset Offset for paginated queries. Default value: 0. Minimum value: 0.
+                     * 设置The offset of paginated query. Default value: 0, minimum value: 0.
+                     * @param _offset The offset of paginated query. Default value: 0, minimum value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paginated queries. Default value: 100. Maximum value: 1000.
-                     * @return Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+                     * 获取Paginated query limit. Default value: 100. Maximum value: 1000.
+                     * @return Limit Paginated query limit. Default value: 100. Maximum value: 1000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paginated queries. Default value: 100. Maximum value: 1000.
-                     * @param _limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+                     * 设置Paginated query limit. Default value: 100. Maximum value: 1000.
+                     * @param _limit Paginated query limit. Default value: 100. Maximum value: 1000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,15 +107,19 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
-                     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+                     * 获取Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
+                     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
                      * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
-                     * @param _filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+                     * 设置Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
+                     * @param _filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
                      * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
@@ -130,25 +134,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Offset for paginated queries. Default value: 0. Minimum value: 0.
+                     * The offset of paginated query. Default value: 0, minimum value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paginated queries. Default value: 100. Maximum value: 1000.
+                     * Paginated query limit. Default value: 100. Maximum value: 1000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+                     * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

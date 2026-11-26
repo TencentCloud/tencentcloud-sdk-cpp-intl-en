@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The page offset. Default value: 0
-                     * @return Offset The page offset. Default value: 0
+                     * 获取The offset of paginated query. Default value: 0.
+                     * @return Offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置The page offset. Default value: 0
-                     * @param _offset The page offset. Default value: 0
+                     * 设置The offset of paginated query. Default value: 0.
+                     * @param _offset The offset of paginated query. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The paginated query limit. Default value: 20. Maximum value: 1000.
-                     * @return Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 获取The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The paginated query limit. Default value: 20. Maximum value: 1000.
-                     * @param _limit The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 设置The limit of paginated query. Default value: 20. Maximum value: 1,000.
+                     * @param _limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -107,10 +107,10 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+                     * 获取Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
-                     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+                     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
                      * 
@@ -118,10 +118,10 @@ namespace TencentCloud
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+                     * 设置Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
-                     * @param _filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+                     * @param _filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
                      * 
@@ -138,25 +138,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The page offset. Default value: 0
+                     * The offset of paginated query. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * The limit of paginated query. Default value: 20. Maximum value: 1,000.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+                     * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
                      */

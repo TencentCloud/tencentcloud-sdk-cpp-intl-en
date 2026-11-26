@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Multi-Channel security gateway details.
+                * Multi-channel security gateway details
                 */
                 class MultiPathGateway : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the gateway ID.
-                     * @return GatewayId Specifies the gateway ID.
+                     * 获取Gateway ID.
+                     * @return GatewayId Gateway ID.
                      * 
                      */
                     std::string GetGatewayId() const;
 
                     /**
-                     * 设置Specifies the gateway ID.
-                     * @param _gatewayId Specifies the gateway ID.
+                     * 设置Gateway ID.
+                     * @param _gatewayId Gateway ID.
                      * 
                      */
                     void SetGatewayId(const std::string& _gatewayId);
@@ -90,23 +90,23 @@ namespace TencentCloud
                     bool GatewayNameHasBeenSet() const;
 
                     /**
-                     * 获取Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
-                     * @return GatewayType Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
+                     * 获取Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
+                     * @return GatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
                      * 
                      */
                     std::string GetGatewayType() const;
 
                     /**
-                     * 设置Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
-                     * @param _gatewayType Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
+                     * 设置Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
+                     * @param _gatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
                      * 
                      */
                     void SetGatewayType(const std::string& _gatewayType);
@@ -119,15 +119,15 @@ namespace TencentCloud
                     bool GatewayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Gateway port. value range: 1-65535 (excluding 8888).
-                     * @return GatewayPort Gateway port. value range: 1-65535 (excluding 8888).
+                     * 获取Gateway port. Range: 1–65535 (excluding 8888).
+                     * @return GatewayPort Gateway port. Range: 1–65535 (excluding 8888).
                      * 
                      */
                     int64_t GetGatewayPort() const;
 
                     /**
-                     * 设置Gateway port. value range: 1-65535 (excluding 8888).
-                     * @param _gatewayPort Gateway port. value range: 1-65535 (excluding 8888).
+                     * 设置Gateway port. Range: 1–65535 (excluding 8888).
+                     * @param _gatewayPort Gateway port. Range: 1–65535 (excluding 8888).
                      * 
                      */
                     void SetGatewayPort(const int64_t& _gatewayPort);
@@ -140,31 +140,31 @@ namespace TencentCloud
                     bool GatewayPortHasBeenSet() const;
 
                     /**
-                     * 获取Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
-                     * @return Status Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
+                     * 获取Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
+                     * @return Status Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
-                     * @param _status Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
+                     * 设置Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
+                     * @param _status Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Gateway IP, in IPv4 format.
-                     * @return GatewayIP Gateway IP, in IPv4 format.
+                     * 获取Gateway IP in IPv4 format.
+                     * @return GatewayIP Gateway IP in IPv4 format.
                      * 
                      */
                     std::string GetGatewayIP() const;
 
                     /**
-                     * 设置Gateway IP, in IPv4 format.
-                     * @param _gatewayIP Gateway IP, in IPv4 format.
+                     * 设置Gateway IP in IPv4 format.
+                     * @param _gatewayIP Gateway IP in IPv4 format.
                      * 
                      */
                     void SetGatewayIP(const std::string& _gatewayIP);
@@ -198,15 +198,15 @@ namespace TencentCloud
                     bool GatewayIPHasBeenSet() const;
 
                     /**
-                     * 获取Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
-                     * @return RegionId Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+                     * 获取Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
+                     * @return RegionId Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
                      * 
                      */
                     std::string GetRegionId() const;
 
                     /**
-                     * 设置Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
-                     * @param _regionId Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+                     * 设置Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
+                     * @param _regionId Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
                      * 
                      */
                     void SetRegionId(const std::string& _regionId);
@@ -219,15 +219,15 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
-                     * @return Lines Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+                     * 获取Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
+                     * @return Lines Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
                      * 
                      */
                     std::vector<MultiPathGatewayLine> GetLines() const;
 
                     /**
-                     * 设置Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
-                     * @param _lines Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+                     * 设置Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
+                     * @param _lines Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
                      * 
                      */
                     void SetLines(const std::vector<MultiPathGatewayLine>& _lines);
@@ -240,15 +240,15 @@ namespace TencentCloud
                     bool LinesHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
-                     * @return NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     * 获取Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
+                     * @return NeedConfirm Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
                      * 
                      */
                     std::string GetNeedConfirm() const;
 
                     /**
-                     * 设置Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
-                     * @param _needConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     * 设置Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
+                     * @param _needConfirm Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
                      * 
                      */
                     void SetNeedConfirm(const std::string& _needConfirm);
@@ -263,7 +263,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the gateway ID.
+                     * Gateway ID.
                      */
                     std::string m_gatewayId;
                     bool m_gatewayIdHasBeenSet;
@@ -275,49 +275,49 @@ namespace TencentCloud
                     bool m_gatewayNameHasBeenSet;
 
                     /**
-                     * Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
+                     * Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
                      */
                     std::string m_gatewayType;
                     bool m_gatewayTypeHasBeenSet;
 
                     /**
-                     * Gateway port. value range: 1-65535 (excluding 8888).
+                     * Gateway port. Range: 1–65535 (excluding 8888).
                      */
                     int64_t m_gatewayPort;
                     bool m_gatewayPortHasBeenSet;
 
                     /**
-                     * Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
+                     * Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Gateway IP, in IPv4 format.
+                     * Gateway IP in IPv4 format.
                      */
                     std::string m_gatewayIP;
                     bool m_gatewayIPHasBeenSet;
 
                     /**
-                     * Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+                     * Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
                      */
                     std::string m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+                     * Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
                      */
                     std::vector<MultiPathGatewayLine> m_lines;
                     bool m_linesHasBeenSet;
 
                     /**
-                     * Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+                     * Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
                      */
                     std::string m_needConfirm;
                     bool m_needConfirmHasBeenSet;

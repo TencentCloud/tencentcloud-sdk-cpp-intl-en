@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Zone id.
-                     * @return ZoneId Zone id.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Zone id.
-                     * @param _zoneId Zone id.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,10 +65,10 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+                     * 获取Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
-                     * @return ZoneConfig Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+                     * @return ZoneConfig Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
                      * 
@@ -76,10 +76,10 @@ namespace TencentCloud
                     ZoneConfig GetZoneConfig() const;
 
                     /**
-                     * 设置Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+                     * 设置Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
-                     * @param _zoneConfig Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+                     * @param _zoneConfig Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
                      * 
@@ -96,13 +96,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Zone id.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+                     * Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
                      */

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instances that require configuration origin ACLs.
+                * Instances that need to be configured for origin-pull from specific origin IP ranges.
                 */
                 class OriginACLEntity : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
                      * @return Type Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
                      * @param _type Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -76,23 +76,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
-                     * @return Instances Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
+                     * 获取Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
+                     * @return Instances Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
                      * 
                      */
                     std::vector<std::string> GetInstances() const;
 
                     /**
-                     * 设置Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
-                     * @param _instances Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
+                     * 设置Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
+                     * @param _instances Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
                      * 
                      */
                     void SetInstances(const std::vector<std::string>& _instances);
@@ -105,23 +105,23 @@ namespace TencentCloud
                     bool InstancesHasBeenSet() const;
 
                     /**
-                     * 获取Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
-                     * @return OperationMode Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+                     * 获取Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
+                     * @return OperationMode Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
                      * 
                      */
                     std::string GetOperationMode() const;
 
                     /**
-                     * 设置Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
-                     * @param _operationMode Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+                     * 设置Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
+                     * @param _operationMode Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
                      * 
                      */
                     void SetOperationMode(const std::string& _operationMode);
@@ -137,24 +137,24 @@ namespace TencentCloud
 
                     /**
                      * Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
+                     * Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
                      */
                     std::vector<std::string> m_instances;
                     bool m_instancesHasBeenSet;
 
                     /**
-                     * Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+                     * Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
                      */
                     std::string m_operationMode;
                     bool m_operationModeHasBeenSet;

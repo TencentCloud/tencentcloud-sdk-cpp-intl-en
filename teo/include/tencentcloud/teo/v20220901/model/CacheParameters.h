@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Node Cache TTL configuration parameters
+                * Node cache TTL config.
                 */
                 class CacheParameters : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
-                     * @return FollowOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+                     * 获取Cache follows the origin site. Leave unset means this configuration is not set. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
+                     * @return FollowOrigin Cache follows the origin site. Leave unset means this configuration is not set. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      * 
                      */
                     FollowOrigin GetFollowOrigin() const;
 
                     /**
-                     * 设置Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
-                     * @param _followOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+                     * 设置Cache follows the origin site. Leave unset means this configuration is not set. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
+                     * @param _followOrigin Cache follows the origin site. Leave unset means this configuration is not set. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      * 
                      */
                     void SetFollowOrigin(const FollowOrigin& _followOrigin);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool FollowOriginHasBeenSet() const;
 
                     /**
-                     * 获取No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
-                     * @return NoCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+                     * 获取No cache. If left empty, this configuration is not set. Among FollowOrigin, NoCache, and CustomTime, only one can have Switch set to on.
+                     * @return NoCache No cache. If left empty, this configuration is not set. Among FollowOrigin, NoCache, and CustomTime, only one can have Switch set to on.
                      * 
                      */
                     NoCache GetNoCache() const;
 
                     /**
-                     * 设置No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
-                     * @param _noCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+                     * 设置No cache. If left empty, this configuration is not set. Among FollowOrigin, NoCache, and CustomTime, only one can have Switch set to on.
+                     * @param _noCache No cache. If left empty, this configuration is not set. Among FollowOrigin, NoCache, and CustomTime, only one can have Switch set to on.
                      * 
                      */
                     void SetNoCache(const NoCache& _noCache);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool NoCacheHasBeenSet() const;
 
                     /**
-                     * 获取Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
-                     * @return CustomTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+                     * 获取Custom cache time. Leave it unset means this configuration is not set. A maximum of one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
+                     * @return CustomTime Custom cache time. Leave it unset means this configuration is not set. A maximum of one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      * 
                      */
                     CustomTime GetCustomTime() const;
 
                     /**
-                     * 设置Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
-                     * @param _customTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+                     * 设置Custom cache time. Leave it unset means this configuration is not set. A maximum of one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
+                     * @param _customTime Custom cache time. Leave it unset means this configuration is not set. A maximum of one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      * 
                      */
                     void SetCustomTime(const CustomTime& _customTime);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+                     * Cache follows the origin site. Leave unset means this configuration is not set. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      */
                     FollowOrigin m_followOrigin;
                     bool m_followOriginHasBeenSet;
 
                     /**
-                     * No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+                     * No cache. If left empty, this configuration is not set. Among FollowOrigin, NoCache, and CustomTime, only one can have Switch set to on.
                      */
                     NoCache m_noCache;
                     bool m_noCacheHasBeenSet;
 
                     /**
-                     * Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+                     * Custom cache time. Leave it unset means this configuration is not set. A maximum of one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
                      */
                     CustomTime m_customTime;
                     bool m_customTimeHasBeenSet;

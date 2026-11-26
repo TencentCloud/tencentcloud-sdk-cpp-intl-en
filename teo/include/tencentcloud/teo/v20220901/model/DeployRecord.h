@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Version release record details for the configuration group.
+                * Details of configuration group version release notes.
                 */
                 class DeployRecord : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Details about the released version.
-                     * @return ConfigGroupVersionInfos Details about the released version.
+                     * 获取Detailed information of the released version.
+                     * @return ConfigGroupVersionInfos Detailed information of the released version.
                      * 
                      */
                     std::vector<ConfigGroupVersionInfo> GetConfigGroupVersionInfos() const;
 
                     /**
-                     * 设置Details about the released version.
-                     * @param _configGroupVersionInfos Details about the released version.
+                     * 设置Detailed information of the released version.
+                     * @param _configGroupVersionInfos Detailed information of the released version.
                      * 
                      */
                     void SetConfigGroupVersionInfos(const std::vector<ConfigGroupVersionInfo>& _configGroupVersionInfos);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ConfigGroupVersionInfosHasBeenSet() const;
 
                     /**
-                     * 获取Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-                     * @return DeployTime Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * 获取Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @return DeployTime Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     std::string GetDeployTime() const;
 
                     /**
-                     * 设置Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-                     * @param _deployTime Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * 设置Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+                     * @param _deployTime Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      * 
                      */
                     void SetDeployTime(const std::string& _deployTime);
@@ -90,27 +90,27 @@ namespace TencentCloud
                     bool DeployTimeHasBeenSet() const;
 
                     /**
-                     * 获取Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
-                     * @return Status Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
+                     * 获取Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
+                     * @return Status Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
-                     * @param _status Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
+                     * 设置Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
+                     * @param _status Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -123,15 +123,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Release result information.
-                     * @return Message Release result information.
+                     * 获取Publish result information.
+                     * @return Message Publish result information.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Release result information.
-                     * @param _message Release result information.
+                     * 设置Publish result information.
+                     * @param _message Publish result information.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -188,28 +188,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Details about the released version.
+                     * Detailed information of the released version.
                      */
                     std::vector<ConfigGroupVersionInfo> m_configGroupVersionInfos;
                     bool m_configGroupVersionInfosHasBeenSet;
 
                     /**
-                     * Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+                     * Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
                      */
                     std::string m_deployTime;
                     bool m_deployTimeHasBeenSet;
 
                     /**
-                     * Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
+                     * Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Release result information.
+                     * Publish result information.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

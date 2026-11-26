@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Bindings of a security policy template
+                * Binding relationship of the security policy template.
                 */
                 class SecurityTemplateBinding : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取template ID
-                     * @return TemplateId template ID
+                     * 获取Template ID.
+                     * @return TemplateId Template ID.
                      * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置template ID
-                     * @param _templateId template ID
+                     * 设置Template ID.
+                     * @param _templateId Template ID.
                      * 
                      */
                     void SetTemplateId(const std::string& _templateId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Binding status of the template.
-                     * @return TemplateScope Binding status of the template.
+                     * 获取Template binding status.
+                     * @return TemplateScope Template binding status.
                      * 
                      */
                     std::vector<TemplateScope> GetTemplateScope() const;
 
                     /**
-                     * 设置Binding status of the template.
-                     * @param _templateScope Binding status of the template.
+                     * 设置Template binding status.
+                     * @param _templateScope Template binding status.
                      * 
                      */
                     void SetTemplateScope(const std::vector<TemplateScope>& _templateScope);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * template ID
+                     * Template ID.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Binding status of the template.
+                     * Template binding status.
                      */
                     std::vector<TemplateScope> m_templateScope;
                     bool m_templateScopeHasBeenSet;

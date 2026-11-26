@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
-                     * @return Area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+                     * 获取<p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
+                     * @return Area <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置<p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
-                     * @param _area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+                     * 设置<p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
+                     * @param _area <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
-                     * @return LogType <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+                     * 获取<p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+                     * @return LogType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置<p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
-                     * @param _logType <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+                     * 设置<p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+                     * @param _logType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
-                     * @return Filters <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
+                     * 获取<p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
+                     * @return Filters <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
                      * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
-                     * 设置<p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
-                     * @param _filters <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
+                     * 设置<p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
+                     * @param _filters <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
                      * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paginated query limit. Default value: 20, maximum value: 100.</p>
-                     * @return Limit <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
+                     * 获取<p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
+                     * @return Limit <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Paginated query limit. Default value: 20, maximum value: 100.</p>
-                     * @param _limit <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
+                     * 设置<p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
+                     * @param _limit <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paginated query offset, defaults to 0.</p>
-                     * @return Offset <p>Paginated query offset, defaults to 0.</p>
+                     * 获取<p>Paginated query offset. Default value: 0.</p>
+                     * @return Offset <p>Paginated query offset. Default value: 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Paginated query offset, defaults to 0.</p>
-                     * @param _offset <p>Paginated query offset, defaults to 0.</p>
+                     * 设置<p>Paginated query offset. Default value: 0.</p>
+                     * @param _offset <p>Paginated query offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -178,31 +178,31 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+                     * <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+                     * <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
+                     * <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
+                     * <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * <p>Paginated query offset, defaults to 0.</p>
+                     * <p>Paginated query offset. Default value: 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

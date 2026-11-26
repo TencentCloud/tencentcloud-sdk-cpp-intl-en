@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the site ID.
-                     * @return ZoneId Specifies the site ID.
+                     * 获取Site ID.
+                     * @return ZoneId Site ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Specifies the site ID.
-                     * @param _zoneId Specifies the site ID.
+                     * 设置Site ID.
+                     * @param _zoneId Site ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
-                     * @return TemplateIds Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+                     * 获取Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
+                     * @return TemplateIds Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
                      * 
                      */
                     std::vector<std::string> GetTemplateIds() const;
 
                     /**
-                     * 设置Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
-                     * @param _templateIds Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+                     * 设置Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
+                     * @param _templateIds Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
                      * 
                      */
                     void SetTemplateIds(const std::vector<std::string>& _templateIds);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the site ID.
+                     * Site ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+                     * Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
                      */
                     std::vector<std::string> m_templateIds;
                     bool m_templateIdsHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site related with the acceleration domain name.	
-                     * @return ZoneId ID of the site related with the acceleration domain name.	
+                     * 获取Zone ID of the acceleration domain name.	
+                     * @return ZoneId Zone ID of the acceleration domain name.	
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site related with the acceleration domain name.	
-                     * @param _zoneId ID of the site related with the acceleration domain name.	
+                     * 设置Zone ID of the acceleration domain name.	
+                     * @param _zoneId Zone ID of the acceleration domain name.	
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -65,23 +65,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
-                     * @return BindType Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
+                     * 获取Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
+                     * @return BindType Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
                      * 
                      */
                     std::string GetBindType() const;
 
                     /**
-                     * 设置Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
-                     * @param _bindType Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
+                     * 设置Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
+                     * @param _bindType Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
                      * 
                      */
                     void SetBindType(const std::string& _bindType);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool BindTypeHasBeenSet() const;
 
                     /**
-                     * 获取Bindings between domain names and a shared CNAME
-                     * @return BindSharedCNAMEMaps Bindings between domain names and a shared CNAME
+                     * 获取Binding relationship between the domain name and shared CNAME.
+                     * @return BindSharedCNAMEMaps Binding relationship between the domain name and shared CNAME.
                      * 
                      */
                     std::vector<BindSharedCNAMEMap> GetBindSharedCNAMEMaps() const;
 
                     /**
-                     * 设置Bindings between domain names and a shared CNAME
-                     * @param _bindSharedCNAMEMaps Bindings between domain names and a shared CNAME
+                     * 设置Binding relationship between the domain name and shared CNAME.
+                     * @param _bindSharedCNAMEMaps Binding relationship between the domain name and shared CNAME.
                      * 
                      */
                     void SetBindSharedCNAMEMaps(const std::vector<BindSharedCNAMEMap>& _bindSharedCNAMEMaps);
@@ -117,21 +117,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site related with the acceleration domain name.	
+                     * Zone ID of the acceleration domain name.	
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
+                     * Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
                      */
                     std::string m_bindType;
                     bool m_bindTypeHasBeenSet;
 
                     /**
-                     * Bindings between domain names and a shared CNAME
+                     * Binding relationship between the domain name and shared CNAME.
                      */
                     std::vector<BindSharedCNAMEMap> m_bindSharedCNAMEMaps;
                     bool m_bindSharedCNAMEMapsHasBeenSet;

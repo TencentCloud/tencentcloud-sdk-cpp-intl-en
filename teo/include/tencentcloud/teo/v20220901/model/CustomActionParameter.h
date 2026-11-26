@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter content of a single field in custom configuration.
+                * Parameter content of a single field in the custom configuration.
                 */
                 class CustomActionParameter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Field Name of each parameter under custom configuration.</p><p>You can get it through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, such as "Seconds", "Ports", "StatusCode".</p>
-                     * @return Name <p>Field Name of each parameter under custom configuration.</p><p>You can get it through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, such as "Seconds", "Ports", "StatusCode".</p>
+                     * 获取<p>Field names of Parameters under custom configuration.</p><p>You can get them through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, for example, "Seconds", "Ports", "StatusCode".</p>
+                     * @return Name <p>Field names of Parameters under custom configuration.</p><p>You can get them through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, for example, "Seconds", "Ports", "StatusCode".</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Field Name of each parameter under custom configuration.</p><p>You can get it through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, such as "Seconds", "Ports", "StatusCode".</p>
-                     * @param _name <p>Field Name of each parameter under custom configuration.</p><p>You can get it through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, such as "Seconds", "Ports", "StatusCode".</p>
+                     * 设置<p>Field names of Parameters under custom configuration.</p><p>You can get them through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, for example, "Seconds", "Ports", "StatusCode".</p>
+                     * @param _name <p>Field names of Parameters under custom configuration.</p><p>You can get them through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, for example, "Seconds", "Ports", "StatusCode".</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Data type of each parameter field value under custom configuration.</p><p>Enumeration value:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: string array type.</li><li>ArrayOfInteger: integer array type.</li><li>ArrayOfFloat: floating-point number array type.</li></ul><p>It can be obtained through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @return ValueType <p>Data type of each parameter field value under custom configuration.</p><p>Enumeration value:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: string array type.</li><li>ArrayOfInteger: integer array type.</li><li>ArrayOfFloat: floating-point number array type.</li></ul><p>It can be obtained through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 获取<p>Data type of each parameter field in the custom configuration.</p><p>Enumeration values:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: array of strings type.</li><li>ArrayOfInteger: array of integers type.</li><li>ArrayOfFloat: array of floating-point numbers type.</li></ul><p>You can obtain it through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @return ValueType <p>Data type of each parameter field in the custom configuration.</p><p>Enumeration values:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: array of strings type.</li><li>ArrayOfInteger: array of integers type.</li><li>ArrayOfFloat: array of floating-point numbers type.</li></ul><p>You can obtain it through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置<p>Data type of each parameter field value under custom configuration.</p><p>Enumeration value:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: string array type.</li><li>ArrayOfInteger: integer array type.</li><li>ArrayOfFloat: floating-point number array type.</li></ul><p>It can be obtained through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @param _valueType <p>Data type of each parameter field value under custom configuration.</p><p>Enumeration value:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: string array type.</li><li>ArrayOfInteger: integer array type.</li><li>ArrayOfFloat: floating-point number array type.</li></ul><p>It can be obtained through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 设置<p>Data type of each parameter field in the custom configuration.</p><p>Enumeration values:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: array of strings type.</li><li>ArrayOfInteger: array of integers type.</li><li>ArrayOfFloat: array of floating-point numbers type.</li></ul><p>You can obtain it through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @param _valueType <p>Data type of each parameter field in the custom configuration.</p><p>Enumeration values:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: array of strings type.</li><li>ArrayOfInteger: array of integers type.</li><li>ArrayOfFloat: array of floating-point numbers type.</li></ul><p>You can obtain it through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     void SetValueType(const std::string& _valueType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Parameter value of string type. This parameter is required when ValueType is String.</p><p>You can get the default value, measurement unit, limit and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @return StringValue <p>Parameter value of string type. This parameter is required when ValueType is String.</p><p>You can get the default value, measurement unit, limit and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 获取<p>String type parameter value. This parameter is required when ValueType is String.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @return StringValue <p>String type parameter value. This parameter is required when ValueType is String.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     std::string GetStringValue() const;
 
                     /**
-                     * 设置<p>Parameter value of string type. This parameter is required when ValueType is String.</p><p>You can get the default value, measurement unit, limit and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @param _stringValue <p>Parameter value of string type. This parameter is required when ValueType is String.</p><p>You can get the default value, measurement unit, limit and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 设置<p>String type parameter value. This parameter is required when ValueType is String.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @param _stringValue <p>String type parameter value. This parameter is required when ValueType is String.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     void SetStringValue(const std::string& _stringValue);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StringValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @return IntegerValue <p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 获取<p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @return IntegerValue <p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     int64_t GetIntegerValue() const;
 
                     /**
-                     * 设置<p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @param _integerValue <p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 设置<p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @param _integerValue <p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     void SetIntegerValue(const int64_t& _integerValue);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool IntegerValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Floating-point type parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @return FloatValue <p>Floating-point type parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 获取<p>Floating-point parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @return FloatValue <p>Floating-point parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     double GetFloatValue() const;
 
                     /**
-                     * 设置<p>Floating-point type parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @param _floatValue <p>Floating-point type parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 设置<p>Floating-point parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @param _floatValue <p>Floating-point parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     void SetFloatValue(const double& _floatValue);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FloatValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Boolean type parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @return BooleanValue <p>Boolean type parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 获取<p>Boolean parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @return BooleanValue <p>Boolean parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     bool GetBooleanValue() const;
 
                     /**
-                     * 设置<p>Boolean type parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @param _booleanValue <p>Boolean type parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 设置<p>Boolean parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @param _booleanValue <p>Boolean parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     void SetBooleanValue(const bool& _booleanValue);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool BooleanValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>String array type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, measurement unit, and limitation of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-                     * @return StringArrayValue <p>String array type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, measurement unit, and limitation of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 获取<p>Array of strings type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @return StringArrayValue <p>Array of strings type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     std::vector<std::string> GetStringArrayValue() const;
 
                     /**
-                     * 设置<p>String array type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, measurement unit, and limitation of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-                     * @param _stringArrayValue <p>String array type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, measurement unit, and limitation of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 设置<p>Array of strings type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @param _stringArrayValue <p>Array of strings type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     void SetStringArrayValue(const std::vector<std::string>& _stringArrayValue);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool StringArrayValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Array type parameter value of integer. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-                     * @return IntegerArrayValue <p>Array type parameter value of integer. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 获取<p>Integer array type parameter value. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @return IntegerArrayValue <p>Integer array type parameter value. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     std::vector<int64_t> GetIntegerArrayValue() const;
 
                     /**
-                     * 设置<p>Array type parameter value of integer. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-                     * @param _integerArrayValue <p>Array type parameter value of integer. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * 设置<p>Integer array type parameter value. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * @param _integerArrayValue <p>Integer array type parameter value. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      * 
                      */
                     void SetIntegerArrayValue(const std::vector<int64_t>& _integerArrayValue);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool IntegerArrayValueHasBeenSet() const;
 
                     /**
-                     * 获取<p>Floating-point number array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, measurement unit, limitation, and other descriptions of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @return FloatArrayValue <p>Floating-point number array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, measurement unit, limitation, and other descriptions of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 获取<p>Floating-point array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @return FloatArrayValue <p>Floating-point array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     std::vector<double> GetFloatArrayValue() const;
 
                     /**
-                     * 设置<p>Floating-point number array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, measurement unit, limitation, and other descriptions of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
-                     * @param _floatArrayValue <p>Floating-point number array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, measurement unit, limitation, and other descriptions of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * 设置<p>Floating-point array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * @param _floatArrayValue <p>Floating-point array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      * 
                      */
                     void SetFloatArrayValue(const std::vector<double>& _floatArrayValue);
@@ -238,55 +238,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Field Name of each parameter under custom configuration.</p><p>You can get it through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, such as "Seconds", "Ports", "StatusCode".</p>
+                     * <p>Field names of Parameters under custom configuration.</p><p>You can get them through the API return value CustomActionSet[].Parameters[].Name of DescribeAvailableCustomActionsForRuleEngine, for example, "Seconds", "Ports", "StatusCode".</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Data type of each parameter field value under custom configuration.</p><p>Enumeration value:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: string array type.</li><li>ArrayOfInteger: integer array type.</li><li>ArrayOfFloat: floating-point number array type.</li></ul><p>It can be obtained through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * <p>Data type of each parameter field in the custom configuration.</p><p>Enumeration values:</p><ul><li>String: string type.</li><li>Integer: integer type.</li><li>Float: floating-point type.</li><li>Boolean: boolean type.</li><li>ArrayOfString: array of strings type.</li><li>ArrayOfInteger: array of integers type.</li><li>ArrayOfFloat: array of floating-point numbers type.</li></ul><p>You can obtain it through the API return value CustomActionSet[].Parameters[].Type of DescribeAvailableCustomActionsForRuleEngine.</p>
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * <p>Parameter value of string type. This parameter is required when ValueType is String.</p><p>You can get the default value, measurement unit, limit and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * <p>String type parameter value. This parameter is required when ValueType is String.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      */
                     std::string m_stringValue;
                     bool m_stringValueHasBeenSet;
 
                     /**
-                     * <p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * <p>Integer type parameter value. This parameter is required when ValueType is Integer.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      */
                     int64_t m_integerValue;
                     bool m_integerValueHasBeenSet;
 
                     /**
-                     * <p>Floating-point type parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * <p>Floating-point parameter value. This parameter is required when ValueType is Float.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      */
                     double m_floatValue;
                     bool m_floatValueHasBeenSet;
 
                     /**
-                     * <p>Boolean type parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, measurement unit, limitation, and other details of the parameter value through the CustomActionSet[].Parameters in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * <p>Boolean parameter value. This parameter is required when ValueType is Boolean.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      */
                     bool m_booleanValue;
                     bool m_booleanValueHasBeenSet;
 
                     /**
-                     * <p>String array type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, measurement unit, and limitation of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * <p>Array of strings type parameter value. This parameter is required when ValueType is ArrayOfString.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      */
                     std::vector<std::string> m_stringArrayValue;
                     bool m_stringArrayValueHasBeenSet;
 
                     /**
-                     * <p>Array type parameter value of integer. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, measurement unit, limit, and other details of the parameter value through the API return value CustomActionSet[].Parameters of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+                     * <p>Integer array type parameter value. This parameter is required when ValueType is ArrayOfInteger.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
                      */
                     std::vector<int64_t> m_integerArrayValue;
                     bool m_integerArrayValueHasBeenSet;
 
                     /**
-                     * <p>Floating-point number array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, measurement unit, limitation, and other descriptions of the parameter value through the CustomActionSet[].Parameters field in the API return value of DescribeAvailableCustomActionsForRuleEngine.</p>
+                     * <p>Floating-point array type parameter value. This parameter is required when ValueType is ArrayOfFloat.</p><p>You can get the default value, unit, limit, and other descriptions of the parameter value through the CustomActionSet[].Parameters return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
                      */
                     std::vector<double> m_floatArrayValue;
                     bool m_floatArrayValueHasBeenSet;

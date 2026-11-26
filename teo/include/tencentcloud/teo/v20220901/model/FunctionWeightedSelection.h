@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the weight policy configuration.
+                * Weight strategy configuration.
                 */
                 class FunctionWeightedSelection : public AbstractModel
                 {
@@ -68,23 +68,23 @@ namespace TencentCloud
                     bool FunctionIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
-                     * @return Weight Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
+                     * 获取Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
+                     * @return Weight Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
                      * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
-                     * @param _weight Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
+                     * 设置Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
+                     * @param _weight Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
                      * 
                      */
                     void SetWeight(const uint64_t& _weight);
@@ -105,9 +105,9 @@ weight/100. for example, setting two functions A and B, among them A has A weigh
                     bool m_functionIdHasBeenSet;
 
                     /**
-                     * Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-Specifies the calculation method for the select probability.
-weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
+                     * Select a weight. Value range: 0-100. The sum of all weights must be 100.
+Probability calculation method when selected:
+weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;

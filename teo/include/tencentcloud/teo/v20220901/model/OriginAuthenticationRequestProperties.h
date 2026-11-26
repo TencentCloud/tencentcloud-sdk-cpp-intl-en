@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the authentication request attribute for origin pull.
+                * Origin-pull authentication request attribute.
                 */
                 class OriginAuthenticationRequestProperties : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
-                     * @return Type Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
+                     * 获取Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
+                     * @return Type Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
-                     * @param _type Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
+                     * 设置Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
+                     * @param _type Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the parameter name for the origin-pull authentication type.
-                     * @return Name Specifies the parameter name for the origin-pull authentication type.
+                     * 获取Name of the parameter corresponding to the origin-pull authentication type.
+                     * @return Name Name of the parameter corresponding to the origin-pull authentication type.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specifies the parameter name for the origin-pull authentication type.
-                     * @param _name Specifies the parameter name for the origin-pull authentication type.
+                     * 设置Name of the parameter corresponding to the origin-pull authentication type.
+                     * @param _name Name of the parameter corresponding to the origin-pull authentication type.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the parameter value for the origin-pull authentication type.
-                     * @return Value Specifies the parameter value for the origin-pull authentication type.
+                     * 获取Set the parameter value corresponding to the origin-pull authentication type.
+                     * @return Value Set the parameter value corresponding to the origin-pull authentication type.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Specifies the parameter value for the origin-pull authentication type.
-                     * @param _value Specifies the parameter value for the origin-pull authentication type.
+                     * 设置Set the parameter value corresponding to the origin-pull authentication type.
+                     * @param _value Set the parameter value corresponding to the origin-pull authentication type.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
+                     * Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Specifies the parameter name for the origin-pull authentication type.
+                     * Name of the parameter corresponding to the origin-pull authentication type.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Specifies the parameter value for the origin-pull authentication type.
+                     * Set the parameter value corresponding to the origin-pull authentication type.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

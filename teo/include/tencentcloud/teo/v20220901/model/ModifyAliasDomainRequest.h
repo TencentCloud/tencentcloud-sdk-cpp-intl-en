@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The alias domain name.
-                     * @return AliasName The alias domain name.
+                     * 获取Alias domain name.
+                     * @return AliasName Alias domain name.
                      * 
                      */
                     std::string GetAliasName() const;
 
                     /**
-                     * 设置The alias domain name.
-                     * @param _aliasName The alias domain name.
+                     * 设置Alias domain name.
+                     * @param _aliasName Alias domain name.
                      * 
                      */
                     void SetAliasName(const std::string& _aliasName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AliasNameHasBeenSet() const;
 
                     /**
-                     * 获取The target domain name.
-                     * @return TargetName The target domain name.
+                     * 获取Target domain name.
+                     * @return TargetName Target domain name.
                      * 
                      */
                     std::string GetTargetName() const;
 
                     /**
-                     * 设置The target domain name.
-                     * @param _targetName The target domain name.
+                     * 设置Target domain name.
+                     * @param _targetName Target domain name.
                      * 
                      */
                     void SetTargetName(const std::string& _targetName);
@@ -106,27 +106,27 @@ namespace TencentCloud
                     bool TargetNameHasBeenSet() const;
 
                     /**
-                     * 获取Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
-                     * @return CertType Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
+                     * 获取Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
+                     * @return CertType Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
                      * 
                      */
                     std::string GetCertType() const;
 
                     /**
-                     * 设置Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
-                     * @param _certType Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
+                     * 设置Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
+                     * @param _certType Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
                      * 
                      */
                     void SetCertType(const std::string& _certType);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool CertTypeHasBeenSet() const;
 
                     /**
-                     * 获取The certificate ID. This field is required when `CertType=hosting`.
-                     * @return CertId The certificate ID. This field is required when `CertType=hosting`.
+                     * 获取When CertType is hosting, fill in the certificate ID accordingly.
+                     * @return CertId When CertType is hosting, fill in the certificate ID accordingly.
                      * 
                      */
                     std::vector<std::string> GetCertId() const;
 
                     /**
-                     * 设置The certificate ID. This field is required when `CertType=hosting`.
-                     * @param _certId The certificate ID. This field is required when `CertType=hosting`.
+                     * 设置When CertType is hosting, fill in the certificate ID accordingly.
+                     * @param _certId When CertType is hosting, fill in the certificate ID accordingly.
                      * 
                      */
                     void SetCertId(const std::vector<std::string>& _certId);
@@ -162,34 +162,34 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The alias domain name.
+                     * Alias domain name.
                      */
                     std::string m_aliasName;
                     bool m_aliasNameHasBeenSet;
 
                     /**
-                     * The target domain name.
+                     * Target domain name.
                      */
                     std::string m_targetName;
                     bool m_targetNameHasBeenSet;
 
                     /**
-                     * Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
+                     * Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate;</li>
+<li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
                      */
                     std::string m_certType;
                     bool m_certTypeHasBeenSet;
 
                     /**
-                     * The certificate ID. This field is required when `CertType=hosting`.
+                     * When CertType is hosting, fill in the certificate ID accordingly.
                      */
                     std::vector<std::string> m_certId;
                     bool m_certIdHasBeenSet;

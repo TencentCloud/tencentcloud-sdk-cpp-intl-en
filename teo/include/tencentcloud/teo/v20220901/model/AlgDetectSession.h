@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Validate Cookie.
+                * Cookie verification and session tracking.
                 */
                 class AlgDetectSession : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Method to validate Cookie.
-                     * @return Name Method to validate Cookie.
+                     * 获取Operation name.
+                     * @return Name Operation name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Method to validate Cookie.
-                     * @param _name Method to validate Cookie.
+                     * 设置Operation name.
+                     * @param _name Operation name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -69,23 +69,23 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
-                     * @return DetectMode The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
+                     * 获取Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
+                     * @return DetectMode Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
                      * 
                      */
                     std::string GetDetectMode() const;
 
                     /**
-                     * 设置The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
-                     * @param _detectMode The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
+                     * 设置Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
+                     * @param _detectMode Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
                      * 
                      */
                     void SetDetectMode(const std::string& _detectMode);
@@ -98,23 +98,23 @@ namespace TencentCloud
                     bool DetectModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
-                     * @return SessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
+                     * 获取Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
+                     * @return SessionAnalyzeSwitch Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
                      * 
                      */
                     std::string GetSessionAnalyzeSwitch() const;
 
                     /**
-                     * 设置Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
-                     * @param _sessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
+                     * 设置Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
+                     * @param _sessionAnalyzeSwitch Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
                      * 
                      */
                     void SetSessionAnalyzeSwitch(const std::string& _sessionAnalyzeSwitch);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SessionAnalyzeSwitchHasBeenSet() const;
 
                     /**
-                     * 获取The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
-                     * @return InvalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+                     * 获取Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
+                     * @return InvalidStatTime Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
                      * 
                      */
                     int64_t GetInvalidStatTime() const;
 
                     /**
-                     * 设置The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
-                     * @param _invalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+                     * 设置Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
+                     * @param _invalidStatTime Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
                      * 
                      */
                     void SetInvalidStatTime(const int64_t& _invalidStatTime);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool InvalidStatTimeHasBeenSet() const;
 
                     /**
-                     * 获取The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
-                     * @return InvalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+                     * 获取Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
+                     * @return InvalidThreshold Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
                      * 
                      */
                     int64_t GetInvalidThreshold() const;
 
                     /**
-                     * 设置The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
-                     * @param _invalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+                     * 设置Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
+                     * @param _invalidThreshold Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
                      * 
                      */
                     void SetInvalidThreshold(const int64_t& _invalidThreshold);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool InvalidThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Cookie validation results.
-                     * @return AlgDetectResults Cookie validation results.
+                     * 获取Cookie verification result.
+                     * @return AlgDetectResults Cookie verification result.
                      * 
                      */
                     std::vector<AlgDetectResult> GetAlgDetectResults() const;
 
                     /**
-                     * 设置Cookie validation results.
-                     * @param _algDetectResults Cookie validation results.
+                     * 设置Cookie verification result.
+                     * @param _algDetectResults Cookie verification result.
                      * 
                      */
                     void SetAlgDetectResults(const std::vector<AlgDetectResult>& _algDetectResults);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool AlgDetectResultsHasBeenSet() const;
 
                     /**
-                     * 获取Cookie-based session check results.
-                     * @return SessionBehaviors Cookie-based session check results.
+                     * 获取Session rate and periodic feature verification result.
+                     * @return SessionBehaviors Session rate and periodic feature verification result.
                      * 
                      */
                     std::vector<AlgDetectResult> GetSessionBehaviors() const;
 
                     /**
-                     * 设置Cookie-based session check results.
-                     * @param _sessionBehaviors Cookie-based session check results.
+                     * 设置Session rate and periodic feature verification result.
+                     * @param _sessionBehaviors Session rate and periodic feature verification result.
                      * 
                      */
                     void SetSessionBehaviors(const std::vector<AlgDetectResult>& _sessionBehaviors);
@@ -213,47 +213,47 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Method to validate Cookie.
+                     * Operation name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
+                     * Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
                      */
                     std::string m_detectMode;
                     bool m_detectModeHasBeenSet;
 
                     /**
-                     * Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
+                     * Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
                      */
                     std::string m_sessionAnalyzeSwitch;
                     bool m_sessionAnalyzeSwitchHasBeenSet;
 
                     /**
-                     * The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+                     * Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
                      */
                     int64_t m_invalidStatTime;
                     bool m_invalidStatTimeHasBeenSet;
 
                     /**
-                     * The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+                     * Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
                      */
                     int64_t m_invalidThreshold;
                     bool m_invalidThresholdHasBeenSet;
 
                     /**
-                     * Cookie validation results.
+                     * Cookie verification result.
                      */
                     std::vector<AlgDetectResult> m_algDetectResults;
                     bool m_algDetectResultsHasBeenSet;
 
                     /**
-                     * Cookie-based session check results.
+                     * Session rate and periodic feature verification result.
                      */
                     std::vector<AlgDetectResult> m_sessionBehaviors;
                     bool m_sessionBehaviorsHasBeenSet;

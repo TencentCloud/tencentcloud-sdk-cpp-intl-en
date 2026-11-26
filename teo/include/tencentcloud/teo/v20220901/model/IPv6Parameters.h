@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable ipv6 access functionality. valid values:.
-<Li>`On`: enable ipv6 access;</li>.
-<Li>`Off`: disable ipv6 access feature.</li>.
-                     * @return Switch Whether to enable ipv6 access functionality. valid values:.
-<Li>`On`: enable ipv6 access;</li>.
-<Li>`Off`: disable ipv6 access feature.</li>.
+                     * 获取IPv6 access feature configuration. Valid values:
+<li>on: Turn on the IPv6 access feature;</li>
+<li>off: Disables the IPv6 access feature.</li>
+                     * @return Switch IPv6 access feature configuration. Valid values:
+<li>on: Turn on the IPv6 access feature;</li>
+<li>off: Disables the IPv6 access feature.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable ipv6 access functionality. valid values:.
-<Li>`On`: enable ipv6 access;</li>.
-<Li>`Off`: disable ipv6 access feature.</li>.
-                     * @param _switch Whether to enable ipv6 access functionality. valid values:.
-<Li>`On`: enable ipv6 access;</li>.
-<Li>`Off`: disable ipv6 access feature.</li>.
+                     * 设置IPv6 access feature configuration. Valid values:
+<li>on: Turn on the IPv6 access feature;</li>
+<li>off: Disables the IPv6 access feature.</li>
+                     * @param _switch IPv6 access feature configuration. Valid values:
+<li>on: Turn on the IPv6 access feature;</li>
+<li>off: Disables the IPv6 access feature.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable ipv6 access functionality. valid values:.
-<Li>`On`: enable ipv6 access;</li>.
-<Li>`Off`: disable ipv6 access feature.</li>.
+                     * IPv6 access feature configuration. Valid values:
+<li>on: Turn on the IPv6 access feature;</li>
+<li>off: Disables the IPv6 access feature.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

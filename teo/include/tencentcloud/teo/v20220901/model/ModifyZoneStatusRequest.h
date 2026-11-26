@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取Zone ID.
+                     * @return ZoneId Zone ID.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param _zoneId The site ID.
+                     * 设置Zone ID.
+                     * @param _zoneId Zone ID.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,23 +64,23 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
-                     * @return Paused The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+                     * 获取Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
+                     * @return Paused Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
                      * 
                      */
                     bool GetPaused() const;
 
                     /**
-                     * 设置The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
-                     * @param _paused The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+                     * 设置Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
+                     * @param _paused Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
                      * 
                      */
                     void SetPaused(const bool& _paused);
@@ -95,15 +95,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The site ID.
+                     * Zone ID.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+                     * Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
                      */
                     bool m_paused;
                     bool m_pausedHasBeenSet;

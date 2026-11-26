@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Site ID, used to specify the query scope.
-                     * @return ZoneId Site ID, used to specify the query scope.
+                     * 获取Site ID, used to specify the scope of the queried site.
+                     * @return ZoneId Site ID, used to specify the scope of the queried site.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Site ID, used to specify the query scope.
-                     * @param _zoneId Site ID, used to specify the query scope.
+                     * 设置Site ID, used to specify the scope of the queried site.
+                     * @param _zoneId Site ID, used to specify the scope of the queried site.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
-                     * @return Limit Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+                     * 获取Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
+                     * @return Limit Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
-                     * @param _limit Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+                     * 设置Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
+                     * @param _limit Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The starting entry offset for pagination queries. The default value is 0.
-                     * @return Offset The starting entry offset for pagination queries. The default value is 0.
+                     * 获取Starting entry offset for pagination queries. Default value: 0.
+                     * @return Offset Starting entry offset for pagination queries. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The starting entry offset for pagination queries. The default value is 0.
-                     * @param _offset The starting entry offset for pagination queries. The default value is 0.
+                     * 设置Starting entry offset for pagination queries. Default value: 0.
+                     * @param _offset Starting entry offset for pagination queries. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Site ID, used to specify the query scope.
+                     * Site ID, used to specify the scope of the queried site.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+                     * Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The starting entry offset for pagination queries. The default value is 0.
+                     * Starting entry offset for pagination queries. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

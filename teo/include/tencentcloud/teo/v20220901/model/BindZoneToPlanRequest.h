@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the site to be bound.
-                     * @return ZoneId ID of the site to be bound.
+                     * 获取Site ID of the selected site that is not bound to a package.
+                     * @return ZoneId Site ID of the selected site that is not bound to a package.
                      * 
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置ID of the site to be bound.
-                     * @param _zoneId ID of the site to be bound.
+                     * 设置Site ID of the selected site that is not bound to a package.
+                     * @param _zoneId Site ID of the selected site that is not bound to a package.
                      * 
                      */
                     void SetZoneId(const std::string& _zoneId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the target plan.
-                     * @return PlanId ID of the target plan.
+                     * 获取Target package ID to be bound.
+                     * @return PlanId Target package ID to be bound.
                      * 
                      */
                     std::string GetPlanId() const;
 
                     /**
-                     * 设置ID of the target plan.
-                     * @param _planId ID of the target plan.
+                     * 设置Target package ID to be bound.
+                     * @param _planId Target package ID to be bound.
                      * 
                      */
                     void SetPlanId(const std::string& _planId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the site to be bound.
+                     * Site ID of the selected site that is not bound to a package.
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * ID of the target plan.
+                     * Target package ID to be bound.
                      */
                     std::string m_planId;
                     bool m_planIdHasBeenSet;

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Specifies the authentication option configuration.
+                * Authentication option configuration.
                 */
                 class ClientAttester : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Option ID for certification.</p>
-                     * @return Id <p>Option ID for certification.</p>
+                     * 获取<p>Authentication option ID.</p>
+                     * @return Id <p>Authentication option ID.</p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置<p>Option ID for certification.</p>
-                     * @param _id <p>Option ID for certification.</p>
+                     * 设置<p>Authentication option ID.</p>
+                     * @param _id <p>Authentication option ID.</p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Option name for authentication.</p>
-                     * @return Name <p>Option name for authentication.</p>
+                     * 获取<p>Authentication option name.</p>
+                     * @return Name <p>Authentication option name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Option name for authentication.</p>
-                     * @param _name <p>Option name for authentication.</p>
+                     * 设置<p>Authentication option name.</p>
+                     * @param _name <p>Authentication option name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
-                     * @return Type <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
+                     * 获取<p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
+                     * @return Type <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
-                     * @param _type <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
+                     * 设置<p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
+                     * @param _type <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
-                     * @return AttesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+                     * 获取<p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+                     * @return AttesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
                      * 
                      */
                     std::string GetAttesterSource() const;
 
                     /**
-                     * 设置<p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
-                     * @param _attesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+                     * 设置<p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+                     * @param _attesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
                      * 
                      */
                     void SetAttesterSource(const std::string& _attesterSource);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool AttesterSourceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
-                     * @return AttesterDuration <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
+                     * 获取<p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
+                     * @return AttesterDuration <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
                      * 
                      */
                     std::string GetAttesterDuration() const;
 
                     /**
-                     * 设置<p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
-                     * @param _attesterDuration <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
+                     * 设置<p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
+                     * @param _attesterDuration <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
                      * 
                      */
                     void SetAttesterDuration(const std::string& _attesterDuration);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool AttesterDurationHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
-                     * @return UsageLimit <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+                     * 获取<p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
+                     * @return UsageLimit <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
                      * 
                      */
                     std::string GetUsageLimit() const;
 
                     /**
-                     * 设置<p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
-                     * @param _usageLimit <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+                     * 设置<p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
+                     * @param _usageLimit <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
                      * 
                      */
                     void SetUsageLimit(const std::string& _usageLimit);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool UsageLimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
-                     * @return MaxUsageCount <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+                     * 获取<p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
+                     * @return MaxUsageCount <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
                      * 
                      */
                     int64_t GetMaxUsageCount() const;
 
                     /**
-                     * 设置<p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
-                     * @param _maxUsageCount <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+                     * 设置<p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
+                     * @param _maxUsageCount <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
                      * 
                      */
                     void SetMaxUsageCount(const int64_t& _maxUsageCount);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool TCRCEOptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
-                     * @return TCCaptchaOption <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+                     * 获取<p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+                     * @return TCCaptchaOption <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
                      * 
                      */
                     TCCaptchaOption GetTCCaptchaOption() const;
 
                     /**
-                     * 设置<p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
-                     * @param _tCCaptchaOption <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+                     * 设置<p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+                     * @param _tCCaptchaOption <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
                      * 
                      */
                     void SetTCCaptchaOption(const TCCaptchaOption& _tCCaptchaOption);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool TCCaptchaOptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
-                     * @return TCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * 获取<p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * @return TCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
                      * 
                      */
                     TCEOCaptchaOption GetTCEOCaptchaOption() const;
 
                     /**
-                     * 设置<p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
-                     * @param _tCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * 设置<p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * @param _tCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
                      * 
                      */
                     void SetTCEOCaptchaOption(const TCEOCaptchaOption& _tCEOCaptchaOption);
@@ -262,43 +262,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Option ID for certification.</p>
+                     * <p>Authentication option ID.</p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * <p>Option name for authentication.</p>
+                     * <p>Authentication option name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
+                     * <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+                     * <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
                      */
                     std::string m_attesterSource;
                     bool m_attesterSourceHasBeenSet;
 
                     /**
-                     * <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
+                     * <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
                      */
                     std::string m_attesterDuration;
                     bool m_attesterDurationHasBeenSet;
 
                     /**
-                     * <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+                     * <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
                      */
                     std::string m_usageLimit;
                     bool m_usageLimitHasBeenSet;
 
                     /**
-                     * <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+                     * <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
                      */
                     int64_t m_maxUsageCount;
                     bool m_maxUsageCountHasBeenSet;
@@ -310,13 +310,13 @@ namespace TencentCloud
                     bool m_tCRCEOptionHasBeenSet;
 
                     /**
-                     * <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+                     * <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
                      */
                     TCCaptchaOption m_tCCaptchaOption;
                     bool m_tCCaptchaOptionHasBeenSet;
 
                     /**
-                     * <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+                     * <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
                      */
                     TCEOCaptchaOption m_tCEOCaptchaOption;
                     bool m_tCEOCaptchaOptionHasBeenSet;

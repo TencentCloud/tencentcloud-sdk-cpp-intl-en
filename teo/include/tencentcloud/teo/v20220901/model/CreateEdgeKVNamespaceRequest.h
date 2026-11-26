@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
-                     * @return Namespace Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
+                     * 获取Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
+                     * @return Namespace Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
                      * 
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
-                     * @param _namespace Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
+                     * 设置Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
+                     * @param _namespace Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
                      * 
                      */
                     void SetNamespace(const std::string& _namespace);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
-                     * @return Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+                     * 获取Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+                     * @return Remark Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
-                     * @param _remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+                     * 设置Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+                     * @param _remark Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -114,13 +114,13 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
+                     * Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+                     * Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;

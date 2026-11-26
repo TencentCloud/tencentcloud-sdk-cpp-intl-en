@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin-pull request parameters query string configuration.
+                * Origin-pull request parameter query string configuration.
                 */
                 class UpstreamRequestQueryString : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,31 +76,31 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
-                     * @return Action Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
+                     * 获取Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
+                     * @return Action Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
-                     * @param _action Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
+                     * 设置Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
+                     * @param _action Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -117,15 +113,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
-                     * @return Values Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+                     * 获取Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
+                     * @return Values Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
-                     * @param _values Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+                     * 设置Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
+                     * @param _values Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -140,26 +136,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
+                     * Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+                     * Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

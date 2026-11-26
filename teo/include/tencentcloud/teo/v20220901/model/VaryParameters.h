@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * [Vary feature](https://intl.cloud.tencent.com/document/product/1552/89301?from_cn_redirect=1) configuration parameter.
+                * [Vary feature](https://www.tencentcloud.com/document/product/1552/89301?from_cn_redirect=1) configuration parameters.
                 */
                 class VaryParameters : public AbstractModel
                 {
@@ -47,26 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Vary feature configuration switch. valid values:.
+                     * 获取Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @return Switch Vary feature configuration switch. valid values:.
+                     * @return Switch Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Vary feature configuration switch. valid values:.
+                     * 设置Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-                     * @param _switch Vary feature configuration switch. valid values:.
+                     * @param _switch Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      * 
                      */
@@ -82,9 +78,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Vary feature configuration switch. valid values:.
+                     * Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
                      */
                     std::string m_switch;

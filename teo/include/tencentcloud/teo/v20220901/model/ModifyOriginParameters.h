@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Modifying origin server configuration parameters
+                * Modify origin server configuration parameters.
                 */
                 class ModifyOriginParameters : public AbstractModel
                 {
@@ -53,13 +53,13 @@ namespace TencentCloud
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
                      * @return OriginType Origin server type. Valid values:
 <li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
                      * 
                      */
                     std::string GetOriginType() const;
@@ -70,13 +70,13 @@ namespace TencentCloud
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
                      * @param _originType Origin server type. Valid values:
 <li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -90,34 +90,34 @@ namespace TencentCloud
 
                     /**
                      * 获取Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
                      * @return Origin Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
                      * 
                      */
                     std::string GetOrigin() const;
 
                     /**
                      * 设置Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
                      * @param _origin Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
                      * 
                      */
                     void SetOrigin(const std::string& _origin);
@@ -130,27 +130,27 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
-                     * @return OriginProtocol Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
+                     * 获取Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
+                     * @return OriginProtocol Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
                      * 
                      */
                     std::string GetOriginProtocol() const;
 
                     /**
-                     * 设置Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
-                     * @param _originProtocol Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
+                     * 设置Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
+                     * @param _originProtocol Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
                      * 
                      */
                     void SetOriginProtocol(const std::string& _originProtocol);
@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool OriginProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
-                     * @return HTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+                     * 获取HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+                     * @return HTTPOriginPort HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
                      * 
                      */
                     int64_t GetHTTPOriginPort() const;
 
                     /**
-                     * 设置The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
-                     * @param _hTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+                     * 设置HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+                     * @param _hTTPOriginPort HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
                      * 
                      */
                     void SetHTTPOriginPort(const int64_t& _hTTPOriginPort);
@@ -184,15 +184,15 @@ namespace TencentCloud
                     bool HTTPOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
-                     * @return HTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+                     * 获取HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
+                     * @return HTTPSOriginPort HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
                      * 
                      */
                     int64_t GetHTTPSOriginPort() const;
 
                     /**
-                     * 设置The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
-                     * @param _hTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+                     * 设置HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
+                     * @param _hTTPSOriginPort HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
                      * 
                      */
                     void SetHTTPSOriginPort(const int64_t& _hTTPSOriginPort);
@@ -205,23 +205,23 @@ namespace TencentCloud
                     bool HTTPSOriginPortHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
-                     * @return PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
+                     * 获取Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
+                     * @return PrivateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
                      * 
                      */
                     std::string GetPrivateAccess() const;
 
                     /**
-                     * 设置Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
-                     * @param _privateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
+                     * 设置Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
+                     * @param _privateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
                      * 
                      */
                     void SetPrivateAccess(const std::string& _privateAccess);
@@ -262,47 +262,47 @@ namespace TencentCloud
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
                      * Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
+                     * Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
                      */
                     std::string m_originProtocol;
                     bool m_originProtocolHasBeenSet;
 
                     /**
-                     * The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+                     * HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
                      */
                     int64_t m_hTTPOriginPort;
                     bool m_hTTPOriginPortHasBeenSet;
 
                     /**
-                     * The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+                     * HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
                      */
                     int64_t m_hTTPSOriginPort;
                     bool m_hTTPSOriginPortHasBeenSet;
 
                     /**
-                     * Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
+                     * Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
                      */
                     std::string m_privateAccess;
                     bool m_privateAccessHasBeenSet;

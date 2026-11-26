@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Log details list that meets the log match condition.</p>
-                     * @return LogDetail <p>Log details list that meets the log match condition.</p>
+                     * 获取<p>List of log details that meet the log match conditions.</p>
+                     * @return LogDetail <p>List of log details that meet the log match conditions.</p>
                      * 
                      */
                     std::vector<LogItem> GetLogDetail() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool LogDetailHasBeenSet() const;
 
                     /**
-                     * 获取<p>Total number of logs that meet the match condition.</p>
-                     * @return TotalCount <p>Total number of logs that meet the match condition.</p>
+                     * 获取<p>Total number of logs that meet the log match condition.</p>
+                     * @return TotalCount <p>Total number of logs that meet the log match condition.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Log details list that meets the log match condition.</p>
+                     * <p>List of log details that meet the log match conditions.</p>
                      */
                     std::vector<LogItem> m_logDetail;
                     bool m_logDetailHasBeenSet;
 
                     /**
-                     * <p>Total number of logs that meet the match condition.</p>
+                     * <p>Total number of logs that meet the log match condition.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

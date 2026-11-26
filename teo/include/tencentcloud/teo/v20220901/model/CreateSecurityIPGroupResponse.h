@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP group ID.
-                     * @return GroupId IP group ID.
+                     * 获取IP group Id.
+                     * @return GroupId IP group Id.
                      * 
                      */
                     int64_t GetGroupId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IP group ID.
+                     * IP group Id.
                      */
                     int64_t m_groupId;
                     bool m_groupIdHasBeenSet;

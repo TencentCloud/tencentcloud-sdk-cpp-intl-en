@@ -58,7 +58,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The site configuration.
+                * Site configuration.
                 */
                 class ZoneSetting : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the site
-                     * @return ZoneName Name of the site
+                     * 获取Site name.
+                     * @return ZoneName Site name.
                      * 
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置Name of the site
-                     * @param _zoneName Name of the site
+                     * 设置Site name.
+                     * @param _zoneName Site name.
                      * 
                      */
                     void SetZoneName(const std::string& _zoneName);
@@ -91,23 +91,23 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
-                     * 获取Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
-                     * @return Area Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
+                     * 获取Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
+                     * @return Area Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
-                     * @param _area Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
+                     * 设置Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
+                     * @param _area Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -120,19 +120,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CacheKey Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Node cache key configuration.
+                     * @return CacheKey Node cache key configuration.
                      * 
                      */
                     CacheKey GetCacheKey() const;
 
                     /**
-                     * 设置Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cacheKey Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Node cache key configuration.
+                     * @param _cacheKey Node cache key configuration.
                      * 
                      */
                     void SetCacheKey(const CacheKey& _cacheKey);
@@ -145,19 +141,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CacheKeyHasBeenSet() const;
 
                     /**
-                     * 获取The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Quic The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Quic access configuration.
+                     * @return Quic Quic access configuration.
                      * 
                      */
                     Quic GetQuic() const;
 
                     /**
-                     * 设置The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _quic The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Quic access configuration.
+                     * @param _quic Quic access configuration.
                      * 
                      */
                     void SetQuic(const Quic& _quic);
@@ -170,19 +162,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QuicHasBeenSet() const;
 
                     /**
-                     * 获取The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PostMaxSize The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取HTTP POST request transmission configuration.
+                     * @return PostMaxSize HTTP POST request transmission configuration.
                      * 
                      */
                     PostMaxSize GetPostMaxSize() const;
 
                     /**
-                     * 设置The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _postMaxSize The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置HTTP POST request transmission configuration.
+                     * @param _postMaxSize HTTP POST request transmission configuration.
                      * 
                      */
                     void SetPostMaxSize(const PostMaxSize& _postMaxSize);
@@ -195,19 +183,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PostMaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Compression Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent compression configuration.
+                     * @return Compression Intelligent compression configuration.
                      * 
                      */
                     Compression GetCompression() const;
 
                     /**
-                     * 设置Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _compression Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent compression configuration.
+                     * @param _compression Intelligent compression configuration.
                      * 
                      */
                     void SetCompression(const Compression& _compression);
@@ -220,19 +204,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CompressionHasBeenSet() const;
 
                     /**
-                     * 获取HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpstreamHttp2 HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Http/2 origin-pull configuration.
+                     * @return UpstreamHttp2 Http/2 origin-pull configuration.
                      * 
                      */
                     UpstreamHttp2 GetUpstreamHttp2() const;
 
                     /**
-                     * 设置HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _upstreamHttp2 HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Http/2 origin-pull configuration.
+                     * @param _upstreamHttp2 Http/2 origin-pull configuration.
                      * 
                      */
                     void SetUpstreamHttp2(const UpstreamHttp2& _upstreamHttp2);
@@ -245,19 +225,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpstreamHttp2HasBeenSet() const;
 
                     /**
-                     * 获取Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ForceRedirect Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Access protocol mandatory Https redirection configuration.
+                     * @return ForceRedirect Access protocol mandatory Https redirection configuration.
                      * 
                      */
                     ForceRedirect GetForceRedirect() const;
 
                     /**
-                     * 设置Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _forceRedirect Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Access protocol mandatory Https redirection configuration.
+                     * @param _forceRedirect Access protocol mandatory Https redirection configuration.
                      * 
                      */
                     void SetForceRedirect(const ForceRedirect& _forceRedirect);
@@ -270,19 +246,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ForceRedirectHasBeenSet() const;
 
                     /**
-                     * 获取Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CacheConfig Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cache expiration time configuration.
+                     * @return CacheConfig Cache expiration time configuration.
                      * 
                      */
                     CacheConfig GetCacheConfig() const;
 
                     /**
-                     * 设置Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cacheConfig Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cache expiration time configuration.
+                     * @param _cacheConfig Cache expiration time configuration.
                      * 
                      */
                     void SetCacheConfig(const CacheConfig& _cacheConfig);
@@ -296,18 +268,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Origin Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     Origin GetOrigin() const;
 
                     /**
                      * 设置Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _origin Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOrigin(const Origin& _origin);
@@ -320,19 +288,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SmartRouting Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Smart acceleration configuration.
+                     * @return SmartRouting Smart acceleration configuration.
                      * 
                      */
                     SmartRouting GetSmartRouting() const;
 
                     /**
-                     * 设置Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _smartRouting Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Smart acceleration configuration.
+                     * @param _smartRouting Smart acceleration configuration.
                      * 
                      */
                     void SetSmartRouting(const SmartRouting& _smartRouting);
@@ -345,19 +309,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SmartRoutingHasBeenSet() const;
 
                     /**
-                     * 获取Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxAge Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Browser cache configuration.
+                     * @return MaxAge Browser cache configuration.
                      * 
                      */
                     MaxAge GetMaxAge() const;
 
                     /**
-                     * 设置Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxAge Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Browser cache configuration.
+                     * @param _maxAge Browser cache configuration.
                      * 
                      */
                     void SetMaxAge(const MaxAge& _maxAge);
@@ -370,19 +330,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OfflineCache The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Offline cache configuration.
+                     * @return OfflineCache Offline cache configuration.
                      * 
                      */
                     OfflineCache GetOfflineCache() const;
 
                     /**
-                     * 设置The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _offlineCache The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Offline cache configuration.
+                     * @param _offlineCache Offline cache configuration.
                      * 
                      */
                     void SetOfflineCache(const OfflineCache& _offlineCache);
@@ -396,18 +352,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WebSocket WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     WebSocket GetWebSocket() const;
 
                     /**
                      * 设置WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _webSocket WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetWebSocket(const WebSocket& _webSocket);
@@ -420,19 +372,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WebSocketHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClientIpHeader Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Client IP HTTP Request Headers configuration.
+                     * @return ClientIpHeader Client IP HTTP Request Headers configuration.
                      * 
                      */
                     ClientIpHeader GetClientIpHeader() const;
 
                     /**
-                     * 设置Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _clientIpHeader Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Client IP HTTP Request Headers configuration.
+                     * @param _clientIpHeader Client IP HTTP Request Headers configuration.
                      * 
                      */
                     void SetClientIpHeader(const ClientIpHeader& _clientIpHeader);
@@ -445,19 +393,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClientIpHeaderHasBeenSet() const;
 
                     /**
-                     * 获取Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CachePrefresh Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Cache pre-refresh configuration.
+                     * @return CachePrefresh Cache pre-refresh configuration.
                      * 
                      */
                     CachePrefresh GetCachePrefresh() const;
 
                     /**
-                     * 设置Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cachePrefresh Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Cache pre-refresh configuration.
+                     * @param _cachePrefresh Cache pre-refresh configuration.
                      * 
                      */
                     void SetCachePrefresh(const CachePrefresh& _cachePrefresh);
@@ -470,19 +414,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CachePrefreshHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Ipv6 IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ipv6 access configuration.
+                     * @return Ipv6 Ipv6 access configuration.
                      * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
-                     * 设置IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ipv6 IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Ipv6 access configuration.
+                     * @param _ipv6 Ipv6 access configuration.
                      * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
@@ -495,19 +435,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Https HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Https acceleration configuration.
+                     * @return Https Https acceleration configuration.
                      * 
                      */
                     Https GetHttps() const;
 
                     /**
-                     * 设置HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _https HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Https acceleration configuration.
+                     * @param _https Https acceleration configuration.
                      * 
                      */
                     void SetHttps(const Https& _https);
@@ -520,19 +456,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Configuration of whether to carry the regional information of the client IP during origin-pull.
+                     * @return ClientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
                      * 
                      */
                     ClientIpCountry GetClientIpCountry() const;
 
                     /**
-                     * 设置Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _clientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Configuration of whether to carry the regional information of the client IP during origin-pull.
+                     * @param _clientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
                      * 
                      */
                     void SetClientIpCountry(const ClientIpCountry& _clientIpCountry);
@@ -545,19 +477,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ClientIpCountryHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Grpc Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Grpc protocol supports configuration.
+                     * @return Grpc Grpc protocol supports configuration.
                      * 
                      */
                     Grpc GetGrpc() const;
 
                     /**
-                     * 设置Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _grpc Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Grpc protocol supports configuration.
+                     * @param _grpc Grpc protocol supports configuration.
                      * 
                      */
                     void SetGrpc(const Grpc& _grpc);
@@ -570,19 +498,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool GrpcHasBeenSet() const;
 
                     /**
-                     * 获取Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NetworkErrorLogging Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Network error log configuration.
+                     * @return NetworkErrorLogging Network error log configuration.
                      * 
                      */
                     NetworkErrorLogging GetNetworkErrorLogging() const;
 
                     /**
-                     * 设置Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param _networkErrorLogging Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Network error log configuration.
+                     * @param _networkErrorLogging Network error log configuration.
                      * 
                      */
                     void SetNetworkErrorLogging(const NetworkErrorLogging& _networkErrorLogging);
@@ -595,19 +519,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool NetworkErrorLoggingHasBeenSet() const;
 
                     /**
-                     * 获取Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ImageOptimize Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Image optimization configuration.
+                     * @return ImageOptimize Image optimization configuration.
                      * 
                      */
                     ImageOptimize GetImageOptimize() const;
 
                     /**
-                     * 设置Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _imageOptimize Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Image optimization configuration.
+                     * @param _imageOptimize Image optimization configuration.
                      * 
                      */
                     void SetImageOptimize(const ImageOptimize& _imageOptimize);
@@ -620,19 +540,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ImageOptimizeHasBeenSet() const;
 
                     /**
-                     * 获取Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return AccelerateMainland Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Acceleration optimization configuration for the Chinese mainland.
+                     * @return AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
                      * 
                      */
                     AccelerateMainland GetAccelerateMainland() const;
 
                     /**
-                     * 设置Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param _accelerateMainland Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Acceleration optimization configuration for the Chinese mainland.
+                     * @param _accelerateMainland Acceleration optimization configuration for the Chinese mainland.
                      * 
                      */
                     void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
@@ -645,19 +561,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool AccelerateMainlandHasBeenSet() const;
 
                     /**
-                     * 获取Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StandardDebug Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Standard Debug configuration.
+                     * @return StandardDebug Standard Debug configuration.
                      * 
                      */
                     StandardDebug GetStandardDebug() const;
 
                     /**
-                     * 设置Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _standardDebug Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Standard Debug configuration.
+                     * @param _standardDebug Standard Debug configuration.
                      * 
                      */
                     void SetStandardDebug(const StandardDebug& _standardDebug);
@@ -671,18 +583,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * @return JITVideoProcess Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     JITVideoProcess GetJITVideoProcess() const;
 
                     /**
                      * 设置Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * @param _jITVideoProcess Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     void SetJITVideoProcess(const JITVideoProcess& _jITVideoProcess);
@@ -697,176 +605,153 @@ Note: This field may return null, which indicates a failure to obtain a valid va
                 private:
 
                     /**
-                     * Name of the site
+                     * Site name.
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
 
                     /**
-                     * Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
+                     * Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Node cache key configuration.
                      */
                     CacheKey m_cacheKey;
                     bool m_cacheKeyHasBeenSet;
 
                     /**
-                     * The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Quic access configuration.
                      */
                     Quic m_quic;
                     bool m_quicHasBeenSet;
 
                     /**
-                     * The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * HTTP POST request transmission configuration.
                      */
                     PostMaxSize m_postMaxSize;
                     bool m_postMaxSizeHasBeenSet;
 
                     /**
-                     * Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Intelligent compression configuration.
                      */
                     Compression m_compression;
                     bool m_compressionHasBeenSet;
 
                     /**
-                     * HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Http/2 origin-pull configuration.
                      */
                     UpstreamHttp2 m_upstreamHttp2;
                     bool m_upstreamHttp2HasBeenSet;
 
                     /**
-                     * Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Access protocol mandatory Https redirection configuration.
                      */
                     ForceRedirect m_forceRedirect;
                     bool m_forceRedirectHasBeenSet;
 
                     /**
-                     * Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cache expiration time configuration.
                      */
                     CacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;
 
                     /**
                      * Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Origin m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Smart acceleration configuration.
                      */
                     SmartRouting m_smartRouting;
                     bool m_smartRoutingHasBeenSet;
 
                     /**
-                     * Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Browser cache configuration.
                      */
                     MaxAge m_maxAge;
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Offline cache configuration.
                      */
                     OfflineCache m_offlineCache;
                     bool m_offlineCacheHasBeenSet;
 
                     /**
                      * WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WebSocket m_webSocket;
                     bool m_webSocketHasBeenSet;
 
                     /**
-                     * Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Client IP HTTP Request Headers configuration.
                      */
                     ClientIpHeader m_clientIpHeader;
                     bool m_clientIpHeaderHasBeenSet;
 
                     /**
-                     * Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Cache pre-refresh configuration.
                      */
                     CachePrefresh m_cachePrefresh;
                     bool m_cachePrefreshHasBeenSet;
 
                     /**
-                     * IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ipv6 access configuration.
                      */
                     Ipv6 m_ipv6;
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Https acceleration configuration.
                      */
                     Https m_https;
                     bool m_httpsHasBeenSet;
 
                     /**
-                     * Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Configuration of whether to carry the regional information of the client IP during origin-pull.
                      */
                     ClientIpCountry m_clientIpCountry;
                     bool m_clientIpCountryHasBeenSet;
 
                     /**
-                     * Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Grpc protocol supports configuration.
                      */
                     Grpc m_grpc;
                     bool m_grpcHasBeenSet;
 
                     /**
-                     * Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Network error log configuration.
                      */
                     NetworkErrorLogging m_networkErrorLogging;
                     bool m_networkErrorLoggingHasBeenSet;
 
                     /**
-                     * Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Image optimization configuration.
                      */
                     ImageOptimize m_imageOptimize;
                     bool m_imageOptimizeHasBeenSet;
 
                     /**
-                     * Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Acceleration optimization configuration for the Chinese mainland.
                      */
                     AccelerateMainland m_accelerateMainland;
                     bool m_accelerateMainlandHasBeenSet;
 
                     /**
-                     * Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Standard Debug configuration.
                      */
                     StandardDebug m_standardDebug;
                     bool m_standardDebugHasBeenSet;
 
                     /**
                      * Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     JITVideoProcess m_jITVideoProcess;
                     bool m_jITVideoProcessHasBeenSet;

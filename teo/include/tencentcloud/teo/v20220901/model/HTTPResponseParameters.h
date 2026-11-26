@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
-                     * @return StatusCode Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+                     * 获取status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+                     * @return StatusCode status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
                      * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
-                     * 设置Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
-                     * @param _statusCode Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+                     * 设置status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+                     * @param _statusCode status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
                      * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取Response page id.
-                     * @return ResponsePage Response page id.
+                     * 获取page ID.
+                     * @return ResponsePage page ID.
                      * 
                      */
                     std::string GetResponsePage() const;
 
                     /**
-                     * 设置Response page id.
-                     * @param _responsePage Response page id.
+                     * 设置page ID.
+                     * @param _responsePage page ID.
                      * 
                      */
                     void SetResponsePage(const std::string& _responsePage);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+                     * status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
                      */
                     int64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * Response page id.
+                     * page ID.
                      */
                     std::string m_responsePage;
                     bool m_responsePageHasBeenSet;

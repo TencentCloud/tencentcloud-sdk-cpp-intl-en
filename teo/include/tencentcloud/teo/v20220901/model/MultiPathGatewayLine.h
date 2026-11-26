@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Multi-Channel security gateway line information.
+                * Line information of the multi-channel security gateway
                 */
                 class MultiPathGatewayLine : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
-                     * @return LineId line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
+                     * 获取Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
+                     * @return LineId Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
                      * 
                      */
                     std::string GetLineId() const;
 
                     /**
-                     * 设置line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
-                     * @param _lineId line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
+                     * 设置Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
+                     * @param _lineId Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
                      * 
                      */
                     void SetLineId(const std::string& _lineId);
@@ -80,27 +80,27 @@ namespace TencentCloud
                     bool LineIdHasBeenSet() const;
 
                     /**
-                     * 获取Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
-                     * @return LineType Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
+                     * 获取Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
+                     * @return LineType Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
                      * 
                      */
                     std::string GetLineType() const;
 
                     /**
-                     * 设置Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
-                     * @param _lineType Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
+                     * 设置Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
+                     * @param _lineType Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
                      * 
                      */
                     void SetLineType(const std::string& _lineType);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool LineTypeHasBeenSet() const;
 
                     /**
-                     * 获取Line address in the format host:port.
-                     * @return LineAddress Line address in the format host:port.
+                     * 获取Line address in the format of host:port.
+                     * @return LineAddress Line address in the format of host:port.
                      * 
                      */
                     std::string GetLineAddress() const;
 
                     /**
-                     * 设置Line address in the format host:port.
-                     * @param _lineAddress Line address in the format host:port.
+                     * 设置Line address in the format of host:port.
+                     * @param _lineAddress Line address in the format of host:port.
                      * 
                      */
                     void SetLineAddress(const std::string& _lineAddress);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool LineAddressHasBeenSet() const;
 
                     /**
-                     * 获取Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
-                     * @return ProxyId Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+                     * 获取Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+                     * @return ProxyId Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
                      * 
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
-                     * @param _proxyId Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+                     * 设置Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+                     * @param _proxyId Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
                      * 
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
-                     * @return RuleId Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+                     * 获取Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+                     * @return RuleId Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
-                     * @param _ruleId Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+                     * 设置Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
+                     * @param _ruleId Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -178,37 +178,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-<Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-<Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
+                     * Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+<li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+<li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+<li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
                      */
                     std::string m_lineId;
                     bool m_lineIdHasBeenSet;
 
                     /**
-                     * Line type. valid values:
-<Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-<li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-<Li>custom: Custom line, supports editing and deletion.</li>
+                     * Line type. Valid values:
+<li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+<li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+<li>custom: Custom lines, support editing and deletion.</li>
                      */
                     std::string m_lineType;
                     bool m_lineTypeHasBeenSet;
 
                     /**
-                     * Line address in the format host:port.
+                     * Line address in the format of host:port.
                      */
                     std::string m_lineAddress;
                     bool m_lineAddressHasBeenSet;
 
                     /**
-                     * Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+                     * Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+                     * Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;

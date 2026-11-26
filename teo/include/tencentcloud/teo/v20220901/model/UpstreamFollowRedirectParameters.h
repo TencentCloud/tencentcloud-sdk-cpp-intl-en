@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin-pull redirection parameters configuration
+                * Parameter configuration for origin-pull follow redirect.
                 */
                 class UpstreamFollowRedirectParameters : public AbstractModel
                 {
@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @return Switch Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 获取Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @return Switch Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-                     * @param _switch Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * 设置Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+                     * @param _switch Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,19 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @return MaxTimes The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 获取Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
+                     * @return MaxTimes Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
                      * 
                      */
                     int64_t GetMaxTimes() const;
 
                     /**
-                     * 设置The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-                     * @param _maxTimes The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * 设置Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
+                     * @param _maxTimes Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
                      * 
                      */
                     void SetMaxTimes(const int64_t& _maxTimes);
@@ -107,17 +103,16 @@ Note: this field is required when switch is on; when switch is off, this field i
                 private:
 
                     /**
-                     * Whether to enable origin-pull to follow the redirection configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+                     * Configuration switch for origin-pull follow redirect. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The maximum number of redirects. value range: 1-5.
-Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+                     * Maximum number of redirects. Value range: 1-5.
+Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
                      */
                     int64_t m_maxTimes;
                     bool m_maxTimesHasBeenSet;

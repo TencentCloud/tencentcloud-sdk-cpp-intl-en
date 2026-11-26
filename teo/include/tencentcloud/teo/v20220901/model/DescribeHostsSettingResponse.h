@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of domain names.
-                     * @return DetailHosts List of domain names.
+                     * 获取Domain name list.
+                     * @return DetailHosts Domain name list.
                      * 
                      */
                     std::vector<DetailHost> GetDetailHosts() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool DetailHostsHasBeenSet() const;
 
                     /**
-                     * 获取Number of domain names
-                     * @return TotalNumber Number of domain names
+                     * 获取Number of domain names.
+                     * @return TotalNumber Number of domain names.
                      * 
                      */
                     int64_t GetTotalNumber() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of domain names.
+                     * Domain name list.
                      */
                     std::vector<DetailHost> m_detailHosts;
                     bool m_detailHostsHasBeenSet;
 
                     /**
-                     * Number of domain names
+                     * Number of domain names.
                      */
                     int64_t m_totalNumber;
                     bool m_totalNumberHasBeenSet;

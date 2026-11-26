@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Multi-Channel gateway example instance binding relationship with origin IP ranges and origin IP range details.
+                * Binding relationship between a multi-channel gateway example instance and the origin-pull IP range, as well as the origin-pull IP range details.
                 */
                 class MultiPathGatewayOriginACLInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Describes the currently effective IP range for origin servers.
-                     * @return MultiPathGatewayCurrentOriginACL Describes the currently effective IP range for origin servers.
+                     * 获取Currently effective origin-pull IP range.
+                     * @return MultiPathGatewayCurrentOriginACL Currently effective origin-pull IP range.
                      * 
                      */
                     MultiPathGatewayCurrentOriginACL GetMultiPathGatewayCurrentOriginACL() const;
 
                     /**
-                     * 设置Describes the currently effective IP range for origin servers.
-                     * @param _multiPathGatewayCurrentOriginACL Describes the currently effective IP range for origin servers.
+                     * 设置Currently effective origin-pull IP range.
+                     * @param _multiPathGatewayCurrentOriginACL Currently effective origin-pull IP range.
                      * 
                      */
                     void SetMultiPathGatewayCurrentOriginACL(const MultiPathGatewayCurrentOriginACL& _multiPathGatewayCurrentOriginACL);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool MultiPathGatewayCurrentOriginACLHasBeenSet() const;
 
                     /**
-                     * 获取When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
-                     * @return MultiPathGatewayNextOriginACL When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+                     * 获取When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
+                     * @return MultiPathGatewayNextOriginACL When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
                      * 
                      */
                     MultiPathGatewayNextOriginACL GetMultiPathGatewayNextOriginACL() const;
 
                     /**
-                     * 设置When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
-                     * @param _multiPathGatewayNextOriginACL When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+                     * 设置When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
+                     * @param _multiPathGatewayNextOriginACL When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
                      * 
                      */
                     void SetMultiPathGatewayNextOriginACL(const MultiPathGatewayNextOriginACL& _multiPathGatewayNextOriginACL);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Describes the currently effective IP range for origin servers.
+                     * Currently effective origin-pull IP range.
                      */
                     MultiPathGatewayCurrentOriginACL m_multiPathGatewayCurrentOriginACL;
                     bool m_multiPathGatewayCurrentOriginACLHasBeenSet;
 
                     /**
-                     * When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+                     * When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
                      */
                     MultiPathGatewayNextOriginACL m_multiPathGatewayNextOriginACL;
                     bool m_multiPathGatewayNextOriginACLHasBeenSet;
