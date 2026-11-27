@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data flow manage ID.
-                     * @return DataFlowId Data flow manage ID.
+                     * 获取<p>Data flow management ID</p>
+                     * @return DataFlowId <p>Data flow management ID</p>
                      * 
                      */
                     std::string GetDataFlowId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data flow manage ID.
+                     * <p>Data flow management ID</p>
                      */
                     std::string m_dataFlowId;
                     bool m_dataFlowIdHasBeenSet;

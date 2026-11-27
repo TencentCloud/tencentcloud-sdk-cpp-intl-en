@@ -84,7 +84,7 @@ namespace TencentCloud
                 GetAccountFactoryBaselineOutcomeCallable GetAccountFactoryBaselineCallable(const Model::GetAccountFactoryBaselineRequest& request);
 
                 /**
-                 *This API is used to obtain account factory system baseline items.
+                 *This API is used to obtain Account Factory system baseline items.
                  * @param req ListAccountFactoryBaselineItemsRequest
                  * @return ListAccountFactoryBaselineItemsOutcome
                  */

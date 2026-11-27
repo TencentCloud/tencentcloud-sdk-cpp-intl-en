@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Lifecycle management policy ID.
-                     * @return LifecyclePolicyID Lifecycle management policy ID.
+                     * 获取<p>Lifecycle management policy ID.</p>
+                     * @return LifecyclePolicyID <p>Lifecycle management policy ID.</p>
                      * 
                      */
                     std::string GetLifecyclePolicyID() const;
 
                     /**
-                     * 设置Lifecycle management policy ID.
-                     * @param _lifecyclePolicyID Lifecycle management policy ID.
+                     * 设置<p>Lifecycle management policy ID.</p>
+                     * @param _lifecyclePolicyID <p>Lifecycle management policy ID.</p>
                      * 
                      */
                     void SetLifecyclePolicyID(const std::string& _lifecyclePolicyID);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool LifecyclePolicyIDHasBeenSet() const;
 
                     /**
-                     * 获取List of absolute paths for directories associated with the lifecycle management policy.
-                     * @return Paths List of absolute paths for directories associated with the lifecycle management policy.
+                     * 获取<p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
+                     * @return Paths <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
                      * 
                      */
                     std::vector<PathInfo> GetPaths() const;
 
                     /**
-                     * 设置List of absolute paths for directories associated with the lifecycle management policy.
-                     * @param _paths List of absolute paths for directories associated with the lifecycle management policy.
+                     * 设置<p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
+                     * @param _paths <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
                      * 
                      */
                     void SetPaths(const std::vector<PathInfo>& _paths);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Lifecycle management policy ID.
+                     * <p>Lifecycle management policy ID.</p>
                      */
                     std::string m_lifecyclePolicyID;
                     bool m_lifecyclePolicyIDHasBeenSet;
 
                     /**
-                     * List of absolute paths for directories associated with the lifecycle management policy.
+                     * <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
                      */
                     std::vector<PathInfo> m_paths;
                     bool m_pathsHasBeenSet;

@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Creation time
-                     * @return CreationTime Creation time
+                     * 获取<p>Creation time.</p>
+                     * @return CreationTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _creationTime Creation time
+                     * 设置<p>Creation time.</p>
+                     * @param _creationTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool CreationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Custom name
-                     * @return CreationToken Custom name
+                     * 获取<p>User-defined name.</p>
+                     * @return CreationToken <p>User-defined name.</p>
                      * 
                      */
                     std::string GetCreationToken() const;
 
                     /**
-                     * 设置Custom name
-                     * @param _creationToken Custom name
+                     * 设置<p>User-defined name.</p>
+                     * @param _creationToken <p>User-defined name.</p>
                      * 
                      */
                     void SetCreationToken(const std::string& _creationToken);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool CreationTokenHasBeenSet() const;
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取<p>File system ID.</p>
+                     * @return FileSystemId <p>File system ID.</p>
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID
-                     * @param _fileSystemId File system ID
+                     * 设置<p>File system ID.</p>
+                     * @param _fileSystemId <p>File system ID.</p>
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -115,39 +115,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
-                     * @return LifeCycleState File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
+                     * 获取<p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
+                     * @return LifeCycleState <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
                      * 
                      */
                     std::string GetLifeCycleState() const;
 
                     /**
-                     * 设置File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
-                     * @param _lifeCycleState File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
+                     * 设置<p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
+                     * @param _lifeCycleState <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
                      * 
                      */
                     void SetLifeCycleState(const std::string& _lifeCycleState);
@@ -160,15 +136,15 @@ namespace TencentCloud
                     bool LifeCycleStateHasBeenSet() const;
 
                     /**
-                     * 获取Used capacity of the file system, in Byte.
-                     * @return SizeByte Used capacity of the file system, in Byte.
+                     * 获取<p>Used capacity of the file system. Unit: Byte.</p>
+                     * @return SizeByte <p>Used capacity of the file system. Unit: Byte.</p>
                      * 
                      */
                     uint64_t GetSizeByte() const;
 
                     /**
-                     * 设置Used capacity of the file system, in Byte.
-                     * @param _sizeByte Used capacity of the file system, in Byte.
+                     * 设置<p>Used capacity of the file system. Unit: Byte.</p>
+                     * @param _sizeByte <p>Used capacity of the file system. Unit: Byte.</p>
                      * 
                      */
                     void SetSizeByte(const uint64_t& _sizeByte);
@@ -181,15 +157,15 @@ namespace TencentCloud
                     bool SizeByteHasBeenSet() const;
 
                     /**
-                     * 获取File system space limit, in GiB.
-                     * @return SizeLimit File system space limit, in GiB.
+                     * 获取<p>File system space limit. Unit: GiB.</p>
+                     * @return SizeLimit <p>File system space limit. Unit: GiB.</p>
                      * 
                      */
                     uint64_t GetSizeLimit() const;
 
                     /**
-                     * 设置File system space limit, in GiB.
-                     * @param _sizeLimit File system space limit, in GiB.
+                     * 设置<p>File system space limit. Unit: GiB.</p>
+                     * @param _sizeLimit <p>File system space limit. Unit: GiB.</p>
                      * 
                      */
                     void SetSizeLimit(const uint64_t& _sizeLimit);
@@ -202,15 +178,15 @@ namespace TencentCloud
                     bool SizeLimitHasBeenSet() const;
 
                     /**
-                     * 获取Region ID
-                     * @return ZoneId Region ID
+                     * 获取<p>Region ID.</p>
+                     * @return ZoneId <p>Region ID.</p>
                      * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置Region ID
-                     * @param _zoneId Region ID
+                     * 设置<p>Region ID.</p>
+                     * @param _zoneId <p>Region ID.</p>
                      * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
@@ -223,15 +199,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Region name
-                     * @return Zone Region name
+                     * 获取<p>Region name.</p>
+                     * @return Zone <p>Region name.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Region name
-                     * @param _zone Region name
+                     * 设置<p>Region name.</p>
+                     * @param _zone <p>Region name.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -244,15 +220,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取File system protocol type. Valid values: NFS, CIFS, and TURBO.
-                     * @return Protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
+                     * 获取<p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
+                     * @return Protocol <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置File system protocol type. Valid values: NFS, CIFS, and TURBO.
-                     * @param _protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
+                     * 设置<p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
+                     * @param _protocol <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -265,15 +241,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
-                     * @return StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+                     * 获取<p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
+                     * @return StorageType <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
-                     * @param _storageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+                     * 设置<p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
+                     * @param _storageType <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -286,15 +262,15 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Prepaid storage pack bound with the file system
-                     * @return StorageResourcePkg Prepaid storage pack bound with the file system
+                     * 获取<p>Prepaid storage pack bound to the file system.</p>
+                     * @return StorageResourcePkg <p>Prepaid storage pack bound to the file system.</p>
                      * 
                      */
                     std::string GetStorageResourcePkg() const;
 
                     /**
-                     * 设置Prepaid storage pack bound with the file system
-                     * @param _storageResourcePkg Prepaid storage pack bound with the file system
+                     * 设置<p>Prepaid storage pack bound to the file system.</p>
+                     * @param _storageResourcePkg <p>Prepaid storage pack bound to the file system.</p>
                      * 
                      */
                     void SetStorageResourcePkg(const std::string& _storageResourcePkg);
@@ -307,15 +283,15 @@ namespace TencentCloud
                     bool StorageResourcePkgHasBeenSet() const;
 
                     /**
-                     * 获取Prepaid bandwidth pack bound to a file system (not supported currently)
-                     * @return BandwidthResourcePkg Prepaid bandwidth pack bound to a file system (not supported currently)
+                     * 获取<p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
+                     * @return BandwidthResourcePkg <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
                      * 
                      */
                     std::string GetBandwidthResourcePkg() const;
 
                     /**
-                     * 设置Prepaid bandwidth pack bound to a file system (not supported currently)
-                     * @param _bandwidthResourcePkg Prepaid bandwidth pack bound to a file system (not supported currently)
+                     * 设置<p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
+                     * @param _bandwidthResourcePkg <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
                      * 
                      */
                     void SetBandwidthResourcePkg(const std::string& _bandwidthResourcePkg);
@@ -328,15 +304,15 @@ namespace TencentCloud
                     bool BandwidthResourcePkgHasBeenSet() const;
 
                     /**
-                     * 获取Information of permission groups bound to a file system
-                     * @return PGroup Information of permission groups bound to a file system
+                     * 获取<p>Information of the permission group bound to the file system.</p>
+                     * @return PGroup <p>Information of the permission group bound to the file system.</p>
                      * 
                      */
                     PGroup GetPGroup() const;
 
                     /**
-                     * 设置Information of permission groups bound to a file system
-                     * @param _pGroup Information of permission groups bound to a file system
+                     * 设置<p>Information of the permission group bound to the file system.</p>
+                     * @param _pGroup <p>Information of the permission group bound to the file system.</p>
                      * 
                      */
                     void SetPGroup(const PGroup& _pGroup);
@@ -349,15 +325,15 @@ namespace TencentCloud
                     bool PGroupHasBeenSet() const;
 
                     /**
-                     * 获取Custom name
-                     * @return FsName Custom name
+                     * 获取<p>User-defined name.</p>
+                     * @return FsName <p>User-defined name.</p>
                      * 
                      */
                     std::string GetFsName() const;
 
                     /**
-                     * 设置Custom name
-                     * @param _fsName Custom name
+                     * 设置<p>User-defined name.</p>
+                     * @param _fsName <p>User-defined name.</p>
                      * 
                      */
                     void SetFsName(const std::string& _fsName);
@@ -370,15 +346,15 @@ namespace TencentCloud
                     bool FsNameHasBeenSet() const;
 
                     /**
-                     * 获取Is the file system encrypted. true: encrypted. false: non-encrypted.
-                     * @return Encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
+                     * 获取<p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
+                     * @return Encrypted <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
                      * 
                      */
                     bool GetEncrypted() const;
 
                     /**
-                     * 设置Is the file system encrypted. true: encrypted. false: non-encrypted.
-                     * @param _encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
+                     * 设置<p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
+                     * @param _encrypted <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
                      * 
                      */
                     void SetEncrypted(const bool& _encrypted);
@@ -391,15 +367,15 @@ namespace TencentCloud
                     bool EncryptedHasBeenSet() const;
 
                     /**
-                     * 获取Key used for encryption, which can be the key ID or ARN
-                     * @return KmsKeyId Key used for encryption, which can be the key ID or ARN
+                     * 获取<p>Key used for encryption, which can be the key ID or ARN.</p>
+                     * @return KmsKeyId <p>Key used for encryption, which can be the key ID or ARN.</p>
                      * 
                      */
                     std::string GetKmsKeyId() const;
 
                     /**
-                     * 设置Key used for encryption, which can be the key ID or ARN
-                     * @param _kmsKeyId Key used for encryption, which can be the key ID or ARN
+                     * 设置<p>Key used for encryption, which can be the key ID or ARN.</p>
+                     * @param _kmsKeyId <p>Key used for encryption, which can be the key ID or ARN.</p>
                      * 
                      */
                     void SetKmsKeyId(const std::string& _kmsKeyId);
@@ -412,15 +388,15 @@ namespace TencentCloud
                     bool KmsKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Application ID
-                     * @return AppId Application ID
+                     * 获取<p>Application ID.</p>
+                     * @return AppId <p>Application ID.</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置Application ID
-                     * @param _appId Application ID
+                     * 设置<p>Application ID.</p>
+                     * @param _appId <p>Application ID.</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -433,15 +409,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
-                     * @return BandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+                     * 获取<p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
+                     * @return BandwidthLimit <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
                      * 
                      */
                     double GetBandwidthLimit() const;
 
                     /**
-                     * 设置Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
-                     * @param _bandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+                     * 设置<p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
+                     * @param _bandwidthLimit <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
                      * 
                      */
                     void SetBandwidthLimit(const double& _bandwidthLimit);
@@ -454,15 +430,15 @@ namespace TencentCloud
                     bool BandwidthLimitHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot policy associated with the file system.
-                     * @return AutoSnapshotPolicyId Snapshot policy associated with the file system.
+                     * 获取<p>Snapshot policy associated with the file system.</p>
+                     * @return AutoSnapshotPolicyId <p>Snapshot policy associated with the file system.</p>
                      * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
-                     * 设置Snapshot policy associated with the file system.
-                     * @param _autoSnapshotPolicyId Snapshot policy associated with the file system.
+                     * 设置<p>Snapshot policy associated with the file system.</p>
+                     * @param _autoSnapshotPolicyId <p>Snapshot policy associated with the file system.</p>
                      * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
@@ -475,15 +451,15 @@ namespace TencentCloud
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取File system processes snapshot status, snapping: in snapshot, normal: in normal status.
-                     * @return SnapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+                     * 获取<p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
+                     * @return SnapStatus <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
                      * 
                      */
                     std::string GetSnapStatus() const;
 
                     /**
-                     * 设置File system processes snapshot status, snapping: in snapshot, normal: in normal status.
-                     * @param _snapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+                     * 设置<p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
+                     * @param _snapStatus <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
                      * 
                      */
                     void SetSnapStatus(const std::string& _snapStatus);
@@ -496,19 +472,15 @@ namespace TencentCloud
                     bool SnapStatusHasBeenSet() const;
 
                     /**
-                     * 获取Upper limit of file system capacity.
-Unit: GiB.
-                     * @return Capacity Upper limit of file system capacity.
-Unit: GiB.
+                     * 获取<p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
+                     * @return Capacity <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
                      * 
                      */
                     uint64_t GetCapacity() const;
 
                     /**
-                     * 设置Upper limit of file system capacity.
-Unit: GiB.
-                     * @param _capacity Upper limit of file system capacity.
-Unit: GiB.
+                     * 设置<p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
+                     * @param _capacity <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
                      * 
                      */
                     void SetCapacity(const uint64_t& _capacity);
@@ -521,15 +493,15 @@ Unit: GiB.
                     bool CapacityHasBeenSet() const;
 
                     /**
-                     * 获取File system tag list
-                     * @return Tags File system tag list
+                     * 获取<p>List of file system tags.</p>
+                     * @return Tags <p>List of file system tags.</p>
                      * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置File system tag list
-                     * @param _tags File system tag list
+                     * 设置<p>List of file system tags.</p>
+                     * @param _tags <p>List of file system tags.</p>
                      * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
@@ -542,23 +514,15 @@ Unit: GiB.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
-                     * @return TieringState Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
+                     * 获取<p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
+                     * @return TieringState <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
                      * 
                      */
                     std::string GetTieringState() const;
 
                     /**
-                     * 设置Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
-                     * @param _tieringState Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
+                     * 设置<p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
+                     * @param _tieringState <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
                      * 
                      */
                     void SetTieringState(const std::string& _tieringState);
@@ -571,15 +535,15 @@ Available.
                     bool TieringStateHasBeenSet() const;
 
                     /**
-                     * 获取Layered storage detail.
-                     * @return TieringDetail Layered storage detail.
+                     * 获取<p>Tiered storage details.</p>
+                     * @return TieringDetail <p>Tiered storage details.</p>
                      * 
                      */
                     TieringDetailInfo GetTieringDetail() const;
 
                     /**
-                     * 设置Layered storage detail.
-                     * @param _tieringDetail Layered storage detail.
+                     * 设置<p>Tiered storage details.</p>
+                     * @param _tieringDetail <p>Tiered storage details.</p>
                      * 
                      */
                     void SetTieringDetail(const TieringDetailInfo& _tieringDetail);
@@ -592,15 +556,15 @@ Available.
                     bool TieringDetailHasBeenSet() const;
 
                     /**
-                     * 获取File system auto scale-out policy.
-                     * @return AutoScaleUpRule File system auto scale-out policy.
+                     * 获取<p>Automatic scaling policy of the file system.</p>
+                     * @return AutoScaleUpRule <p>Automatic scaling policy of the file system.</p>
                      * 
                      */
                     AutoScaleUpRule GetAutoScaleUpRule() const;
 
                     /**
-                     * 设置File system auto scale-out policy.
-                     * @param _autoScaleUpRule File system auto scale-out policy.
+                     * 设置<p>Automatic scaling policy of the file system.</p>
+                     * @param _autoScaleUpRule <p>Automatic scaling policy of the file system.</p>
                      * 
                      */
                     void SetAutoScaleUpRule(const AutoScaleUpRule& _autoScaleUpRule);
@@ -613,15 +577,15 @@ Available.
                     bool AutoScaleUpRuleHasBeenSet() const;
 
                     /**
-                     * 获取File System Version
-                     * @return Version File System Version
+                     * 获取<p>File system version.</p>
+                     * @return Version <p>File system version.</p>
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置File System Version
-                     * @param _version File System Version
+                     * 设置<p>File system version.</p>
+                     * @param _version <p>File system version.</p>
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -634,19 +598,15 @@ Available.
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExstraPerformanceInfo Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Additional performance information.</p>
+                     * @return ExstraPerformanceInfo <p>Additional performance information.</p>
                      * 
                      */
                     std::vector<ExstraPerformanceInfo> GetExstraPerformanceInfo() const;
 
                     /**
-                     * 设置Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _exstraPerformanceInfo Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Additional performance information.</p>
+                     * @param _exstraPerformanceInfo <p>Additional performance information.</p>
                      * 
                      */
                     void SetExstraPerformanceInfo(const std::vector<ExstraPerformanceInfo>& _exstraPerformanceInfo);
@@ -659,19 +619,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExstraPerformanceInfoHasBeenSet() const;
 
                     /**
-                     * 获取basic: standard version metadata type.
-enhanced: additional metadata type.
-                     * @return MetaType basic: standard version metadata type.
-enhanced: additional metadata type.
+                     * 获取<p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
+                     * @return MetaType <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
                      * 
                      */
                     std::string GetMetaType() const;
 
                     /**
-                     * 设置basic: standard version metadata type.
-enhanced: additional metadata type.
-                     * @param _metaType basic: standard version metadata type.
-enhanced: additional metadata type.
+                     * 设置<p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
+                     * @param _metaType <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
                      * 
                      */
                     void SetMetaType(const std::string& _metaType);
@@ -683,186 +639,283 @@ enhanced: additional metadata type.
                      */
                     bool MetaTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+                     * @return Scenario <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+                     * 
+                     */
+                    std::string GetScenario() const;
+
+                    /**
+                     * 设置<p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+                     * @param _scenario <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+                     * 
+                     */
+                    void SetScenario(const std::string& _scenario);
+
+                    /**
+                     * 判断参数 Scenario 是否已赋值
+                     * @return Scenario 是否已赋值
+                     * 
+                     */
+                    bool ScenarioHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+                     * @return FullDeleteCapacityUsage <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+                     * 
+                     */
+                    double GetFullDeleteCapacityUsage() const;
+
+                    /**
+                     * 设置<p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+                     * @param _fullDeleteCapacityUsage <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+                     * 
+                     */
+                    void SetFullDeleteCapacityUsage(const double& _fullDeleteCapacityUsage);
+
+                    /**
+                     * 判断参数 FullDeleteCapacityUsage 是否已赋值
+                     * @return FullDeleteCapacityUsage 是否已赋值
+                     * 
+                     */
+                    bool FullDeleteCapacityUsageHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+                     * @return FullDeleteMinTtl <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+                     * 
+                     */
+                    uint64_t GetFullDeleteMinTtl() const;
+
+                    /**
+                     * 设置<p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+                     * @param _fullDeleteMinTtl <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+                     * 
+                     */
+                    void SetFullDeleteMinTtl(const uint64_t& _fullDeleteMinTtl);
+
+                    /**
+                     * 判断参数 FullDeleteMinTtl 是否已赋值
+                     * @return FullDeleteMinTtl 是否已赋值
+                     * 
+                     */
+                    bool FullDeleteMinTtlHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+                     * @return ExpireDeleteTtl <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+                     * 
+                     */
+                    uint64_t GetExpireDeleteTtl() const;
+
+                    /**
+                     * 设置<p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+                     * @param _expireDeleteTtl <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+                     * 
+                     */
+                    void SetExpireDeleteTtl(const uint64_t& _expireDeleteTtl);
+
+                    /**
+                     * 判断参数 ExpireDeleteTtl 是否已赋值
+                     * @return ExpireDeleteTtl 是否已赋值
+                     * 
+                     */
+                    bool ExpireDeleteTtlHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Creation time
+                     * <p>Creation time.</p>
                      */
                     std::string m_creationTime;
                     bool m_creationTimeHasBeenSet;
 
                     /**
-                     * Custom name
+                     * <p>User-defined name.</p>
                      */
                     std::string m_creationToken;
                     bool m_creationTokenHasBeenSet;
 
                     /**
-                     * File system ID
+                     * <p>File system ID.</p>
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
+                     * <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
                      */
                     std::string m_lifeCycleState;
                     bool m_lifeCycleStateHasBeenSet;
 
                     /**
-                     * Used capacity of the file system, in Byte.
+                     * <p>Used capacity of the file system. Unit: Byte.</p>
                      */
                     uint64_t m_sizeByte;
                     bool m_sizeByteHasBeenSet;
 
                     /**
-                     * File system space limit, in GiB.
+                     * <p>File system space limit. Unit: GiB.</p>
                      */
                     uint64_t m_sizeLimit;
                     bool m_sizeLimitHasBeenSet;
 
                     /**
-                     * Region ID
+                     * <p>Region ID.</p>
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Region name
+                     * <p>Region name.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * File system protocol type. Valid values: NFS, CIFS, and TURBO.
+                     * <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+                     * <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Prepaid storage pack bound with the file system
+                     * <p>Prepaid storage pack bound to the file system.</p>
                      */
                     std::string m_storageResourcePkg;
                     bool m_storageResourcePkgHasBeenSet;
 
                     /**
-                     * Prepaid bandwidth pack bound to a file system (not supported currently)
+                     * <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
                      */
                     std::string m_bandwidthResourcePkg;
                     bool m_bandwidthResourcePkgHasBeenSet;
 
                     /**
-                     * Information of permission groups bound to a file system
+                     * <p>Information of the permission group bound to the file system.</p>
                      */
                     PGroup m_pGroup;
                     bool m_pGroupHasBeenSet;
 
                     /**
-                     * Custom name
+                     * <p>User-defined name.</p>
                      */
                     std::string m_fsName;
                     bool m_fsNameHasBeenSet;
 
                     /**
-                     * Is the file system encrypted. true: encrypted. false: non-encrypted.
+                     * <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
                      */
                     bool m_encrypted;
                     bool m_encryptedHasBeenSet;
 
                     /**
-                     * Key used for encryption, which can be the key ID or ARN
+                     * <p>Key used for encryption, which can be the key ID or ARN.</p>
                      */
                     std::string m_kmsKeyId;
                     bool m_kmsKeyIdHasBeenSet;
 
                     /**
-                     * Application ID
+                     * <p>Application ID.</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+                     * <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
                      */
                     double m_bandwidthLimit;
                     bool m_bandwidthLimitHasBeenSet;
 
                     /**
-                     * Snapshot policy associated with the file system.
+                     * <p>Snapshot policy associated with the file system.</p>
                      */
                     std::string m_autoSnapshotPolicyId;
                     bool m_autoSnapshotPolicyIdHasBeenSet;
 
                     /**
-                     * File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+                     * <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
                      */
                     std::string m_snapStatus;
                     bool m_snapStatusHasBeenSet;
 
                     /**
-                     * Upper limit of file system capacity.
-Unit: GiB.
+                     * <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
                      */
                     uint64_t m_capacity;
                     bool m_capacityHasBeenSet;
 
                     /**
-                     * File system tag list
+                     * <p>List of file system tags.</p>
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
+                     * <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
                      */
                     std::string m_tieringState;
                     bool m_tieringStateHasBeenSet;
 
                     /**
-                     * Layered storage detail.
+                     * <p>Tiered storage details.</p>
                      */
                     TieringDetailInfo m_tieringDetail;
                     bool m_tieringDetailHasBeenSet;
 
                     /**
-                     * File system auto scale-out policy.
+                     * <p>Automatic scaling policy of the file system.</p>
                      */
                     AutoScaleUpRule m_autoScaleUpRule;
                     bool m_autoScaleUpRuleHasBeenSet;
 
                     /**
-                     * File System Version
+                     * <p>File system version.</p>
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Additional performance information.</p>
                      */
                     std::vector<ExstraPerformanceInfo> m_exstraPerformanceInfo;
                     bool m_exstraPerformanceInfoHasBeenSet;
 
                     /**
-                     * basic: standard version metadata type.
-enhanced: additional metadata type.
+                     * <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
                      */
                     std::string m_metaType;
                     bool m_metaTypeHasBeenSet;
+
+                    /**
+                     * <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+                     */
+                    std::string m_scenario;
+                    bool m_scenarioHasBeenSet;
+
+                    /**
+                     * <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+                     */
+                    double m_fullDeleteCapacityUsage;
+                    bool m_fullDeleteCapacityUsageHasBeenSet;
+
+                    /**
+                     * <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+                     */
+                    uint64_t m_fullDeleteMinTtl;
+                    bool m_fullDeleteMinTtlHasBeenSet;
+
+                    /**
+                     * <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+                     */
+                    uint64_t m_expireDeleteTtl;
+                    bool m_expireDeleteTtlHasBeenSet;
 
                 };
             }

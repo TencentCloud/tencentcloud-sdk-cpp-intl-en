@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-                     * @return FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * 获取<p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+                     * @return FileSystemId <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-                     * @param _fileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * 设置<p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+                     * @param _fileSystemId <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Source data type; includes S3_COS, S3_L5.
-                     * @return SourceStorageType Source data type; includes S3_COS, S3_L5.
+                     * 获取<p>Source data type. Valid values: S3_COS and S3_L5.</p>
+                     * @return SourceStorageType <p>Source data type. Valid values: S3_COS and S3_L5.</p>
                      * 
                      */
                     std::string GetSourceStorageType() const;
 
                     /**
-                     * 设置Source data type; includes S3_COS, S3_L5.
-                     * @param _sourceStorageType Source data type; includes S3_COS, S3_L5.
+                     * 设置<p>Source data type. Valid values: S3_COS and S3_L5.</p>
+                     * @param _sourceStorageType <p>Source data type. Valid values: S3_COS and S3_L5.</p>
                      * 
                      */
                     void SetSourceStorageType(const std::string& _sourceStorageType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SourceStorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Source storage address.
-                     * @return SourceStorageAddress Source storage address.
+                     * 获取<p>Source storage address</p>
+                     * @return SourceStorageAddress <p>Source storage address</p>
                      * 
                      */
                     std::string GetSourceStorageAddress() const;
 
                     /**
-                     * 设置Source storage address.
-                     * @param _sourceStorageAddress Source storage address.
+                     * 设置<p>Source storage address</p>
+                     * @param _sourceStorageAddress <p>Source storage address</p>
                      * 
                      */
                     void SetSourceStorageAddress(const std::string& _sourceStorageAddress);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SourceStorageAddressHasBeenSet() const;
 
                     /**
-                     * 获取Source path.
-                     * @return SourcePath Source path.
+                     * 获取<p>Source path</p>
+                     * @return SourcePath <p>Source path</p>
                      * 
                      */
                     std::string GetSourcePath() const;
 
                     /**
-                     * 设置Source path.
-                     * @param _sourcePath Source path.
+                     * 设置<p>Source path</p>
+                     * @param _sourcePath <p>Source path</p>
                      * 
                      */
                     void SetSourcePath(const std::string& _sourcePath);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SourcePathHasBeenSet() const;
 
                     /**
-                     * 获取Target path in the file system.
-                     * @return TargetPath Target path in the file system.
+                     * 获取<p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
+                     * @return TargetPath <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
                      * 
                      */
                     std::string GetTargetPath() const;
 
                     /**
-                     * 设置Target path in the file system.
-                     * @param _targetPath Target path in the file system.
+                     * 设置<p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
+                     * @param _targetPath <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
                      * 
                      */
                     void SetTargetPath(const std::string& _targetPath);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TargetPathHasBeenSet() const;
 
                     /**
-                     * 获取Key ID.
-                     * @return SecretId Key ID.
+                     * 获取<p>Secret ID</p>
+                     * @return SecretId <p>Secret ID</p>
                      * 
                      */
                     std::string GetSecretId() const;
 
                     /**
-                     * 设置Key ID.
-                     * @param _secretId Key ID.
+                     * 设置<p>Secret ID</p>
+                     * @param _secretId <p>Secret ID</p>
                      * 
                      */
                     void SetSecretId(const std::string& _secretId);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取key.
-                     * @return SecretKey key.
+                     * 获取<p>Secret key</p>
+                     * @return SecretKey <p>Secret key</p>
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置key.
-                     * @param _secretKey key.
+                     * 设置<p>Secret key</p>
+                     * @param _secretKey <p>Secret key</p>
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
-                     * @return DataFlowName Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+                     * 获取<p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
+                     * @return DataFlowName <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
                      * 
                      */
                     std::string GetDataFlowName() const;
 
                     /**
-                     * 设置Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
-                     * @param _dataFlowName Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+                     * 设置<p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
+                     * @param _dataFlowName <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
                      * 
                      */
                     void SetDataFlowName(const std::string& _dataFlowName);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool DataFlowNameHasBeenSet() const;
 
                     /**
-                     * 获取0: disable auto-update  1: enable auto-update.
-                     * @return AutoRefresh 0: disable auto-update  1: enable auto-update.
+                     * 获取<p>0: Automatic update disabled. 1: Automatic update enabled.</p>
+                     * @return AutoRefresh <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
                      * 
                      */
                     uint64_t GetAutoRefresh() const;
 
                     /**
-                     * 设置0: disable auto-update  1: enable auto-update.
-                     * @param _autoRefresh 0: disable auto-update  1: enable auto-update.
+                     * 设置<p>0: Automatic update disabled. 1: Automatic update enabled.</p>
+                     * @param _autoRefresh <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
                      * 
                      */
                     void SetAutoRefresh(const uint64_t& _autoRefresh);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool AutoRefreshHasBeenSet() const;
 
                     /**
-                     * 获取Topic Parameter used by KafkaConsumer during consumption
-                     * @return UserKafkaTopic Topic Parameter used by KafkaConsumer during consumption
+                     * 获取<p>Topic parameter used by KafkaConsumer for consumption</p>
+                     * @return UserKafkaTopic <p>Topic parameter used by KafkaConsumer for consumption</p>
                      * 
                      */
                     std::string GetUserKafkaTopic() const;
 
                     /**
-                     * 设置Topic Parameter used by KafkaConsumer during consumption
-                     * @param _userKafkaTopic Topic Parameter used by KafkaConsumer during consumption
+                     * 设置<p>Topic parameter used by KafkaConsumer for consumption</p>
+                     * @param _userKafkaTopic <p>Topic parameter used by KafkaConsumer for consumption</p>
                      * 
                      */
                     void SetUserKafkaTopic(const std::string& _userKafkaTopic);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool UserKafkaTopicHasBeenSet() const;
 
                     /**
-                     * 获取	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
-                     * @return ServerAddr 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+                     * 获取<p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+                     * @return ServerAddr <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
                      * 
                      */
                     std::string GetServerAddr() const;
 
                     /**
-                     * 设置	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
-                     * @param _serverAddr 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+                     * 设置<p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+                     * @param _serverAddr <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
                      * 
                      */
                     void SetServerAddr(const std::string& _serverAddr);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool ServerAddrHasBeenSet() const;
 
                     /**
-                     * 获取Kafka consuming user name. example value: name.
-                     * @return UserName Kafka consuming user name. example value: name.
+                     * 获取<p>Kafka consumer username. Example: name</p>
+                     * @return UserName <p>Kafka consumer username. Example: name</p>
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置Kafka consuming user name. example value: name.
-                     * @param _userName Kafka consuming user name. example value: name.
+                     * 设置<p>Kafka consumer username. Example: name</p>
+                     * @param _userName <p>Kafka consumer username. Example: name</p>
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -295,15 +295,15 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Kafka consuming user password. default ${SecretId}#${SecretKey}.
-                     * @return Password Kafka consuming user password. default ${SecretId}#${SecretKey}.
+                     * 获取<p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
+                     * @return Password <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
                      * 
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Kafka consuming user password. default ${SecretId}#${SecretKey}.
-                     * @param _password Kafka consuming user password. default ${SecretId}#${SecretKey}.
+                     * 设置<p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
+                     * @param _password <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
                      * 
                      */
                     void SetPassword(const std::string& _password);
@@ -318,79 +318,79 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Source data type; includes S3_COS, S3_L5.
+                     * <p>Source data type. Valid values: S3_COS and S3_L5.</p>
                      */
                     std::string m_sourceStorageType;
                     bool m_sourceStorageTypeHasBeenSet;
 
                     /**
-                     * Source storage address.
+                     * <p>Source storage address</p>
                      */
                     std::string m_sourceStorageAddress;
                     bool m_sourceStorageAddressHasBeenSet;
 
                     /**
-                     * Source path.
+                     * <p>Source path</p>
                      */
                     std::string m_sourcePath;
                     bool m_sourcePathHasBeenSet;
 
                     /**
-                     * Target path in the file system.
+                     * <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
                      */
                     std::string m_targetPath;
                     bool m_targetPathHasBeenSet;
 
                     /**
-                     * Key ID.
+                     * <p>Secret ID</p>
                      */
                     std::string m_secretId;
                     bool m_secretIdHasBeenSet;
 
                     /**
-                     * key.
+                     * <p>Secret key</p>
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+                     * <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
                      */
                     std::string m_dataFlowName;
                     bool m_dataFlowNameHasBeenSet;
 
                     /**
-                     * 0: disable auto-update  1: enable auto-update.
+                     * <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
                      */
                     uint64_t m_autoRefresh;
                     bool m_autoRefreshHasBeenSet;
 
                     /**
-                     * Topic Parameter used by KafkaConsumer during consumption
+                     * <p>Topic parameter used by KafkaConsumer for consumption</p>
                      */
                     std::string m_userKafkaTopic;
                     bool m_userKafkaTopicHasBeenSet;
 
                     /**
-                     * 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+                     * <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
                      */
                     std::string m_serverAddr;
                     bool m_serverAddrHasBeenSet;
 
                     /**
-                     * Kafka consuming user name. example value: name.
+                     * <p>Kafka consumer username. Example: name</p>
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Kafka consuming user password. default ${SecretId}#${SecretKey}.
+                     * <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

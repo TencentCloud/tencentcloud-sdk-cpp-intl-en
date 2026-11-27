@@ -121,13 +121,13 @@ Note: If the parameter value is user-customized, this array is an empty array.
 <li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
 <li> OBJECT: The parameter value is an object type, and ChoiceProperties are attributes associated with the object type;</li>
 <li> CUSTOM_NUM: user-customized parameter value, integer type;</li>
-<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E4.BF.AE.E6.94.B9.E6.BA.90.E7.AB.99.E4.B8.BAIP.E5.9F.9F.E5.90.8D)
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/api/1145/50471#Example2-Changing-the-origin-server-type-to-IP-domain-name)
                      * @return Type Parameter type.
 <li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
 <li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
 <li> OBJECT: The parameter value is an object type, and ChoiceProperties are attributes associated with the object type;</li>
 <li> CUSTOM_NUM: user-customized parameter value, integer type;</li>
-<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E4.BF.AE.E6.94.B9.E6.BA.90.E7.AB.99.E4.B8.BAIP.E5.9F.9F.E5.90.8D)
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/api/1145/50471#Example2-Changing-the-origin-server-type-to-IP-domain-name)
                      * 
                      */
                     std::string GetType() const;
@@ -138,13 +138,13 @@ Note: If the parameter value is user-customized, this array is an empty array.
 <li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
 <li> OBJECT: The parameter value is an object type, and ChoiceProperties are attributes associated with the object type;</li>
 <li> CUSTOM_NUM: user-customized parameter value, integer type;</li>
-<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E4.BF.AE.E6.94.B9.E6.BA.90.E7.AB.99.E4.B8.BAIP.E5.9F.9F.E5.90.8D)
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/api/1145/50471#Example2-Changing-the-origin-server-type-to-IP-domain-name)
                      * @param _type Parameter type.
 <li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
 <li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
 <li> OBJECT: The parameter value is an object type, and ChoiceProperties are attributes associated with the object type;</li>
 <li> CUSTOM_NUM: user-customized parameter value, integer type;</li>
-<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E4.BF.AE.E6.94.B9.E6.BA.90.E7.AB.99.E4.B8.BAIP.E5.9F.9F.E5.90.8D)
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/api/1145/50471#Example2-Changing-the-origin-server-type-to-IP-domain-name)
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -292,7 +292,7 @@ Note: If the parameter value is user-customized, this array is an empty array.
 <li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
 <li> OBJECT: The parameter value is an object type, and ChoiceProperties are attributes associated with the object type;</li>
 <li> CUSTOM_NUM: user-customized parameter value, integer type;</li>
-<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E4.BF.AE.E6.94.B9.E6.BA.90.E7.AB.99.E4.B8.BAIP.E5.9F.9F.E5.90.8D)
+<li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/api/1145/50471#Example2-Changing-the-origin-server-type-to-IP-domain-name)
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

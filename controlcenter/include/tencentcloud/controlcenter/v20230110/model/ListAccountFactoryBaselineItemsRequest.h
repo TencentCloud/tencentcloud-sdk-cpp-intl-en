@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Maximum number of returned records. value ranges from 0 to 200.
-                     * @return Limit Maximum number of returned records. value ranges from 0 to 200.
+                     * 获取Maximum number of returned records. Value range: 0-200.
+                     * @return Limit Maximum number of returned records. Value range: 0-200.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of returned records. value ranges from 0 to 200.
-                     * @param _limit Maximum number of returned records. value ranges from 0 to 200.
+                     * 设置Maximum number of returned records. Value range: 0-200.
+                     * @param _limit Maximum number of returned records. Value range: 0-200.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. valid values are equal to or greater than 0.
-                     * @return Offset Offset. valid values are equal to or greater than 0.
+                     * 获取Offset. Value range: greater than or equal to 0.
+                     * @return Offset Offset. Value range: greater than or equal to 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. valid values are equal to or greater than 0.
-                     * @param _offset Offset. valid values are equal to or greater than 0.
+                     * 设置Offset. Value range: greater than or equal to 0.
+                     * @param _offset Offset. Value range: greater than or equal to 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Maximum number of returned records. value ranges from 0 to 200.
+                     * Maximum number of returned records. Value range: 0-200.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. valid values are equal to or greater than 0.
+                     * Offset. Value range: greater than or equal to 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

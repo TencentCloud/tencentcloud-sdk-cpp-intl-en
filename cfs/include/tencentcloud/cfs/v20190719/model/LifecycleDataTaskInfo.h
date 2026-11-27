@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID.
-                     * @return TaskId Task ID.
+                     * 获取<p>Task ID.</p>
+                     * @return TaskId <p>Task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID.
-                     * @param _taskId Task ID.
+                     * 设置<p>Task ID.</p>
+                     * @param _taskId <p>Task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -68,31 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
-                     * @return TaskStatus Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
+                     * 获取<p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
+                     * @return TaskStatus <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
                      * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
-                     * 设置Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
-                     * @param _taskStatus Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
+                     * 设置<p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
+                     * @param _taskStatus <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
                      * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
@@ -105,15 +89,15 @@ Stopping: stopping, stopped: stopped.
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取Task creation time
-                     * @return CreationTime Task creation time
+                     * 获取<p>Task creation time</p>
+                     * @return CreationTime <p>Task creation time</p>
                      * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
-                     * 设置Task creation time
-                     * @param _creationTime Task creation time
+                     * 设置<p>Task creation time</p>
+                     * @param _creationTime <p>Task creation time</p>
                      * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
@@ -126,15 +110,15 @@ Stopping: stopping, stopped: stopped.
                     bool CreationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task end time.
-                     * @return FinishTime Task end time.
+                     * 获取<p>Task end time</p>
+                     * @return FinishTime <p>Task end time</p>
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Task end time.
-                     * @param _finishTime Task end time.
+                     * 设置<p>Task end time</p>
+                     * @param _finishTime <p>Task end time</p>
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -147,15 +131,15 @@ Stopping: stopping, stopped: stopped.
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Total files.
-                     * @return FileTotalCount Total files.
+                     * 获取<p>Total number of files</p>
+                     * @return FileTotalCount <p>Total number of files</p>
                      * 
                      */
                     uint64_t GetFileTotalCount() const;
 
                     /**
-                     * 设置Total files.
-                     * @param _fileTotalCount Total files.
+                     * 设置<p>Total number of files</p>
+                     * @param _fileTotalCount <p>Total number of files</p>
                      * 
                      */
                     void SetFileTotalCount(const uint64_t& _fileTotalCount);
@@ -168,15 +152,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of successfully processed files.
-                     * @return FileSuccessedCount Number of successfully processed files.
+                     * 获取<p>Number of files processed successfully</p>
+                     * @return FileSuccessedCount <p>Number of files processed successfully</p>
                      * 
                      */
                     uint64_t GetFileSuccessedCount() const;
 
                     /**
-                     * 设置Number of successfully processed files.
-                     * @param _fileSuccessedCount Number of successfully processed files.
+                     * 设置<p>Number of files processed successfully</p>
+                     * @param _fileSuccessedCount <p>Number of files processed successfully</p>
                      * 
                      */
                     void SetFileSuccessedCount(const uint64_t& _fileSuccessedCount);
@@ -189,15 +173,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileSuccessedCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of failed files.
-                     * @return FileFailedCount Number of failed files.
+                     * 获取<p>Number of files that have failed</p>
+                     * @return FileFailedCount <p>Number of files that have failed</p>
                      * 
                      */
                     uint64_t GetFileFailedCount() const;
 
                     /**
-                     * 设置Number of failed files.
-                     * @param _fileFailedCount Number of failed files.
+                     * 设置<p>Number of files that have failed</p>
+                     * @param _fileFailedCount <p>Number of files that have failed</p>
                      * 
                      */
                     void SetFileFailedCount(const uint64_t& _fileFailedCount);
@@ -210,23 +194,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileFailedCountHasBeenSet() const;
 
                     /**
-                     * 获取File capacity, in Byte.
-
-
-                     * @return FileTotalSize File capacity, in Byte.
-
-
+                     * 获取<p>File size, in bytes</p>
+                     * @return FileTotalSize <p>File size, in bytes</p>
                      * 
                      */
                     uint64_t GetFileTotalSize() const;
 
                     /**
-                     * 设置File capacity, in Byte.
-
-
-                     * @param _fileTotalSize File capacity, in Byte.
-
-
+                     * 设置<p>File size, in bytes</p>
+                     * @param _fileTotalSize <p>File size, in bytes</p>
                      * 
                      */
                     void SetFileTotalSize(const uint64_t& _fileTotalSize);
@@ -239,23 +215,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileTotalSizeHasBeenSet() const;
 
                     /**
-                     * 获取Processed file capacity, in Byte.
-
-
-                     * @return FileSuccessedSize Processed file capacity, in Byte.
-
-
+                     * 获取<p>Size of processed files, in bytes</p>
+                     * @return FileSuccessedSize <p>Size of processed files, in bytes</p>
                      * 
                      */
                     uint64_t GetFileSuccessedSize() const;
 
                     /**
-                     * 设置Processed file capacity, in Byte.
-
-
-                     * @param _fileSuccessedSize Processed file capacity, in Byte.
-
-
+                     * 设置<p>Size of processed files, in bytes</p>
+                     * @param _fileSuccessedSize <p>Size of processed files, in bytes</p>
                      * 
                      */
                     void SetFileSuccessedSize(const uint64_t& _fileSuccessedSize);
@@ -268,19 +236,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileSuccessedSizeHasBeenSet() const;
 
                     /**
-                     * 获取Capacity of processed failed files, in Byte.
-
-                     * @return FileFailedSize Capacity of processed failed files, in Byte.
-
+                     * 获取<p>Size of failed files, in bytes</p>
+                     * @return FileFailedSize <p>Size of failed files, in bytes</p>
                      * 
                      */
                     uint64_t GetFileFailedSize() const;
 
                     /**
-                     * 设置Capacity of processed failed files, in Byte.
-
-                     * @param _fileFailedSize Capacity of processed failed files, in Byte.
-
+                     * 设置<p>Size of failed files, in bytes</p>
+                     * @param _fileFailedSize <p>Size of failed files, in bytes</p>
                      * 
                      */
                     void SetFileFailedSize(const uint64_t& _fileFailedSize);
@@ -293,15 +257,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileFailedSizeHasBeenSet() const;
 
                     /**
-                     * 获取Total file list.
-                     * @return FileTotalList Total file list.
+                     * 获取<p>Total file list.</p>
+                     * @return FileTotalList <p>Total file list.</p>
                      * 
                      */
                     std::string GetFileTotalList() const;
 
                     /**
-                     * 设置Total file list.
-                     * @param _fileTotalList Total file list.
+                     * 设置<p>Total file list.</p>
+                     * @param _fileTotalList <p>Total file list.</p>
                      * 
                      */
                     void SetFileTotalList(const std::string& _fileTotalList);
@@ -314,15 +278,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileTotalListHasBeenSet() const;
 
                     /**
-                     * 获取List of successful files.
-                     * @return FileSuccessedList List of successful files.
+                     * 获取<p>List of successful files.</p>
+                     * @return FileSuccessedList <p>List of successful files.</p>
                      * 
                      */
                     std::string GetFileSuccessedList() const;
 
                     /**
-                     * 设置List of successful files.
-                     * @param _fileSuccessedList List of successful files.
+                     * 设置<p>List of successful files.</p>
+                     * @param _fileSuccessedList <p>List of successful files.</p>
                      * 
                      */
                     void SetFileSuccessedList(const std::string& _fileSuccessedList);
@@ -335,15 +299,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileSuccessedListHasBeenSet() const;
 
                     /**
-                     * 获取List of failed files.
-                     * @return FileFailedList List of failed files.
+                     * 获取<p>List of failed files.</p>
+                     * @return FileFailedList <p>List of failed files.</p>
                      * 
                      */
                     std::string GetFileFailedList() const;
 
                     /**
-                     * 设置List of failed files.
-                     * @param _fileFailedList List of failed files.
+                     * 设置<p>List of failed files.</p>
+                     * @param _fileFailedList <p>List of failed files.</p>
                      * 
                      */
                     void SetFileFailedList(const std::string& _fileFailedList);
@@ -356,15 +320,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileFailedListHasBeenSet() const;
 
                     /**
-                     * 获取FileSystemId
-                     * @return FileSystemId FileSystemId
+                     * 获取<p>FileSystemId</p>
+                     * @return FileSystemId <p>FileSystemId</p>
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置FileSystemId
-                     * @param _fileSystemId FileSystemId
+                     * 设置<p>FileSystemId</p>
+                     * @param _fileSystemId <p>FileSystemId</p>
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -377,15 +341,15 @@ Stopping: stopping, stopped: stopped.
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Task name.
-                     * @return TaskName Task name.
+                     * 获取<p>Task name.</p>
+                     * @return TaskName <p>Task name.</p>
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置Task name.
-                     * @param _taskName Task name.
+                     * 设置<p>Task name.</p>
+                     * @param _taskName <p>Task name.</p>
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -398,15 +362,15 @@ Stopping: stopping, stopped: stopped.
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取Task path.
-                     * @return TaskPath Task path.
+                     * 获取<p>Task path.</p>
+                     * @return TaskPath <p>Task path.</p>
                      * 
                      */
                     std::string GetTaskPath() const;
 
                     /**
-                     * 设置Task path.
-                     * @param _taskPath Task path.
+                     * 设置<p>Task path.</p>
+                     * @param _taskPath <p>Task path.</p>
                      * 
                      */
                     void SetTaskPath(const std::string& _taskPath);
@@ -419,15 +383,15 @@ Stopping: stopping, stopped: stopped.
                     bool TaskPathHasBeenSet() const;
 
                     /**
-                     * 获取Task type, archive: indicates settlement task, restore: indicates pull task.
-                     * @return Type Task type, archive: indicates settlement task, restore: indicates pull task.
+                     * 获取<p>Task type. archive: an archiving task. restore: a retrieval task.</p>
+                     * @return Type <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Task type, archive: indicates settlement task, restore: indicates pull task.
-                     * @param _type Task type, archive: indicates settlement task, restore: indicates pull task.
+                     * 设置<p>Task type. archive: an archiving task. restore: a retrieval task.</p>
+                     * @param _type <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -440,15 +404,15 @@ Stopping: stopping, stopped: stopped.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Data flow Id.
-                     * @return DataFlowId Data flow Id.
+                     * 获取<p>Data flow Id.</p>
+                     * @return DataFlowId <p>Data flow Id.</p>
                      * 
                      */
                     std::string GetDataFlowId() const;
 
                     /**
-                     * 设置Data flow Id.
-                     * @param _dataFlowId Data flow Id.
+                     * 设置<p>Data flow Id.</p>
+                     * @param _dataFlowId <p>Data flow Id.</p>
                      * 
                      */
                     void SetDataFlowId(const std::string& _dataFlowId);
@@ -461,35 +425,15 @@ Stopping: stopping, stopped: stopped.
                     bool DataFlowIdHasBeenSet() const;
 
                     /**
-                     * 获取When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
-                     * @return IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+                     * 获取<p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
+                     * @return IsOverwrite <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
                      * 
                      */
                     bool GetIsOverwrite() const;
 
                     /**
-                     * 设置When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
-                     * @param _isOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+                     * 设置<p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
+                     * @param _isOverwrite <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
                      * 
                      */
                     void SetIsOverwrite(const bool& _isOverwrite);
@@ -501,135 +445,148 @@ Default false when empty.
                      */
                     bool IsOverwriteHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * @return ListPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * 
+                     */
+                    std::string GetListPath() const;
+
+                    /**
+                     * 设置<p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * @param _listPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * 
+                     */
+                    void SetListPath(const std::string& _listPath);
+
+                    /**
+                     * 判断参数 ListPath 是否已赋值
+                     * @return ListPath 是否已赋值
+                     * 
+                     */
+                    bool ListPathHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task ID.
+                     * <p>Task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
+                     * <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * Task creation time
+                     * <p>Task creation time</p>
                      */
                     std::string m_creationTime;
                     bool m_creationTimeHasBeenSet;
 
                     /**
-                     * Task end time.
+                     * <p>Task end time</p>
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * Total files.
+                     * <p>Total number of files</p>
                      */
                     uint64_t m_fileTotalCount;
                     bool m_fileTotalCountHasBeenSet;
 
                     /**
-                     * Number of successfully processed files.
+                     * <p>Number of files processed successfully</p>
                      */
                     uint64_t m_fileSuccessedCount;
                     bool m_fileSuccessedCountHasBeenSet;
 
                     /**
-                     * Number of failed files.
+                     * <p>Number of files that have failed</p>
                      */
                     uint64_t m_fileFailedCount;
                     bool m_fileFailedCountHasBeenSet;
 
                     /**
-                     * File capacity, in Byte.
-
-
+                     * <p>File size, in bytes</p>
                      */
                     uint64_t m_fileTotalSize;
                     bool m_fileTotalSizeHasBeenSet;
 
                     /**
-                     * Processed file capacity, in Byte.
-
-
+                     * <p>Size of processed files, in bytes</p>
                      */
                     uint64_t m_fileSuccessedSize;
                     bool m_fileSuccessedSizeHasBeenSet;
 
                     /**
-                     * Capacity of processed failed files, in Byte.
-
+                     * <p>Size of failed files, in bytes</p>
                      */
                     uint64_t m_fileFailedSize;
                     bool m_fileFailedSizeHasBeenSet;
 
                     /**
-                     * Total file list.
+                     * <p>Total file list.</p>
                      */
                     std::string m_fileTotalList;
                     bool m_fileTotalListHasBeenSet;
 
                     /**
-                     * List of successful files.
+                     * <p>List of successful files.</p>
                      */
                     std::string m_fileSuccessedList;
                     bool m_fileSuccessedListHasBeenSet;
 
                     /**
-                     * List of failed files.
+                     * <p>List of failed files.</p>
                      */
                     std::string m_fileFailedList;
                     bool m_fileFailedListHasBeenSet;
 
                     /**
-                     * FileSystemId
+                     * <p>FileSystemId</p>
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Task name.
+                     * <p>Task name.</p>
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * Task path.
+                     * <p>Task path.</p>
                      */
                     std::string m_taskPath;
                     bool m_taskPathHasBeenSet;
 
                     /**
-                     * Task type, archive: indicates settlement task, restore: indicates pull task.
+                     * <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Data flow Id.
+                     * <p>Data flow Id.</p>
                      */
                     std::string m_dataFlowId;
                     bool m_dataFlowIdHasBeenSet;
 
                     /**
-                     * When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+                     * <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
                      */
                     bool m_isOverwrite;
                     bool m_isOverwriteHasBeenSet;
+
+                    /**
+                     * <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     */
+                    std::string m_listPath;
+                    bool m_listPathHasBeenSet;
 
                 };
             }

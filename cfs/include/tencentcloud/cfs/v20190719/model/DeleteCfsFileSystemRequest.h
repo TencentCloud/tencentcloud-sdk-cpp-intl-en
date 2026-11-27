@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
-                     * @return FileSystemId File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+                     * 获取File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
+                     * @return FileSystemId File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
-                     * @param _fileSystemId File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+                     * 设置File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
+                     * @param _fileSystemId File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+                     * File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;

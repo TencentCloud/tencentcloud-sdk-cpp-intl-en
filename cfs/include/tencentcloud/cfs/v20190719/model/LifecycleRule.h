@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
-                     * @return StorageType Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+                     * 获取<p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
+                     * @return StorageType <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
-                     * @param _storageType Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+                     * 设置<p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
+                     * @param _storageType <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
-                     * @return FileType Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+                     * 获取<p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
+                     * @return FileType <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
-                     * @param _fileType Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+                     * 设置<p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
+                     * @param _fileType <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
-                     * @return Action Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+                     * 获取<p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
+                     * @return Action <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
                      * 
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
-                     * @param _action Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+                     * 设置<p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
+                     * @param _action <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
                      * 
                      */
                     void SetAction(const std::string& _action);
@@ -110,19 +110,15 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Interval Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
+                     * @return Interval <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
                      * 
                      */
                     std::string GetInterval() const;
 
                     /**
-                     * 设置Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _interval Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
+                     * @param _interval <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
                      * 
                      */
                     void SetInterval(const std::string& _interval);
@@ -135,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileMaxSize Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+                     * @return FileMaxSize <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
                      * 
                      */
                     std::string GetFileMaxSize() const;
 
                     /**
-                     * 设置Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileMaxSize Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+                     * @param _fileMaxSize <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
                      * 
                      */
                     void SetFileMaxSize(const std::string& _fileMaxSize);
@@ -160,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileMaxSizeHasBeenSet() const;
 
                     /**
-                     * 获取Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileMinSize Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+                     * @return FileMinSize <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
                      * 
                      */
                     std::string GetFileMinSize() const;
 
                     /**
-                     * 设置Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileMinSize Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+                     * @param _fileMinSize <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
                      * 
                      */
                     void SetFileMinSize(const std::string& _fileMinSize);
@@ -185,15 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileMinSizeHasBeenSet() const;
 
                     /**
-                     * 获取Policy type.
-                     * @return PolicyType Policy type.
+                     * 获取<p>Policy type</p>
+                     * @return PolicyType <p>Policy type</p>
                      * 
                      */
                     std::string GetPolicyType() const;
 
                     /**
-                     * 设置Policy type.
-                     * @param _policyType Policy type.
+                     * 设置<p>Policy type</p>
+                     * @param _policyType <p>Policy type</p>
                      * 
                      */
                     void SetPolicyType(const std::string& _policyType);
@@ -206,15 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
-                     * 获取Threshold range: 10-90.
-                     * @return ExpireThreshold Threshold range: 10-90.
+                     * 获取<p>Threshold range [10-90]</p>
+                     * @return ExpireThreshold <p>Threshold range [10-90]</p>
                      * 
                      */
                     uint64_t GetExpireThreshold() const;
 
                     /**
-                     * 设置Threshold range: 10-90.
-                     * @param _expireThreshold Threshold range: 10-90.
+                     * 设置<p>Threshold range [10-90]</p>
+                     * @param _expireThreshold <p>Threshold range [10-90]</p>
                      * 
                      */
                     void SetExpireThreshold(const uint64_t& _expireThreshold);
@@ -227,15 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpireThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Threshold range: 10-90.
-                     * @return TargetThreshold Threshold range: 10-90.
+                     * 获取<p>Threshold range [10-90]</p>
+                     * @return TargetThreshold <p>Threshold range [10-90]</p>
                      * 
                      */
                     uint64_t GetTargetThreshold() const;
 
                     /**
-                     * 设置Threshold range: 10-90.
-                     * @param _targetThreshold Threshold range: 10-90.
+                     * 设置<p>Threshold range [10-90]</p>
+                     * @param _targetThreshold <p>Threshold range [10-90]</p>
                      * 
                      */
                     void SetTargetThreshold(const uint64_t& _targetThreshold);
@@ -248,39 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TargetThresholdHasBeenSet() const;
 
                     /**
-                     * 获取When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
-                     * @return IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+                     * 获取<p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
+                     * @return IsOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
                      * 
                      */
                     bool GetIsOverwrite() const;
 
                     /**
-                     * 设置When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
-                     * @param _isOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+                     * 设置<p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
+                     * @param _isOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
                      * 
                      */
                     void SetIsOverwrite(const bool& _isOverwrite);
@@ -292,76 +256,148 @@ Default false when empty.
                      */
                     bool IsOverwriteHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * @return IsCreateRealTimeSync <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * 
+                     */
+                    bool GetIsCreateRealTimeSync() const;
+
+                    /**
+                     * 设置<p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * @param _isCreateRealTimeSync <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * 
+                     */
+                    void SetIsCreateRealTimeSync(const bool& _isCreateRealTimeSync);
+
+                    /**
+                     * 判断参数 IsCreateRealTimeSync 是否已赋值
+                     * @return IsCreateRealTimeSync 是否已赋值
+                     * 
+                     */
+                    bool IsCreateRealTimeSyncHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+                     * @return IsModifyRealTimeSync <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+                     * 
+                     */
+                    bool GetIsModifyRealTimeSync() const;
+
+                    /**
+                     * 设置<p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+                     * @param _isModifyRealTimeSync <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+                     * 
+                     */
+                    void SetIsModifyRealTimeSync(const bool& _isModifyRealTimeSync);
+
+                    /**
+                     * 判断参数 IsModifyRealTimeSync 是否已赋值
+                     * @return IsModifyRealTimeSync 是否已赋值
+                     * 
+                     */
+                    bool IsModifyRealTimeSyncHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * @return IsSyncDelete <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * 
+                     */
+                    bool GetIsSyncDelete() const;
+
+                    /**
+                     * 设置<p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * @param _isSyncDelete <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     * 
+                     */
+                    void SetIsSyncDelete(const bool& _isSyncDelete);
+
+                    /**
+                     * 判断参数 IsSyncDelete 是否已赋值
+                     * @return IsSyncDelete 是否已赋值
+                     * 
+                     */
+                    bool IsSyncDeleteHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+                     * <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+                     * <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+                     * <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
                      */
                     std::string m_fileMaxSize;
                     bool m_fileMaxSizeHasBeenSet;
 
                     /**
-                     * Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
                      */
                     std::string m_fileMinSize;
                     bool m_fileMinSizeHasBeenSet;
 
                     /**
-                     * Policy type.
+                     * <p>Policy type</p>
                      */
                     std::string m_policyType;
                     bool m_policyTypeHasBeenSet;
 
                     /**
-                     * Threshold range: 10-90.
+                     * <p>Threshold range [10-90]</p>
                      */
                     uint64_t m_expireThreshold;
                     bool m_expireThresholdHasBeenSet;
 
                     /**
-                     * Threshold range: 10-90.
+                     * <p>Threshold range [10-90]</p>
                      */
                     uint64_t m_targetThreshold;
                     bool m_targetThresholdHasBeenSet;
 
                     /**
-                     * When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+                     * <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
                      */
                     bool m_isOverwrite;
                     bool m_isOverwriteHasBeenSet;
+
+                    /**
+                     * <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     */
+                    bool m_isCreateRealTimeSync;
+                    bool m_isCreateRealTimeSyncHasBeenSet;
+
+                    /**
+                     * <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+                     */
+                    bool m_isModifyRealTimeSync;
+                    bool m_isModifyRealTimeSyncHasBeenSet;
+
+                    /**
+                     * <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+                     */
+                    bool m_isSyncDelete;
+                    bool m_isSyncDeleteHasBeenSet;
 
                 };
             }

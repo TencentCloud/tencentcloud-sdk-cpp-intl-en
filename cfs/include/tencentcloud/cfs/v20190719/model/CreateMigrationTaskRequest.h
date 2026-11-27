@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Migration task name
-                     * @return TaskName Migration task name
+                     * 获取<p>Migration task name.</p>
+                     * @return TaskName <p>Migration task name.</p>
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置Migration task name
-                     * @param _taskName Migration task name
+                     * 设置<p>Migration task name.</p>
+                     * @param _taskName <p>Migration task name.</p>
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
-                     * @return MigrationType Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+                     * 获取<p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
+                     * @return MigrationType <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
                      * 
                      */
                     uint64_t GetMigrationType() const;
 
                     /**
-                     * 设置Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
-                     * @param _migrationType Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+                     * 设置<p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
+                     * @param _migrationType <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
                      * 
                      */
                     void SetMigrationType(const uint64_t& _migrationType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MigrationTypeHasBeenSet() const;
 
                     /**
-                     * 获取Migration mode. Default value: `0` (full migration).
-                     * @return MigrationMode Migration mode. Default value: `0` (full migration).
+                     * 获取<p>Migration mode. Default value: 0. 0: Full migration.</p>
+                     * @return MigrationMode <p>Migration mode. Default value: 0. 0: Full migration.</p>
                      * 
                      */
                     uint64_t GetMigrationMode() const;
 
                     /**
-                     * 设置Migration mode. Default value: `0` (full migration).
-                     * @param _migrationMode Migration mode. Default value: `0` (full migration).
+                     * 设置<p>Migration mode. Default value: 0. 0: Full migration.</p>
+                     * @param _migrationMode <p>Migration mode. Default value: 0. 0: Full migration.</p>
                      * 
                      */
                     void SetMigrationMode(const uint64_t& _migrationMode);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MigrationModeHasBeenSet() const;
 
                     /**
-                     * 获取SecretId of the data source account.
-                     * @return SrcSecretId SecretId of the data source account.
+                     * 获取<p>SecretId of the data source account.</p>
+                     * @return SrcSecretId <p>SecretId of the data source account.</p>
                      * 
                      */
                     std::string GetSrcSecretId() const;
 
                     /**
-                     * 设置SecretId of the data source account.
-                     * @param _srcSecretId SecretId of the data source account.
+                     * 设置<p>SecretId of the data source account.</p>
+                     * @param _srcSecretId <p>SecretId of the data source account.</p>
                      * 
                      */
                     void SetSrcSecretId(const std::string& _srcSecretId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SrcSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取SecretKey of the data source account.
-                     * @return SrcSecretKey SecretKey of the data source account.
+                     * 获取<p>SecretKey of the data source account.</p>
+                     * @return SrcSecretKey <p>SecretKey of the data source account.</p>
                      * 
                      */
                     std::string GetSrcSecretKey() const;
 
                     /**
-                     * 设置SecretKey of the data source account.
-                     * @param _srcSecretKey SecretKey of the data source account.
+                     * 设置<p>SecretKey of the data source account.</p>
+                     * @param _srcSecretKey <p>SecretKey of the data source account.</p>
                      * 
                      */
                     void SetSrcSecretKey(const std::string& _srcSecretKey);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool SrcSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-                     * @return FileSystemId File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * 获取<p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+                     * @return FileSystemId <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-                     * @param _fileSystemId File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * 设置<p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+                     * @param _fileSystemId <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取File system path
-                     * @return FsPath File system path
+                     * 获取<p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
+                     * @return FsPath <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
                      * 
                      */
                     std::string GetFsPath() const;
 
                     /**
-                     * 设置File system path
-                     * @param _fsPath File system path
+                     * 设置<p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
+                     * @param _fsPath <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
                      * 
                      */
                     void SetFsPath(const std::string& _fsPath);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool FsPathHasBeenSet() const;
 
                     /**
-                     * 获取Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
-                     * @return CoverType Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+                     * 获取<p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
+                     * @return CoverType <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
                      * 
                      */
                     uint64_t GetCoverType() const;
 
                     /**
-                     * 设置Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
-                     * @param _coverType Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+                     * 设置<p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
+                     * @param _coverType <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
                      * 
                      */
                     void SetCoverType(const uint64_t& _coverType);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool CoverTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
-                     * @return SrcService Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+                     * 获取<p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
+                     * @return SrcService <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
                      * 
                      */
                     std::string GetSrcService() const;
 
                     /**
-                     * 设置Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
-                     * @param _srcService Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+                     * 设置<p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
+                     * @param _srcService <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
                      * 
                      */
                     void SetSrcService(const std::string& _srcService);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool SrcServiceHasBeenSet() const;
 
                     /**
-                     * 获取Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
-                     * @return BucketName Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+                     * 获取<p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+                     * @return BucketName <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
                      * 
                      */
                     std::string GetBucketName() const;
 
                     /**
-                     * 设置Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
-                     * @param _bucketName Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+                     * 设置<p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+                     * @param _bucketName <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
                      * 
                      */
                     void SetBucketName(const std::string& _bucketName);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool BucketNameHasBeenSet() const;
 
                     /**
-                     * 获取Data source bucket region
-                     * @return BucketRegion Data source bucket region
+                     * 获取<p>Region of the data source bucket.</p>
+                     * @return BucketRegion <p>Region of the data source bucket.</p>
                      * 
                      */
                     std::string GetBucketRegion() const;
 
                     /**
-                     * 设置Data source bucket region
-                     * @param _bucketRegion Data source bucket region
+                     * 设置<p>Region of the data source bucket.</p>
+                     * @param _bucketRegion <p>Region of the data source bucket.</p>
                      * 
                      */
                     void SetBucketRegion(const std::string& _bucketRegion);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool BucketRegionHasBeenSet() const;
 
                     /**
-                     * 获取Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
-                     * @return BucketAddress Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+                     * 获取<p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+                     * @return BucketAddress <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
                      * 
                      */
                     std::string GetBucketAddress() const;
 
                     /**
-                     * 设置Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
-                     * @param _bucketAddress Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+                     * 设置<p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+                     * @param _bucketAddress <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
                      * 
                      */
                     void SetBucketAddress(const std::string& _bucketAddress);
@@ -295,15 +295,15 @@ namespace TencentCloud
                     bool BucketAddressHasBeenSet() const;
 
                     /**
-                     * 获取List address. This parameter is required if `MigrationType` is set to `1` (list).
-                     * @return ListAddress List address. This parameter is required if `MigrationType` is set to `1` (list).
+                     * 获取<p>Inventory address. Required when the migration mode is inventory migration.</p>
+                     * @return ListAddress <p>Inventory address. Required when the migration mode is inventory migration.</p>
                      * 
                      */
                     std::string GetListAddress() const;
 
                     /**
-                     * 设置List address. This parameter is required if `MigrationType` is set to `1` (list).
-                     * @param _listAddress List address. This parameter is required if `MigrationType` is set to `1` (list).
+                     * 设置<p>Inventory address. Required when the migration mode is inventory migration.</p>
+                     * @param _listAddress <p>Inventory address. Required when the migration mode is inventory migration.</p>
                      * 
                      */
                     void SetListAddress(const std::string& _listAddress);
@@ -316,15 +316,15 @@ namespace TencentCloud
                     bool ListAddressHasBeenSet() const;
 
                     /**
-                     * 获取Target file system name
-                     * @return FsName Target file system name
+                     * 获取<p>Name of the destination file system.</p>
+                     * @return FsName <p>Name of the destination file system.</p>
                      * 
                      */
                     std::string GetFsName() const;
 
                     /**
-                     * 设置Target file system name
-                     * @param _fsName Target file system name
+                     * 设置<p>Name of the destination file system.</p>
+                     * @param _fsName <p>Name of the destination file system.</p>
                      * 
                      */
                     void SetFsName(const std::string& _fsName);
@@ -337,15 +337,15 @@ namespace TencentCloud
                     bool FsNameHasBeenSet() const;
 
                     /**
-                     * 获取Source bucket path, defaults to /.
-                     * @return BucketPath Source bucket path, defaults to /.
+                     * 获取<p>Source bucket path. Default value: /.</p>
+                     * @return BucketPath <p>Source bucket path. Default value: /.</p>
                      * 
                      */
                     std::string GetBucketPath() const;
 
                     /**
-                     * 设置Source bucket path, defaults to /.
-                     * @param _bucketPath Source bucket path, defaults to /.
+                     * 设置<p>Source bucket path. Default value: /.</p>
+                     * @param _bucketPath <p>Source bucket path. Default value: /.</p>
                      * 
                      */
                     void SetBucketPath(const std::string& _bucketPath);
@@ -358,15 +358,15 @@ namespace TencentCloud
                     bool BucketPathHasBeenSet() const;
 
                     /**
-                     * 获取Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
-                     * @return Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     * 获取<p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
+                     * @return Direction <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
-                     * 设置Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
-                     * @param _direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     * 设置<p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
+                     * @param _direction <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
                      * 
                      */
                     void SetDirection(const uint64_t& _direction);
@@ -381,97 +381,97 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Migration task name
+                     * <p>Migration task name.</p>
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+                     * <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
                      */
                     uint64_t m_migrationType;
                     bool m_migrationTypeHasBeenSet;
 
                     /**
-                     * Migration mode. Default value: `0` (full migration).
+                     * <p>Migration mode. Default value: 0. 0: Full migration.</p>
                      */
                     uint64_t m_migrationMode;
                     bool m_migrationModeHasBeenSet;
 
                     /**
-                     * SecretId of the data source account.
+                     * <p>SecretId of the data source account.</p>
                      */
                     std::string m_srcSecretId;
                     bool m_srcSecretIdHasBeenSet;
 
                     /**
-                     * SecretKey of the data source account.
+                     * <p>SecretKey of the data source account.</p>
                      */
                     std::string m_srcSecretKey;
                     bool m_srcSecretKeyHasBeenSet;
 
                     /**
-                     * File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+                     * <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * File system path
+                     * <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
                      */
                     std::string m_fsPath;
                     bool m_fsPathHasBeenSet;
 
                     /**
-                     * Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+                     * <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
                      */
                     uint64_t m_coverType;
                     bool m_coverTypeHasBeenSet;
 
                     /**
-                     * Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+                     * <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
                      */
                     std::string m_srcService;
                     bool m_srcServiceHasBeenSet;
 
                     /**
-                     * Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+                     * <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
                      */
                     std::string m_bucketName;
                     bool m_bucketNameHasBeenSet;
 
                     /**
-                     * Data source bucket region
+                     * <p>Region of the data source bucket.</p>
                      */
                     std::string m_bucketRegion;
                     bool m_bucketRegionHasBeenSet;
 
                     /**
-                     * Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+                     * <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
                      */
                     std::string m_bucketAddress;
                     bool m_bucketAddressHasBeenSet;
 
                     /**
-                     * List address. This parameter is required if `MigrationType` is set to `1` (list).
+                     * <p>Inventory address. Required when the migration mode is inventory migration.</p>
                      */
                     std::string m_listAddress;
                     bool m_listAddressHasBeenSet;
 
                     /**
-                     * Target file system name
+                     * <p>Name of the destination file system.</p>
                      */
                     std::string m_fsName;
                     bool m_fsNameHasBeenSet;
 
                     /**
-                     * Source bucket path, defaults to /.
+                     * <p>Source bucket path. Default value: /.</p>
                      */
                     std::string m_bucketPath;
                     bool m_bucketPathHasBeenSet;
 
                     /**
-                     * Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+                     * <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
                      */
                     uint64_t m_direction;
                     bool m_directionHasBeenSet;

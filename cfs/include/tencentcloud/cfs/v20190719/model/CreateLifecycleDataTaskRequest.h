@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system unique ID.
-                     * @return FileSystemId File system unique ID.
+                     * 获取<p>Unique file system ID.</p>
+                     * @return FileSystemId <p>Unique file system ID.</p>
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system unique ID.
-                     * @param _fileSystemId File system unique ID.
+                     * 设置<p>Unique file system ID.</p>
+                     * @param _fileSystemId <p>Unique file system ID.</p>
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
-                     * @return Type Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
+                     * 获取<p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
+                     * @return Type <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
-                     * @param _type Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
+                     * 设置<p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
+                     * @param _type <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Task name.
-                     * @return TaskName Task name.
+                     * 获取<p>Task name.</p>
+                     * @return TaskName <p>Task name.</p>
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置Task name.
-                     * @param _taskName Task name.
+                     * 设置<p>Task name.</p>
+                     * @param _taskName <p>Task name.</p>
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取The path or file to be settled supports passing only one path and cannot be empty.
-                     * @return TaskPath The path or file to be settled supports passing only one path and cannot be empty.
+                     * 获取<p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
+                     * @return TaskPath <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
                      * 
                      */
                     std::string GetTaskPath() const;
 
                     /**
-                     * 设置The path or file to be settled supports passing only one path and cannot be empty.
-                     * @param _taskPath The path or file to be settled supports passing only one path and cannot be empty.
+                     * 设置<p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
+                     * @param _taskPath <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
                      * 
                      */
                     void SetTaskPath(const std::string& _taskPath);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TaskPathHasBeenSet() const;
 
                     /**
-                     * 获取Data flow ID. this api can be accessed through DescribeDataFlow.
-                     * @return DataFlowId Data flow ID. this api can be accessed through DescribeDataFlow.
+                     * 获取<p>Data flow ID. It can be queried through DescribeDataFlow.</p>
+                     * @return DataFlowId <p>Data flow ID. It can be queried through DescribeDataFlow.</p>
                      * 
                      */
                     std::string GetDataFlowId() const;
 
                     /**
-                     * 设置Data flow ID. this api can be accessed through DescribeDataFlow.
-                     * @param _dataFlowId Data flow ID. this api can be accessed through DescribeDataFlow.
+                     * 设置<p>Data flow ID. It can be queried through DescribeDataFlow.</p>
+                     * @param _dataFlowId <p>Data flow ID. It can be queried through DescribeDataFlow.</p>
                      * 
                      */
                     void SetDataFlowId(const std::string& _dataFlowId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool DataFlowIdHasBeenSet() const;
 
                     /**
-                     * 获取When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
-                     * @return IsOverwrite When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
+                     * 获取<p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
+                     * @return IsOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
                      * 
                      */
                     bool GetIsOverwrite() const;
 
                     /**
-                     * 设置When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
-                     * @param _isOverwrite When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
+                     * 设置<p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
+                     * @param _isOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
                      * 
                      */
                     void SetIsOverwrite(const bool& _isOverwrite);
@@ -168,43 +168,70 @@ namespace TencentCloud
                      */
                     bool IsOverwriteHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * @return ListPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * 
+                     */
+                    std::string GetListPath() const;
+
+                    /**
+                     * 设置<p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * @param _listPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     * 
+                     */
+                    void SetListPath(const std::string& _listPath);
+
+                    /**
+                     * 判断参数 ListPath 是否已赋值
+                     * @return ListPath 是否已赋值
+                     * 
+                     */
+                    bool ListPathHasBeenSet() const;
+
                 private:
 
                     /**
-                     * File system unique ID.
+                     * <p>Unique file system ID.</p>
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
+                     * <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Task name.
+                     * <p>Task name.</p>
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * The path or file to be settled supports passing only one path and cannot be empty.
+                     * <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
                      */
                     std::string m_taskPath;
                     bool m_taskPathHasBeenSet;
 
                     /**
-                     * Data flow ID. this api can be accessed through DescribeDataFlow.
+                     * <p>Data flow ID. It can be queried through DescribeDataFlow.</p>
                      */
                     std::string m_dataFlowId;
                     bool m_dataFlowIdHasBeenSet;
 
                     /**
-                     * When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
+                     * <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
                      */
                     bool m_isOverwrite;
                     bool m_isOverwriteHasBeenSet;
+
+                    /**
+                     * <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+                     */
+                    std::string m_listPath;
+                    bool m_listPathHasBeenSet;
 
                 };
             }

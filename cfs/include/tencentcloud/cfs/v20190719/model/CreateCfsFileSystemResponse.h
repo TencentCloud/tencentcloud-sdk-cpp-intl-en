@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system creation time
-                     * @return CreationTime File system creation time
+                     * 获取<p>File system creation time.</p>
+                     * @return CreationTime <p>File system creation time.</p>
                      * 
                      */
                     std::string GetCreationTime() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool CreationTimeHasBeenSet() const;
 
                     /**
-                     * 获取Custom file system name
-                     * @return CreationToken Custom file system name
+                     * 获取<p>User-defined file system name.</p>
+                     * @return CreationToken <p>User-defined file system name.</p>
                      * 
                      */
                     std::string GetCreationToken() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool CreationTokenHasBeenSet() const;
 
                     /**
-                     * 获取File system ID
-                     * @return FileSystemId File system ID
+                     * 获取<p>File system ID.</p>
+                     * @return FileSystemId <p>File system ID.</p>
                      * 
                      */
                     std::string GetFileSystemId() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
-                     * 获取File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
-                     * @return LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+                     * 获取<p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
+                     * @return LifeCycleState <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
                      * 
                      */
                     std::string GetLifeCycleState() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool LifeCycleStateHasBeenSet() const;
 
                     /**
-                     * 获取Storage used by the file system, in bytes
-                     * @return SizeByte Storage used by the file system, in bytes
+                     * 获取<p>Used capacity of the file system, in bytes.</p>
+                     * @return SizeByte <p>Used capacity of the file system, in bytes.</p>
                      * 
                      */
                     uint64_t GetSizeByte() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool SizeByteHasBeenSet() const;
 
                     /**
-                     * 获取AZ ID
-                     * @return ZoneId AZ ID
+                     * 获取<p>AZ ID.</p>
+                     * @return ZoneId <p>AZ ID.</p>
                      * 
                      */
                     uint64_t GetZoneId() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom file system name
-                     * @return FsName Custom file system name
+                     * 获取<p>User-defined file system name.</p>
+                     * @return FsName <p>User-defined file system name.</p>
                      * 
                      */
                     std::string GetFsName() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool FsNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether a file system is encrypted
-                     * @return Encrypted Whether a file system is encrypted
+                     * 获取<p>Whether the file system is encrypted.</p>
+                     * @return Encrypted <p>Whether the file system is encrypted.</p>
                      * 
                      */
                     bool GetEncrypted() const;
@@ -158,49 +158,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system creation time
+                     * <p>File system creation time.</p>
                      */
                     std::string m_creationTime;
                     bool m_creationTimeHasBeenSet;
 
                     /**
-                     * Custom file system name
+                     * <p>User-defined file system name.</p>
                      */
                     std::string m_creationToken;
                     bool m_creationTokenHasBeenSet;
 
                     /**
-                     * File system ID
+                     * <p>File system ID.</p>
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;
 
                     /**
-                     * File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+                     * <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
                      */
                     std::string m_lifeCycleState;
                     bool m_lifeCycleStateHasBeenSet;
 
                     /**
-                     * Storage used by the file system, in bytes
+                     * <p>Used capacity of the file system, in bytes.</p>
                      */
                     uint64_t m_sizeByte;
                     bool m_sizeByteHasBeenSet;
 
                     /**
-                     * AZ ID
+                     * <p>AZ ID.</p>
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Custom file system name
+                     * <p>User-defined file system name.</p>
                      */
                     std::string m_fsName;
                     bool m_fsNameHasBeenSet;
 
                     /**
-                     * Whether a file system is encrypted
+                     * <p>Whether the file system is encrypted.</p>
                      */
                     bool m_encrypted;
                     bool m_encryptedHasBeenSet;

@@ -44,23 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-Example: `https://www.tencentcloud.com/products/faceid.`
-                     * @return RedirectURL Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-Example: `https://www.tencentcloud.com/products/faceid.`
+                     * 获取<p>The Web redirect URL after verification, including the protocol header, host name, and path, for example, https://www.tencentcloud.com/products/faceid.<br>After the verification process is completed, the BizToken of the current process is appended to the redirect URL, and the redirect is performed in the format of https://www.tencentcloud.com/products/faceid?token={BizToken}.</p>
+                     * @return RedirectURL <p>The Web redirect URL after verification, including the protocol header, host name, and path, for example, https://www.tencentcloud.com/products/faceid.<br>After the verification process is completed, the BizToken of the current process is appended to the redirect URL, and the redirect is performed in the format of https://www.tencentcloud.com/products/faceid?token={BizToken}.</p>
                      * 
                      */
                     std::string GetRedirectURL() const;
 
                     /**
-                     * 设置Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-Example: `https://www.tencentcloud.com/products/faceid.`
-                     * @param _redirectURL Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-Example: `https://www.tencentcloud.com/products/faceid.`
+                     * 设置<p>The Web redirect URL after verification, including the protocol header, host name, and path, for example, https://www.tencentcloud.com/products/faceid.<br>After the verification process is completed, the BizToken of the current process is appended to the redirect URL, and the redirect is performed in the format of https://www.tencentcloud.com/products/faceid?token={BizToken}.</p>
+                     * @param _redirectURL <p>The Web redirect URL after verification, including the protocol header, host name, and path, for example, https://www.tencentcloud.com/products/faceid.<br>After the verification process is completed, the BizToken of the current process is appended to the redirect URL, and the redirect is performed in the format of https://www.tencentcloud.com/products/faceid?token={BizToken}.</p>
                      * 
                      */
                     void SetRedirectURL(const std::string& _redirectURL);
@@ -73,19 +65,15 @@ Example: `https://www.tencentcloud.com/products/faceid.`
                     bool RedirectURLHasBeenSet() const;
 
                     /**
-                     * 获取The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
-Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
-                     * @return CompareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
-Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     * 获取<p>Base64-encoded string of the comparison photo. The Data URI scheme header needs to be removed from the encoded string, and the size cannot exceed 8 MB.</p>
+                     * @return CompareImageBase64 <p>Base64-encoded string of the comparison photo. The Data URI scheme header needs to be removed from the encoded string, and the size cannot exceed 8 MB.</p>
                      * 
                      */
                     std::string GetCompareImageBase64() const;
 
                     /**
-                     * 设置The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
-Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
-                     * @param _compareImageBase64 The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
-Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     * 设置<p>Base64-encoded string of the comparison photo. The Data URI scheme header needs to be removed from the encoded string, and the size cannot exceed 8 MB.</p>
+                     * @param _compareImageBase64 <p>Base64-encoded string of the comparison photo. The Data URI scheme header needs to be removed from the encoded string, and the size cannot exceed 8 MB.</p>
                      * 
                      */
                     void SetCompareImageBase64(const std::string& _compareImageBase64);
@@ -98,15 +86,15 @@ Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
                     bool CompareImageBase64HasBeenSet() const;
 
                     /**
-                     * 获取The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
-                     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * 获取<p>Business passthrough parameter, with a maximum length of 1,000 characters. It is returned in the GetWebVerificationResultIntl API.</p>
+                     * @return Extra <p>Business passthrough parameter, with a maximum length of 1,000 characters. It is returned in the GetWebVerificationResultIntl API.</p>
                      * 
                      */
                     std::string GetExtra() const;
 
                     /**
-                     * 设置The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
-                     * @param _extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * 设置<p>Business passthrough parameter, with a maximum length of 1,000 characters. It is returned in the GetWebVerificationResultIntl API.</p>
+                     * @param _extra <p>Business passthrough parameter, with a maximum length of 1,000 characters. It is returned in the GetWebVerificationResultIntl API.</p>
                      * 
                      */
                     void SetExtra(const std::string& _extra);
@@ -119,15 +107,15 @@ Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
                     bool ExtraHasBeenSet() const;
 
                     /**
-                     * 获取The business process ID generated by the console.
-                     * @return RuleId The business process ID generated by the console.
+                     * 获取<p>Id generated in the console configuration</p>
+                     * @return RuleId <p>Id generated in the console configuration</p>
                      * 
                      */
                     std::string GetRuleId() const;
 
                     /**
-                     * 设置The business process ID generated by the console.
-                     * @param _ruleId The business process ID generated by the console.
+                     * 设置<p>Id generated in the console configuration</p>
+                     * @param _ruleId <p>Id generated in the console configuration</p>
                      * 
                      */
                     void SetRuleId(const std::string& _ruleId);
@@ -140,19 +128,15 @@ Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取The parameter control the page configuration.
-Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
-                     * @return Config The parameter control the page configuration.
-Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
+                     * 获取<p>Related configurations of the custom verification page.</p>
+                     * @return Config <p>Related configurations of the custom verification page.</p>
                      * 
                      */
                     WebVerificationConfigIntl GetConfig() const;
 
                     /**
-                     * 设置The parameter control the page configuration.
-Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
-                     * @param _config The parameter control the page configuration.
-Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
+                     * 设置<p>Related configurations of the custom verification page.</p>
+                     * @param _config <p>Related configurations of the custom verification page.</p>
                      * 
                      */
                     void SetConfig(const WebVerificationConfigIntl& _config);
@@ -167,35 +151,31 @@ Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
                 private:
 
                     /**
-                     * Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
-After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of `https://www.tencentcloud.com/products/faceid?token={BizToken}` before redirect.
-Example: `https://www.tencentcloud.com/products/faceid.`
+                     * <p>The Web redirect URL after verification, including the protocol header, host name, and path, for example, https://www.tencentcloud.com/products/faceid.<br>After the verification process is completed, the BizToken of the current process is appended to the redirect URL, and the redirect is performed in the format of https://www.tencentcloud.com/products/faceid?token={BizToken}.</p>
                      */
                     std::string m_redirectURL;
                     bool m_redirectURLHasBeenSet;
 
                     /**
-                     * The Base64-encoded string (max 8 MB in size) of the photo to be compared.The Data URI scheme header needs to be removed from the encoded string
-Example: xhBQAAACBjSFJNAAB6****AAAASUVORK5CYII=
+                     * <p>Base64-encoded string of the comparison photo. The Data URI scheme header needs to be removed from the encoded string, and the size cannot exceed 8 MB.</p>
                      */
                     std::string m_compareImageBase64;
                     bool m_compareImageBase64HasBeenSet;
 
                     /**
-                     * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * <p>Business passthrough parameter, with a maximum length of 1,000 characters. It is returned in the GetWebVerificationResultIntl API.</p>
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;
 
                     /**
-                     * The business process ID generated by the console.
+                     * <p>Id generated in the console configuration</p>
                      */
                     std::string m_ruleId;
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * The parameter control the page configuration.
-Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
+                     * <p>Related configurations of the custom verification page.</p>
                      */
                     WebVerificationConfigIntl m_config;
                     bool m_configHasBeenSet;

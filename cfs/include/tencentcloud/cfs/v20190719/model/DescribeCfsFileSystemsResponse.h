@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system information
-                     * @return FileSystems File system information
+                     * 获取<p>File system information</p>
+                     * @return FileSystems <p>File system information</p>
                      * 
                      */
                     std::vector<FileSystemInfo> GetFileSystems() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool FileSystemsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of file systems
-                     * @return TotalCount Total number of file systems
+                     * 获取<p>Total number of file systems</p>
+                     * @return TotalCount <p>Total number of file systems</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system information
+                     * <p>File system information</p>
                      */
                     std::vector<FileSystemInfo> m_fileSystems;
                     bool m_fileSystemsHasBeenSet;
 
                     /**
-                     * Total number of file systems
+                     * <p>Total number of file systems</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -28,7 +28,8 @@ CreateLifecycleDataTaskRequest::CreateLifecycleDataTaskRequest() :
     m_taskNameHasBeenSet(false),
     m_taskPathHasBeenSet(false),
     m_dataFlowIdHasBeenSet(false),
-    m_isOverwriteHasBeenSet(false)
+    m_isOverwriteHasBeenSet(false),
+    m_listPathHasBeenSet(false)
 {
 }
 
@@ -85,6 +86,14 @@ string CreateLifecycleDataTaskRequest::ToJsonString() const
         string key = "IsOverwrite";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_isOverwrite, allocator);
+    }
+
+    if (m_listPathHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ListPath";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_listPath.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -189,6 +198,22 @@ void CreateLifecycleDataTaskRequest::SetIsOverwrite(const bool& _isOverwrite)
 bool CreateLifecycleDataTaskRequest::IsOverwriteHasBeenSet() const
 {
     return m_isOverwriteHasBeenSet;
+}
+
+string CreateLifecycleDataTaskRequest::GetListPath() const
+{
+    return m_listPath;
+}
+
+void CreateLifecycleDataTaskRequest::SetListPath(const string& _listPath)
+{
+    m_listPath = _listPath;
+    m_listPathHasBeenSet = true;
+}
+
+bool CreateLifecycleDataTaskRequest::ListPathHasBeenSet() const
+{
+    return m_listPathHasBeenSet;
 }
 
 

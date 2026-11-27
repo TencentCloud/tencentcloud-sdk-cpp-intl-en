@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckResults Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Information of existing conflicting rules returned when rule conflicts occur.</p>
+                     * @return CheckResults <p>Information of existing conflicting rules returned when rule conflicts occur.</p>
                      * 
                      */
                     std::vector<CheckResult> GetCheckResults() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Information of existing conflicting rules returned when rule conflicts occur.</p>
                      */
                     std::vector<CheckResult> m_checkResults;
                     bool m_checkResultsHasBeenSet;

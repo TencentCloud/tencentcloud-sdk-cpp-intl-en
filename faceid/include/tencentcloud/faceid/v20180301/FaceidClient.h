@@ -244,7 +244,7 @@ namespace TencentCloud
                 ApplySdkVerificationTokenOutcomeCallable ApplySdkVerificationTokenCallable(const Model::ApplySdkVerificationTokenRequest& request);
 
                 /**
-                 *This API is used to obtain a BizToken before each call to the Web verification service. Save the BizToken to initiate the verification process and retrieve the result upon completion. The BizToken is valid for 10 minutes.
+                 *Before each call to the Web verification service, you need to call this API to obtain a BizToken and save it for initiating the verification process. After the verification is completed, the BizToken is used to obtain the result information. The BizToken is valid for 10 minutes.
                  * @param req ApplyWebVerificationBizTokenIntlRequest
                  * @return ApplyWebVerificationBizTokenIntlOutcome
                  */

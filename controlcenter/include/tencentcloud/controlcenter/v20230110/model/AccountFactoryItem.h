@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Account factory baseline item.
+                * Account Factory baseline items.
                 */
                 class AccountFactoryItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
-                     * @return Identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+                     * 获取Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
+                     * @return Identifier Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
                      * 
                      */
                     std::string GetIdentifier() const;
 
                     /**
-                     * 设置Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
-                     * @param _identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+                     * 设置Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
+                     * @param _identifier Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
                      * 
                      */
                     void SetIdentifier(const std::string& _identifier);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IdentifierHasBeenSet() const;
 
                     /**
-                     * 获取Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
-                     * @return Name Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+                     * 获取Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
+                     * @return Name Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
-                     * @param _name Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+                     * 设置Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
+                     * @param _name Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
-                     * @return NameEn Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+                     * 获取Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
+                     * @return NameEn Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
                      * 
                      */
                     std::string GetNameEn() const;
 
                     /**
-                     * 设置Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
-                     * @param _nameEn Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+                     * 设置Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
+                     * @param _nameEn Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
                      * 
                      */
                     void SetNameEn(const std::string& _nameEn);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NameEnHasBeenSet() const;
 
                     /**
-                     * 获取Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
-                     * @return Weight Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+                     * 获取Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
+                     * @return Weight Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
-                     * @param _weight Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+                     * 设置Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
+                     * @param _weight Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether the baseline item is required (1: required; 0: optional).
-                     * @return Required Specifies whether the baseline item is required (1: required; 0: optional).
+                     * 获取Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
+                     * @return Required Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
                      * 
                      */
                     int64_t GetRequired() const;
 
                     /**
-                     * 设置Specifies whether the baseline item is required (1: required; 0: optional).
-                     * @param _required Specifies whether the baseline item is required (1: required; 0: optional).
+                     * 设置Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
+                     * @param _required Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
                      * 
                      */
                     void SetRequired(const int64_t& _required);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool RequiredHasBeenSet() const;
 
                     /**
-                     * 获取Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
-                     * @return DependsOn Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+                     * 获取Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
+                     * @return DependsOn Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
                      * 
                      */
                     std::vector<DependsOnItem> GetDependsOn() const;
 
                     /**
-                     * 设置Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
-                     * @param _dependsOn Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+                     * 设置Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
+                     * @param _dependsOn Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
                      * 
                      */
                     void SetDependsOn(const std::vector<DependsOnItem>& _dependsOn);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool DependsOnHasBeenSet() const;
 
                     /**
-                     * 获取Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
-                     * @return Description Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+                     * 获取Baseline description, which is 2 to 256 English characters in length. The default value is empty.
+                     * @return Description Baseline description, which is 2 to 256 English characters in length. The default value is empty.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
-                     * @param _description Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+                     * 设置Baseline description, which is 2 to 256 English characters in length. The default value is empty.
+                     * @param _description Baseline description, which is 2 to 256 English characters in length. The default value is empty.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
-                     * @return DescriptionEn Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+                     * 获取Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
+                     * @return DescriptionEn Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
                      * 
                      */
                     std::string GetDescriptionEn() const;
 
                     /**
-                     * 设置Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
-                     * @param _descriptionEn Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+                     * 设置Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
+                     * @param _descriptionEn Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
                      * 
                      */
                     void SetDescriptionEn(const std::string& _descriptionEn);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool DescriptionEnHasBeenSet() const;
 
                     /**
-                     * 获取Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
-                     * @return Classify Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+                     * 获取Baseline category, which is 2 to 32 English characters in length and cannot be empty.
+                     * @return Classify Baseline category, which is 2 to 32 English characters in length and cannot be empty.
                      * 
                      */
                     std::string GetClassify() const;
 
                     /**
-                     * 设置Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
-                     * @param _classify Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+                     * 设置Baseline category, which is 2 to 32 English characters in length and cannot be empty.
+                     * @param _classify Baseline category, which is 2 to 32 English characters in length and cannot be empty.
                      * 
                      */
                     void SetClassify(const std::string& _classify);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ClassifyHasBeenSet() const;
 
                     /**
-                     * 获取Baseline english classification, with a length of 2-64 english characters. cannot be empty.
-                     * @return ClassifyEn Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+                     * 获取Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
+                     * @return ClassifyEn Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
                      * 
                      */
                     std::string GetClassifyEn() const;
 
                     /**
-                     * 设置Baseline english classification, with a length of 2-64 english characters. cannot be empty.
-                     * @param _classifyEn Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+                     * 设置Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
+                     * @param _classifyEn Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
                      * 
                      */
                     void SetClassifyEn(const std::string& _classifyEn);
@@ -260,61 +260,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+                     * Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
                      */
                     std::string m_identifier;
                     bool m_identifierHasBeenSet;
 
                     /**
-                     * Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+                     * Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+                     * Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
                      */
                     std::string m_nameEn;
                     bool m_nameEnHasBeenSet;
 
                     /**
-                     * Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+                     * Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;
 
                     /**
-                     * Specifies whether the baseline item is required (1: required; 0: optional).
+                     * Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
                      */
                     int64_t m_required;
                     bool m_requiredHasBeenSet;
 
                     /**
-                     * Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+                     * Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
                      */
                     std::vector<DependsOnItem> m_dependsOn;
                     bool m_dependsOnHasBeenSet;
 
                     /**
-                     * Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+                     * Baseline description, which is 2 to 256 English characters in length. The default value is empty.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+                     * Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
                      */
                     std::string m_descriptionEn;
                     bool m_descriptionEnHasBeenSet;
 
                     /**
-                     * Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+                     * Baseline category, which is 2 to 32 English characters in length and cannot be empty.
                      */
                     std::string m_classify;
                     bool m_classifyHasBeenSet;
 
                     /**
-                     * Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+                     * Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
                      */
                     std::string m_classifyEn;
                     bool m_classifyEnHasBeenSet;

@@ -48,7 +48,11 @@ FileSystemInfo::FileSystemInfo() :
     m_autoScaleUpRuleHasBeenSet(false),
     m_versionHasBeenSet(false),
     m_exstraPerformanceInfoHasBeenSet(false),
-    m_metaTypeHasBeenSet(false)
+    m_metaTypeHasBeenSet(false),
+    m_scenarioHasBeenSet(false),
+    m_fullDeleteCapacityUsageHasBeenSet(false),
+    m_fullDeleteMinTtlHasBeenSet(false),
+    m_expireDeleteTtlHasBeenSet(false)
 {
 }
 
@@ -378,6 +382,46 @@ CoreInternalOutcome FileSystemInfo::Deserialize(const rapidjson::Value &value)
         m_metaTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("Scenario") && !value["Scenario"].IsNull())
+    {
+        if (!value["Scenario"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.Scenario` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_scenario = string(value["Scenario"].GetString());
+        m_scenarioHasBeenSet = true;
+    }
+
+    if (value.HasMember("FullDeleteCapacityUsage") && !value["FullDeleteCapacityUsage"].IsNull())
+    {
+        if (!value["FullDeleteCapacityUsage"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.FullDeleteCapacityUsage` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_fullDeleteCapacityUsage = value["FullDeleteCapacityUsage"].GetDouble();
+        m_fullDeleteCapacityUsageHasBeenSet = true;
+    }
+
+    if (value.HasMember("FullDeleteMinTtl") && !value["FullDeleteMinTtl"].IsNull())
+    {
+        if (!value["FullDeleteMinTtl"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.FullDeleteMinTtl` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_fullDeleteMinTtl = value["FullDeleteMinTtl"].GetUint64();
+        m_fullDeleteMinTtlHasBeenSet = true;
+    }
+
+    if (value.HasMember("ExpireDeleteTtl") && !value["ExpireDeleteTtl"].IsNull())
+    {
+        if (!value["ExpireDeleteTtl"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `FileSystemInfo.ExpireDeleteTtl` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_expireDeleteTtl = value["ExpireDeleteTtl"].GetUint64();
+        m_expireDeleteTtlHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -624,6 +668,38 @@ void FileSystemInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         string key = "MetaType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_metaType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_scenarioHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Scenario";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_scenario.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fullDeleteCapacityUsageHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullDeleteCapacityUsage";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_fullDeleteCapacityUsage, allocator);
+    }
+
+    if (m_fullDeleteMinTtlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FullDeleteMinTtl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_fullDeleteMinTtl, allocator);
+    }
+
+    if (m_expireDeleteTtlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExpireDeleteTtl";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_expireDeleteTtl, allocator);
     }
 
 }
@@ -1075,5 +1151,69 @@ void FileSystemInfo::SetMetaType(const string& _metaType)
 bool FileSystemInfo::MetaTypeHasBeenSet() const
 {
     return m_metaTypeHasBeenSet;
+}
+
+string FileSystemInfo::GetScenario() const
+{
+    return m_scenario;
+}
+
+void FileSystemInfo::SetScenario(const string& _scenario)
+{
+    m_scenario = _scenario;
+    m_scenarioHasBeenSet = true;
+}
+
+bool FileSystemInfo::ScenarioHasBeenSet() const
+{
+    return m_scenarioHasBeenSet;
+}
+
+double FileSystemInfo::GetFullDeleteCapacityUsage() const
+{
+    return m_fullDeleteCapacityUsage;
+}
+
+void FileSystemInfo::SetFullDeleteCapacityUsage(const double& _fullDeleteCapacityUsage)
+{
+    m_fullDeleteCapacityUsage = _fullDeleteCapacityUsage;
+    m_fullDeleteCapacityUsageHasBeenSet = true;
+}
+
+bool FileSystemInfo::FullDeleteCapacityUsageHasBeenSet() const
+{
+    return m_fullDeleteCapacityUsageHasBeenSet;
+}
+
+uint64_t FileSystemInfo::GetFullDeleteMinTtl() const
+{
+    return m_fullDeleteMinTtl;
+}
+
+void FileSystemInfo::SetFullDeleteMinTtl(const uint64_t& _fullDeleteMinTtl)
+{
+    m_fullDeleteMinTtl = _fullDeleteMinTtl;
+    m_fullDeleteMinTtlHasBeenSet = true;
+}
+
+bool FileSystemInfo::FullDeleteMinTtlHasBeenSet() const
+{
+    return m_fullDeleteMinTtlHasBeenSet;
+}
+
+uint64_t FileSystemInfo::GetExpireDeleteTtl() const
+{
+    return m_expireDeleteTtl;
+}
+
+void FileSystemInfo::SetExpireDeleteTtl(const uint64_t& _expireDeleteTtl)
+{
+    m_expireDeleteTtl = _expireDeleteTtl;
+    m_expireDeleteTtlHasBeenSet = true;
+}
+
+bool FileSystemInfo::ExpireDeleteTtlHasBeenSet() const
+{
+    return m_expireDeleteTtlHasBeenSet;
 }
 
